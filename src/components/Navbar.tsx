@@ -5,23 +5,23 @@ import { Link } from 'react-router-dom'
 const navCategories = [
   {
     label: 'Trends',
-    items: ['Color Trends', 'Cut & Style', 'Texture', 'Hair Extensions'],
+    items: ['Color Trends', 'Cut & Style', 'Texture', 'Extensions'],
   },
   {
-    label: 'Techniques',
-    items: ['Balayage', 'Vivid Color', 'Precision Cuts', 'Keratin & Treatments'],
+    label: 'Inspiration',
+    items: ['Balayage', 'Vivid Color', 'Curls & Texture', 'Before & After'],
   },
   {
-    label: 'Education',
-    items: ['Online Classes', 'Workshops', 'Certifications', 'Business Skills'],
+    label: 'Find a Stylist',
+    items: ['Browse Stylists', 'Near Me', 'By Specialty', 'Reviews'],
   },
   {
     label: 'Gallery',
-    items: ['Editorial Looks', 'Client Transformations', 'Competition Work', 'Before & After'],
+    items: ['Editorial Looks', 'Client Transformations', 'Seasonal Looks', 'Before & After'],
   },
   {
-    label: 'Business',
-    items: ['Salon Management', 'Marketing', 'Client Relations', 'Product Reviews'],
+    label: 'Hair Care',
+    items: ['Product Guides', 'At-Home Tips', 'Scalp Health', 'Tools & Styling'],
   },
 ]
 
@@ -36,13 +36,13 @@ export default function Navbar() {
       <div className="border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-8 text-[10px] tracking-widest uppercase text-charcoal-400">
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold-500 transition-colors">Subscribe</a>
-            <a href="#" className="hover:text-gold-500 transition-colors">Advertise</a>
-            <a href="#" className="hover:text-gold-500 transition-colors">Events</a>
+            <a href="#" className="hover:text-gold-500 transition-colors">Find a Stylist</a>
+            <a href="#" className="hover:text-gold-500 transition-colors">Inspiration</a>
+            <a href="#" className="hover:text-gold-500 transition-colors">Book Now</a>
           </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gold-500 transition-colors">Sign In</a>
-            <a href="#" className="hover:text-gold-500 transition-colors hidden sm:block">Newsletter</a>
+            <a href="#" className="hover:text-gold-500 transition-colors hidden sm:block">Get the Newsletter</a>
           </div>
         </div>
       </div>
@@ -65,10 +65,10 @@ export default function Navbar() {
               className="text-white font-bold tracking-[0.2em] uppercase text-lg md:text-2xl"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              HairPro<span className="text-gold-500">Voices</span>
+              Hair<span className="text-gold-500">Pro</span>Voices
             </span>
             <span className="text-[8px] tracking-[0.35em] uppercase text-charcoal-400 hidden md:block mt-0.5">
-              The Pulse of the Pro Hair Industry
+              Your Guide to Great Hair
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">

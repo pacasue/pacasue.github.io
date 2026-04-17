@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="flex items-center gap-3">
           <div className="h-px bg-gold-500 w-8" />
           <span className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium">
-            April 2026 · Volume 14
+            April 2026 · Curated by Stylists
           </span>
           <div className="h-px bg-gold-500 flex-1" />
         </div>
@@ -43,7 +43,7 @@ export default function Hero() {
               {/* Content overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Trends</span>
+                  <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Inspiration</span>
                   <span className="text-charcoal-600">·</span>
                   <span className="text-[10px] text-charcoal-400">April 8, 2026</span>
                 </div>
@@ -55,8 +55,7 @@ export default function Hero() {
                   <em>Why This Shade Rules 2026</em>
                 </h1>
                 <p className="text-charcoal-300 text-sm md:text-base max-w-xl leading-relaxed mb-6 hidden md:block">
-                  From warm cognacs to deep auburn, copper-family tones are reclaiming editorial dominance.
-                  We spoke with 10 top colorists about how they're mixing, applying, and retailing this season's must-have hue.
+                  We asked 10 top colorists what makes this shade so wearable — and how to ask for it at your next appointment.
                 </p>
                 <div className="flex items-center gap-4">
                   <Link
@@ -92,7 +91,7 @@ export default function Hero() {
                     className="text-white text-xl font-bold leading-snug mt-1"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    The No-Foil Balayage Method Changing Everything
+                    What Is Balayage? Your Stylist Explains
                   </h2>
                 </div>
               </div>
@@ -102,20 +101,20 @@ export default function Hero() {
             <div className="flex flex-col divide-y divide-white/5 mt-4 lg:mt-0 lg:border-t border-white/5">
               {[
                 {
-                  tag: 'Business',
-                  title: 'How AI Booking Is Reshaping Salon Revenue',
+                  tag: 'Booking',
+                  title: 'How to Book the Right Stylist for Your Hair Type',
                   author: 'Maria Chen',
                   readTime: '5 min',
                 },
                 {
-                  tag: 'Education',
-                  title: '10 Skills Every Stylist Needs to Master by 30',
+                  tag: 'Tips',
+                  title: '10 Questions to Ask Before Your Next Color Appointment',
                   author: 'James Olivier',
                   readTime: '7 min',
                 },
                 {
                   tag: 'Products',
-                  title: 'Bond Builders: The Science Behind the Hype',
+                  title: 'Bond Builders: What They Are and Why Your Hair Needs One',
                   author: 'Dr. Sarah Kline',
                   readTime: '6 min',
                 },

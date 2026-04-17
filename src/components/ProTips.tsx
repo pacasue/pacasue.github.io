@@ -4,7 +4,7 @@ const tips = [
   {
     id: 1,
     category: 'Color',
-    tip: 'Always pre-lighten one level lighter than your target when using a direct dye — oxidation fade is real.',
+    tip: 'Ask your colorist to show you a strand test before committing to a big color change. It takes 10 minutes and saves months of regret.',
     stylist: 'Lucia Vargas',
     role: 'Celebrity Colorist',
     location: 'Los Angeles, CA',
@@ -14,7 +14,7 @@ const tips = [
   {
     id: 2,
     category: 'Cut',
-    tip: 'Sectioning is 80% of the haircut. A messy section gives a messy result, every single time.',
+    tip: 'Bring a photo to your appointment — but be open to your stylist\'s take on how it works with your texture and face shape.',
     stylist: 'Marcus Bell',
     role: 'Master Cutter',
     location: 'London, UK',
@@ -24,9 +24,9 @@ const tips = [
   {
     id: 3,
     category: 'Business',
-    tip: 'Raise your prices on new clients first. Existing clients will follow when they see the value you deliver.',
+    tip: 'If you love your stylist, rebook before you leave the chair. The best appointment slots go to regulars.',
     stylist: 'Dana Reeves',
-    role: 'Salon Business Coach',
+    role: 'Client Experience Expert',
     location: 'Nashville, TN',
     avatar: 'DR',
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80&auto=format&fit=crop',
@@ -34,7 +34,7 @@ const tips = [
   {
     id: 4,
     category: 'Texture',
-    tip: 'Stop touching curls while they dry. Diffuse from below, never above, and let the clumps do their work.',
+    tip: 'Tell your stylist your full hair routine at home — the products you use matter as much as what happens in the salon.',
     stylist: 'Amara Johnson',
     role: 'Curl Specialist',
     location: 'Atlanta, GA',

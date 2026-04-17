@@ -1,12 +1,12 @@
 const tickerItems = [
   '✦ TRENDING: Lived-in Brunettes Are Taking Over',
   '✦ NEW: Fall 2026 Color Forecast Released',
-  '✦ EDUCATION: Free Balayage Masterclass — Register Now',
-  '✦ SPOTLIGHT: Top 50 Stylists of the Year Announced',
+  '✦ GUIDE: How to Ask for Balayage at Your Salon',
+  '✦ SPOTLIGHT: Top 50 Stylists to Follow in 2026',
   '✦ PRODUCT: Best Bond Builders for 2026 Tested',
-  '✦ EVENT: InterCoiffure World Congress — Paris, June 2026',
-  '✦ TECHNIQUE: The Science Behind Glass Hair',
-  '✦ BUSINESS: How To Triple Your Retail Sales This Quarter',
+  '✦ INSPIRATION: Spring 2026 Hair Trends, Ranked',
+  '✦ GUIDE: What Is Glass Hair and Can You Get It?',
+  '✦ TIPS: The Best At-Home Products Your Stylist Recommends',
 ]
 
 export default function Ticker() {

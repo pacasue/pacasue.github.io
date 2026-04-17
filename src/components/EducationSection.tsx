@@ -3,7 +3,7 @@ import { Clock, Users, Award, ArrowRight, Play } from 'lucide-react'
 const courses = [
   {
     id: 1,
-    title: 'Balayage Mastery: From Foundation to Advanced',
+    title: 'Balayage Explained: What It Is, What It Costs, What to Expect',
     instructor: 'Michelle Torres',
     instructorRole: 'Master Colorist, NYC',
     duration: '6h 30m',
@@ -11,11 +11,11 @@ const courses = [
     level: 'All Levels',
     badge: 'Best Seller',
     image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop',
-    modules: ['Color Theory', 'Sectioning & Placement', 'Toning & Glossing', 'Business Strategy'],
+    modules: ['Color Theory', 'Placement', 'Toning', 'Maintenance Tips'],
   },
   {
     id: 2,
-    title: 'Precision Cuts: The Geometric Revolution',
+    title: 'The Right Cut for Your Face Shape: A Stylist\'s Guide',
     instructor: 'David Kwan',
     instructorRole: 'Session Stylist, London',
     duration: '4h 15m',
@@ -23,11 +23,11 @@ const courses = [
     level: 'Intermediate',
     badge: 'New',
     image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop',
-    modules: ['Blunt Bobs', 'Interior Layers', 'Razor Techniques', 'Finishing'],
+    modules: ['Face Shapes', 'Bob Styles', 'Layers', 'Finishing'],
   },
   {
     id: 3,
-    title: 'Curl Science: The Complete Stylist Guide',
+    title: 'Curl Care 101: Products, Routines & Salon Tips',
     instructor: 'Amara Johnson',
     instructorRole: 'Curl Specialist, Atlanta',
     duration: '5h 45m',
@@ -35,7 +35,7 @@ const courses = [
     level: 'Beginner Friendly',
     badge: 'Top Rated',
     image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=800&q=80&auto=format&fit=crop',
-    modules: ['Curl Typing', 'Hydration Protocols', 'Product Layering', 'Client Consultations'],
+    modules: ['Curl Types', 'Hydration', 'Product Picks', 'Salon Prep'],
   },
 ]
 
@@ -60,32 +60,32 @@ export default function EducationSection() {
           <div className="max-w-xl">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-6 h-0.5 bg-gold-500" />
-              <span className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium">Education</span>
+              <span className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium">Hair Guides</span>
             </div>
             <h2
               className="text-2xl md:text-4xl font-bold text-white leading-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Learn From the World's<br />
-              <em>Best Stylists</em>
+              Understand Your Hair,<br />
+              <em>From the Experts</em>
             </h2>
             <p className="text-charcoal-400 text-sm mt-3 leading-relaxed">
-              Professional masterclasses built for working stylists. Earn CE credits, grow your skills, and build the career you deserve.
+              Stylist-created guides that help you walk into your next appointment knowing exactly what you want — and why.
             </p>
           </div>
           <a
             href="#"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors whitespace-nowrap"
           >
-            Browse All Courses <ArrowRight size={12} />
+            Browse All Guides <ArrowRight size={12} />
           </a>
         </div>
 
         {/* Stats bar */}
         <div className="grid grid-cols-3 gap-px bg-white/5 mb-12 border border-white/5">
           {[
-            { value: '200+', label: 'Expert Instructors' },
-            { value: '50K+', label: 'Stylists Enrolled' },
+            { value: '200+', label: 'Contributing Stylists' },
+            { value: '50K+', label: 'Readers This Month' },
             { value: '4.9★', label: 'Average Rating' },
           ].map((stat) => (
             <div key={stat.label} className="bg-charcoal-950 px-6 py-4 text-center">

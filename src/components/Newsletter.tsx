@@ -42,13 +42,12 @@ export default function Newsletter() {
           className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Stay Ahead of<br />
-          <em>Every Trend</em>
+          Get the Best Hair<br />
+          <em>Advice, Weekly</em>
         </h2>
 
         <p className="text-charcoal-400 text-sm md:text-base leading-relaxed mb-10 max-w-md mx-auto">
-          Join 85,000+ stylists receiving weekly trend reports, exclusive technique breakdowns,
-          and business insights — straight to your inbox.
+          Join 85,000+ readers getting stylist-curated trend reports, care tips, and inspiration — straight to your inbox.
         </p>
 
         {submitted ? (

@@ -1,8 +1,8 @@
 
 const footerLinks = {
-  Editorial: ['Trends', 'Techniques', 'Gallery', 'Business', 'Education', 'Products'],
-  Learn: ['Online Courses', 'Workshops', 'Live Events', 'Certifications', 'Mentorships'],
-  Community: ['Submit Your Work', 'Stylist Directory', 'Forum', 'Awards', 'Competitions'],
+  Editorial: ['Trends', 'Inspiration', 'Gallery', 'Hair Care', 'Products', 'Guides'],
+  Guides: ['Color Guides', 'Cut & Style', 'Curl Care', 'At-Home Tips', 'Product Reviews', 'Ask a Stylist'],
+  Community: ['Find a Stylist', 'Stylist Directory', 'Submit Your Look', 'Reviews', 'Before & After'],
   Company: ['About Us', 'Advertise', 'Careers', 'Press', 'Contact', 'Privacy Policy'],
 }
 
@@ -52,11 +52,11 @@ export default function Footer() {
                 HairPro<span className="text-gold-500">Voices</span>
               </span>
               <span className="text-[9px] tracking-[0.3em] uppercase text-charcoal-600">
-                The Pulse of the Pro Hair Industry
+                Great Hair Starts with Great Advice
               </span>
             </a>
             <p className="text-xs text-charcoal-500 leading-relaxed max-w-[240px]">
-              The definitive resource for professional stylists worldwide — education, trends, and community in one place.
+              Stylist-created guides, trends, and inspiration to help you get the most out of every salon visit.
             </p>
 
             {/* Socials */}
