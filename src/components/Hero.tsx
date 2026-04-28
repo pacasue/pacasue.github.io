@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 // Hero uses high-quality Unsplash images (no auth required)
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&q=80&auto=format&fit=crop'
-const SIDE_IMAGE = 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80&auto=format&fit=crop'
+const SIDE_IMAGE = '/image/what-is-balayage.avif'
 
 export default function Hero() {
   return (

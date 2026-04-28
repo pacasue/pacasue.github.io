@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Ticker from '../components/Ticker'
@@ -7,10 +7,16 @@ import Footer from '../components/Footer'
 import { articles } from '../data/articles'
 
 const visibleArticles = articles.filter((a) => a.slug !== 'what-is-balayage-old')
-const categories = ['All', ...Array.from(new Set(visibleArticles.map((a) => a.category)))]
+const categories = ['All', 'Color', 'Technique', 'Cut & Style', 'Texture', 'Tips', 'Business', 'Products', 'Hair Thinning', 'Scalp Care']
 
 export default function ArticlesPage() {
-  const [activeCategory, setActiveCategory] = useState('All')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const activeCategory = searchParams.get('category') ?? 'All'
+
+  const setCategory = (cat: string) => {
+    if (cat === 'All') setSearchParams({})
+    else setSearchParams({ category: cat })
+  }
 
   const filtered = activeCategory === 'All'
     ? visibleArticles
@@ -45,7 +51,7 @@ export default function ArticlesPage() {
               {categories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => setCategory(cat)}
                   className={`flex-shrink-0 px-4 py-1.5 text-[10px] tracking-widest uppercase font-medium transition-colors border ${
                     activeCategory === cat
                       ? 'bg-gold-500 text-black border-gold-500'

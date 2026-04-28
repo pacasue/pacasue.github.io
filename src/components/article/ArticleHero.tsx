@@ -56,9 +56,12 @@ export default function ArticleHero({ article }: { article: Article }) {
             <div>
               <p className="text-sm font-semibold text-charcoal-200">
                 By{' '}
-                <a href="#" className="text-white hover:text-gold-500 transition-colors">
+                <Link
+                  to={`/author/${article.author.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="text-white hover:text-gold-500 transition-colors"
+                >
                   {article.author}
-                </a>
+                </Link>
               </p>
             </div>
           </div>

@@ -45,12 +45,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-2 flex flex-col gap-4">
             <a href="#" className="flex flex-col gap-1">
-              <span
-                className="text-white font-bold tracking-[0.2em] uppercase text-xl"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                HairPro<span className="text-gold-500">Voices</span>
-              </span>
+              <img src="/image/site-logo.png" alt="HairProVoices" className="h-8 object-contain object-left" />
               <span className="text-[9px] tracking-[0.3em] uppercase text-charcoal-600">
                 Great Hair Starts with Great Advice
               </span>

@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 const navCategories = [
   {
     label: 'Trends',
-    items: ['Color Trends', 'Cut & Style', 'Texture', 'Extensions'],
+    items: ['Color', 'Technique', 'Cut & Style', 'Texture'],
   },
   {
     label: 'Inspiration',
-    items: ['Balayage', 'Vivid Color', 'Curls & Texture', 'Before & After'],
+    items: ['Tips', 'Business'],
   },
   {
     label: 'Hair Care',
-    items: ['Product Guides', 'At-Home Tips', 'Scalp Health', 'Tools & Styling'],
+    items: ['Products', 'Hair Thinning', 'Scalp Care', 'At-Home Tips', 'Tools & Styling'],
   },
   {
     label: 'Gallery',
@@ -82,13 +82,14 @@ export default function Navbar() {
                 {activeDropdown === cat.label && (
                   <div className="absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl">
                     {cat.items.map((item) => (
-                      <a
+                      <Link
                         key={item}
-                        href="#"
+                        to={`/articles?category=${encodeURIComponent(item)}`}
                         className="block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
                       >
                         {item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}

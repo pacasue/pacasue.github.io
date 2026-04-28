@@ -135,6 +135,9 @@ function MarkdownBody({ body }: { body: string }) {
         if (!trimmed) return null
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
+        // inline image: ![caption](url)
+        const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
+        if (img) return <InlineImage key={i} src={img[2]} caption={img[1]} />
         const h3 = trimmed.match(/^### (.+)/)
         if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>
         const h1 = trimmed.match(/^# (.+)/)
@@ -152,9 +155,18 @@ function MarkdownBody({ body }: { body: string }) {
         if (/^\d+\.\s/.test(trimmed)) {
           const items = trimmed.split('\n').filter((l) => /^\d+\.\s/.test(l.trim()))
           return (
-            <ol key={i} className="list-decimal list-inside text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5 space-y-1 pl-2">
-              {items.map((item, j) => <li key={j}>{renderInline(item.replace(/^\d+\.\s+/, ''))}</li>)}
-            </ol>
+            <div key={i} className="my-6 flex flex-col gap-3">
+              {items.map((item, j) => (
+                <div key={j} className="flex gap-4">
+                  <div className="flex-shrink-0 w-7 h-7 bg-gold-500 flex items-center justify-center text-black text-[11px] font-bold">
+                    {j + 1}
+                  </div>
+                  <p className="text-charcoal-300 text-base md:text-[17px] leading-[1.85] pt-0.5">
+                    {renderInline(item.replace(/^\d+\.\s+/, ''))}
+                  </p>
+                </div>
+              ))}
+            </div>
           )
         }
         // blockquote
