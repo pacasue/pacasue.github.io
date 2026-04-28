@@ -42,11 +42,7 @@ export default function Hero() {
 
               {/* Content overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Inspiration</span>
-                  <span className="text-charcoal-600">·</span>
-                  <span className="text-[10px] text-charcoal-400">April 8, 2026</span>
-                </div>
+                
                 <h1
                   className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4"
                   style={{ fontFamily: "'Playfair Display', serif" }}
@@ -64,12 +60,11 @@ export default function Hero() {
                   >
                     Read Story <ArrowRight size={12} />
                   </Link>
-                  <button className="flex items-center gap-2 text-charcoal-300 hover:text-white text-[11px] tracking-widest uppercase transition-colors">
-                    <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-gold-500 transition-colors">
-                      <Play size={10} className="ml-0.5" />
-                    </div>
-                    Watch Film
-                  </button>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Inspiration</span>
+                    <span className="text-charcoal-600">·</span>
+                    <span className="text-[10px] text-charcoal-400">April 8, 2026</span>
+                  </div>
                 </div>
               </div>
             </div>

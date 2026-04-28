@@ -6,7 +6,7 @@ type Category = 'All' | 'Color' | 'Cut' | 'Texture' | 'Vivid'
 const looks = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1554519515-242161756769?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b7/38/c9/68/ae/v1_E10/E103ZHL3.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=de8b86bb978fbeade4eff880b7d635cd4fa72055f5dc6f934b2ec5517686e205',
     title: 'Caramel Balayage',
     stylist: '@hairbylucia',
     category: 'Color' as Category,
@@ -14,7 +14,7 @@ const looks = [
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/61/a3/7c/c5/c2/v1_E11/E117PKJM.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=8b0830802c80b8cba5e98bc95454a6334a4b6d7b50586efd2c08b594ea4f8962',
     title: 'Glass Hair',
     stylist: '@smoothbytomasz',
     category: 'Cut' as Category,
@@ -22,7 +22,7 @@ const looks = [
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/70/83/45/30/v1_E11/E117QTBN.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=90c9ce1bcb36c3b28bb9bb990dcb182919e6e9e41570ae3f369c5632515f8337',
     title: 'Vivid Coral Melt',
     stylist: '@vividsbyimani',
     category: 'Vivid' as Category,
@@ -30,7 +30,7 @@ const looks = [
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fc/2f/88/5c/19/v1_E10/E104MFU7.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c39ec640de77e4653962b20de0a2e1cf4ff988c16e8fc002a521094c8e2c367b',
     title: 'Natural Curl Set',
     stylist: '@curlsbynadia',
     category: 'Texture' as Category,
@@ -38,7 +38,7 @@ const looks = [
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1590159983013-d4165bef452f?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/7a/0b/23/e4/bb/v1_E10/E101NKNV.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1f8f01aa90eb0070c3692ae15baab9ce5872e46abbe9ddaeeb43751827444218',
     title: 'Shadow Root Blonde',
     stylist: '@rootsbysophia',
     category: 'Color' as Category,
@@ -46,7 +46,7 @@ const looks = [
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/45/b9/da/7d/7e/v1_E10/E109XHQP.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=498ed0538a64127ad4d8878808a9f8c0889b9d00f06ddb0ab90f931bbc9921ca',
     title: 'Bob with Texture',
     stylist: '@precision.alex',
     category: 'Cut' as Category,
