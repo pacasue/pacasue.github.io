@@ -102,7 +102,7 @@ export default function Hero() {
               {[
                 {
                   tag: 'Booking',
-                  title: 'How to Book the Right Stylist for Your Hair Type',
+                  title: 'How to Book the Right Stylist for Your HairH Type',
                   author: 'Maria Chen',
                   readTime: '5 min',
                   slug: 'book-right-stylist',
