@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <header className="relative z-50 bg-black border-b border-white/10">
       {/* Top bar */}
-      <div className="border-b border-white/5">
+      {/* <div className="border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-8 text-[10px] tracking-widest uppercase text-charcoal-400">
           <div className="flex gap-6">
             <a href="#" className="hover:text-gold-500 transition-colors">Find a Stylist</a>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <a href="#" className="hover:text-gold-500 transition-colors hidden sm:block">Get the Newsletter</a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main navbar */}
       <div className="max-w-7xl mx-auto px-4">
@@ -61,12 +61,11 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex flex-col items-center md:items-start">
-            <span
-              className="text-white font-bold tracking-[0.2em] uppercase text-lg md:text-2xl"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Hair<span className="text-gold-500">Pro</span>Voices
-            </span>
+            <img
+              src="/image/site-logo.png"
+              alt="HairProVoices"
+              className="h-8 md:h-12 object-contain"
+            />
             <span className="text-[8px] tracking-[0.35em] uppercase text-charcoal-400 hidden md:block mt-0.5">
               Your Guide to Great Hair
             </span>
