@@ -14,6 +14,70 @@ export interface Article {
   metaDescription: string
 }
 
+export interface Author {
+  name: string
+  title: string
+  bio: string
+  image: string
+}
+
+export const authors: Record<string, Author> = {
+  'Leila Fernandez': {
+    name: 'Leila Fernandez',
+    title: 'Senior Color Editor',
+    bio: 'Leila has been covering professional hair color for over a decade. A former colorist herself, she splits her time between salon visits, brand labs, and competitions to bring color professionals the most actionable, accurate coverage in the industry. She is based in Miami, FL.',
+    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Tom Harley': {
+    name: 'Tom Harley',
+    title: 'Technique Editor',
+    bio: 'Tom spent 12 years behind the chair in London and New York before turning to editorial. He specializes in cutting technique, men\'s grooming, and the science of layering. His work has appeared in trade publications across Europe and North America.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Alex Nguyen': {
+    name: 'Alex Nguyen',
+    title: 'Vivid Color Specialist',
+    bio: 'Alex is a vivid color educator and session stylist based in Los Angeles. With a background in fashion editorial and a cult following for bold, saturated work, Alex writes about color formulation, creative technique, and building a specialty service menu.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Imani Okafor': {
+    name: 'Imani Okafor',
+    title: 'Texture & Curl Editor',
+    bio: 'Imani is a curl specialist and educator with over eight years of experience working exclusively with textured hair. Based in Atlanta, she consults for salons transitioning to curl-forward service menus and writes about curl science, client communication, and product formulation.',
+    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Dana Reeves': {
+    name: 'Dana Reeves',
+    title: 'Salon Business Coach',
+    bio: 'Dana runs a six-figure solo suite in Nashville and coaches stylists on pricing, retention, and building specialty service menus. She writes about the business side of the industry — from rebooking strategy to retail systems — with a focus on what actually works in the real world.',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Michelle Torres': {
+    name: 'Michelle Torres',
+    title: 'Color Technique Contributor',
+    bio: 'Michelle is a balayage specialist and color educator based in Chicago. She has trained stylists across the Midwest on freehand techniques and tone correction, and writes about color placement, client consultations, and the art of the seamless grow-out.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Maria Chen': {
+    name: 'Maria Chen',
+    title: 'Client Experience Editor',
+    bio: 'Maria covers the client side of the salon experience — from booking and consultation to aftercare and retention. A former salon manager turned writer, she brings an operational perspective to topics like stylist-client communication, service design, and building long-term loyalty.',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'James Olivier': {
+    name: 'James Olivier',
+    title: 'Hair Care & Science Writer',
+    bio: 'James writes about the chemistry and biology behind healthy hair — from bond structure and porosity to scalp health and ingredient science. With a background in cosmetic chemistry, he translates complex formulation topics into practical guidance for stylists and clients alike.',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+  'Dr. Sarah Kline': {
+    name: 'Dr. Sarah Kline',
+    title: 'Trichology Advisor',
+    bio: 'Dr. Kline is a board-certified trichologist and dermatology consultant who advises on scalp health, hair loss, and the clinical side of hair care. She contributes expert commentary on topics where science and salon practice intersect, including bond builders, porosity, and treatment protocols.',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
+}
+
 export const articles: Article[] = [
   {
     id: 1,
