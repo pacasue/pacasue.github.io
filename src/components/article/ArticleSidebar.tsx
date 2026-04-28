@@ -1,13 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link2, ExternalLink, ArrowRight } from 'lucide-react'
+import type { Article } from '../../data/articles'
 
-const tocItems = [
+const copperTocItems = [
   { id: 'intro', label: 'Introduction' },
   { id: 'why-copper', label: 'Why Copper Works' },
   { id: 'formula', label: 'The Formula' },
   { id: 'application', label: 'Application Technique' },
   { id: 'maintenance', label: 'Selling Maintenance' },
 ]
+
+function slugify(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-guide', 'haircut-layers'])
+
+function getTocItems(article: Article) {
+  if (!article.body) return copperTocItems
+  const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm
+  const headings = [...article.body.matchAll(pattern)]
+  if (headings.length === 0) return copperTocItems
+  return headings.map((m) => ({ id: slugify(m[1]), label: m[1] }))
+}
 
 const relatedSidebar = [
   {
@@ -37,9 +52,25 @@ const shareLinks = [
   { label: 'LinkedIn', icon: ExternalLink, action: 'linkedin' },
 ]
 
-export default function ArticleSidebar() {
+export default function ArticleSidebar({ article }: { article: Article }) {
   const [copied, setCopied] = useState(false)
-  const [activeSection] = useState('intro')
+  const [activeSection, setActiveSection] = useState('')
+  const tocItems = getTocItems(article)
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+    tocItems.forEach(({ id }) => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id) },
+        { rootMargin: '-20% 0px -70% 0px' }
+      )
+      obs.observe(el)
+      observers.push(obs)
+    })
+    return () => observers.forEach((o) => o.disconnect())
+  }, [tocItems])
 
   const handleShare = (action: string) => {
     if (action === 'copy') {

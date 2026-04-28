@@ -481,7 +481,7 @@ When you combine both—smart color formulation and a repeatable business rhythm
     author: 'Imani Okafor',
     date: 'Apr 2, 2026',
     readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&q=80&auto=format&fit=crop',
+    image: '/image/curl-consultation.avif',
     category: 'Texture',
     body: `A “curl consultation best curls” should feel like more than a friendly chat—it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
 

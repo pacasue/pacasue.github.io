@@ -41,7 +41,7 @@ export default function ArticlePage() {
               </div>
               {/* Sidebar */}
               <aside className="lg:col-span-4">
-                <ArticleSidebar />
+                <ArticleSidebar article={article} />
               </aside>
             </div>
           </div>

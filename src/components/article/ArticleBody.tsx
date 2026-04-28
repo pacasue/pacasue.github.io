@@ -4,9 +4,10 @@ import { Quote } from 'lucide-react'
 const INLINE_IMAGE_1 = 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&q=80&auto=format&fit=crop'
 const INLINE_IMAGE_2 = 'https://images.unsplash.com/photo-1554519515-242161756769?w=1200&q=80&auto=format&fit=crop'
 
-function SectionHeading({ children }: { children: React.ReactNode }) {
+function SectionHeading({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
     <h2
+      id={id}
       className="text-2xl md:text-3xl font-bold text-white mt-12 mb-5 leading-snug"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
@@ -15,9 +16,10 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Subheading({ children }: { children: React.ReactNode }) {
+function Subheading({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
     <h3
+      id={id}
       className="text-lg font-semibold text-charcoal-100 mt-8 mb-3 flex items-center gap-3"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
@@ -120,6 +122,10 @@ function renderInline(text: string): React.ReactNode[] {
   return nodes
 }
 
+function slugify(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
 function MarkdownBody({ body }: { body: string }) {
   const blocks = body.split(/\n\n+/)
   return (
@@ -128,11 +134,11 @@ function MarkdownBody({ body }: { body: string }) {
         const trimmed = block.trim()
         if (!trimmed) return null
         const h2 = trimmed.match(/^## (.+)/)
-        if (h2) return <SectionHeading key={i}>{h2[1]}</SectionHeading>
+        if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
         const h3 = trimmed.match(/^### (.+)/)
-        if (h3) return <Subheading key={i}>{h3[1]}</Subheading>
+        if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>
         const h1 = trimmed.match(/^# (.+)/)
-        if (h1) return <SectionHeading key={i}>{h1[1]}</SectionHeading>
+        if (h1) return <SectionHeading key={i} id={slugify(h1[1])}>{h1[1]}</SectionHeading>
         // bullet list
         if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
           const items = trimmed.split('\n').filter((l) => l.trim().startsWith('- ') || l.trim().startsWith('* '))

@@ -46,7 +46,7 @@ const articles = [
     author: 'Imani Okafor',
     date: 'Apr 2, 2026',
     readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&q=80&auto=format&fit=crop',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/31/31/67/c7/d1/v1_E10/E105INWD.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3fefda14e215cf3e88aeee5422dcca73540d7cdd9e3451160c35c7afb2c44218',
     featured: false,
     slug: 'curl-consultation',
   },
