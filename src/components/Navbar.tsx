@@ -12,16 +12,12 @@ const navCategories = [
     items: ['Balayage', 'Vivid Color', 'Curls & Texture', 'Before & After'],
   },
   {
-    label: 'Find a Stylist',
-    items: ['Browse Stylists', 'Near Me', 'By Specialty', 'Reviews'],
+    label: 'Hair Care',
+    items: ['Product Guides', 'At-Home Tips', 'Scalp Health', 'Tools & Styling'],
   },
   {
     label: 'Gallery',
     items: ['Editorial Looks', 'Client Transformations', 'Seasonal Looks', 'Before & After'],
-  },
-  {
-    label: 'Hair Care',
-    items: ['Product Guides', 'At-Home Tips', 'Scalp Health', 'Tools & Styling'],
   },
 ]
 
@@ -98,6 +94,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
+            <Link
+              to="/articles"
+              className="px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors"
+            >
+              All Articles
+            </Link>
           </nav>
 
           {/* Search */}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link2, ExternalLink, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import type { Article } from '../../data/articles'
+import { articles } from '../../data/articles'
 
 const copperTocItems = [
   { id: 'intro', label: 'Introduction' },
@@ -24,27 +26,6 @@ function getTocItems(article: Article) {
   return headings.map((m) => ({ id: slugify(m[1]), label: m[1] }))
 }
 
-const relatedSidebar = [
-  {
-    tag: 'Color',
-    title: 'Brunette Glazing: The Formula That Broke Instagram',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=80&auto=format&fit=crop',
-    readTime: '4 min',
-  },
-  {
-    tag: 'Vivid Color',
-    title: 'Pastel-to-Vivid: One Formula, Endless Results',
-    image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=200&q=80&auto=format&fit=crop',
-    readTime: '5 min',
-  },
-  {
-    tag: 'Business',
-    title: 'The $100K Solo Stylist Blueprint',
-    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=200&q=80&auto=format&fit=crop',
-    readTime: '10 min',
-  },
-]
-
 const shareLinks = [
   { label: 'Copy Link', icon: Link2, action: 'copy' },
   { label: 'X / Twitter', icon: ExternalLink, action: 'twitter' },
@@ -56,6 +37,11 @@ export default function ArticleSidebar({ article }: { article: Article }) {
   const [copied, setCopied] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const tocItems = getTocItems(article)
+
+  const relatedArticles = articles
+    .filter((a) => a.slug !== article.slug && a.slug !== 'what-is-balayage-old')
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3)
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []
@@ -158,30 +144,30 @@ export default function ArticleSidebar({ article }: { article: Article }) {
           Read Next
         </p>
         <div className="flex flex-col divide-y divide-white/5">
-          {relatedSidebar.map((article) => (
-            <a
-              key={article.title}
-              href="#"
+          {relatedArticles.map((a) => (
+            <Link
+              key={a.slug}
+              to={`/article/${a.slug}`}
               className="flex gap-3 py-4 group cursor-pointer"
             >
               <div className="w-16 h-16 flex-shrink-0 overflow-hidden">
                 <img
-                  src={article.image}
-                  alt={article.title}
+                  src={a.image}
+                  alt={a.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col gap-1 min-w-0">
-                <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">{article.tag}</span>
+                <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">{a.tag}</span>
                 <p
                   className="text-xs font-semibold text-charcoal-300 group-hover:text-white transition-colors leading-snug line-clamp-2"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  {article.title}
+                  {a.title}
                 </p>
-                <span className="text-[10px] text-charcoal-600">{article.readTime} read</span>
+                <span className="text-[10px] text-charcoal-600">{a.readTime} read</span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         <a

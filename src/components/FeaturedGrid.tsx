@@ -34,7 +34,7 @@ const articles = [
     author: 'Alex Nguyen',
     date: 'Apr 3, 2026',
     readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80&auto=format&fit=crop',
+    image: '/image/vivid-color-guide.avif',
     featured: false,
     slug: 'vivid-color-guide',
   },

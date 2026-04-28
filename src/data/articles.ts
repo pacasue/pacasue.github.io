@@ -233,7 +233,7 @@ When you pair a cut that matches your natural fall with a tone-refresh service t
     author: 'Tom Harley',
     date: 'Apr 4, 2026',
     readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format&fit=crop',
+    image: '/image/haircut-layers.avif',
     category: 'Cut & Style',
     body: `## Brunette Glazing salon treatment: what it is + who it’s for
 
@@ -363,7 +363,7 @@ When you pair a cut that matches your natural fall with a tone-refresh service t
     author: 'Alex Nguyen',
     date: 'Apr 3, 2026',
     readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80&auto=format&fit=crop',
+    image: '/image/vivid-color-guide.avif',
     category: 'Vivid Color',
     body: `## Pastel-to-vivid goals (and what your clients actually want)
 When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity—what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
@@ -447,87 +447,6 @@ To protect vivid vibrancy:
 - Add conditioning support so the hair holds onto softness and shine.
 
 When aftercare is consistent, you reduce the “cycle” of damage → color loss → more aggressive re-coloring. That’s one of the most practical ways solo stylists protect their client relationships and reduce color corrections.
-
-## Solo stylist business blueprint: offer stack that sells the next appointment
-A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
-
-### Your core services and add-ons
-Build your menu around a clear color path:
-
-- **Consultation (always included):** Assess hair history, goals, readiness, and maintenance capability.
-- **Color service (primary appointment):** Pastel, vivid, or transformation with strand-test timing guidance.
-- **Maintenance visit:** A scheduled refresh based on how quickly your client’s tone fades.
-
-Add-ons can include gloss/toning for tone control and conditioning for hair strength support. The point is to make maintenance feel like a normal part of vivid color—not an emergency.
-
-### Packages that guide rebooking
-Clients rebook when the next step is easy to understand. Consider packaging your color services so the client knows what they’re paying for and what comes after. For example, you can present:
-- a “Color + future-ready plan” package
-- a “Refresh & protect” maintenance option
-
-Even if you don’t use formal bundles, the structure should be consistent: consultation, application time, and aftercare guidance are clear, so clients feel confident and you reduce quote confusion.
-
-## Pricing strategy: packages + time-based logic you can quote confidently
-Pricing solo can feel tricky because you carry both the creative work and the admin work. The solution is to price with a logic clients can understand.
-
-### A practical quote checklist
-Before you quote, align your pricing to three things:
-1. **Service type:** consultation, color application, maintenance/refresh.
-2. **Time and complexity:** hair length, density, and whether prep/lightening is required.
-3. **What’s included:** strand test, processing time, and aftercare guidance.
-
-Then present packages that include the essentials. If a client asks what affects the price, you can point to the variables without sounding vague.
-
-### A solo-friendly way to think about it
-- Base your color pricing on the expected appointment duration.
-- Adjust for additional time: extra prep, more sections, or complicated corrections.
-- Keep your inclusions consistent: if strand testing is part of your safety and timing system, it should be built into your service.
-
-This approach helps protect your margins and reduces the “nickel-and-dime” feeling that can hurt retention.
-
-## Marketing system for solo stylists: content that converts
-Your marketing should do two jobs: show your results and reduce client anxiety. Pastel-to-vivid color is visually dramatic, so content works well—especially when you explain your process in a calm, hair-health-first way.
-
-### Weekly content plan (simple and repeatable)
-Aim for a rhythm you can sustain:
-- **Before/after posts** with a short note on starting level and the goal.
-- **Formula breakdown stories** (what direction you used: pastel versus vivid, and why).
-- **Hair health tips** that connect to results (porosity, gentle washing, conditioning).
-
-When clients understand you’re not just “slapping on color,” they’re more likely to book and rebook.
-
-### Conversion loop: booking link, deposit, and follow-up
-Make the path to booking obvious. Use:
-- a booking link in every post and story
-- a deposit policy for confirmed appointments
-- a follow-up message after the service that encourages maintenance booking
-
-This loop turns your content into revenue, and it protects your schedule.
-
-## Operations and compliance: run your salon like a business
-A solo stylist is still a business owner. That means you need the boring-but-important foundation: licensing, insurance, and admin systems.
-
-StyleSeat’s “Opening a Salon” checklist highlights core steps like creating a business plan, determining services/pricing, and registering the business with the IRS and applying for permits/business license [5]. Requirements vary by location, so verify what your state and city require.
-
-### What to set up before your first big color push
-- Business registration and permits
-- Professional liability insurance
-- Client intake forms and informed consent
-- Recordkeeping for formulas, developer choices, and timing notes
-
-Recordkeeping supports both safety and consistency. It also makes future re-dos faster—especially when you’re building a signature pastel-to-vivid look.
-
-## 30/60/90 launch plan: build trust, then scale
-### First 30 days: policies + portfolio
-Document your process. Build a portfolio that shows both pastel and vivid outcomes, plus a few “journey” transformations where hair readiness mattered. Create your policies: consultation expectations, strand test approach, deposit and cancellation rules, and aftercare guidance.
-
-### Days 31–60: outreach + partnerships
-Reach out to local communities, collaborate with photographers, and build referral relationships with complementary providers (like barbershops, gyms, or bridal vendors). Share your hair-health-first approach so people understand your results are safe and intentional.
-
-### Days 61–90: optimize pricing + retention
-Use rebook data to refine your menu. If clients love a specific maintenance visit, make it a featured package. If you notice frequent color corrections, revisit your readiness screening and strand test timing consistency.
-
-The goal is simple: fewer surprises, more repeat clients, and a brand that feels professional.
 
 ## Conclusion
 A “pastel to vivid color formula” isn’t just about pigment—it’s about saturation control, correct product pairing, and timing you can trust. Strand testing and hair safety checks help you deliver vivid results without sacrificing hair health [1] [0]. And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.
@@ -637,7 +556,7 @@ Good hair days start with the right plan. When you choose a stylist who understa
     author: 'Dana Reeves',
     date: 'Apr 1, 2026',
     readTime: '10 min',
-    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80&auto=format&fit=crop',
+    image: '/image/find-right-stylist.avif',
     category: 'Finding a Stylist',
     body: `## Quick intro: stylist vs. dermatologist (and why it matters)
 
@@ -827,98 +746,98 @@ When you match the right stylist to your hair type—and know when to involve a 
     metaTitle: 'How to Book the Right Hair Stylist for Your Hair Type',
     metaDescription: 'Learn how to match your hair type and goals to a stylist’s specialty—plus when to see a dermatologist for hair loss or scalp issues.',
   },
-  {
-    id: 7,
-    slug: 'what-is-balayage',
-    tag: 'Technique',
-    title: 'What Is Balayage? Your Stylist Explains',
-    excerpt: 'Everything you need to know about the freehand coloring technique that changed the industry.',
-    author: 'Michelle Torres',
-    date: 'Mar 30, 2026',
-    readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1554519515-242161756769?w=600&q=80&auto=format&fit=crop',
-    category: 'Technique',
-    body: `A “curl consultation best curls” should feel like more than a friendly chat—it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
+//   {
+//     id: 7,
+//     slug: 'what-is-balayage-old',
+//     tag: 'Technique',
+//     title: 'What Is Balayage? Your Stylist Explains',
+//     excerpt: 'Everything you need to know about the freehand coloring technique that changed the industry.',
+//     author: 'Michelle Torres',
+//     date: 'Mar 30, 2026',
+//     readTime: '5 min',
+//     image: 'https://images.unsplash.com/photo-1554519515-242161756769?w=600&q=80&auto=format&fit=crop',
+//     category: 'Technique',
+//     body: `A “curl consultation best curls” should feel like more than a friendly chat—it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
 
-If you’ve ever walked out with a cut that looked great wet but fell flat dry (or a color that looked gorgeous for two weeks and then turned brassy or dry), this guide is for you. We’ll cover how to find a stylist for your hair, what to ask in a curl consultation, and what “best curls” truly means—plus how to approach balayage when you have curls.
+// If you’ve ever walked out with a cut that looked great wet but fell flat dry (or a color that looked gorgeous for two weeks and then turned brassy or dry), this guide is for you. We’ll cover how to find a stylist for your hair, what to ask in a curl consultation, and what “best curls” truly means—plus how to approach balayage when you have curls.
 
-### How to find a stylist for your hair (step-by-step)
-Finding a great stylist for curls is less about chasing a trend and more about matching your hair needs with someone who understands curl behavior. Start with your research: look for portfolios that show multiple curl types—not just one “model hair day.” Search for stylists who post consistent work across different lengths and who demonstrate how they style at home, not only how they style in-salon.
+// ### How to find a stylist for your hair (step-by-step)
+// Finding a great stylist for curls is less about chasing a trend and more about matching your hair needs with someone who understands curl behavior. Start with your research: look for portfolios that show multiple curl types—not just one “model hair day.” Search for stylists who post consistent work across different lengths and who demonstrate how they style at home, not only how they style in-salon.
 
-Next, vet experience in a way that’s specific to you. Reviews can be helpful, but the most important clues are in the details: Do their before/after photos look consistent under similar lighting? Do they show how the cut grows out? Do they mention curl mapping, shrinkage, or styling education? A stylist who can explain how curl patterns change with humidity and product choice is usually a safer bet than someone who only talks about the haircut “shape.”
+// Next, vet experience in a way that’s specific to you. Reviews can be helpful, but the most important clues are in the details: Do their before/after photos look consistent under similar lighting? Do they show how the cut grows out? Do they mention curl mapping, shrinkage, or styling education? A stylist who can explain how curl patterns change with humidity and product choice is usually a safer bet than someone who only talks about the haircut “shape.”
 
-Where to look matters too. Beyond Instagram and Google reviews, curl communities (local groups, meetups, and reputable curl education platforms) can connect you with stylists known for curl-first results. When you contact a salon, ask a simple question upfront: “Do you do curl mapping or a curl consultation before cutting?” Their answer tells you how they work.
+// Where to look matters too. Beyond Instagram and Google reviews, curl communities (local groups, meetups, and reputable curl education platforms) can connect you with stylists known for curl-first results. When you contact a salon, ask a simple question upfront: “Do you do curl mapping or a curl consultation before cutting?” Their answer tells you how they work.
 
-Finally, trust your gut during the first interaction. The best curl consultations don’t rush. A good stylist asks about your wash schedule, your go-to products, and what you hate (frizz, flat roots, dryness, uneven curl clumps). They should also ask what you want most—wash-and-go definition, bouncy volume, or a style that can stretch without losing shape. You’re looking for a match, not a gamble.
+// Finally, trust your gut during the first interaction. The best curl consultations don’t rush. A good stylist asks about your wash schedule, your go-to products, and what you hate (frizz, flat roots, dryness, uneven curl clumps). They should also ask what you want most—wash-and-go definition, bouncy volume, or a style that can stretch without losing shape. You’re looking for a match, not a gamble.
 
-### The curl consultation checklist (questions to ask)
-A great curl consultation should feel structured. If you’re not sure what to ask, use this as your guide. The goal is to learn how your stylist thinks, what techniques they use, and whether they’ll teach you how to maintain the results.
+// ### The curl consultation checklist (questions to ask)
+// A great curl consultation should feel structured. If you’re not sure what to ask, use this as your guide. The goal is to learn how your stylist thinks, what techniques they use, and whether they’ll teach you how to maintain the results.
 
-Start with the fundamentals: “Will you map my curls before cutting?” Curl mapping helps ensure the cut respects your natural growth patterns and avoids surprises like weight pulling certain sections flat. Then ask about their approach to shrinkage and styling differences: “How do you account for shrinkage from wet to dry?” Shrinkage isn’t a problem to “fix”—it’s part of your curl identity, and a stylist should build the shape accordingly.
+// Start with the fundamentals: “Will you map my curls before cutting?” Curl mapping helps ensure the cut respects your natural growth patterns and avoids surprises like weight pulling certain sections flat. Then ask about their approach to shrinkage and styling differences: “How do you account for shrinkage from wet to dry?” Shrinkage isn’t a problem to “fix”—it’s part of your curl identity, and a stylist should build the shape accordingly.
 
-Next, ask what products and techniques they plan to use. For example: “What styling method will you use for my consultation—wet-to-dry, diffusing, or a specific set routine?” If you prefer a wash-and-go, don’t let the consultation be built around a finish you’ll never do at home.
+// Next, ask what products and techniques they plan to use. For example: “What styling method will you use for my consultation—wet-to-dry, diffusing, or a specific set routine?” If you prefer a wash-and-go, don’t let the consultation be built around a finish you’ll never do at home.
 
-You should also ask about product recommendations that match your hair’s needs, not just what’s trendy. “How will you choose products for my porosity and density?” Porosity affects how curls absorb moisture and hold definition, while density affects how much weight your hair can handle without going flat.
+// You should also ask about product recommendations that match your hair’s needs, not just what’s trendy. “How will you choose products for my porosity and density?” Porosity affects how curls absorb moisture and hold definition, while density affects how much weight your hair can handle without going flat.
 
-Finally, ask what happens after you leave: “Will you teach me how to style at home?” The best stylists don’t just cut—they coach. You want a plan you can repeat: how much product to use, where to apply it, and how to refresh curls between washes.
+// Finally, ask what happens after you leave: “Will you teach me how to style at home?” The best stylists don’t just cut—they coach. You want a plan you can repeat: how much product to use, where to apply it, and how to refresh curls between washes.
 
-If your stylist can answer these questions clearly and confidently, you’re likely in good hands. If they dodge details or say “we’ll figure it out later,” that’s a sign to look elsewhere.
+// If your stylist can answer these questions clearly and confidently, you’re likely in good hands. If they dodge details or say “we’ll figure it out later,” that’s a sign to look elsewhere.
 
-### What “best curls” means (tailoring the cut to your curl pattern)
-“Best curls” isn’t one haircut—it’s a customized outcome. A curl-first stylist adjusts for curl pattern, density, and growth direction so your shape looks intentional in your everyday life. That means the cut should support your natural curl architecture, not fight it.
+// ### What “best curls” means (tailoring the cut to your curl pattern)
+// “Best curls” isn’t one haircut—it’s a customized outcome. A curl-first stylist adjusts for curl pattern, density, and growth direction so your shape looks intentional in your everyday life. That means the cut should support your natural curl architecture, not fight it.
 
-Curl pattern matters because different curl types behave differently. Looser waves may need more structure to hold shape, while tighter curls often need careful layering so they don’t become triangular or overly puffy. Density matters because thick, heavy hair may require targeted thinning or strategic layering to prevent the roots from collapsing. Porosity matters because hair that struggles to retain moisture may need a cut that reduces dryness-looking ends and supports a more consistent styling routine.
+// Curl pattern matters because different curl types behave differently. Looser waves may need more structure to hold shape, while tighter curls often need careful layering so they don’t become triangular or overly puffy. Density matters because thick, heavy hair may require targeted thinning or strategic layering to prevent the roots from collapsing. Porosity matters because hair that struggles to retain moisture may need a cut that reduces dryness-looking ends and supports a more consistent styling routine.
 
-Growth direction is another big factor. If your curls grow outward or downward in certain zones, a uniform “all-over” approach can create imbalance. A skilled stylist will observe where your curls naturally fall and then cut to enhance that pattern.
+// Growth direction is another big factor. If your curls grow outward or downward in certain zones, a uniform “all-over” approach can create imbalance. A skilled stylist will observe where your curls naturally fall and then cut to enhance that pattern.
 
-Communication is key. Bring clarity to your preferences so your stylist can tailor the result. Ask yourself what you actually do at home. Do you want a wash-and-go with defined clumps and bounce? Do you like a “set” with finger coils or twists? Do you air-dry, diffuse, or do a combination? Tell your stylist your routine and your constraints: your time, your humidity environment, and what products you already own.
+// Communication is key. Bring clarity to your preferences so your stylist can tailor the result. Ask yourself what you actually do at home. Do you want a wash-and-go with defined clumps and bounce? Do you like a “set” with finger coils or twists? Do you air-dry, diffuse, or do a combination? Tell your stylist your routine and your constraints: your time, your humidity environment, and what products you already own.
 
-When your stylist understands your goals, they can design a cut that makes styling easier—not harder. The “best curls” outcome should look good even when you don’t spend an hour in the mirror.
+// When your stylist understands your goals, they can design a cut that makes styling easier—not harder. The “best curls” outcome should look good even when you don’t spend an hour in the mirror.
 
-### What is balayage stylist explains (and what to ask before booking)
-Balayage is commonly described as a freehand highlighting technique where color/lightener is applied in a sweeping motion to create natural-looking dimension that grows out with less obvious regrowth lines [turn0search8]. In simpler terms: instead of placing color in perfectly spaced sections all the way to the roots, balayage is typically applied to mid-lengths and ends for a softer, sun-kissed effect [turn0news12].
+// ### What is balayage stylist explains (and what to ask before booking)
+// Balayage is commonly described as a freehand highlighting technique where color/lightener is applied in a sweeping motion to create natural-looking dimension that grows out with less obvious regrowth lines [turn0search8]. In simpler terms: instead of placing color in perfectly spaced sections all the way to the roots, balayage is typically applied to mid-lengths and ends for a softer, sun-kissed effect [turn0news12].
 
-If you’re booking a “balayage stylist explains” session, you want them to do more than name the technique. You want them to explain how it will work with your hair’s texture and curl pattern.
+// If you’re booking a “balayage stylist explains” session, you want them to do more than name the technique. You want them to explain how it will work with your hair’s texture and curl pattern.
 
-For curls, placement is everything. A balayage that’s beautiful on straight hair can look uneven on curls if the lift and placement aren’t adjusted for how your curls clump and dry. Ask: “How will you place color so my curl pattern stays balanced?” A good stylist should talk about lift level and where the lightener will go, considering how your curls frame your face and how your ends behave.
+// For curls, placement is everything. A balayage that’s beautiful on straight hair can look uneven on curls if the lift and placement aren’t adjusted for how your curls clump and dry. Ask: “How will you place color so my curl pattern stays balanced?” A good stylist should talk about lift level and where the lightener will go, considering how your curls frame your face and how your ends behave.
 
-Timing and curl health also matter. The more lift you’re chasing, the more potential stress your hair may experience—especially if your curls are already prone to dryness. Ask: “How will you protect my curl integrity during the process?” You can also ask whether they recommend a pre-color assessment of porosity and elasticity, and what bond-support or conditioning steps they include.
+// Timing and curl health also matter. The more lift you’re chasing, the more potential stress your hair may experience—especially if your curls are already prone to dryness. Ask: “How will you protect my curl integrity during the process?” You can also ask whether they recommend a pre-color assessment of porosity and elasticity, and what bond-support or conditioning steps they include.
 
-Finally, ask how the service will be finished for your curl goals. “Will you style my hair after coloring in a curl-friendly way so I can see the true result?” You want to leave with a realistic preview of your final look, not just a flat, straightened sample.
+// Finally, ask how the service will be finished for your curl goals. “Will you style my hair after coloring in a curl-friendly way so I can see the true result?” You want to leave with a realistic preview of your final look, not just a flat, straightened sample.
 
-### Balayage + curls: common pitfalls and how to avoid them
-Balayage can be stunning on curls, but the details determine whether you’ll love it long-term. Common pitfalls include uneven lift, dryness, and brassiness. Uneven lift can happen when color placement doesn’t respect curl clumps, or when processing time isn’t tailored to your hair’s starting level and porosity. Dryness often shows up when lightening is too aggressive or when aftercare hydration isn’t part of the plan.
+// ### Balayage + curls: common pitfalls and how to avoid them
+// Balayage can be stunning on curls, but the details determine whether you’ll love it long-term. Common pitfalls include uneven lift, dryness, and brassiness. Uneven lift can happen when color placement doesn’t respect curl clumps, or when processing time isn’t tailored to your hair’s starting level and porosity. Dryness often shows up when lightening is too aggressive or when aftercare hydration isn’t part of the plan.
 
-Brassiness is another concern, especially if you’re going lighter. Even though balayage grows out more naturally than some other highlight methods [turn0search8], the tone still needs maintenance. Your stylist should propose a realistic plan, including glossing or toning cadence based on how quickly your hair shifts.
+// Brassiness is another concern, especially if you’re going lighter. Even though balayage grows out more naturally than some other highlight methods [turn0search8], the tone still needs maintenance. Your stylist should propose a realistic plan, including glossing or toning cadence based on how quickly your hair shifts.
 
-The key is that the stylist should explain what they’re aiming for and why. Instead of promising a perfect “forever” color, they should talk about the fade-out process—how it will look as it grows, and what you can do to keep it looking fresh without over-processing.
+// The key is that the stylist should explain what they’re aiming for and why. Instead of promising a perfect “forever” color, they should talk about the fade-out process—how it will look as it grows, and what you can do to keep it looking fresh without over-processing.
 
-Ask questions that protect your curls: “How will you prevent my ends from getting too porous?” “What toner or gloss will you use, and how often will I need it?” “What should I expect during the first wash after color?” A curl-friendly color plan also includes aftercare guidance: gentle cleansing, moisture support, and heat minimization when possible.
+// Ask questions that protect your curls: “How will you prevent my ends from getting too porous?” “What toner or gloss will you use, and how often will I need it?” “What should I expect during the first wash after color?” A curl-friendly color plan also includes aftercare guidance: gentle cleansing, moisture support, and heat minimization when possible.
 
-If a stylist can’t discuss maintenance or only sells the service without the follow-through plan, that’s a risk. The best balayage results are the ones that remain wearable for months.
+// If a stylist can’t discuss maintenance or only sells the service without the follow-through plan, that’s a risk. The best balayage results are the ones that remain wearable for months.
 
-### When to involve a dermatologist (hair loss vs. styling/curl issues)
-Sometimes what feels like “a hair problem” is actually hair shedding or a medical condition—not a cut or product mismatch. It’s important to know the difference so you don’t lose time chasing stylist solutions for something that needs medical care.
+// ### When to involve a dermatologist (hair loss vs. styling/curl issues)
+// Sometimes what feels like “a hair problem” is actually hair shedding or a medical condition—not a cut or product mismatch. It’s important to know the difference so you don’t lose time chasing stylist solutions for something that needs medical care.
 
-Normal scalp shedding varies, but UCLA Health notes that a normal scalp sheds about 25 to 100 hairs per day [turn1search5]. If you’re shedding more than the average—one guidance source suggests seeking help if you’re shedding more than about 100–150 hairs per day [turn1search0]—or if you notice a receding hairline or balding at the crown, it’s wise to consult a dermatologist early.
+// Normal scalp shedding varies, but UCLA Health notes that a normal scalp sheds about 25 to 100 hairs per day [turn1search5]. If you’re shedding more than the average—one guidance source suggests seeking help if you’re shedding more than about 100–150 hairs per day [turn1search0]—or if you notice a receding hairline or balding at the crown, it’s wise to consult a dermatologist early.
 
-The Mayo Clinic also notes that a doctor may refer patients to a dermatologist for hair-loss evaluation and treatment [turn1search1]. That’s especially important if you’re experiencing rapid thinning, scalp symptoms (itching, scaling, pain), or changes that don’t improve with better styling.
+// The Mayo Clinic also notes that a doctor may refer patients to a dermatologist for hair-loss evaluation and treatment [turn1search1]. That’s especially important if you’re experiencing rapid thinning, scalp symptoms (itching, scaling, pain), or changes that don’t improve with better styling.
 
-Hair loss can be confused with styling damage or breakage, particularly with curls where dryness and tangling can make strands snap. But if you’re seeing true thinning at the roots, widening parting, or patchy loss, don’t assume it’s just your curl routine.
+// Hair loss can be confused with styling damage or breakage, particularly with curls where dryness and tangling can make strands snap. But if you’re seeing true thinning at the roots, widening parting, or patchy loss, don’t assume it’s just your curl routine.
 
-If you’re unsure, take photos in consistent lighting and bring your observations to a professional. A dermatologist can help clarify whether you’re dealing with shedding, breakage, or an underlying condition.
+// If you’re unsure, take photos in consistent lighting and bring your observations to a professional. A dermatologist can help clarify whether you’re dealing with shedding, breakage, or an underlying condition.
 
-### Wrap-up: your booking script + next steps
-Now that you know what to look for, you can book with confidence. Here’s a simple message you can copy and paste when contacting a salon:
+// ### Wrap-up: your booking script + next steps
+// Now that you know what to look for, you can book with confidence. Here’s a simple message you can copy and paste when contacting a salon:
 
-“Hi! I’m looking for a curl-first consultation and a cut that works with my natural curl pattern. Can you do curl mapping and explain how you account for shrinkage from wet to dry? I also want balayage guidance—can you explain placement and how you protect curl health during lightening? I’m hoping for a result I can style at home with my routine (wash-and-go / defined sets).”
+// “Hi! I’m looking for a curl-first consultation and a cut that works with my natural curl pattern. Can you do curl mapping and explain how you account for shrinkage from wet to dry? I also want balayage guidance—can you explain placement and how you protect curl health during lightening? I’m hoping for a result I can style at home with my routine (wash-and-go / defined sets).”
 
-For your consultation, bring what helps your stylist make the right plan quickly. Bring photos of your current hair in both wet and dry states, plus photos of the inspiration look you love. Include details on your routine: how often you wash, what products you use, whether you diffuse or air-dry, and what your biggest frustrations are (frizz, flat roots, dryness, uneven clumps). If you’ve recently changed products or noticed increased shedding, mention that too.
+// For your consultation, bring what helps your stylist make the right plan quickly. Bring photos of your current hair in both wet and dry states, plus photos of the inspiration look you love. Include details on your routine: how often you wash, what products you use, whether you diffuse or air-dry, and what your biggest frustrations are (frizz, flat roots, dryness, uneven clumps). If you’ve recently changed products or noticed increased shedding, mention that too.
 
-Good hair days start with the right plan. When you choose a stylist who understands curls, asks the right questions, and explains both the cut and the color process, you’re much more likely to get “best curls” you can actually maintain—without guesswork.`,
-    metaTitle: 'What Is Balayage? A Stylist Explains Everything',
-    metaDescription: 'Learn what balayage is, how it differs from highlights, and what to expect at your appointment.',
-  },
+// Good hair days start with the right plan. When you choose a stylist who understands curls, asks the right questions, and explains both the cut and the color process, you’re much more likely to get “best curls” you can actually maintain—without guesswork.`,
+//     metaTitle: 'What Is Balayage? A Stylist Explains Everything',
+//     metaDescription: 'Learn what balayage is, how it differs from highlights, and what to expect at your appointment.',
+//   },
   {
     id: 8,
     slug: 'book-right-stylist',
@@ -1127,7 +1046,7 @@ When you match the right stylist to your hair type—and know when to involve a 
     author: 'James Olivier',
     date: 'Mar 26, 2026',
     readTime: '7 min',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&auto=format&fit=crop',
+    image: '/image/questions-before-color.avif',
     category: 'Tips',
     body: `Color can be transformative—until it isn’t. The best way to protect your results (and your scalp) is to ask smart questions before the dye ever touches your hair. Think of this as your pre-appointment checklist: you’re not being difficult; you’re being informed. A great stylist will welcome these questions, explain their process clearly, and help you feel confident about timing, maintenance, and safety.
 
@@ -1223,7 +1142,7 @@ If you want one takeaway, make it this: safety and communication matter as much 
     author: 'Dr. Sarah Kline',
     date: 'Mar 24, 2026',
     readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80&auto=format&fit=crop',
+    image: '/image/bond-builders.avif',
     category: 'Products',
     body: `If your hair has been through bleach, frequent heat, or constant styling, you’ve probably felt the difference between “soft and conditioned” and “strong enough to handle life.” That’s where bond builders come in. 
 
@@ -1329,188 +1248,188 @@ If you frequently bleach, color, perm, relax, or rely on heat, bond builders can
     metaTitle: 'Bond Builders 101: What They Are & How to Use Them',
     metaDescription: 'Learn what bond builders do, how they differ from conditioner, who benefits most, and how to use them correctly to reduce breakage.',
   },
-  {
-    id: 11,
-    slug: 'pastel-to-vivid',
-    tag: 'Vivid Color',
-    title: 'Pastel-to-Vivid: One Formula, Endless Results',
-    excerpt: 'How to seamlessly transition clients through vivid color journeys without compromise.',
-    author: 'Alex Nguyen',
-    date: 'Mar 22, 2026',
-    readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&auto=format&fit=crop',
-    category: 'Vivid Color',
-    body: `## Pastel-to-vivid goals (and what your clients actually want)
-When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity—what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
+//   {
+//     id: 11,
+//     slug: 'pastel-to-vivid',
+//     tag: 'Vivid Color',
+//     title: 'Pastel-to-Vivid: One Formula, Endless Results',
+//     excerpt: 'How to seamlessly transition clients through vivid color journeys without compromise.',
+//     author: 'Alex Nguyen',
+//     date: 'Mar 22, 2026',
+//     readTime: '5 min',
+//     image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&auto=format&fit=crop',
+//     category: 'Vivid Color',
+//     body: `## Pastel-to-vivid goals (and what your clients actually want)
+// When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity—what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
 
-This post is built for both. You’ll get a practical color framework for moving from pastel softness to vivid saturation, plus a solo-stylist plan for building a repeatable service menu, pricing strategy, marketing system, and operations routine. Throughout, the guardrail is simple: **hair health first**. Vivid results are not worth breakage, patchy fading, or unnecessary lift.
+// This post is built for both. You’ll get a practical color framework for moving from pastel softness to vivid saturation, plus a solo-stylist plan for building a repeatable service menu, pricing strategy, marketing system, and operations routine. Throughout, the guardrail is simple: **hair health first**. Vivid results are not worth breakage, patchy fading, or unnecessary lift.
 
-You’ll also learn why the “right” ratios depend on your specific brand line and starting hair condition. Manufacturer instructions matter because different clear bases, developers, and shade families are designed for different outcomes. Use the formulas here as patterns you can adapt—not as a substitute for the exact product directions for your chosen brand.
+// You’ll also learn why the “right” ratios depend on your specific brand line and starting hair condition. Manufacturer instructions matter because different clear bases, developers, and shade families are designed for different outcomes. Use the formulas here as patterns you can adapt—not as a substitute for the exact product directions for your chosen brand.
 
-## Color formulation: the dilute vs. concentrate framework
-A pastel-to-vivid transformation is mostly about saturation control. Think of it like this: pastel is typically achieved by increasing dilution (more “softening” base relative to the pigment), while vivid is achieved by reducing dilution (more pigment relative to the base) and ensuring the hair is light enough to carry that pigment.
+// ## Color formulation: the dilute vs. concentrate framework
+// A pastel-to-vivid transformation is mostly about saturation control. Think of it like this: pastel is typically achieved by increasing dilution (more “softening” base relative to the pigment), while vivid is achieved by reducing dilution (more pigment relative to the base) and ensuring the hair is light enough to carry that pigment.
 
-In practice, you’ll see this show up in two places:
+// In practice, you’ll see this show up in two places:
 
-First, **your clear/pastel versus clear/dilute choice**. Many brands offer multiple “clear” options or pigment families that behave differently. For example, PRAVANA notes that you should not mix **Pravana Vivids Clear-Dilute** with **Pravana Vivids Clear-Pastel**, because they are intended for different outcomes: bright/vibrant versus muted tones. That’s a key reminder that “clear” is not always interchangeable—follow the line’s intended use for the look you’re aiming for [4].
+// First, **your clear/pastel versus clear/dilute choice**. Many brands offer multiple “clear” options or pigment families that behave differently. For example, PRAVANA notes that you should not mix **Pravana Vivids Clear-Dilute** with **Pravana Vivids Clear-Pastel**, because they are intended for different outcomes: bright/vibrant versus muted tones. That’s a key reminder that “clear” is not always interchangeable—follow the line’s intended use for the look you’re aiming for [4].
 
-Second, **your ratio of color to developer and the processing plan**. Some vivid workflows are designed to lift and deposit differently than pastel workflows. PRAVANA’s Vivids guidance includes an example where you use a “mix it in a ratio of 1:1 ½” (color to developer) in the context of using Vivids for lighter outcomes [4]. Separately, PRAVANA’s FAQ provides a ratio example for its ChromaSilk Creme Hair Color: **1 part color to 1.5 parts 20 volume developer** processed **45 minutes with no heat** [3]. The takeaway isn’t to memorize numbers—it’s to understand that *developer amount and processing time are part of the formula logic*, not an afterthought.
+// Second, **your ratio of color to developer and the processing plan**. Some vivid workflows are designed to lift and deposit differently than pastel workflows. PRAVANA’s Vivids guidance includes an example where you use a “mix it in a ratio of 1:1 ½” (color to developer) in the context of using Vivids for lighter outcomes [4]. Separately, PRAVANA’s FAQ provides a ratio example for its ChromaSilk Creme Hair Color: **1 part color to 1.5 parts 20 volume developer** processed **45 minutes with no heat** [3]. The takeaway isn’t to memorize numbers—it’s to understand that *developer amount and processing time are part of the formula logic*, not an afterthought.
 
-### Concrete formula patterns you can adapt
-Below are three formula patterns based on manufacturer guidance and common pastel-to-vivid logic. Treat them as templates: keep the line-specific rules, then adjust for your client’s starting level and porosity.
+// ### Concrete formula patterns you can adapt
+// Below are three formula patterns based on manufacturer guidance and common pastel-to-vivid logic. Treat them as templates: keep the line-specific rules, then adjust for your client’s starting level and porosity.
 
-**Pattern A: Pastel “muted tone” using a pastel clear base (then increase saturation)**
-- Use a brand’s **clear/pastel approach** for the initial pastel result.
-- Then, for a vivid version, replace the pastel-softening clear with a vivid/bright-oriented clear (or reduce the dilution effect).
-- PRAVANA specifically warns against combining its Clear-Dilute and Clear-Pastel intended outcomes in the same formula, so choose one direction per appointment [4].
+// **Pattern A: Pastel “muted tone” using a pastel clear base (then increase saturation)**
+// - Use a brand’s **clear/pastel approach** for the initial pastel result.
+// - Then, for a vivid version, replace the pastel-softening clear with a vivid/bright-oriented clear (or reduce the dilution effect).
+// - PRAVANA specifically warns against combining its Clear-Dilute and Clear-Pastel intended outcomes in the same formula, so choose one direction per appointment [4].
 
-**How to adapt:**
-- Start with a pastel formula that matches the client’s inspiration photo.
-- If they later want “more pop,” increase pigment relative to the softening base rather than mixing incompatible clears.
+// **How to adapt:**
+// - Start with a pastel formula that matches the client’s inspiration photo.
+// - If they later want “more pop,” increase pigment relative to the softening base rather than mixing incompatible clears.
 
-**Pattern B: Vivid “lighter outcome” workflow using the brand’s color-to-developer ratio direction**
-- When aiming for a vivid look that relies on a lighter end result, follow the manufacturer’s stated mix direction.
-- PRAVANA’s Vivids guidance includes the “**1:1 ½** (color to developer)” ratio instruction in the context of using Vivids for lighter outcomes [4].
+// **Pattern B: Vivid “lighter outcome” workflow using the brand’s color-to-developer ratio direction**
+// - When aiming for a vivid look that relies on a lighter end result, follow the manufacturer’s stated mix direction.
+// - PRAVANA’s Vivids guidance includes the “**1:1 ½** (color to developer)” ratio instruction in the context of using Vivids for lighter outcomes [4].
 
-**How to adapt:**
-- Keep the ratio and timing consistent with the instruction.
-- If you need more intensity, don’t “freehand” by changing developer strength—consider increasing pigment within the approved system, or adjust your base-lightness and application density.
+// **How to adapt:**
+// - Keep the ratio and timing consistent with the instruction.
+// - If you need more intensity, don’t “freehand” by changing developer strength—consider increasing pigment within the approved system, or adjust your base-lightness and application density.
 
-**Pattern C: Shade-specific vivid building using the brand’s pastel-to-vivid pairing logic**
-PRAVANA’s blog provides example workflows using **VIVIDS Clear–Pastel plus specific VIVIDS shades**, including developer/process details for that workflow [2]. Use this as a model: pick the clear base that matches the vibe (pastel versus vivid), then add the shade(s) the way the manufacturer describes for that family.
+// **Pattern C: Shade-specific vivid building using the brand’s pastel-to-vivid pairing logic**
+// PRAVANA’s blog provides example workflows using **VIVIDS Clear–Pastel plus specific VIVIDS shades**, including developer/process details for that workflow [2]. Use this as a model: pick the clear base that matches the vibe (pastel versus vivid), then add the shade(s) the way the manufacturer describes for that family.
 
-**How to adapt:**
-- If you’re mixing multiple shades, keep the clear base consistent with the intended outcome.
-- If your client wants a vivid result but your hair isn’t ready, prioritize preparation (lightness and condition) rather than forcing pigment.
+// **How to adapt:**
+// - If you’re mixing multiple shades, keep the clear base consistent with the intended outcome.
+// - If your client wants a vivid result but your hair isn’t ready, prioritize preparation (lightness and condition) rather than forcing pigment.
 
-## Developer and oxidation safety: strand test + timing control
-Solo stylists often feel pressured to “make it work” without extra steps. But vivid color is where small timing differences can create big consequences—uneven fade, unexpected banding, or hair that becomes weak after lift.
+// ## Developer and oxidation safety: strand test + timing control
+// Solo stylists often feel pressured to “make it work” without extra steps. But vivid color is where small timing differences can create big consequences—uneven fade, unexpected banding, or hair that becomes weak after lift.
 
-Wella recommends doing a **strand test each time you color** to determine optimal timing and color results [1]. Wella also provides guidance for hair color safety tests, including mixing **small amounts of colorant and developer** for testing [0]. That’s not just about allergy prevention; it’s about predicting how your client’s hair will respond to your exact formula and timing.
+// Wella recommends doing a **strand test each time you color** to determine optimal timing and color results [1]. Wella also provides guidance for hair color safety tests, including mixing **small amounts of colorant and developer** for testing [0]. That’s not just about allergy prevention; it’s about predicting how your client’s hair will respond to your exact formula and timing.
 
-### A simple test-first workflow (solo-stylist friendly)
-1. **Confirm readiness:** Check the hair’s condition and elasticity. If it feels gummy, brittle, or unusually fragile, vivid goals may need to be postponed.
-2. **Do a strand test:** Mix a small amount using your chosen formula and developer, apply to a hidden section, and monitor timing based on the hair’s response.
-3. **Record your results:** Note the start level, the test result, and the time it took to reach the desired tone.
-4. **Match the full-head timing:** Use the strand test timing to guide your application schedule.
+// ### A simple test-first workflow (solo-stylist friendly)
+// 1. **Confirm readiness:** Check the hair’s condition and elasticity. If it feels gummy, brittle, or unusually fragile, vivid goals may need to be postponed.
+// 2. **Do a strand test:** Mix a small amount using your chosen formula and developer, apply to a hidden section, and monitor timing based on the hair’s response.
+// 3. **Record your results:** Note the start level, the test result, and the time it took to reach the desired tone.
+// 4. **Match the full-head timing:** Use the strand test timing to guide your application schedule.
 
-Because vivid saturation is sensitive to both base lightness and processing time, this workflow helps you deliver consistent results even when your client’s hair isn’t identical to the last one.
+// Because vivid saturation is sensitive to both base lightness and processing time, this workflow helps you deliver consistent results even when your client’s hair isn’t identical to the last one.
 
-## Hair health guardrails: readiness, porosity, and aftercare
-A pastel-to-vivid color transformation is not only a chemistry project—it’s a hair-strength project. Vivid pigment can look gorgeous on healthy hair, but when hair is compromised, you’re more likely to see:
-- patchy fading (uneven porosity)
-- increased breakage (weak cuticle support)
-- dullness quickly (loss of deposit and moisture)
+// ## Hair health guardrails: readiness, porosity, and aftercare
+// A pastel-to-vivid color transformation is not only a chemistry project—it’s a hair-strength project. Vivid pigment can look gorgeous on healthy hair, but when hair is compromised, you’re more likely to see:
+// - patchy fading (uneven porosity)
+// - increased breakage (weak cuticle support)
+// - dullness quickly (loss of deposit and moisture)
 
-### Pre-lightening readiness: assess before you chase saturation
-Before attempting vivid results, you need to evaluate whether the hair can handle the preparation required for strong pigment. Ask yourself:
-- Does the hair feel strong and springy, or does it feel dry and fragile?
-- Is the hair previously colored, bleached, or chemically processed?
-- Does the hair show signs of uneven porosity (for example, one section grabs color faster than another)?
+// ### Pre-lightening readiness: assess before you chase saturation
+// Before attempting vivid results, you need to evaluate whether the hair can handle the preparation required for strong pigment. Ask yourself:
+// - Does the hair feel strong and springy, or does it feel dry and fragile?
+// - Is the hair previously colored, bleached, or chemically processed?
+// - Does the hair show signs of uneven porosity (for example, one section grabs color faster than another)?
 
-If you’re working on hair that’s already fragile, consider a “journey approach.” It’s often safer to build toward vivid over multiple visits rather than forcing high saturation in one session.
+// If you’re working on hair that’s already fragile, consider a “journey approach.” It’s often safer to build toward vivid over multiple visits rather than forcing high saturation in one session.
 
-### Porosity and application density: reduce patchiness
-Patchy fading often comes from uneven porosity and uneven saturation during application. Strand testing helps, but technique matters too: saturate consistently, section carefully, and avoid rushing through contact time. If the hair has variable porosity, your goal is even pigment distribution.
+// ### Porosity and application density: reduce patchiness
+// Patchy fading often comes from uneven porosity and uneven saturation during application. Strand testing helps, but technique matters too: saturate consistently, section carefully, and avoid rushing through contact time. If the hair has variable porosity, your goal is even pigment distribution.
 
-### Aftercare: the real longevity factor
-Even the best pastel-to-vivid formula won’t look good if maintenance is neglected. Color longevity depends on how gently the hair is washed, how heat is managed, and how moisture is restored.
+// ### Aftercare: the real longevity factor
+// Even the best pastel-to-vivid formula won’t look good if maintenance is neglected. Color longevity depends on how gently the hair is washed, how heat is managed, and how moisture is restored.
 
-To protect vivid vibrancy:
-- Use a color-safe routine and avoid harsh cleansing.
-- Manage heat and protect the hair when styling.
-- Add conditioning support so the hair holds onto softness and shine.
+// To protect vivid vibrancy:
+// - Use a color-safe routine and avoid harsh cleansing.
+// - Manage heat and protect the hair when styling.
+// - Add conditioning support so the hair holds onto softness and shine.
 
-When aftercare is consistent, you reduce the “cycle” of damage → color loss → more aggressive re-coloring. That’s one of the most practical ways solo stylists protect their client relationships and reduce color corrections.
+// When aftercare is consistent, you reduce the “cycle” of damage → color loss → more aggressive re-coloring. That’s one of the most practical ways solo stylists protect their client relationships and reduce color corrections.
 
-## Solo stylist business blueprint: offer stack that sells the next appointment
-A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
+// ## Solo stylist business blueprint: offer stack that sells the next appointment
+// A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
 
-### Your core services and add-ons
-Build your menu around a clear color path:
+// ### Your core services and add-ons
+// Build your menu around a clear color path:
 
-- **Consultation (always included):** Assess hair history, goals, readiness, and maintenance capability.
-- **Color service (primary appointment):** Pastel, vivid, or transformation with strand-test timing guidance.
-- **Maintenance visit:** A scheduled refresh based on how quickly your client’s tone fades.
+// - **Consultation (always included):** Assess hair history, goals, readiness, and maintenance capability.
+// - **Color service (primary appointment):** Pastel, vivid, or transformation with strand-test timing guidance.
+// - **Maintenance visit:** A scheduled refresh based on how quickly your client’s tone fades.
 
-Add-ons can include gloss/toning for tone control and conditioning for hair strength support. The point is to make maintenance feel like a normal part of vivid color—not an emergency.
+// Add-ons can include gloss/toning for tone control and conditioning for hair strength support. The point is to make maintenance feel like a normal part of vivid color—not an emergency.
 
-### Packages that guide rebooking
-Clients rebook when the next step is easy to understand. Consider packaging your color services so the client knows what they’re paying for and what comes after. For example, you can present:
-- a “Color + future-ready plan” package
-- a “Refresh & protect” maintenance option
+// ### Packages that guide rebooking
+// Clients rebook when the next step is easy to understand. Consider packaging your color services so the client knows what they’re paying for and what comes after. For example, you can present:
+// - a “Color + future-ready plan” package
+// - a “Refresh & protect” maintenance option
 
-Even if you don’t use formal bundles, the structure should be consistent: consultation, application time, and aftercare guidance are clear, so clients feel confident and you reduce quote confusion.
+// Even if you don’t use formal bundles, the structure should be consistent: consultation, application time, and aftercare guidance are clear, so clients feel confident and you reduce quote confusion.
 
-## Pricing strategy: packages + time-based logic you can quote confidently
-Pricing solo can feel tricky because you carry both the creative work and the admin work. The solution is to price with a logic clients can understand.
+// ## Pricing strategy: packages + time-based logic you can quote confidently
+// Pricing solo can feel tricky because you carry both the creative work and the admin work. The solution is to price with a logic clients can understand.
 
-### A practical quote checklist
-Before you quote, align your pricing to three things:
-1. **Service type:** consultation, color application, maintenance/refresh.
-2. **Time and complexity:** hair length, density, and whether prep/lightening is required.
-3. **What’s included:** strand test, processing time, and aftercare guidance.
+// ### A practical quote checklist
+// Before you quote, align your pricing to three things:
+// 1. **Service type:** consultation, color application, maintenance/refresh.
+// 2. **Time and complexity:** hair length, density, and whether prep/lightening is required.
+// 3. **What’s included:** strand test, processing time, and aftercare guidance.
 
-Then present packages that include the essentials. If a client asks what affects the price, you can point to the variables without sounding vague.
+// Then present packages that include the essentials. If a client asks what affects the price, you can point to the variables without sounding vague.
 
-### A solo-friendly way to think about it
-- Base your color pricing on the expected appointment duration.
-- Adjust for additional time: extra prep, more sections, or complicated corrections.
-- Keep your inclusions consistent: if strand testing is part of your safety and timing system, it should be built into your service.
+// ### A solo-friendly way to think about it
+// - Base your color pricing on the expected appointment duration.
+// - Adjust for additional time: extra prep, more sections, or complicated corrections.
+// - Keep your inclusions consistent: if strand testing is part of your safety and timing system, it should be built into your service.
 
-This approach helps protect your margins and reduces the “nickel-and-dime” feeling that can hurt retention.
+// This approach helps protect your margins and reduces the “nickel-and-dime” feeling that can hurt retention.
 
-## Marketing system for solo stylists: content that converts
-Your marketing should do two jobs: show your results and reduce client anxiety. Pastel-to-vivid color is visually dramatic, so content works well—especially when you explain your process in a calm, hair-health-first way.
+// ## Marketing system for solo stylists: content that converts
+// Your marketing should do two jobs: show your results and reduce client anxiety. Pastel-to-vivid color is visually dramatic, so content works well—especially when you explain your process in a calm, hair-health-first way.
 
-### Weekly content plan (simple and repeatable)
-Aim for a rhythm you can sustain:
-- **Before/after posts** with a short note on starting level and the goal.
-- **Formula breakdown stories** (what direction you used: pastel versus vivid, and why).
-- **Hair health tips** that connect to results (porosity, gentle washing, conditioning).
+// ### Weekly content plan (simple and repeatable)
+// Aim for a rhythm you can sustain:
+// - **Before/after posts** with a short note on starting level and the goal.
+// - **Formula breakdown stories** (what direction you used: pastel versus vivid, and why).
+// - **Hair health tips** that connect to results (porosity, gentle washing, conditioning).
 
-When clients understand you’re not just “slapping on color,” they’re more likely to book and rebook.
+// When clients understand you’re not just “slapping on color,” they’re more likely to book and rebook.
 
-### Conversion loop: booking link, deposit, and follow-up
-Make the path to booking obvious. Use:
-- a booking link in every post and story
-- a deposit policy for confirmed appointments
-- a follow-up message after the service that encourages maintenance booking
+// ### Conversion loop: booking link, deposit, and follow-up
+// Make the path to booking obvious. Use:
+// - a booking link in every post and story
+// - a deposit policy for confirmed appointments
+// - a follow-up message after the service that encourages maintenance booking
 
-This loop turns your content into revenue, and it protects your schedule.
+// This loop turns your content into revenue, and it protects your schedule.
 
-## Operations and compliance: run your salon like a business
-A solo stylist is still a business owner. That means you need the boring-but-important foundation: licensing, insurance, and admin systems.
+// ## Operations and compliance: run your salon like a business
+// A solo stylist is still a business owner. That means you need the boring-but-important foundation: licensing, insurance, and admin systems.
 
-StyleSeat’s “Opening a Salon” checklist highlights core steps like creating a business plan, determining services/pricing, and registering the business with the IRS and applying for permits/business license [5]. Requirements vary by location, so verify what your state and city require.
+// StyleSeat’s “Opening a Salon” checklist highlights core steps like creating a business plan, determining services/pricing, and registering the business with the IRS and applying for permits/business license [5]. Requirements vary by location, so verify what your state and city require.
 
-### What to set up before your first big color push
-- Business registration and permits
-- Professional liability insurance
-- Client intake forms and informed consent
-- Recordkeeping for formulas, developer choices, and timing notes
+// ### What to set up before your first big color push
+// - Business registration and permits
+// - Professional liability insurance
+// - Client intake forms and informed consent
+// - Recordkeeping for formulas, developer choices, and timing notes
 
-Recordkeeping supports both safety and consistency. It also makes future re-dos faster—especially when you’re building a signature pastel-to-vivid look.
+// Recordkeeping supports both safety and consistency. It also makes future re-dos faster—especially when you’re building a signature pastel-to-vivid look.
 
-## 30/60/90 launch plan: build trust, then scale
-### First 30 days: policies + portfolio
-Document your process. Build a portfolio that shows both pastel and vivid outcomes, plus a few “journey” transformations where hair readiness mattered. Create your policies: consultation expectations, strand test approach, deposit and cancellation rules, and aftercare guidance.
+// ## 30/60/90 launch plan: build trust, then scale
+// ### First 30 days: policies + portfolio
+// Document your process. Build a portfolio that shows both pastel and vivid outcomes, plus a few “journey” transformations where hair readiness mattered. Create your policies: consultation expectations, strand test approach, deposit and cancellation rules, and aftercare guidance.
 
-### Days 31–60: outreach + partnerships
-Reach out to local communities, collaborate with photographers, and build referral relationships with complementary providers (like barbershops, gyms, or bridal vendors). Share your hair-health-first approach so people understand your results are safe and intentional.
+// ### Days 31–60: outreach + partnerships
+// Reach out to local communities, collaborate with photographers, and build referral relationships with complementary providers (like barbershops, gyms, or bridal vendors). Share your hair-health-first approach so people understand your results are safe and intentional.
 
-### Days 61–90: optimize pricing + retention
-Use rebook data to refine your menu. If clients love a specific maintenance visit, make it a featured package. If you notice frequent color corrections, revisit your readiness screening and strand test timing consistency.
+// ### Days 61–90: optimize pricing + retention
+// Use rebook data to refine your menu. If clients love a specific maintenance visit, make it a featured package. If you notice frequent color corrections, revisit your readiness screening and strand test timing consistency.
 
-The goal is simple: fewer surprises, more repeat clients, and a brand that feels professional.
+// The goal is simple: fewer surprises, more repeat clients, and a brand that feels professional.
 
-## Conclusion
-A “pastel to vivid color formula” isn’t just about pigment—it’s about saturation control, correct product pairing, and timing you can trust. Strand testing and hair safety checks help you deliver vivid results without sacrificing hair health [1] [0]. And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.
+// ## Conclusion
+// A “pastel to vivid color formula” isn’t just about pigment—it’s about saturation control, correct product pairing, and timing you can trust. Strand testing and hair safety checks help you deliver vivid results without sacrificing hair health [1] [0]. And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.
 
-When you combine both—smart color formulation and a repeatable business rhythm—you don’t just create beautiful color. You create a client experience people want to return to.`,
-    metaTitle: 'Pastel to Vivid Color Formulas + Solo Stylist Blueprint',
-    metaDescription: 'Build vivid color safely with strand tests and ratio logic, then launch a solo stylist business plan for pricing, marketing, and rebooking.',
-  },
+// When you combine both—smart color formulation and a repeatable business rhythm—you don’t just create beautiful color. You create a client experience people want to return to.`,
+//     metaTitle: 'Pastel to Vivid Color Formulas + Solo Stylist Blueprint',
+//     metaDescription: 'Build vivid color safely with strand tests and ratio logic, then launch a solo stylist business plan for pricing, marketing, and rebooking.',
+//   },
   {
     id: 12,
     slug: 'solo-stylist-blueprint',
@@ -1522,90 +1441,7 @@ When you combine both—smart color formulation and a repeatable business rhythm
     readTime: '10 min',
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80&auto=format&fit=crop',
     category: 'Business',
-    body: `## Pastel-to-vivid goals (and what your clients actually want)
-When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity—what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
-
-This post is built for both. You’ll get a practical color framework for moving from pastel softness to vivid saturation, plus a solo-stylist plan for building a repeatable service menu, pricing strategy, marketing system, and operations routine. Throughout, the guardrail is simple: **hair health first**. Vivid results are not worth breakage, patchy fading, or unnecessary lift.
-
-You’ll also learn why the “right” ratios depend on your specific brand line and starting hair condition. Manufacturer instructions matter because different clear bases, developers, and shade families are designed for different outcomes. Use the formulas here as patterns you can adapt—not as a substitute for the exact product directions for your chosen brand.
-
-## Color formulation: the dilute vs. concentrate framework
-A pastel-to-vivid transformation is mostly about saturation control. Think of it like this: pastel is typically achieved by increasing dilution (more “softening” base relative to the pigment), while vivid is achieved by reducing dilution (more pigment relative to the base) and ensuring the hair is light enough to carry that pigment.
-
-In practice, you’ll see this show up in two places:
-
-First, **your clear/pastel versus clear/dilute choice**. Many brands offer multiple “clear” options or pigment families that behave differently. For example, PRAVANA notes that you should not mix **Pravana Vivids Clear-Dilute** with **Pravana Vivids Clear-Pastel**, because they are intended for different outcomes: bright/vibrant versus muted tones. That’s a key reminder that “clear” is not always interchangeable—follow the line’s intended use for the look you’re aiming for [4].
-
-Second, **your ratio of color to developer and the processing plan**. Some vivid workflows are designed to lift and deposit differently than pastel workflows. PRAVANA’s Vivids guidance includes an example where you use a “mix it in a ratio of 1:1 ½” (color to developer) in the context of using Vivids for lighter outcomes [4]. Separately, PRAVANA’s FAQ provides a ratio example for its ChromaSilk Creme Hair Color: **1 part color to 1.5 parts 20 volume developer** processed **45 minutes with no heat** [3]. The takeaway isn’t to memorize numbers—it’s to understand that *developer amount and processing time are part of the formula logic*, not an afterthought.
-
-### Concrete formula patterns you can adapt
-Below are three formula patterns based on manufacturer guidance and common pastel-to-vivid logic. Treat them as templates: keep the line-specific rules, then adjust for your client’s starting level and porosity.
-
-**Pattern A: Pastel “muted tone” using a pastel clear base (then increase saturation)**
-- Use a brand’s **clear/pastel approach** for the initial pastel result.
-- Then, for a vivid version, replace the pastel-softening clear with a vivid/bright-oriented clear (or reduce the dilution effect).
-- PRAVANA specifically warns against combining its Clear-Dilute and Clear-Pastel intended outcomes in the same formula, so choose one direction per appointment [4].
-
-**How to adapt:**
-- Start with a pastel formula that matches the client’s inspiration photo.
-- If they later want “more pop,” increase pigment relative to the softening base rather than mixing incompatible clears.
-
-**Pattern B: Vivid “lighter outcome” workflow using the brand’s color-to-developer ratio direction**
-- When aiming for a vivid look that relies on a lighter end result, follow the manufacturer’s stated mix direction.
-- PRAVANA’s Vivids guidance includes the “**1:1 ½** (color to developer)” ratio instruction in the context of using Vivids for lighter outcomes [4].
-
-**How to adapt:**
-- Keep the ratio and timing consistent with the instruction.
-- If you need more intensity, don’t “freehand” by changing developer strength—consider increasing pigment within the approved system, or adjust your base-lightness and application density.
-
-**Pattern C: Shade-specific vivid building using the brand’s pastel-to-vivid pairing logic**
-PRAVANA’s blog provides example workflows using **VIVIDS Clear–Pastel plus specific VIVIDS shades**, including developer/process details for that workflow [2]. Use this as a model: pick the clear base that matches the vibe (pastel versus vivid), then add the shade(s) the way the manufacturer describes for that family.
-
-**How to adapt:**
-- If you’re mixing multiple shades, keep the clear base consistent with the intended outcome.
-- If your client wants a vivid result but your hair isn’t ready, prioritize preparation (lightness and condition) rather than forcing pigment.
-
-## Developer and oxidation safety: strand test + timing control
-Solo stylists often feel pressured to “make it work” without extra steps. But vivid color is where small timing differences can create big consequences—uneven fade, unexpected banding, or hair that becomes weak after lift.
-
-Wella recommends doing a **strand test each time you color** to determine optimal timing and color results [1]. Wella also provides guidance for hair color safety tests, including mixing **small amounts of colorant and developer** for testing [0]. That’s not just about allergy prevention; it’s about predicting how your client’s hair will respond to your exact formula and timing.
-
-### A simple test-first workflow (solo-stylist friendly)
-1. **Confirm readiness:** Check the hair’s condition and elasticity. If it feels gummy, brittle, or unusually fragile, vivid goals may need to be postponed.
-2. **Do a strand test:** Mix a small amount using your chosen formula and developer, apply to a hidden section, and monitor timing based on the hair’s response.
-3. **Record your results:** Note the start level, the test result, and the time it took to reach the desired tone.
-4. **Match the full-head timing:** Use the strand test timing to guide your application schedule.
-
-Because vivid saturation is sensitive to both base lightness and processing time, this workflow helps you deliver consistent results even when your client’s hair isn’t identical to the last one.
-
-## Hair health guardrails: readiness, porosity, and aftercare
-A pastel-to-vivid color transformation is not only a chemistry project—it’s a hair-strength project. Vivid pigment can look gorgeous on healthy hair, but when hair is compromised, you’re more likely to see:
-- patchy fading (uneven porosity)
-- increased breakage (weak cuticle support)
-- dullness quickly (loss of deposit and moisture)
-
-### Pre-lightening readiness: assess before you chase saturation
-Before attempting vivid results, you need to evaluate whether the hair can handle the preparation required for strong pigment. Ask yourself:
-- Does the hair feel strong and springy, or does it feel dry and fragile?
-- Is the hair previously colored, bleached, or chemically processed?
-- Does the hair show signs of uneven porosity (for example, one section grabs color faster than another)?
-
-If you’re working on hair that’s already fragile, consider a “journey approach.” It’s often safer to build toward vivid over multiple visits rather than forcing high saturation in one session.
-
-### Porosity and application density: reduce patchiness
-Patchy fading often comes from uneven porosity and uneven saturation during application. Strand testing helps, but technique matters too: saturate consistently, section carefully, and avoid rushing through contact time. If the hair has variable porosity, your goal is even pigment distribution.
-
-### Aftercare: the real longevity factor
-Even the best pastel-to-vivid formula won’t look good if maintenance is neglected. Color longevity depends on how gently the hair is washed, how heat is managed, and how moisture is restored.
-
-To protect vivid vibrancy:
-- Use a color-safe routine and avoid harsh cleansing.
-- Manage heat and protect the hair when styling.
-- Add conditioning support so the hair holds onto softness and shine.
-
-When aftercare is consistent, you reduce the “cycle” of damage → color loss → more aggressive re-coloring. That’s one of the most practical ways solo stylists protect their client relationships and reduce color corrections.
-
-## Solo stylist business blueprint: offer stack that sells the next appointment
+    body: `## Solo stylist business blueprint: offer stack that sells the next appointment
 A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
 
 ### Your core services and add-ons
@@ -1686,12 +1522,125 @@ Use rebook data to refine your menu. If clients love a specific maintenance visi
 
 The goal is simple: fewer surprises, more repeat clients, and a brand that feels professional.
 
-## Conclusion
-A “pastel to vivid color formula” isn’t just about pigment—it’s about saturation control, correct product pairing, and timing you can trust. Strand testing and hair safety checks help you deliver vivid results without sacrificing hair health [1] [0]. And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.
-
-When you combine both—smart color formulation and a repeatable business rhythm—you don’t just create beautiful color. You create a client experience people want to return to.`,
+ And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.`,
     metaTitle: 'The $100K Solo Stylist Blueprint',
     metaDescription: 'A practical roadmap for solo stylists to reach six figures through pricing, marketing, and client retention.',
+  },
+  {
+    id: 13,
+    slug: 'what-is-balayage',
+    tag: 'Technique',
+    title: 'What Is Balayage? Your Stylist Explains',
+    excerpt: 'Everything you need to know about the freehand coloring technique that changed the industry — and why no two results look the same.',
+    author: 'Michelle Torres',
+    date: 'Apr 10, 2026',
+    readTime: '7 min',
+    image: '/image/what-is-balayage.avif',
+    category: 'Technique',
+    body: `Balayage used to mean one thing to clients. Soft, beachy highlights and a Pinterest reference from ten years ago. What we're seeing in salons now is much more considered. The color sits deeper at the root, the brightness is placed with intention, and the finish reads expensive without looking overworked. In 2026, balayage is not just a look clients ask for. It is a technique stylists build around the person in the chair.
+
+## What Balayage Really Means
+
+At the most basic level, balayage is a hand-painted lightening technique. No strict foil pattern, no uniform sections. Color is applied where the stylist wants light to live. But that definition is only half the story.
+
+> "Balayage is not about painting randomly. It is controlled placement. If you do it right, the client should not see where it starts. They just see better hair."
+> — Nina Patel, Colorist & Educator, Chicago
+
+That is the goal every time. Seamless, grown-in color that looks natural even when it is not.
+
+## Why Clients Keep Coming Back to It
+
+Balayage fits how people actually maintain their hair now. Clients want dimension without feeling locked into a schedule. They want something that grows out softly, especially if they are juggling work, travel, and everything else.
+
+This is why balayage continues to outperform traditional highlights in most salons:
+
+- No harsh regrowth line
+- Longer time between appointments
+- Works on straight, wavy, and curly hair
+- Adapts to different haircuts, from long layers to a pixie cut
+
+It also photographs well, which matters more than ever. The soft blend and brightness around the face translate on camera in a way flat color does not.
+
+## Balayage vs Highlights, Explained Simply
+
+This is where clients get mixed up, so we explain it every day. Traditional highlights are structured. They rely on foils, consistent sectioning, and root-to-end lift. The result is brighter but more uniform.
+
+Balayage is different. It is visual, not mechanical.
+
+- Light is painted where it flatters
+- The root stays softer or shadowed
+- The ends carry more brightness
+- The overall effect is blended, not striped
+
+Most of the best work we see now is actually a combination. A few foils at the hairline, balayage through the lengths, and a toner or gloss to finish.
+
+## Why No Two Balayage Clients Look the Same
+
+If balayage looks identical on every client, something is off. A good stylist is adjusting everything in real time:
+
+- Natural base color
+- Hair density and texture
+- Previous color history, especially bleach
+- Skin tone and undertone
+- Overall hair health
+
+> "On curly clients, I am painting for how the hair falls dry, not how it looks wet. You have to respect the pattern or the color disappears."
+> — Alana Brooks, Curl Specialist
+
+That is why balayage on curly hair often looks softer but more dimensional. The placement follows movement, not sections.
+
+## What Happens During a Real Balayage Appointment
+
+From the outside, it can look simple. A brush, some lightener, and a few painted pieces. Behind the chair, it is much more controlled.
+
+**Sectioning based on the haircut** — The color follows layers and shape, not a perfect grid.
+
+**Soft diffusion at the root** — No hard starting lines. Everything is blended upward.
+
+**Controlled saturation** — Too little product leads to patchy lift. Too much creates heavy bands. This is where experience shows.
+
+**Focused brightness** — The face frame and part line get the most attention. That is what clients notice first.
+
+**Toning and finishing** — A gloss or toner refines the result, adds shine, and locks in tone. This step is what makes balayage look polished instead of unfinished.
+
+## Maintenance, According to Stylists
+
+Balayage is lower maintenance, but it is not maintenance-free. Color fades, especially on lighter pieces. Tone can shift warmer over time. And lightened hair needs support.
+
+What we are recommending in salons right now:
+
+- A shampoo for color-treated hair to hold tone
+- A lightweight leave-in treatment for shine
+- A hair moisturizer or protein treatment if the ends feel dry
+- Regular scalp care to keep the foundation healthy
+
+> "You cannot have expensive-looking color sitting on an unhealthy scalp. The finish starts at the root, literally."
+> — Marcus Bell, Colorist, London
+
+## When Balayage Is Not a One-Session Service
+
+This is the part clients do not always expect. If the hair has box dye, heavy previous color, or damage, lifting to a bright balayage in one appointment is not always realistic.
+
+In those cases, stylists are spacing it out and protecting the hair:
+
+- Bond-building or protein treatments during the service
+- Hair breakage treatment after
+- Sometimes the best decision is to slow down — health first, then brightness
+
+## Why Stylists Prioritize Balayage
+
+There is a reason balayage is on almost every service menu. It allows for customization, which means better results and higher service value. It also creates visible transformation without constant upkeep, which keeps clients loyal.
+
+And from a business standpoint, it opens the door to retail. Haircare products, glosses, and treatments all support the color and extend the result.
+
+## The Bottom Line
+
+Balayage today is not a trend clients bring in on their phone. It is a core skill that defines how modern color is done. Done well, it grows out clean, complements the haircut, and works with the client's natural features instead of fighting them.
+
+> "Good balayage should look like you were born with it. Great balayage makes people ask where you go."
+> — Nina Patel`,
+    metaTitle: 'What Is Balayage? Your Stylist Explains Everything',
+    metaDescription: 'A stylist breaks down what balayage really is, how it differs from highlights, what happens during the appointment, and how to maintain it.',
   },
 ]
 

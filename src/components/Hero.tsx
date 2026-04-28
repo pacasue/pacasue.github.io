@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="lg:col-span-4 flex flex-col gap-0 border-l border-white/5">
 
             {/* Secondary feature */}
-            <div className="group cursor-pointer img-zoom">
+            <Link to="/article/what-is-balayage" className="group cursor-pointer img-zoom block">
               <div className="relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]">
                 <img
                   src={SIDE_IMAGE}
@@ -90,14 +90,14 @@ export default function Hero() {
                   </h2>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Article list */}
             <div className="flex flex-col divide-y divide-white/5 mt-4 lg:mt-0 lg:border-t border-white/5">
               {[
                 {
                   tag: 'Booking',
-                  title: 'How to Book the Right Stylist for Your HairH Type',
+                  title: 'How to Book the Right Stylist for Your Hair Type',
                   author: 'Maria Chen',
                   readTime: '5 min',
                   slug: 'book-right-stylist',

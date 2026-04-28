@@ -159,13 +159,19 @@ function MarkdownBody({ body }: { body: string }) {
         }
         // blockquote
         if (trimmed.startsWith('> ')) {
-          const quote = trimmed.replace(/^> /gm, '')
+          const lines = trimmed.split('\n').map((l) => l.replace(/^> /, ''))
+          const attrIndex = lines.findIndex((l) => l.startsWith('— '))
+          const quote = (attrIndex > -1 ? lines.slice(0, attrIndex) : lines).join(' ')
+          const attribution = attrIndex > -1 ? lines[attrIndex].replace(/^— /, '') : null
           return (
             <div key={i} className="my-10 border-l-4 border-gold-500 pl-6 md:pl-8 py-2">
               <Quote size={24} className="text-gold-500/40 mb-3" />
               <p className="text-xl md:text-2xl text-white font-medium leading-snug italic" style={{ fontFamily: "'Playfair Display', serif" }}>
                 "{quote}"
               </p>
+              {attribution && (
+                <p className="text-[11px] tracking-widest uppercase text-gold-500 mt-4 font-medium">— {attribution}</p>
+              )}
             </div>
           )
         }
