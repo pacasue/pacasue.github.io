@@ -105,23 +105,26 @@ export default function Hero() {
                   title: 'How to Book the Right Stylist for Your Hair Type',
                   author: 'Maria Chen',
                   readTime: '5 min',
+                  slug: 'book-right-stylist',
                 },
                 {
                   tag: 'Tips',
                   title: '10 Questions to Ask Before Your Next Color Appointment',
                   author: 'James Olivier',
                   readTime: '7 min',
+                  slug: 'questions-before-color',
                 },
                 {
                   tag: 'Products',
                   title: 'Bond Builders: What They Are and Why Your Hair Needs One',
                   author: 'Dr. Sarah Kline',
                   readTime: '6 min',
+                  slug: 'bond-builders',
                 },
               ].map((article) => (
-                <a
+                <Link
                   key={article.title}
-                  href="#"
+                  to={`/article/${article.slug}`}
                   className="flex flex-col gap-1.5 p-4 lg:px-4 hover:bg-white/[0.03] transition-colors group"
                 >
                   <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">{article.tag}</span>
@@ -136,7 +139,7 @@ export default function Hero() {
                     <span>·</span>
                     <span>{article.readTime} read</span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
