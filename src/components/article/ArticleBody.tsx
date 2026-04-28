@@ -1,3 +1,4 @@
+import type { Article } from '../../data/articles'
 import { Quote } from 'lucide-react'
 
 const INLINE_IMAGE_1 = 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&q=80&auto=format&fit=crop'
@@ -101,7 +102,83 @@ const formulaRows = [
   { col1: 'Processing Time', col2: '35 minutes — no heat', col3: '—' },
 ]
 
-export default function ArticleBody() {
+function renderInline(text: string): React.ReactNode[] {
+  const pattern = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|\[([^\]]+)\]\([^)]+\))/g
+  const nodes: React.ReactNode[] = []
+  let cursor = 0
+  let match: RegExpExecArray | null
+  let key = 0
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > cursor) nodes.push(text.slice(cursor, match.index))
+    if (match[2]) nodes.push(<strong key={key++} className="text-charcoal-100 font-semibold">{match[2]}</strong>)
+    else if (match[3]) nodes.push(<em key={key++}>{match[3]}</em>)
+    else if (match[4]) nodes.push(<code key={key++} className="text-[0.9em] bg-white/10 px-1 rounded font-mono">{match[4]}</code>)
+    else if (match[5]) nodes.push(match[5])
+    cursor = match.index + match[0].length
+  }
+  if (cursor < text.length) nodes.push(text.slice(cursor))
+  return nodes
+}
+
+function MarkdownBody({ body }: { body: string }) {
+  const blocks = body.split(/\n\n+/)
+  return (
+    <article className="max-w-2xl">
+      {blocks.map((block, i) => {
+        const trimmed = block.trim()
+        if (!trimmed) return null
+        const h2 = trimmed.match(/^## (.+)/)
+        if (h2) return <SectionHeading key={i}>{h2[1]}</SectionHeading>
+        const h3 = trimmed.match(/^### (.+)/)
+        if (h3) return <Subheading key={i}>{h3[1]}</Subheading>
+        const h1 = trimmed.match(/^# (.+)/)
+        if (h1) return <SectionHeading key={i}>{h1[1]}</SectionHeading>
+        // bullet list
+        if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+          const items = trimmed.split('\n').filter((l) => l.trim().startsWith('- ') || l.trim().startsWith('* '))
+          return (
+            <ul key={i} className="list-disc list-inside text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5 space-y-1 pl-2">
+              {items.map((item, j) => <li key={j}>{renderInline(item.replace(/^[-*]\s+/, ''))}</li>)}
+            </ul>
+          )
+        }
+        // numbered list
+        if (/^\d+\.\s/.test(trimmed)) {
+          const items = trimmed.split('\n').filter((l) => /^\d+\.\s/.test(l.trim()))
+          return (
+            <ol key={i} className="list-decimal list-inside text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5 space-y-1 pl-2">
+              {items.map((item, j) => <li key={j}>{renderInline(item.replace(/^\d+\.\s+/, ''))}</li>)}
+            </ol>
+          )
+        }
+        // blockquote
+        if (trimmed.startsWith('> ')) {
+          const quote = trimmed.replace(/^> /gm, '')
+          return (
+            <div key={i} className="my-10 border-l-4 border-gold-500 pl-6 md:pl-8 py-2">
+              <Quote size={24} className="text-gold-500/40 mb-3" />
+              <p className="text-xl md:text-2xl text-white font-medium leading-snug italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                "{quote}"
+              </p>
+            </div>
+          )
+        }
+        return <p key={i} className="text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5">{renderInline(trimmed)}</p>
+      })}
+    </article>
+  )
+}
+
+export default function ArticleBody({ article }: { article: Article }) {
+  // If the article has generated body content, render it with the markdown renderer
+  if (article.body) {
+    return <MarkdownBody body={article.body} />
+  }
+  // Fallback: copper article static content
+  return <CopperArticleBody />
+}
+
+function CopperArticleBody() {
   return (
     <article className="max-w-2xl">
       {/* Drop cap opening */}

@@ -12,6 +12,7 @@ const articles = [
     readTime: '4 min',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop',
     featured: true,
+    slug: 'brunette-glazing',
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const articles = [
     readTime: '6 min',
     image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format&fit=crop',
     featured: false,
+    slug: 'haircut-layers',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const articles = [
     readTime: '5 min',
     image: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80&auto=format&fit=crop',
     featured: false,
+    slug: 'vivid-color-guide',
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ const articles = [
     readTime: '8 min',
     image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&q=80&auto=format&fit=crop',
     featured: false,
+    slug: 'curl-consultation',
   },
   {
     id: 5,
@@ -56,6 +60,7 @@ const articles = [
     readTime: '10 min',
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80&auto=format&fit=crop',
     featured: false,
+    slug: 'find-right-stylist',
   },
 ]
 
@@ -68,7 +73,7 @@ function ArticleCard({
 }) {
   return (
     <Link
-      to="/article/copper-renaissance-2026"
+      to={`/article/${article.slug}`}
       className="group flex flex-col cursor-pointer card-hover"
     >
       <div className={`img-zoom overflow-hidden ${size === 'large' ? 'aspect-[4/3]' : 'aspect-[3/2]'} relative`}>
