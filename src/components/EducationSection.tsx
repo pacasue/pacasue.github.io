@@ -9,8 +9,8 @@ const courses = [
     duration: '6h 30m',
     students: '12,400+',
     level: 'All Levels',
-    badge: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop',
+    badge: 'New',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4d/21/71/c4/f7/v1_E10/E107PYVL.JPG?w=1600&cf_fit=scale-down&q=85&format=auto&s=ffe7c33416cffc10313fcdd81e16d4dc53960c1dc6307e58d3f33910e2b5aa27',
     modules: ['Color Theory', 'Placement', 'Toning', 'Maintenance Tips'],
   },
   {
@@ -22,7 +22,7 @@ const courses = [
     students: '8,200+',
     level: 'Intermediate',
     badge: 'New',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/e5/be/4a/a2/cf/v1_E10/E105N38V.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6f43550081f73f2f93e464f2b00bd78e578f21f8dda5ddb38f1356c7094cfa15',
     modules: ['Face Shapes', 'Bob Styles', 'Layers', 'Finishing'],
   },
   {
@@ -34,7 +34,7 @@ const courses = [
     students: '9,800+',
     level: 'Beginner Friendly',
     badge: 'Top Rated',
-    image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=800&q=80&auto=format&fit=crop',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/23/01/50/12/6e/v1_E10/E104HNYZ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=40d7b48407e5025800504d3c6bba113ccc7efca5a9c75c190738a53618a36024',
     modules: ['Curl Types', 'Hydration', 'Product Picks', 'Salon Prep'],
   },
 ]
