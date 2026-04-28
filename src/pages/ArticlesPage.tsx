@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { articles } from '../data/articles'
 
 const visibleArticles = articles.filter((a) => a.slug !== 'what-is-balayage-old')
-const categories = ['All', 'Color', 'Technique', 'Cut & Style', 'Texture', 'Tips', 'Business', 'Products', 'Hair Thinning', 'Scalp Care']
+const categories = ['All', 'Color', 'Technique', 'Cut & Style', 'Texture', 'Tips', 'Business', 'Products', 'Hair Thinning']
 
 export default function ArticlesPage() {
   const [searchParams, setSearchParams] = useSearchParams()

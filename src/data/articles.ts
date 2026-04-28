@@ -9,6 +9,7 @@ export interface Article {
   readTime: string
   image: string
   category: string
+  section: 'Trends' | 'Inspiration' | 'Hair Care'
   body: string
   metaTitle: string
   metaDescription: string
@@ -108,6 +109,7 @@ export const articles: Article[] = [
     readTime: '8 min',
     image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop',
     category: 'Color',
+    section: 'Trends',
     body: ``,
     metaTitle: 'The Copper Renaissance: Why This Shade Rules 2026',
     metaDescription: 'Copper hair is dominating 2026. Learn why top colorists love it and how to ask for it at your next appointment.',
@@ -123,6 +125,7 @@ export const articles: Article[] = [
     readTime: '4 min',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop',
     category: 'Color',
+    section: 'Trends',
     body: `## Brunette Glazing salon treatment: what it is + who it’s for
 
 If your brunette looks fine in the mirror but dull in daylight, you’re not imagining it. Over time, brunette color can lose its “reflective” quality—especially when it’s been colored, highlighted, or even just sun-exposed. That’s where a **Brunette Glazing salon treatment** comes in.
@@ -253,6 +256,7 @@ When you pair a cut that matches your natural fall with a tone-refresh service t
     readTime: '6 min',
     image: '/image/haircut-layers.avif',
     category: 'Cut & Style',
+    section: 'Trends',
     body: `## Brunette Glazing salon treatment: what it is + who it’s for
 
 If your brunette looks fine in the mirror but dull in daylight, you’re not imagining it. Over time, brunette color can lose its “reflective” quality—especially when it’s been colored, highlighted, or even just sun-exposed. That’s where a **Brunette Glazing salon treatment** comes in.
@@ -383,6 +387,7 @@ When you pair a cut that matches your natural fall with a tone-refresh service t
     readTime: '5 min',
     image: '/image/vivid-color-guide.avif',
     category: 'Color',
+    section: 'Trends',
     body: `## Pastel-to-vivid goals (and what your clients actually want)
 When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity—what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
 
@@ -484,6 +489,7 @@ When you combine both—smart color formulation and a repeatable business rhythm
     readTime: '8 min',
     image: '/image/curl-consultation.avif',
     category: 'Texture',
+    section: 'Trends',
     body: `A “curl consultation best curls” should feel like more than a friendly chat—it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
 
 If you’ve ever walked out with a cut that looked great wet but fell flat dry (or a color that looked gorgeous for two weeks and then turned brassy or dry), this guide is for you. We’ll cover how to find a stylist for your hair, what to ask in a curl consultation, and what “best curls” truly means—plus how to approach balayage when you have curls.
@@ -576,6 +582,7 @@ Good hair days start with the right plan. When you choose a stylist who understa
     readTime: '10 min',
     image: '/image/find-right-stylist.avif',
     category: 'Tips',
+    section: 'Inspiration',
     body: `## Quick intro: stylist vs. dermatologist (and why it matters)
 
 Booking a new stylist can feel like a gamble—especially if you’ve had a cut that made your curls look undefined, or a color that didn’t flatter your undertone. The good news is that for most styling and cosmetic needs, a licensed cosmetologist/hairstylist is exactly who you should book. Even better? You can stack the odds in your favor by matching your hair type and goals to the stylist’s specialty.
@@ -867,6 +874,7 @@ When you match the right stylist to your hair type—and know when to involve a 
     readTime: '5 min',
     image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80&auto=format&fit=crop',
     category: 'Tips',
+    section: 'Inspiration',
     body: `## Quick intro: stylist vs. dermatologist (and why it matters)
 
 Booking a new stylist can feel like a gamble—especially if you’ve had a cut that made your curls look undefined, or a color that didn’t flatter your undertone. The good news is that for most styling and cosmetic needs, a licensed cosmetologist/hairstylist is exactly who you should book. Even better? You can stack the odds in your favor by matching your hair type and goals to the stylist’s specialty.
@@ -1066,6 +1074,7 @@ When you match the right stylist to your hair type—and know when to involve a 
     readTime: '7 min',
     image: '/image/questions-before-color.avif',
     category: 'Tips',
+    section: 'Inspiration',
     body: `Color can be transformative—until it isn’t. The best way to protect your results (and your scalp) is to ask smart questions before the dye ever touches your hair. Think of this as your pre-appointment checklist: you’re not being difficult; you’re being informed. A great stylist will welcome these questions, explain their process clearly, and help you feel confident about timing, maintenance, and safety.
 
 Below are 10 questions to ask before your color appointment, with the goal of getting a plan that matches your hair history and your health needs.
@@ -1162,6 +1171,7 @@ If you want one takeaway, make it this: safety and communication matter as much 
     readTime: '6 min',
     image: '/image/bond-builders.avif',
     category: 'Products',
+    section: 'Hair Care',
     body: `If your hair has been through bleach, frequent heat, or constant styling, you’ve probably felt the difference between “soft and conditioned” and “strong enough to handle life.” That’s where bond builders come in. 
 
 Bond builders are a specific category of hair care designed to help repair internal damage inside the hair fiber—especially damage that comes from chemical processing, heat, and mechanical stress. In plain terms, bond builders aim to help hair feel smoother and look healthier by supporting the hair’s underlying structure.
@@ -1459,6 +1469,7 @@ If you frequently bleach, color, perm, relax, or rely on heat, bond builders can
     readTime: '10 min',
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80&auto=format&fit=crop',
     category: 'Business',
+    section: 'Inspiration',
     body: `## Solo stylist business blueprint: offer stack that sells the next appointment
 A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
 
@@ -1555,6 +1566,7 @@ The goal is simple: fewer surprises, more repeat clients, and a brand that feels
     readTime: '7 min',
     image: '/image/what-is-balayage.avif',
     category: 'Technique',
+    section: 'Trends',
     body: `Balayage used to mean one thing to clients. Soft, beachy highlights and a Pinterest reference from ten years ago. What we're seeing in salons now is much more considered. The color sits deeper at the root, the brightness is placed with intention, and the finish reads expensive without looking overworked. In 2026, balayage is not just a look clients ask for. It is a technique stylists build around the person in the chair.
 
 ## What Balayage Really Means
@@ -1671,6 +1683,7 @@ Balayage today is not a trend clients bring in on their phone. It is a core skil
     readTime: '8 min',
     image: '/image/tylist-notices-thinning.avif',
     category: 'Hair Thinning',
+    section: 'Hair Care',
     body: `Hair loss rarely shows up the way clients expect it to. There is no dramatic moment, no overnight bald spot for most people. What actually happens is slower, quieter, and much easier to catch from behind the chair than in your own mirror.
 
 By the time a client says, "I feel like my hair is thinning," their stylist has usually been tracking it for months.
@@ -1812,6 +1825,7 @@ Pay attention to small changes. Invest in the right haircare. And listen when yo
     readTime: '7 min',
     image: '/image/layers-thin-hair.avif',
     category: 'Cut & Style',
+    section: 'Trends',
     body: `Layers are one of the most misunderstood tools in a stylist's arsenal, especially when it comes to thin hair. Clients walk in asking for "more volume" and assume layers are the answer. Sometimes they are. Sometimes they are exactly what causes the problem.
 
 What matters is not whether you add layers. It is how, where, and how much.
@@ -1944,6 +1958,7 @@ Keep the strength, create the illusion, and support it with the right products a
     readTime: '9 min',
     image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=80&auto=format&fit=crop',
     category: 'Hair Thinning',
+    section: 'Hair Care',
     body: `Gua sha has already had its beauty-world moment for the face. The sculpted cheekbones, the lymphatic drainage claims, the jade tools sitting on every bathroom shelf. But behind the chair, the more interesting shift is happening higher up: clients are now asking about gua sha for the scalp.
 
 And stylists are paying attention.
@@ -2135,6 +2150,7 @@ And in hair care, consistency is usually where the real results start.`,
     readTime: '9 min',
     image: '/image/hair-coloring.avif',
     category: 'Color',
+    section: 'Trends',
     body: `Low-maintenance hair color is one of the most requested services in salons right now. Clients want dimension, brightness, shine, and something that still looks good eight weeks later. What they do not want is a hard grow-out line, a toner that disappears in two shampoos, or a color that only looks right under salon lighting.
 
 The problem is that "low-maintenance" means different things to different people.

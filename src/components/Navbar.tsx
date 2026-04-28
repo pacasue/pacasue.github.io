@@ -13,7 +13,7 @@ const navCategories = [
   },
   {
     label: 'Hair Care',
-    items: ['Products', 'Hair Thinning', 'Scalp Care', 'At-Home Tips', 'Tools & Styling'],
+    items: ['Products', 'Hair Thinning', 'At-Home Tips', 'Tools & Styling'],
   },
   {
     label: 'Gallery',
