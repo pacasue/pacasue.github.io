@@ -82,7 +82,7 @@ const looks = [
   },
   {
     id: 10,
-    src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop',
+    src: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/10/84/bd/c4/75/v1_E10/E104GYRQ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=0e4e94c28de4c65bc42a6bb6f56d2007175ce763bd1f8684eecb898807d3f3d8',
     title: 'Precision Bob',
     stylist: '@precision.alex',
     category: 'Cut' as Category,
@@ -179,7 +179,7 @@ const looks = [
   {
     id: 22,
     src: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80&auto=format&fit=crop',
-    title: 'Coily Crown',
+    title: 'Teeny Weeny Afro',
     stylist: '@curlsbynadia',
     category: 'Styling' as Category,
     likes: 3340,

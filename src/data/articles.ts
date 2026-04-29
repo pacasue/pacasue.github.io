@@ -111,7 +111,7 @@ export const authors: Record<string, Author> = {
     name: 'Ji-Woo Park',
     title: 'K-Style & Editorial Hair Writer',
     bio: 'Ji-Woo is a Seoul-based hair writer and former assistant at one of Korea\'s top editorial agencies. She covers K-pop and K-drama hair trends, the stylists behind them, and how Korean hair culture influences global salon work. She writes about technique, color, and the cultural context that makes Korean hair aesthetics so widely referenced.',
-    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/07/fd/41/e8/3f/v1_E10/E10AGBRO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=05fffed1db341fa09475a871261fb3369c2051016f8bdb14d8c73c682303d500',
   },
 }
 
@@ -2854,129 +2854,142 @@ That is the real work behind the chair.`,
     metaDescription: 'The consultation starts before you say a word. Here is what your stylist reads the moment you walk in — and why it shapes everything that follows.',
   },
   {
-    id: 22,
-    slug: 'gdragon-hairstyles-stylists-reference',
-    tag: 'Cut & Style',
-    title: '10 G-Dragon Hairstyles Stylists Still Reference',
-    excerpt: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why they actually work.",
-    author: 'Ji-Woo Park',
-    date: 'Apr 28, 2026',
-    readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop',
-    category: 'Cut & Style',
-    section: 'Trends',
-    body: `G-Dragon's hair isn't just memorable because it's bold. It's because it keeps changing without ever feeling random. Over the years, he's built a reputation as a style chameleon, constantly reinventing his look through color and shape.
+  id: 22,
+  slug: 'gdragon-hairstyles-stylists-reference',
+  tag: 'Cut & Style',
+  title: '10 G-Dragon Hairstyles Stylists Still Reference',
+  excerpt: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from, and why they actually work.",
+  author: 'Ji-Woo Park',
+  date: 'Apr 28, 2026',
+  readTime: '6 min',
+  image: 'https://s.yimg.com/ny/api/res/1.2/Lq1vk6kjUgL5SRQyCjjgUg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xNTE4O2NmPXdlYnA-/https://media.zenfs.com/en/mmail.com.my/4440162b287bbefca7b488c1c58194b3',
+  category: 'Cut & Style',
+  section: 'Trends',
+  body: `G-Dragon has never treated hair like an accessory. For him, it is part of the concept, the era, and the performance. The source you shared rounds up 25 of his most memorable looks, from cherry-blossom pink and lake green to his multi-tonal “flower field” color, tennis-ball green, wolf cuts, and the now-iconic tamagoyaki-inspired style.
 
-And behind the scenes, stylists pay attention to those shifts more than you'd think.
 
-> "G-Dragon doesn't repeat himself. That's why he stays relevant. Every look feels like a reset."
+## 1. The Flower Field Color
+
+This is G-Dragon at full volume.
+
+Built on a platinum base, the look mixes saturated pink, yellow, red, and green pieces through long hair, creating the effect of a wild, blooming garden. It is vivid, strange, and somehow still fashion.
+
+From a stylist’s point of view, the reason it works is placement. Multi-color hair can turn messy fast. Here, the platinum base gives the color room to breathe, so every shade looks intentional.
+
+> This is the kind of color that only works when the chaos is planned. On the wrong cut, it becomes costume. On GD, it becomes editorial.
 > — Marcus Bell, Colorist, London
 
-Here are 10 of his most referenced hairstyles, and why they actually work.
+![Style from 'Still Life' Music Video, 2022](https://rollingstoneindia.com/wp-content/uploads/2022/04/g-dragon-still-life.png)
 
-## 1. The Platinum Blonde
+## 2. Mint Green
 
-This is the one that made people pay attention. Sharp, bleached, slightly futuristic. It wasn't just blonde — it was *intentionally* blonde, with tone and styling that made it feel high fashion, not just lightened hair.
+This is one of his most recognizable color eras.
 
-Stylists still reference this when clients want dramatic blonde that doesn't feel basic.
+After experimenting with yellow-green tones, G-Dragon went even greener.
 
-![Platinum blonde done with intention — the tone and cut work together, not separately](https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop)
+This is not an easy color. Neon green can look harsh, gimmicky, or unfinished. On GD, it reads intentional because the styling stays controlled.
 
-## 2. The Soft Black Crop
+The salon lesson is simple: when the color is loud, the shape has to be clean.
 
-Underrated, but important. Short, dark, minimal styling. It's proof that G-Dragon doesn't rely on color to stand out. The haircut does the work here.
+![Style from Instagram 8lo8lo8lowme, 2025](/image/mint-green.png)
 
-> "Black hair shows everything. If the cut isn't right, you see it immediately."
-> — Nina Patel, Colorist & Educator, Chicago
+## 3. The Tamagoyaki Part
 
-![A clean dark crop — when the cut is right, color becomes secondary](https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80&auto=format&fit=crop)
+This one is pure G-Dragon lore.
 
-## 3. The Messy Textured Fringe
+The look features bright golden hair slicked into a center part, with the darker regrowth line showing right through the middle. Fans compared it to tamagoyaki, the Japanese rolled omelet.
 
-This is the most wearable G-Dragon look. Soft layers, slightly uneven fringe, movement through the top. It looks effortless but is actually very controlled.
+It sounds ridiculous until you see it. Then it makes perfect sense.
 
-This is what clients are usually *actually* asking for when they bring his photos in.
+What makes it interesting is that the “flaw” becomes the feature. Most clients panic over visible roots. GD turned the root line into the concept.
 
-![Textured fringe with controlled movement — the most requested G-Dragon reference in salons](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&q=80&auto=format&fit=crop)
+> That is the difference between trend and styling. A normal grow-out becomes iconic when someone decides it belongs there.
+> — Dana Reeves, Salon owner, Nashville
 
-## 4. The Mullet (Modern, Not Retro)
+![Style from Mnet Asian Music Awards, 2013](https://hips.hearstapps.com/hmg-prod/images/dragon-of-bigbang-performs-on-the-stage-during-the-2013-news-photo-1649488839.jpg?crop=0.543xw:0.814xh;0.182xw,0.0740xh)
 
-G-Dragon's mullet phase reset how people see mullets. It's not heavy in the back. It's light, layered, and styled with movement. More fashion editorial than throwback.
+## 4. The Fantastic Baby Seaweed Ends
 
-> "His mullets don't sit. They move. That's the difference."
-> — Marcus Bell, Colorist, London
+From the *Fantastic Baby* era, this single-sided long hair with gradient ends became one of his most unforgettable stage looks.
 
-![A modern mullet with movement — light through the back, structured at the top](https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=80&auto=format&fit=crop)
+It is asymmetrical, dramatic, and built for movement.
 
-## 5. The Red Hair Era
+The reason stylists still remember it is because it is not just a color moment. It is a silhouette. The long piece changes how the whole head shape reads, especially on stage.
 
-Bright, unapologetic red. This is where he leaned into vivid color without trying to make it subtle. It worked because the cut stayed simple.
+This is hair as choreography.
 
-Stylists always notice this balance. If the color is loud, the shape usually stays clean.
+![Style from 'Fantastic Baby' Music Video, 2012](https://www.billboard.com/wp-content/uploads/media/big-bang-fantastic-baby-vid-billboard-1548.jpg)
 
-![Bold red with a clean shape — the cut restraint is what makes the color land](https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1200&q=80&auto=format&fit=crop)
+## 5. Cherry-Blossom Pink
 
-## 6. The Pastel Phase
+G-Dragon’s cherry-blossom pink feels softer than his neon eras, but it is still unmistakably him.
 
-Soft pinks, washed-out orange, faded tones. These are harder to maintain than they look. Pastels require a clean blonde base and constant toning to avoid turning dull.
+The look is worn both fluffy and slightly messy, or styled into a more defined, piecey texture.
 
-This is where gloss hair treatment and careful haircare products come into play behind the scenes.
+That duality is what makes it good. One day it feels romantic. The next it feels punk.
 
-![Pastel tones require a clean base and consistent maintenance — the finish is deceptively high-effort](https://images.unsplash.com/photo-1554519515-242161756769?w=1200&q=80&auto=format&fit=crop)
+![Style from BSX 'Victory Or Nothing', 2012](/image/pink.png)
 
-## 7. The Controlled Chaos Texture
+## 6. Sunset Amber Blonde
 
-Slightly wet-looking, separated, almost chaotic texture. This is styling doing the heavy lifting. It usually involves lightweight styling gel, mousse for structure, and hair serum for separation.
+GD has always gravitated toward bold, high-saturation shades, and this look is a perfect example. Blending warm orange with golden tones, the color melts together like a sunset, creating a rich, glowing finish. It adds just the right amount of contrast and lift against an all-black outfit, making the whole look feel intentional rather than simple.
 
-It looks random. It's not.
+![Style from G-Dragon x Airbnb Press Conference, 2015](https://media.gettyimages.com/id/485515764/photo/seoul-south-korea-g-dragon-of-bigbang-attends-the-collaboration-of-himself-and-airbnb-press.jpg?s=612x612&w=gi&k=20&c=SLLehYCi5m5NImx-HUbiu78NK9rzRrnKKpvj1vIBHS0=)
 
-![Separated, wet-look texture — the product layering is precise even when the result looks effortless](https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop)
+## 7. Platinum Blonde with Baby Bangs
 
-## 8. The Slicked Back Look
+Platinum is a classic idol move, but GD’s version had bite.
 
-Rare for him, but when he does it, it hits. Clean, pushed back, almost severe. It shows the face, which means the cut and density have to be right.
+The transparent platinum tone paired with above-brow fringe made the whole look feel sharper, not softer.
 
-This is one of the few looks where he leans more classic.
+> Platinum does not forgive lazy maintenance. If the condition is off, the whole look collapses.
+> — Adam Kim, Hair Stylist, Los Angeles
 
-![Slicked back and severe — this look only works when the cut and density are already right](https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80&auto=format&fit=crop)
+![Style during the filming of 'Crooked' Music Video, 2013](https://i.ytimg.com/vi/XquYfFI3_2M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5w8BjgCjoZsIfNLkf3Mdsr5yUog)
 
-## 9. The Neon Phase
+## 8. The Neon Red Wolf Cut
 
-Bright orange, lime, unexpected tones. Not "wearable" in a traditional sense, but influential. Stylists still pull from this when clients want something bold but directional, not just trendy.
+GD has worn plenty of wolf-tail and mullet-inspired shapes, but the bright red version is one of the strongest.
 
-![Neon and unexpected tones — influential not because they're wearable, but because they're directional](https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80&auto=format&fit=crop)
+A wolf cut can look cool or chaotic depending on where the weight sits. On GD, the shorter sides sharpen the silhouette, while the red makes it feel performance-ready.
 
-## 10. The Natural Grown-Out Look
+It is not a casual haircut. It is a statement.
 
-This is the one stylists quietly love the most. It looks like nothing special — slightly grown out, soft texture, natural tone. But everything is placed correctly. The layers, the weight, the movement.
+![Style from Paris Fashion Week, 2018](https://assets.vogue.com/photos/59d399eb6809c33f5c2d735b/16:9/w_1792,h_1008,c_limit/g-dragon-chanel-tout.jpg)
 
-> "His most normal hair is usually his best hair. Because that's when you can see the technique."
-> — Dana Reeves, Salon Owner, Nashville
+## 9. Silver-White Slicked-Back Hair
 
-![The grown-out natural look — the most technically demanding because there's nowhere to hide](https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&q=80&auto=format&fit=crop)
+This is one of his most polished looks.
 
-## What Stylists Actually Take From His Hair
+The silver-white color gives the hair that icy, almost glowing quality, while the slicked-back styling keeps everything formal and controlled.
 
-It's not about copying any one look. It's about understanding the system behind it:
+What stylists like here is the contrast. The styling is classic, almost traditional. The color keeps it futuristic.
 
-- The cut supports the styling
-- The color matches the concept
-- The texture is always intentional
-- The hair is maintained enough to handle change
+![Style from G-Dragon x Shinsegae Duty Free, 2016](/image/white.png)
 
-And most importantly, every look fits the moment.
+## 10. The Center-Parted Dark Wolf Tail
 
-## The Bottom Line
+This is the quietest look on the list, which is exactly why it works.
 
-G-Dragon's hair works because it's never just a haircut or just a color. It's a combination of shape, tone, and styling that evolves constantly. That's why it feels ahead, not trendy.
+Smooth, dark, center-parted wolf-tail hair feels restrained, but the shape still carries that signature edge.
 
-> "Anyone can copy a hairstyle. Very few people know how to change it the way he does."
-> — Nina Patel, Colorist & Educator, Chicago
+This is probably the most wearable GD-inspired look for real clients.
 
-That's what makes it worth paying attention to.`,
-    metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
-    metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why the system behind them works.",
-  },
+![Style from G-Dragon x TS Shampoo, 2021](https://www.wowkeren.com/display/images/photo/2021/07/07/00374061s1.jpg)
+
+## The Stylist Takeaway
+
+G-Dragon’s best hair works because it is never just color and never just cut. The two are always in conversation.
+
+The loudest shades usually sit on cleaner shapes. The stranger silhouettes are balanced with styling control. Even the messier looks have structure underneath.
+
+That is why his hair keeps getting referenced.
+
+> GD’s hair is never random. It just looks brave enough to be.
+> — Cassie Miller, Salon Business Coach, New Jersey `,
+  metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
+  metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why the system behind them works.",
+},
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {

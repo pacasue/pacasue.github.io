@@ -171,7 +171,7 @@ export default function ArticleSidebar({ article }: { article: Article }) {
           ))}
         </div>
         <a
-          href="#"
+          href="/articles"
           className="flex items-center gap-2 mt-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors"
         >
           More Articles <ArrowRight size={10} />
