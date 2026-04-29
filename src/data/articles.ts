@@ -107,6 +107,12 @@ export const authors: Record<string, Author> = {
     bio: 'Cleo is a writer and former salon receptionist who spent years watching consultations from the front desk before moving into editorial. She covers the human side of the salon experience — what stylists see, what clients miss, and the unspoken language that happens in the first five minutes of every appointment. Based in New York.',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Ji-Woo Park': {
+    name: 'Ji-Woo Park',
+    title: 'K-Style & Editorial Hair Writer',
+    bio: 'Ji-Woo is a Seoul-based hair writer and former assistant at one of Korea\'s top editorial agencies. She covers K-pop and K-drama hair trends, the stylists behind them, and how Korean hair culture influences global salon work. She writes about technique, color, and the cultural context that makes Korean hair aesthetics so widely referenced.',
+    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -2846,6 +2852,130 @@ When you sit down, your stylist is not just looking at your hair. They are readi
 That is the real work behind the chair.`,
     metaTitle: 'What Your Stylist Is Actually Looking at When You Sit Down',
     metaDescription: 'The consultation starts before you say a word. Here is what your stylist reads the moment you walk in — and why it shapes everything that follows.',
+  },
+  {
+    id: 22,
+    slug: 'gdragon-hairstyles-stylists-reference',
+    tag: 'Cut & Style',
+    title: '10 G-Dragon Hairstyles Stylists Still Reference',
+    excerpt: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why they actually work.",
+    author: 'Ji-Woo Park',
+    date: 'Apr 28, 2026',
+    readTime: '6 min',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop',
+    category: 'Cut & Style',
+    section: 'Trends',
+    body: `G-Dragon's hair isn't just memorable because it's bold. It's because it keeps changing without ever feeling random. Over the years, he's built a reputation as a style chameleon, constantly reinventing his look through color and shape.
+
+And behind the scenes, stylists pay attention to those shifts more than you'd think.
+
+> "G-Dragon doesn't repeat himself. That's why he stays relevant. Every look feels like a reset."
+> — Marcus Bell, Colorist, London
+
+Here are 10 of his most referenced hairstyles, and why they actually work.
+
+## 1. The Platinum Blonde
+
+This is the one that made people pay attention. Sharp, bleached, slightly futuristic. It wasn't just blonde — it was *intentionally* blonde, with tone and styling that made it feel high fashion, not just lightened hair.
+
+Stylists still reference this when clients want dramatic blonde that doesn't feel basic.
+
+![Platinum blonde done with intention — the tone and cut work together, not separately](https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop)
+
+## 2. The Soft Black Crop
+
+Underrated, but important. Short, dark, minimal styling. It's proof that G-Dragon doesn't rely on color to stand out. The haircut does the work here.
+
+> "Black hair shows everything. If the cut isn't right, you see it immediately."
+> — Nina Patel, Colorist & Educator, Chicago
+
+![A clean dark crop — when the cut is right, color becomes secondary](https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=80&auto=format&fit=crop)
+
+## 3. The Messy Textured Fringe
+
+This is the most wearable G-Dragon look. Soft layers, slightly uneven fringe, movement through the top. It looks effortless but is actually very controlled.
+
+This is what clients are usually *actually* asking for when they bring his photos in.
+
+![Textured fringe with controlled movement — the most requested G-Dragon reference in salons](https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&q=80&auto=format&fit=crop)
+
+## 4. The Mullet (Modern, Not Retro)
+
+G-Dragon's mullet phase reset how people see mullets. It's not heavy in the back. It's light, layered, and styled with movement. More fashion editorial than throwback.
+
+> "His mullets don't sit. They move. That's the difference."
+> — Marcus Bell, Colorist, London
+
+![A modern mullet with movement — light through the back, structured at the top](https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=80&auto=format&fit=crop)
+
+## 5. The Red Hair Era
+
+Bright, unapologetic red. This is where he leaned into vivid color without trying to make it subtle. It worked because the cut stayed simple.
+
+Stylists always notice this balance. If the color is loud, the shape usually stays clean.
+
+![Bold red with a clean shape — the cut restraint is what makes the color land](https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1200&q=80&auto=format&fit=crop)
+
+## 6. The Pastel Phase
+
+Soft pinks, washed-out orange, faded tones. These are harder to maintain than they look. Pastels require a clean blonde base and constant toning to avoid turning dull.
+
+This is where gloss hair treatment and careful haircare products come into play behind the scenes.
+
+![Pastel tones require a clean base and consistent maintenance — the finish is deceptively high-effort](https://images.unsplash.com/photo-1554519515-242161756769?w=1200&q=80&auto=format&fit=crop)
+
+## 7. The Controlled Chaos Texture
+
+Slightly wet-looking, separated, almost chaotic texture. This is styling doing the heavy lifting. It usually involves lightweight styling gel, mousse for structure, and hair serum for separation.
+
+It looks random. It's not.
+
+![Separated, wet-look texture — the product layering is precise even when the result looks effortless](https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop)
+
+## 8. The Slicked Back Look
+
+Rare for him, but when he does it, it hits. Clean, pushed back, almost severe. It shows the face, which means the cut and density have to be right.
+
+This is one of the few looks where he leans more classic.
+
+![Slicked back and severe — this look only works when the cut and density are already right](https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80&auto=format&fit=crop)
+
+## 9. The Neon Phase
+
+Bright orange, lime, unexpected tones. Not "wearable" in a traditional sense, but influential. Stylists still pull from this when clients want something bold but directional, not just trendy.
+
+![Neon and unexpected tones — influential not because they're wearable, but because they're directional](https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80&auto=format&fit=crop)
+
+## 10. The Natural Grown-Out Look
+
+This is the one stylists quietly love the most. It looks like nothing special — slightly grown out, soft texture, natural tone. But everything is placed correctly. The layers, the weight, the movement.
+
+> "His most normal hair is usually his best hair. Because that's when you can see the technique."
+> — Dana Reeves, Salon Owner, Nashville
+
+![The grown-out natural look — the most technically demanding because there's nowhere to hide](https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&q=80&auto=format&fit=crop)
+
+## What Stylists Actually Take From His Hair
+
+It's not about copying any one look. It's about understanding the system behind it:
+
+- The cut supports the styling
+- The color matches the concept
+- The texture is always intentional
+- The hair is maintained enough to handle change
+
+And most importantly, every look fits the moment.
+
+## The Bottom Line
+
+G-Dragon's hair works because it's never just a haircut or just a color. It's a combination of shape, tone, and styling that evolves constantly. That's why it feels ahead, not trendy.
+
+> "Anyone can copy a hairstyle. Very few people know how to change it the way he does."
+> — Nina Patel, Colorist & Educator, Chicago
+
+That's what makes it worth paying attention to.`,
+    metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
+    metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why the system behind them works.",
   },
 ]
 

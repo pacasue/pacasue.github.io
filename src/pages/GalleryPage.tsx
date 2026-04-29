@@ -218,8 +218,8 @@ const looks = [
   },
   {
     id: 27,
-    src: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80&auto=format&fit=crop',
-    title: 'Big Chop',
+    src: '/image/straight-to-curly.avif',
+    title: 'Straight to Curly',
     stylist: '@curlsbynadia',
     category: 'Transformations' as Category,
     likes: 7890,
