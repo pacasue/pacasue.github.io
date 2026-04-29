@@ -96,7 +96,7 @@ export default function AboutPage() {
         </div>
 
         {/* Contact */}
-        <div className="border-t border-white/5">
+        {/* <div className="border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 py-14 lg:py-20">
             <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4">Get in touch</p>
             <h2
@@ -121,7 +121,7 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <Newsletter />
       </main>

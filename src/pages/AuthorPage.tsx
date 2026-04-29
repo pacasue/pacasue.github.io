@@ -33,6 +33,9 @@ export default function AuthorPage() {
         {/* Author hero */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-14 lg:py-20">
+            <Link to="/contributors" className="inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors mb-8">
+              ← All Contributors
+            </Link>
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
               <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-gold-500/30 flex-shrink-0">
                 <img src={author.image} alt={author.name} className="w-full h-full object-cover object-top" />

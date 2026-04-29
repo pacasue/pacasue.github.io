@@ -70,7 +70,7 @@ export default function ArticlesPage() {
         <div className="border-b border-white/10 sticky top-0 z-40 bg-charcoal-950">
           {/* Section filter */}
           <div className="max-w-7xl mx-auto px-4 border-b border-white/5">
-            <div className="flex items-center gap-1 py-3">
+            <div className="flex items-center gap-1 py-3 overflow-x-auto scrollbar-none" style={{ scrollbarWidth: 'none' }}>
               {sections.map((sec) => (
                 <button
                   key={sec}
@@ -88,7 +88,7 @@ export default function ArticlesPage() {
           </div>
           {/* Category filter */}
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-none">
+            <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-none" style={{ scrollbarWidth: 'none' }}>
               {categories.map((cat) => (
                 <button
                   key={cat}

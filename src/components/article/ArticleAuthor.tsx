@@ -41,8 +41,6 @@ export default function ArticleAuthor({ article }: { article: Article }) {
           </div>
           <p className="text-sm text-charcoal-400 leading-relaxed">{bio}</p>
           <div className="flex items-center gap-4 mt-2">
-            <a href="#" onClick={(e) => e.preventDefault()} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors">Instagram</a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors">LinkedIn</a>
             <Link to={`/author/${slug}`} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors flex items-center gap-1">
               All Articles <ArrowRight size={9} />
             </Link>
