@@ -30,7 +30,7 @@ const shareLinks = [
   { label: 'Copy Link', icon: Link2, action: 'copy' },
   { label: 'X / Twitter', icon: ExternalLink, action: 'twitter' },
   { label: 'Facebook', icon: ExternalLink, action: 'facebook' },
-  { label: 'LinkedIn', icon: ExternalLink, action: 'linkedin' },
+  { label: 'Instagram', icon: ExternalLink, action: 'instagram' },
 ]
 
 export default function ArticleSidebar({ article }: { article: Article }) {

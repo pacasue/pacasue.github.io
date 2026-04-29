@@ -8,6 +8,7 @@ import ArticleBody from '../components/article/ArticleBody'
 import ArticleSidebar from '../components/article/ArticleSidebar'
 import ArticleAuthor from '../components/article/ArticleAuthor'
 import RelatedArticles from '../components/article/RelatedArticles'
+import MobileToc from '../components/article/MobileToc'
 import { getArticleBySlug } from '../data/articles'
 
 export default function ArticlePage() {
@@ -29,6 +30,7 @@ export default function ArticlePage() {
       <Ticker />
       <main>
         <ArticleHero article={article} />
+        <MobileToc article={article} />
 
         {/* Body + Sidebar */}
         <div className="bg-charcoal-950">

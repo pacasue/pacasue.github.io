@@ -45,7 +45,7 @@ function PullQuote({ quote, attribution }: { quote: string; attribution: string 
         className="text-xl md:text-2xl text-white font-medium leading-snug italic"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
-        "{quote}"
+        {quote}
       </p>
       <p className="text-[11px] tracking-widest uppercase text-gold-500 mt-4 font-medium">
         — {attribution}
@@ -179,7 +179,7 @@ function MarkdownBody({ body }: { body: string }) {
             <div key={i} className="my-10 border-l-4 border-gold-500 pl-6 md:pl-8 py-2">
               <Quote size={24} className="text-gold-500/40 mb-3" />
               <p className="text-xl md:text-2xl text-white font-medium leading-snug italic" style={{ fontFamily: "'Playfair Display', serif" }}>
-                "{quote}"
+                {quote}
               </p>
               {attribution && (
                 <p className="text-[11px] tracking-widest uppercase text-gold-500 mt-4 font-medium">— {attribution}</p>
@@ -235,7 +235,7 @@ function CopperArticleBody() {
         attribution="Lucia Vargas, Celebrity Colorist — Los Angeles"
       />
 
-      <SectionHeading>Why Copper Works on Every Client</SectionHeading>
+      <SectionHeading id="why-copper-works">Why Copper Works on Every Client</SectionHeading>
 
       <Paragraph>
         The genius of the copper family is its versatility. Unlike cool-toned blondes or pure blacks, copper
@@ -261,7 +261,7 @@ function CopperArticleBody() {
         caption="A warm cognac balayage by Marcus Bell, shot in natural light. Note the seamless melt from root shadow to mid-shaft copper."
       />
 
-      <SectionHeading>The Formula Breakdown</SectionHeading>
+      <SectionHeading id="the-formula-breakdown">The Formula Breakdown</SectionHeading>
 
       <Paragraph>
         While every colorist adapts their formula to the client, a reliable starting base has emerged
@@ -291,7 +291,7 @@ function CopperArticleBody() {
         </table>
       </div>
 
-      <Subheading>Application Technique</Subheading>
+      <Subheading id="application-technique">Application Technique</Subheading>
 
       <Paragraph>
         The placement is what separates a dated copper from a current one. Forget uniform application.
@@ -329,7 +329,7 @@ function CopperArticleBody() {
         caption="The finished result: a copper balayage with glass-finish toning. Client: Zara T., photographed by Studio Lumen."
       />
 
-      <SectionHeading>Selling the Maintenance Story</SectionHeading>
+      <SectionHeading id="selling-the-maintenance-story">Selling the Maintenance Story</SectionHeading>
 
       <Paragraph>
         Copper fades faster than cool tones — and that's actually a selling point if you frame it right.

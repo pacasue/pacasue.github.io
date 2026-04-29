@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import Ticker from '../components/Ticker'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import { authors, articles } from '../data/articles'
@@ -15,7 +14,6 @@ export default function ContributorsPage() {
   return (
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
       <Navbar />
-      <Ticker />
       <main>
         {/* Header */}
         <div className="border-b border-white/10">

@@ -7,11 +7,14 @@ import { authors, articles } from '../data/articles'
 
 export default function AuthorPage() {
   const { slug } = useParams<{ slug: string }>()
-  const authorName = slug ? decodeURIComponent(slug.replace(/-/g, ' ')) : ''
-  const author = Object.values(authors).find(
-    (a) => a.name.toLowerCase() === authorName.toLowerCase()
+  const author = slug
+    ? Object.values(authors).find(
+        (a) => a.name.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+      )
+    : undefined
+  const authorArticles = articles.filter(
+    (a) => a.author.toLowerCase().replace(/\s+/g, '-') === (slug ?? '').toLowerCase()
   )
-  const authorArticles = articles.filter((a) => a.author.toLowerCase() === authorName.toLowerCase())
 
   if (!author) {
     return (

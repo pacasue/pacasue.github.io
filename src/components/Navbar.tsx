@@ -54,7 +54,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex flex-col items-center md:items-start">
             <img
-              src="/image/site-logo.png"
+              src="/image/site-logo.svg"
               alt="HairProVoices"
               className="h-8 md:h-12 object-contain"
             />
@@ -158,18 +158,46 @@ export default function Navbar() {
               {activeDropdown === cat.label && (
                 <div className="px-4 pb-3 flex flex-col gap-2">
                   {cat.items.map((item) => (
-                    <a
+                    <Link
                       key={item}
-                      href="#"
+                      to={`/articles?category=${encodeURIComponent(item)}`}
                       className="text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500"
+                      onClick={() => { setMenuOpen(false); setActiveDropdown(null) }}
                     >
                       {item}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
           ))}
+          <div className="border-b border-white/5">
+            <Link
+              to="/gallery"
+              className="block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500"
+              onClick={() => setMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+          </div>
+          <div className="border-b border-white/5">
+            <Link
+              to="/articles"
+              className="block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500"
+              onClick={() => setMenuOpen(false)}
+            >
+              All Articles
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/contributors"
+              className="block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contributors
+            </Link>
+          </div>
         </div>
       )}
     </header>

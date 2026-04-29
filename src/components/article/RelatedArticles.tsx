@@ -2,10 +2,27 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { articles } from '../../data/articles'
 
+function seededShuffle<T>(arr: T[], seed: string): T[] {
+  // Simple hash of the seed string into a numeric value
+  let h = 0
+  for (let i = 0; i < seed.length; i++) {
+    h = (Math.imul(31, h) + seed.charCodeAt(i)) | 0
+  }
+  const copy = [...arr]
+  for (let i = copy.length - 1; i > 0; i--) {
+    h = (Math.imul(h ^ (h >>> 16), 0x45d9f3b)) | 0
+    h = (Math.imul(h ^ (h >>> 16), 0x45d9f3b)) | 0
+    const j = Math.abs(h) % (i + 1)
+    ;[copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy
+}
+
 export default function RelatedArticles({ currentSlug }: { currentSlug: string }) {
-  const related = articles
-    .filter((a) => a.slug !== currentSlug)
-    .slice(0, 3)
+  const related = seededShuffle(
+    articles.filter((a) => a.slug !== currentSlug),
+    currentSlug
+  ).slice(0, 3)
   return (
     <section className="bg-black py-16 lg:py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4">

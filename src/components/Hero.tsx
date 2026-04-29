@@ -44,7 +44,7 @@ export default function Hero() {
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
                 
                 <h1
-                  className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4"
+                  className="text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   The Copper Renaissance:<br />
@@ -56,9 +56,9 @@ export default function Hero() {
                 <div className="flex items-center gap-4">
                   <Link
                     to="/article/copper-renaissance-2026"
-                    className="flex items-center gap-2 bg-gold-500 text-black text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 hover:bg-gold-400 transition-colors"
+                    className="flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 hover:bg-gold-400 transition-colors"
                   >
-                    Read Story <ArrowRight size={12} />
+                    Read Story <ArrowRight size={10} />
                   </Link>
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Inspiration</span>

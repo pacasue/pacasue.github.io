@@ -7,10 +7,8 @@ const footerLinks = {
 }
 
 const socials = [
-  { label: 'Instagram', href: '#', initial: 'IG' },
-  { label: 'YouTube', href: '#', initial: 'YT' },
-  { label: 'TikTok', href: '#', initial: 'TK' },
-  { label: 'Pinterest', href: '#', initial: 'PN' },
+  { label: 'Instagram', href: 'https://www.instagram.com/hairpro.voices/', initial: 'IG' },
+  { label: 'Facebook', href: 'https://www.facebook.com/people/Hairpro-Voices/61564779778738/', initial: 'FB' },
 ]
 
 const sponsors = [
@@ -45,7 +43,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-2 flex flex-col gap-4">
             <a href="#" className="flex flex-col gap-1">
-              <img src="/image/site-logo.png" alt="HairProVoices" className="h-8 object-contain object-left" />
+              <img src="/image/site-logo.svg" alt="HairProVoices" className="h-8 object-contain object-left" />
               <span className="text-[9px] tracking-[0.3em] uppercase text-charcoal-600">
                 Great Hair Starts with Great Advice
               </span>
