@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const navCategories = [
@@ -20,7 +20,6 @@ const navCategories = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [searchOpen, setSearchOpen] = useState(false)
 
   return (
     <header className="relative z-50 bg-black border-b border-white/10">
@@ -132,31 +131,6 @@ export default function Navbar() {
               )}
             </div>
           </nav>
-
-          {/* Search */}
-          <div className="flex items-center gap-3">
-            {searchOpen ? (
-              <div className="flex items-center bg-white/5 border border-white/10 rounded-none">
-                <input
-                  autoFocus
-                  type="text"
-                  placeholder="Search..."
-                  className="bg-transparent text-sm text-white placeholder-charcoal-500 px-3 py-1.5 outline-none w-48"
-                />
-                <button onClick={() => setSearchOpen(false)} className="pr-2 text-charcoal-500 hover:text-white">
-                  <X size={14} />
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="text-charcoal-300 hover:text-white transition-colors p-1"
-                aria-label="Open search"
-              >
-                <Search size={18} />
-              </button>
-            )}
-          </div>
         </div>
       </div>
 
