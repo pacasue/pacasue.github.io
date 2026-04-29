@@ -40,18 +40,18 @@ export default function Navbar() {
 
       {/* Main navbar */}
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Mobile menu toggle */}
           <button
-            className="md:hidden text-charcoal-300 hover:text-white p-1"
+            className="md:hidden text-charcoal-300 hover:text-white p-1 z-10"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
 
-          {/* Logo */}
-          <Link to="/" className="flex flex-col items-center md:items-start">
+          {/* Logo — centered on mobile, left-aligned on desktop */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex flex-col items-center md:items-start">
             <img
               src="/image/site-logo.svg"
               alt="HairProVoices"
