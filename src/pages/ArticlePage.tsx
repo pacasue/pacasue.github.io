@@ -9,6 +9,7 @@ import ArticleSidebar from '../components/article/ArticleSidebar'
 import ArticleAuthor from '../components/article/ArticleAuthor'
 import RelatedArticles from '../components/article/RelatedArticles'
 import MobileToc from '../components/article/MobileToc'
+import FloatingNav from '../components/FloatingNav'
 import { getArticleBySlug } from '../data/articles'
 
 export default function ArticlePage() {
@@ -28,6 +29,7 @@ export default function ArticlePage() {
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
       <Navbar />
       <Ticker />
+      <FloatingNav />
       <main>
         <ArticleHero article={article} />
         <MobileToc article={article} />

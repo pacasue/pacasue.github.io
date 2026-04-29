@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import FloatingNav from '../components/FloatingNav'
 import { authors, articles } from '../data/articles'
 
 function authorSlug(name: string) {
@@ -14,6 +15,7 @@ export default function ContributorsPage() {
   return (
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
       <Navbar />
+      <FloatingNav />
       <main>
         {/* Header */}
         <div className="border-b border-white/10">

@@ -103,12 +103,34 @@ export default function Navbar() {
             >
               All Articles
             </Link>
-            <Link
-              to="/contributors"
-              className="px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors"
+            <div
+              className="relative group"
+              onMouseEnter={() => setActiveDropdown('Community')}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              Contributors
-            </Link>
+              <button className="flex items-center gap-1 px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors">
+                Community
+                <ChevronDown size={10} className="opacity-60" />
+              </button>
+              {activeDropdown === 'Community' && (
+                <div className="absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl">
+                  <Link
+                    to="/contributors"
+                    className="block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    Contributors
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    About Us
+                  </Link>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Search */}
@@ -189,14 +211,35 @@ export default function Navbar() {
               All Articles
             </Link>
           </div>
-          <div>
-            <Link
-              to="/contributors"
-              className="block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500"
-              onClick={() => setMenuOpen(false)}
+          <div className="border-b border-white/5">
+            <button
+              onClick={() => setActiveDropdown(activeDropdown === 'Community' ? null : 'Community')}
+              className="flex justify-between items-center w-full px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300"
             >
-              Contributors
-            </Link>
+              Community
+              <ChevronDown
+                size={12}
+                className={`transition-transform ${activeDropdown === 'Community' ? 'rotate-180' : ''}`}
+              />
+            </button>
+            {activeDropdown === 'Community' && (
+              <div className="px-4 pb-3 flex flex-col gap-2">
+                <Link
+                  to="/contributors"
+                  className="text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500"
+                  onClick={() => { setMenuOpen(false); setActiveDropdown(null) }}
+                >
+                  Contributors
+                </Link>
+                <Link
+                  to="/about"
+                  className="text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500"
+                  onClick={() => { setMenuOpen(false); setActiveDropdown(null) }}
+                >
+                  About Us
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}

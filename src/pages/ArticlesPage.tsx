@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Ticker from '../components/Ticker'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import FloatingNav from '../components/FloatingNav'
 import { articles } from '../data/articles'
 
 const visibleArticles = articles.filter((a) => a.slug !== 'what-is-balayage-old')
@@ -46,6 +47,7 @@ export default function ArticlesPage() {
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
       <Navbar />
       <Ticker />
+      <FloatingNav />
       <main>
         {/* Header */}
         <div className="border-b border-white/10">

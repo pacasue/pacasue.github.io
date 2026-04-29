@@ -1,4 +1,5 @@
-import { Clock, Users, Award, ArrowRight, Play } from 'lucide-react'
+import { useState } from 'react'
+import { Clock, Users, Award, Play, X } from 'lucide-react'
 
 const courses = [
   {
@@ -52,6 +53,8 @@ const BADGE_COLOR: Record<string, string> = {
 }
 
 export default function EducationSection() {
+  const [modalOpen, setModalOpen] = useState(false)
+
   return (
     <section className="bg-charcoal-950 py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4">
@@ -73,12 +76,12 @@ export default function EducationSection() {
               Stylist-created guides that help you walk into your next appointment knowing exactly what you want — and why.
             </p>
           </div>
-          <a
+          {/* <a
             href="#"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors whitespace-nowrap"
           >
             Browse All Guides <ArrowRight size={12} />
-          </a>
+          </a> */}
         </div>
 
         {/* Stats bar */}
@@ -102,7 +105,7 @@ export default function EducationSection() {
           {courses.map((course) => (
             <a
               key={course.id}
-              href="#"
+              onClick={() => setModalOpen(true)}
               className="group bg-charcoal-900/50 border border-white/5 hover:border-gold-500/30 transition-all duration-300 cursor-pointer card-hover flex flex-col"
             >
               {/* Thumbnail */}
@@ -171,6 +174,39 @@ export default function EducationSection() {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setModalOpen(false)}>
+          <div className="relative bg-charcoal-950 border border-white/10 max-w-md w-full p-8 text-center" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 text-charcoal-500 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <X size={16} />
+            </button>
+            <div className="w-12 h-12 bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mx-auto mb-5">
+              <Play size={20} className="text-gold-500 ml-0.5" />
+            </div>
+            <h3
+              className="text-xl font-bold text-white mb-3"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              This course has ended
+            </h3>
+            <p className="text-sm text-charcoal-400 leading-relaxed mb-6">
+              This guide is no longer available, but more are on the way. We are working with our contributors to bring you new stylist-led courses soon.
+            </p>
+            <button
+              onClick={() => setModalOpen(false)}
+              className="text-[11px] tracking-widest uppercase text-gold-500 hover:text-gold-400 transition-colors font-semibold"
+            >
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

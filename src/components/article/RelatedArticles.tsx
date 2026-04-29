@@ -38,7 +38,7 @@ export default function RelatedArticles({ currentSlug }: { currentSlug: string }
             </h2>
           </div>
           <Link
-            to="/"
+            to="/articles"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors"
           >
             All Articles <ArrowRight size={12} />

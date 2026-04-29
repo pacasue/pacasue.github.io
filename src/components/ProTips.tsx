@@ -1,45 +1,46 @@
 import { Quote, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const tips = [
   {
     id: 1,
     category: 'Color',
     tip: 'Ask your colorist to show you a strand test before committing to a big color change. It takes 10 minutes and saves months of regret.',
-    stylist: 'Lucia Vargas',
-    role: 'Celebrity Colorist',
-    location: 'Los Angeles, CA',
-    avatar: 'LV',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80&auto=format&fit=crop',
+    stylist: 'Leila Fernandez',
+    role: 'Senior Color Editor',
+    location: 'Miami, FL',
+    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80&auto=format&fit=crop&facepad=3',
+    slug: 'leila-fernandez',
   },
   {
     id: 2,
     category: 'Cut',
     tip: 'Bring a photo to your appointment — but be open to your stylist\'s take on how it works with your texture and face shape.',
-    stylist: 'Marcus Bell',
-    role: 'Master Cutter',
+    stylist: 'Tom Harley',
+    role: 'Technique Editor',
     location: 'London, UK',
-    avatar: 'MB',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop&facepad=3',
+    slug: 'tom-harley',
   },
   {
     id: 3,
     category: 'Business',
     tip: 'If you love your stylist, rebook before you leave the chair. The best appointment slots go to regulars.',
     stylist: 'Dana Reeves',
-    role: 'Client Experience Expert',
+    role: 'Salon Business Coach',
     location: 'Nashville, TN',
-    avatar: 'DR',
-    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3',
+    slug: 'dana-reeves',
   },
   {
     id: 4,
     category: 'Texture',
     tip: 'Tell your stylist your full hair routine at home — the products you use matter as much as what happens in the salon.',
-    stylist: 'Amara Johnson',
-    role: 'Curl Specialist',
+    stylist: 'Imani Okafor',
+    role: 'Texture & Curl Editor',
     location: 'Atlanta, GA',
-    avatar: 'AJ',
-    image: 'https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=400&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80&auto=format&fit=crop&facepad=3',
+    slug: 'imani-okafor',
   },
 ]
 
@@ -68,20 +69,20 @@ export default function ProTips() {
               Wisdom From the Chair
             </h2>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/contributors"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors"
           >
-            All Tips <ArrowRight size={12} />
-          </a>
+            Meet the Experts <ArrowRight size={12} />
+          </Link>
         </div>
 
         {/* Tips grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
           {tips.map((tip) => (
-            <a
+            <Link
               key={tip.id}
-              href="#"
+              to={`/author/${tip.slug}`}
               className="group bg-black hover:bg-white/[0.03] transition-colors p-6 md:p-8 flex flex-col gap-5 cursor-pointer"
             >
               <div className="flex items-start justify-between gap-4">
@@ -95,11 +96,10 @@ export default function ProTips() {
                 className="text-lg md:text-xl text-charcoal-200 group-hover:text-white transition-colors leading-relaxed"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                "{tip.tip}"
+                {tip.tip}
               </p>
 
               <div className="flex items-center gap-3 pt-2 border-t border-white/5">
-                {/* Avatar with image */}
                 <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                   <img
                     src={tip.image}
@@ -121,7 +121,7 @@ export default function ProTips() {
                   className="ml-auto text-charcoal-700 group-hover:text-gold-500 group-hover:translate-x-1 transition-all"
                 />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

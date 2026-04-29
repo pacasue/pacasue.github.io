@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import FloatingNav from '../components/FloatingNav'
 import Hero from '../components/Hero'
 import FeaturedGrid from '../components/FeaturedGrid'
 import TrendingLooks from '../components/TrendingLooks'
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
       <Navbar />
+      <FloatingNav />
       <main>
         <Hero />
         <FeaturedGrid />

@@ -70,10 +70,6 @@ export default function MobileToc({ article }: { article: Article }) {
         className="flex items-center gap-2 overflow-x-auto px-4 py-3 scrollbar-none"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        <span className="text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold flex-shrink-0 pr-1">
-          In this article
-        </span>
-        <span className="w-px h-3 bg-white/10 flex-shrink-0" />
         {tocItems.map((item) => {
           const isActive = activeSection === item.id
           return (

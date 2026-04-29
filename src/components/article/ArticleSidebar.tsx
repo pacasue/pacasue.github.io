@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link2, ExternalLink, ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link2, ExternalLink } from 'lucide-react'
 import type { Article } from '../../data/articles'
-import { articles } from '../../data/articles'
 
 const copperTocItems = [
   { id: 'intro', label: 'Introduction' },
@@ -38,11 +36,6 @@ export default function ArticleSidebar({ article }: { article: Article }) {
   const [activeSection, setActiveSection] = useState('')
   const tocItems = getTocItems(article)
 
-  const relatedArticles = articles
-    .filter((a) => a.slug !== article.slug && a.slug !== 'what-is-balayage-old')
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 3)
-
   useEffect(() => {
     const observers: IntersectionObserver[] = []
     tocItems.forEach(({ id }) => {
@@ -59,10 +52,20 @@ export default function ArticleSidebar({ article }: { article: Article }) {
   }, [tocItems])
 
   const handleShare = (action: string) => {
+    const url = encodeURIComponent(window.location.href)
     if (action === 'copy') {
       navigator.clipboard.writeText(window.location.href).catch(() => {})
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
+    } else if (action === 'twitter') {
+      window.open(`https://twitter.com/intent/tweet?url=${url}`, '_blank', 'noopener,noreferrer')
+    } else if (action === 'facebook') {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer')
+    } else if (action === 'instagram') {
+      navigator.clipboard.writeText(window.location.href).catch(() => {})
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+      window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')
     }
   }
 
@@ -70,7 +73,7 @@ export default function ArticleSidebar({ article }: { article: Article }) {
     <div className="lg:sticky lg:top-6 flex flex-col gap-8">
 
       {/* Table of Contents */}
-      <div className="border border-white/10 p-5">
+      <div className="hidden lg:block border border-white/10 p-5">
         <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4">
           In This Article
         </p>
@@ -136,46 +139,6 @@ export default function ArticleSidebar({ article }: { article: Article }) {
             Go
           </button>
         </div>
-      </div>
-
-      {/* Related sidebar articles */}
-      <div>
-        <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4">
-          Read Next
-        </p>
-        <div className="flex flex-col divide-y divide-white/5">
-          {relatedArticles.map((a) => (
-            <Link
-              key={a.slug}
-              to={`/article/${a.slug}`}
-              className="flex gap-3 py-4 group cursor-pointer"
-            >
-              <div className="w-16 h-16 flex-shrink-0 overflow-hidden">
-                <img
-                  src={a.image}
-                  alt={a.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-col gap-1 min-w-0">
-                <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">{a.tag}</span>
-                <p
-                  className="text-xs font-semibold text-charcoal-300 group-hover:text-white transition-colors leading-snug line-clamp-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {a.title}
-                </p>
-                <span className="text-[10px] text-charcoal-600">{a.readTime} read</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <a
-          href="/articles"
-          className="flex items-center gap-2 mt-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors"
-        >
-          More Articles <ArrowRight size={10} />
-        </a>
       </div>
     </div>
   )
