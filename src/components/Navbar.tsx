@@ -13,11 +13,7 @@ const navCategories = [
   },
   {
     label: 'Hair Care',
-    items: ['Products', 'Hair Thinning', 'At-Home Tips', 'Tools & Styling'],
-  },
-  {
-    label: 'Gallery',
-    items: ['Editorial Looks', 'Client Transformations', 'Seasonal Looks', 'Before & After'],
+    items: ['Products', 'Hair Thinning', 'At-Home Tips'],
   },
 ]
 
@@ -96,10 +92,22 @@ export default function Navbar() {
               </div>
             ))}
             <Link
+              to="/gallery"
+              className="px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors"
+            >
+              Gallery
+            </Link>
+            <Link
               to="/articles"
               className="px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors"
             >
               All Articles
+            </Link>
+            <Link
+              to="/contributors"
+              className="px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors"
+            >
+              Contributors
             </Link>
           </nav>
 

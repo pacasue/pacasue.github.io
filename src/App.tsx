@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage'
 import ArticlePage from './pages/ArticlePage'
 import ArticlesPage from './pages/ArticlesPage'
 import AuthorPage from './pages/AuthorPage'
+import GalleryPage from './pages/GalleryPage'
+import ContributorsPage from './pages/ContributorsPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/article/:slug" element={<ArticlePage />} />
         <Route path="/author/:slug" element={<AuthorPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contributors" element={<ContributorsPage />} />
       </Routes>
     </BrowserRouter>
   )

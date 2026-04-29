@@ -7,20 +7,40 @@ import Footer from '../components/Footer'
 import { articles } from '../data/articles'
 
 const visibleArticles = articles.filter((a) => a.slug !== 'what-is-balayage-old')
-const categories = ['All', 'Color', 'Technique', 'Cut & Style', 'Texture', 'Tips', 'Business', 'Products', 'Hair Thinning']
+
+const sections = ['All', 'Trends', 'Inspiration', 'Hair Care'] as const
+
+const categoryMap: Record<string, string[]> = {
+  All: ['All', 'Color', 'Technique', 'Cut & Style', 'Texture', 'Tips', 'Business', 'Products', 'Hair Thinning', 'At-Home Tips'],
+  Trends: ['All', 'Color', 'Technique', 'Cut & Style', 'Texture'],
+  Inspiration: ['All', 'Tips', 'Business'],
+  'Hair Care': ['All', 'Products', 'Hair Thinning', 'At-Home Tips'],
+}
 
 export default function ArticlesPage() {
   const [searchParams, setSearchParams] = useSearchParams()
+  const activeSection = searchParams.get('section') ?? 'All'
   const activeCategory = searchParams.get('category') ?? 'All'
 
-  const setCategory = (cat: string) => {
-    if (cat === 'All') setSearchParams({})
-    else setSearchParams({ category: cat })
+  const setSection = (sec: string) => {
+    if (sec === 'All') setSearchParams({})
+    else setSearchParams({ section: sec })
   }
 
-  const filtered = activeCategory === 'All'
-    ? visibleArticles
-    : visibleArticles.filter((a) => a.category === activeCategory)
+  const setCategory = (cat: string) => {
+    const params: Record<string, string> = {}
+    if (activeSection !== 'All') params.section = activeSection
+    if (cat !== 'All') params.category = cat
+    setSearchParams(params)
+  }
+
+  const categories = categoryMap[activeSection] ?? categoryMap.All
+
+  const filtered = visibleArticles.filter((a) => {
+    const sectionMatch = activeSection === 'All' || a.section === activeSection
+    const categoryMatch = activeCategory === 'All' || a.category === activeCategory
+    return sectionMatch && categoryMatch
+  })
 
   return (
     <div className="min-h-screen bg-charcoal-950 text-charcoal-100">
@@ -40,12 +60,31 @@ export default function ArticlesPage() {
             >
               All Articles
             </h1>
-            <p className="text-sm text-charcoal-400">{visibleArticles.length} pieces from our contributors</p>
+            <p className="text-sm text-charcoal-400">{filtered.length} pieces from our contributors</p>
           </div>
         </div>
 
-        {/* Category filter */}
+        {/* Filters */}
         <div className="border-b border-white/10 sticky top-0 z-40 bg-charcoal-950">
+          {/* Section filter */}
+          <div className="max-w-7xl mx-auto px-4 border-b border-white/5">
+            <div className="flex items-center gap-1 py-3">
+              {sections.map((sec) => (
+                <button
+                  key={sec}
+                  onClick={() => setSection(sec)}
+                  className={`flex-shrink-0 px-5 py-1.5 text-[11px] tracking-widest uppercase font-semibold transition-colors ${
+                    activeSection === sec
+                      ? 'text-white border-b-2 border-gold-500'
+                      : 'text-charcoal-500 hover:text-charcoal-200'
+                  }`}
+                >
+                  {sec}
+                </button>
+              ))}
+            </div>
+          </div>
+          {/* Category filter */}
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center gap-1 overflow-x-auto py-3 scrollbar-none">
               {categories.map((cat) => (
