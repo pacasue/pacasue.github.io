@@ -99,13 +99,13 @@ export const authors: Record<string, Author> = {
     name: 'Priya Nair',
     title: 'At-Home Hair Care Editor',
     bio: 'Priya is a beauty writer and certified trichologist based in London who specializes in translating professional hair care advice into practical at-home routines. She has spent years interviewing stylists, testing products, and building guides that help people get better results between salon visits. She writes about scalp health, product selection, and the habits that actually move the needle.',
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ce/e6/2d/c5/a3/v1_E10/E10IPZN.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9e01dba5139d26bb308881d50e6af7c442f893b31c01fc89f3c1a38cb9119418',
   },
   'Cleo Hartley': {
     name: 'Cleo Hartley',
     title: 'Salon Culture & Client Experience Writer',
     bio: 'Cleo is a writer and former salon receptionist who spent years watching consultations from the front desk before moving into editorial. She covers the human side of the salon experience — what stylists see, what clients miss, and the unspoken language that happens in the first five minutes of every appointment. Based in New York.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/79/0d/79/25/50/v1_E11/E118GL6Q.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f07cd042417aba19eee7d5e82c34e18742b8a6cebe8c9aa5b8e1d6bdff2710b7',
   },
   'Ji-Woo Park': {
     name: 'Ji-Woo Park',
