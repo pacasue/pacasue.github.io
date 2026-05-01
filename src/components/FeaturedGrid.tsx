@@ -58,7 +58,7 @@ const articles = [
     author: 'Dana Reeves',
     date: 'Apr 1, 2026',
     readTime: '10 min',
-    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80&auto=format&fit=crop',
+    image: '/image/find-right-stylist.avif',
     featured: false,
     slug: 'find-right-stylist',
   },

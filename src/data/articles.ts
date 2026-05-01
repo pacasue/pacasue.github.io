@@ -3009,7 +3009,7 @@ Smooth, dark, center-parted wolf-tail hair feels restrained, but the shape still
 
 This is probably the most wearable GD-inspired look for real clients.
 
-![Style from G-Dragon x TS Shampoo, 2021](https://www.wowkeren.com/display/images/photo/2021/07/07/00374061s1.jpg)
+![Style from G-Dragon x TS Shampoo, 2021](/image/gd-shampoo.jpg)
 
 ## The Stylist Takeaway
 
