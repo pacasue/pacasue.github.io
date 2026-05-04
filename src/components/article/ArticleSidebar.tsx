@@ -3,11 +3,10 @@ import { Link2, ExternalLink } from 'lucide-react'
 import type { Article } from '../../data/articles'
 
 const copperTocItems = [
-  { id: 'intro', label: 'Introduction' },
-  { id: 'why-copper', label: 'Why Copper Works' },
-  { id: 'formula', label: 'The Formula' },
-  { id: 'application', label: 'Application Technique' },
-  { id: 'maintenance', label: 'Selling Maintenance' },
+  { id: 'why-copper-works', label: 'Why Copper Works' },
+  { id: 'the-formula-breakdown', label: 'The Formula' },
+  { id: 'application-technique', label: 'Application Technique' },
+  { id: 'selling-the-maintenance-story', label: 'Selling Maintenance' },
 ]
 
 function slugify(text: string) {

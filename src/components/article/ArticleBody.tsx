@@ -1,8 +1,8 @@
 import type { Article } from '../../data/articles'
 import { Quote } from 'lucide-react'
 
-const INLINE_IMAGE_1 = 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&q=80&auto=format&fit=crop'
-const INLINE_IMAGE_2 = 'https://images.unsplash.com/photo-1554519515-242161756769?w=1200&q=80&auto=format&fit=crop'
+const INLINE_IMAGE_1 = '/image/copper-1.png'
+const INLINE_IMAGE_2 = '/image/copper-re.png'
 
 function SectionHeading({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
@@ -245,9 +245,9 @@ function CopperArticleBody() {
       </Paragraph>
 
       <Paragraph>
-        This is something colorist <strong className="text-charcoal-100">Marcus Bell</strong> has been
+        This is something colorist Marcus Bell has been
         preaching for years from his London studio. "I've never had a client walk out unhappy with a copper
-        that was chosen for them — not applied to them," he says. "The consultation is everything. We're
+        that was chosen for them but not applied to them," he says. "The consultation is everything. We're
         looking at skin, eye color, even their wardrobe. Copper is a system, not a formula."
       </Paragraph>
 
@@ -265,8 +265,8 @@ function CopperArticleBody() {
 
       <Paragraph>
         While every colorist adapts their formula to the client, a reliable starting base has emerged
-        from the conversations we had with 10 professionals for this piece. Here is the foundation —
-        adjust developer strength based on existing hair condition:
+        from the conversations we had with 10 professionals for this piece. Here is the foundation.
+        Adjust developer strength based on existing hair condition:
       </Paragraph>
 
       {/* Formula table */}
@@ -332,8 +332,8 @@ function CopperArticleBody() {
       <SectionHeading id="selling-the-maintenance-story">Selling the Maintenance Story</SectionHeading>
 
       <Paragraph>
-        Copper fades faster than cool tones — and that's actually a selling point if you frame it right.
-        Colorist <strong className="text-charcoal-100">Dana Reeves</strong> has made copper her bread
+        Copper fades faster than cool tones, and that's actually a selling point if you frame it right.
+        Colorist Dana Reeves has made copper her bread
         and butter by building a "copper journey" program at her Nashville suite. Clients book in every
         8 weeks, and between visits, they use a copper-depositing conditioner she retails.
       </Paragraph>
@@ -349,7 +349,7 @@ function CopperArticleBody() {
       </Paragraph>
 
       <Paragraph>
-        The bottom line: copper in 2026 is not a trend to chase — it's a skill to own. Learn the
+        The bottom line: copper in 2026 is not a trend to chase. It's a skill to own. Learn the
         undertone system, build a signature formula, and position it as a premium service. Your clients
         are already asking for it. The stylists who master it this year will still be the go-to for it
         in 2030.

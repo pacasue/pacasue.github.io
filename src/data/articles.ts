@@ -125,7 +125,7 @@ export const articles: Article[] = [
     author: 'Leila Fernandez',
     date: 'Apr 8, 2026',
     readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop',
+    image: '/image/copper.avif',
     category: 'Color',
     section: 'Trends',
     body: ``,
