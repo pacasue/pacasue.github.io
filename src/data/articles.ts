@@ -600,17 +600,6 @@ Ask questions that protect your curls: “How will you prevent my ends from gett
 
 If a stylist can’t discuss maintenance or only sells the service without the follow-through plan, that’s a risk. The best balayage results are the ones that remain wearable for months.
 
-### When to involve a dermatologist (hair loss vs. styling/curl issues)
-Sometimes what feels like “a hair problem” is actually hair shedding or a medical condition—not a cut or product mismatch. It’s important to know the difference so you don’t lose time chasing stylist solutions for something that needs medical care.
-
-Normal scalp shedding varies, but UCLA Health notes that a normal scalp sheds about 25 to 100 hairs per day [turn1search5]. If you’re shedding more than the average—one guidance source suggests seeking help if you’re shedding more than about 100–150 hairs per day [turn1search0]—or if you notice a receding hairline or balding at the crown, it’s wise to consult a dermatologist early.
-
-The Mayo Clinic also notes that a doctor may refer patients to a dermatologist for hair-loss evaluation and treatment [turn1search1]. That’s especially important if you’re experiencing rapid thinning, scalp symptoms (itching, scaling, pain), or changes that don’t improve with better styling.
-
-Hair loss can be confused with styling damage or breakage, particularly with curls where dryness and tangling can make strands snap. But if you’re seeing true thinning at the roots, widening parting, or patchy loss, don’t assume it’s just your curl routine.
-
-If you’re unsure, take photos in consistent lighting and bring your observations to a professional. A dermatologist can help clarify whether you’re dealing with shedding, breakage, or an underlying condition.
-
 ### Wrap-up: your booking script + next steps
 Now that you know what to look for, you can book with confidence. Here’s a simple message you can copy and paste when contacting a salon:
 
@@ -833,7 +822,7 @@ When you match the right stylist to your hair type—and know when to involve a 
 //     readTime: '5 min',
 //     image: 'https://images.unsplash.com/photo-1554519515-242161756769?w=600&q=80&auto=format&fit=crop',
 //     category: 'Technique',
-//     body: `A “curl consultation best curls” should feel like more than a friendly chat—it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
+//     body: `A “curl consultation best curls” should feel like more than a friendly chat. It should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
 
 // If you’ve ever walked out with a cut that looked great wet but fell flat dry (or a color that looked gorgeous for two weeks and then turned brassy or dry), this guide is for you. We’ll cover how to find a stylist for your hair, what to ask in a curl consultation, and what “best curls” truly means—plus how to approach balayage when you have curls.
 
