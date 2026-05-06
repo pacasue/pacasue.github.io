@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 // Hero uses high-quality Unsplash images (no auth required)
 const HERO_IMAGE = '/image/copper.avif'
-const SIDE_IMAGE = '/image/what-is-balayage.avif'
+const SIDE_IMAGE = '/image/cover.webp'
 
 export default function Hero() {
   return (
@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="lg:col-span-4 flex flex-col gap-0 border-l border-white/5">
 
             {/* Secondary feature */}
-            <Link to="/article/what-is-balayage" className="group cursor-pointer img-zoom block">
+            <Link to="/article/2026-met-gala-best-hair-looks" className="group cursor-pointer img-zoom block">
               <div className="relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]">
                 <img
                   src={SIDE_IMAGE}
@@ -81,12 +81,12 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">Technique</span>
+                  <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">Cut & Style</span>
                   <h2
                     className="text-white text-xl font-bold leading-snug mt-1"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    What Is Balayage? Your Stylist Explains
+                    10 Best Hair Looks at the 2026 Met Gala
                   </h2>
                 </div>
               </div>

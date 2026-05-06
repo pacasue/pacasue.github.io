@@ -113,6 +113,12 @@ export const authors: Record<string, Author> = {
     bio: 'Ji-Woo is a Seoul-based hair writer and former assistant at one of Korea\'s top editorial agencies. She covers K-pop and K-drama hair trends, the stylists behind them, and how Korean hair culture influences global salon work. She writes about technique, color, and the cultural context that makes Korean hair aesthetics so widely referenced.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/07/fd/41/e8/3f/v1_E10/E10AGBRO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=05fffed1db341fa09475a871261fb3369c2051016f8bdb14d8c73c682303d500',
   },
+  'Vera Moss': {
+    name: 'Vera Moss',
+    title: 'Red Carpet & Editorial Hair Writer',
+    bio: 'Vera is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks — the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -3013,6 +3019,136 @@ That is why his hair keeps getting referenced.
   metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
   metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from — and why the system behind them works.",
 },
+  {
+    id: 23,
+    slug: '2026-met-gala-best-hair-looks',
+    tag: 'Cut & Style',
+    title: '10 Best Hair Looks at the 2026 Met Gala',
+    excerpt: 'The 2026 Met Gala theme was "Costume Art", and the hair teams took it literally. From gold wire pin curls to Botticelli-length waves, here are the 10 hair moments stylists will actually be talking about.',
+    author: 'Vera Moss',
+    date: 'May 6, 2026',
+    readTime: '8 min',
+    image: '/image/cover.webp',
+    category: 'Cut & Style',
+    section: 'Trends',
+    body: `The 2026 Met Gala theme was "Costume Art," with the dress code "Fashion Is Art," and the hair teams clearly took that literally. This was not a night of safe blowouts. Hair became structure, reference, texture, ornament, and in more than one case, its own accessory. Vogue also called out one of the biggest beauty through-lines of the night: extra-long hair, from Botticelli-like lengths to waist-skimming extensions and mermaid waves.
+
+What made the best looks work was not just drama. It was intention. The hair either extended the story of the gown, sharpened the silhouette, or gave the whole look a stronger point of view.
+
+Here are the 10 hair moments stylists will actually be talking about.
+
+## 1. Chase Infiniti's Natural Curls
+
+Chase Infiniti had one of the most beautiful texture moments of the night. Her curls were full, defined, glossy, and shaped with a soft roundness that felt powerful without being overworked.
+
+What made it land was the balance: the hair had volume, but it still looked touchable. The curl pattern was kept consistent between her natural hair and added length, with the roots picked out to build that airy, sculptural shape.
+
+This was red carpet hair that celebrated natural texture instead of smoothing it into something more predictable.
+
+> Stylist read: movement, definition, and shine carried the whole look. No unnecessary control, no flattening, no apology.
+
+![Chase Infiniti's natural curls at the 2026 Met Gala](/image/chase-i.png)
+
+## 2. Emma Chamberlain's Platinum Pixie
+
+Emma Chamberlain's hair was the opposite of the ultra-long trend, which is exactly why it stood out.
+
+Her platinum pixie felt personal, sharp, and slightly undone. Paired with a Mugler look inspired by painted surfaces and artistic texture, the short hair made the whole thing feel more intimate and less costume-driven. Vogue described her look as one that turned the body into a canvas, and the hair supported that by staying cropped, pale, and expressive rather than overly polished.
+
+> Stylist read: this is how short hair wins on a maximalist carpet. It does not compete. It edits.
+
+![Emma Chamberlain's platinum pixie at the 2026 Met Gala](/image/emma.webp)
+
+## 3. Madonna's Theatrical Gothic Length
+
+Madonna went fully conceptual, with extremely long, dark, textured hair crowned by a surreal ship-like headpiece. The result felt gothic, theatrical, and completely aligned with the art-history mood of the night.
+
+The hair was not there to be "pretty." It was there to build a scene. Reports connected the look to surrealist references, and that comes through in the way the hair and headpiece worked together as one object.
+
+> Stylist read: sometimes hair is not the finish. Sometimes it is architecture.
+
+![Madonna's theatrical gothic length at the 2026 Met Gala](/image/Madonna.webp)
+
+## 4. Rihanna's Gold Wire Pin Curls
+
+Rihanna's hair was one of the clearest examples of the theme becoming beauty. Her look featured an intricate crown of 40 gold wire pin curls, turning classic pin-curl structure into something metallic, sculptural, and almost jewel-like.
+
+The genius was in the restraint of the base. The hair stayed sleek and controlled so the gold detailing could become the focal point. It did not read like decoration placed on top of a hairstyle. It read like the hairstyle had become jewelry.
+
+> Stylist read: pin curls, but elevated into metalwork.
+
+![Rihanna's gold wire pin curls at the 2026 Met Gala](/image/Rihanna.jpg)
+
+## 5. Sabrina Carpenter's 1920s Faux Bob
+
+Sabrina Carpenter traded her usual long, soft curls for a 1920s-inspired faux bob, complete with sculpted rolls and a jeweled headpiece. The look played perfectly against her Dior film-strip gown, which referenced classic Hollywood and her namesake film inspiration.
+
+This was one of the strongest examples of styling illusion. Her hair was not actually cut short. It was shaped into a bob effect, giving the drama of a transformation without losing the length.
+
+> Stylist read: faux bobs are only convincing when the curl set is strong. This one had the shape, the bounce, and the period reference.
+
+![Sabrina Carpenter's 1920s faux bob at the 2026 Met Gala](/image/Sabrina Carpenter.avif)
+
+## 6. Nicole Kidman's Ultra-Long Blonde
+
+Nicole Kidman helped set the long-hair tone early. Her waist-length blonde extensions, paired with soft fringe, gave the look that almost Rapunzel effect that kept showing up across the carpet. Vogue noted that her long hair, styled by Adir Abergel, helped define the evening's extra-long hair mood.
+
+The reason this worked was polish. The length was dramatic, but the finish stayed soft and expensive rather than heavy.
+
+> Stylist read: long hair on a red carpet needs movement. If it just hangs, it drags the look down. This had flow.
+
+![Nicole Kidman's ultra-long blonde at the 2026 Met Gala](/image/Nicole Kidman.jpg)
+
+## 7. Beyoncé's Mermaid Waves
+
+Beyoncé's return to the Met Gala came with long mermaid waves, a warm blonde tone, sculptural face-framing pieces, and a crystal headpiece that echoed the maximalist energy of her gown. Reports noted that the look was styled by Neal Farinah and played into controlled volume and high-impact glamour.
+
+This was not beach hair. It was red carpet mermaid hair: polished, expensive, and built to hold its shape under cameras.
+
+> Stylist read: the face frame did the heavy lifting. It kept all that length from overwhelming her features.
+
+![Beyoncé's mermaid waves at the 2026 Met Gala](/image/beyonce.jpg)
+
+## 8. EJAE's Binyeo Updo
+
+EJAE's look brought cultural detail into the hair in a way that felt polished and relevant. Her updo was held with binyeo, traditional Korean hairpins, creating a sculptural shape that connected directly to heritage while still reading modern on the Met steps.
+
+Her silver sculptural gown already leaned futuristic, but the hair gave it history and specificity. Reports highlighted the silver embellishment and artistic styling around her debut look.
+
+> Stylist read: hair accessories work best when they are not afterthoughts. Here, the pins were part of the identity of the look.
+
+![EJAE's binyeo updo at the 2026 Met Gala](/image/EJAE.webp)
+
+## 9. Troye Sivan's Shiny Brunette Volume
+
+Troye Sivan's hair was a grooming standout: glossy brunette, lifted, sculpted, and slightly rebellious. GQ connected his look to Robert Mapplethorpe references, with deliberately disheveled height and texture playing against his Prada styling.
+
+What made it interesting was the finish. It was not matte or messy in the usual rock-star way. It had rich tonal depth and a lacquered quality, which made the volume feel more editorial.
+
+> Stylist read: brunette can be just as high-impact as bleach when the gloss is right.
+
+![Troye Sivan's shiny brunette volume at the 2026 Met Gala](/image/Troye Sivan.png)
+
+## 10. Lisa's Extra-Long Hair and Sculptural Veil
+
+Lisa leaned into the night's ultra-long hair movement with dramatic length and a sculptural veil detail. Vogue included her among the key extra-long hair references of the night, noting how accessories helped turn length into a full visual statement.
+
+The look worked because the hair was not just long for length's sake. It was part of the silhouette, extending the line of the outfit and giving the styling a more ceremonial feeling.
+
+> Stylist read: when hair is this long, the accessory has to justify it. Here, it did.
+
+![Lisa's extra-long hair and sculptural veil at the 2026 Met Gala](/image/lisa.png)
+
+## The Bottom Line
+
+The best Met Gala hair this year was not about one trend, even though the extra-long hair wave was impossible to miss. The stronger story was that hair became part of the artwork.
+
+Long waves turned into Botticelli references. Pin curls became sculpture. Updos became cultural storytelling. Pixies became edits. Curls became volume, texture, and identity.
+
+That is what made 2026 interesting. The hair was not just finishing the look. It was helping explain it.`,
+    metaTitle: '10 Best Hair Looks at the 2026 Met Gala',
+    metaDescription: 'From gold wire pin curls to Botticelli-length waves, these are the 10 hair moments from the 2026 Met Gala that stylists will actually be talking about.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
