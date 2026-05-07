@@ -1,5 +1,5 @@
 import type { Article } from '../../data/articles'
-import { Quote } from 'lucide-react'
+import { Quote, Sparkles } from 'lucide-react'
 
 const INLINE_IMAGE_1 = '/image/copper-1.png'
 const INLINE_IMAGE_2 = '/image/copper-re.png'
@@ -97,6 +97,26 @@ function InlineImage({ src, caption }: { src: string; caption: string }) {
   )
 }
 
+function CtaCallout({ children }: { children: React.ReactNode }) {
+  return (
+    <aside className="my-12 overflow-hidden border border-gold-500/30 bg-[linear-gradient(135deg,rgba(201,168,76,0.16),rgba(255,255,255,0.04)_46%,rgba(10,10,10,0.92))] p-6 md:p-8">
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+        <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-gold-500 text-black">
+          <Sparkles size={19} />
+        </div>
+        <div>
+          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-500">
+            Next Step
+          </p>
+          <p className="text-lg leading-[1.75] text-charcoal-100 md:text-xl">
+            {children}
+          </p>
+        </div>
+      </div>
+    </aside>
+  )
+}
+
 const formulaRows = [
   { col1: 'Wella Koleston Perfect', col2: '7/43 — Medium Blonde Red-Gold', col3: '50g' },
   { col1: 'Wella Koleston Perfect', col2: '8/43 — Light Blonde Red-Gold', col3: '20g' },
@@ -133,6 +153,8 @@ function MarkdownBody({ body }: { body: string }) {
       {blocks.map((block, i) => {
         const trimmed = block.trim()
         if (!trimmed) return null
+        const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
+        if (cta) return <CtaCallout key={i}>{renderInline(cta[2])}</CtaCallout>
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
         // inline image: ![caption](url)
