@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Claw clip messy bun placeholder</title>
+  <desc id="desc">Placeholder showing a loose bun held with a claw clip and face-framing pieces.</desc>
+  <rect width="1200" height="675" fill="#151515"/>
+  <path d="M450 275c45-90 165-118 252-55 88 64 82 202-13 251-70 36-169 24-216-38-39-52-33-116-23-158z" fill="none" stroke="#ecd7ba" stroke-width="17" stroke-linecap="round"/>
+  <path d="M530 300l-48 64m96-77l-44 88m101-71l-49 80" stroke="#c9a84c" stroke-width="12" stroke-linecap="round"/>
+  <path d="M418 355c-34 68-26 124 24 170m300-188c34 54 29 111-18 168" fill="none" stroke="#ecd7ba" stroke-width="10" stroke-linecap="round" opacity="0.65"/>
+  <text x="70" y="575" fill="#f5f0e7" font-family="Georgia, serif" font-size="42">Claw Clip Messy Bun</text>
+  <text x="72" y="615" fill="#c9a84c" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">IMAGE PLACEHOLDER</text>
+</svg>
