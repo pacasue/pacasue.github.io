@@ -2429,7 +2429,7 @@ The best Met Gala hair this year was not about one trend, even though the extra-
 
 Long waves turned into Botticelli references. Pin curls became sculpture. Updos became cultural storytelling. Pixies became edits. Curls became volume, texture, and identity.
 
-That is what made 2026 interesting. The hair was not just finishing the look. It was helping explain it.`,metaTitle:`10 Best Hair Looks at the 2026 Met Gala`,metaDescription:`From gold wire pin curls to Botticelli-length waves, these are the 10 hair moments from the 2026 Met Gala that stylists will actually be talking about.`},{id:24,slug:`mothers-day-effortless-hairstyles`,tag:`Cut & Style`,title:`Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving`,excerpt:`Mother's Day hair should feel soft, pretty, and easy to wear. These six stylist-loved looks bring polish, lift, and movement with very little fuss.`,author:`Nora Bell`,date:`May 8, 2026`,readTime:`5 min`,image:`/image/mothers-day-hairstyles.svg`,category:`Cut & Style`,section:`Trends`,body:`Mother's Day hair should feel soft, pretty, and easy to wear. Think polished texture, flattering shape, and styles that hold up through brunch, family photos, flowers, and a full day of being celebrated.
+That is what made 2026 interesting. The hair was not just finishing the look. It was helping explain it.`,metaTitle:`10 Best Hair Looks at the 2026 Met Gala`,metaDescription:`From gold wire pin curls to Botticelli-length waves, these are the 10 hair moments from the 2026 Met Gala that stylists will actually be talking about.`},{id:24,slug:`mothers-day-effortless-hairstyles`,tag:`Cut & Style`,title:`Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving`,excerpt:`Mother's Day hair should feel soft, pretty, and easy to wear. These six stylist-loved looks bring polish, lift, and movement with very little fuss.`,author:`Nora Bell`,date:`May 8, 2026`,readTime:`5 min`,image:`/image/woman-in-bathrobe-using-hair-dryer-in-bathroom-2026-03-25-22-37-47-utc.jpg`,category:`Cut & Style`,section:`Trends`,body:`Mother's Day hair should feel soft, pretty, and easy to wear. Think polished texture, flattering shape, and styles that hold up through brunch, family photos, flowers, and a full day of being celebrated.
 
 From a stylist's perspective, these are the easy looks we keep coming back to because they work beautifully on real clients. They give the hair lift, movement, and that sweet finished feel with very little fuss.
 
@@ -2439,7 +2439,7 @@ A half-up claw clip is one of the quickest ways to make hair look lifted and sty
 
 The vibe is feminine, fresh, and relaxed. It keeps the hair away from the face while still showing off length, waves, or curls.
 
-![Image placeholder: a soft half-up claw clip hairstyle with lifted crown volume and loose lengths falling over the clip.](/image/mothers-day-soft-half-up-claw-clip.svg)
+![Image placeholder: a soft half-up claw clip hairstyle with lifted crown volume and loose lengths falling over the clip.](/image/soft-half-up-claw-clip.png)
 
 ## 2. The Elevated Low Ponytail
 
@@ -2447,7 +2447,7 @@ A low ponytail always feels chic when the crown has a little softness. Gather th
 
 This style feels clean and elegant. It pairs beautifully with soft knits, dresses, button-downs, and anything with a pretty neckline.
 
-![Image placeholder: an elevated low ponytail with a soft crown, smooth sides, and a polished low tie.](/image/mothers-day-elevated-low-ponytail.svg)
+![Image placeholder: an elevated low ponytail with a soft crown, smooth sides, and a polished low tie.](/image/low.png)
 
 ## 3. The Claw Clip Messy Bun
 
@@ -2455,7 +2455,7 @@ This is the easy updo clients always love because it looks casual and styled at 
 
 The finish feels cool, modern, and very wearable. It is great for moms who want their hair up while still looking put together.
 
-![Image placeholder: a claw clip messy bun with loose texture, soft face-framing pieces, and a relaxed low shape.](/image/mothers-day-claw-clip-messy-bun.svg)
+![Image placeholder: a claw clip messy bun with loose texture, soft face-framing pieces, and a relaxed low shape.](/image/bun.png)
 
 ## 4. The Voluminous Half-Up Style
 
@@ -2463,7 +2463,7 @@ For instant lift, a voluminous half-up style is always a good choice. Secure the
 
 This look gives the hair that fresh, bouncy feel while keeping everything simple. It is especially pretty for photos because it opens up the face and keeps the overall shape full.
 
-![Image placeholder: a voluminous half-up hairstyle with crown lift, soft sides, and bouncy loose lengths.](/image/mothers-day-voluminous-half-up.svg)
+![Image placeholder: a voluminous half-up hairstyle with crown lift, soft sides, and bouncy loose lengths.](/image/half up.png)
 
 ## 5. The Soft Twisted Low Pony
 
@@ -2471,7 +2471,7 @@ A twisted low ponytail adds just enough detail to feel special. Twist the side s
 
 The feel is graceful and romantic. It works beautifully for brunch, garden lunches, family gatherings, or any Mother's Day outfit with a softer, more classic mood.
 
-![Image placeholder: a soft twisted low ponytail with side twists gathered into a graceful low pony.](/image/mothers-day-soft-twisted-low-pony.svg)
+![Image placeholder: a soft twisted low ponytail with side twists gathered into a graceful low pony.](/image/low-ponytail.avif)
 
 ## 6. The Effortless Textured Bun
 
@@ -2479,7 +2479,7 @@ A textured bun is always a stylist favorite for easy polish. Start with soft wav
 
 This style feels romantic, modern, and very photo-friendly. A few loose pieces around the face make it even prettier, especially with statement earrings or a floral dress.
 
-![Image placeholder: an effortless textured bun with soft waves, fullness, and loose face-framing pieces.](/image/mothers-day-effortless-textured-bun.svg)
+![Image placeholder: an effortless textured bun with soft waves, fullness, and loose face-framing pieces.](/image/back.png)
 
 ## Stylist Tip
 
