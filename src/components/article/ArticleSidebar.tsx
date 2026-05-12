@@ -13,7 +13,7 @@ function slugify(text: string) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
-const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-guide', 'haircut-layers', 'layers-thin-hair', 'what-is-balayage', 'stylist-notices-thinning', 'gua-sha-scalp', 'low-maintenance-color', 'at-home-hair-care', 'busiest-stylists-system', 'smoothing-products-stylists-use', 'what-stylist-sees-when-you-sit-down', 'gdragon-hairstyles-stylists-reference', '2026-met-gala-best-hair-looks', 'mothers-day-effortless-hairstyles'])
+const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-guide', 'haircut-layers', 'layers-thin-hair', 'what-is-balayage', 'stylist-notices-thinning', 'gua-sha-scalp', 'low-maintenance-color', 'at-home-hair-care', 'busiest-stylists-system', 'smoothing-products-stylists-use', 'what-stylist-sees-when-you-sit-down', 'gdragon-hairstyles-stylists-reference', '2026-met-gala-best-hair-looks', 'mothers-day-effortless-hairstyles', 'history-of-hair-color'])
 
 function getTocItems(article: Article) {
   if (!article.body) return copperTocItems

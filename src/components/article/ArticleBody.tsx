@@ -191,6 +191,43 @@ function MarkdownBody({ body }: { body: string }) {
             </div>
           )
         }
+        // markdown table: lines starting with |
+        if (trimmed.startsWith('|')) {
+          const rows = trimmed.split('\n').filter((l) => l.trim().startsWith('|'))
+          const parsed = rows.map((r) =>
+            r.split('|').slice(1, -1).map((c) => c.trim())
+          )
+          // second row is the separator (---|---), skip it
+          const isSep = (row: string[]) => row.every((c) => /^[-: ]+$/.test(c))
+          const headerRow = parsed[0]
+          const bodyRows = parsed.slice(1).filter((r) => !isSep(r))
+          return (
+            <div key={i} className="my-8 border border-white/10 overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-white/[0.04] border-b border-white/10">
+                    {headerRow.map((cell, j) => (
+                      <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
+                        {cell}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                  {bodyRows.map((row, ri) => (
+                    <tr key={ri} className="hover:bg-white/[0.02]">
+                      {row.map((cell, ci) => (
+                        <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
+                          {renderInline(cell)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
+        }
         // blockquote
         if (trimmed.startsWith('> ')) {
           const lines = trimmed.split('\n').map((l) => l.replace(/^> /, ''))
