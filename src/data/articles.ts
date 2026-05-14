@@ -444,7 +444,7 @@ It affects how your hair looks without effort, how long your style lasts, and ho
     slug: 'vivid-color-guide',
     tag: 'Color',
     title: 'Ready for Vivid Color? Here\'s What Your Stylist Wants You to Know',
-    excerpt: 'Before you go bold, your colorist has a few things to tell you about the journey — and it\'s worth the read.',
+    excerpt: 'Before you go bold, your colorist has a few things to tell you about the journey, and it\'s worth the read.',
     author: 'Alex Nguyen',
     date: 'Apr 3, 2026',
     readTime: '5 min',
@@ -2198,7 +2198,7 @@ And in hair care, consistency is usually where the real results start.`,
     slug: 'low-maintenance-color',
     tag: 'Color',
     title: 'How to Ask for a Low-Maintenance Color That Actually Lasts',
-    excerpt: 'Low-maintenance color is one of the most requested services in salons right now. Here is how to ask for it properly — and what actually makes it last.',
+    excerpt: 'Low-maintenance color is one of the most requested services in salons right now. Here is how to ask for it properly, and what actually makes it last.',
     author: 'Sophie Marchand',
     date: 'Apr 18, 2026',
     readTime: '9 min',
@@ -3457,7 +3457,7 @@ The chicest color is the one that looks intentional, feels wearable, and keeps t
     author: 'Nora Bell',
     date: 'May 14, 2026',
     readTime: '7 min',
-    image: '/image/slick-cover.png',
+    image: '/image/pose.png',
     category: 'Cut & Style',
     section: 'Trends',
     body: `The slick-back bun has become one of those styles clients ask for constantly because it looks effortless, expensive, and clean. You see it on runways, red carpets, and "off-duty model" beauty looks. But behind the chair, stylists know the truth: a good slick-back bun is not just hair pulled tight with gel.
@@ -3542,7 +3542,7 @@ Secure the bun with U-shaped pins, especially at the top and bottom. U-pins are 
 
 After pinning, gently pull the bun outward a little. This makes it look fuller and more natural. A slick-back bun does not need to be huge, but it should have shape.
 
-![A wrapped bun secured with U-pins — full enough to read elegant, tight enough to stay polished](https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80&auto=format&fit=crop)
+![A wrapped bun secured with U-pins — full enough to read elegant, tight enough to stay polished](/image/bun.jpeg)
 
 ## Step 6: Smooth the Hairline, Sides, and Nape
 
@@ -3556,7 +3556,7 @@ Brush them upward toward the bun and set them with product.
 
 > From a stylist's perspective, the back matters just as much as the front. You may not see it in the mirror, but everyone else does.
 
-![Smoothing the nape with a fine brush and product — the detail most people miss but everyone sees](https://images.unsplash.com/photo-1560869713-7d0a29430803?w=1200&q=80&auto=format&fit=crop)
+![Smoothing the nape with a fine brush and product — the detail most people miss but everyone sees](/image/gel.jpeg)
 
 ## Step 7: Soften the Look If Needed
 
@@ -3576,7 +3576,7 @@ The third mistake is ignoring the nape. If the front is sleek but the back has l
 
 Finally, avoid making the bun too tight and tiny unless that is the exact look you want. A slightly fuller bun usually feels more elegant and less severe.
 
-![Side-by-side comparison — flat, over-gelled version vs. lifted, sculpted finish](https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1200&q=80&auto=format&fit=crop)
+![Lifted, sculpted finish](/image/slick-cover.png)
 
 ## The Stylist Takeaway
 
