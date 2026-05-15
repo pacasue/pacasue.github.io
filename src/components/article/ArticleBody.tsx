@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { Article } from '../../data/articles'
 import { Quote, Sparkles } from 'lucide-react'
 
@@ -85,10 +86,21 @@ function StepList({ steps }: { steps: { step: number; title: string; body: strin
 }
 
 function InlineImage({ src, caption }: { src: string; caption: string }) {
+  const [loaded, setLoaded] = useState(false)
   return (
     <figure className="my-10 -mx-4 md:mx-0">
-      <div className="overflow-hidden aspect-[16/9]">
-        <img src={src} alt={caption} className="w-full h-full object-cover" />
+      <div className="relative overflow-hidden">
+        {!loaded && (
+          <div className="absolute inset-0 bg-charcoal-800 animate-pulse" style={{ minHeight: '200px' }} />
+        )}
+        <img
+          src={src}
+          alt={caption}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          className="w-full h-auto object-contain transition-opacity duration-500"
+          style={{ opacity: loaded ? 1 : 0 }}
+        />
       </div>
       <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
         {caption}
