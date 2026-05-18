@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import type { Article } from '../../data/articles'
-import { Quote, Sparkles } from 'lucide-react'
+import { Quote, Sparkles, ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react'
 
 const INLINE_IMAGE_1 = '/image/copper-1.png'
 const INLINE_IMAGE_2 = '/image/copper-re.png'
@@ -98,8 +98,8 @@ function InlineImage({ src, caption }: { src: string; caption: string }) {
           alt={caption}
           loading="lazy"
           onLoad={() => setLoaded(true)}
-          className="w-full h-auto object-contain transition-opacity duration-500"
-          style={{ opacity: loaded ? 1 : 0 }}
+          className="w-full object-cover transition-opacity duration-500"
+          style={{ opacity: loaded ? 1 : 0, maxHeight: '360px' }}
         />
       </div>
       <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
@@ -126,6 +126,105 @@ function CtaCallout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
     </aside>
+  )
+}
+
+function QuoteCarousel({ quotes }: { quotes: { text: string; attribution?: string }[] }) {
+  const [index, setIndex] = useState(0)
+  const [dir, setDir] = useState<'left' | 'right'>('right')
+  const [animating, setAnimating] = useState(false)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const navigate = (next: number, direction: 'left' | 'right') => {
+    if (animating) return
+    setDir(direction)
+    setAnimating(true)
+    timeoutRef.current = setTimeout(() => {
+      setIndex(next)
+      setAnimating(false)
+    }, 280)
+  }
+
+  const prev = () => navigate((index - 1 + quotes.length) % quotes.length, 'left')
+  const next = () => navigate((index + 1) % quotes.length, 'right')
+
+  // Auto-advance every 6 s
+  useEffect(() => {
+    const id = setInterval(() => navigate((index + 1) % quotes.length, 'right'), 6000)
+    return () => clearInterval(id)
+  })
+
+  const { text, attribution } = quotes[index]
+
+  return (
+    <div className="my-10 border border-gold-500/20 bg-white/[0.02] relative overflow-hidden select-none">
+      <div className="px-8 py-8 md:px-12 md:py-10">
+        <Quote size={28} className="text-gold-500/30 mb-4" />
+        <div
+          style={{
+            opacity: animating ? 0 : 1,
+            transform: animating
+              ? `translateX(${dir === 'right' ? '-18px' : '18px'})`
+              : 'translateX(0)',
+            transition: 'opacity 0.28s ease, transform 0.28s ease',
+          }}
+        >
+          <p
+            className="text-xl md:text-2xl text-white font-medium leading-snug italic mb-4"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {text}
+          </p>
+          {attribution && (
+            <p className="text-[11px] tracking-widest uppercase text-gold-500 font-medium">
+              — {attribution}
+            </p>
+          )}
+        </div>
+        {/* Dots */}
+        <div className="flex items-center gap-1.5 mt-6">
+          {quotes.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => navigate(i, i > index ? 'right' : 'left')}
+              className={`transition-all rounded-full ${
+                i === index ? 'w-4 h-1.5 bg-gold-500' : 'w-1.5 h-1.5 bg-white/20 hover:bg-white/40'
+              }`}
+              aria-label={`Go to quote ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+      {/* Nav buttons */}
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors"
+        aria-label="Previous quote"
+      >
+        <ChevronLeft size={18} />
+      </button>
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors"
+        aria-label="Next quote"
+      >
+        <ChevronRight size={18} />
+      </button>
+    </div>
+  )
+}
+
+function ImagePlaceholder({ caption }: { caption: string }) {
+  return (
+    <figure className="my-10 -mx-4 md:mx-0">
+      <div className="relative overflow-hidden bg-charcoal-900 border border-white/5 flex flex-col items-center justify-center gap-3 py-16">
+        <ImageIcon size={32} className="text-charcoal-700" />
+        <p className="text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium">Image placeholder</p>
+      </div>
+      <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
+        {caption}
+      </figcaption>
+    </figure>
   )
 }
 
@@ -159,19 +258,49 @@ function slugify(text: string) {
 }
 
 function MarkdownBody({ body }: { body: string }) {
-  const blocks = body.split(/\n\n+/)
+  // Pre-process: extract :::quote-carousel blocks before splitting on double newlines
+  const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
+  const processedBody = body.replace(
+    /:::quote-carousel\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const quoteBlocks = inner.trim().split(/\n---\n/)
+      const quotes = quoteBlocks.map((block) => {
+        const lines = block.trim().split('\n')
+        const attrIndex = lines.findIndex((l) => l.startsWith('— '))
+        const text = (attrIndex > -1 ? lines.slice(0, attrIndex) : lines).join(' ').replace(/^> /, '').trim()
+        const attribution = attrIndex > -1 ? lines[attrIndex].replace(/^— /, '').trim() : undefined
+        return { text, attribution }
+      })
+      const id = carouselPlaceholders.length
+      carouselPlaceholders.push({ quotes })
+      return `CAROUSEL_PLACEHOLDER_${id}`
+    }
+  )
+
+  const blocks = processedBody.split(/\n\n+/)
   return (
     <article className="max-w-2xl">
       {blocks.map((block, i) => {
         const trimmed = block.trim()
         if (!trimmed) return null
+
+        // Quote carousel placeholder
+        const carouselMatch = trimmed.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/)
+        if (carouselMatch) {
+          const cp = carouselPlaceholders[parseInt(carouselMatch[1])]
+          return <QuoteCarousel key={i} quotes={cp.quotes} />
+        }
+
         const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
         if (cta) return <CtaCallout key={i}>{renderInline(cta[2])}</CtaCallout>
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
-        // inline image: ![caption](url)
-        const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)
-        if (img) return <InlineImage key={i} src={img[2]} caption={img[1]} />
+        // inline image: ![caption](url) — empty url becomes a placeholder
+        const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]*)\)$/)
+        if (img) {
+          if (!img[2]) return <ImagePlaceholder key={i} caption={img[1]} />
+          return <InlineImage key={i} src={img[2]} caption={img[1]} />
+        }
         const h3 = trimmed.match(/^### (.+)/)
         if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>
         const h1 = trimmed.match(/^# (.+)/)

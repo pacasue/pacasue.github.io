@@ -3592,6 +3592,188 @@ It should look like you meant to wear it that way.`,
     metaTitle: 'How to Make a Slick-Back Bun Look Polished, Not Greasy',
     metaDescription: 'The difference between a sleek slick-back bun and a greasy one is all technique. Here is how stylists do it — step by step.',
   },
+  {
+    id: 27,
+    slug: 'fine-frizzy-wavy-hair',
+    tag: 'Hair Care',
+    title: 'Your Fine, Frizzy Hair Might Actually Be Wavy',
+    excerpt: 'A stylist\'s guide to bringing out soft texture without making your hair feel crunchy, heavy, or overdone.',
+    author: 'Priya Nair',
+    date: 'May 18, 2026',
+    readTime: '10 min',
+    image: '/image/wavy.jpg',
+    category: 'At-Home Tips',
+    section: 'Hair Care',
+    body: `A lot of clients sit in the chair and describe their hair the same way.
+
+:::quote-carousel
+It looks straight, but it never dries smooth.
+---
+It gets huge the second there is humidity.
+---
+It has a little bend when wet, but once it dries, it just looks puffy.
+:::
+
+This is usually the moment I tell them: your hair may not be straight. It may be wavy hair that has never been styled like wavy hair.
+
+Fine, frizzy hair can be tricky because it does not always form obvious curls. You may not have ringlets. You may not look at your hair and think, "I have curly hair." But if your hair expands in humidity, looks bendy when wet, and dries into an undefined puff, there is probably a natural wave pattern hiding underneath.
+
+The goal is not to force your hair into curls. The goal is to help your natural texture organize itself.
+
+![A close-up of fine wavy hair air-drying with soft, grouped texture, the kind of result this guide is working toward](/image/dry hair.png)
+
+## Why Fine, Frizzy Hair Gets So Puffy
+
+Straight hair usually dries in a more predictable direction. Wavy hair does not. It has bends, curves, and uneven movement through the strand. When there is not enough water, moisture, or hold, those bends separate from each other instead of grouping together.
+
+That separation is what we see as frizz.
+
+From a stylist's point of view, frizz is often not just "damage." Sometimes it is texture without structure. The hair wants to wave, but it has no support, so it dries fluffy instead of defined.
+
+This is especially common with fine hair because fine strands are easy to weigh down, but they also lose shape quickly. You need hydration, but not too much. You need hold, but not a heavy, stiff finish.
+
+Here is how to bring out the wave without making your hair feel greasy, crunchy, or flat.
+
+## 1. Start Styling When Your Hair Is Very Wet
+
+If you want waves to form, do not wait until your hair is half dry.
+
+The best time to style wavy or curly texture is when the hair is soaking wet. Not towel-dried. Not just damp. Wet enough that the strands can still move together and form clumps.
+
+This matters because water helps the hair group into natural sections. When the hair starts drying before product is applied, the strands separate, and that is when frizz starts showing up.
+
+A stylist tip: keep a spray bottle nearby. If one side dries while you are working on another section, rewet it before applying product or scrunching. Fine hair dries quickly, so this step makes a big difference.
+
+![Spray bottle being used to rewet sections of hair before styling — a key step for fine wavy hair](/image/spray.png)
+
+## 2. Use Leave-In Conditioner, But Keep It Away From the Roots
+
+Wavy hair needs moisture because the natural oils from your scalp do not always travel evenly down the strand. The bends in the hair make it harder for oil to coat the full length. That is why wavy hair can feel dry even when your scalp gets oily.
+
+A lightweight leave-in conditioner gives the hair slip, softness, and a smoother base before styling.
+
+For fine hair, placement matters. Do not load leave-in conditioner directly onto your roots unless your hair is very dry there. Apply it from the mid-lengths to the ends, where frizz and dryness usually show the most.
+
+Think of leave-in conditioner as the prep step. It softens the hair so the wave can form. It is not the product that creates the hold.
+
+## 3. Add a Lightweight Gel or Mousse for Shape
+
+A lot of people avoid gel because they think it will make their hair hard or crunchy. The truth is, wavy hair usually needs some kind of hold while it dries.
+
+Without hold, your hair may look wavy when wet, then dry into a soft cloud with no definition.
+
+A lightweight gel or mousse helps create a temporary cast around the hair. That cast holds the wave pattern in place while the hair dries. It also helps reduce frizz because the strands are not moving around as much during the drying process.
+
+For fine hair, look for something lightweight. You want support, not stiffness. Apply it while the hair is still very wet, then scrunch upward to encourage the wave.
+
+The crunch is not the final look. It is part of the setting process.
+
+![Lightweight gel being scrunched into soaking-wet wavy hair — the cast will soften once the hair is fully dry](/image/gel.png)
+
+## 4. Do Not Create a Hard Straight Part Right Away
+
+This is one of the most overlooked styling mistakes.
+
+If your hair is fine, frizzy, and slightly wavy, a very clean middle part or side part can make the top look flat while the sides puff out. That creates the shape many clients complain about: flat at the crown, wide at the sides, and undefined everywhere else.
+
+Instead, use a softer parting technique.
+
+Take small sections at the top and gently zigzag the part with a comb or your fingers. Then lift the sections slightly at the root and let them fall naturally. This helps the waves settle in different directions instead of clumping into one flat line.
+
+In salon language, we are trying to avoid a harsh split at the scalp. A softer part gives you more natural volume and a better wave pattern through the top.
+
+After that, scrunch the hair while it is still wet. Flip your head forward if you need more root lift, then scrunch upward from the ends toward the scalp.
+
+## 5. Start Drying With Hover Diffusing
+
+If you use a diffuser, do not immediately scoop the hair into it and push it up to the scalp.
+
+For fine, loose waves, that can disturb the pattern too early and create frizz before the style has a chance to set.
+
+Start with hover diffusing instead. Hold the diffuser near the hair without touching it. Let the warm air begin to set the gel or mousse cast. This helps the wave pattern become more stable before you introduce movement.
+
+Move from side to side so the hair does not dry in one stiff position. Once your hair is about halfway dry, then you can begin gently cupping sections into the diffuser.
+
+Use low speed when possible. High airflow can rough up the cuticle and blow the wave pattern apart.
+
+![A diffuser held several inches from wet hair during the hover diffusing phase — letting the cast set before touching it](/image/diffuser.png)
+
+## 6. Dry the Roots Before Over-Drying the Ends
+
+Fine wavy hair often holds moisture near the scalp. If you only dry the ends first, you can end up with dry, frizzy ends and damp, flat roots.
+
+Instead, focus some drying time at the roots.
+
+Place the diffuser near the scalp and let the roots dry before scrunching all the hair into the diffuser. This helps give the crown more lift and prevents the top from collapsing.
+
+Once the roots are mostly dry, you can continue diffusing the mid-lengths and ends. Stop when the hair is about 80 to 90 percent dry, then let the rest air dry if you have time.
+
+The main rule: do not keep touching it while it dries. Touching breaks the cast too early and creates frizz.
+
+## 7. Scrunch Out the Cast Only When Hair Is Fully Dry
+
+When gel or mousse dries, your hair may feel a little stiff. That is normal.
+
+Do not panic and brush it out. Do not keep running your hands through it. That cast is protecting the wave underneath.
+
+Once your hair is fully dry, gently scrunch it with clean hands to soften the finish. This is often called "scrunching out the crunch." The goal is to break the cast without breaking the shape.
+
+If your hair is very fine, you may not need oil. Oil can make fine waves fall flat. If your hair is thicker, drier, or more frizz-prone, you can use a tiny amount of lightweight hair oil on your hands before scrunching.
+
+Use less than you think. You can always add more, but you cannot easily remove too much oil once it is in the hair.
+
+![Hands gently scrunching dry wavy hair to release the cast — soft, defined waves underneath](/image/scrub.png)
+
+## 8. Touch Up Undefined Pieces With a Small Curling Wand
+
+Natural texture does not always dry perfectly, especially if the hair has heat damage, color damage, or uneven wave patterns.
+
+As stylists, we know that not every piece of hair behaves the same way. The front pieces may be straighter. One side may wave better than the other. Some sections may bend at the root, then go flat through the ends.
+
+You can touch up those pieces with a small curling wand.
+
+The key is to use a narrow barrel, usually 3/4 inch or smaller. A larger curling iron can make the piece look too styled and separate from the rest of your natural texture.
+
+Look at the direction the hair is already trying to move, then follow that pattern. You are not creating a full curled hairstyle. You are helping the awkward pieces blend in.
+
+Use heat protection and keep this step minimal, especially if your hair is fine or fragile.
+
+## The Best Product Order for Fine, Frizzy Waves
+
+For most fine, frizzy, hidden-wavy hair, the order should be:
+
+- Soaking wet hair
+- Lightweight leave-in conditioner on mid-lengths and ends
+- Lightweight gel or mousse
+- Scrunch
+- Hover diffuse
+- Diffuse roots
+- Let the hair fully dry
+- Scrunch out the cast
+- Touch up only the pieces that need it
+
+The biggest mistake is trying to smooth this hair the same way you would smooth straight hair. If your hair naturally wants to bend, brushing it into place while it dries can make it look bigger, not sleeker.
+
+## Why Humidity Makes This Hair Look Worse, But Also Gives a Clue
+
+Humidity is usually the giveaway.
+
+If your blowout disappears the second the air gets damp, but your natural texture starts looking more alive, your hair is probably trying to wave. Moisture in the air activates the bend, but without the right styling steps, that bend turns into puffiness.
+
+That does not mean you have to wear your hair natural every day. You can still blow it out. You can still use hot tools. But when the weather is humid, working with your wave pattern may give you a better result than fighting it.
+
+![Side-by-side comparison — blowout in humidity vs. embraced wave pattern styled correctly](/image/before-and-after.jpg)
+
+## Final Stylist Takeaway
+
+Fine, frizzy hair is not always straight hair that needs more smoothing. Sometimes it is wavy hair that needs more water, better product placement, and a drying method that protects the pattern.
+
+Start soaking wet. Use lightweight hydration. Add hold. Diffuse gently. Do not touch it too much while it dries.
+
+The first time you style it this way, it may not be perfect. That is normal. Natural texture has a learning curve. But once you understand what your hair is trying to do, frizz becomes much easier to control.`,
+    metaTitle: 'Your Fine, Frizzy Hair Might Actually Be Wavy | A Stylist\'s Guide',
+    metaDescription: 'If your hair never dries smooth and explodes in humidity, it may be wavy. A stylist\'s step-by-step guide to bringing out soft waves without crunch or frizz.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
