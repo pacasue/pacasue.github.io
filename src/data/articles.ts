@@ -3616,8 +3616,6 @@ Before we mix anything, we read the hair like a map.
 | Lifestyle | Maintenance should match the client's real routine |
 | Inspiration photos | Photos help us understand tone, placement, and finish |
 
-![The consultation in action — reading the hair before a single formula is mixed](https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80&auto=format&fit=crop)
-
 ## What This Means for Clients Today
 
 Hair color has moved from ancient pigment to precise personalization. The options are endless now, but the best results still come from a smart plan.
