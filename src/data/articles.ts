@@ -125,6 +125,12 @@ export const authors: Record<string, Author> = {
     bio: 'Nora is a salon stylist and beauty writer based in Charleston. She specializes in soft occasion styling, wearable updos, and low-effort finishing techniques that help clients feel polished without looking overdone.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Yuna Seo': {
+    name: 'Yuna Seo',
+    title: 'Cut & Style Editor',
+    bio: 'Yuna is a Seoul-trained stylist and beauty writer based in Los Angeles. With over ten years behind the chair across Korean and American salons, she specializes in Asian hair texture, face-framing cuts, and the cultural crossover between K-beauty aesthetics and Western editorial styling. She writes about haircuts, texture work, and the technique behind looks that travel well from the salon to real life.',
+    image: 'https://images.unsplash.com/photo-1616701560632-d77fb4310f3c?fm=jpg&q=80&w=200&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -1517,97 +1523,280 @@ Choose based on your hair's actual behavior, not just the boldest claim on the b
     slug: 'solo-stylist-blueprint',
     tag: 'Business',
     title: 'The $100K Solo Stylist Blueprint',
-    excerpt: 'The exact milestones that separate growing stylists from stalling ones.',
+    excerpt: 'The exact milestones that separate growing stylists from stalled ones, from pricing logic and service menus to rebooking systems and the numbers that actually matter.',
     author: 'Dana Reeves',
     date: 'Mar 20, 2026',
-    readTime: '10 min',
+    readTime: '14 min',
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80&auto=format&fit=crop',
     category: 'Business',
     section: 'Inspiration',
-    body: `## Solo stylist business blueprint: offer stack that sells the next appointment
-A solo stylist’s success is often less about one perfect appointment and more about building a service rhythm clients understand. Your “pastel to vivid color formula” expertise can be a brand differentiator, but your business system needs to tell clients what to book next.
+    body: `A solo stylist does not reach $100K because every appointment is perfect. They reach it because every appointment connects to a system.
 
-### Your core services and add-ons
-Build your menu around a clear color path:
+The client knows what to book first. They understand why maintenance matters. They know how pricing works. They leave with a plan, not just a finished style.
 
-- **Consultation (always included):** Assess hair history, goals, readiness, and maintenance capability.
-- **Color service (primary appointment):** Pastel, vivid, or transformation with strand-test timing guidance.
-- **Maintenance visit:** A scheduled refresh based on how quickly your client’s tone fades.
+That is the difference between being busy and building a business.
 
-Add-ons can include gloss/toning for tone control and conditioning for hair strength support. The point is to make maintenance feel like a normal part of vivid color—not an emergency.
+For this blueprint, $100K means annual gross service revenue, not take-home pay. A solo stylist still has business expenses: suite rent or booth rent, color, back-bar product, tools, towels, insurance, booking software, card processing fees, education, marketing, and taxes. The U.S. Bureau of Labor Statistics reported the May 2024 median hourly wage for hairdressers, hairstylists, and cosmetologists at $16.95, which shows why a stylist aiming for $100K has to think beyond simply taking more appointments. The path is not just more labor. It is better structure.
 
-### Packages that guide rebooking
-Clients rebook when the next step is easy to understand. Consider packaging your color services so the client knows what they’re paying for and what comes after. For example, you can present:
-- a “Color + future-ready plan” package
-- a “Refresh & protect” maintenance option
+Whether your specialty is pastel-to-vivid color, blonding, lived-in brunettes, extensions, curls, smoothing, or precision cutting, the business problem is the same: your craft needs a repeatable client journey.
 
-Even if you don’t use formal bundles, the structure should be consistent: consultation, application time, and aftercare guidance are clear, so clients feel confident and you reduce quote confusion.
+## The $100K Math
 
-## Pricing strategy: packages + time-based logic you can quote confidently
-Pricing solo can feel tricky because you carry both the creative work and the admin work. The solution is to price with a logic clients can understand.
+A $100K year breaks down like this:
 
-### A practical quote checklist
-Before you quote, align your pricing to three things:
-1. **Service type:** consultation, color application, maintenance/refresh.
-2. **Time and complexity:** hair length, density, and whether prep/lightening is required.
-3. **What’s included:** strand test, processing time, and aftercare guidance.
+| Revenue Target | Number |
+|---|---|
+| Annual gross revenue | $100,000 |
+| Monthly gross revenue | $8,333 |
+| Weekly gross revenue, assuming 48 working weeks | $2,083 |
+| Daily gross revenue, 5 client days per week | $417 |
+| Daily gross revenue, 4 client days per week | $521 |
+| Daily gross revenue, 3 client days per week | $694 |
 
-Then present packages that include the essentials. If a client asks what affects the price, you can point to the variables without sounding vague.
+This is where the goal becomes less abstract. A solo stylist does not need to guess whether they are “doing well.” The schedule either supports the target or it does not.
 
-### A solo-friendly way to think about it
-- Base your color pricing on the expected appointment duration.
-- Adjust for additional time: extra prep, more sections, or complicated corrections.
-- Keep your inclusions consistent: if strand testing is part of your safety and timing system, it should be built into your service.
+Here is what that looks like by average ticket:
 
-This approach helps protect your margins and reduces the “nickel-and-dime” feeling that can hurt retention.
+| Average Ticket | Clients Needed Per Week to Reach $100K Gross |
+|---|---|
+| $150 | 14 clients/week |
+| $175 | 12 clients/week |
+| $200 | 11 clients/week |
+| $250 | 9 clients/week |
+| $300 | 7 clients/week |
+| $350 | 6 clients/week |
 
-## Marketing system for solo stylists: content that converts
-Your marketing should do two jobs: show your results and reduce client anxiety. Pastel-to-vivid color is visually dramatic, so content works well—especially when you explain your process in a calm, hair-health-first way.
+The takeaway is simple: a $100K solo stylist is usually not built on random walk-ins and underpriced appointments. It is built on a controlled mix of average ticket, rebooking, maintenance services, and schedule discipline.
 
-### Weekly content plan (simple and repeatable)
-Aim for a rhythm you can sustain:
-- **Before/after posts** with a short note on starting level and the goal.
-- **Formula breakdown stories** (what direction you used: pastel versus vivid, and why).
-- **Hair health tips** that connect to results (porosity, gentle washing, conditioning).
+If you work 4 client days per week, your daily target is about $521 before expenses. If you have 6 true bookable client hours in a day, your gross hourly target is about $87. If you only have 5 bookable client hours, it is about $104. That does not mean every service needs to be priced hourly, but it does mean every service has to respect the amount of chair time it takes.
 
-When clients understand you’re not just “slapping on color,” they’re more likely to book and rebook.
+## Milestone 1: Choose a Specialty Clients Can Understand
 
-### Conversion loop: booking link, deposit, and follow-up
-Make the path to booking obvious. Use:
-- a booking link in every post and story
-- a deposit policy for confirmed appointments
-- a follow-up message after the service that encourages maintenance booking
+A stylist can be talented at many things, but a solo business grows faster when the client can clearly understand what you are known for.
 
-This loop turns your content into revenue, and it protects your schedule.
+For example, “I do hair color” is broad. “I specialize in soft blonding and lived-in color” is clearer. “I specialize in pastel-to-vivid creative color with a hair-health-first process” is even more specific.
 
-## Operations and compliance: run your salon like a business
-A solo stylist is still a business owner. That means you need the boring-but-important foundation: licensing, insurance, and admin systems.
+A strong specialty does three things:
 
-StyleSeat’s “Opening a Salon” checklist highlights core steps like creating a business plan, determining services/pricing, and registering the business with the IRS and applying for permits/business license. Requirements vary by location, so verify what your state and city require.
+- It tells clients what result you are best at.
+- It helps you build a service menu around repeatable appointments.
+- It makes your content easier to create because your work has a clear point of view.
 
-### What to set up before your first big color push
-- Business registration and permits
+For a pastel-to-vivid color specialist, the brand differentiator is not only the final color. It is the process: consultation, hair history, strand testing, realistic timing, color placement, tone maintenance, and aftercare. That is what turns a one-time dramatic appointment into a client relationship.
+
+The milestone is not “I can do the service.” The milestone is: clients know when to choose you.
+
+## Milestone 2: Build a Service Menu That Guides the Next Booking
+
+A stalled stylist often has a menu that lists services. A growing stylist has a menu that guides the client through a path.
+
+Your menu should answer three client questions:
+
+- What do I book first?
+- What happens during the appointment?
+- When do I come back?
+
+For a color-focused solo stylist, the menu can be built around this structure:
+
+| Service | Purpose | Best For | Rebooking Logic |
+|---|---|---|---|
+| New Client Consultation | Assess goals, hair history, budget, timing, and maintenance ability | New color clients, corrections, vivid transformations | Leads into full service, prep session, or correction plan |
+| Signature Color Service | Main creative or corrective appointment | Pastel, vivid, blonding, major transformations | Follow-up refresh or gloss |
+| Maintenance Refresh | Keep tone, brightness, and shape controlled | Existing clients whose color is fading | Every 4 to 8 weeks, depending on formula and home care |
+| Gloss or Toning Visit | Adjust warmth, dullness, or fading | Blondes, brunettes, fashion shades | Every 6 to 10 weeks |
+| Strength Support or Prep Session | Improve readiness before bigger color work | Fragile, compromised, or high-risk hair | Before transformation or between color sessions |
+| Color Correction Roadmap | Multi-step repair and color reset | Box dye, banding, uneven lift, overprocessed hair | Consultation required before booking |
+
+This kind of menu helps clients understand that color is not a single event. It is a process.
+
+Add-ons can include glossing, toning, bond-support care, conditioning treatments, extra product for long or dense hair, haircut reshaping, or take-home aftercare. But the core service should never feel incomplete without add-ons. Add-ons should refine the result, not patch holes in the service.
+
+## Milestone 3: Price With Logic, Not Fear
+
+Pricing is one of the biggest reasons solo stylists stall. They quote too quickly, undercharge complicated work, and then try to make up the difference by squeezing too many clients into the week.
+
+A better pricing system is based on four variables:
+
+- **Time:** how many hours the appointment requires.
+- **Complexity:** blonding, correction, vivid placement, density, length, and previous color history.
+- **Product cost:** color, lightener, toner, treatment, back-bar usage.
+- **Risk and expertise:** the skill required to protect the hair and deliver the result safely.
+
+A practical quote should sound clear, not apologetic.
+
+For example: “Based on your hair history and the result you want, this is a transformation appointment, not a standard color refresh. The starting range is based on time, density, product, and whether we need extra prep. After the consultation and strand test, I can give you the most accurate plan.”
+
+That kind of language helps the client understand that pricing is not random. It is connected to the work.
+
+For creative color, corrections, or major blonding, avoid giving final pricing from a single photo. Photos help, but they do not show porosity, previous layers of color, breakage risk, or how the hair will lift. A consultation protects both the stylist and the client.
+
+> If a service takes half your day, it needs to produce half your daily revenue target or more.
+
+If your daily target is $521 and a transformation takes 5 hours, that appointment cannot be priced like a simple gloss. Otherwise, your calendar looks full but your business still underperforms.
+
+## Milestone 4: Turn Maintenance Into a Normal Part of the Result
+
+A client should never leave wondering, “When do I come back?”
+
+For color clients, especially pastel, vivid, blonde, or corrective color clients, maintenance is not an upsell. It is part of the result. Vivid tones fade. Blondes warm up. Glosses soften. Roots grow. Ends lose polish. If the client does not understand the maintenance rhythm, they may blame the service instead of the natural life cycle of the color.
+
+A strong rebooking script sounds like this: “To keep this tone looking intentional, I’d like to see you in about six weeks for a refresh. That visit is shorter than today, and it keeps the color from fading too far before we correct it.”
+
+This is how a stylist builds predictable income without sounding pushy. You are not selling a random appointment. You are protecting the work the client already invested in.
+
+A simple retention rhythm:
+
+- Before checkout: recommend the next visit.
+- After the appointment: send aftercare instructions.
+- Two to three weeks later: check in on tone, fading, and home care.
+- Four to eight weeks later: bring the client back for maintenance.
+- Every few visits: reassess shape, color direction, and long-term goals.
+
+The milestone is not “I got a client to book once.” The milestone is: the client understands their maintenance plan before they leave.
+
+## Milestone 5: Create Content That Converts, Not Just Content That Looks Pretty
+
+Hair content should do more than show the final photo. It should reduce client anxiety.
+
+Clients want to know: Can you get me close to this result? Will my hair survive the process? How long will it take? How much maintenance will it need? What should I book? Is my current hair a good starting point?
+
+A strong solo stylist content system answers those questions every week.
+
+| Content Type | Purpose |
+|---|---|
+| Before-and-after post | Show transformation and result quality |
+| Process reel | Show the steps, not just the finish |
+| Hair health education | Build trust around porosity, lightening, fading, and maintenance |
+| Formula direction story | Explain the color family or technique without exposing every professional detail |
+| Client maintenance reminder | Normalize refresh visits |
+| Availability post | Turn attention into bookings |
+| Testimonial or client reaction | Add social proof |
+
+For a pastel-to-vivid color specialist, a caption should not only say, “Purple transformation.” It should explain the work: “This client came in with previous warmth through the mids and ends, so our goal was not just vivid color. The first priority was creating an even canvas. We lifted carefully, adjusted tone, then placed the vivid shade in a way that would fade softer over time. Maintenance: refresh in 6 weeks, color-safe wash routine, and lower heat styling.”
+
+That caption tells the client you are not guessing. You are planning.
+
+Every content post should lead somewhere. Use a clear booking link, consultation form, or call to action. A post without a next step is just a portfolio piece. A post with a next step becomes part of your revenue system.
+
+## Milestone 6: Protect the Business With Policies
+
+A solo stylist is not just behind the chair. They are also the front desk, scheduler, service provider, bookkeeper, marketer, and client experience manager.
+
+Policies are not there to make the business feel cold. They protect the quality of the work.
+
+At minimum, a solo stylist should have:
+
+- Deposit policy
+- Cancellation and no-show policy
+- Late arrival policy
+- New client consultation form
+- Color history form
+- Photo consent form
+- Service consent for chemical work
+- Correction policy
+- Refund or adjustment policy
+- Maintenance timing guidance
+- Aftercare instructions
+
+The adjustment policy is especially important. Clients need to know the difference between a service issue and normal color fading. A good policy does not need to sound harsh. It can sound professional: “Color adjustments must be requested within 7 days of the appointment. This does not include normal fading, changes caused by home care, hard water, heat styling, or products outside the recommended routine.”
+
+That kind of language sets boundaries before there is a problem.
+
+## Milestone 7: Build the Boring Foundation Before Scaling
+
+Before pushing for bigger color services, more clients, or higher-ticket appointments, the business foundation has to be clean.
+
+In the U.S., the basics usually include choosing a business structure, registering the business where required, getting federal and state tax IDs if applicable, applying for the required licenses and permits, opening a business bank account, and getting business insurance. The SBA notes that registration requirements depend on business structure and location, and that license and permit requirements vary by activity, location, and government rules.
+
+Cosmetology licensing is also state-based. The Bureau of Labor Statistics states that all states require barbers, hairstylists, and cosmetologists to be licensed, typically through a state-approved program and exam. If your business structure requires an EIN, apply through the IRS directly — getting an EIN online is free.
+
+The business foundation should include:
+
+- Cosmetology license in good standing
+- Local business license or registration, if required
+- Sales tax setup, if applicable to your services or retail
 - Professional liability insurance
-- Client intake forms and informed consent
-- Recordkeeping for formulas, developer choices, and timing notes
+- Booking and payment system
+- Business bank account
+- Separate business records
+- Formula and client history records
+- Signed intake and consent forms
 
-Recordkeeping supports both safety and consistency. It also makes future re-dos faster—especially when you’re building a signature pastel-to-vivid look.
+This section is not glamorous, but it matters. A stylist cannot scale cleanly if the foundation is messy.
 
-## 30/60/90 launch plan: build trust, then scale
-### First 30 days: policies + portfolio
-Document your process. Build a portfolio that shows both pastel and vivid outcomes, plus a few “journey” transformations where hair readiness mattered. Create your policies: consultation expectations, strand test approach, deposit and cancellation rules, and aftercare guidance.
+## Milestone 8: Track the Numbers That Actually Matter
 
-### Days 31–60: outreach + partnerships
-Reach out to local communities, collaborate with photographers, and build referral relationships with complementary providers (like barbershops, gyms, or bridal vendors). Share your hair-health-first approach so people understand your results are safe and intentional.
+A stalled stylist tracks how full the calendar feels. A growing stylist tracks the numbers that explain the business.
 
-### Days 61–90: optimize pricing + retention
-Use rebook data to refine your menu. If clients love a specific maintenance visit, make it a featured package. If you notice frequent color corrections, revisit your readiness screening and strand test timing consistency.
+| Metric | Why It Matters |
+|---|---|
+| Gross revenue | Shows whether you are moving toward the $100K target |
+| Average ticket | Shows whether pricing and service mix are working |
+| Clients per week | Shows whether demand is strong enough |
+| Rebooking rate | Shows whether clients are returning |
+| New client inquiries | Shows whether marketing is producing demand |
+| Consultation-to-booking conversion | Shows whether your consultation process works |
+| No-show or cancellation rate | Shows whether policies need tightening |
+| Top revenue service | Shows what should be featured more |
+| Lowest-margin service | Shows what may need repricing or removal |
+| Maintenance bookings | Shows whether clients understand the long-term plan |
 
-The goal is simple: fewer surprises, more repeat clients, and a brand that feels professional.
+These numbers prevent emotional business decisions. A slow week does not automatically mean the business is failing. A full week does not automatically mean the business is profitable.
 
- And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.`,
-    metaTitle: 'The $100K Solo Stylist Blueprint',
-    metaDescription: 'A practical roadmap for solo stylists to reach six figures through pricing, marketing, and client retention.',
+## A 30/60/90 Plan for the Solo Stylist
+
+### First 30 Days: Build the Foundation
+
+The first 30 days are about clarity. Set up your menu, policies, consultation form, booking flow, and core content direction. Decide what your specialty is and what kind of client you want to attract. Build a small but strong portfolio around your best work.
+
+By the end of the first 30 days, you should have:
+
+- A clear service menu
+- Consultation and intake forms
+- Deposit and cancellation policies
+- A booking link
+- A photo consent process
+- 10 to 15 strong portfolio images
+- A basic aftercare guide
+- A defined specialty statement
+
+Example specialty statement: “I specialize in soft blonding and pastel-to-vivid color with a hair-health-first approach, clear maintenance plans, and realistic transformation timing.”
+
+### Days 31 to 60: Build Demand
+
+Once the foundation is clean, focus on visibility. Post consistently. Explain your work. Show transformations. Show maintenance. Show why a consultation matters. Start building referral relationships with photographers, makeup artists, bridal vendors, local boutiques, gyms, barbershops, or other beauty professionals who serve a similar client base.
+
+By the end of 60 days, you should be tracking how many inquiries you receive each week, which posts lead to booking requests, which services clients ask about most, which questions come up repeatedly, and how many consultations convert into appointments.
+
+This is where content becomes market research. If clients keep asking the same question, turn it into a post. If clients are confused about pricing, create a pricing-explainer story. If clients do not know what to book, simplify your menu language.
+
+### Days 61 to 90: Improve Retention and Pricing
+
+By the third month, you should have enough information to refine. Look at your calendar. Which appointments are profitable? Which ones take too long for the price? Which clients rebook? Which services create the most stress but the least revenue?
+
+By the end of 90 days, you should have a clear average ticket, a weekly revenue target, a rebooking script, a maintenance service or package, a stronger consultation process, a list of services to feature more, and a list of services to reprice, restructure, or remove.
+
+This is the point where the business starts becoming less reactive.
+
+## What Separates a Growing Stylist From a Stalled Stylist
+
+A stalled stylist says: “I just need more clients.” “I don’t know what to charge.” “People keep asking for quotes from photos.” “Clients do not come back consistently.” “My calendar is full, but I still feel broke.”
+
+A growing stylist says: “I know my weekly revenue target.” “I know my average ticket.” “I know which services are profitable.” “My clients know when to come back.” “My pricing is tied to time, complexity, and product use.” “My content tells clients what to book.”
+
+The difference is not talent. The difference is structure.
+
+## Final Stylist Takeaway
+
+A $100K solo stylist business is not built from random busy weeks. It is built from repeatable offers, confident pricing, clear client communication, strong rebooking habits, and clean business operations.
+
+The craft gets the client in the chair. The system brings them back.
+
+When your menu, pricing, content, policies, and maintenance rhythm all work together, your business becomes easier for clients to understand and easier for you to manage.
+
+That is the real blueprint: not just doing beautiful hair, but building a chair that can support the stylist behind it.`,
+    metaTitle: 'The $100K Solo Stylist Blueprint: 8 Milestones to Six Figures',
+    metaDescription: 'A practical roadmap for solo stylists to reach $100K gross  --  covering pricing logic, service menus, rebooking systems, content strategy, and the numbers that actually matter.',
   },
   {
     id: 13,
@@ -3773,6 +3962,162 @@ Start soaking wet. Use lightweight hydration. Add hold. Diffuse gently. Do not t
 The first time you style it this way, it may not be perfect. That is normal. Natural texture has a learning curve. But once you understand what your hair is trying to do, frizz becomes much easier to control.`,
     metaTitle: 'Your Fine, Frizzy Hair Might Actually Be Wavy | A Stylist\'s Guide',
     metaDescription: 'If your hair never dries smooth and explodes in humidity, it may be wavy. A stylist\'s step-by-step guide to bringing out soft waves without crunch or frizz.',
+  },
+  {
+    id: 28,
+    slug: 'wolf-cut-2026',
+    tag: 'Cut & Style',
+    title: 'The 2026 Wolf Cut: Messy is the new Sexy',
+    excerpt: 'The wolf cut is back, and this time it is softer, more wearable, and more personal. A stylist breaks down five versions of the cut, who they work for, and how to ask for exactly what you want.',
+    author: 'Yuna Seo',
+    date: 'May 19, 2026',
+    readTime: '11 min',
+    image: '/image/Wolf-cut.jpeg',
+    category: 'Cut & Style',
+    section: 'Trends',
+    metaTitle: 'The 2026 Wolf Cut: Messy is the new Sexy',
+    metaDescription: 'The wolf cut is back for 2026. Softer, more wearable, and more personal. A stylist breaks down five versions of the cut and how to ask for exactly what you want.',
+    body: `The most current haircut this year is not perfectly smooth, tucked under, or overly controlled. It moves. It bends. It has pieces that flip out around the cheekbones, jawline, collarbone, and neckline.
+
+That is why the wolf cut keeps showing up in salons again.
+
+But from a stylist's point of view, the wolf cut is often misunderstood. It is not just messy hair. It is a cut designed to look a little undone while still having shape. The difference is important: texture looks intentional, while frizz looks unmanaged.
+
+![Kendall Jenner's wolf cut with choppy layers and soft movement through the ends.](/image/kendall.png)
+
+A modern wolf cut blends the structure of a shag with the attitude of a mullet. It usually has shorter, choppier layers around the crown for lift, with longer, softer pieces through the face and ends so the hair still feels wearable. Hair.com describes the wolf cut as a mix between a shag and a mullet, while Cosmopolitan notes that the cut is built around crown volume, face-framing layers, and longer movement through the bottom.
+
+## Why the Wolf Cut Works So Well Now
+
+Clients are moving away from hair that has to sit perfectly all day. The newer mood is softer, looser, and more personal. The hair does not need to look freshly blown out every second. It needs to have life.
+
+This is also why the wolf cut has stayed popular in Asian beauty references, especially in K-pop, Thai celebrity styling, and Korean salon trends. Teen Vogue has noted that the wolf cut has long been a favorite in South Korean salons and K-pop styling, with its mix of soft face-framing, choppy texture, and gender-fluid shape.
+
+> The wolf cut is not about looking undone. It is about looking like you did not try too hard — and that takes real skill to cut.
+> — Yuna Seo, Cut & Style Editor
+
+For many non-Asian hair types, especially straight, medium-thick, or dense hair, this cut can also be very useful. It removes heaviness without taking away the whole length. It gives straight hair more direction. It helps medium-length hair look less flat. And for clients growing out a bob or short cut, it gives the awkward stage a clear shape.
+
+## The New Wolf Cut Is Softer Than Before
+
+The early wolf cut was often more rebellious: heavy fringe, dramatic crown layers, and a stronger mullet shape. The 2026 version is more flexible.
+
+It can be sweet, cool, feminine, boyish, polished, or edgy depending on the length, bang shape, and texture. Orm Kornnaphat's recent Dior front-row look is a good Asian reference for the softer direction: airy layers, wispy bangs, brushed-out texture, and flipped ends that still feel clean.
+
+Suki Waterhouse is another useful reference. Her mid-length wolf cut was styled with long curtain bangs, an off-center part, and polished airy layers, which makes the cut feel less harsh and more wearable for everyday clients.
+
+That is the version most clients should be asking for: movement without losing softness.
+
+![Suki's soft wolf cut with curtain bangs and airy layers. The 2026 direction is less rebellious, more wearable](/image/Suki Waterhouse.jpeg)
+
+## Style 1: The Soft Collarbone Wolf Cut
+
+**Best for:** oval, heart-shaped, diamond, and longer face shapes
+
+**Good references:** Karina, LingLing Kwong, Suki Waterhouse, Jenna Ortega
+
+This is the easiest wolf cut to try if you are not ready for anything too extreme. The length usually sits around the collarbone or slightly below. The layers are visible, but they are not cut too high. The face-framing pieces sit around the cheekbones and jawline, which helps soften the face without making the hair feel too thin.
+
+From a stylist's perspective, this version works because it keeps enough weight at the bottom. That matters. If the ends are over-layered, the hair can start to look stringy, especially on fine or naturally straight hair.
+
+For styling, use a lightweight leave-in conditioner or smoothing cream if the hair gets frizzy. Then use a flat iron to slightly bend the ends outward or inward. You do not need to curl the whole head. A few bends around the face and ends are enough.
+
+![Collarbone-length wolf cut with soft face-framing layers and slightly flipped ends - the most wearable entry point into the style](/image/Jenna Ortega.jpeg)
+
+## Style 2: The Airy Wolf Cut
+
+**Best for:** round, oval, soft-featured, and fuller face shapes
+
+**Good references:** Orm Kornnaphat, Winter
+
+This version feels light, youthful, and slightly androgynous. The layers are broken up around the cheekbones, the bangs are usually wispy or piecey, and the neckline has movement instead of a blunt finish.
+
+This is a strong option for clients who say, "My hair is heavy, but I do not want it short." It gives the top more lift and makes the sides feel less bulky.
+
+The key is the bang area. Curtain bangs make it softer. Wispy bangs make it more Korean salon-inspired. A shorter fringe makes it more editorial. For rounder faces, I would avoid cutting the side layers too short near the cheek unless the client wants a very bold shape. Keeping some softness around the jawline is usually more flattering.
+
+![Airy wolf cut with wispy bangs and lifted crown, a K-beauty-influenced take that works especially well on straight, medium-thick hair](/image/Orm Kornnaphat.webp)
+
+## Style 3: The Short Statement Wolf Cut
+
+**Best for:** oval faces, strong features, clients who like a bolder look
+
+**Good references:** Soyeon, Miley Cyrus, Keke Palmer
+
+This version leans closer to the mullet side of the wolf cut. The crown is shorter, the sides are more separated, and the ends have more flick. It can look very cool, but it needs the right client and the right haircut.
+
+InStyle describes the wolf cut as a celebrity-favored layered haircut with volume, choppier top layers, and longer back layers, and points to examples like Miley Cyrus, Billie Eilish, and Keke Palmer.
+
+For Asian references, Soyeon-style short wolf cuts work because they use the haircut almost like part of the whole image. It is not just a soft beauty cut. It changes the attitude of the face and outfit.
+
+**Stylist note:** this is not the best version for someone who wants low-risk hair. If the top layers are cut too short, the grow-out can feel awkward. If the sides are too thin, the face can look wider. This version needs balance.
+
+![Short statement wolf cut with dramatic crown layers and strong flick at the ends — the boldest version of the style](/image/Soyeon.png)
+
+## Style 4: The Long Wavy Wolf Cut
+
+**Best for:** wavy hair, medium-to-thick hair, clients who want change without losing length
+
+**Good references:** Cara Delevingne, Billie Eilish
+
+This version keeps more length through the back but adds shape through the crown and face. It works well when the client wants movement but still wants to feel like they have long hair.
+
+Bangstyle describes Cara Delevingne's 2026 wolf cut as a softer, more refined version of the shag-mullet shape, with crown volume, textured ends, and movement that does not rely on perfect styling.
+
+This is one of my favorite versions for clients with natural waves because the cut helps the wave pattern show up. Instead of forcing the hair into a smooth blowout, the layers let the hair separate naturally.
+
+**Stylist note:** the shortest layer should not be too high unless the client has enough density to support it. If the top is too short and the bottom is too long, the haircut can look disconnected.
+
+![Long wavy wolf cut with crown volume and textured ends. The layers activate the wave pattern without forcing a blowout](/image/wolf-cut-billie-eilish.jpg)
+
+## Why This Cut Is Good for Growing Hair Out
+
+A lot of clients get stuck between short and long hair. The bottom starts to feel heavy, the top goes flat, and the front pieces no longer frame the face.
+
+The wolf cut gives that in-between stage a purpose.
+
+Instead of waiting for the hair to grow while it loses shape, the stylist can carve out movement around the crown, cheekbones, and neckline. The hair still grows, but it grows with direction.
+
+This is especially helpful for clients growing out a bob, lob, short shag, or shoulder-length cut. The wolf cut makes the transition feel more intentional.
+
+## What to Ask Your Stylist For
+
+Do not just say, "I want a wolf cut." That can mean too many different things.
+
+Say something more specific:
+
+> "I want a soft wolf cut with face-framing layers, lightness through the ends, and some volume at the crown, but I do not want the top layers too short."
+
+Then bring references. Bring one Asian reference and one Western reference if possible. This helps your stylist understand whether you want the cut to feel soft, edgy, feminine, boyish, polished, or more dramatic.
+
+| Your Hair Type | What to Ask For |
+|---|---|
+| Fine hair | Longer layers so the ends do not become too thin |
+| Thick hair | Weight removal without making the sides too bulky |
+| Straight hair | Soft texturizing so the layers do not look like steps |
+| Wavy or curly hair | Ask your stylist to cut with your natural texture in mind |
+
+## How to Style a Wolf Cut at Home
+
+The wolf cut does not need perfect styling, but it does need some direction.
+
+**First, dry the roots.** If the crown goes flat, the haircut loses its shape. Focus on lifting the top and front sections before worrying about the ends.
+
+**Second, choose the right product for your texture.** Fine hair can use dry shampoo or texture spray at the roots for lift. Davines notes that dry shampoo can help very fine hair create volume and texture between washes.
+
+For most wolf cuts, a volumizing mousse, texturizing spray, heat protectant, and light hairspray are enough. John Frieda's wolf cut styling guide also recommends mousse at the roots, a hairdryer, a round brush, and a curling iron or straightener for shaping the layers.
+
+**Third, do not over-style every piece.** Flip out a few ends. Bend the face-framing pieces. Let some sections fall naturally. The haircut looks better when it has variation.
+
+![Styling a wolf cut at home: mousse at the roots, a diffuser or round brush, and a few bent ends are all you need](/image/style-wolf-cut.png)
+
+## The Stylist Takeaway
+
+The wolf cut is popular because it gives hair movement again. It is not stiff. It is not overly neat. It lets the hair have personality.
+
+But the best wolf cuts are not random. They are customized. The stylist has to consider hair density, face shape, curl pattern, natural volume, and how much time the client actually wants to spend styling.
+
+The real goal is not "messy hair." The goal is controlled texture: soft layers, visible movement, healthy ends, and a shape that still looks good when the hair is not perfectly done.`,
   },
 ]
 
