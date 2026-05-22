@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ExternalLink, Image as ImageIcon, Link2 } from 'lucide-react'
+import { ExternalLink, Link2 } from 'lucide-react'
 import type { Article } from '../../data/articles'
 
 const copperTocItems = [
@@ -29,52 +29,6 @@ const shareLinks = [
   { label: 'Facebook', icon: ExternalLink, action: 'facebook' },
   { label: 'Instagram', icon: ExternalLink, action: 'instagram' },
 ]
-
-const bondBuilderImagePlaceholders = [
-  {
-    src: '/image/bond-builders.avif',
-    label: 'Bond repair treatment texture',
-  },
-  {
-    src: '/image/gd-shampoo.jpg',
-    label: 'Gentle cleansing step',
-  },
-  {
-    src: '/image/at-home-hair-care.avif',
-    label: 'At-home care routine',
-  },
-]
-
-function SidebarImagePlaceholders({ article }: { article: Article }) {
-  if (article.slug !== 'bond-builders') return null
-
-  return (
-    <div className="border border-white/10 p-5">
-      <div className="mb-4 flex items-center justify-between gap-4">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold">
-          Visual Notes
-        </p>
-        <ImageIcon size={14} className="text-charcoal-600" />
-      </div>
-      <div className="grid grid-cols-1 gap-3">
-        {bondBuilderImagePlaceholders.map((item) => (
-          <figure key={item.src} className="group">
-            <div className="aspect-[4/3] overflow-hidden bg-charcoal-900">
-              <img
-                src={item.src}
-                alt={item.label}
-                className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
-              />
-            </div>
-            <figcaption className="mt-2 text-[11px] tracking-wider text-charcoal-500">
-              {item.label}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
-  )
-}
 
 export default function ArticleSidebar({ article }: { article: Article }) {
   const [copied, setCopied] = useState(false)
@@ -143,8 +97,6 @@ export default function ArticleSidebar({ article }: { article: Article }) {
           ))}
         </nav>
       </div>
-
-      <SidebarImagePlaceholders article={article} />
 
       {/* Share */}
       <div className="border border-white/10 p-5">
