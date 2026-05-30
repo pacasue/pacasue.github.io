@@ -27,13 +27,13 @@ export const authors: Record<string, Author> = {
     name: 'Leila Fernandez',
     title: 'Senior Color Editor',
     bio: 'Leila has been covering professional hair color for over a decade. A former colorist herself, she splits her time between salon visits, brand labs, and competitions to bring color professionals the most actionable, accurate coverage in the industry. She is based in Miami, FL.',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b7/57/10/75/fe/v1_E10/E10IFLPC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=fb2875a42a0637430bcf64ce271045fd74eb5ecbec5a836b387f8581ab12cf25',
   },
   'Tom Harley': {
     name: 'Tom Harley',
     title: 'Technique Editor',
     bio: 'Tom spent 12 years behind the chair in London and New York before turning to editorial. He specializes in cutting technique, men\'s grooming, and the science of layering. His work has appeared in trade publications across Europe and North America.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/43/9d/d8/e5/b2/v1_E10/E104D2JB.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=be0bdede456b2492c1b2c830d2cb8c359ce5b64f97a4fd6f6e219626a489cf41',
   },
   'Alex Nguyen': {
     name: 'Alex Nguyen',
@@ -51,25 +51,25 @@ export const authors: Record<string, Author> = {
     name: 'Dana Reeves',
     title: 'Salon Business Coach',
     bio: 'Dana runs a six-figure solo suite in Nashville and coaches stylists on pricing, retention, and building specialty service menus. She writes about the business side of the industry — from rebooking strategy to retail systems — with a focus on what actually works in the real world.',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/bd92db6c-4bf9-45fc-83a9-60eadde7f7e7/5086e550-4ef9-4fab-9093-6fa52c0c349a.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a0f1c62eb426d2746b0289820d5b3f26441673747d02470dc54c95d46a358570',
   },
   'Michelle Torres': {
     name: 'Michelle Torres',
     title: 'Color Technique Contributor',
     bio: 'Michelle is a balayage specialist and color educator based in Chicago. She has trained stylists across the Midwest on freehand techniques and tone correction, and writes about color placement, client consultations, and the art of the seamless grow-out.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/37/70/8f/6b/b1/v1_E10/E109UG8A.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9bef22b3e1b7e4a05829dfd77d8ad1b16179898b2b3d2ab02db876e21625c424',
   },
   'Maria Chen': {
     name: 'Maria Chen',
     title: 'Client Experience Editor',
     bio: 'Maria covers the client side of the salon experience — from booking and consultation to aftercare and retention. A former salon manager turned writer, she brings an operational perspective to topics like stylist-client communication, service design, and building long-term loyalty.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/bc/bf/04/9b/f9/v1_E10/E101AL0Z.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9feb1f05368c7935079e43aa4ada5128981ac46c3b32722bc6cbc70f60c767e7',
   },
   'James Olivier': {
     name: 'James Olivier',
     title: 'Hair Care & Science Writer',
     bio: 'James writes about the chemistry and biology behind healthy hair — from bond structure and porosity to scalp health and ingredient science. With a background in cosmetic chemistry, he translates complex formulation topics into practical guidance for stylists and clients alike.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/33/88/9e/b2/60/v1_E10/E1052XSF.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3d7e80ec154f9b1d851388991a4828e886eb4bf5f02dbb3bba565579131d4ef5',
   },
   'Dr. Sarah Kline': {
     name: 'Dr. Sarah Kline',
@@ -87,19 +87,19 @@ export const authors: Record<string, Author> = {
     name: 'Marissa Chen',
     title: 'Scalp Health & Wellness Editor',
     bio: 'Marissa is a scalp-focused stylist and wellness writer based in Los Angeles. With a background in trichology and holistic hair care, she specializes in scalp treatments, hair loss prevention, and the intersection of wellness rituals and professional hair care. She writes about what actually works — and what the science says.',
-    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/39/94/23/3e/90/v1_E10/E109INAW.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9fdddee103b45b4f269091ec5c9b9fe9996232df6a60874ae79d81d9020baae4',
   },
   'Sophie Marchand': {
     name: 'Sophie Marchand',
     title: 'Color & Client Experience Writer',
     bio: 'Sophie spent years as a salon client before training as a colorist in her late twenties. That dual perspective — knowing what it feels like to sit in the chair and not understand what is happening — shapes everything she writes. She covers color, consultations, and the client side of professional hair care from a place of genuine experience.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0b/a4/2f/25/66/v1_E10/E10APXJJ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=dc073b9de49c052fd6591ccc8b5e1978273c968e62eb9e8cdb363e98f3c1fe2e',
   },
   'Priya Nair': {
     name: 'Priya Nair',
     title: 'At-Home Hair Care Editor',
     bio: 'Priya is a beauty writer and certified trichologist based in London who specializes in translating professional hair care advice into practical at-home routines. She has spent years interviewing stylists, testing products, and building guides that help people get better results between salon visits. She writes about scalp health, product selection, and the habits that actually move the needle.',
-    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ce/e6/2d/c5/a3/v1_E10/E10IPZN.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9e01dba5139d26bb308881d50e6af7c442f893b31c01fc89f3c1a38cb9119418',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/81/4e/42/a7/5b/v1_E10/E10Z9RG.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7030a09d7ab3fa388f9a03d14111fd50d5b91d1f4a30e4e831bf1012447ee904',
   },
   'Cleo Hartley': {
     name: 'Cleo Hartley',
@@ -129,7 +129,7 @@ export const authors: Record<string, Author> = {
     name: 'Yuna Seo',
     title: 'Cut & Style Editor',
     bio: 'Yuna is a Seoul-trained stylist and beauty writer based in Los Angeles. With over ten years behind the chair across Korean and American salons, she specializes in Asian hair texture, face-framing cuts, and the cultural crossover between K-beauty aesthetics and Western editorial styling. She writes about haircuts, texture work, and the technique behind looks that travel well from the salon to real life.',
-    image: 'https://images.unsplash.com/photo-1616701560632-d77fb4310f3c?fm=jpg&q=80&w=200&auto=format&fit=crop&facepad=3',
+    image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/81/3d/7c/d2/v1_E10/E1069JVC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=009a37938da8a6f623bf541c1b9fe132452dcf5df30e54b91a7f3c67f5bc0079',
   },
 }
 
