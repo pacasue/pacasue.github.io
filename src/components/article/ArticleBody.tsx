@@ -214,6 +214,34 @@ function QuoteCarousel({ quotes }: { quotes: { text: string; attribution?: strin
   )
 }
 
+function ImageRow({ images }: { images: { src: string; caption: string }[] }) {
+  return (
+    <div className="my-10 -mx-4 md:mx-0">
+      <div className="flex gap-3 overflow-x-auto pb-3 px-4 md:px-0 snap-x snap-mandatory">
+        {images.map(({ src, caption }, i) => (
+          <figure key={i} className="flex-shrink-0 w-56 md:w-64 snap-start">
+            <div className="relative overflow-hidden bg-charcoal-900 border border-white/5" style={{ aspectRatio: '3/4' }}>
+              {src ? (
+                <img src={src} alt={caption} loading="lazy" className="w-full h-full object-cover" />
+              ) : (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                  <ImageIcon size={24} className="text-charcoal-700" />
+                  <p className="text-[9px] tracking-[0.2em] uppercase text-charcoal-600 font-medium">Photo</p>
+                </div>
+              )}
+            </div>
+            {caption && (
+              <figcaption className="text-[10px] text-charcoal-500 tracking-wider mt-2 leading-snug">
+                {caption}
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function ImagePlaceholder({ caption }: { caption: string }) {
   return (
     <figure className="my-10 -mx-4 md:mx-0">
@@ -229,10 +257,10 @@ function ImagePlaceholder({ caption }: { caption: string }) {
 }
 
 const formulaRows = [
-  { col1: 'Wella Koleston Perfect', col2: '7/43 — Medium Blonde Red-Gold', col3: '50g' },
-  { col1: 'Wella Koleston Perfect', col2: '8/43 — Light Blonde Red-Gold', col3: '20g' },
+  { col1: 'Wella Koleston Perfect', col2: '7/43: Medium Blonde Red-Gold', col3: '50g' },
+  { col1: 'Wella Koleston Perfect', col2: '8/43: Light Blonde Red-Gold', col3: '20g' },
   { col1: 'Developer', col2: '6% (20 vol)', col3: '70ml' },
-  { col1: 'Processing Time', col2: '35 minutes — no heat', col3: '—' },
+  { col1: 'Processing Time', col2: '35 minutes, no heat', col3: '' },
 ]
 
 function renderInline(text: string): React.ReactNode[] {
@@ -260,7 +288,22 @@ function slugify(text: string) {
 function MarkdownBody({ body }: { body: string }) {
   // Pre-process: extract :::quote-carousel blocks before splitting on double newlines
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
-  const processedBody = body.replace(
+  const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
+  let processedBody = body.replace(
+    /:::image-row\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n').filter(Boolean)
+      const images = lines.map((line) => {
+        const m = line.match(/^!\[([^\]]*)\]\(([^)]*)\)$/)
+        if (m) return { caption: m[1], src: m[2] }
+        return { caption: line, src: '' }
+      })
+      const id = imageRowPlaceholders.length
+      imageRowPlaceholders.push({ images })
+      return `IMAGEROW_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
     /:::quote-carousel\n([\s\S]*?):::/g,
     (_match, inner: string) => {
       const quoteBlocks = inner.trim().split(/\n---\n/)
@@ -289,6 +332,13 @@ function MarkdownBody({ body }: { body: string }) {
         if (carouselMatch) {
           const cp = carouselPlaceholders[parseInt(carouselMatch[1])]
           return <QuoteCarousel key={i} quotes={cp.quotes} />
+        }
+
+        // Image row placeholder
+        const imageRowMatch = trimmed.match(/^IMAGEROW_PLACEHOLDER_(\d+)$/)
+        if (imageRowMatch) {
+          const rp = imageRowPlaceholders[parseInt(imageRowMatch[1])]
+          return <ImageRow key={i} images={rp.images} />
         }
 
         const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
@@ -417,7 +467,7 @@ function CopperArticleBody() {
         >
           C
         </span>
-        opper hair isn't new — but what's happening to it right now is. This isn't the brassy, over-processed
+        opper hair isn't new, but what's happening to it right now is. This isn't the brassy, over-processed
         orange of 2008. The 2026 version is something altogether more intentional: warm, dimensional, deeply
         saturated at the root and feathered into molten gold at the ends. It reads editorial in the chair and
         natural in the street.
@@ -427,19 +477,19 @@ function CopperArticleBody() {
         The shift started quietly. A handful of top colorists posting client work featuring cognac, auburn,
         and spiced-peach blends. Then brands started pushing copper-adjacent shades in their new collections.
         By February 2026, search trends for "copper balayage" and "rust hair" had tripled year-over-year.
-        Now every client wants it — and the good stylists are already fluent in it.
+        Now every client wants it, and the good stylists are already fluent in it.
       </Paragraph>
 
       <PullQuote
         quote="Copper is the perfect intersection of wearable and editorial. It works on every skin tone if you understand undertones."
-        attribution="Lucia Vargas, Celebrity Colorist — Los Angeles"
+        attribution="Lucia Vargas, Celebrity Colorist, Los Angeles"
       />
 
       <SectionHeading id="why-copper-works">Why Copper Works on Every Client</SectionHeading>
 
       <Paragraph>
         The genius of the copper family is its versatility. Unlike cool-toned blondes or pure blacks, copper
-        tones have warm undertones that complement nearly every complexion — they just need to be calibrated
+        tones have warm undertones that complement nearly every complexion, they just need to be calibrated
         correctly. A client with cool undertones wears a deeper, more muted auburn. Warm undertones? Push
         toward the bright, almost electric cognac. Neutral? The classic 7/43-based formula lands perfectly.
       </Paragraph>
@@ -508,12 +558,12 @@ function CopperArticleBody() {
           },
           {
             step: 2,
-            title: 'Freehand panels — mid-shaft to ends',
+            title: 'Freehand panels, mid-shaft to ends',
             body: 'Using a balayage board, saturate the backcombed mid-shaft sections with your main copper formula. Work diagonal-back sections for the most natural result.',
           },
           {
             step: 3,
-            title: 'Foil highlights — optional brightness',
+            title: 'Foil highlights, optional brightness',
             body: 'On clients requesting maximum vibrancy, place 4–6 fine foils at the face-frame and part line. Use a one shade lighter copper formula here.',
           },
           {
@@ -540,7 +590,7 @@ function CopperArticleBody() {
 
       <PullQuote
         quote="I don't sell copper as a color. I sell it as a season-long transformation. They leave the first appointment warm and bright. By the third, they're a rich, burnished auburn. Clients are addicted."
-        attribution="Dana Reeves, Salon Business Coach — Nashville, TN"
+        attribution="Dana Reeves, Salon Business Coach, Nashville, TN"
       />
 
       <Paragraph>

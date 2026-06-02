@@ -47,7 +47,7 @@ export default function Newsletter() {
         </h2>
 
         <p className="text-charcoal-400 text-sm md:text-base leading-relaxed mb-10 max-w-md mx-auto">
-          Join 85,000+ readers getting stylist-curated trend reports, care tips, and inspiration — straight to your inbox.
+          Join 85,000+ readers getting stylist-curated trend reports, care tips, and inspiration, straight to your inbox.
         </p>
 
         {submitted ? (

@@ -58,7 +58,7 @@ export default function AuthorPage() {
         {/* Articles */}
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
           <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-8">
-            Articles by {author.name} — {authorArticles.length} {authorArticles.length === 1 ? 'piece' : 'pieces'}
+            Articles by {author.name}: {authorArticles.length} {authorArticles.length === 1 ? 'piece' : 'pieces'}
           </p>
 
           {authorArticles.length === 0 ? (

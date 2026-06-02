@@ -73,7 +73,7 @@ export default function EducationSection() {
               <em>From the Experts</em>
             </h2>
             <p className="text-charcoal-400 text-sm mt-3 leading-relaxed">
-              Stylist-created guides that help you walk into your next appointment knowing exactly what you want — and why.
+              Stylist-created guides that help you walk into your next appointment knowing exactly what you want, and why.
             </p>
           </div>
           {/* <a

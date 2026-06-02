@@ -51,7 +51,7 @@ export default function Hero() {
                   <em>Why This Shade Rules 2026</em>
                 </h1>
                 <p className="text-charcoal-300 text-sm md:text-base max-w-xl leading-relaxed mb-6 hidden md:block">
-                  We asked 10 top colorists what makes this shade so wearable — and how to ask for it at your next appointment.
+                  We asked 10 top colorists what makes this shade so wearable, and how to ask for it at your next appointment.
                 </p>
                 <div className="flex items-center gap-4">
                   <Link

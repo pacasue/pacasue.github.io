@@ -15,7 +15,7 @@ const tips = [
   {
     id: 2,
     category: 'Cut',
-    tip: 'Bring a photo to your appointment — but be open to your stylist\'s take on how it works with your texture and face shape.',
+    tip: 'Bring a photo to your appointment, but be open to your stylist\'s take on how it works with your texture and face shape.',
     stylist: 'Tom Harley',
     role: 'Technique Editor',
     location: 'London, UK',
@@ -35,7 +35,7 @@ const tips = [
   {
     id: 4,
     category: 'Texture',
-    tip: 'Tell your stylist your full hair routine at home — the products you use matter as much as what happens in the salon.',
+    tip: 'Tell your stylist your full hair routine at home, the products you use matter as much as what happens in the salon.',
     stylist: 'Imani Okafor',
     role: 'Texture & Curl Editor',
     location: 'Atlanta, GA',
