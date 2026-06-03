@@ -306,7 +306,7 @@ From a stylist's perspective, that's rarely what's actually happening.
 A haircut is structure. It decides how your hair moves, how it sits when you do nothing to it, and whether your styling routine works or constantly fights you.
 
 > "The haircut is the foundation. If that's off, no amount of styling is going to fix it."
-> , Nina Patel, Salon Educator, Chicago
+> — Nina Patel, Salon Educator, Chicago
 
 ## Cutting Is About Shape, Not Length
 
@@ -339,7 +339,7 @@ Stylists are constantly balancing:
 - **Density** (so the hair still looks full)
 
 > "You're either building shape or removing it. There's no neutral when you're cutting."
-> , Marcus Bell, London
+> — Marcus Bell, London
 
 ## Why Your Hair Doesn't Look the Same at Home
 
@@ -368,7 +368,7 @@ This is why the same reference photo can't be applied universally.
 A layered haircut on straight hair looks clean and defined. On curly hair, it can either create beautiful shape or unwanted volume depending on how it's done.
 
 > "Texture isn't a detail. It's the whole plan."
-> , Dana Reeves, Nashville
+> — Dana Reeves, Nashville
 
 ## The Role of the Hairline and Face Shape
 
@@ -398,7 +398,7 @@ Stylists are thinking ahead:
 This is where experience shows. A good cut grows out softly. A bad one looks off within weeks.
 
 > "I'm not cutting for today. I'm cutting for the next two months."
-> , Nina Patel
+> — Nina Patel
 
 ## The Difference Between a Trim and a Haircut
 
@@ -441,7 +441,7 @@ A haircut is not just maintenance. It's the structure everything else depends on
 It affects how your hair looks without effort, how long your style lasts, and how often you feel like you need to fix it.
 
 > "A good cut makes styling easier. A great cut makes it almost unnecessary."
-> , Marcus Bell`,
+> — Marcus Bell`,
     metaTitle: 'Why a Good Haircut Is More Than Just Taking Length Off',
     metaDescription: 'Stylists are thinking about shape, weight, and grow-out , not just length. Here is what is actually happening when you sit in the chair.',
   },
@@ -1817,7 +1817,7 @@ That is the real blueprint: not just doing beautiful hair, but building a chair 
 At the most basic level, balayage is a hand-painted lightening technique. No strict foil pattern, no uniform sections. Color is applied where the stylist wants light to live. But that definition is only half the story.
 
 > “Balayage is not about painting randomly. It is controlled placement. If you do it right, the client should not see where it starts. They just see better hair.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 That is the goal every time. Seamless, grown-in color that looks natural even when it is not.
 
@@ -1858,7 +1858,7 @@ If balayage looks identical on every client, something is off. A good stylist is
 - Overall hair health
 
 > “On curly clients, I am painting for how the hair falls dry, not how it looks wet. You have to respect the pattern or the color disappears.”
-> , Alana Brooks, Curl Specialist
+> — Alana Brooks, Curl Specialist
 
 That is why balayage on curly hair often looks softer but more dimensional. The placement follows movement, not sections.
 
@@ -1888,7 +1888,7 @@ What we are recommending in salons right now:
 - Regular scalp care to keep the foundation healthy
 
 > “You cannot have expensive-looking color sitting on an unhealthy scalp. The finish starts at the root, literally.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## When Balayage Is Not a One-Session Service
 
@@ -1911,7 +1911,7 @@ And from a business standpoint, it opens the door to retail. Haircare products, 
 Balayage today is not a trend clients bring in on their phone. It is a core skill that defines how modern color is done. Done well, it grows out clean, complements the haircut, and works with the client's natural features instead of fighting them.
 
 > “Good balayage should look like you were born with it. Great balayage makes people ask where you go.”
-> , Nina Patel`,
+> — Nina Patel`,
     metaTitle: 'What Is Balayage? Your Stylist Explains Everything',
     metaDescription: 'A stylist breaks down what balayage really is, how it differs from highlights, what happens during the appointment, and how to maintain it.',
   },
@@ -1938,7 +1938,7 @@ Most people look for shedding. Hair on the brush, hair in the shower, more stran
 It is density.
 
 > “We notice it in the ponytail before anything else. The elastic wraps one extra time. The braid feels smaller. That is the first flag.”
-> , Lauren Chavez, Senior Stylist, Miami
+> — Lauren Chavez, Senior Stylist, Miami
 
 Other early signs we see every day:
 
@@ -1956,7 +1956,7 @@ Clients rarely study their own hairline closely. Stylists do.
 Subtle changes around the front can signal early hair thinning patterns or even the beginning of a receding hairline in women, which is more common than most people think.
 
 > “We are looking at baby hairs, density at the temples, and how the hair frames the face. When that starts to shift, it is usually not just breakage. It is something systemic.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 This is especially relevant for clients dealing with:
 
@@ -1990,7 +1990,7 @@ We are looking for:
 - Tightness or dryness from lack of proper scalp care
 
 > “Clients underestimate how much scalp condition affects hair growth. If I see dryness or buildup, I am already thinking about scalp treatment before we even talk color.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 This is why more salons are recommending in-salon scalp treatments, at-home dry scalp routines, and regular use of scalp oils or targeted treatments.
 
@@ -2007,7 +2007,7 @@ Signs of breakage:
 True thinning, on the other hand, affects the root. The hair simply is not growing back at the same density.
 
 > “Clients confuse damaged hair with thinning hair all the time. They will buy every damaged hair treatment on the shelf when what they actually need is to address growth.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ## When Stylists Start Talking About It
 
@@ -2021,7 +2021,7 @@ But once patterns are consistent, the conversation shifts. That might include:
 - Talking through treatments like PRP or topical options like minoxidil
 
 > “Sometimes my job is not to fix it in one appointment. It is to help the client understand what is happening early enough that they have options.”
-> , Lauren Chavez, Senior Stylist, Miami
+> — Lauren Chavez, Senior Stylist, Miami
 
 ## The Role of Haircare in Early Thinning
 
@@ -2051,7 +2051,7 @@ Hair thinning does not start when you notice hair falling out. It starts much ea
 Stylists see it in the part, the ponytail, the scalp, and the subtle changes in how your hair behaves.
 
 > “By the time a client is worried, we have usually already seen it coming. The advantage is, if you catch it early, you can actually do something about it.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 Pay attention to small changes. Invest in the right haircare. And listen when your stylist brings it up , because in most cases, they are not guessing. They are noticing what you cannot see yet.`,
     metaTitle: 'What Your Stylist Notices About Hair Thinning Before You Do',
@@ -2078,7 +2078,7 @@ What matters is not whether you add layers. It is how, where, and how much.
 Done right, layers can completely shift how thin hair looks and moves. They create lift, break up flat sections, and give the illusion of density.
 
 > “Thin hair does not need more hair. It needs better structure. That is what layers are supposed to do.”
-> , Nina Patel, Salon Educator, Chicago
+> — Nina Patel, Salon Educator, Chicago
 
 When executed well, layers can:
 
@@ -2096,7 +2096,7 @@ The issue is not layers themselves. It is over-layering.
 Thin hair cannot afford to lose too much weight. Once you remove too much density, the ends start to collapse, and the hair can look even thinner than before.
 
 > “We see this all the time. Someone comes in with thin hair and leaves with less of it. Too many layers, and suddenly the perimeter disappears.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 Here is where layers start to work against you:
 
@@ -2110,7 +2110,7 @@ Here is where layers start to work against you:
 This is where professional judgment comes in. Stylists are constantly balancing two things: creating lift and movement, and preserving as much visible density as possible.
 
 > “You cannot cut your way out of thinning hair. You can only cut in a way that respects it.”
-> , Dana Reeves, Stylist, Nashville
+> — Dana Reeves, Stylist, Nashville
 
 If a client is already experiencing hair fall or early thinning, aggressive layering can exaggerate the issue.
 
@@ -2153,7 +2153,7 @@ Treatment comes first:
 - Regular scalp treatment to support growth at the root
 
 > “Healthy hair holds a shape. Damaged hair falls apart. No haircut can override that.”
-> , Nina Patel, Salon Educator, Chicago
+> — Nina Patel, Salon Educator, Chicago
 
 ## When Shorter Cuts Make More Sense
 
@@ -2184,7 +2184,7 @@ From there, the stylist decides how much layering is appropriate. Because layers
 Layers can be one of the best things you do for thin hair or the fastest way to make it look worse. The difference comes down to restraint, placement, and understanding what the hair can handle.
 
 > “With thin hair, every snip shows. You are either building density or taking it away. There is no neutral.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 Keep the strength, create the illusion, and support it with the right products and styling routine. That is what makes layers work.`,
     metaTitle: 'Why Layers Can Either Help or Ruin Thin Hair',
@@ -2209,7 +2209,7 @@ And stylists are paying attention.
 Not because it is a miracle cure for hair loss or hair thinning. It is not. But because scalp work is becoming a serious part of modern hair care, and gua sha fits neatly into that conversation. It sits somewhere between massage, ritual, circulation support, and a more intentional way to apply scalp products.
 
 > “The scalp has been ignored for too long. Clients will spend $300 on hair color products, then forget that the hair grows from skin. Gua sha makes them pay attention to the root.”
-> , Marissa Chen, Scalp-Focused Stylist, Los Angeles
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
 
 That is exactly why it is showing up in salons, treatment rooms, and at-home routines.
 
@@ -2232,7 +2232,7 @@ The scalp conversation has changed. A few years ago, clients mostly thought abou
 5. What is the best treatment for thinning hair I can actually maintain?
 
 > “Scalp care is where skin care was ten years ago. People are realizing that if the scalp is inflamed, dry, congested, or ignored, the hair is going to show it.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 ## What Scalp Gua Sha Can Actually Help With
 
@@ -2245,7 +2245,7 @@ But it can support a better scalp-care routine. Stylists like it for a few pract
 A tight scalp is common, especially in clients who clench their jaw, wear tight ponytails, or carry stress in the head and neck. Scalp gua sha can help loosen that tight feeling around the temples, crown, and nape.
 
 > “Clients do not always realize their scalp has tension until we start working through it. The crown and hairline are usually where they feel it first.”
-> , Marissa Chen, Scalp-Focused Stylist, Los Angeles
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
 
 ### 2. It encourages product distribution
 
@@ -2285,7 +2285,7 @@ Avoid scalp gua sha if you have:
 6. Sudden, unexplained bald patches
 
 > “A tool should never be your diagnosis. If the scalp looks angry or the shedding is sudden, that is not a spa moment. That is a referral.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 If you are dealing with scarring alopecia, frontal fibrosing alopecia, or rapidly changing hair loss, see a dermatologist before starting any at-home scalp tool routine.
 
@@ -2343,7 +2343,7 @@ This is the question everyone asks. The honest answer: scalp gua sha may support
 It can be part of a supportive routine alongside dermatologist-recommended treatments, topical minoxidil, microneedling, red light therapy, or PRP, depending on the person and the diagnosis.
 
 > “Scalp gua sha is support, not the whole strategy. The problem is when people confuse a good ritual with a medical treatment.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 ## What Products Pair Well With Scalp Gua Sha?
 
@@ -2376,7 +2376,7 @@ Scalp gua sha is not a magic fix. It will not cure hair loss, reverse alopecia, 
 But as part of a serious scalp-care routine, it makes sense. It helps clients slow down, touch their scalp, notice changes earlier, and apply treatment products more intentionally.
 
 > “The best scalp routine is the one a client will actually do. Gua sha works because it feels good enough to become a habit.”
-> , Marissa Chen, Scalp-Focused Stylist, Los Angeles
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
 
 And in hair care, consistency is usually where the real results start.`,
     metaTitle: 'Gua Sha for Scalp: What Stylists Actually Think',
@@ -2401,7 +2401,7 @@ The problem is that “low-maintenance” means different things to different pe
 To a client, it usually means fewer appointments. To a stylist, it means smarter placement, better tone selection, realistic lift, and a home-care routine that protects the work.
 
 > “Low-maintenance color is not lazy color. It actually takes more planning because you are designing the grow-out before you even mix the bowl.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 That is the part most clients do not see. The best low-maintenance color is built to age well.
 
@@ -2420,7 +2420,7 @@ This is where the consultation matters. If you sit down and say “I want someth
 That gives your stylist something useful to work with.
 
 > “Clients think they are asking for a color. What they are really asking for is a maintenance schedule. Once we know that, we can design the color properly.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## The Color Terms That Usually Mean Low-Maintenance
 
@@ -2459,7 +2459,7 @@ Long-lasting color is not just about the formula. It is about how the color is p
 5. **Your lifestyle** , Heat styling, washing frequency, sun exposure, swimming, and hard water can all shift color faster.
 
 > “Clients want the color to last, but they do not always realize their routine is part of the formula. If you wash daily with the wrong shampoo, no toner is surviving that.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 ## The Best Low-Maintenance Color Families
 
@@ -2494,7 +2494,7 @@ Avoid asking for bright, root-to-tip blonde if you do not want frequent appointm
 Copper is having a major salon moment, but it fades faster than most shades. If you want a lower-maintenance version, ask for a softer copper brunette, auburn gloss, or warm cinnamon dimension instead of a high-voltage orange copper.
 
 > “Copper is gorgeous, but it is honest. It will tell on you if you skip the home care.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ### Gray blending
 
@@ -2527,7 +2527,7 @@ Photos help, but only if you bring the right kind. Do not bring one heavily edit
 A photo of the root is especially important. Most clients only save the bright ends. Stylists are looking at the top three inches.
 
 > “We can tell from a reference photo whether the color is going to be high-maintenance. If the root is erased, that client is coming back often.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ## What to Avoid Asking For
 
@@ -2568,7 +2568,7 @@ The more natural the root and tone, the longer you can stretch it. The brighter 
 Low-maintenance color is not about doing less. It is about doing the right things in the right places. The root has to be soft. The tone has to work with your natural warmth. The brightness has to be placed where it will still make sense months later.
 
 > “The best low-maintenance color does not look forgotten at week ten. It looks like it was planned that way.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 That is what you should ask for. Not just pretty color on day one, but color that grows out quietly, fades softly, and still looks like you meant it.`,
     metaTitle: 'How to Ask for Low-Maintenance Hair Color That Actually Lasts',
@@ -2591,7 +2591,7 @@ That is what you should ask for. Not just pretty color on day one, but color tha
 The clients with the best hair are not the ones doing the most in-salon. They are the ones doing the right things consistently at home.
 
 > “Your hair lives with you, not with us. We can reset it in the chair, but what you do between appointments decides how it looks 80 percent of the time.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 This is where at-home hair care stops being optional and starts being the entire strategy.
 
@@ -2619,7 +2619,7 @@ That is why stylists are pushing scalp-first routines.
 4. If needed, rotate in a medicated dandruff shampoo
 
 > “Healthy scalp, better hair. It sounds simple, but it is the part most people skip.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## Wash Less, But Wash Better
 
@@ -2658,7 +2658,7 @@ Clients often buy products for aspirational hair. Thick, glossy, high-density ha
 - Layer in a small amount of hair serum for control
 
 > “People overload their hair trying to fix it. Most of the time, less product used correctly works better than more product used randomly.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ## Heat Styling Is Where Most Damage Happens
 
@@ -2712,7 +2712,7 @@ Options stylists often discuss with clients include:
 - Scalp-focused therapies
 
 > “Products support the hair you have. If the issue is internal or hormonal, you need a bigger plan.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 ## The Products That Actually Make a Difference
 
@@ -2730,7 +2730,7 @@ Whether it is vegan hair products, natural hair care products, or specific targe
 At-home hair care is not about doing everything. It is about doing the right things consistently. Focus on the scalp. Use the right products for your actual hair type. Be mindful with heat. And build a routine you can maintain.
 
 > “The best hair we see in the salon is never an accident. It is always someone doing the basics well, over and over again.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 Not more products, not more steps. Just better habits.`,
     metaTitle: 'At-Home Hair Care That Actually Makes a Difference',
@@ -2755,7 +2755,7 @@ The schedule is full. The days are long. The income plateaus anyway.
 What separates working stylists from high-performing ones in 2026 is not how many clients they take. It's how they structure the work they're already doing.
 
 > “The shift is when you stop thinking in appointments and start thinking in systems. That's where your income changes.”
-> , Dana Reeves, Salon Owner & Business Coach, Nashville
+> — Dana Reeves, Salon Owner & Business Coach, Nashville
 
 ![A stylist reviewing their schedule , the work behind the chair is only part of the picture](/image/schedule.png)
 
@@ -2782,7 +2782,7 @@ The stylists who are consistently booked, charging premium prices, and not overw
 Instead of offering everything, they become known for something , lived-in color, blondes, copper and reds, curly hair, or transformations. This attracts higher-intent clients and allows them to refine and speed up their process.
 
 > “I stopped saying yes to everything. Once I focused on dimensional color, my bookings didn't go down. My prices went up.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ### 2. They price based on outcome, not time
 
@@ -2799,14 +2799,14 @@ The best stylists are not selling one appointment. They are selling a plan:
 This creates predictable income and keeps the client's hair looking consistent.
 
 > “I don't sell color. I sell how your hair is going to look for the next six months.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ### 4. They treat retail as part of the service
 
 Retail is still one of the most underused revenue streams in salons. The top stylists don't sell , they prescribe. Shampoo for color treated hair, hair serum for shine, scalp treatment for long-term health, volumizing products for fine or thinning hair.
 
 > “Clients are already asking what to use. If you're not answering that, they're buying it somewhere else.”
-> , Dana Reeves, Salon Owner & Business Coach, Nashville
+> — Dana Reeves, Salon Owner & Business Coach, Nashville
 
 ### 5. They protect their schedule
 
@@ -2819,7 +2819,7 @@ Not every hour should be filled the same way. High-performing stylists reserve p
 At a certain point, being a great stylist is not enough. You also need to think like an operator. That means understanding which services drive revenue, which clients rebook consistently, which work brings in referrals, and which days and times are most valuable.
 
 > “You can love the craft and still run it like a business. In fact, you have to.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ## What This Looks Like in Practice
 
@@ -2834,7 +2834,7 @@ Another shift happening right now is how stylists attract clients. It is no long
 Clients are choosing stylists based on what they can see.
 
 > “If your work isn't visible, it's not being considered.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 This is why categories like Transformations perform so well. They show capability instantly.
 
@@ -2847,7 +2847,7 @@ The busiest stylists are not always the most successful. The ones building susta
 They specialize. They structure their services. They build maintenance into the experience. And they treat their work like a business, not just a schedule to fill.
 
 > “You don't need more clients. You need a better system for the ones you already have.”
-> , Dana Reeves, Salon Owner & Business Coach, Nashville`,
+> — Dana Reeves, Salon Owner & Business Coach, Nashville`,
     metaTitle: "Why the Busiest Stylists Aren't Doing More Clients",
     metaDescription: 'High-earning stylists in 2026 are not taking more clients , they are specializing, pricing smarter, and building systems that work.',
   },
@@ -2870,7 +2870,7 @@ A client says “I want my hair smoother,” and usually means less frizz, more 
 That is why there is no single smoothing product that works for everyone. In the salon, smoothing is built in layers.
 
 > “Smooth hair is never one product. It is the right prep, the right treatment, and the right finish. If one of those is wrong, the hair tells on you.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ![The smoothing process starts before styling , product selection at the wash stage sets the foundation](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/f3/d8/4c/8f/13/v1_E10/E107L00O.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1c54a363093754a4f3bbfd8979242085e3a9662bccc058fec857726430bd46b5)
 
@@ -2881,7 +2881,7 @@ The first smoothing decision happens before styling even begins. If the shampoo 
 Stylists usually reach for a smoothing shampoo and conditioner when the hair feels dry, coarse, frizzy, or overworked. For colored clients, a shampoo for color treated hair matters because faded, porous color often looks frizzier than it really is.
 
 > “People blame the weather, but half the time it is the shampoo. If the hair is stripped in the shower, you are already fighting frizz before you pick up a brush.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## Then Comes the Treatment Layer
 
@@ -2900,7 +2900,7 @@ If there is one category stylists rely on constantly, it is leave-in smoothing c
 The mistake clients make is using too much. Stylists rarely load the hair from root to end. They work product through the mid-lengths and ends, then use what is left on the hands to skim the surface.
 
 > “Most smoothing products are not bad. They are just overused. The difference between glossy and greasy is usually one extra pump.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 ## For Real Frizz Control, Stylists Use Heat-Activated Products
 
@@ -2917,7 +2917,7 @@ Keratin treatments, hair botox, and other professional smoothing services sit in
 But modern smoothing treatments are not always about making the hair pin-straight. Most stylists are using them to soften frizz, improve manageability, and cut down styling time while keeping some natural movement.
 
 > “Clients used to ask for straight hair. Now they ask for hair that behaves. That is a very different consultation.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 A good stylist will look at the hair's condition first. If the hair is over-bleached, fragile, or already breaking, the formula and timing need to be adjusted. Smooth should never come at the expense of strength.
 
@@ -2945,7 +2945,7 @@ The best smoothing routine is not the most expensive one. It is the one that mat
 - Curly and wavy hair needs smoothing products that control frizz without erasing texture
 
 > “Good smoothing is personal. Two clients can both say they have frizz, but one needs moisture and the other needs protein. If you treat them the same, one of them is going to hate the result.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ## The Bottom Line
 
@@ -2974,7 +2974,7 @@ You may still be taking off your coat, unlocking your phone, or saying, “I don
 Stylists are trained observers. The consultation is not just about what you say. It is about what your hair is saying before you even start.
 
 > “Clients think the appointment starts when we ask what they want. For us, it starts the second they walk in.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 ![The first few minutes in the chair , your stylist is already reading the whole picture](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/51/0d/6d/da/30/v1_E10/E1096J9K.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a4cb791a5ad03f1a41b34dbaef591f289979c41bfb5cd30cb6789db23b35c454)
 
@@ -2985,7 +2985,7 @@ Before anyone touches a brush, your stylist wants to see how your hair lives. No
 They are noticing where your part wants to fall, whether your crown splits, how your front pieces frame your face, and whether your ends flip, collapse, or puff out.
 
 > “Every head of hair has a routine. Our job is to work with it, not bully it into behaving for one salon photo.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## Your Root Situation
 
@@ -3000,7 +3000,7 @@ The ends can lie. The root does not.
 If the root tells the present, the ends tell the past. Old bleach, heat damage, box dye, previous highlights, hard water, rough brushing, too much hot tool work. It all shows up at the ends.
 
 > “Ends are receipts. They tell me what the hair has been through, even when the client says, 'I barely do anything to it.'”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 This is where your stylist decides whether your hair can handle a big color change, whether you need a hair treatment for damaged hair first, or whether those “just a little trim” ends actually need more than a little.
 
@@ -3019,7 +3019,7 @@ Clients often say “my hair is thick” when they mean the strands are coarse. 
 **Texture** is the size of each strand. **Density** is how much hair you have on your head. You can have fine hair with high density. You can have coarse hair with low density.
 
 > “With density, we are not guessing. We are checking what the haircut can support.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 This is why layers can look incredible on one client and tragic on another. Same reference photo, totally different hair reality.
 
@@ -3048,7 +3048,7 @@ This is why a good stylist might say, “I love this direction, but here is what
 Stylists are not judging. They are gathering evidence. If your hair is always in a bun, that matters. If the front pieces are heat-damaged, that matters. If your color is faded but your roots are six months grown out, that really matters.
 
 > “Some clients ask for hair that belongs to a person with a completely different schedule. Our job is to make it beautiful and realistic.”
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ## The One Thing You Keep Apologizing For
 
@@ -3057,7 +3057,7 @@ Clients apologize for everything. “My roots are so bad.” “I know my ends a
 Your stylist is usually not shocked. They have seen everything. Truly everything.
 
 > “Clients confess like they are in trouble. I'm not mad. I just need accurate information so I can get them where they want to go.”
-> , Dana Reeves, Salon Owner, Nashville
+> — Dana Reeves, Salon Owner, Nashville
 
 So yes, tell the truth. No, your stylist is probably not judging you. They are just updating the formula in their head.
 
@@ -3072,7 +3072,7 @@ The consultation is not small talk. It is the blueprint.
 When you sit down, your stylist is not just looking at your hair. They are reading the whole story: the root, the ends, the scalp, the density, the history, the lifestyle, and the version of yourself you are trying to walk out as.
 
 > “The hair tells us what it can do. The client tells us what they want. The appointment is where we make those two things meet.”
-> , Nina Patel, Colorist & Educator, Chicago
+> — Nina Patel, Colorist & Educator, Chicago
 
 That is the real work behind the chair.`,
     metaTitle: 'What Your Stylist Is Actually Looking at When You Sit Down',
@@ -3102,7 +3102,7 @@ Built on a platinum base, the look mixes saturated pink, yellow, red, and green 
 From a stylist’s point of view, the reason it works is placement. Multi-color hair can turn messy fast. Here, the platinum base gives the color room to breathe, so every shade looks intentional.
 
 > This is the kind of color that only works when the chaos is planned. On the wrong cut, it becomes costume. On GD, it becomes editorial.
-> , Marcus Bell, Colorist, London
+> — Marcus Bell, Colorist, London
 
 ![Style from 'Still Life' Music Video, 2022](/image/still-life.jpg)
 
@@ -3129,7 +3129,7 @@ It sounds ridiculous until you see it. Then it makes perfect sense.
 What makes it interesting is that the “flaw” becomes the feature. Most clients panic over visible roots. GD turned the root line into the concept.
 
 > That is the difference between trend and styling. A normal grow-out becomes iconic when someone decides it belongs there.
-> , Dana Reeves, Salon owner, Nashville
+> — Dana Reeves, Salon owner, Nashville
 
 ![Style from Mnet Asian Music Awards, 2013](https://hips.hearstapps.com/hmg-prod/images/dragon-of-bigbang-performs-on-the-stage-during-the-2013-news-photo-1649488839.jpg?crop=0.543xw:0.814xh;0.182xw,0.0740xh)
 
@@ -3168,7 +3168,7 @@ Platinum is a classic idol move, but GD’s version had bite.
 The transparent platinum tone paired with above-brow fringe made the whole look feel sharper, not softer.
 
 > Platinum does not forgive lazy maintenance. If the condition is off, the whole look collapses.
-> , Adam Kim, Hair Stylist, Los Angeles
+> — Adam Kim, Hair Stylist, Los Angeles
 
 ![Style during the filming of 'Crooked' Music Video, 2013](https://i.ytimg.com/vi/XquYfFI3_2M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5w8BjgCjoZsIfNLkf3Mdsr5yUog)
 
@@ -3211,7 +3211,7 @@ The loudest shades usually sit on cleaner shapes. The stranger silhouettes are b
 That is why his hair keeps getting referenced.
 
 > GD’s hair is never random. It just looks brave enough to be.
-> , Cassie Miller, Salon Business Coach, New Jersey `,
+> — Cassie Miller, Salon Business Coach, New Jersey `,
   metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
   metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from , and why the system behind them works.",
 },
@@ -4131,7 +4131,7 @@ Clients are moving away from hair that has to sit perfectly all day. The newer m
 This is also why the wolf cut has stayed popular in Asian beauty references, especially in K-pop, Thai celebrity styling, and Korean salon trends. Teen Vogue has noted that the wolf cut has long been a favorite in South Korean salons and K-pop styling, with its mix of soft face-framing, choppy texture, and gender-fluid shape.
 
 > The wolf cut is not about looking undone. It is about looking like you did not try too hard , and that takes real skill to cut.
-> , Yuna Seo, Cut & Style Editor
+> — Yuna Seo, Cut & Style Editor
 
 For many non-Asian hair types, especially straight, medium-thick, or dense hair, this cut can also be very useful. It removes heaviness without taking away the whole length. It gives straight hair more direction. It helps medium-length hair look less flat. And for clients growing out a bob or short cut, it gives the awkward stage a clear shape.
 
@@ -4511,19 +4511,6 @@ Female hair loss can come from several places. Sometimes the issue is shedding. 
 
 The goal is simple: help the client understand what we are seeing, what may be driving it, and when she needs medical support.
 
-## Start With What You Can See
-
-| What you see in the chair | What it may suggest |
-|---|---|
-| Wider part line | Pattern thinning |
-| More scalp showing at the crown | Gradual density loss |
-| Fine, wispy hairs at the temples | Miniaturization, postpartum regrowth, traction, or breakage |
-| Smaller ponytail | Shedding or lower overall density |
-| Thin ends with normal scalp density | Breakage or damage |
-| Redness, flaking, soreness, or itching | Scalp inflammation or a scalp condition |
-
-A client may say, “I'm losing hair,” but the pattern tells us more than the panic.
-
 ## The Main Patterns Stylists Should Separate
 
 | Pattern | What it looks like | What to explain to the client |
@@ -4534,7 +4521,6 @@ A client may say, “I'm losing hair,” but the pattern tells us more than the 
 | Scalp inflammation | Itching, flakes, redness, soreness, oil imbalance | The scalp environment may be making it harder for the follicle to function well. |
 | Tension loss | Weak edges, thinning temples, tight-style history | Repeated pulling can stress the follicle, especially around the hairline. |
 
-This is where the consultation gets better. A client with breakage needs a different plan than a client with pattern thinning. A client shedding after a stressful event needs a different conversation than someone whose part line has been widening for years.
 
 ## Pattern Thinning: The Follicle Gets Smaller Over Time
 
@@ -4568,9 +4554,8 @@ Pattern thinning moves slower. Shedding can feel sudden.
 
 That difference matters. A product may reduce fallout, but density only improves if stronger hair is growing back from the follicle.
 
-**What to ask:**
 
-| Ask | Why it matters |
+| What to ask | Why it matters |
 |---|---|
 | “When did this start?” | Sudden shedding and slow thinning point to different causes. |
 | “Did anything major happen 2 to 4 months before?” | Delayed shedding often follows stress, illness, surgery, postpartum shifts, or weight changes. |
@@ -4594,9 +4579,8 @@ Inflammation, itching, flakes, oil imbalance, tightness, or irritation can make 
 
 Persistent redness, scaling, pain, sores, or patchy loss should be referred to a dermatologist.
 
-**What to ask:**
 
-| Ask | Why it matters |
+| What to ask | Why it matters |
 |---|---|
 | “Any itching, burning, soreness, or flaking?” | Scalp inflammation may be involved. |
 | “Does your scalp feel oily, tight, or irritated?” | Scalp imbalance can affect comfort and consistency with routines. |
@@ -4606,7 +4590,10 @@ Persistent redness, scaling, pain, sores, or patchy loss should be referred to a
 
 This is the part clients rarely hear.
 
-Hair growth depends on the follicle and the tissue around it. Inside the follicle, dermal papilla cells help control hair size, growth rhythm, and follicle strength. Around the follicle, blood flow, oxygen response, hormone signals, inflammation, and local energy support all influence how well the follicle performs.
+Hair growth depends on the follicle and the tissue around it. 
+
+- **Inside the follicle,** dermal papilla cells help control hair size, growth rhythm, and follicle strength. 
+- **Around the follicle,** blood flow, oxygen response, hormone signals, inflammation, and local energy support all influence how well the follicle performs.
 
 Clients do not need the technical terms. They need the useful takeaway:
 
