@@ -85,7 +85,7 @@ function StepList({ steps }: { steps: { step: number; title: string; body: strin
   )
 }
 
-function InlineImage({ src, caption }: { src: string; caption: string }) {
+function InlineImage({ src, caption, full }: { src: string; caption: string; full?: boolean }) {
   const [loaded, setLoaded] = useState(false)
   return (
     <figure className="my-10 -mx-4 md:mx-0">
@@ -99,7 +99,7 @@ function InlineImage({ src, caption }: { src: string; caption: string }) {
           loading="lazy"
           onLoad={() => setLoaded(true)}
           className="w-full object-cover transition-opacity duration-500"
-          style={{ opacity: loaded ? 1 : 0, maxHeight: '360px' }}
+          style={{ opacity: loaded ? 1 : 0, ...(full ? {} : { maxHeight: '360px' }) }}
         />
       </div>
       <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
@@ -245,7 +245,7 @@ function ImageRow({ images }: { images: { src: string; caption: string }[] }) {
 function ImagePlaceholder({ caption }: { caption: string }) {
   return (
     <figure className="my-10 -mx-4 md:mx-0">
-      <div className="relative overflow-hidden bg-charcoal-900 border border-white/5 flex flex-col items-center justify-center gap-3 py-16">
+      <div className="relative overflow-hidden bg-charcoal-900 border border-white/5 flex flex-col items-center justify-center gap-3" style={{ aspectRatio: '16/9', minHeight: '320px' }}>
         <ImageIcon size={32} className="text-charcoal-700" />
         <p className="text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium">Image placeholder</p>
       </div>
@@ -253,6 +253,113 @@ function ImagePlaceholder({ caption }: { caption: string }) {
         {caption}
       </figcaption>
     </figure>
+  )
+}
+
+function BarChart({ title, bars, footnote }: { title: string; bars: { label: string; value: number }[]; footnote?: string }) {
+  const max = Math.max(...bars.map((b) => b.value), 1)
+  return (
+    <div className="my-10 border border-white/10 bg-white/[0.02] p-6 md:p-8">
+      <p className="text-[11px] tracking-[0.25em] text-gold-500 font-medium mb-6">{title.replace(/[a-z]/g, (c) => c.toUpperCase())}</p>
+      <div className="flex flex-col gap-5">
+        {bars.map(({ label, value }, i) => (
+          <div key={i} className="flex items-center gap-4">
+            <span className="w-24 flex-shrink-0 text-[12px] text-charcoal-400 text-right leading-tight">{label}</span>
+            <div className="flex-1 flex items-center gap-3">
+              <div className="flex-1 bg-white/5 h-8 relative overflow-hidden">
+                <div
+                  className="absolute inset-y-0 left-0 bg-gold-500 transition-all duration-700"
+                  style={{ width: `${(value / max) * 100}%`, opacity: i === 0 ? 1 : 0.45 }}
+                />
+              </div>
+              <span className="text-sm font-semibold text-charcoal-200 w-10 flex-shrink-0">{value}%</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      {footnote && (
+        <p className="text-[13px] text-charcoal-400 mt-5 leading-relaxed">{renderInline(footnote)}</p>
+      )}
+    </div>
+  )
+}
+
+function SplitTable({ left, right }: { left: { heading: string; items: string[] }; right: { heading: string; items: string[] } }) {
+  return (
+    <div className="my-8 grid grid-cols-1 sm:grid-cols-2 gap-0 border border-white/10 overflow-hidden">
+      {[left, right].map((col, ci) => (
+        <div key={ci} className={`p-5 ${ci === 0 ? 'border-b sm:border-b-0 sm:border-r border-white/10' : ''}`}>
+          <p className={`text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 ${ci === 0 ? 'text-gold-500' : 'text-charcoal-500'}`}>
+            {col.heading}
+          </p>
+          <ul className="flex flex-col gap-3">
+            {col.items.map((item, ii) => (
+              <li key={ii} className="flex gap-2.5 text-sm text-charcoal-300 leading-relaxed">
+                <span className={`flex-shrink-0 mt-1.5 w-1 h-1 rounded-full ${ci === 0 ? 'bg-gold-500' : 'bg-charcoal-600'}`} />
+                {renderInline(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function CaseStudySeparator() {
+  return (
+    <div className="my-10 flex items-center gap-4">
+      <div className="flex-1 h-px bg-white/10" />
+      <p className="text-[9px] tracking-[0.3em] uppercase text-gold-500/60 font-semibold flex-shrink-0 px-2">Client Case Study</p>
+      <div className="flex-1 h-px bg-white/10" />
+    </div>
+  )
+}
+
+function ReferenceBox({ items }: { items: string[] }) {
+  return (
+    <div className="mt-12 border border-white/10 p-6">
+      <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4">References &amp; Sources</p>
+      <ol className="flex flex-col gap-3">
+        {items.map((item, i) => (
+          <li key={i} className="flex gap-3 text-[12px] text-charcoal-500 leading-relaxed">
+            <span className="flex-shrink-0 text-gold-500/50 font-medium w-4">{i + 1}.</span>
+            <span>{renderInline(item)}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+function CascadeList({ items }: { items: string[] }) {
+  return (
+    <div className="my-8 flex flex-col">
+      {items.map((item, i) => (
+        <div key={i} className="flex gap-0">
+          {/* Left gutter: connector line + dot */}
+          <div className="flex flex-col items-center" style={{ width: `${20 + i * 20}px`, flexShrink: 0 }}>
+            <div className={`w-2 h-2 rounded-full border-2 flex-shrink-0 ${i === items.length - 1 ? 'bg-gold-500 border-gold-500' : 'border-gold-500/50 bg-transparent'}`} />
+            <div className="w-px flex-1 bg-gold-500/20" />
+          </div>
+          {/* Content */}
+          <div className={`pb-6 pt-0.5 pl-4 flex-1 ${i === items.length - 1 ? 'pb-0' : ''}`}>
+            {i === 0 && (
+              <p className="text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5" style={{ color: 'rgba(201,168,76,0.75)' }}>Scalp environment support | NV-273</p>
+            )}
+            {i === 1 && (
+              <p className="text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5" style={{ color: 'rgba(201,168,76,0.75)' }}>DHT-related stress modulation | NV-1065</p>
+            )}
+            {i === items.length - 1 && i > 1 && (
+              <p className="text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5" style={{ color: 'rgba(201,168,76,0.75)' }}>Follicle cell support | NV-623 + NV-624</p>
+            )}
+            <p className="text-base md:text-[17px] leading-[1.8] text-charcoal-300">
+              {renderInline(item)}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }
 
@@ -264,7 +371,7 @@ const formulaRows = [
 ]
 
 function renderInline(text: string): React.ReactNode[] {
-  const pattern = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|\[([^\]]+)\]\([^)]+\))/g
+  const pattern = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|==(.+?)==|~~(.+?)~~|\[([^\]]+)\]\(([^)]+)\))/g
   const nodes: React.ReactNode[] = []
   let cursor = 0
   let match: RegExpExecArray | null
@@ -274,7 +381,9 @@ function renderInline(text: string): React.ReactNode[] {
     if (match[2]) nodes.push(<strong key={key++} className="text-charcoal-100 font-semibold">{match[2]}</strong>)
     else if (match[3]) nodes.push(<em key={key++}>{match[3]}</em>)
     else if (match[4]) nodes.push(<code key={key++} className="text-[0.9em] bg-white/10 px-1 rounded font-mono">{match[4]}</code>)
-    else if (match[5]) nodes.push(match[5])
+    else if (match[5]) nodes.push(<mark key={key++} className="bg-gold-500 text-black font-semibold px-0.5 rounded-sm not-italic">{match[5]}</mark>)
+    else if (match[6]) nodes.push(<span key={key++} className="text-gold-500">{match[6]}</span>)
+    else if (match[7]) nodes.push(<a key={key++} href={match[8] ?? '#'} className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">{match[7]}</a>)
     cursor = match.index + match[0].length
   }
   if (cursor < text.length) nodes.push(text.slice(cursor))
@@ -289,7 +398,38 @@ function MarkdownBody({ body }: { body: string }) {
   // Pre-process: extract :::quote-carousel blocks before splitting on double newlines
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
   const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
+  const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string }[] = []
+  const cascadePlaceholders: { items: string[] }[] = []
   let processedBody = body.replace(
+    /:::cascade-list\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const items = inner.trim().split('\n').filter((l) => l.trim().startsWith('- ')).map((l) => l.replace(/^-\s+/, '').trim())
+      const id = cascadePlaceholders.length
+      cascadePlaceholders.push({ items })
+      return `CASCADE_LIST_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
+    /:::bar-chart\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n').filter(Boolean)
+      const titleLine = lines.find((l) => l.startsWith('title:'))
+      const title = titleLine ? titleLine.replace(/^title:\s*/, '') : ''
+      const footnoteLine = lines.find((l) => l.startsWith('footnote:'))
+      const footnote = footnoteLine ? footnoteLine.replace(/^footnote:\s*/, '') : undefined
+      const bars = lines
+        .filter((l) => l.startsWith('- '))
+        .map((l) => {
+          const m = l.match(/^-\s+(.+?)\s*:\s*(\d+)$/)
+          return m ? { label: m[1], value: parseInt(m[2]) } : null
+        })
+        .filter(Boolean) as { label: string; value: number }[]
+      const id = barChartPlaceholders.length
+      barChartPlaceholders.push({ title, bars, footnote })
+      return `BARCHART_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
     /:::image-row\n([\s\S]*?):::/g,
     (_match, inner: string) => {
       const lines = inner.trim().split('\n').filter(Boolean)
@@ -319,6 +459,38 @@ function MarkdownBody({ body }: { body: string }) {
       return `CAROUSEL_PLACEHOLDER_${id}`
     }
   )
+  const splitTablePlaceholders: { left: { heading: string; items: string[] }; right: { heading: string; items: string[] } }[] = []
+  processedBody = processedBody.replace(
+    /:::split-table\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n')
+      let leftHeading = '', rightHeading = ''
+      const leftItems: string[] = [], rightItems: string[] = []
+      let section: 'left' | 'right' | null = null
+      for (const line of lines) {
+        const lh = line.match(/^left-heading:\s*(.+)$/)
+        const rh = line.match(/^right-heading:\s*(.+)$/)
+        if (lh) { leftHeading = lh[1]; section = 'left'; continue }
+        if (rh) { rightHeading = rh[1]; section = 'right'; continue }
+        if (line.trim().startsWith('- ') && section === 'left') leftItems.push(line.replace(/^-\s+/, '').trim())
+        if (line.trim().startsWith('- ') && section === 'right') rightItems.push(line.replace(/^-\s+/, '').trim())
+      }
+      const id = splitTablePlaceholders.length
+      splitTablePlaceholders.push({ left: { heading: leftHeading, items: leftItems }, right: { heading: rightHeading, items: rightItems } })
+      return `SPLIT_TABLE_PLACEHOLDER_${id}`
+    }
+  )
+  const referencePlaceholders: { items: string[] }[] = []
+  processedBody = processedBody.replace(
+    /:::references\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const items = inner.trim().split('\n').filter((l) => l.trim().startsWith('- ')).map((l) => l.replace(/^-\s+/, '').trim())
+      const id = referencePlaceholders.length
+      referencePlaceholders.push({ items })
+      return `REFERENCES_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(/:::case-study-separator:::/g, 'CASE_STUDY_SEPARATOR')
 
   const blocks = processedBody.split(/\n\n+/)
   return (
@@ -326,6 +498,28 @@ function MarkdownBody({ body }: { body: string }) {
       {blocks.map((block, i) => {
         const trimmed = block.trim()
         if (!trimmed) return null
+
+        if (trimmed === 'CASE_STUDY_SEPARATOR') return <CaseStudySeparator key={i} />
+
+        const refMatch = trimmed.match(/^REFERENCES_PLACEHOLDER_(\d+)$/)
+        if (refMatch) {
+          const rp = referencePlaceholders[parseInt(refMatch[1])]
+          return <ReferenceBox key={i} items={rp.items} />
+        }
+
+        // Bar chart placeholder
+        const barChartMatch = trimmed.match(/^BARCHART_PLACEHOLDER_(\d+)$/)
+        if (barChartMatch) {
+          const bp = barChartPlaceholders[parseInt(barChartMatch[1])]
+          return <BarChart key={i} title={bp.title} bars={bp.bars} footnote={bp.footnote} />
+        }
+
+        // Split table placeholder
+        const splitTableMatch = trimmed.match(/^SPLIT_TABLE_PLACEHOLDER_(\d+)$/)
+        if (splitTableMatch) {
+          const st = splitTablePlaceholders[parseInt(splitTableMatch[1])]
+          return <SplitTable key={i} left={st.left} right={st.right} />
+        }
 
         // Quote carousel placeholder
         const carouselMatch = trimmed.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/)
@@ -341,15 +535,24 @@ function MarkdownBody({ body }: { body: string }) {
           return <ImageRow key={i} images={rp.images} />
         }
 
+        // Cascade list placeholder
+        const cascadeMatch = trimmed.match(/^CASCADE_LIST_PLACEHOLDER_(\d+)$/)
+        if (cascadeMatch) {
+          const cl = cascadePlaceholders[parseInt(cascadeMatch[1])]
+          return <CascadeList key={i} items={cl.items} />
+        }
+
         const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
         if (cta) return <CtaCallout key={i}>{renderInline(cta[2])}</CtaCallout>
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
-        // inline image: ![caption](url) — empty url becomes a placeholder
+        // inline image: ![caption](url) or ![caption|full](url) — empty url becomes a placeholder
         const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]*)\)$/)
         if (img) {
-          if (!img[2]) return <ImagePlaceholder key={i} caption={img[1]} />
-          return <InlineImage key={i} src={img[2]} caption={img[1]} />
+          const full = img[1].endsWith('|full')
+          const caption = full ? img[1].slice(0, -5) : img[1]
+          if (!img[2]) return <ImagePlaceholder key={i} caption={caption} />
+          return <InlineImage key={i} src={img[2]} caption={caption} full={full} />
         }
         const h3 = trimmed.match(/^### (.+)/)
         if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>
@@ -388,34 +591,49 @@ function MarkdownBody({ body }: { body: string }) {
           const parsed = rows.map((r) =>
             r.split('|').slice(1, -1).map((c) => c.trim())
           )
-          // second row is the separator (---|---), skip it
           const isSep = (row: string[]) => row.every((c) => /^[-: ]+$/.test(c))
           const headerRow = parsed[0]
           const bodyRows = parsed.slice(1).filter((r) => !isSep(r))
           return (
-            <div key={i} className="my-8 border border-white/10 overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-white/[0.04] border-b border-white/10">
-                    {headerRow.map((cell, j) => (
-                      <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
-                        {cell}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/5">
-                  {bodyRows.map((row, ri) => (
-                    <tr key={ri} className="hover:bg-white/[0.02]">
-                      {row.map((cell, ci) => (
-                        <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
-                          {renderInline(cell)}
-                        </td>
+            <div key={i} className="my-8 border border-white/10">
+              {/* Mobile: stacked cards */}
+              <div className="md:hidden divide-y divide-white/5">
+                {bodyRows.map((row, ri) => (
+                  <div key={ri} className="p-4 flex flex-col gap-3">
+                    {row.map((cell, ci) => cell ? (
+                      <div key={ci}>
+                        <p className="text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1">{headerRow[ci]}</p>
+                        <p className="text-sm text-charcoal-300 leading-relaxed">{renderInline(cell)}</p>
+                      </div>
+                    ) : null)}
+                  </div>
+                ))}
+              </div>
+              {/* Desktop: regular table */}
+              <div className="hidden md:block overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-white/[0.04] border-b border-white/10">
+                      {headerRow.map((cell, j) => (
+                        <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
+                          {cell}
+                        </th>
                       ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    {bodyRows.map((row, ri) => (
+                      <tr key={ri} className="hover:bg-white/[0.02]">
+                        {row.map((cell, ci) => (
+                          <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
+                            {renderInline(cell)}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )
         }

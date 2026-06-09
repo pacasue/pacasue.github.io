@@ -80,7 +80,7 @@ export const authors: Record<string, Author> = {
   'Lauren Chavez': {
     name: 'Lauren Chavez',
     title: 'Hair Health & Thinning Specialist',
-    bio: 'Lauren is a senior stylist and hair health educator based in Miami with over 14 years behind the chair. She specializes in thinning hair, scalp care, and early-stage hair loss, and works closely with trichologists to bridge the gap between clinical advice and everyday salon practice. She writes about what stylists see , and what clients often miss.',
+    bio: 'Lauren is a senior stylist and hair health educator based in Miami with over 14 years behind the chair. She specializes in thinning hair, scalp care, and early-stage hair loss, and works closely with trichologists to bridge the gap between clinical advice and everyday salon practice. She writes about what stylists see, and what clients often miss.',
     image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
   'Marissa Chen': {
@@ -1065,8 +1065,7 @@ Consider booking with a dermatologist if you notice:
 - thinning at the part or crown that’s progressing
 - hair loss that started alongside other symptoms (fatigue, skin changes, or systemic symptoms)
 
-If you suspect **alopecia areata**, the National Alopecia Areata Foundation offers a **Doctor Finder** designed to help people find board-certified dermatologists (and some other qualified clinicians) experienced in diagnosing and treating alopecia areata
-.
+If you suspect **alopecia areata**, the National Alopecia Areata Foundation offers a **Doctor Finder** designed to help people find board-certified dermatologists (and some other qualified clinicians) experienced in diagnosing and treating alopecia areata.
 
 When you meet a clinician, they’ll typically evaluate the pattern and severity of hair loss as part of care planning. That’s a major reason medical evaluation matters,because the right treatment depends on what’s happening under the surface, not just how the hair looks today.
 
@@ -4630,279 +4629,294 @@ That makes the product conversation more honest. Some products support the scalp
     metaTitle: 'What Stylists Should Know About Female Hair Loss',
     metaDescription: 'A practical chair-side guide to reading female hair loss patterns, understanding shedding vs. thinning, and having better conversations with clients about density and growth.',
   },
-//   {
-//     id: 32,
-//     slug: 'french-open-tennis-hairstyles',
-//     tag: 'Cut & Style',
-//     title: 'Game, Set, Hair',
-//     excerpt: 'Clay-court season has a very specific beauty mood. From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear now and into U.S. Open season.',
-//     author: 'Nora Bell',
-//     date: 'Jun 1, 2026',
-//     readTime: '8 min',
-//     image: '/image/tennis-hair-hero.jpg',
-//     category: 'Cut & Style',
-//     section: 'Trends',
-//     body: `Clay-court season has a very specific beauty mood: sun, sweat, red clay, crisp tennis whites, slicked-back hair, braided ponytails, and hair accessories that actually have a job.
+  {
+    id: 32,
+    slug: 'french-open-tennis-hairstyles',
+    tag: 'Cut & Style',
+    title: 'Game, Set, Hair',
+    excerpt: 'Clay-court season has a very specific beauty mood. From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear now and into U.S. Open season.',
+    author: 'Nora Bell',
+    date: 'Jun 4, 2026',
+    readTime: '8 min',
+    image: 'https://images.unsplash.com/photo-1548920168-70d61248a912?fm=jpg&q=80&w=1600&auto=format&fit=crop',
+    category: 'Cut & Style',
+    section: 'Trends',
+    body: `Clay-court season has a very specific beauty mood: sun, sweat, red clay, crisp tennis whites, slicked-back hair, braided ponytails, and hair accessories that actually have a job.
 
-// With Roland-Garros running through June 7 and the U.S. Open already on the late-summer calendar, tennis hair is moving from the court into everyday summer styling. Think less "perfect blowout," more court-ready, sweat-proof, still looks good after the match.
+With Roland-Garros running through June 7 and the U.S. Open already on the late-summer calendar, tennis hair is moving from the court into everyday summer styling. Think less "perfect blowout," more court-ready, sweat-proof, still looks good after the match.
 
-// ## Why Athlete Hair Works So Well for Summer
+## Why Athlete Hair Works So Well for Summer
 
-// A match-day hairstyle has to survive running, serving, jumping, sweating, wind, visors, towels, and warmups. It cannot fall apart five minutes in and cannot pull so hard that your scalp hurts before the first set is over.
+A match-day hairstyle has to survive running, serving, jumping, sweating, wind, visors, towels, and warmups. It cannot fall apart five minutes in and cannot pull so hard that your scalp hurts before the first set is over.
 
-// That is why tennis players keep coming back to a few reliable shapes: high ponytails, braided ponytails, bubble ponies, headbands, slick buns, visor-friendly styles, and face-framing tendrils. Coco Gauff, Serena Williams, Venus Williams, Aryna Sabalenka, and Ons Jabeur all show different versions of the same idea: athletic hair can be practical and still have personality.
+That is why tennis players keep coming back to a few reliable shapes: high ponytails, braided ponytails, bubble ponies, headbands, slick buns, visor-friendly styles, and face-framing tendrils. Coco Gauff, Serena Williams, Venus Williams, Aryna Sabalenka, and Ons Jabeur all show different versions of the same idea: athletic hair can be practical and still have personality.
 
-// ## 1. The Double-Anchor High Ponytail
 
-// A high ponytail is the easiest sporty hairstyle, but it is also the one most likely to slip or whip into your face. The fix is a double-anchor ponytail.
+## The Bubble Ponytail
 
-// Tie the top half into a ponytail at your ideal height. Divide the lower section into two pieces, bring them up around the first ponytail, and secure everything together with a second elastic. This gives the ponytail more lift, spreads the weight, and keeps it from collapsing during movement.
+For long hair, a regular ponytail can swing, tangle, hit your face, and pull on the scalp. A bubble ponytail keeps the length controlled.
 
-// - **Best for:** tennis, gym, running, summer errands
-// - **Works well on:** medium to long hair
-// - **Why it works:** less scalp tension, better hold, fuller-looking ponytail
-// - **Style tip:** wrap a small piece of hair around the elastic for a polished finish
+Tie your hair into a ponytail, then add small elastics every few inches down the length. Gently pull each section outward to create soft bubbles. It gives shape without needing braiding skills.
 
-// :::image-row
-// ![Double-anchor high ponytail with fuller shape and less scalp tension]()
-// ![Double-anchor ponytail from the back showing lift]()
-// ![Double-anchor ponytail worn with a visor]()
-// :::
+- **Best for:** long hair, thick hair, high-impact movement
+- **Works well with:** tennis skirts, oversized jerseys, summer dresses
+- **Why it works:** controls hair movement and keeps the ponytail from whipping around
+- **Style tip:** use clear or color-matched elastics for a clean look, or bright elastics for U.S. Open energy
 
-// ## 2. The Bubble Ponytail
+:::image-row
+![Bubble ponytail with evenly spaced soft sections on long hair](/image/bubble1.webp)
+![Bubble ponytail from the side showing shape](/image/bubble2.webp)
+![Bubble ponytail with brightly colored elastics](/image/bubble3.webp)
+:::
 
-// For long hair, a regular ponytail can swing, tangle, hit your face, and pull on the scalp. A bubble ponytail keeps the length controlled.
 
-// Tie your hair into a ponytail, then add small elastics every few inches down the length. Gently pull each section outward to create soft bubbles. It gives shape without needing braiding skills.
+## The Braided Ponytail
 
-// - **Best for:** long hair, thick hair, high-impact movement
-// - **Works well with:** tennis skirts, oversized jerseys, summer dresses
-// - **Why it works:** controls hair movement and keeps the ponytail from whipping around
-// - **Style tip:** use clear or color-matched elastics for a clean look, or bright elastics for U.S. Open energy
+The braided ponytail is a classic athlete hairstyle for a reason. It keeps the hair together, limits tangling, and still gives movement. It also looks good with visors, headbands, and tennis dresses.
 
-// :::image-row
-// ![Bubble ponytail with evenly spaced soft sections on long hair]()
-// ![Bubble ponytail from the side showing shape]()
-// ![Bubble ponytail with brightly colored elastics]()
-// :::
+Serena and Venus Williams made braids one of the most iconic beauty signatures in tennis, especially with beaded styles early in their careers. Their influence is still part of how we talk about hair, sport, and self-expression on court.
 
-// ## 3. The Tennis Visor Ponytail
+- **Best for:** tennis, training, long hair, textured hair, protective styling
+- **Works well with:** headbands, ribbons, beads, wrapped elastics
+- **Why it works:** keeps the length controlled while still looking strong
+- **Style tip:** start with a secure ponytail base first, then braid the length so the base does not loosen
 
-// A visor hides oily roots, controls flyaways, absorbs sweat, and gives a regular ponytail a more athletic finish. It also works better than a full cap if you want airflow.
+:::image-row
+![Braided ponytail secured with a ribbon at the base](/image/braided1.webp)
+![Double Braided ponytail on textured hair with beaded ends](/image/braided2.webp)
+![Braided ponytail worn under a cap](/image/braided3.webp)
+:::
 
-// This is the easiest way to make second-day hair look intentional.
+## Boxer Braids
 
-// - **Best for:** outdoor tennis, pickleball, beach walks, errands, travel days
-// - **Works well on:** ponytails, low buns, braided ponytails
-// - **Why it works:** protects the eyes, keeps hairline pieces in place, adds sport styling instantly
-// - **Style tip:** for French Open energy, try cream, navy, or clay red. For U.S. Open, go white, cobalt, or tennis-ball yellow.
+Boxer braids, also known as double Dutch braids, are one of the most secure sport hairstyles. They sit close to the scalp, keep layers controlled, and work for everything from tennis to boxing to dance workouts.
 
-// :::image-row
-// ![Tennis visor ponytail in clay red for Roland-Garros energy]()
-// ![White visor with sleek ponytail for U.S. Open styling]()
-// ![Visor worn with a braided ponytail]()
-// :::
+This is the style to choose when you do not want to think about your hair again for the rest of the day.
 
-// ## 4. The Braided Ponytail
+- **Best for:** high-impact workouts, layered hair, thick hair, long days outside
+- **Works well on:** straight, wavy, curly, and textured hair
+- **Why it works:** maximum hold with minimal loose hair
+- **Style tip:** add a little dry shampoo or texture spray before braiding so the hair has grip
 
-// The braided ponytail is a classic athlete hairstyle for a reason. It keeps the hair together, limits tangling, and still gives movement. It also looks good with visors, headbands, and tennis dresses.
+:::image-row
+![Boxer braids sitting close to the scalp on straight hair](/image/boxer1.webp)
+![Double Dutch braids on thick textured hair](/image/boxer2.webp)
+![Boxer braids tied off with bright elastics](/image/boxer3.webp)
+:::
 
-// Serena and Venus Williams made braids one of the most iconic beauty signatures in tennis, especially with beaded styles early in their careers. Their influence is still part of how we talk about hair, sport, and self-expression on court.
+## The Ribbon Ponytail
 
-// - **Best for:** tennis, training, long hair, textured hair, protective styling
-// - **Works well with:** headbands, ribbons, beads, wrapped elastics
-// - **Why it works:** keeps the length controlled while still looking strong
-// - **Style tip:** start with a secure ponytail base first, then braid the length so the base does not loosen
+A ribbon is the easiest way to make a plain ponytail feel French Open-inspired. Tie your hair into a ponytail or braid, then add a ribbon at the base or around the end.
 
-// :::image-row
-// ![Braided ponytail secured with a ribbon at the base]()
-// ![Braided ponytail on textured hair with beaded ends]()
-// ![Braided ponytail worn under a visor]()
-// :::
+For Roland-Garros energy, choose clay red, cream, espresso brown, dusty pink, or navy. For U.S. Open energy, go brighter: cobalt, white, yellow, metallic silver, or black.
 
-// ## 5. The Headband and Braid Combo
+- **Best for:** simple ponytails, braids, low buns, half-up hair
+- **Works well with:** tennis dresses, polos, pleated skirts, sporty summer outfits
+- **Why it works:** inexpensive, easy, and instantly styled
+- **Style tip:** choose a grosgrain ribbon if you want it to hold better than satin
 
-// A headband keeps sweat away from the face, controls baby hairs, and makes even a basic braid look more styled. This is also where tennis hair starts to feel more fashion-forward.
+:::image-row
+![Ribbon ponytail in clay red for Roland-Garros styling](/image/ribbon1.webp)
+![Cream grosgrain ribbon tied at a low ponytail base](/image/ribbon2.webp)
+![Bright cobalt ribbon on a braided ponytail for U.S. Open energy](/image/ribbon3.webp)
+:::
 
-// Coco Gauff has leaned into coordinated on-court styling, including headbands that match the rest of her match look. The accessory becomes part of the full look rather than an afterthought.
 
-// - **Best for:** flyaways, shorter front layers, sweaty workouts
-// - **Works well on:** braids, ponytails, buns, natural texture
-// - **Why it works:** adds hold and style at the same time
-// - **Style tip:** match the headband to your outfit for a clean tennis-core look, or use a contrast color if you want it to pop
+## How to Make Sport Hair Actually Stay
 
-// :::image-row
-// ![Headband and braid combo with a color-matched headband]()
-// ![White elastic headband on a braided ponytail]()
-// ![Headband worn with a loose braid and natural texture]()
-// :::
+Start with hair that has grip. Freshly washed, silky hair can slip out faster, so a little dry shampoo, texture spray, or light styling cream helps.
 
-// ## 6. The Sleek Match-Day Bun
+Use strong elastics. Do not tie every style at maximum tension. A hairstyle can feel secure without pulling at the hairline. If your scalp hurts before you leave the house, redo it.
 
-// For a cleaner, more locked-in look, go for a slick bun. It feels sharp, grown-up, and very tournament-ready. Aryna Sabalenka wore a slicked-back bun at the 2026 French Open, pairing it with a black tennis dress and clay-inspired jewelry.
+For outdoor tennis or summer workouts, keep a mini kit in your bag: extra elastics, a few bobby pins, a small brush, dry shampoo, and a soft headband.
 
-// The key is not making the bun too tight. You want control, not a traction headache.
+## The Takeaway
 
-// - **Best for:** hot days, high humidity, short front pieces, polished sport looks
-// - **Works well on:** straight, wavy, curly, and textured hair
-// - **Why it works:** keeps everything off the face and neck
-// - **Style tip:** use a brush, light gel or styling cream, then secure with a strong elastic and pins if needed
+The best athletic hairstyles are not complicated. They are secure, clean, and easy to refresh.
 
-// :::image-row
-// ![Sleek match-day bun, smooth and centered]()
-// ![Slicked-back bun from the side on a tennis court]()
-// ![Low sleek bun as a polished sport alternative]()
-// :::
+French Open-inspired hair gives you clay-court polish: braids, ribbons, visors, slick buns, and soft sporty details. U.S. Open season brings the late-summer version: brighter colors, harder hold, sweat-proof styling, and a little New York attitude.
 
-// ## 7. The Side-Part Ponytail
+Whether you are playing tennis, watching from the stands, or just wearing the tennis-core outfit because it looks good, the rule is simple: your hair should stay out of your face and still look like part of the look.`,
+    metaTitle: 'Game, Set, Hair: French Open-Inspired Sport Hairstyles for Summer 2026',
+    metaDescription: 'From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear through French Open and into U.S. Open season.',
+  },
+  {
+  id: 33,
+  slug: 'what-your-hair-says-about-you-sex-and-the-city',
+  tag: 'Style & Culture',
+  title: 'Your Hair Is Already Talking. Are You Listening?',
+  excerpt:
+    "From Nicole Kidman's iconic curls making a comeback to the four women of Sex and the City, here's why a haircut says more about who you are—and who you're becoming—than almost anything else.",
+  author: 'Nora Bell',
+  date: 'Jun 7, 2026',
+  readTime: '10 min',
+  // Hero: four fashionable women on a city street, group shot
+  image: '/image/change-hair-1.webp',
+  category: 'Style & Culture',
+  section: 'Inspiration',
+  body: `A new hairstyle really does change your face. Not metaphorically, literally.
 
-// A super-clean high ponytail can feel too exposed if you are worried about your hairline or forehead. A side part solves that.
+There's a reason Nicole Kidman's golden curls set off a whole internet moment not long ago. She'd just made headlines for her first solo Christmas post-divorce, but what people couldn't stop talking about wasn't her relationship status, it was her *energy*. Silk Doen dress, a Chanel wicker bag, Manolo Blahnik gold sandals, effortlessly cool and completely unbothered. And then those curls.
 
-// Create a soft side part, smooth the front section slightly across the forehead, then gather the rest into a ponytail. This style works especially well under a visor because the visor holds the front section in place.
+"Those curls are back and suddenly she looks 25 again," someone wrote. And honestly? Not wrong.
 
-// - **Best for:** hairline concerns, round faces, high foreheads, second-day hair
-// - **Works well with:** visors, low ponytails, braided ponytails
-// - **Why it works:** gives shape around the face without loose hair flying everywhere
-// - **Style tip:** do not over-gel the front. A little movement makes it look more modern.
+The classic "transformation" arc almost always plays out the same way: frizzy curls smoothed into sleek straight hair signals a character's arrival, her polish, her upgrade. It's the *Princess Diaries* makeover in visual shorthand.
 
-// :::image-row
-// ![Side-part ponytail with smooth front section and soft part]()
-// ![Side-part ponytail under a visor]()
-// ![Side-part low ponytail for a softer sport look]()
-// :::
+:::image-row
+![Nicole's curly hair](/image/nicole1.webp)
+![Nicole in Princess Diaries](/image/nicole2.webp)
+:::
 
-// ## 8. Rope Braid Ponytail
+There was also a different kind of reading going around, photos from other recent appearances, her hair loose and a little undone. Some people saw that look and called it messy. Others called it freedom.
 
-// Split the ponytail into two sections. Twist both in the same direction, then wrap them around each other in the opposite direction. Secure the end with an elastic.
+Same person, two different hairstyles, two completely different conversations.
 
-// The result is sleek, sculpted, and sporty. It also photographs well because the twist catches light differently than a regular braid.
+## Hair Changes More Than Your Look
 
-// - **Best for:** medium to long hair, sleek looks, court-to-dinner styling
-// - **Works well with:** slick ponytails, wrapped elastics, ribbons
-// - **Why it works:** gives the ponytail structure without three-strand braiding
-// - **Style tip:** use a little styling cream before twisting so the braid does not unravel
+People say a new haircut changes everything. But it's not really that the cut changes *you*, it's that the cut reflects something that was already shifting inside. Nicole Kidman stepping out with her signature curls wasn't just a styling choice. It was a signal.
 
-// :::image-row
-// ![Rope braid ponytail with visible twist catching light]()
-// ![Rope braid from the back on straight hair]()
-// ![Rope braid tied with a grosgrain ribbon]()
-// :::
+Film directors have known this forever. When a character needs to evolve on screen, the costume department gets involved, but the hair department goes first.
 
-// ## 9. Boxer Braids
+:::image-row
+![Sarah Snook in Succession](/image/succession1.webp)
+![Sarah Snook in Succession](/image/succession2.webp)
+:::
 
-// Boxer braids, also known as double Dutch braids, are one of the most secure sport hairstyles. They sit close to the scalp, keep layers controlled, and work for everything from tennis to boxing to dance workouts.
+When a character crosses into power, really starts playing the game, the hair gets shorter. Sharper. Think *Succession*: the longer something stays in the family, the more aggressive the lines become.
 
-// This is the style to choose when you do not want to think about your hair again for the rest of the day.
+And then there's the moment that hits differently every time you see it. The mirror scene. The scissors. A character cutting off her own hair is never just about hair. *Gone Girl*, *Blue Is the Warmest Color*, dozens of others, the haircut is the turning point, the declaration, the thing that says: *I'm done being who I was.*
 
-// - **Best for:** high-impact workouts, layered hair, thick hair, long days outside
-// - **Works well on:** straight, wavy, curly, and textured hair
-// - **Why it works:** maximum hold with minimal loose hair
-// - **Style tip:** add a little dry shampoo or texture spray before braiding so the hair has grip
+:::image-row
+![Gone Girl](/image/Gone Girl.webp)
+![Blue Is the Warmest Colour](/image/Blue Is the Warmest Colour.webp)
+![Eternal Sunshine of the Spotless Mind](/image/eternal.webp)
+:::
 
-// :::image-row
-// ![Boxer braids sitting close to the scalp on straight hair]()
-// ![Double Dutch braids on thick textured hair]()
-// ![Boxer braids tied off with bright elastics]()
-// :::
+Hair doesn't need a line of dialogue. It's already telling the whole story.
 
-// ## 10. Cornrows Into a Bun
+## Which Brings Us to Sex and the City
 
-// For textured hair or protective styling, cornrows into a bun are one of the most practical and stylish athlete-inspired options. They keep the hair controlled at the scalp and reduce loose pieces.
+If there's one piece of television that turned the idea of "hair equals personality" into an actual philosophy, it's *Sex and the City*. Four women, four hairstyles, four completely different ways of moving through the world.
 
-// Coco Gauff has worn intricate cornrows that transition into a bun during the summer hard-court swing, showing how protective styling can be functional and expressive at the same time.
+The show invented a template for a certain kind of urban women's story, and it did it as much through hair as through plot. Each character's relationship to her own hair was a direct reflection of her relationship to herself.
 
-// - **Best for:** textured hair, protective styling, tennis, travel, long training days
-// - **Works well with:** headbands, visors, colorful elastics
-// - **Why it works:** secure at the root, controlled at the ends
-// - **Style tip:** keep the scalp moisturized and avoid making the braids too tight around the hairline
+:::image-row
+![](/image/sex1.webp)
+![](/image/sex2.webp)
+:::
 
-// :::image-row
-// ![Cornrows transitioning into a neat bun]()
-// ![Cornrow bun with a colorful headband]()
-// ![Cornrows into a bun, side view showing clean partings]()
-// :::
+## Carrie: The Curl Is the Character
 
-// ## 11. Multiple Mini Braids
+Carrie Bradshaw's curls are the most iconic hair in the show, possibly in all of 90s and early 2000s television. But here's the thing: they were never *styled*. That's exactly the point.
 
-// Mini braids are great for controlling shorter layers, face-framing pieces, or hair that tends to puff up in humidity. You can add two small braids at the front, braid a few pieces into a ponytail, or create a half-up style with braided accents.
+The hair always looked like she'd just woken up. Or like she'd been walking fast in the wind and didn't care. Untamed. Impractical. Alive.
 
-// - **Best for:** festival days, tennis-core outfits, layered cuts, summer humidity
-// - **Works well with:** ribbons, beads, colorful elastics, clips
-// - **Why it works:** controls flyaways while adding detail
-// - **Style tip:** keep the braids small so the style feels modern, not costume-like
+One look and you already knew: this woman runs on feeling. She doesn't follow rules because she finds rules less interesting than the exception.
 
-// :::image-row
-// ![Multiple mini braids at the front pulling back into a ponytail]()
-// ![Half-up style with two small braids as accents]()
-// ![Mini braids with beads and colorful elastics]()
-// :::
+:::image-row
+![](/image/sex3.webp)
+![](/image/sex4.webp)
+![](/image/sex5.webp)
+:::
 
-// ## 12. The Ribbon Ponytail
+Carrie wrote a sex and relationships column in New York City without a stable income, without a steady relationship, and without a consistent sense of whether she was making the right choices. Her apartment was rent-controlled and barely affordable. Her closet was full of things she couldn't afford. Her love life was chaos.
+She was drawn to Mr. Big precisely *because* he was wrong. The danger, the ambiguity, the sense that she could never quite pin him down, that was the appeal. She walked away from Aidan, who was good and stable and kind, more than once.
 
-// A ribbon is the easiest way to make a plain ponytail feel French Open-inspired. Tie your hair into a ponytail or braid, then add a ribbon at the base or around the end.
+The hair reflected all of it.
 
-// For Roland-Garros energy, choose clay red, cream, espresso brown, dusty pink, or navy. For U.S. Open energy, go brighter: cobalt, white, yellow, metallic silver, or black.
+The only times Carrie straightened her hair were the moments she was trying to become someone else, someone more upper-east-side, more controlled, more acceptable to a world that made her feel like she wasn't quite enough. It never lasted. The curls came back. Because *she* came back.
 
-// - **Best for:** simple ponytails, braids, low buns, half-up hair
-// - **Works well with:** tennis dresses, polos, pleated skirts, sporty summer outfits
-// - **Why it works:** inexpensive, easy, and instantly styled
-// - **Style tip:** choose a grosgrain ribbon if you want it to hold better than satin
+Carrie once said: "I will never be the woman with the perfect hair who can wear white and not spill on it." She said it like it was a flaw. It wasn't. It was the whole point.
 
-// :::image-row
-// ![Ribbon ponytail in clay red for Roland-Garros styling]()
-// ![Cream grosgrain ribbon tied at a low ponytail base]()
-// ![Bright cobalt ribbon on a braided ponytail for U.S. Open energy]()
-// :::
+:::image-row
+![](/image/sex6.webp)
+![](/image/sex7.webp)
+![](/image/sex8.webp)
+:::
 
-// ## 13. The Lucky-Color Accessory
+## Miranda: The Bob That Doesn't Apologize
 
-// Athletes love routine. A lucky scrunchie, ribbon, headband, or clip can become part of your own match-day ritual, even if your "match" is a workout class or a long summer day running around the city.
+Miranda's auburn bob said everything before she opened her mouth. Short. Precise. Not interested in softening itself for anyone.
 
-// Serena Williams used fashion and hair details to tell a bigger story, including hair jewels and symbolic styling during her 2022 U.S. Open appearance. The accessory can be personal, not just decorative.
+She was a lawyer in the 1990s, in a field that was still overwhelmingly male. The cut made sense as a strategic choice, but Miranda was never purely strategic. She chose an arresting shade of orange-red, a color that refused to disappear into the background. The logic was sharp; the execution was bold. That tension ran through everything she did.
 
-// - **Best for:** anyone who likes a signature detail
-// - **Works well with:** ponytails, braids, buns, headbands
-// - **Why it works:** makes a practical hairstyle feel personal
-// - **Style tip:** pick one color and repeat it across your hair accessory, socks, sneakers, or manicure
+:::image-row
+![](/image/sex9.webp)
+![](/image/sex10.webp)
+![](/image/sex11.webp)
+:::
 
-// :::image-row
-// ![Lucky gold scrunchie on a high ponytail]()
-// ![Hair jewel accent on a sleek bun, U.S. Open-inspired]()
-// ![Color-coordinated hair accessory, headband, and sock detail]()
-// :::
+Miranda was the most rational one at the table, the one who'd say, in the middle of a conversation about men, "Can we please talk about something else for five minutes?" But she was also the one who consistently chose Steve, a man the world told her was below her grade. She hated loneliness more than she hated anything else. That was the crack in the armor, and she knew it.
 
-// ## Quick Guide: Which Style Should You Try?
+Watch the hair change over the seasons. When she leaned into vulnerability, pregnancy, single motherhood, learning to be a partner without disappearing into it, the bob got softer. The color went deeper, more burnished. Less attack, more depth.
 
-// | Hair Goal | Best Style |
-// |---|---|
-// | Keep long hair from whipping around | Bubble ponytail |
-// | Make a ponytail feel more secure | Double-anchor high ponytail |
-// | Hide oily roots | Visor ponytail |
-// | Keep hair fully off the face | Sleek match-day bun |
-// | Protect textured hair | Cornrows into a bun |
-// | Add court-style detail fast | Ribbon ponytail |
-// | Control flyaways | Headband and braid combo |
-// | Survive high-impact movement | Boxer braids |
-// | Look styled without much work | Braided ponytail |
+The bob never fully relaxed. But it learned to breathe.
 
-// ## How to Make Sport Hair Actually Stay
+## Charlotte: The Perfect Hair, the Imperfect Life
 
-// Start with hair that has grip. Freshly washed, silky hair can slip out faster, so a little dry shampoo, texture spray, or light styling cream helps.
+Charlotte York's hair was always immaculate. Center-parted, glossy, the exact right amount of wave, never too much, never too little. It looked like it had been brushed 100 times before she left the apartment. It probably had.
 
-// Use strong elastics. Do not tie every style at maximum tension. A hairstyle can feel secure without pulling at the hairline. If your scalp hurts before you leave the house, redo it.
+She dressed the same way: Chanel suits, silk blouses, ladylike cuts that telegraphed Upper East Side good breeding even before she said a word. She was the one who still believed in The Right Man, The Right Marriage, The Right Life, and she was going to look the part while she waited for it.
 
-// For outdoor tennis or summer workouts, keep a mini kit in your bag: extra elastics, a few bobby pins, a small brush, dry shampoo, and a soft headband.
+:::image-row
+![](/image/sex12.webp)
+![](/image/sex13.webp)
+![](/image/sex18.webp)
+:::
 
-// ## The Takeaway
+Here's the thing, though: Charlotte's perfectionism wasn't confidence. It was anxiety wearing a silk blouse.
 
-// The best athletic hairstyles are not complicated. They are secure, clean, and easy to refresh.
+She couldn't walk into a sauna without her robe. She couldn't deviate from the plan because the plan was the only thing holding everything together. She married a man who was objectively correct on paper, handsome, wealthy, old family, and moved into an apartment so tasteful it looked like a magazine spread. And then she found out her perfect husband had a problem he'd never told her about, and the magazine-spread life didn't have a chapter on what to do next.
 
-// French Open-inspired hair gives you clay-court polish: braids, ribbons, visors, slick buns, and soft sporty details. U.S. Open season brings the late-summer version: brighter colors, harder hold, sweat-proof styling, and a little New York attitude.
+She divorced him. She converted religions for a man she actually loved. She stopped performing perfection and started living through imperfection instead.
 
-// Whether you are playing tennis, watching from the stands, or just wearing the tennis-core outfit because it looks good, the rule is simple: your hair should stay out of your face and still look like part of the look.`,
-//     metaTitle: 'Game, Set, Hair: French Open-Inspired Sport Hairstyles for Summer 2026',
-//     metaDescription: 'From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear through French Open and into U.S. Open season.',
-//   },
+The hair, in those later seasons, became a little less lacquered. Not messy, Charlotte would never be messy, but *breathing*. Human. That was the whole arc, visible in the gloss level of a blowout.
+
+:::image-row
+![](/image/sex17.webp)
+![](/image/sex15.webp)
+![](/image/sex16.webp)
+:::
+
+## Samantha: Controlled, Maximalist, Unapologetic
+
+Samantha Jones's hair was the opposite of Carrie's in almost every technical sense. Where Carrie's was all movement and chaos, Samantha's was engineered. The cut, the volume, the shine, nothing was accidental.
+
+And yet the spirit behind it was the same energy dialed up to eleven: *I am exactly who I want to be, and I dressed for myself, not for you.*
+
+Samantha wore high-saturation color, leopard print, sequins, things with architectural shoulders. Her style wasn't soft sexy, it was what you might call *dominant* sexy. She built an image the way a publicist builds a brand, which made sense, because she was a publicist. She lived by the same principle she applied to her clients: you are the message.
+
+:::image-row
+![](/image/sex19.webp)
+![](/image/sex20.webp)
+![](/image/sex21.webp)
+:::
+
+What the show did with Samantha that felt genuinely subversive was this: she didn't perform sexuality for men's benefit. She exercised it for her own. She didn't want to be chosen. She chose. Every time.
+
+The season six breast cancer storyline is where it all landed. When chemo took her hair and she had to remove the wig in front of her partner, Samantha stood there, no constructed image, no performance, no product, and she was still entirely herself. The glamour turned out to be the least interesting thing about her. The life force underneath it was the real story.
+
+:::image-row
+![](/image/sex22.webp)
+![](/image/sex24.webp)
+![](/image/sex23.webp)
+:::
+
+## Hair as a Language You're Already Speaking
+
+Four women, four hairstyles, four ways of being a person in the world.
+
+What *Sex and the City* understood, and what every good stylist already knows, is that hair isn't decoration. It's communication. Before anyone reads your bio or hears your voice or learns your name, they've already received a signal. The question is whether the signal you're sending matches the one you meant to send.
+
+In real life, most of us are somewhere in the middle. Not fully Samantha, not fully Charlotte, maybe a bit Carrie on a good day, a bit Miranda on a deadline. But we're all doing the same thing: constantly editing our hair to match who we're becoming. Sometimes the cut leads the change. Sometimes it just confirms what was already happening.
+
+There's a reason finding a stylist who actually *gets you* feels so rare and so good. Because a great haircut isn't just technique. It's someone seeing you clearly enough to make you look like yourself, maybe even a version of yourself you hadn't quite met yet.
+
+What's your current hair doing for you? And has there been a cut, or a moment of not cutting, that felt like a turning point?`,
+  metaTitle: 'What Your Hair Is Already Saying About You, From Nicole Kidman to Sex and the City',
+  metaDescription:
+    "Carrie's curls, Miranda's sharp bob, Charlotte's perfect blowout, Samantha's engineered glamour: how the four women of Sex and the City turned hairstyles into character studies, and what that means for the rest of us.",
+},
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
