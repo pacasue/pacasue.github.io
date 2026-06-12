@@ -1,8 +1,5 @@
 (function () {
 
-    var SESSION_PV_COUNT_KEY = 'hpv_session_pv_count';
-    var FIRED_PV2_KEY        = 'hpv_fired_pv2';
-    var FIRED_PV3_KEY        = 'hpv_fired_pv3';
     var SCROLL_25_KEY        = 'hpv_scroll_25';
     var SCROLL_50_KEY        = 'hpv_scroll_50';
     var SCROLL_75_KEY        = 'hpv_scroll_75';
@@ -102,21 +99,5 @@
     }
     window.addEventListener('scroll', checkScrollThresholds, { passive: true });
     checkScrollThresholds();
-
-    // 4. Session pageview milestones — increments on each hard page load
-    // Note: SPA route changes (React Router) do not re-run this script.
-    var raw  = sessionStorage.getItem(SESSION_PV_COUNT_KEY);
-    var prev = raw ? parseInt(raw, 10) : 0;
-    var next = isFinite(prev) ? prev + 1 : 1;
-    sessionStorage.setItem(SESSION_PV_COUNT_KEY, String(next));
-
-    if (next === 2 && !sessionStorage.getItem(FIRED_PV2_KEY)) {
-        sessionStorage.setItem(FIRED_PV2_KEY, '1');
-        safeTrack({ method: 'track', eventName: 'Session Pageviews 2', properties: { session_page_views: 2 } });
-    }
-    if (next === 3 && !sessionStorage.getItem(FIRED_PV3_KEY)) {
-        sessionStorage.setItem(FIRED_PV3_KEY, '1');
-        safeTrack({ method: 'track', eventName: 'Session Pageviews 3', properties: { session_page_views: 3 } });
-    }
 
 })();
