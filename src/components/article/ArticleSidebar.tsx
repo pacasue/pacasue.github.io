@@ -64,7 +64,7 @@ export default function ArticleSidebar({ article }: { article: Article }) {
       navigator.clipboard.writeText(window.location.href).catch(() => {})
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-      window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer')
+      window.open('https://www.instagram.com/hairprovoices/', '_blank', 'noopener,noreferrer')
     }
   }
 

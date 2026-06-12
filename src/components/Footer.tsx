@@ -23,7 +23,7 @@ const footerLinks = {
 }
 
 const socials = [
-  { label: 'Instagram', href: 'https://www.instagram.com/hairpro.voices/', initial: 'IG' },
+  { label: 'Instagram', href: 'https://www.instagram.com/hairprovoices/', initial: 'IG' },
   { label: 'Facebook', href: 'https://www.facebook.com/people/Hairpro-Voices/61564779778738/', initial: 'FB' },
 ]
 
