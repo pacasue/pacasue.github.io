@@ -1,5 +1,6 @@
 import { Quote, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { authors } from '../data/articles'
 
 const tips = [
   {
@@ -9,7 +10,7 @@ const tips = [
     stylist: 'Leila Fernandez',
     role: 'Senior Color Editor',
     location: 'Miami, FL',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: authors['Leila Fernandez'].image,
     slug: 'leila-fernandez',
   },
   {
@@ -19,7 +20,7 @@ const tips = [
     stylist: 'Tom Harley',
     role: 'Technique Editor',
     location: 'London, UK',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: authors['Tom Harley'].image,
     slug: 'tom-harley',
   },
   {
@@ -29,7 +30,7 @@ const tips = [
     stylist: 'Dana Reeves',
     role: 'Salon Business Coach',
     location: 'Nashville, TN',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: authors['Dana Reeves'].image,
     slug: 'dana-reeves',
   },
   {
@@ -39,7 +40,7 @@ const tips = [
     stylist: 'Imani Okafor',
     role: 'Texture & Curl Editor',
     location: 'Atlanta, GA',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: authors['Imani Okafor'].image,
     slug: 'imani-okafor',
   },
 ]

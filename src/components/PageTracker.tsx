@@ -13,6 +13,7 @@ export default function PageTracker () {
       const cvg = (window as any).cvg
       if (!cvg) return
 
+      ;(window as any).resetScrollDepth?.()
       cvg({ method: 'track', eventName: '$page_load' })
 
       const prev = parseInt(sessionStorage.getItem(SESSION_PV_COUNT_KEY) ?? '0', 10)

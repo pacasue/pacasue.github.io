@@ -100,4 +100,11 @@
     window.addEventListener('scroll', checkScrollThresholds, { passive: true });
     checkScrollThresholds();
 
+    window.resetScrollDepth = function () {
+        maxScroll = 0;
+        sessionStorage.removeItem(SCROLL_25_KEY);
+        sessionStorage.removeItem(SCROLL_50_KEY);
+        sessionStorage.removeItem(SCROLL_75_KEY);
+    };
+
 })();
