@@ -1,9 +1,8 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-// Hero uses high-quality Unsplash images (no auth required)
-const HERO_IMAGE = '/image/copper.avif'
-const SIDE_IMAGE = '/image/cover.webp'
+const HERO_IMAGE = '/image/change-hair-1.webp'
+const SIDE_IMAGE = '/image/Wolf-cut.jpeg'
 
 export default function Hero() {
   return (
@@ -13,7 +12,7 @@ export default function Hero() {
         <div className="flex items-center gap-3">
           <div className="h-px bg-gold-500 w-8" />
           <span className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium">
-            April 2026 · Curated by Stylists
+            June 2026 · Curated by Stylists
           </span>
           <div className="h-px bg-gold-500 flex-1" />
         </div>
@@ -23,7 +22,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 mt-6">
 
           {/* Main feature — large */}
-          <Link to="/article/copper-renaissance-2026" className="lg:col-span-8 relative group cursor-pointer img-zoom block">
+          <Link to="/article/what-your-hair-says-about-you-sex-and-the-city" className="lg:col-span-8 relative group cursor-pointer img-zoom block">
             <div className="relative overflow-hidden aspect-[16/10] lg:aspect-[4/3]">
               <img
                 src={HERO_IMAGE}
@@ -42,28 +41,28 @@ export default function Hero() {
 
               {/* Content overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
-                
+
                 <h1
                   className="text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  The Copper Renaissance:<br />
-                  <em>Why This Shade Rules 2026</em>
+                  Your Hair Is Already Talking.<br />
+                  <em>Are You Listening?</em>
                 </h1>
                 <p className="text-charcoal-300 text-sm md:text-base max-w-xl leading-relaxed mb-6 hidden md:block">
-                  We asked 10 top colorists what makes this shade so wearable, and how to ask for it at your next appointment.
+                  From Nicole Kidman's iconic curls to the four women of Sex and the City — why a haircut says more about who you are than almost anything else.
                 </p>
                 <div className="flex items-center gap-4">
                   <Link
-                    to="/article/copper-renaissance-2026"
+                    to="/article/what-your-hair-says-about-you-sex-and-the-city"
                     className="flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 hover:bg-gold-400 transition-colors"
                   >
                     Read Story <ArrowRight size={10} />
                   </Link>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Color Inspiration</span>
+                    <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Style & Culture</span>
                     <span className="text-charcoal-600">·</span>
-                    <span className="text-[10px] text-charcoal-400">April 8, 2026</span>
+                    <span className="text-[10px] text-charcoal-400">Jun 7, 2026</span>
                   </div>
                 </div>
               </div>
@@ -72,7 +71,7 @@ export default function Hero() {
           <div className="lg:col-span-4 flex flex-col gap-0 border-l border-white/5">
 
             {/* Secondary feature */}
-            <Link to="/article/2026-met-gala-best-hair-looks" className="group cursor-pointer img-zoom block">
+            <Link to="/article/wolf-cut-2026" className="group cursor-pointer img-zoom block">
               <div className="relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]">
                 <img
                   src={SIDE_IMAGE}
@@ -86,7 +85,7 @@ export default function Hero() {
                     className="text-white text-xl font-bold leading-snug mt-1"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    10 Best Hair Looks at the 2026 Met Gala
+                    The 2026 Wolf Cut: Messy is the new Sexy
                   </h2>
                 </div>
               </div>
@@ -96,25 +95,25 @@ export default function Hero() {
             <div className="flex flex-col divide-y divide-white/5 mt-4 lg:mt-0 lg:border-t border-white/5">
               {[
                 {
-                  tag: 'Booking',
-                  title: 'How to Book the Right Stylist for Your Hair Type',
-                  author: 'Maria Chen',
+                  tag: 'Cut & Style',
+                  title: '10 Best Hair Looks at the 2026 Met Gala',
+                  author: 'Vera Moss',
+                  readTime: '8 min',
+                  slug: '2026-met-gala-best-hair-looks',
+                },
+                {
+                  tag: 'Cut & Style',
+                  title: "Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving",
+                  author: 'Nora Bell',
                   readTime: '5 min',
-                  slug: 'book-right-stylist',
+                  slug: 'mothers-day-effortless-hairstyles',
                 },
                 {
-                  tag: 'Tips',
-                  title: '10 Questions to Ask Before Your Next Color Appointment',
-                  author: 'James Olivier',
-                  readTime: '7 min',
-                  slug: 'questions-before-color',
-                },
-                {
-                  tag: 'Products',
-                  title: 'Bond Builders: What They Are and Why Your Hair Needs One',
-                  author: 'Dr. Sarah Kline',
-                  readTime: '6 min',
-                  slug: 'bond-builders',
+                  tag: 'Hair Care',
+                  title: 'Your Fine, Frizzy Hair Might Actually Be Wavy',
+                  author: 'Priya Nair',
+                  readTime: '10 min',
+                  slug: 'fine-frizzy-wavy-hair',
                 },
               ].map((article) => (
                 <Link

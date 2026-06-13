@@ -4917,6 +4917,7 @@ What's your current hair doing for you? And has there been a cut, or a moment of
   metaDescription:
     "Carrie's curls, Miranda's sharp bob, Charlotte's perfect blowout, Samantha's engineered glamour: how the four women of Sex and the City turned hairstyles into character studies, and what that means for the rest of us.",
 },
+  
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
