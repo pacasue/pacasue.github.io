@@ -5016,7 +5016,7 @@ The distinction between Minoxidil and NOVOGRO reflects a broader shift in the ca
 | Main approach | A focused hair-growth active with a long history of use | A multi-pathway system designed to support several causes of thinning at once |
 | What it supports | Hair regrowth for some users with consistent long-term use | Follicle-cell vitality, DHT-related miniaturization support, and oxygen/nutrient-related follicle signaling |
 | Client experience | Can be effective, but some clients struggle with irritation, shedding, greasiness, unwanted hair growth, or styling disruption | Designed as a lightweight, water-based serum system that may fit more easily into a daily routine |
-| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 190 participants comparing NOVOGRO against minoxidil is also ongoing](https://getreyou.com/). |
+| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 150+ participants comparing NOVOGRO against minoxidil is also ongoing](https://getreyou.com/). |
 | Stylist read | Still the category benchmark | One of the more interesting new approaches because it treats thinning like a multi-cause problem |
 
 But a product story only matters if the results show up. In early lab testing, NOVOGRO (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO’s signal here points to a broader follicle-support pathway.
@@ -5038,7 +5038,7 @@ In the comparison, they tested three groups: vehicle, meaning the base formula w
 
 For clients, the data takeaway is simple: this early data suggests NOVOGRO may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
 
-Of course, what matters most is what happens on actual scalps. NOVOGRO is currently being evaluated in a ==190-participant, double-blind, head-to-head study against minoxidil==, and that is the data I am waiting for. As soon as we know more, I will share it.
+Of course, what matters most is what happens on actual scalps. NOVOGRO is currently being evaluated in == a double-blind, head-to-head study against minoxidil with 150+ participants==, and that is the data I am waiting for. As soon as we know more, I will share it.
 
 ## Tying it Together
 
