@@ -81,7 +81,7 @@ export const authors: Record<string, Author> = {
     name: 'Lauren Chavez',
     title: 'Hair Health & Thinning Specialist',
     bio: 'Lauren is a senior stylist and hair health educator based in Miami with over 14 years behind the chair. She specializes in thinning hair, scalp care, and early-stage hair loss, and works closely with trichologists to bridge the gap between clinical advice and everyday salon practice. She writes about what stylists see, and what clients often miss.',
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&q=80&auto=format&fit=crop&facepad=3',
+    image: '/image/lauren.jpeg',
   },
   'Marissa Chen': {
     name: 'Marissa Chen',
@@ -95,8 +95,8 @@ export const authors: Record<string, Author> = {
     bio: 'Sophie spent years as a salon client before training as a colorist in her late twenties. That dual perspective , knowing what it feels like to sit in the chair and not understand what is happening , shapes everything she writes. She covers color, consultations, and the client side of professional hair care from a place of genuine experience.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0b/a4/2f/25/66/v1_E10/E10APXJJ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=dc073b9de49c052fd6591ccc8b5e1978273c968e62eb9e8cdb363e98f3c1fe2e',
   },
-  'Priya Nair': {
-    name: 'Priya Nair',
+  'Priya Allison': {
+    name: 'Priya Allison',
     title: 'At-Home Hair Care Editor',
     bio: 'Priya is a beauty writer and certified trichologist based in London who specializes in translating professional hair care advice into practical at-home routines. She has spent years interviewing stylists, testing products, and building guides that help people get better results between salon visits. She writes about scalp health, product selection, and the habits that actually move the needle.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/81/4e/42/a7/5b/v1_E10/E10Z9RG.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7030a09d7ab3fa388f9a03d14111fd50d5b91d1f4a30e4e831bf1012447ee904',
@@ -113,10 +113,10 @@ export const authors: Record<string, Author> = {
     bio: 'Ji-Woo is a Seoul-based hair writer and former assistant at one of Korea\'s top editorial agencies. She covers K-pop and K-drama hair trends, the stylists behind them, and how Korean hair culture influences global salon work. She writes about technique, color, and the cultural context that makes Korean hair aesthetics so widely referenced.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/07/fd/41/e8/3f/v1_E10/E10AGBRO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=05fffed1db341fa09475a871261fb3369c2051016f8bdb14d8c73c682303d500',
   },
-  'Vera Moss': {
-    name: 'Vera Moss',
+  'Charlotte Conaway': {
+    name: 'Charlotte Moss',
     title: 'Red Carpet & Editorial Hair Writer',
-    bio: 'Vera is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks , the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.',
+    bio: 'Charlotte is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks , the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.',
     image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
   'Nora Bell': {
@@ -2579,7 +2579,7 @@ That is what you should ask for. Not just pretty color on day one, but color tha
     tag: 'At-Home Tips',
     title: 'At-Home Hair Care That Actually Makes a Difference (According to Stylists)',
     excerpt: 'The clients with the best hair are not the ones doing the most in-salon. They are the ones doing the right things consistently at home.',
-    author: 'Priya Nair',
+    author: 'Priya Allison',
     date: 'Apr 20, 2026',
     readTime: '8 min',
     image: '/image/at-home-hair-care.avif',
@@ -3220,7 +3220,7 @@ That is why his hair keeps getting referenced.
     tag: 'Cut & Style',
     title: '10 Best Hair Looks at the 2026 Met Gala',
     excerpt: 'The 2026 Met Gala theme was "Costume Art", and the hair teams took it literally. From gold wire pin curls to Botticelli-length waves, here are the 10 hair moments stylists will actually be talking about.',
-    author: 'Vera Moss',
+    author: 'Charlotte Moss',
     date: 'May 6, 2026',
     readTime: '8 min',
     image: '/image/cover.webp',
@@ -3923,7 +3923,7 @@ It should look like you meant to wear it that way.`,
     tag: 'Hair Care',
     title: 'Your Fine, Frizzy Hair Might Actually Be Wavy',
     excerpt: 'A stylist\'s guide to bringing out soft texture without making your hair feel crunchy, heavy, or overdone.',
-    author: 'Priya Nair',
+    author: 'Priya Allison',
     date: 'May 18, 2026',
     readTime: '10 min',
     image: '/image/wavy.jpg',
@@ -4919,10 +4919,10 @@ What's your current hair doing for you? And has there been a cut, or a moment of
 },
   {
     id: 32,
-    slug: 'novogro-vs-minoxidil',
+    slug: 'NOVOGRO™-vs-minoxidil',
     tag: 'Hair Thinning',
-    title: 'Minoxidil vs. Proprietary Molecules: Is NOVOGRO the Industry\'s Best Kept Secret?',
-    excerpt: 'For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.',
+    title: 'Minoxidil vs. Proprietary Molecules: Is NOVOGRO™ the Industry\'s Best Kept Secret?',
+    excerpt: 'For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.',
     author: 'Lauren Chavez',
     date: 'Jun 13, 2026',
     readTime: '10 min',
@@ -4931,7 +4931,7 @@ What's your current hair doing for you? And has there been a cut, or a moment of
     section: 'Hair Care',
     body: `Hair serums are everywhere. From pharmacy shelves to premium cosmetic lines, the number of hair and scalp serums have expanded rapidly as consumers look for convenient, topical solutions to thinning hair. As stylists, we have a responsibility to our clients to provide them with solutions that actually live up to their promises. For decades, minoxidil serums have been the go-to active: widely recognized, FDA-approved, with deep roots in many medical spas and salons.
 
-But the category is changing quickly. New products keep appearing, and most do not deserve a second look. Recently, though, one name started moving through our stylist network: [NOVOGRO (NV)](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1). It came through a research paper being shared in professional circles, and the science goes deep. The short version: NOVOGRO is a proprietary class of molecules designed around follicle biology, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a more biology-first approach to female hair thinning.
+But the category is changing quickly. New products keep appearing, and most do not deserve a second look. Recently, though, one name started moving through our stylist network: [NOVOGRO™ (NV)](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1). It came through a research paper being shared in professional circles, and the science goes deep. The short version: NOVOGRO™ is a proprietary class of molecules designed around follicle biology, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a more biology-first approach to female hair thinning.
 
 ## Minoxidil: The Benchmark That Defined the Category
 
@@ -4981,19 +4981,18 @@ Minoxidil results typically depend on consistent, long-term use, often across si
 
 A key limitation lies in its design. Minoxidil primarily operates through a single biological pathway (or so scientists think), which can leave other causes of hair thinning unaddressed.
 
-![Illustration by Stella Cho, PhD in Physiology and Neurobiology|full](/image/mino-illustration.png)
 
-## NOVOGRO: A Multi-Pathway Approach to Hair Support
+## NOVOGRO™: A Multi-Pathway Approach to Hair Support
 
-NOVOGRO represents a shift in how hair serums are developed and positioned. Rather than relying on a single mechanism, it is built around a multi-target strategy to address several root causes of hair thinning at once.
+NOVOGRO™ represents a shift in how hair serums are developed and positioned. Rather than relying on a single mechanism, it is built around a multi-target strategy to address several root causes of hair thinning at once.
 
-Our team was able to get in touch with the researchers behind NOVOGRO to better understand how they went about their discovery. What stood out to us was not just that they found new ingredients, it was how intentionally they searched for them.
+Our team was able to get in touch with the researchers behind NOVOGRO™ to better understand how they went about their discovery. What stood out to us was not just that they found new ingredients, it was how intentionally they searched for them.
 
 1. First, they used AI-enabled screening to search through a massive ingredient universe and hone in on molecules that can actually support the hair follicle.
 2. Second, they tested candidates in models that behave more like real hair follicles.
 3. Third, they evaluated safety, specificity, and performance before treating the ingredients as serious candidates.
 
-At a functional level, NOVOGRO works across three follicle-relevant pathways:
+At a functional level, NOVOGRO™ works across three follicle-relevant pathways:
 
 :::cascade-list
 - Supports oxygen-response, metabolic signaling, VEGF-related activity, and the local environment around the follicle. This partly associates with minoxidil’s blood-flow logic, but goes broader.
@@ -5006,20 +5005,20 @@ No client needs to remind us how complex hair thinning can be, and how it can va
 > I am never looking at just one thing when a client sits in my chair with thinning hair. I am looking at density, scalp condition, breakage, miniaturization, styling habits, stress, and how the hair is behaving week to week. A multi-pathway approach makes sense because thinning rarely shows up as a single-pathway problem.
 > — Amy Wisney, Senior salon educator and trichology-trained stylist
 
-## What Sets NOVOGRO Apart
+## What Sets NOVOGRO™ Apart
 
-The distinction between Minoxidil and NOVOGRO reflects a broader shift in the category.
+The distinction between Minoxidil and NOVOGRO™ reflects a broader shift in the category.
 
-| Category | Minoxidil | NOVOGRO |
+| Category | Minoxidil | NOVOGRO™ |
 |---|---|---|
 | Where it came from | A repurposed medical active originally developed as a blood pressure medication | A newer ingredient system discovered and optimized around real hair follicle biology |
 | Main approach | A focused hair-growth active with a long history of use | A multi-pathway system designed to support several causes of thinning at once |
 | What it supports | Hair regrowth for some users with consistent long-term use | Follicle-cell vitality, DHT-related miniaturization support, and oxygen/nutrient-related follicle signaling |
 | Client experience | Can be effective, but some clients struggle with irritation, shedding, greasiness, unwanted hair growth, or styling disruption | Designed as a lightweight, water-based serum system that may fit more easily into a daily routine |
-| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 150+ participants comparing NOVOGRO against minoxidil is also ongoing](https://getreyou.com/). |
+| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 150+ participants comparing NOVOGRO™ against minoxidil is also ongoing](https://getreyou.com/). |
 | Stylist read | Still the category benchmark | One of the more interesting new approaches because it treats thinning like a multi-cause problem |
 
-But a product story only matters if the results show up. In early lab testing, NOVOGRO (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO’s signal here points to a broader follicle-support pathway.
+But a product story only matters if the results show up. In early lab testing, NOVOGRO™ (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO™’s signal here points to a broader follicle-support pathway.
 
 :::bar-chart
 title: HIF-1α activation % change vs. untreated control
@@ -5028,23 +5027,23 @@ title: HIF-1α activation % change vs. untreated control
 footnote: NV showed about ~~7.9x~~ higher HIF-1α activation than the minoxidil-based formula.
 :::
 
-But NOVOGRO is designed to go further. It also supports dermal papilla cells, which help drive hair growth, and targets 5α-reductase, the DHT-related enzyme involved in follicle miniaturization.
+But NOVOGRO™ is designed to go further. It also supports dermal papilla cells, which help drive hair growth, and targets 5α-reductase, the DHT-related enzyme involved in follicle miniaturization.
 
-The researchers behind NOVOGRO also built 3D mini hair follicles in the lab to see whether a treatment is actually encouraging follicle activity. These are not the same as real hair growing from a scalp, but they are one of the more realistic lab tools for studying early follicle behavior because the cells can interact and form follicle-like structures instead of sitting flat in a dish.
+The researchers behind NOVOGRO™ also built 3D mini hair follicles in the lab to see whether a treatment is actually encouraging follicle activity. These are not the same as real hair growing from a scalp, but they are one of the more realistic lab tools for studying early follicle behavior because the cells can interact and form follicle-like structures instead of sitting flat in a dish.
 
-In the comparison, they tested three groups: vehicle, meaning the base formula without the active growth ingredients; a minoxidil-based formula; and NOVOGRO. The minoxidil-treated mini follicle showed outgrowth close to the vehicle group, while the NOVOGRO-treated mini follicle showed the clearest elongation: ~~40.9%~~ more follicle-like outgrowth than the 2% minoxidil formula, suggesting a more active response.
+In the comparison, they tested three groups: vehicle, meaning the base formula without the active growth ingredients; a minoxidil-based formula; and NOVOGRO™. The minoxidil-treated mini follicle showed outgrowth close to the vehicle group, while the NOVOGRO™-treated mini follicle showed the clearest elongation: ~~40.9%~~ more follicle-like outgrowth than the 2% minoxidil formula, suggesting a more active response.
 
-![Preclinical hair follicloid imaging gives a visual snapshot of early growth activity, with the NOVOGRO-treated mini follicle extending farther in the lab model (D4=Day 4, D6=Day 6; D10=Day 10).|full](/image/mino-follicle.png)
+![Preclinical hair follicloid imaging gives a visual snapshot of early growth activity, with the NOVOGRO™-treated mini follicle extending farther in the lab model (D4=Day 4, D6=Day 6; D10=Day 10).|full](/image/mino-follicle.png)
 
-For clients, the data takeaway is simple: this early data suggests NOVOGRO may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
+For clients, the data takeaway is simple: this early data suggests NOVOGRO™ may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
 
-Of course, what matters most is what happens on actual scalps. NOVOGRO is currently being evaluated in == a double-blind, head-to-head study against minoxidil with 150+ participants==, and that is the data I am waiting for. As soon as we know more, I will share it.
+Of course, what matters most is what happens on actual scalps. NOVOGRO™ is currently being evaluated in == a double-blind, head-to-head study against minoxidil with 150+ participants==, and that is the data I am waiting for. As soon as we know more, I will share it.
 
 ## Tying it Together
 
 Minoxidil helped define the modern hair serum category and will remain the gold standard. But hair science has moved forward, and the industry is overdue for ingredients developed specifically around the complexity of thinning hair.
 
-NOVOGRO is early, but it has already started moving through the hair professionals we pay attention to based on its strong scientific data. Is it the industry’s best kept secret? Too soon to call, but it is one of the few new names we are actually watching. We are waiting to see how RE:YOU brings the technology into a real serum, and we will share updates as more product details and clinical data become available.
+NOVOGRO™ is early, but it has already started moving through the hair professionals we pay attention to based on its strong scientific data. Is it the industry’s best kept secret? Too soon to call, but it is one of the few new names we are actually watching. We are waiting to see how RE:YOU brings the technology into a real serum, and we will share updates as more product details and clinical data become available.
 
 The new generation of hair serums will feature ingredients developed specifically for hair thinning. They won't be designed around a single pathway, but multiple pathways to tackle hair thinning in a comprehensive, systematic way.
 
@@ -5054,8 +5053,8 @@ The new generation of hair serums will feature ingredients developed specificall
 - DailyMed. Minoxidil Topical Solution 2%: Drug facts and consumer information. U.S. National Library of Medicine. 
 - Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
 :::`,
-    metaTitle: 'Minoxidil vs. NOVOGRO: Is This the Industry\'s Best Kept Secret?',
-    metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO is making the rounds in salon networks — here\'s what the science says.',
+    metaTitle: 'Minoxidil vs. NOVOGRO™: Is This the Industry\'s Best Kept Secret?',
+    metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO™ is making the rounds in salon networks — here\'s what the science says.',
   },
 ]
 
