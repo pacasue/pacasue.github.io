@@ -4917,7 +4917,146 @@ What's your current hair doing for you? And has there been a cut, or a moment of
   metaDescription:
     "Carrie's curls, Miranda's sharp bob, Charlotte's perfect blowout, Samantha's engineered glamour: how the four women of Sex and the City turned hairstyles into character studies, and what that means for the rest of us.",
 },
-  
+  {
+    id: 32,
+    slug: 'novogro-vs-minoxidil',
+    tag: 'Hair Thinning',
+    title: 'Minoxidil vs. Proprietary Molecules: Is NOVOGRO the Industry\'s Best Kept Secret?',
+    excerpt: 'For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.',
+    author: 'Lauren Chavez',
+    date: 'Jun 13, 2026',
+    readTime: '10 min',
+    image: '/image/mino-cover.avif',
+    category: 'Hair Thinning',
+    section: 'Hair Care',
+    body: `Hair serums are everywhere. From pharmacy shelves to premium cosmetic lines, the number of hair and scalp serums have expanded rapidly as consumers look for convenient, topical solutions to thinning hair. As stylists, we have a responsibility to our clients to provide them with solutions that actually live up to their promises. For decades, minoxidil serums have been the go-to active: widely recognized, FDA-approved, with deep roots in many medical spas and salons.
+
+But the category is changing quickly. New products keep appearing, and most do not deserve a second look. Recently, though, one name started moving through our stylist network: [NOVOGRO (NV)](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1). It came through a research paper being shared in professional circles, and the science goes deep. The short version: NOVOGRO is a proprietary class of molecules designed around follicle biology, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a more biology-first approach to female hair thinning.
+
+## Minoxidil: The Benchmark That Defined the Category
+
+It may be a surprise to you, but Minoxidil wasn't originally designed for hair at all. It began as a treatment for ==hypertension==, before its hair growth effects were accidentally discovered and it was repurposed into one of the most widely used topical solutions today.
+
+It works, but for some clients, it comes with real trade-offs. Our clients often report itching, irritation, and devastatingly, initial shedding.
+
+:::quote-carousel
+The growth was not the only thing I noticed. I also had to deal with itching and irritation, which made the routine feel like part-time maintenance work.
+— Salon client, 32, using topical minoxidil for 6 months
+---
+I'm also not a great responder to the medication so far. I basically stagnated for about a year even though my shedding definitely ramped up.
+— Hair-loss client, 29, using minoxidil for 1.5 years
+---
+Get ready for the under eyes that look like you haven't slept in a week.
+— New York salon client, 34, using oral minoxidil for 8 months
+---
+Minoxidil is lethally toxic to cats and dogs. I had one of my cats die suddenly of acute liver failure and couldn't figure out what happened until months later. Be VERY careful with storage and handling in pet households!
+— Pet owner and hair-loss client, 34, using oral minoxidil for 9 months
+:::
+
+And sometimes, the trade-off can become part of the hairstyle.
+
+:::case-study-separator:::
+
+After four years, one of my clients decided to stop using minoxidil. In January 2021, she started using topical 5% liquid minoxidil and in June 2023, she reduced the minoxidil strength to 2% because of side effects.
+
+:::split-table
+left-heading: What improved
+- Hair count increased
+- Some strands became thicker in diameter
+
+right-heading: What became difficult
+- Unwanted facial hair growth and facial swelling (improved after switching from 5% to 2%)
+- Texture change in applied area; the hair became much curlier, hairline changed into tighter ringlets
+- Constant frizz; some hairs only grew a few inches before shedding, while others grew longer. Made styling difficult.
+- Had to shampoo every morning (liquid formula was greasy). Made the curls even puffier.
+:::
+
+> The curliness is the last straw and why I'm pulling the plug. It became curly slowly over the years and I only recently realized what was happening ... It's ridiculous looking and absolutely impossible to style. I literally haven't had a good hair day in years.
+> — Female hair-loss client, diagnosed with pattern hair loss, using topical minoxidil for 4 years
+
+
+Clients do not just ask what grows hair. They ask what will actually make their hair easier to live with.
+
+Minoxidil results typically depend on consistent, long-term use, often across six months or more. Even then, outcomes vary. A lot.
+
+A key limitation lies in its design. Minoxidil primarily operates through a single biological pathway (or so scientists think), which can leave other causes of hair thinning unaddressed.
+
+![Illustration by Stella Cho, PhD in Physiology and Neurobiology|full](/image/mino-illustration.png)
+
+## NOVOGRO: A Multi-Pathway Approach to Hair Support
+
+NOVOGRO represents a shift in how hair serums are developed and positioned. Rather than relying on a single mechanism, it is built around a multi-target strategy to address several root causes of hair thinning at once.
+
+Our team was able to get in touch with the researchers behind NOVOGRO to better understand how they went about their discovery. What stood out to us was not just that they found new ingredients, it was how intentionally they searched for them.
+
+1. First, they used AI-enabled screening to search through a massive ingredient universe and hone in on molecules that can actually support the hair follicle.
+2. Second, they tested candidates in models that behave more like real hair follicles.
+3. Third, they evaluated safety, specificity, and performance before treating the ingredients as serious candidates.
+
+At a functional level, NOVOGRO works across three follicle-relevant pathways:
+
+:::cascade-list
+- Supports oxygen-response, metabolic signaling, VEGF-related activity, and the local environment around the follicle. This partly associates with minoxidil’s blood-flow logic, but goes broader.
+- Helps reduce DHT production, the major driver of hair follicle miniaturization. 
+- Works with the other pathways to support the health and vitality of hair follicle cells responsible for growing new hair, especially the cellular environment that helps determine whether hair grows stronger, weaker, or not at all.
+:::
+
+No client needs to remind us how complex hair thinning can be, and how it can vary so significantly between one client and another. Across dozens of experts we spoke to, they agreed that this is the most comprehensive approach they've ever seen across dozens of other brands (e.g., Vegamour, KilgourMD, Nutrafol, etc.). This approach is one that actually aligns the most closely with the complex biology of hair growth, according to our medical experts.
+
+> I am never looking at just one thing when a client sits in my chair with thinning hair. I am looking at density, scalp condition, breakage, miniaturization, styling habits, stress, and how the hair is behaving week to week. A multi-pathway approach makes sense because thinning rarely shows up as a single-pathway problem.
+> — Amy Wisney, Senior salon educator and trichology-trained stylist
+
+## What Sets NOVOGRO Apart
+
+The distinction between Minoxidil and NOVOGRO reflects a broader shift in the category.
+
+| Category | Minoxidil | NOVOGRO |
+|---|---|---|
+| Where it came from | A repurposed medical active originally developed as a blood pressure medication | A newer ingredient system discovered and optimized around real hair follicle biology |
+| Main approach | A focused hair-growth active with a long history of use | A multi-pathway system designed to support several causes of thinning at once |
+| What it supports | Hair regrowth for some users with consistent long-term use | Follicle-cell vitality, DHT-related miniaturization support, and oxygen/nutrient-related follicle signaling |
+| Client experience | Can be effective, but some clients struggle with irritation, shedding, greasiness, unwanted hair growth, or styling disruption | Designed as a lightweight, water-based serum system that may fit more easily into a daily routine |
+| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 190 participants comparing NOVOGRO against minoxidil is also ongoing](https://getreyou.com/). |
+| Stylist read | Still the category benchmark | One of the more interesting new approaches because it treats thinning like a multi-cause problem |
+
+But a product story only matters if the results show up. In early lab testing, NOVOGRO (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO’s signal here points to a broader follicle-support pathway.
+
+:::bar-chart
+title: HIF-1α activation % change vs. untreated control
+- NV: 52
+- Minoxidil: 7
+footnote: NV showed about ~~7.9x~~ higher HIF-1α activation than the minoxidil-based formula.
+:::
+
+But NOVOGRO is designed to go further. It also supports dermal papilla cells, which help drive hair growth, and targets 5α-reductase, the DHT-related enzyme involved in follicle miniaturization.
+
+The researchers behind NOVOGRO also built 3D mini hair follicles in the lab to see whether a treatment is actually encouraging follicle activity. These are not the same as real hair growing from a scalp, but they are one of the more realistic lab tools for studying early follicle behavior because the cells can interact and form follicle-like structures instead of sitting flat in a dish.
+
+In the comparison, they tested three groups: vehicle, meaning the base formula without the active growth ingredients; a minoxidil-based formula; and NOVOGRO. The minoxidil-treated mini follicle showed outgrowth close to the vehicle group, while the NOVOGRO-treated mini follicle showed the clearest elongation: ~~40.9%~~ more follicle-like outgrowth than the 2% minoxidil formula, suggesting a more active response.
+
+![Preclinical hair follicloid imaging gives a visual snapshot of early growth activity, with the NOVOGRO-treated mini follicle extending farther in the lab model (D4=Day 4, D6=Day 6; D10=Day 10).|full](/image/mino-follicle.png)
+
+For clients, the data takeaway is simple: this early data suggests NOVOGRO may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
+
+Of course, what matters most is what happens on actual scalps. NOVOGRO is currently being evaluated in a ==190-participant, double-blind, head-to-head study against minoxidil==, and that is the data I am waiting for. As soon as we know more, I will share it.
+
+## Tying it Together
+
+Minoxidil helped define the modern hair serum category and will remain the gold standard. But hair science has moved forward, and the industry is overdue for ingredients developed specifically around the complexity of thinning hair.
+
+NOVOGRO is early, but it has already started moving through the hair professionals we pay attention to based on its strong scientific data. Is it the industry’s best kept secret? Too soon to call, but it is one of the few new names we are actually watching. We are waiting to see how RE:YOU brings the technology into a real serum, and we will share updates as more product details and clinical data become available.
+
+The new generation of hair serums will feature ingredients developed specifically for hair thinning. They won't be designed around a single pathway, but multiple pathways to tackle hair thinning in a comprehensive, systematic way.
+
+:::references
+- Rossi A, Cantisani C, Melis L, Iorio A, Scali E, Calvieri S. Minoxidil use in dermatology, side effects and recent patents. Recent Pat Inflamm Allergy Drug Discov. 2012;6(2):130-136.
+- DailyMed. Minoxidil Topical Aerosol 5% Foam, for women: Drug facts and consumer information. U.S. National Library of Medicine. 
+- DailyMed. Minoxidil Topical Solution 2%: Drug facts and consumer information. U.S. National Library of Medicine. 
+- Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
+:::`,
+    metaTitle: 'Minoxidil vs. NOVOGRO: Is This the Industry\'s Best Kept Secret?',
+    metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO is making the rounds in salon networks — here\'s what the science says.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
