@@ -5056,6 +5056,184 @@ The new generation of hair serums will feature ingredients developed specificall
     metaTitle: 'Minoxidil vs. NOVOGRO™: Is This the Industry\'s Best Kept Secret?',
     metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO™ is making the rounds in salon networks — here\'s what the science says.',
   },
+  {
+    id: 34,
+    slug: 'wet-look-hair-chic-not-greasy',
+    tag: 'Cut & Style',
+    title: 'Wet-Look Hair Can Be Chic. It Just Can\'t Look Greasy.',
+    excerpt: 'A stylist\'s guide to the difference between editorial shine and oily hair, and how to place product so the finish looks polished, not unwashed.',
+    author: 'Ji-Woo Park',
+    date: 'Jun 15, 2026',
+    readTime: '9 min',
+    image: '/image/wet-hair.jpg',
+    category: 'Cut & Style',
+    section: 'Trends',
+    body: `Wet-look hair has lived on runways and magazine covers for years.
+
+In editorials, it almost always works. The lighting is controlled. The makeup is intentional. The clothes are styled around it. The whole look says fashion.
+
+In real life, the same finish can go wrong very fast.
+
+Once wet-look hair leaves the runway, clients may read it differently. Instead of cool, it can look oily. Instead of effortless, it can look flat. Instead of styled, it can look like the client skipped wash day.
+
+That does not mean the wet look is off-limits. It just needs control.
+
+For salon clients, the goal should be soft shine, clean separation, and a slightly damp-looking finish. The hair should look polished, fresh, and intentional, never greasy.
+
+## Why Wet-Look Hair Goes Wrong
+
+Most wet-look mistakes come down to product placement.
+
+Too much product at the root can make the hair look oily. Too much shine through the entire head can make the style feel heavy. On fine hair, the finish can collapse the shape and make the scalp more visible.
+
+For stylists, the conversation should start with this:
+
+Wet-look styling is about placing shine where it helps the haircut. It should not coat the whole head by default.
+
+| What Goes Wrong | What Clients See |
+|---|---|
+| Too much product at the root | Oily or dirty-looking hair |
+| Hair is slicked too flat | Less volume, more visible scalp |
+| Long hair has too much wet surface area | Heavy, weighed-down finish |
+| Wet bangs separate into strips | Stringy, greasy-looking fringe |
+| Skin is also very dewy | Overall look becomes too shiny |
+| Fine hair loses lift | Hair looks thinner than it is |
+
+The best wet finish still has air, movement, and shape.
+
+:::image-row
+![](/image/wet-look-1.webp)
+![](/image/wet-look-2.webp)
+![](/image/wet-look-3.jpg)
+:::
+
+## Rule 1: Keep the Wet Area Smaller
+
+Wet-look hair usually works better when the shiny area is controlled.
+
+That is why short hair, bobs, lobs, and collarbone-length cuts tend to handle this trend better than very long hair. Shorter shapes already have movement and lightness. A little shine can make them look sharper.
+
+On very long hair, a full wet finish can make the style feel dense, heavy, and harder to wear.
+
+**Stylist note:**
+For long-haired clients, keep the wet texture on the ends, face frame, or selected surface pieces. Avoid coating the full head from root to tip.
+
+:::image-row
+![](/image/wet1.webp)
+![](/image/wet2.webp)
+![Megan Fox's wet-hair look might be a bit too much for the average person.](/image/wet3.webp)
+:::
+
+## Rule 2: Go Slightly Wet, Not Soaked
+
+The soaked red-carpet version belongs on editorials, campaigns, and stage looks.
+
+For clients, a micro-wet finish is much easier to wear.
+
+A little shine can smooth frizz, define layers, and make the haircut look more styled. Too much shine makes the hair look heavy and unwashed.
+
+**What to tell clients:**
+"You want a few glossy, polished pieces. You do not need the whole head to look wet."
+
+This small language shift helps clients understand the difference between fashion shine and greasy hair.
+
+:::image-row
+![](/image/wet4.png)
+![](/image/wet5.png)
+![](/image/wet6.png)
+:::
+
+## Rule 3: Be Careful With Bangs
+
+Wet bangs are one of the easiest places to lose control.
+
+Once the fringe separates into thin strips, the whole look can turn oily. This is especially risky on fine hair, sparse bangs, oily skin, or clients with a cowlick at the front hairline.
+
+If the client wants a wet finish but has bangs, use one of these safer options:
+
+| Safer Option | Best For |
+|---|---|
+| Keep the bangs mostly dry and add shine only to the ends | Airy bangs, soft fringe, fine hair |
+| Sweep the bangs back completely | Slick bobs, short cuts, stronger styling looks |
+| Add product only to side pieces | Face-framing layers, curtain bangs |
+
+**Stylist note:**
+When in doubt, leave the fringe softer and cleaner. A dry fringe with a polished bob often looks more expensive than wet bangs that separate.
+
+:::image-row
+![](/image/wet7.webp)
+![](/image/wet8.webp)
+![Mitsuki Kimura's wet hair with bangs looks less sleek and polished.](/image/wet9.webp)
+:::
+
+## Rule 4: Balance the Makeup
+
+Wet-look hair already reflects light.
+
+If the skin is also very glossy, highlighted, or dewy, the whole look can become too shiny under real lighting. Even a beautiful client can look greasy if the hair, forehead, cheeks, and lips are all competing for shine.
+
+**Best pairing:**
+Wet-look hair with satin skin or soft matte skin.
+
+**Risky pairing:**
+Wet-look hair with heavy highlighter, glossy forehead, and shiny cheeks.
+
+**What to tell clients:**
+"If the hair has shine, keep the skin cleaner."
+
+This is especially important for event styling, bridal trials, photo shoots, and red-carpet-inspired looks.
+
+## Rule 5: Fine Hair Needs Lift at the Root
+
+Wet-look styling naturally makes hair sit closer to the head.
+
+For clients with fine hair, low density, or a wider part, product at the root can make the hair look thinner. The scalp becomes more visible, and the cut loses its shape.
+
+These clients can still wear the trend, but the wet finish needs to stay away from the root area.
+
+**Best placement for fine hair:**
+Mid-lengths, ends, face frame, and selected outer pieces.
+
+**Avoid:**
+Root-heavy product, slick center parts, and wet fringe.
+
+A lifted crown, airy front section, or soft side part can completely change the result.
+
+:::image-row
+![](/image/wet13.webp)
+![](/image/wet14.webp)
+![For fine, soft hair like Victoria Song’s, the wet-hair look can make the hair appear much thinner, so it’s important to keep volume at the roots.](/image/wet15.webp)
+:::
+
+## What Stylists Should Tell Clients
+
+Wet-look hair can be chic in real life, but the salon version needs to be much softer than the runway version.
+
+The most wearable finish has:
+
+| Detail | Why It Matters |
+|---|---|
+| Clean roots | Keeps the hair from looking oily |
+| Light shine | Adds polish without heaviness |
+| Lift at the crown | Protects volume |
+| Defined ends | Makes the cut look intentional |
+| Controlled frizz | Keeps the finish clean |
+| Minimal product on bangs | Prevents stringy separation |
+
+The line is thin. A little shine can make a haircut look modern and expensive. Too much product can make the same hair look unwashed.
+
+## Stylist Takeaway
+
+Wet-look hair works best when shine is used as a detail.
+
+Keep the roots clean. Protect the volume. Use less product than you think. Place the gloss only where it improves the haircut.
+
+For everyday clients, the best version is simple:
+
+Wet enough to look styled. Clean enough to look fresh.`,
+    metaTitle: 'Wet-Look Hair Can Be Chic. It Just Can\'t Look Greasy. | Stylist Guide',
+    metaDescription: 'A stylist\'s guide to the difference between editorial shine and oily hair — product placement, bang management, fine hair tips, and what to tell clients.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
