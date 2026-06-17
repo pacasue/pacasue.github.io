@@ -5,10 +5,12 @@ import { looks, type LookCategory } from '../data/looks'
 
 type Category = LookCategory
 
-function shuffle<T>(arr: T[]): T[] {
+function shuffle<T>(arr: T[], seed: number): T[] {
   const a = [...arr]
+  let s = seed
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    s = (s * 16807 + 0) % 2147483647
+    const j = Math.floor((s / 2147483647) * (i + 1))
     ;[a[i], a[j]] = [a[j], a[i]]
   }
   return a
@@ -19,11 +21,12 @@ const categories: Category[] = ['All', 'Color', 'Cut', 'Styling', 'Transformatio
 export default function TrendingLooks() {
   const [activeCategory, setActiveCategory] = useState<Category>('All')
   const [likedIds, setLikedIds] = useState<Set<number>>(new Set())
+  const [seed] = useState(() => Math.random())
 
   const filtered = useMemo(() => {
     const pool = activeCategory === 'All' ? looks : looks.filter((l) => l.category === activeCategory)
-    return shuffle(pool).slice(0, 6)
-  }, [activeCategory])
+    return shuffle(pool, seed).slice(0, 6)
+  }, [activeCategory, seed])
 
   const toggleLike = (id: number, e: React.MouseEvent) => {
     e.preventDefault()

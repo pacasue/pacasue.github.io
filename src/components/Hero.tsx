@@ -52,12 +52,9 @@ export default function Hero() {
                   For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.
                 </p>
                 <div className="flex items-center gap-4">
-                  <Link
-                    to="/article/NOVOGRO™-vs-minoxidil"
-                    className="flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 hover:bg-gold-400 transition-colors"
-                  >
+                  <span className="flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 group-hover:bg-gold-400 transition-colors">
                     Read Review <ArrowRight size={10} />
-                  </Link>
+                  </span>
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] tracking-widest uppercase text-charcoal-400">Hair Care</span>
                     <span className="text-charcoal-600">·</span>

@@ -31,20 +31,26 @@ export function AppRoutes() {
 }
 
 export default function App() {
-  if (!window.cvg) {
+  // Bootstrap the Converge pixel once, after mount — never during render.
+  // Doing this in the render body runs the side effect on every (re)render and
+  // during hydration, which double-loads the pixel (Duplicate Pixel ID) and can
+  // disrupt hydration.
+  useEffect(() => {
+    if (window.cvg) return
     window.cvg = function () {
-        if ((window.cvg as any).process) {
+      if ((window.cvg as any).process) {
         ;(window.cvg as any).process.apply(window.cvg, arguments)
-        } else {
+      } else {
         ;(window.cvg as any).queue.push(arguments)
-        }
+      }
     } as any
     ;(window.cvg as any).queue = []
     const convergeScript = document.createElement('script')
     convergeScript.src = 'https://static.runconverge.com/pixels/3LoMDN.js'
     convergeScript.async = true
     document.head.appendChild(convergeScript)
-  }
+  }, [])
+
   return (
     <BrowserRouter>
       <ScrollToTop />
