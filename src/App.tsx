@@ -16,6 +16,20 @@ function ScrollToTop() {
   return null
 }
 
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/articles" element={<ArticlesPage />} />
+      <Route path="/article/:slug" element={<ArticlePage />} />
+      <Route path="/author/:slug" element={<AuthorPage />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/contributors" element={<ContributorsPage />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
+  )
+}
+
 export default function App() {
   if (!window.cvg) {
     window.cvg = function () {
@@ -26,24 +40,16 @@ export default function App() {
         }
     } as any
     ;(window.cvg as any).queue = []
-    }
     const convergeScript = document.createElement('script')
     convergeScript.src = 'https://static.runconverge.com/pixels/3LoMDN.js'
     convergeScript.async = true
     document.head.appendChild(convergeScript)
+  }
   return (
     <BrowserRouter>
       <ScrollToTop />
       <PageTracker />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/articles" element={<ArticlesPage />} />
-        <Route path="/article/:slug" element={<ArticlePage />} />
-        <Route path="/author/:slug" element={<AuthorPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contributors" element={<ContributorsPage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   )
 }
