@@ -5334,9 +5334,8 @@ function Hero() {
 									}),
 									/* @__PURE__ */ jsxs("div", {
 										className: "flex items-center gap-4",
-										children: [/* @__PURE__ */ jsxs(Link, {
-											to: "/article/NOVOGRO™-vs-minoxidil",
-											className: "flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 hover:bg-gold-400 transition-colors",
+										children: [/* @__PURE__ */ jsxs("span", {
+											className: "flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 group-hover:bg-gold-400 transition-colors",
 											children: ["Read Review ", /* @__PURE__ */ jsx(ArrowRight, { size: 10 })]
 										}), /* @__PURE__ */ jsxs("div", {
 											className: "flex items-center gap-2",
@@ -6334,10 +6333,12 @@ var looks = [
 ];
 //#endregion
 //#region src/components/TrendingLooks.tsx
-function shuffle(arr) {
+function shuffle(arr, seed) {
 	const a = [...arr];
+	let s = seed;
 	for (let i = a.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
+		s = (s * 16807 + 0) % 2147483647;
+		const j = Math.floor(s / 2147483647 * (i + 1));
 		[a[i], a[j]] = [a[j], a[i]];
 	}
 	return a;
@@ -6352,9 +6353,10 @@ var categories$1 = [
 function TrendingLooks() {
 	const [activeCategory, setActiveCategory] = useState("All");
 	const [likedIds, setLikedIds] = useState(/* @__PURE__ */ new Set());
+	const [seed] = useState(() => Math.random());
 	const filtered = useMemo(() => {
-		return shuffle(activeCategory === "All" ? looks : looks.filter((l) => l.category === activeCategory)).slice(0, 6);
-	}, [activeCategory]);
+		return shuffle(activeCategory === "All" ? looks : looks.filter((l) => l.category === activeCategory), seed).slice(0, 6);
+	}, [activeCategory, seed]);
 	const toggleLike = (id, e) => {
 		e.preventDefault();
 		e.stopPropagation();
