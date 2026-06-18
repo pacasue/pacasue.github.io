@@ -284,6 +284,162 @@ function BarChart({ title, bars, footnote }: { title: string; bars: { label: str
   )
 }
 
+function LineChart({
+  title,
+  xLabel,
+  yLabel,
+  series,
+  points,
+  footnote,
+}: {
+  title: string
+  xLabel?: string
+  yLabel?: string
+  series: string[]
+  points: { x: string; values: number[] }[]
+  footnote?: string
+}) {
+  const COLORS = ['#D9B655', '#7E97B8', '#C98F8F', '#8FB8A0']
+  const [hover, setHover] = useState<number | null>(null)
+  const [hidden, setHidden] = useState<Set<number>>(new Set())
+
+  const toggle = (i: number) =>
+    setHidden((prev) => {
+      const next = new Set(prev)
+      next.has(i) ? next.delete(i) : next.add(i)
+      return next
+    })
+
+  // Geometry
+  const W = 720, H = 420
+  const padL = 56, padR = 22, padT = 28, padB = 64
+  const plotW = W - padL - padR
+  const plotH = H - padT - padB
+  const baseY = padT + plotH
+  const yMax = 100
+  const yTicks = [0, 20, 40, 60, 80, 100]
+  const n = points.length
+  const xAt = (i: number) => padL + (n === 1 ? plotW / 2 : (plotW * i) / (n - 1))
+  const yAt = (v: number) => baseY - (Math.max(0, Math.min(v, yMax)) / yMax) * plotH
+
+  return (
+    <div className="my-10 border border-white/10 bg-white/[0.02] p-6 md:p-8">
+      <p className="text-[11px] tracking-[0.25em] text-gold-500 font-medium mb-1">
+        {title.replace(/[a-z]/g, (c) => c.toUpperCase())}
+      </p>
+      {/* Legend (interactive: click to toggle a series) */}
+      <div className="flex flex-wrap gap-3 mt-3 mb-2">
+        {series.map((name, si) => {
+          const off = hidden.has(si)
+          return (
+            <button
+              key={si}
+              onClick={() => toggle(si)}
+              className={`flex items-center gap-2 text-[11px] tracking-wide px-2.5 py-1 border transition-colors ${
+                off ? 'border-white/10 text-charcoal-600' : 'border-white/20 text-charcoal-200 hover:border-white/40'
+              }`}
+            >
+              <span
+                className="inline-block w-3 h-3 rounded-sm"
+                style={{ background: off ? 'transparent' : COLORS[si % COLORS.length], border: `1.5px solid ${COLORS[si % COLORS.length]}` }}
+              />
+              {name}
+            </button>
+          )
+        })}
+      </div>
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        width="100%"
+        style={{ height: 'auto', display: 'block', touchAction: 'pan-y' }}
+        onMouseLeave={() => setHover(null)}
+      >
+        {/* y gridlines + ticks */}
+        {yTicks.map((t) => {
+          const y = yAt(t)
+          return (
+            <g key={t}>
+              <line x1={padL} y1={y} x2={W - padR} y2={y} stroke="rgba(255,255,255,0.08)" strokeWidth={1} />
+              <text x={padL - 10} y={y + 4} textAnchor="end" fontSize={12} fill="#7C7468" fontFamily="Inter,Arial,sans-serif">{t}</text>
+            </g>
+          )
+        })}
+        {/* axis labels */}
+        {yLabel && (
+          <text transform={`translate(16,${padT + plotH / 2}) rotate(-90)`} textAnchor="middle" fontSize={12.5} fill="#9a9488" fontFamily="Inter,Arial,sans-serif">{yLabel}</text>
+        )}
+        {xLabel && (
+          <text x={padL + plotW / 2} y={H - 12} textAnchor="middle" fontSize={12.5} fill="#9a9488" fontFamily="Inter,Arial,sans-serif">{xLabel}</text>
+        )}
+        {/* x tick labels */}
+        {points.map((p, i) => (
+          <text key={i} x={xAt(i)} y={baseY + 22} textAnchor="middle" fontSize={12} fill="#9a9488" fontFamily="Inter,Arial,sans-serif">{p.x}</text>
+        ))}
+        {/* baseline */}
+        <line x1={padL} y1={baseY} x2={W - padR} y2={baseY} stroke="rgba(255,255,255,0.25)" strokeWidth={1.5} />
+        {/* hover guide */}
+        {hover !== null && (
+          <line x1={xAt(hover)} y1={padT} x2={xAt(hover)} y2={baseY} stroke="rgba(217,182,85,0.5)" strokeWidth={1} strokeDasharray="4 4" />
+        )}
+        {/* series lines + points */}
+        {series.map((_, si) => {
+          if (hidden.has(si)) return null
+          const color = COLORS[si % COLORS.length]
+          const d = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${xAt(i)} ${yAt(p.values[si])}`).join(' ')
+          return (
+            <g key={si}>
+              <path d={d} fill="none" stroke={color} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />
+              {points.map((p, i) => (
+                <circle key={i} cx={xAt(i)} cy={yAt(p.values[si])} r={hover === i ? 5.5 : 3.5} fill={color} stroke="#0d0d0d" strokeWidth={1} />
+              ))}
+            </g>
+          )
+        })}
+        {/* hover capture bands */}
+        {points.map((_, i) => {
+          const bandW = plotW / Math.max(1, n - 1)
+          return (
+            <rect
+              key={i}
+              x={xAt(i) - bandW / 2}
+              y={padT}
+              width={bandW}
+              height={plotH}
+              fill="transparent"
+              onMouseEnter={() => setHover(i)}
+              onTouchStart={() => setHover(i)}
+            />
+          )
+        })}
+        {/* tooltip */}
+        {hover !== null && (() => {
+          const p = points[hover]
+          const visible = series.map((name, si) => ({ name, si })).filter(({ si }) => !hidden.has(si))
+          const boxW = 150, lineH = 18, boxH = 26 + visible.length * lineH
+          const left = xAt(hover) > padL + plotW / 2
+          const bx = left ? xAt(hover) - boxW - 12 : xAt(hover) + 12
+          const by = padT + 6
+          return (
+            <g pointerEvents="none">
+              <rect x={bx} y={by} width={boxW} height={boxH} rx={5} fill="#15140f" stroke="rgba(217,182,85,0.4)" strokeWidth={1} />
+              <text x={bx + 12} y={by + 18} fontSize={12} fill="#cfc6b6" fontFamily="Inter,Arial,sans-serif">{xLabel ? `${p.x} µM` : p.x}</text>
+              {visible.map(({ name, si }, k) => (
+                <g key={si}>
+                  <rect x={bx + 12} y={by + 26 + k * lineH + 1} width={9} height={9} rx={1.5} fill={COLORS[si % COLORS.length]} />
+                  <text x={bx + 27} y={by + 26 + k * lineH + 9} fontSize={12} fill="#e6e1d6" fontFamily="Inter,Arial,sans-serif">{name}: {p.values[si]}%</text>
+                </g>
+              ))}
+            </g>
+          )
+        })()}
+      </svg>
+      {footnote && (
+        <p className="text-[13px] text-charcoal-400 mt-5 leading-relaxed">{renderInline(footnote)}</p>
+      )}
+    </div>
+  )
+}
+
 function SplitTable({ left, right }: { left: { heading: string; items: string[] }; right: { heading: string; items: string[] } }) {
   return (
     <div className="my-8 grid grid-cols-1 sm:grid-cols-2 gap-0 border border-white/10 overflow-hidden">
@@ -363,6 +519,30 @@ function CascadeList({ items }: { items: string[] }) {
   )
 }
 
+function CardGrid({ cards }: { cards: { title: string; tag?: string; body: string }[] }) {
+  return (
+    <div className="my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {cards.map((card, i) => (
+        <div
+          key={i}
+          className="group relative border border-white/10 p-5 transition-all duration-300 hover:border-gold-500/60 hover:bg-white/[0.03] hover:-translate-y-0.5"
+        >
+          <div className="flex items-center gap-3 mb-2.5">
+            <span className="flex-shrink-0 w-7 h-7 bg-gold-500 text-black text-[11px] font-bold flex items-center justify-center">
+              {i + 1}
+            </span>
+            <h4 className="text-charcoal-100 font-semibold text-[15px] leading-tight">{card.title}</h4>
+          </div>
+          {card.tag && (
+            <p className="text-[9px] tracking-[0.2em] uppercase text-gold-500/80 font-semibold mb-2.5">{card.tag}</p>
+          )}
+          <p className="text-charcoal-300 text-sm md:text-[15px] leading-[1.7]">{renderInline(card.body)}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const formulaRows = [
   { col1: 'Wella Koleston Perfect', col2: '7/43: Medium Blonde Red-Gold', col3: '50g' },
   { col1: 'Wella Koleston Perfect', col2: '8/43: Light Blonde Red-Gold', col3: '20g' },
@@ -399,6 +579,7 @@ function MarkdownBody({ body }: { body: string }) {
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
   const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
   const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string }[] = []
+  const lineChartPlaceholders: { title: string; xLabel?: string; yLabel?: string; series: string[]; points: { x: string; values: number[] }[]; footnote?: string }[] = []
   const cascadePlaceholders: { items: string[] }[] = []
   let processedBody = body.replace(
     /:::cascade-list\n([\s\S]*?):::/g,
@@ -427,6 +608,34 @@ function MarkdownBody({ body }: { body: string }) {
       const id = barChartPlaceholders.length
       barChartPlaceholders.push({ title, bars, footnote })
       return `BARCHART_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
+    /:::line-chart\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n').filter(Boolean)
+      const grab = (key: string) => {
+        const l = lines.find((x) => x.startsWith(`${key}:`))
+        return l ? l.replace(new RegExp(`^${key}:\\s*`), '').trim() : undefined
+      }
+      const title = grab('title') ?? ''
+      const xLabel = grab('x-label')
+      const yLabel = grab('y-label')
+      const footnote = grab('footnote')
+      const series = lines
+        .filter((l) => l.startsWith('series:'))
+        .map((l) => l.replace(/^series:\s*/, '').trim())
+      const points = lines
+        .filter((l) => l.startsWith('- '))
+        .map((l) => {
+          const m = l.match(/^-\s+(.+?)\s*:\s*(.+)$/)
+          if (!m) return null
+          return { x: m[1].trim(), values: m[2].split(',').map((v) => parseFloat(v.trim())) }
+        })
+        .filter(Boolean) as { x: string; values: number[] }[]
+      const id = lineChartPlaceholders.length
+      lineChartPlaceholders.push({ title, xLabel, yLabel, series, points, footnote })
+      return `LINECHART_PLACEHOLDER_${id}`
     }
   )
   processedBody = processedBody.replace(
@@ -490,6 +699,29 @@ function MarkdownBody({ body }: { body: string }) {
       return `REFERENCES_PLACEHOLDER_${id}`
     }
   )
+  const cardGridPlaceholders: { cards: { title: string; tag?: string; body: string }[] }[] = []
+  processedBody = processedBody.replace(
+    /:::card-grid\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const cardBlocks = inner.trim().split(/\n---\n/)
+      const cards = cardBlocks.map((block) => {
+        const lines = block.trim().split('\n')
+        let title = '', tag: string | undefined
+        const bodyLines: string[] = []
+        for (const line of lines) {
+          const t = line.match(/^title:\s*(.+)$/)
+          const g = line.match(/^tag:\s*(.+)$/)
+          if (t) { title = t[1].trim(); continue }
+          if (g) { tag = g[1].trim(); continue }
+          bodyLines.push(line)
+        }
+        return { title, tag, body: bodyLines.join(' ').trim() }
+      })
+      const id = cardGridPlaceholders.length
+      cardGridPlaceholders.push({ cards })
+      return `CARD_GRID_PLACEHOLDER_${id}`
+    }
+  )
   processedBody = processedBody.replace(/:::case-study-separator:::/g, 'CASE_STUDY_SEPARATOR')
 
   const blocks = processedBody.split(/\n\n+/)
@@ -512,6 +744,13 @@ function MarkdownBody({ body }: { body: string }) {
         if (barChartMatch) {
           const bp = barChartPlaceholders[parseInt(barChartMatch[1])]
           return <BarChart key={i} title={bp.title} bars={bp.bars} footnote={bp.footnote} />
+        }
+
+        // Line chart placeholder
+        const lineChartMatch = trimmed.match(/^LINECHART_PLACEHOLDER_(\d+)$/)
+        if (lineChartMatch) {
+          const lp = lineChartPlaceholders[parseInt(lineChartMatch[1])]
+          return <LineChart key={i} title={lp.title} xLabel={lp.xLabel} yLabel={lp.yLabel} series={lp.series} points={lp.points} footnote={lp.footnote} />
         }
 
         // Split table placeholder
@@ -540,6 +779,13 @@ function MarkdownBody({ body }: { body: string }) {
         if (cascadeMatch) {
           const cl = cascadePlaceholders[parseInt(cascadeMatch[1])]
           return <CascadeList key={i} items={cl.items} />
+        }
+
+        // Card grid placeholder
+        const cardGridMatch = trimmed.match(/^CARD_GRID_PLACEHOLDER_(\d+)$/)
+        if (cardGridMatch) {
+          const cg = cardGridPlaceholders[parseInt(cardGridMatch[1])]
+          return <CardGrid key={i} cards={cg.cards} />
         }
 
         const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)

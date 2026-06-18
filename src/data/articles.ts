@@ -50,7 +50,7 @@ export const authors: Record<string, Author> = {
   'Dana Reeves': {
     name: 'Dana Reeves',
     title: 'Salon Business Coach',
-    bio: 'Dana runs a six-figure solo suite in Nashville and coaches stylists on pricing, retention, and building specialty service menus. She writes about the business side of the industry , from rebooking strategy to retail systems , with a focus on what actually works in the real world.',
+    bio: 'Dana runs a six-figure solo suite in Nashville and coaches stylists on pricing, retention, and building specialty service menus. She writes about the business side of the industry, from rebooking strategy to retail systems, with a focus on what actually works in the real world.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/bd92db6c-4bf9-45fc-83a9-60eadde7f7e7/5086e550-4ef9-4fab-9093-6fa52c0c349a.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a0f1c62eb426d2746b0289820d5b3f26441673747d02470dc54c95d46a358570',
   },
   'Michelle Torres': {
@@ -62,13 +62,13 @@ export const authors: Record<string, Author> = {
   'Maria Chen': {
     name: 'Maria Chen',
     title: 'Client Experience Editor',
-    bio: 'Maria covers the client side of the salon experience , from booking and consultation to aftercare and retention. A former salon manager turned writer, she brings an operational perspective to topics like stylist-client communication, service design, and building long-term loyalty.',
+    bio: 'Maria covers the client side of the salon experience, from booking and consultation to aftercare and retention. A former salon manager turned writer, she brings an operational perspective to topics like stylist-client communication, service design, and building long-term loyalty.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/bc/bf/04/9b/f9/v1_E10/E101AL0Z.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9feb1f05368c7935079e43aa4ada5128981ac46c3b32722bc6cbc70f60c767e7',
   },
   'James Olivier': {
     name: 'James Olivier',
     title: 'Hair Care & Science Writer',
-    bio: 'James writes about the chemistry and biology behind healthy hair , from bond structure and porosity to scalp health and ingredient science. With a background in cosmetic chemistry, he translates complex formulation topics into practical guidance for stylists and clients alike.',
+    bio: 'James writes about the chemistry and biology behind healthy hair, from bond structure and porosity to scalp health and ingredient science. With a background in cosmetic chemistry, he translates complex formulation topics into practical guidance for stylists and clients alike.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/33/88/9e/b2/60/v1_E10/E1052XSF.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3d7e80ec154f9b1d851388991a4828e886eb4bf5f02dbb3bba565579131d4ef5',
   },
   'Dr. Sarah Kline': {
@@ -86,13 +86,13 @@ export const authors: Record<string, Author> = {
   'Marissa Chen': {
     name: 'Marissa Chen',
     title: 'Scalp Health & Wellness Editor',
-    bio: 'Marissa is a scalp-focused stylist and wellness writer based in Los Angeles. With a background in trichology and holistic hair care, she specializes in scalp treatments, hair loss prevention, and the intersection of wellness rituals and professional hair care. She writes about what actually works , and what the science says.',
+    bio: 'Marissa is a scalp-focused stylist and wellness writer based in Los Angeles. With a background in trichology and holistic hair care, she specializes in scalp treatments, hair loss prevention, and the intersection of wellness rituals and professional hair care. She writes about what actually works, and what the science says.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/39/94/23/3e/90/v1_E10/E109INAW.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9fdddee103b45b4f269091ec5c9b9fe9996232df6a60874ae79d81d9020baae4',
   },
   'Sophie Marchand': {
     name: 'Sophie Marchand',
     title: 'Color & Client Experience Writer',
-    bio: 'Sophie spent years as a salon client before training as a colorist in her late twenties. That dual perspective , knowing what it feels like to sit in the chair and not understand what is happening , shapes everything she writes. She covers color, consultations, and the client side of professional hair care from a place of genuine experience.',
+    bio: 'Sophie spent years as a salon client before training as a colorist in her late twenties. That dual perspective, knowing what it feels like to sit in the chair and not understand what is happening, shapes everything she writes. She covers color, consultations, and the client side of professional hair care from a place of genuine experience.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0b/a4/2f/25/66/v1_E10/E10APXJJ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=dc073b9de49c052fd6591ccc8b5e1978273c968e62eb9e8cdb363e98f3c1fe2e',
   },
   'Priya Allison': {
@@ -104,7 +104,7 @@ export const authors: Record<string, Author> = {
   'Cleo Hartley': {
     name: 'Cleo Hartley',
     title: 'Salon Culture & Client Experience Writer',
-    bio: 'Cleo is a writer and former salon receptionist who spent years watching consultations from the front desk before moving into editorial. She covers the human side of the salon experience , what stylists see, what clients miss, and the unspoken language that happens in the first five minutes of every appointment. Based in New York.',
+    bio: 'Cleo is a writer and former salon receptionist who spent years watching consultations from the front desk before moving into editorial. She covers the human side of the salon experience, what stylists see, what clients miss, and the unspoken language that happens in the first five minutes of every appointment. Based in New York.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/79/0d/79/25/50/v1_E11/E118GL6Q.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f07cd042417aba19eee7d5e82c34e18742b8a6cebe8c9aa5b8e1d6bdff2710b7',
   },
   'Ji-Woo Park': {
@@ -116,7 +116,7 @@ export const authors: Record<string, Author> = {
   'Charlotte Conaway': {
     name: 'Charlotte Moss',
     title: 'Red Carpet & Editorial Hair Writer',
-    bio: 'Charlotte is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks , the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.',
+    bio: 'Charlotte is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks, the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.',
     image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
   'Nora Bell': {
@@ -286,7 +286,7 @@ When you pair a cut that matches your natural fall with a tone-refresh service t
     slug: 'haircut-layers',
     tag: 'Cut & Style',
     title: 'Why a Good Haircut Is More Than Just "Taking Length Off"',
-    excerpt: 'Stylists are thinking about shape, weight, and grow-out , not just length. Here is what is actually happening when you sit in the chair.',
+    excerpt: 'Stylists are thinking about shape, weight, and grow-out, not just length. Here is what is actually happening when you sit in the chair.',
     author: 'Tom Harley',
     date: 'Apr 4, 2026',
     readTime: '6 min',
@@ -417,9 +417,9 @@ Even taking off half an inch can change the way the hair sits if the ends were u
 
 Not every problem is solved with scissors.
 
-If the issue is dryness, frizz, breakage, or damage from color or heat , then a treatment may be just as important as the cut itself.
+If the issue is dryness, frizz, breakage, or damage from color or heat, then a treatment may be just as important as the cut itself.
 
-But if the issue is flat shape, heavy ends, uneven growth, or lack of movement , then cutting is what fixes it.
+But if the issue is flat shape, heavy ends, uneven growth, or lack of movement, then cutting is what fixes it.
 
 Good stylists know the difference and will usually combine both when needed.
 
@@ -443,7 +443,7 @@ It affects how your hair looks without effort, how long your style lasts, and ho
 > "A good cut makes styling easier. A great cut makes it almost unnecessary."
 > — Marcus Bell`,
     metaTitle: 'Why a Good Haircut Is More Than Just Taking Length Off',
-    metaDescription: 'Stylists are thinking about shape, weight, and grow-out , not just length. Here is what is actually happening when you sit in the chair.',
+    metaDescription: 'Stylists are thinking about shape, weight, and grow-out, not just length. Here is what is actually happening when you sit in the chair.',
   },
   {
     id: 4,
@@ -1707,7 +1707,7 @@ Before pushing for bigger color services, more clients, or higher-ticket appoint
 
 In the U.S., the basics usually include choosing a business structure, registering the business where required, getting federal and state tax IDs if applicable, applying for the required licenses and permits, opening a business bank account, and getting business insurance. The SBA notes that registration requirements depend on business structure and location, and that license and permit requirements vary by activity, location, and government rules.
 
-Cosmetology licensing is also state-based. The Bureau of Labor Statistics states that all states require barbers, hairstylists, and cosmetologists to be licensed, typically through a state-approved program and exam. If your business structure requires an EIN, apply through the IRS directly , getting an EIN online is free.
+Cosmetology licensing is also state-based. The Bureau of Labor Statistics states that all states require barbers, hairstylists, and cosmetologists to be licensed, typically through a state-approved program and exam. If your business structure requires an EIN, apply through the IRS directly, getting an EIN online is free.
 
 The business foundation should include:
 
@@ -1802,7 +1802,7 @@ That is the real blueprint: not just doing beautiful hair, but building a chair 
     slug: 'what-is-balayage',
     tag: 'Technique',
     title: 'What Is Balayage? Your Stylist Explains',
-    excerpt: 'Everything you need to know about the freehand coloring technique that changed the industry , and why no two results look the same.',
+    excerpt: 'Everything you need to know about the freehand coloring technique that changed the industry, and why no two results look the same.',
     author: 'Michelle Torres',
     date: 'Apr 10, 2026',
     readTime: '7 min',
@@ -1865,15 +1865,15 @@ That is why balayage on curly hair often looks softer but more dimensional. The 
 
 From the outside, it can look simple. A brush, some lightener, and a few painted pieces. Behind the chair, it is much more controlled.
 
-**Sectioning based on the haircut** , The color follows layers and shape, not a perfect grid.
+**Sectioning based on the haircut**, The color follows layers and shape, not a perfect grid.
 
-**Soft diffusion at the root** , No hard starting lines. Everything is blended upward.
+**Soft diffusion at the root**, No hard starting lines. Everything is blended upward.
 
-**Controlled saturation** , Too little product leads to patchy lift. Too much creates heavy bands. This is where experience shows.
+**Controlled saturation**, Too little product leads to patchy lift. Too much creates heavy bands. This is where experience shows.
 
-**Focused brightness** , The face frame and part line get the most attention. That is what clients notice first.
+**Focused brightness**, The face frame and part line get the most attention. That is what clients notice first.
 
-**Toning and finishing** , A gloss or toner refines the result, adds shine, and locks in tone. This step is what makes balayage look polished instead of unfinished.
+**Toning and finishing**, A gloss or toner refines the result, adds shine, and locks in tone. This step is what makes balayage look polished instead of unfinished.
 
 ## Maintenance, According to Stylists
 
@@ -1897,7 +1897,7 @@ In those cases, stylists are spacing it out and protecting the hair:
 
 - Bond-building or protein treatments during the service
 - Hair breakage treatment after
-- Sometimes the best decision is to slow down , health first, then brightness
+- Sometimes the best decision is to slow down, health first, then brightness
 
 ## Why Stylists Prioritize Balayage
 
@@ -2052,9 +2052,9 @@ Stylists see it in the part, the ponytail, the scalp, and the subtle changes in 
 > “By the time a client is worried, we have usually already seen it coming. The advantage is, if you catch it early, you can actually do something about it.”
 > — Marcus Bell, Colorist, London
 
-Pay attention to small changes. Invest in the right haircare. And listen when your stylist brings it up , because in most cases, they are not guessing. They are noticing what you cannot see yet.`,
+Pay attention to small changes. Invest in the right haircare. And listen when your stylist brings it up, because in most cases, they are not guessing. They are noticing what you cannot see yet.`,
     metaTitle: 'What Your Stylist Notices About Hair Thinning Before You Do',
-    metaDescription: 'Stylists track hair thinning long before clients notice it. Here is what they see first , and what you can do about it early.',
+    metaDescription: 'Stylists track hair thinning long before clients notice it. Here is what they see first, and what you can do about it early.',
   },
   {
     id: 15,
@@ -2099,10 +2099,10 @@ Thin hair cannot afford to lose too much weight. Once you remove too much densit
 
 Here is where layers start to work against you:
 
-1. **Over-thinning the ends** , The fastest way to make hair look sparse. The bottom line should feel solid, not wispy.
-2. **Short layers at the crown** , Too much creates separation, exposing more scalp.
-3. **Ignoring hair density** , Fine hair and low-density hair both require restraint.
-4. **Cutting for movement instead of fullness** , Movement matters, but fullness is the priority with thin hair.
+1. **Over-thinning the ends**, The fastest way to make hair look sparse. The bottom line should feel solid, not wispy.
+2. **Short layers at the crown**, Too much creates separation, exposing more scalp.
+3. **Ignoring hair density**, Fine hair and low-density hair both require restraint.
+4. **Cutting for movement instead of fullness**, Movement matters, but fullness is the priority with thin hair.
 
 ## The Line Between Volume and Loss
 
@@ -2187,14 +2187,14 @@ Layers can be one of the best things you do for thin hair or the fastest way to 
 
 Keep the strength, create the illusion, and support it with the right products and styling routine. That is what makes layers work.`,
     metaTitle: 'Why Layers Can Either Help or Ruin Thin Hair',
-    metaDescription: 'Layers are a precision tool for thin hair , not a universal fix. Here is how stylists use them to build density, and where they go wrong.',
+    metaDescription: 'Layers are a precision tool for thin hair, not a universal fix. Here is how stylists use them to build density, and where they go wrong.',
   },
   {
     id: 16,
     slug: 'gua-sha-scalp',
     tag: 'Hair Thinning',
     title: 'Gua Sha for Scalp: The Treatment Stylists Are Watching Closely',
-    excerpt: 'Gua sha has had its face moment. Now stylists are paying attention to what it can do for the scalp , and where it fits into a serious hair care routine.',
+    excerpt: 'Gua sha has had its face moment. Now stylists are paying attention to what it can do for the scalp, and where it fits into a serious hair care routine.',
     author: 'Marissa Chen',
     date: 'Apr 16, 2026',
     readTime: '9 min',
@@ -2248,7 +2248,7 @@ A tight scalp is common, especially in clients who clench their jaw, wear tight 
 
 ### 2. It encourages product distribution
 
-If you are using a scalp serum, hair growth serum, or scalp oil, a gua sha tool can help work the product across the scalp without using your nails. Many clients apply scalp products unevenly , a tool slows the process down and ensures better coverage.
+If you are using a scalp serum, hair growth serum, or scalp oil, a gua sha tool can help work the product across the scalp without using your nails. Many clients apply scalp products unevenly, a tool slows the process down and ensures better coverage.
 
 ### 3. It supports circulation through massage
 
@@ -2331,7 +2331,7 @@ More is not always better. Overworking the scalp can create irritation, which de
 
 ## The Salon Version vs the At-Home Version
 
-In salons, scalp gua sha is usually part of a bigger service , an add-on to a scalp treatment, gloss, blowout, or restorative appointment. A stylist might combine it with steam, scalp exfoliation, a tea tree treatment, or a hydrating scalp mask.
+In salons, scalp gua sha is usually part of a bigger service, an add-on to a scalp treatment, gloss, blowout, or restorative appointment. A stylist might combine it with steam, scalp exfoliation, a tea tree treatment, or a hydrating scalp mask.
 
 At home, the goal is maintenance. You are not trying to replicate a full treatment room service. You are just keeping the scalp mobile, clean, and cared for between appointments.
 
@@ -2348,12 +2348,12 @@ It can be part of a supportive routine alongside dermatologist-recommended treat
 
 The best products are lightweight, scalp-safe, and easy to wash out. Stylists usually recommend:
 
-1. **Scalp serum** , Best for targeted application without greasiness
-2. **Oil for scalp** , Better before shampooing, especially for dry or tight scalps
-3. **Scalp moisturizer** , Good for clients dealing with dryness, flakes, or tightness
-4. **Tea tree scalp treatment** , Useful for a cooling, fresh feeling, though may be too strong for sensitive scalps
-5. **Shampoo for hair fall** , A supportive wash option when paired with a full thinning-hair routine
-6. **Volumizing shampoo and conditioner** , Helpful if the goal is a cleaner scalp and fuller-looking roots
+1. **Scalp serum**, Best for targeted application without greasiness
+2. **Oil for scalp**, Better before shampooing, especially for dry or tight scalps
+3. **Scalp moisturizer**, Good for clients dealing with dryness, flakes, or tightness
+4. **Tea tree scalp treatment**, Useful for a cooling, fresh feeling, though may be too strong for sensitive scalps
+5. **Shampoo for hair fall**, A supportive wash option when paired with a full thinning-hair routine
+6. **Volumizing shampoo and conditioner**, Helpful if the goal is a cleaner scalp and fuller-looking roots
 
 Avoid applying heavy masks, thick conditioners, or styling creams directly to the scalp unless they are designed for scalp use.
 
@@ -2361,12 +2361,12 @@ Avoid applying heavy masks, thick conditioners, or styling creams directly to th
 
 Scalp gua sha looks easy, but people still overdo it. The most common mistakes:
 
-1. **Using too much pressure** , If the scalp feels sore later, you went too hard
-2. **Using the tool on tangled hair** , This can cause pulling and breakage
-3. **Scraping over irritation** , Flakes, redness, or sores need care, not friction
-4. **Expecting overnight hair growth** , Scalp health is long-term
-5. **Using heavy oils too often** , This can create buildup and make fine hair look flatter
-6. **Ignoring actual hair loss symptoms** , Excessive shedding or bald patches should be checked by a professional
+1. **Using too much pressure**, If the scalp feels sore later, you went too hard
+2. **Using the tool on tangled hair**, This can cause pulling and breakage
+3. **Scraping over irritation**, Flakes, redness, or sores need care, not friction
+4. **Expecting overnight hair growth**, Scalp health is long-term
+5. **Using heavy oils too often**, This can create buildup and make fine hair look flatter
+6. **Ignoring actual hair loss symptoms**, Excessive shedding or bald patches should be checked by a professional
 
 ## The Bottom Line
 
@@ -2404,7 +2404,7 @@ To a client, it usually means fewer appointments. To a stylist, it means smarter
 
 That is the part most clients do not see. The best low-maintenance color is built to age well.
 
-![A soft rooted blonde with lived-in dimension , the grow-out is part of the design](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/8e/bd/b7/80/34/v1_E11/E117RM56.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c788e18caf3fa6e4a5c15498b6e1bc3b23bdd5fc3d80d2d55f0dd50cd0c82eec)
+![A soft rooted blonde with lived-in dimension, the grow-out is part of the design](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/8e/bd/b7/80/34/v1_E11/E117RM56.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c788e18caf3fa6e4a5c15498b6e1bc3b23bdd5fc3d80d2d55f0dd50cd0c82eec)
 
 ## First, Say What You Actually Mean by Low-Maintenance
 
@@ -2439,23 +2439,23 @@ Balayage is hand-painted color designed to grow out softly. It does not mean zer
 
 ### 4. Dimensional brunette
 
-For brunettes, low-maintenance often means keeping the base rich and adding subtle ribbons of warmth or brightness , espresso, chestnut, caramel, soft mocha, or golden brown. It gives movement without committing to constant root work.
+For brunettes, low-maintenance often means keeping the base rich and adding subtle ribbons of warmth or brightness, espresso, chestnut, caramel, soft mocha, or golden brown. It gives movement without committing to constant root work.
 
 ### 5. Gloss or glaze
 
 A gloss hair treatment is often the secret behind expensive-looking color. It refreshes tone, adds shine, and can make older color look intentional again. This is the appointment stylists love because it keeps the color alive without a full lightening service every time.
 
-![Dimensional brunette with caramel ribbons , one of the easiest color families to maintain](https://i.pinimg.com/564x/07/66/08/076608816956e391d7c5e8848a2fa9a7.jpg)
+![Dimensional brunette with caramel ribbons, one of the easiest color families to maintain](https://i.pinimg.com/564x/07/66/08/076608816956e391d7c5e8848a2fa9a7.jpg)
 
 ## What Actually Makes Color Last
 
 Long-lasting color is not just about the formula. It is about how the color is placed. Stylists are thinking about several things before they paint:
 
-1. **Your natural base color** , The closer the final result stays to your natural level, the easier the maintenance.
-2. **Your undertone** , If your hair naturally pulls orange, asking for icy beige blonde may mean constant toning. A warmer beige, caramel, or honey shade may last better.
-3. **Your hair history** , Previous bleach, box dye, old toner, and permanent color all affect how evenly the hair lifts and fades.
-4. **Your haircut** , Layered haircuts, face-framing pieces, and shorter shapes can all change where brightness should be placed.
-5. **Your lifestyle** , Heat styling, washing frequency, sun exposure, swimming, and hard water can all shift color faster.
+1. **Your natural base color**, The closer the final result stays to your natural level, the easier the maintenance.
+2. **Your undertone**, If your hair naturally pulls orange, asking for icy beige blonde may mean constant toning. A warmer beige, caramel, or honey shade may last better.
+3. **Your hair history**, Previous bleach, box dye, old toner, and permanent color all affect how evenly the hair lifts and fades.
+4. **Your haircut**, Layered haircuts, face-framing pieces, and shorter shapes can all change where brightness should be placed.
+5. **Your lifestyle**, Heat styling, washing frequency, sun exposure, swimming, and hard water can all shift color faster.
 
 > “Clients want the color to last, but they do not always realize their routine is part of the formula. If you wash daily with the wrong shampoo, no toner is surviving that.”
 > — Dana Reeves, Salon Owner, Nashville
@@ -2497,7 +2497,7 @@ Copper is having a major salon moment, but it fades faster than most shades. If 
 
 ### Gray blending
 
-For clients with natural gray, the most low-maintenance option is often blending, not covering. Softer highlights, lowlights, glosses, and demi-permanent color can make the grow-out feel less severe. This is one of the biggest shifts stylists are seeing with clients over 40 , they do not necessarily want to erase gray. They want it to look intentional.
+For clients with natural gray, the most low-maintenance option is often blending, not covering. Softer highlights, lowlights, glosses, and demi-permanent color can make the grow-out feel less severe. This is one of the biggest shifts stylists are seeing with clients over 40, they do not necessarily want to erase gray. They want it to look intentional.
 
 ## What to Ask Your Stylist For
 
@@ -2532,22 +2532,22 @@ A photo of the root is especially important. Most clients only save the bright e
 
 Some requests sound low-maintenance but are not. Avoid these if your goal is longevity:
 
-1. **“Make me really bright all over.”** , Full brightness usually means visible regrowth.
-2. **“I want icy blonde but low-maintenance.”** , Icy tones fade quickly and need frequent toning.
-3. **“Can we cover all my gray permanently?”** , You can, but expect a root line.
-4. **“I want a big change, but I do not want upkeep.”** , Big changes usually require maintenance.
-5. **“Just do whatever.”** , Stylists love trust, but low-maintenance color still needs boundaries.
+1. **“Make me really bright all over.”**, Full brightness usually means visible regrowth.
+2. **“I want icy blonde but low-maintenance.”**, Icy tones fade quickly and need frequent toning.
+3. **“Can we cover all my gray permanently?”**, You can, but expect a root line.
+4. **“I want a big change, but I do not want upkeep.”**, Big changes usually require maintenance.
+5. **“Just do whatever.”**, Stylists love trust, but low-maintenance color still needs boundaries.
 
 ## The Home Care That Keeps Color Looking Expensive
 
 This is where clients either protect the color or undo it. Your stylist may recommend:
 
-1. **Shampoo for color treated hair** , Helps slow fading and keeps tone cleaner.
-2. **Hair serum or leave-in treatment** , Especially useful for lightened ends that need shine and softness.
-3. **Hair moisturizer** , Color lasts better when the hair is not dry and porous.
-4. **Glossing appointments** , Refreshes tone and shine without a full color service.
-5. **Heat protection** , Hot tools fade color faster than most clients realize.
-6. **Scalp care** , A healthy scalp supports better-looking hair overall.
+1. **Shampoo for color treated hair**, Helps slow fading and keeps tone cleaner.
+2. **Hair serum or leave-in treatment**, Especially useful for lightened ends that need shine and softness.
+3. **Hair moisturizer**, Color lasts better when the hair is not dry and porous.
+4. **Glossing appointments**, Refreshes tone and shine without a full color service.
+5. **Heat protection**, Hot tools fade color faster than most clients realize.
+6. **Scalp care**, A healthy scalp supports better-looking hair overall.
 
 Professional hair care products are not always about luxury. In color work, they are part of the maintenance plan.
 
@@ -2594,7 +2594,7 @@ The clients with the best hair are not the ones doing the most in-salon. They ar
 
 This is where at-home hair care stops being optional and starts being the entire strategy.
 
-![A well-maintained blowout , the result of consistent at-home care, not just salon visits](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ee/f9/d3/57/04/v1_E10/E10B9UPC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6516535bd186f44758e01ec96b50590c3a09624b21f2d2a6d1f852258247424a)
+![A well-maintained blowout, the result of consistent at-home care, not just salon visits](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ee/f9/d3/57/04/v1_E10/E10B9UPC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6516535bd186f44758e01ec96b50590c3a09624b21f2d2a6d1f852258247424a)
 
 ## Start With the Scalp, Not the Ends
 
@@ -2633,7 +2633,7 @@ Overwashing is still one of the biggest issues stylists see. It strips natural o
 
 If you are dealing with hair loss, hair thinning, or excessive shedding, gentle washing is key. Aggressive scrubbing or harsh formulas can make shedding feel worse.
 
-![Scalp-focused washing , the technique matters as much as the product](https://elements-resized.envatousercontent.com/envato-dam-assets-production/214b747b-f1af-4f3d-9236-2323436c5e79/9e2c3562-b0a0-4ae4-81b8-d7799486e3a2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=601bfb355b840e0115a818f14c215973b41660c5261941b5585134829d337284)
+![Scalp-focused washing, the technique matters as much as the product](https://elements-resized.envatousercontent.com/envato-dam-assets-production/214b747b-f1af-4f3d-9236-2323436c5e79/9e2c3562-b0a0-4ae4-81b8-d7799486e3a2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=601bfb355b840e0115a818f14c215973b41660c5261941b5585134829d337284)
 
 ## Treat the Hair You Have, Not the Hair You Want
 
@@ -2672,7 +2672,7 @@ Flat irons, curling wands, and even high-heat blow dryers are still the fastest 
 
 Tools can help reduce damage, but technique still matters more than the tool.
 
-![Air drying before heat styling , one of the simplest ways to reduce damage](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/08/7d/f4/c5/94/v1_E10/E106L7XU.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=02101d831d2be8ddf516d386717a48420b6537ae8d819339f4eaf20bec820f84)
+![Air drying before heat styling, one of the simplest ways to reduce damage](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/08/7d/f4/c5/94/v1_E10/E106L7XU.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=02101d831d2be8ddf516d386717a48420b6537ae8d819339f4eaf20bec820f84)
 
 ## The Weekly Reset Routine Stylists Recommend
 
@@ -2733,13 +2733,13 @@ At-home hair care is not about doing everything. It is about doing the right thi
 
 Not more products, not more steps. Just better habits.`,
     metaTitle: 'At-Home Hair Care That Actually Makes a Difference',
-    metaDescription: 'Stylists share the at-home habits that make the biggest difference between appointments , from scalp care to heat styling to product selection.',
+    metaDescription: 'Stylists share the at-home habits that make the biggest difference between appointments, from scalp care to heat styling to product selection.',
   },
   {
     id: 19,
     slug: 'busiest-stylists-system',
     tag: 'Business',
-    title: "Why the Busiest Stylists Aren't Doing More Clients , They're Doing This Instead",
+    title: "Why the Busiest Stylists Aren't Doing More Clients, They're Doing This Instead",
     excerpt: "A full schedule doesn't always mean high income. The stylists building sustainable careers in 2026 are doing fewer things, better, and charging accordingly.",
     author: 'Dana Reeves',
     date: 'Apr 22, 2026',
@@ -2756,11 +2756,11 @@ What separates working stylists from high-performing ones in 2026 is not how man
 > “The shift is when you stop thinking in appointments and start thinking in systems. That's where your income changes.”
 > — Dana Reeves, Salon Owner & Business Coach, Nashville
 
-![A stylist reviewing their schedule , the work behind the chair is only part of the picture](/image/schedule.png)
+![A stylist reviewing their schedule, the work behind the chair is only part of the picture](/image/schedule.png)
 
 ## The Old Model Is Breaking
 
-For years, the model was simple: more clients equals more money. But that model has limits , physical limits, time limits, and burnout.
+For years, the model was simple: more clients equals more money. But that model has limits, physical limits, time limits, and burnout.
 
 Stylists who rely only on volume eventually hit the same ceiling:
 
@@ -2778,7 +2778,7 @@ The stylists who are consistently booked, charging premium prices, and not overw
 
 ### 1. They specialize
 
-Instead of offering everything, they become known for something , lived-in color, blondes, copper and reds, curly hair, or transformations. This attracts higher-intent clients and allows them to refine and speed up their process.
+Instead of offering everything, they become known for something, lived-in color, blondes, copper and reds, curly hair, or transformations. This attracts higher-intent clients and allows them to refine and speed up their process.
 
 > “I stopped saying yes to everything. Once I focused on dimensional color, my bookings didn't go down. My prices went up.”
 > — Nina Patel, Colorist & Educator, Chicago
@@ -2802,7 +2802,7 @@ This creates predictable income and keeps the client's hair looking consistent.
 
 ### 4. They treat retail as part of the service
 
-Retail is still one of the most underused revenue streams in salons. The top stylists don't sell , they prescribe. Shampoo for color treated hair, hair serum for shine, scalp treatment for long-term health, volumizing products for fine or thinning hair.
+Retail is still one of the most underused revenue streams in salons. The top stylists don't sell, they prescribe. Shampoo for color treated hair, hair serum for shine, scalp treatment for long-term health, volumizing products for fine or thinning hair.
 
 > “Clients are already asking what to use. If you're not answering that, they're buying it somewhere else.”
 > — Dana Reeves, Salon Owner & Business Coach, Nashville
@@ -2811,7 +2811,7 @@ Retail is still one of the most underused revenue streams in salons. The top sty
 
 Not every hour should be filled the same way. High-performing stylists reserve prime time for high-ticket services, avoid stacking low-value appointments back-to-back, build in consultation time, and leave space for adjustments and add-ons.
 
-![A well-structured salon day , intentional scheduling is a skill in itself](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fc/6b/44/ae/47/v1_E10/E10F9W2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=ffd30589afe066c6a890b6882020ae1e52b64b50f789613a8157ca8599cc4978)
+![A well-structured salon day, intentional scheduling is a skill in itself](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fc/6b/44/ae/47/v1_E10/E10F9W2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=ffd30589afe066c6a890b6882020ae1e52b64b50f789613a8157ca8599cc4978)
 
 ## The Shift From Technician to Operator
 
@@ -2828,7 +2828,7 @@ The result: higher average ticket, better client experience, more consistent inc
 
 ## The Role of Content and Visibility
 
-Another shift happening right now is how stylists attract clients. It is no longer just referrals and walk-ins. It is visual proof , before-and-after transformations, consistent portfolio updates, and clear specialization.
+Another shift happening right now is how stylists attract clients. It is no longer just referrals and walk-ins. It is visual proof, before-and-after transformations, consistent portfolio updates, and clear specialization.
 
 Clients are choosing stylists based on what they can see.
 
@@ -2837,7 +2837,7 @@ Clients are choosing stylists based on what they can see.
 
 This is why categories like Transformations perform so well. They show capability instantly.
 
-![Portfolio work , visible proof of specialization is one of the most powerful marketing tools a stylist has](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/40/1c/70/7b/35/v1_E11/E117U9UP.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=4a70f19fdfe208663ac7e7fef2266077f6a3499fb19ad8b1e675e71f7e3c743a)
+![Portfolio work, visible proof of specialization is one of the most powerful marketing tools a stylist has](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/40/1c/70/7b/35/v1_E11/E117U9UP.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=4a70f19fdfe208663ac7e7fef2266077f6a3499fb19ad8b1e675e71f7e3c743a)
 
 ## The Bottom Line
 
@@ -2848,14 +2848,14 @@ They specialize. They structure their services. They build maintenance into the 
 > “You don't need more clients. You need a better system for the ones you already have.”
 > — Dana Reeves, Salon Owner & Business Coach, Nashville`,
     metaTitle: "Why the Busiest Stylists Aren't Doing More Clients",
-    metaDescription: 'High-earning stylists in 2026 are not taking more clients , they are specializing, pricing smarter, and building systems that work.',
+    metaDescription: 'High-earning stylists in 2026 are not taking more clients, they are specializing, pricing smarter, and building systems that work.',
   },
   {
     id: 20,
     slug: 'smoothing-products-stylists-use',
     tag: 'Products',
     title: 'The Types of Products Stylists Actually Use for Smoothing Hair',
-    excerpt: 'Smooth hair is never one product. Stylists build it in layers , the right prep, the right treatment, and the right finish.',
+    excerpt: 'Smooth hair is never one product. Stylists build it in layers, the right prep, the right treatment, and the right finish.',
     author: 'James Olivier',
     date: 'Apr 24, 2026',
     readTime: '8 min',
@@ -2871,7 +2871,7 @@ That is why there is no single smoothing product that works for everyone. In the
 > “Smooth hair is never one product. It is the right prep, the right treatment, and the right finish. If one of those is wrong, the hair tells on you.”
 > — Nina Patel, Colorist & Educator, Chicago
 
-![The smoothing process starts before styling , product selection at the wash stage sets the foundation](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/f3/d8/4c/8f/13/v1_E10/E107L00O.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1c54a363093754a4f3bbfd8979242085e3a9662bccc058fec857726430bd46b5)
+![The smoothing process starts before styling, product selection at the wash stage sets the foundation](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/f3/d8/4c/8f/13/v1_E10/E107L00O.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1c54a363093754a4f3bbfd8979242085e3a9662bccc058fec857726430bd46b5)
 
 ## It Usually Starts With the Wash
 
@@ -2884,13 +2884,13 @@ Stylists usually reach for a smoothing shampoo and conditioner when the hair fee
 
 ## Then Comes the Treatment Layer
 
-When stylists talk about smoothing, they are often talking about repair. Frizz is not always a hair type issue. A lot of the time, it is damage , bleach, heat tools, old color, rough brushing, and chemical services all create openings in the cuticle. Once the cuticle is uneven, the hair stops reflecting light and starts grabbing moisture from the air.
+When stylists talk about smoothing, they are often talking about repair. Frizz is not always a hair type issue. A lot of the time, it is damage, bleach, heat tools, old color, rough brushing, and chemical services all create openings in the cuticle. Once the cuticle is uneven, the hair stops reflecting light and starts grabbing moisture from the air.
 
 That is when a stylist may recommend a hair treatment for damaged hair, a protein treatment for hair, or a deeper moisturizing mask. These are not just “nice extras.” They help the strand behave better.
 
 For clients with severe hair breakage and thinning, smoothing has to be approached carefully. Heavy products can make the hair look flatter, but skipping treatment leaves the ends looking frayed. The sweet spot is usually lightweight repair, not coating the hair until it collapses.
 
-![Treatment products work at the strand level , they change how the hair behaves, not just how it looks](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/17/18/09/9a/0f/v1_E11/E114HCS4.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6a8bf7ae5de70b10cdb42ca625dc9d16259b52b2b917a8bfd0cddc119372b9f8)
+![Treatment products work at the strand level, they change how the hair behaves, not just how it looks](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/17/18/09/9a/0f/v1_E11/E114HCS4.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6a8bf7ae5de70b10cdb42ca625dc9d16259b52b2b917a8bfd0cddc119372b9f8)
 
 ## Leave-In Products Do Most of the Daily Work
 
@@ -2920,11 +2920,11 @@ But modern smoothing treatments are not always about making the hair pin-straigh
 
 A good stylist will look at the hair's condition first. If the hair is over-bleached, fragile, or already breaking, the formula and timing need to be adjusted. Smooth should never come at the expense of strength.
 
-![A professional smoothing service , the consultation determines the formula, not the other way around](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/de/1c/6e/36/51/v1_E10/E1020HOE.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=140b54d4a815107572fecd522d881990d9df921efc3d1aa99868deae2e634bb7)
+![A professional smoothing service, the consultation determines the formula, not the other way around](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/de/1c/6e/36/51/v1_E10/E1020HOE.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=140b54d4a815107572fecd522d881990d9df921efc3d1aa99868deae2e634bb7)
 
 ## The Finish Is Usually a Serum or Oil
 
-The final polish often comes from a hair serum or lightweight oil. This adds shine, controls flyaways, and makes the ends look cleaner. But finishing products are not repair products , they make the hair look better in the moment. They do not replace treatments, moisture, or a proper smoothing routine.
+The final polish often comes from a hair serum or lightweight oil. This adds shine, controls flyaways, and makes the ends look cleaner. But finishing products are not repair products, they make the hair look better in the moment. They do not replace treatments, moisture, or a proper smoothing routine.
 
 For fine hair, stylists usually keep this step very light. For coarse, curly, or dry hair, they may use a richer oil, especially through the ends. The goal is reflection, not weight.
 
@@ -2952,7 +2952,7 @@ Stylists do not rely on one miracle smoothing product. They build smoothness thr
 
 The real secret is knowing what kind of smoothing your hair actually needs. Because sometimes the answer is a serum. Sometimes it is a protein treatment. Sometimes it is a keratin service. And sometimes it starts with changing your shampoo.`,
     metaTitle: 'The Types of Products Stylists Actually Use for Smoothing Hair',
-    metaDescription: 'Smooth hair is built in layers. Stylists break down the products they actually use , from wash to treatment to finish , and why one product is never enough.',
+    metaDescription: 'Smooth hair is built in layers. Stylists break down the products they actually use, from wash to treatment to finish, and why one product is never enough.',
   },
   {
     id: 21,
@@ -2975,7 +2975,7 @@ Stylists are trained observers. The consultation is not just about what you say.
 > “Clients think the appointment starts when we ask what they want. For us, it starts the second they walk in.”
 > — Nina Patel, Colorist & Educator, Chicago
 
-![The first few minutes in the chair , your stylist is already reading the whole picture](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/51/0d/6d/da/30/v1_E10/E1096J9K.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a4cb791a5ad03f1a41b34dbaef591f289979c41bfb5cd30cb6789db23b35c454)
+![The first few minutes in the chair, your stylist is already reading the whole picture](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/51/0d/6d/da/30/v1_E10/E1096J9K.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a4cb791a5ad03f1a41b34dbaef591f289979c41bfb5cd30cb6789db23b35c454)
 
 ## The Way Your Hair Falls Naturally
 
@@ -3003,13 +3003,13 @@ If the root tells the present, the ends tell the past. Old bleach, heat damage, 
 
 This is where your stylist decides whether your hair can handle a big color change, whether you need a hair treatment for damaged hair first, or whether those “just a little trim” ends actually need more than a little.
 
-![Ends tell the full story of a client's hair history , stylists read them before making any decisions](https://elements-resized.envatousercontent.com/envato-dam-assets-production/6c54279f-8d01-452b-9052-64f196b93c46/83f20189-fbaf-4bd0-9153-baddd7db64b5.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=89898d8fdc319cdacb8a4d252c02b46b351c820e5580c229059110b34a8cca2f)
+![Ends tell the full story of a client's hair history, stylists read them before making any decisions](https://elements-resized.envatousercontent.com/envato-dam-assets-production/6c54279f-8d01-452b-9052-64f196b93c46/83f20189-fbaf-4bd0-9153-baddd7db64b5.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=89898d8fdc319cdacb8a4d252c02b46b351c820e5580c229059110b34a8cca2f)
 
 ## Your Scalp
 
 Yes, your stylist is looking at your scalp. The scalp is the foundation of the whole appointment. If it is dry, irritated, oily, flaky, or sensitive, it affects everything from color application to styling.
 
-A stylist may notice dryness or flaking, product buildup, redness or irritation, tender areas, or visible thinning at the part or crown. This is where conversations about scalp treatment, dandruff treatment, or scalp moisturizer come in , not because your stylist is trying to upsell you, but because healthy hair starts at the scalp.
+A stylist may notice dryness or flaking, product buildup, redness or irritation, tender areas, or visible thinning at the part or crown. This is where conversations about scalp treatment, dandruff treatment, or scalp moisturizer come in, not because your stylist is trying to upsell you, but because healthy hair starts at the scalp.
 
 ## The Density, Not Just the Thickness
 
@@ -3040,7 +3040,7 @@ When you show a reference photo, your stylist is not just looking at the pretty 
 
 This is why a good stylist might say, “I love this direction, but here is what it would look like on your hair.” That is not rejection. That is translation.
 
-![A reference photo consultation , stylists are reading the root, the density, and the styling, not just the finish](https://elements-resized.envatousercontent.com/envato-dam-assets-production/76ee7236-dfc0-4266-a839-c84de7921ad9/ec4c2b5a-2bb2-413e-8d84-805cee9fd955.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=77c820c4a3352a6bb986f5afeb6d32810897ed77c6b32d1eb7936cd48fda9880)
+![A reference photo consultation, stylists are reading the root, the density, and the styling, not just the finish](https://elements-resized.envatousercontent.com/envato-dam-assets-production/76ee7236-dfc0-4266-a839-c84de7921ad9/ec4c2b5a-2bb2-413e-8d84-805cee9fd955.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=77c820c4a3352a6bb986f5afeb6d32810897ed77c6b32d1eb7936cd48fda9880)
 
 ## Your Lifestyle, Based on Clues
 
@@ -3062,7 +3062,7 @@ So yes, tell the truth. No, your stylist is probably not judging you. They are j
 
 ## What Your Stylist Is Really Deciding
 
-By the end of those first few minutes, your stylist is already mapping the appointment , whether your goal is possible today, what needs to be adjusted, where the haircut should hold weight, where the color should be brightest, what treatment your hair needs, and what maintenance plan will keep you from hating it in six weeks.
+By the end of those first few minutes, your stylist is already mapping the appointment, whether your goal is possible today, what needs to be adjusted, where the haircut should hold weight, where the color should be brightest, what treatment your hair needs, and what maintenance plan will keep you from hating it in six weeks.
 
 The consultation is not small talk. It is the blueprint.
 
@@ -3075,7 +3075,7 @@ When you sit down, your stylist is not just looking at your hair. They are readi
 
 That is the real work behind the chair.`,
     metaTitle: 'What Your Stylist Is Actually Looking at When You Sit Down',
-    metaDescription: 'The consultation starts before you say a word. Here is what your stylist reads the moment you walk in , and why it shapes everything that follows.',
+    metaDescription: 'The consultation starts before you say a word. Here is what your stylist reads the moment you walk in, and why it shapes everything that follows.',
   },
   {
   id: 22,
@@ -3212,7 +3212,7 @@ That is why his hair keeps getting referenced.
 > GD’s hair is never random. It just looks brave enough to be.
 > — Cassie Miller, Salon Business Coach, New Jersey `,
   metaTitle: '10 G-Dragon Hairstyles Stylists Still Reference',
-  metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from , and why the system behind them works.",
+  metaDescription: "G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from, and why the system behind them works.",
 },
   {
     id: 23,
@@ -3421,7 +3421,7 @@ Mother's Day hair should feel like you, just a little more polished. Chic, touch
     slug: 'history-of-hair-color',
     tag: 'Color',
     title: 'A Stylish History of Hair Color: From Ancient Pigment to Modern Salon Craft',
-    excerpt: 'Before gloss bowls and toner charts, people were already using plants, minerals, and early chemistry to change the way hair looked. A colorist\'s guide to where it all started , and what it means behind the chair today.',
+    excerpt: 'Before gloss bowls and toner charts, people were already using plants, minerals, and early chemistry to change the way hair looked. A colorist\'s guide to where it all started, and what it means behind the chair today.',
     author: 'Leila Fernandez',
     date: 'May 12, 2026',
     readTime: '12 min',
@@ -3457,7 +3457,7 @@ From behind the chair, this feels very full circle. Warmth is still one of the m
 
 > Warm tones have staying power because they make the hair look glossy, healthy, and dimensional.
 
-![Ancient henna pigments and natural dye materials , the original color palette](/image/henna.webp)
+![Ancient henna pigments and natural dye materials, the original color palette](/image/henna.webp)
 
 ## 2. Ancient China: Dark Hair, Youth, and Refinement
 
@@ -3467,7 +3467,7 @@ That sounds historical, but the salon connection is very current. A lot of clien
 
 Dark color looks simple, but it needs balance. Too flat can feel heavy. Too ashy can look dull. The prettiest dark shades usually have shine, softness, and a customized undertone.
 
-![Deep espresso brunette with gloss finish , the modern version of an ancient ideal](/image/espresso.png)
+![Deep espresso brunette with gloss finish, the modern version of an ancient ideal](/image/espresso.png)
 
 ## 3. Indigenous Americas: Color as Identity and Storytelling
 
@@ -3479,7 +3479,7 @@ In the salon today, we see a modern version of that same idea. Some clients choo
 
 > Color is visual language. Even a subtle gloss says something.
 
-![Natural plant-based pigments , color as ceremony, identity, and personal expression](/image/natural.avif)
+![Natural plant-based pigments, color as ceremony, identity, and personal expression](/image/natural.avif)
 
 ## 4. Ancient Rome and the Early Blonding Conversation
 
@@ -3498,7 +3498,7 @@ What clients ask for now:
 
 Those requests are never one-size-fits-all. A soft beige blonde and a high-contrast platinum require completely different plans.
 
-![Face-framing highlights , the modern answer to the ancient desire for lighter hair](/image/face-framing.avif)
+![Face-framing highlights, the modern answer to the ancient desire for lighter hair](/image/face-framing.avif)
 
 ## 5. Renaissance Venice: Golden Hair Becomes the Moment
 
@@ -3508,7 +3508,7 @@ As stylists, we still see this every day. Blonde is one of the most requested tr
 
 The chic salon version today is placement-led. We use face-framing highlights, root melts, lowlights, glosses, and toners to make blonde feel wearable.
 
-![Honey blonde with root melt , the Renaissance golden ideal, made wearable for modern life](/image/Honey blonde with root melt.webp)
+![Honey blonde with root melt, the Renaissance golden ideal, made wearable for modern life](/image/Honey blonde with root melt.webp)
 
 ## 6. The Chemistry Shift: Color Becomes More Predictable
 
@@ -3520,7 +3520,7 @@ That moment matters to the beauty industry because modern hair color depends on 
 
 This is where hair color begins to feel closer to the professional salon world we know today.
 
-![Color formulation tools , the chemistry behind every shade a colorist mixes](/image/color.avif)
+![Color formulation tools, the chemistry behind every shade a colorist mixes](/image/color.avif)
 
 ## 7. The Birth of Professional Salon Color
 
@@ -3541,7 +3541,7 @@ Today, a client may bring in an inspiration photo, but the stylist has to transl
 
 That is where professional color becomes more than product. It becomes judgment, experience, and technical skill.
 
-![A colorist reviewing a client's hair history before mixing , the consultation is the foundation](/image/consultation.avif)
+![A colorist reviewing a client's hair history before mixing, the consultation is the foundation](/image/consultation.avif)
 
 ## 8. The 1950s: Hair Color Becomes Everyday Beauty
 
@@ -3559,7 +3559,7 @@ That influence still shows up in client language today:
 
 This is where subtle color became powerful. A root touch-up, a soft gloss, or a tone refresh can completely change how finished the hair looks.
 
-![Polished brunette with soft gray blending , the everyday beauty ideal that started in the 1950s](/image/grey.jpeg)
+![Polished brunette with soft gray blending, the everyday beauty ideal that started in the 1950s](/image/grey.jpeg)
 
 ## 9. The 1970s and Beyond: Hair Color Gets Bold
 
@@ -3569,7 +3569,7 @@ That energy is still alive in salons. We see it in vivid panels, blue-black glos
 
 The modern version feels more customized. A client can go bold with a full vivid transformation, or they can keep it soft with a hidden peekaboo shade under the hair. Expression has range now.
 
-![Vivid color panels , bold self-expression that traces back to the punk movement of the 1970s](/image/self-expression.avif)
+![Vivid color panels, bold self-expression that traces back to the punk movement of the 1970s](/image/self-expression.avif)
 
 ## Then vs. Now: What Changed Behind the Chair
 
@@ -3590,15 +3590,15 @@ A brunette can look richer with soft ribbons of warmth. A blonde can feel expens
 
 The modern client usually wants one of these color moods:
 
-**Soft enhancement** , Glosses, beige blondes, warm brunettes, and natural-looking reds.
+**Soft enhancement**, Glosses, beige blondes, warm brunettes, and natural-looking reds.
 
-**Low-maintenance dimension** , Balayage, root melts, lived-in blondes, and soft money pieces.
+**Low-maintenance dimension**, Balayage, root melts, lived-in blondes, and soft money pieces.
 
-**Healthy-looking shine** , Demi color, toner refreshes, acidic glossing, and bond care.
+**Healthy-looking shine**, Demi color, toner refreshes, acidic glossing, and bond care.
 
-**Gray blending** , Softer grow-out with highlights, lowlights, or translucent coverage.
+**Gray blending**, Softer grow-out with highlights, lowlights, or translucent coverage.
 
-**Personality color** , Copper, cherry cola, rose brown, pastel panels, vivid ends, or hidden color.
+**Personality color**, Copper, cherry cola, rose brown, pastel panels, vivid ends, or hidden color.
 
 ## Stylist Consultation Checklist
 
@@ -3793,7 +3793,7 @@ Done well, it makes your face look lifted, your outfit look sharper, and even se
 
 Here is how stylists approach it.
 
-![A polished slick-back on a model , the kind of finish that reads editorial, not rushed](/image/slick-back-model.png)
+![A polished slick-back on a model, the kind of finish that reads editorial, not rushed](/image/slick-back-model.png)
 
 ## Start With the Right Kind of Hair
 
@@ -3811,13 +3811,13 @@ The goal is grip, not buildup.
 - **U-pins or bobby pins**: to hold the bun shape without bulk
 - **Styling product**: gel, wax, pomade, or smoothing balm depending on your hair type
 
-**Optional:** Dry shampoo if the roots look too oily or separated. Use it before styling, let it sit, then brush it through. You still want some natural grip , that is what helps this style hold.
+**Optional:** Dry shampoo if the roots look too oily or separated. Use it before styling, let it sit, then brush it through. You still want some natural grip, that is what helps this style hold.
 
-**Choosing your product:** Thicker or frizzier hair usually needs stronger hold. Fine or already-oily hair needs less. The goal is to smooth the hairline, sides, flyaways, and nape , not coat the entire head.
+**Choosing your product:** Thicker or frizzier hair usually needs stronger hold. Fine or already-oily hair needs less. The goal is to smooth the hairline, sides, flyaways, and nape, not coat the entire head.
 
 > The stylist rule: shape first, product second. The brush creates the polish. Product should only refine it.
 
-![The right tools laid out , comb, smoothing brush, gel, U-pins, and a hair tie](/image/tool.png)
+![The right tools laid out, comb, smoothing brush, gel, U-pins, and a hair tie](/image/tool.png)
 
 ## Step 1: Create a Clean Middle Part
 
@@ -3827,7 +3827,7 @@ Use the tail end of a fine-tooth comb to draw a straight line down the center of
 
 Stylists usually start by perfecting the part before touching the rest of the shape. If the part is uneven, the finished bun can look rushed, even if everything else is smooth.
 
-![A clean center part drawn with a fine-tooth comb , the foundation of the whole look](/image/comb.png)
+![A clean center part drawn with a fine-tooth comb, the foundation of the whole look](/image/comb.png)
 
 ## Step 2: Brush From the Part Outward
 
@@ -3847,7 +3847,7 @@ A good guide: place the ponytail around the middle-back of the head, not too clo
 
 Tie the hair securely, but do not pull so tightly that the scalp looks strained. A slick-back bun should look polished, not uncomfortable.
 
-![Ponytail placement at the mid-back of the head , the position that reads elegant rather than severe](/image/back.jpeg)
+![Ponytail placement at the mid-back of the head, the position that reads elegant rather than severe](/image/back.jpeg)
 
 ## Step 4: Lift the Crown Before You Finish
 
@@ -3867,7 +3867,7 @@ Secure the bun with U-shaped pins, especially at the top and bottom. U-pins are 
 
 After pinning, gently pull the bun outward a little. This makes it look fuller and more natural. A slick-back bun does not need to be huge, but it should have shape.
 
-![A wrapped bun secured with U-pins , full enough to read elegant, tight enough to stay polished](/image/bun.jpeg)
+![A wrapped bun secured with U-pins, full enough to read elegant, tight enough to stay polished](/image/bun.jpeg)
 
 ## Step 6: Smooth the Hairline, Sides, and Nape
 
@@ -3881,7 +3881,7 @@ Brush them upward toward the bun and set them with product.
 
 > From a stylist's perspective, the back matters just as much as the front. You may not see it in the mirror, but everyone else does.
 
-![Smoothing the nape with a fine brush and product , the detail most people miss but everyone sees](/image/gel.jpeg)
+![Smoothing the nape with a fine brush and product, the detail most people miss but everyone sees](/image/gel.jpeg)
 
 ## Step 7: Soften the Look If Needed
 
@@ -3915,7 +3915,7 @@ A good slick-back bun should not look like you are hiding your hair.
 
 It should look like you meant to wear it that way.`,
     metaTitle: 'How to Make a Slick-Back Bun Look Polished, Not Greasy',
-    metaDescription: 'The difference between a sleek slick-back bun and a greasy one is all technique. Here is how stylists do it , step by step.',
+    metaDescription: 'The difference between a sleek slick-back bun and a greasy one is all technique. Here is how stylists do it, step by step.',
   },
   {
     id: 27,
@@ -3969,7 +3969,7 @@ This matters because water helps the hair group into natural sections. When the 
 
 A stylist tip: keep a spray bottle nearby. If one side dries while you are working on another section, rewet it before applying product or scrunching. Fine hair dries quickly, so this step makes a big difference.
 
-![Spray bottle being used to rewet sections of hair before styling , a key step for fine wavy hair](/image/spray.png)
+![Spray bottle being used to rewet sections of hair before styling, a key step for fine wavy hair](/image/spray.png)
 
 ## 2. Use Leave-In Conditioner, But Keep It Away From the Roots
 
@@ -3993,7 +3993,7 @@ For fine hair, look for something lightweight. You want support, not stiffness. 
 
 The crunch is not the final look. It is part of the setting process.
 
-![Lightweight gel being scrunched into soaking-wet wavy hair , the cast will soften once the hair is fully dry](/image/gel.png)
+![Lightweight gel being scrunched into soaking-wet wavy hair, the cast will soften once the hair is fully dry](/image/gel.png)
 
 ## 4. Do Not Create a Hard Straight Part Right Away
 
@@ -4021,7 +4021,7 @@ Move from side to side so the hair does not dry in one stiff position. Once your
 
 Use low speed when possible. High airflow can rough up the cuticle and blow the wave pattern apart.
 
-![A diffuser held several inches from wet hair during the hover diffusing phase , letting the cast set before touching it](/image/diffuser.png)
+![A diffuser held several inches from wet hair during the hover diffusing phase, letting the cast set before touching it](/image/diffuser.png)
 
 ## 6. Dry the Roots Before Over-Drying the Ends
 
@@ -4047,7 +4047,7 @@ If your hair is very fine, you may not need oil. Oil can make fine waves fall fl
 
 Use less than you think. You can always add more, but you cannot easily remove too much oil once it is in the hair.
 
-![Hands gently scrunching dry wavy hair to release the cast , soft, defined waves underneath](/image/scrub.png)
+![Hands gently scrunching dry wavy hair to release the cast, soft, defined waves underneath](/image/scrub.png)
 
 ## 8. Touch Up Undefined Pieces With a Small Curling Wand
 
@@ -4087,7 +4087,7 @@ If your blowout disappears the second the air gets damp, but your natural textur
 
 That does not mean you have to wear your hair natural every day. You can still blow it out. You can still use hot tools. But when the weather is humid, working with your wave pattern may give you a better result than fighting it.
 
-![Side-by-side comparison , blowout in humidity vs. embraced wave pattern styled correctly](/image/before-and-after.jpg)
+![Side-by-side comparison, blowout in humidity vs. embraced wave pattern styled correctly](/image/before-and-after.jpg)
 
 ## Final Stylist Takeaway
 
@@ -4129,7 +4129,7 @@ Clients are moving away from hair that has to sit perfectly all day. The newer m
 
 This is also why the wolf cut has stayed popular in Asian beauty references, especially in K-pop, Thai celebrity styling, and Korean salon trends. Teen Vogue has noted that the wolf cut has long been a favorite in South Korean salons and K-pop styling, with its mix of soft face-framing, choppy texture, and gender-fluid shape.
 
-> The wolf cut is not about looking undone. It is about looking like you did not try too hard , and that takes real skill to cut.
+> The wolf cut is not about looking undone. It is about looking like you did not try too hard, and that takes real skill to cut.
 > — Yuna Seo, Cut & Style Editor
 
 For many non-Asian hair types, especially straight, medium-thick, or dense hair, this cut can also be very useful. It removes heaviness without taking away the whole length. It gives straight hair more direction. It helps medium-length hair look less flat. And for clients growing out a bob or short cut, it gives the awkward stage a clear shape.
@@ -4188,7 +4188,7 @@ For Asian references, Soyeon-style short wolf cuts work because they use the hai
 
 **Stylist note:** this is not the best version for someone who wants low-risk hair. If the top layers are cut too short, the grow-out can feel awkward. If the sides are too thin, the face can look wider. This version needs balance.
 
-![Short statement wolf cut with dramatic crown layers and strong flick at the ends , the boldest version of the style](/image/Soyeon.png)
+![Short statement wolf cut with dramatic crown layers and strong flick at the ends, the boldest version of the style](/image/Soyeon.png)
 
 ## Style 4: The Long Wavy Wolf Cut
 
@@ -5233,6 +5233,76 @@ For everyday clients, the best version is simple:
 Wet enough to look styled. Clean enough to look fresh.`,
     metaTitle: 'Wet-Look Hair Can Be Chic. It Just Can\'t Look Greasy. | Stylist Guide',
     metaDescription: 'A stylist\'s guide to the difference between editorial shine and oily hair — product placement, bang management, fine hair tips, and what to tell clients.',
+  },
+  {
+    id: 36,
+    slug: 'french-bob-every-face-shape',
+    tag: 'Cut & Style',
+    title: `Short Without the Hard Edges: The French Bob I Reach For`,
+    excerpt: `Soft, lived-in layers, length that lands right at the jaw, and zero attitude. Here's how I cut and consult the French bob that flatters round, square, and diamond faces alike, and why it keeps walking out of my chair looking expensive.`,
+    author: 'Nora Bell',
+    date: 'Jun 18, 2026',
+    readTime: '7 min',
+    image: '/image/bob-cover.jpg',
+    category: 'Cut & Style',
+    section: 'Trends',
+    body: `Every stylist knows this consult. A client sits down, says she wants to go short, and then immediately walks it back: "But I don't want to look harsh. Or older. Or like I'm trying too hard." What she's really telling you is that the last short cut she had was too sharp, too blunt, too much edge and not enough softness.
+
+That's the gap this cut fills. The soft-layered French bob, the one half the European editorial feeds have been running for two seasons now, splits the difference perfectly. It reads clean and intentional, but it moves. And here's the part I love behind the chair: it doesn't fight the face shape. Round, square, diamond, it doesn't matter. The shape wraps the face instead of exposing it, so even a bare-faced client heading to the office walks out looking pulled together and quietly expensive. It's the kind of cut that doesn't date.
+
+![The soft-layered French bob: jaw-length, lived-in, and built to wrap the face|full](/image/bob1.jpg)
+
+## Why I Keep Recommending It
+
+Three things make this cut earn its keep.
+
+1. **It does the face-flattering work for the client.** I build curved, face-framing layers down the sides and keep the perimeter sitting somewhere between the cheekbone and the jaw. That curve softly drapes over a high cheekbone or a wider jaw and creates that natural hair-hugging-the-face effect, which visually narrows the width of the face. You're not relying on the client to style around her features—the cut handles it.
+2. **It's genuinely low-maintenance, which clients only believe after they try it.** No perm required. A round brush with a slight inward turn at the finish is all the shape needs. Fine, flat hair gets its lift from those side layers propping up the crown instead of collapsing. Coarse, thick hair gets softened with careful thinning so it doesn't blow out wide. Either way, it's a five-minute styling job, and a client who can actually replicate the look at home is a client who rebooks.
+3. **It flexes across them whole life.** This is where color and parting come in. A blue-black or cool brown keeps it office-appropriate and quietly flatters warmer skin tones. A lighter chestnut brown gives it that softer, daytime-date energy. A center part reads cool and a little intellectual; a side part softens everything and takes years off. I've put this cut on clients from their twenties to their mid-forties and it lands every time.
+
+## Four Versions, Depending on Who's in the Chair
+
+I don't cut this one identical on everybody. There are really four variations, and matching the right one to the client is most of the job.
+
+:::card-grid
+title: Clean Center-Part
+tag: Sharpest · most office-forward
+The minimalist take, no extra face-framing pieces, just a precise line. Save it for clients with strong, balanced features and a good amount of height at the crown.
+---
+title: Curtain Bang
+tag: Most forgiving · youthful
+My go-to for anyone nervous about going short. Those soft, parted-down-the-middle fringe pieces quietly fill in hollow temples and shave width off a rounder face, exactly what I reach for with a first-time short-hair client.
+---
+title: Side-Part Layered
+tag: Best for fine, flat hair
+Built to add lift. The extra texture and the deeper part create movement, which fixes that pressed-to-the-scalp, flat-on-top problem fine hair tends to have.
+---
+title: Soft Inward-Curl
+tag: Effortless · no-makeup friendly
+Lets the ends collect a little weight and bend gently toward the face. It gives you that rounded, lived-in finish that looks great even on a bare-faced day.
+:::
+
+![Curved face-framing layers and a soft fringe doing the shaping work|full](/image/bob2.jpg)
+
+## How I Actually Cut It
+
+If you're cutting this, or coaching a newer stylist through it, here's the part that keeps it from going wrong.
+
+Set the length between the jaw and the middle of the collarbone, and leave weight in the ends. Resist the urge to over-thin. A French bob that's been point-cut into oblivion loses the soft body that makes it work.
+
+Build curved, soft layers around the cheeks and pair them with a light curtain or side fringe. No heavy, blunt, straight-across bangs—that's what tips it from "soft and modern" into "severe."
+
+And don't forget the back. A little stacked weight through the occipital gives you a full, rounded head shape. Skip it and you get that flat, heavy look at the back that ages the whole cut.
+
+![Stacked weight through the back for a full, rounded silhouette|full](/image/bob3.jpg)
+
+## The Takeaway
+
+The thing I want every client, and every stylist, to understand is that the "expensive" look in short hair was never about a harder, more dramatic line. It's about soft layers placed exactly where they need to be. That's the whole trick.
+
+So next time a client says she wants short but soft, you already know the cut. What's your go-to French bob variation chairside, and which face shapes are you matching it to? Drop it in the comments.`,
+    metaTitle: `The French Bob That Flatters Every Face Shape: A Stylist's Cutting & Consult Guide`,
+    metaDescription: `A salon pro breaks down the soft-layered French bob: why it flatters round, square, and diamond faces, the four variations to match to your client, and how to cut and consult it without it reading severe.`,
   },
 ]
 
