@@ -5235,6 +5235,166 @@ Wet enough to look styled. Clean enough to look fresh.`,
     metaDescription: 'A stylist\'s guide to the difference between editorial shine and oily hair — product placement, bang management, fine hair tips, and what to tell clients.',
   },
   {
+    id: 35,
+    slug: 'finasteride-vs-novogro-women-hair-loss',
+    tag: 'Hair Thinning',
+    title: `Finasteride vs. NOVOGRO™: Why I'm Tired of Watching Women Borrow Men's Hair-Loss Drugs`,
+    excerpt: `Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution like NOVOGRO™, not another "just try this."`,
+    author: 'Lauren Chavez',
+    date: 'Jun 22, 2026',
+    readTime: '12 min',
+    image: '/image/finasteride-novogro-cover.jpg',
+    category: 'Hair Thinning',
+    section: 'Hair Care',
+    body: `I have been a stylist long enough to know when a client is pretending to be fine.
+
+A longtime customer of mine came in a few months ago, sat in my chair, and before I even touched her hair, I knew something was off. She had always been bright and talkative. That day, she was quiet. Eventually, she told me she had started taking finasteride for hair loss. Her shedding might have been improving, she said, but then came the part I hear too often: "I don't feel like myself anymore."
+
+She described depression, headaches, and a drop in libido. She was not being dramatic. She was scared, and honestly, I was angry for her. Because she was not the problem. The product category was.
+
+As stylists, we see the emotional side of hair thinning long before most people talk about it openly. So when a product adds more stress to an already sensitive situation, I have very little patience for it. 
+
+Women do not need more guilt, more guessing, or more side effects brushed off as the cost of caring about their hair. They need options that were actually designed with them in mind.
+
+## Finasteride Was Not Built for Women
+
+Finasteride works by turning down a hormone signal called ==DHT==.
+
+Here is the simplest way I explain it to clients: there is an enzyme in the body that acts like a little conversion station. It helps turn testosterone into DHT. In people whose follicles are sensitive to DHT, that signal can tell the follicle to slowly shrink, produce finer strands, and spend less time in the active growth phase. Finasteride blocks that conversion station, so less DHT gets made.
+
+But we need to know that finasteride has a serious medical history. This is not some cute little scalp booster you casually add between shampoo and conditioner.
+
+The 5 mg version, Proscar, was approved in the U.S. in 1992 for benign prostatic hyperplasia, the medical term for an enlarged prostate. The 1 mg version, Propecia, was approved later for male pattern hair loss.
+
+![Finasteride 1 mg film-coated tablet box printed with "For use by men only."|full](/image/finasteride-box-men-only.png)
+
+The FDA label is very clear: Propecia is indicated for male pattern hair loss in men only, and it is not indicated for use in women.
+
+Still, some women take finasteride off-label, often because the emotional burden of hair loss is real. I understand why. When a woman starts seeing her part widen, her ponytail shrink, or her scalp show under bright light, it can feel like losing control over her identity.
+
+> "Hair is never 'just hair' to the person losing it."
+> — Salon client, 52, using off-label finasteride for 2 months
+
+So when someone offers an off-label prescription that might help, many women are willing to try. Not because they are careless, but because fear becomes very easy to market when the product aisle is thin, confusing, and full of treatments that were never built around women's real experience.
+
+We hear the same questions all the time when finasteride comes up:
+
+:::quote-carousel
+Can I use the topical and the oral together?
+---
+What if I just try a low dose?
+---
+What if the side effects don't happen to me?
+---
+What if this is the only thing that works?
+:::
+
+But willingness does not erase risk. And a disclaimer like "use with proper counseling and medical supervision" does not magically make a medication casual or safe for everyone.
+
+![Propecia (finasteride) 1 mg label showing the warning that women who are or may become pregnant should not handle crushed or broken tablets.|full](/image/propecia-pregnancy-warning.png)
+
+The FDA label warns that women who are pregnant or may become pregnant should not handle crushed or broken tablets because of the potential risk to a male fetus.
+
+Finasteride is contraindicated in pregnancy because it can interfere with male fetal development. That is not a small footnote. That is a major biological warning.
+
+And then there are the side effects, especially in women, where the data is thinner and the conversation is often way too casual. In published studies and reviews on women using finasteride, reported side effects have included headache, menstrual irregularities, dizziness, increased body hair growth, dry skin, mild acne, breast swelling or tenderness, gastrointestinal discomfort, and decreased libido. More recently, regulators from different regions added ==depression and suicidal ideation== as side effects of finasteride tablets, although the frequency is unknown.
+
+So yes, finasteride may help some people. But let's not pretend it belongs in the same conversation as a leave-in conditioner or a "just try this" serum. And it should not be treated like another product women are expected to tolerate just because the industry has not given them enough better options.
+
+## NOVOGRO™ Feels Like a Different Direction
+
+Recently, [NOVOGRO™](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) has been coming up in stylist circles. It is not one ingredient but a set of active molecules, each targeting a different part of the hair-growth environment, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a biology-first approach to female hair thinning. In the finasteride conversation, the molecule that matters is NV-1065.
+
+NV-1065 is NOVOGRO™'s answer to DHT. Like finasteride, its job is to lower DHT, the hormone signal that pushes follicles to shrink. To see how well it actually does that, the NOVOGRO™ team tested it head-to-head against dutasteride, the stronger, more aggressive cousin of finasteride.
+
+They compared the two across a full range of doses. NV-1065 kept pace with dutasteride almost the whole way up the curve, and at the highest doses it matched and even edged ahead. On the enzyme that builds DHT, ==NV-1065 is as effective as dutasteride==.
+
+:::line-chart
+title: NV-1065 vs. dutasteride: DHT-Building Enzyme Blocked by dose
+x-label: Concentration (µM)
+y-label: % DHT-Building Enzyme Blocked
+series: NV-1065
+series: Dutasteride
+- 9.375: 41.7, 50.2
+- 18.75: 41.0, 58.3
+- 37.5: 56.6, 73.0
+- 75: 64.6, 77.3
+- 150: 79.3, 77.8
+- 300: 96.6, 88.4
+:::
+
+Which is exactly where the next comparison comes in. Once you line the finished NOVOGRO™ serum up against the cosmetic serums clients actually buy off the shelf, the gap is hard to unsee. The serum sits with the dutasteride; the others sit near baseline.
+
+:::bar-chart
+title: DHT-building enzyme blocked vs. control (%)
+- NOVOGRO™ serum: 47
+- Dutasteride: 51
+- Minoxidil: 3
+- KilgourMD: 1
+- Vegamour: 0
+- Nutrafol: 2
+- Ordinary: 3
+- Kerastase: 4
+:::
+
+The second reason matters even more: NV-1065 is non-steroidal. The researchers tested this using steroid-sensitive cells, a model designed to flag steroid-like activity. Testosterone, DHT, and dutasteride showed strong steroidal responses, while NV-1065 did not trigger the same steroidal signal.
+
+:::bar-chart
+title: Steroidal activity signal, average (%)
+- NV-1065: 4
+- Dutasteride: 18
+- Testosterone: 35
+footnote: Average of three replicates. Lower means a cleaner, less steroidal signal: NV-1065 ~~3.6%~~ barely registers next to dutasteride ~~18.0%~~ and testosterone ~~35.2%~~.
+:::
+
+That is important because the goal is to reduce DHT-related follicle stress without unnecessarily disturbing other hormone-linked biological pathways. 
+
+The team also tested NV-1065 in a tiny lab-grown follicle model made from human skin and follicle cells. When testosterone or DHT was added, the mini follicle's growth slowed, almost like it was receiving a shrink signal. When NV-1065 was added, that growth recovered. In the [research data](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) shared, NV-1065 performed ==34.3% better== than dutasteride at helping the mini follicle push back against DHT-related stress.
+
+![Preclinical hair follicloid imaging at Day 4, Day 6, and Day 10 across vehicle, testosterone, DHT, and NV-1065, with a length-ratio plot showing NV-1065 outperforming the comparators.|full](/image/nv1065-follicloid.png)
+
+Human data is still needed, but this is a cleaner and more targeted direction than the older hormonal drug approach.
+
+## More Than DHT: Treating the Whole Follicle
+
+NOVOGRO™ does not stop at DHT. Based on what the team presented, it treats the follicle more like a full growing system. For healthy hair to appear on the scalp, three things need to work together: the follicle has to resist shrinkage signals, the cells that coordinate growth need to stay active, and the surrounding root environment needs to support that growth.
+
+| Follicle problem | Stylist translation | NOVOGRO™ angle |
+|---|---|---|
+| DHT pressure | The follicle is being pushed toward miniaturization | NV-1065 |
+| Weak dermal papilla cells | The cells that coordinate growth are losing strength | NV-623 + NV-624 |
+| Poor root environment | The surrounding support system is not strong enough | NV-273 |
+
+We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/NOVOGRO™-vs-minoxidil), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
+
+> "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
+> — Mara Ellis, Scalp-Care Educator & Master Stylist
+
+## The Texture Matters Too
+
+Here is something scientists sometimes overlook but stylists never do: if a product feels terrible, people stop using it.
+
+A greasy serum can ruin a blowout. A sticky formula can make fine hair look even thinner. A heavy oil can force extra wash days, irritate the scalp, or make someone quit by week two.
+
+![A comb dragging through wet, oily-looking dark hair, the strands clumped and flattened at the root.|full](/image/oily-serum-thin-hair.png)
+
+An oily formulation might make hair look thinner. When the roots collapse, the scalp shows more. That is the opposite of what a nervous client wants to see in the mirror. That is another reason NOVOGRO™ stood out.
+
+In the research, the lead molecules were formulated into a ==water-based formula==, and after 150 days under normal storage conditions, more than 90% of each compound remained. I still want to see the final consumer product format, but a lightweight, stable formula suitable for daily use is the difference between a product someone actually uses and one that sits in the cabinet.
+
+## My Stylist's Take
+
+Finasteride can be a serious medical option, but for women, it comes with a lot of baggage. NOVOGRO™ represents a different kind of DHT strategy, led by its NV-1065 molecule: non-steroidal, enzyme-targeted, and tested in hair-relevant lab models. And because NOVOGRO™ is built as a multi-molecule system rather than a single drug, it works on the broader follicle environment at the same time. It still needs human clinical proof, but as hair professionals, this is the kind of science we want to see more of.
+
+:::references
+- Review on finasteride and androgen-pathway therapy in female hair loss. PubMed Central (PMC5803857), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC5803857/
+- Review on finasteride use and reported adverse effects in women. PubMed Central (PMC10172713), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC10172713/
+- Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
+:::`,
+    metaTitle: `Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,
+    metaDescription: `A stylist on why finasteride was built for men, the side effects women face off-label, and how NOVOGRO™'s non-steroidal NV-1065 offers a cleaner DHT strategy.`,
+  },
+  {
     id: 36,
     slug: 'french-bob-every-face-shape',
     tag: 'Cut & Style',
