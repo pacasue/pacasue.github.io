@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 
 const articles = [
   {
-    id: 29,
-    tag: 'Cut & Style',
-    title: 'Clean Cuts, Strong Lines, Hot-Guy Energy',
-    excerpt: 'From buzz cuts to textured crops, these are the styles giving hot guy energy right now. The best ones do not need heavy styling. They work because the shape is strong and the lines are clean.',
-    author: 'Tom Harley',
-    date: 'May 31, 2026',
-    readTime: '7 min',
-    image: '/image/mens-cuts-hero.avif',
+    id: 35,
+    tag: 'Hair Thinning',
+    title: `Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,
+    excerpt: `Finasteride was built for men. A stylist on the side effects women face off-label — and how NOVOGRO™'s non-steroidal NV-1065 matches dutasteride on DHT without the same baggage.`,
+    author: 'Lauren Chavez',
+    date: 'Jun 18, 2026',
+    readTime: '9 min',
+    image: '/image/finasteride-novogro-cover.jpg',
     featured: true,
-    slug: 'mens-haircuts-hot-guy-energy',
+    slug: 'finasteride-vs-novogro-women-hair-loss',
   },
   {
     id: 30,
