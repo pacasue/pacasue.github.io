@@ -51,15 +51,29 @@ function buildHeadTags(route, article) {
     tags.push(`  <meta name="twitter:description" content="${ogDesc}" />`)
     tags.push(`  <meta name="twitter:image" content="${ogImage}" />`)
 
+    const imageUrl = article.image.startsWith('http') ? article.image : `${BASE}${article.image}`
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: article.metaTitle || article.title,
       description: article.metaDescription || article.excerpt,
-      image: article.image.startsWith('http') ? article.image : `${BASE}${article.image}`,
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        caption: article.metaTitle || article.title,
+        representativeOfPage: true,
+      },
       datePublished: pubDate,
       author: { '@type': 'Person', name: article.author },
-      publisher: { '@type': 'Organization', name: 'HairProVoices', url: BASE },
+      publisher: {
+        '@type': 'Organization',
+        name: 'HairProVoices',
+        url: BASE,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${BASE}/image/site-logo.svg`,
+        },
+      },
       mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
     }
     tags.push(`  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
