@@ -6,7 +6,7 @@ const articles = [
     id: 35,
     tag: 'Hair Thinning',
     title: `Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,
-    excerpt: `Finasteride was built for men. A stylist on the side effects women face off-label — and how NOVOGRO™'s non-steroidal NV-1065 matches dutasteride on DHT without the same baggage.`,
+    excerpt: `Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution like NOVOGRO™, not another "just try this."`,
     author: 'Lauren Chavez',
     date: 'Jun 18, 2026',
     readTime: '9 min',
