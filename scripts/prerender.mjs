@@ -188,10 +188,19 @@ const staticPages = [
 ]
 const articleEntries = articles
   .filter((a) => a.slug)
-  .map((a) => ({ path: `/article/${a.slug}`, lastmod: toW3CDate(a.date), priority: '0.8', changefreq: 'monthly' }))
+  .map((a) => {
+    const img = a.image || ''
+    // Only include images hosted on our own domain — external images
+    // (pexels/envato/unsplash) get credited to those domains, not us.
+    const isLocal = img.startsWith('/') || img.startsWith(BASE)
+    const imageLoc = isLocal ? (img.startsWith('http') ? img : `${BASE}${img}`) : null
+    return { path: `/article/${a.slug}`, lastmod: toW3CDate(a.date), priority: '0.8', changefreq: 'monthly', image: imageLoc }
+  })
 
 const sitemapXml =
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n` +
+  `        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
   [...staticPages, ...articleEntries]
     .map((e) =>
       [
@@ -200,6 +209,7 @@ const sitemapXml =
         e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
         `    <changefreq>${e.changefreq}</changefreq>`,
         `    <priority>${e.priority}</priority>`,
+        e.image ? `    <image:image>\n      <image:loc>${escapeHtml(e.image)}</image:loc>\n    </image:image>` : null,
         `  </url>`,
       ]
         .filter(Boolean)
@@ -208,5 +218,6 @@ const sitemapXml =
     .join('\n') +
   `\n</urlset>\n`
 
+const imageCount = articleEntries.filter((e) => e.image).length
 writeFileSync(resolve(outDir, 'sitemap.xml'), sitemapXml)
-console.log(`Generated sitemap.xml (${staticPages.length + articleEntries.length} URLs)`)
+console.log(`Generated sitemap.xml (${staticPages.length + articleEntries.length} URLs, ${imageCount} images)`)

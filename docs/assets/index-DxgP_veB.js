@@ -1,0 +1,4904 @@
+var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=Object.getOwnPropertyNames,i=Object.getPrototypeOf,a=Object.prototype.hasOwnProperty,o=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),s=(e,i,o,s)=>{if(i&&typeof i==`object`||typeof i==`function`)for(var c=r(i),l=0,u=c.length,d;l<u;l++)d=c[l],!a.call(e,d)&&d!==o&&t(e,d,{get:(e=>i[e]).bind(null,d),enumerable:!(s=n(i,d))||s.enumerable});return e},c=(n,r,a)=>(a=n==null?{}:e(i(n)),s(r||!n||!n.__esModule?t(a,`default`,{value:n,enumerable:!0}):a,n));(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var l=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.portal`),r=Symbol.for(`react.fragment`),i=Symbol.for(`react.strict_mode`),a=Symbol.for(`react.profiler`),o=Symbol.for(`react.consumer`),s=Symbol.for(`react.context`),c=Symbol.for(`react.forward_ref`),l=Symbol.for(`react.suspense`),u=Symbol.for(`react.memo`),d=Symbol.for(`react.lazy`),f=Symbol.for(`react.activity`),p=Symbol.iterator;function m(e){return typeof e!=`object`||!e?null:(e=p&&e[p]||e[`@@iterator`],typeof e==`function`?e:null)}var h={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},g=Object.assign,_={};function v(e,t,n){this.props=e,this.context=t,this.refs=_,this.updater=n||h}v.prototype.isReactComponent={},v.prototype.setState=function(e,t){if(typeof e!=`object`&&typeof e!=`function`&&e!=null)throw Error(`takes an object of state variables to update or a function which returns an object of state variables.`);this.updater.enqueueSetState(this,e,t,`setState`)},v.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,`forceUpdate`)};function y(){}y.prototype=v.prototype;function b(e,t,n){this.props=e,this.context=t,this.refs=_,this.updater=n||h}var x=b.prototype=new y;x.constructor=b,g(x,v.prototype),x.isPureReactComponent=!0;var ee=Array.isArray;function S(){}var C={H:null,A:null,T:null,S:null},te=Object.prototype.hasOwnProperty;function w(e,n,r){var i=r.ref;return{$$typeof:t,type:e,key:n,ref:i===void 0?null:i,props:r}}function T(e,t){return w(e.type,t,e.props)}function ne(e){return typeof e==`object`&&!!e&&e.$$typeof===t}function re(e){var t={"=":`=0`,":":`=2`};return`$`+e.replace(/[=:]/g,function(e){return t[e]})}var ie=/\/+/g;function ae(e,t){return typeof e==`object`&&e&&e.key!=null?re(``+e.key):t.toString(36)}function oe(e){switch(e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason;default:switch(typeof e.status==`string`?e.then(S,S):(e.status=`pending`,e.then(function(t){e.status===`pending`&&(e.status=`fulfilled`,e.value=t)},function(t){e.status===`pending`&&(e.status=`rejected`,e.reason=t)})),e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason}}throw e}function se(e,r,i,a,o){var s=typeof e;(s===`undefined`||s===`boolean`)&&(e=null);var c=!1;if(e===null)c=!0;else switch(s){case`bigint`:case`string`:case`number`:c=!0;break;case`object`:switch(e.$$typeof){case t:case n:c=!0;break;case d:return c=e._init,se(c(e._payload),r,i,a,o)}}if(c)return o=o(e),c=a===``?`.`+ae(e,0):a,ee(o)?(i=``,c!=null&&(i=c.replace(ie,`$&/`)+`/`),se(o,r,i,``,function(e){return e})):o!=null&&(ne(o)&&(o=T(o,i+(o.key==null||e&&e.key===o.key?``:(``+o.key).replace(ie,`$&/`)+`/`)+c)),r.push(o)),1;c=0;var l=a===``?`.`:a+`:`;if(ee(e))for(var u=0;u<e.length;u++)a=e[u],s=l+ae(a,u),c+=se(a,r,i,s,o);else if(u=m(e),typeof u==`function`)for(e=u.call(e),u=0;!(a=e.next()).done;)a=a.value,s=l+ae(a,u++),c+=se(a,r,i,s,o);else if(s===`object`){if(typeof e.then==`function`)return se(oe(e),r,i,a,o);throw r=String(e),Error(`Objects are not valid as a React child (found: `+(r===`[object Object]`?`object with keys {`+Object.keys(e).join(`, `)+`}`:r)+`). If you meant to render a collection of children, use an array instead.`)}return c}function ce(e,t,n){if(e==null)return e;var r=[],i=0;return se(e,r,``,``,function(e){return t.call(n,e,i++)}),r}function le(e){if(e._status===-1){var t=e._result;t=t(),t.then(function(t){(e._status===0||e._status===-1)&&(e._status=1,e._result=t)},function(t){(e._status===0||e._status===-1)&&(e._status=2,e._result=t)}),e._status===-1&&(e._status=0,e._result=t)}if(e._status===1)return e._result.default;throw e._result}var E=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)},D={map:ce,forEach:function(e,t,n){ce(e,function(){t.apply(this,arguments)},n)},count:function(e){var t=0;return ce(e,function(){t++}),t},toArray:function(e){return ce(e,function(e){return e})||[]},only:function(e){if(!ne(e))throw Error(`React.Children.only expected to receive a single React element child.`);return e}};e.Activity=f,e.Children=D,e.Component=v,e.Fragment=r,e.Profiler=a,e.PureComponent=b,e.StrictMode=i,e.Suspense=l,e.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=C,e.__COMPILER_RUNTIME={__proto__:null,c:function(e){return C.H.useMemoCache(e)}},e.cache=function(e){return function(){return e.apply(null,arguments)}},e.cacheSignal=function(){return null},e.cloneElement=function(e,t,n){if(e==null)throw Error(`The argument must be a React element, but you passed `+e+`.`);var r=g({},e.props),i=e.key;if(t!=null)for(a in t.key!==void 0&&(i=``+t.key),t)!te.call(t,a)||a===`key`||a===`__self`||a===`__source`||a===`ref`&&t.ref===void 0||(r[a]=t[a]);var a=arguments.length-2;if(a===1)r.children=n;else if(1<a){for(var o=Array(a),s=0;s<a;s++)o[s]=arguments[s+2];r.children=o}return w(e.type,i,r)},e.createContext=function(e){return e={$$typeof:s,_currentValue:e,_currentValue2:e,_threadCount:0,Provider:null,Consumer:null},e.Provider=e,e.Consumer={$$typeof:o,_context:e},e},e.createElement=function(e,t,n){var r,i={},a=null;if(t!=null)for(r in t.key!==void 0&&(a=``+t.key),t)te.call(t,r)&&r!==`key`&&r!==`__self`&&r!==`__source`&&(i[r]=t[r]);var o=arguments.length-2;if(o===1)i.children=n;else if(1<o){for(var s=Array(o),c=0;c<o;c++)s[c]=arguments[c+2];i.children=s}if(e&&e.defaultProps)for(r in o=e.defaultProps,o)i[r]===void 0&&(i[r]=o[r]);return w(e,a,i)},e.createRef=function(){return{current:null}},e.forwardRef=function(e){return{$$typeof:c,render:e}},e.isValidElement=ne,e.lazy=function(e){return{$$typeof:d,_payload:{_status:-1,_result:e},_init:le}},e.memo=function(e,t){return{$$typeof:u,type:e,compare:t===void 0?null:t}},e.startTransition=function(e){var t=C.T,n={};C.T=n;try{var r=e(),i=C.S;i!==null&&i(n,r),typeof r==`object`&&r&&typeof r.then==`function`&&r.then(S,E)}catch(e){E(e)}finally{t!==null&&n.types!==null&&(t.types=n.types),C.T=t}},e.unstable_useCacheRefresh=function(){return C.H.useCacheRefresh()},e.use=function(e){return C.H.use(e)},e.useActionState=function(e,t,n){return C.H.useActionState(e,t,n)},e.useCallback=function(e,t){return C.H.useCallback(e,t)},e.useContext=function(e){return C.H.useContext(e)},e.useDebugValue=function(){},e.useDeferredValue=function(e,t){return C.H.useDeferredValue(e,t)},e.useEffect=function(e,t){return C.H.useEffect(e,t)},e.useEffectEvent=function(e){return C.H.useEffectEvent(e)},e.useId=function(){return C.H.useId()},e.useImperativeHandle=function(e,t,n){return C.H.useImperativeHandle(e,t,n)},e.useInsertionEffect=function(e,t){return C.H.useInsertionEffect(e,t)},e.useLayoutEffect=function(e,t){return C.H.useLayoutEffect(e,t)},e.useMemo=function(e,t){return C.H.useMemo(e,t)},e.useOptimistic=function(e,t){return C.H.useOptimistic(e,t)},e.useReducer=function(e,t,n){return C.H.useReducer(e,t,n)},e.useRef=function(e){return C.H.useRef(e)},e.useState=function(e){return C.H.useState(e)},e.useSyncExternalStore=function(e,t,n){return C.H.useSyncExternalStore(e,t,n)},e.useTransition=function(){return C.H.useTransition()},e.version=`19.2.4`})),u=o(((e,t)=>{t.exports=l()})),d=o((e=>{function t(e,t){var n=e.length;e.push(t);a:for(;0<n;){var r=n-1>>>1,a=e[r];if(0<i(a,t))e[r]=t,e[n]=a,n=r;else break a}}function n(e){return e.length===0?null:e[0]}function r(e){if(e.length===0)return null;var t=e[0],n=e.pop();if(n!==t){e[0]=n;a:for(var r=0,a=e.length,o=a>>>1;r<o;){var s=2*(r+1)-1,c=e[s],l=s+1,u=e[l];if(0>i(c,n))l<a&&0>i(u,c)?(e[r]=u,e[l]=n,r=l):(e[r]=c,e[s]=n,r=s);else if(l<a&&0>i(u,n))e[r]=u,e[l]=n,r=l;else break a}}return t}function i(e,t){var n=e.sortIndex-t.sortIndex;return n===0?e.id-t.id:n}if(e.unstable_now=void 0,typeof performance==`object`&&typeof performance.now==`function`){var a=performance;e.unstable_now=function(){return a.now()}}else{var o=Date,s=o.now();e.unstable_now=function(){return o.now()-s}}var c=[],l=[],u=1,d=null,f=3,p=!1,m=!1,h=!1,g=!1,_=typeof setTimeout==`function`?setTimeout:null,v=typeof clearTimeout==`function`?clearTimeout:null,y=typeof setImmediate<`u`?setImmediate:null;function b(e){for(var i=n(l);i!==null;){if(i.callback===null)r(l);else if(i.startTime<=e)r(l),i.sortIndex=i.expirationTime,t(c,i);else break;i=n(l)}}function x(e){if(h=!1,b(e),!m)if(n(c)!==null)m=!0,ee||(ee=!0,ne());else{var t=n(l);t!==null&&ae(x,t.startTime-e)}}var ee=!1,S=-1,C=5,te=-1;function w(){return g?!0:!(e.unstable_now()-te<C)}function T(){if(g=!1,ee){var t=e.unstable_now();te=t;var i=!0;try{a:{m=!1,h&&(h=!1,v(S),S=-1),p=!0;var a=f;try{b:{for(b(t),d=n(c);d!==null&&!(d.expirationTime>t&&w());){var o=d.callback;if(typeof o==`function`){d.callback=null,f=d.priorityLevel;var s=o(d.expirationTime<=t);if(t=e.unstable_now(),typeof s==`function`){d.callback=s,b(t),i=!0;break b}d===n(c)&&r(c),b(t)}else r(c);d=n(c)}if(d!==null)i=!0;else{var u=n(l);u!==null&&ae(x,u.startTime-t),i=!1}}break a}finally{d=null,f=a,p=!1}i=void 0}}finally{i?ne():ee=!1}}}var ne;if(typeof y==`function`)ne=function(){y(T)};else if(typeof MessageChannel<`u`){var re=new MessageChannel,ie=re.port2;re.port1.onmessage=T,ne=function(){ie.postMessage(null)}}else ne=function(){_(T,0)};function ae(t,n){S=_(function(){t(e.unstable_now())},n)}e.unstable_IdlePriority=5,e.unstable_ImmediatePriority=1,e.unstable_LowPriority=4,e.unstable_NormalPriority=3,e.unstable_Profiling=null,e.unstable_UserBlockingPriority=2,e.unstable_cancelCallback=function(e){e.callback=null},e.unstable_forceFrameRate=function(e){0>e||125<e?console.error(`forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported`):C=0<e?Math.floor(1e3/e):5},e.unstable_getCurrentPriorityLevel=function(){return f},e.unstable_next=function(e){switch(f){case 1:case 2:case 3:var t=3;break;default:t=f}var n=f;f=t;try{return e()}finally{f=n}},e.unstable_requestPaint=function(){g=!0},e.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=f;f=e;try{return t()}finally{f=n}},e.unstable_scheduleCallback=function(r,i,a){var o=e.unstable_now();switch(typeof a==`object`&&a?(a=a.delay,a=typeof a==`number`&&0<a?o+a:o):a=o,r){case 1:var s=-1;break;case 2:s=250;break;case 5:s=1073741823;break;case 4:s=1e4;break;default:s=5e3}return s=a+s,r={id:u++,callback:i,priorityLevel:r,startTime:a,expirationTime:s,sortIndex:-1},a>o?(r.sortIndex=a,t(l,r),n(c)===null&&r===n(l)&&(h?(v(S),S=-1):h=!0,ae(x,a-o))):(r.sortIndex=s,t(c,r),m||p||(m=!0,ee||(ee=!0,ne()))),r},e.unstable_shouldYield=w,e.unstable_wrapCallback=function(e){var t=f;return function(){var n=f;f=t;try{return e.apply(this,arguments)}finally{f=n}}}})),f=o(((e,t)=>{t.exports=d()})),p=o((e=>{var t=u();function n(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function r(){}var i={d:{f:r,r:function(){throw Error(n(522))},D:r,C:r,L:r,m:r,X:r,S:r,M:r},p:0,findDOMNode:null},a=Symbol.for(`react.portal`);function o(e,t,n){var r=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:a,key:r==null?null:``+r,children:e,containerInfo:t,implementation:n}}var s=t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function c(e,t){if(e===`font`)return``;if(typeof t==`string`)return t===`use-credentials`?t:``}e.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=i,e.createPortal=function(e,t){var r=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!t||t.nodeType!==1&&t.nodeType!==9&&t.nodeType!==11)throw Error(n(299));return o(e,t,null,r)},e.flushSync=function(e){var t=s.T,n=i.p;try{if(s.T=null,i.p=2,e)return e()}finally{s.T=t,i.p=n,i.d.f()}},e.preconnect=function(e,t){typeof e==`string`&&(t?(t=t.crossOrigin,t=typeof t==`string`?t===`use-credentials`?t:``:void 0):t=null,i.d.C(e,t))},e.prefetchDNS=function(e){typeof e==`string`&&i.d.D(e)},e.preinit=function(e,t){if(typeof e==`string`&&t&&typeof t.as==`string`){var n=t.as,r=c(n,t.crossOrigin),a=typeof t.integrity==`string`?t.integrity:void 0,o=typeof t.fetchPriority==`string`?t.fetchPriority:void 0;n===`style`?i.d.S(e,typeof t.precedence==`string`?t.precedence:void 0,{crossOrigin:r,integrity:a,fetchPriority:o}):n===`script`&&i.d.X(e,{crossOrigin:r,integrity:a,fetchPriority:o,nonce:typeof t.nonce==`string`?t.nonce:void 0})}},e.preinitModule=function(e,t){if(typeof e==`string`)if(typeof t==`object`&&t){if(t.as==null||t.as===`script`){var n=c(t.as,t.crossOrigin);i.d.M(e,{crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0})}}else t??i.d.M(e)},e.preload=function(e,t){if(typeof e==`string`&&typeof t==`object`&&t&&typeof t.as==`string`){var n=t.as,r=c(n,t.crossOrigin);i.d.L(e,n,{crossOrigin:r,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,type:typeof t.type==`string`?t.type:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0,referrerPolicy:typeof t.referrerPolicy==`string`?t.referrerPolicy:void 0,imageSrcSet:typeof t.imageSrcSet==`string`?t.imageSrcSet:void 0,imageSizes:typeof t.imageSizes==`string`?t.imageSizes:void 0,media:typeof t.media==`string`?t.media:void 0})}},e.preloadModule=function(e,t){if(typeof e==`string`)if(t){var n=c(t.as,t.crossOrigin);i.d.m(e,{as:typeof t.as==`string`&&t.as!==`script`?t.as:void 0,crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0})}else i.d.m(e)},e.requestFormReset=function(e){i.d.r(e)},e.unstable_batchedUpdates=function(e,t){return e(t)},e.useFormState=function(e,t,n){return s.H.useFormState(e,t,n)},e.useFormStatus=function(){return s.H.useHostTransitionStatus()},e.version=`19.2.4`})),m=o(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=p()})),h=o((e=>{var t=f(),n=u(),r=m();function i(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function a(e){return!(!e||e.nodeType!==1&&e.nodeType!==9&&e.nodeType!==11)}function o(e){var t=e,n=e;if(e.alternate)for(;t.return;)t=t.return;else{e=t;do t=e,t.flags&4098&&(n=t.return),e=t.return;while(e)}return t.tag===3?n:null}function s(e){if(e.tag===13){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function c(e){if(e.tag===31){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function l(e){if(o(e)!==e)throw Error(i(188))}function d(e){var t=e.alternate;if(!t){if(t=o(e),t===null)throw Error(i(188));return t===e?e:null}for(var n=e,r=t;;){var a=n.return;if(a===null)break;var s=a.alternate;if(s===null){if(r=a.return,r!==null){n=r;continue}break}if(a.child===s.child){for(s=a.child;s;){if(s===n)return l(a),e;if(s===r)return l(a),t;s=s.sibling}throw Error(i(188))}if(n.return!==r.return)n=a,r=s;else{for(var c=!1,u=a.child;u;){if(u===n){c=!0,n=a,r=s;break}if(u===r){c=!0,r=a,n=s;break}u=u.sibling}if(!c){for(u=s.child;u;){if(u===n){c=!0,n=s,r=a;break}if(u===r){c=!0,r=s,n=a;break}u=u.sibling}if(!c)throw Error(i(189))}}if(n.alternate!==r)throw Error(i(190))}if(n.tag!==3)throw Error(i(188));return n.stateNode.current===n?e:t}function p(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e;for(e=e.child;e!==null;){if(t=p(e),t!==null)return t;e=e.sibling}return null}var h=Object.assign,g=Symbol.for(`react.element`),_=Symbol.for(`react.transitional.element`),v=Symbol.for(`react.portal`),y=Symbol.for(`react.fragment`),b=Symbol.for(`react.strict_mode`),x=Symbol.for(`react.profiler`),ee=Symbol.for(`react.consumer`),S=Symbol.for(`react.context`),C=Symbol.for(`react.forward_ref`),te=Symbol.for(`react.suspense`),w=Symbol.for(`react.suspense_list`),T=Symbol.for(`react.memo`),ne=Symbol.for(`react.lazy`),re=Symbol.for(`react.activity`),ie=Symbol.for(`react.memo_cache_sentinel`),ae=Symbol.iterator;function oe(e){return typeof e!=`object`||!e?null:(e=ae&&e[ae]||e[`@@iterator`],typeof e==`function`?e:null)}var se=Symbol.for(`react.client.reference`);function ce(e){if(e==null)return null;if(typeof e==`function`)return e.$$typeof===se?null:e.displayName||e.name||null;if(typeof e==`string`)return e;switch(e){case y:return`Fragment`;case x:return`Profiler`;case b:return`StrictMode`;case te:return`Suspense`;case w:return`SuspenseList`;case re:return`Activity`}if(typeof e==`object`)switch(e.$$typeof){case v:return`Portal`;case S:return e.displayName||`Context`;case ee:return(e._context.displayName||`Context`)+`.Consumer`;case C:var t=e.render;return e=e.displayName,e||=(e=t.displayName||t.name||``,e===``?`ForwardRef`:`ForwardRef(`+e+`)`),e;case T:return t=e.displayName||null,t===null?ce(e.type)||`Memo`:t;case ne:t=e._payload,e=e._init;try{return ce(e(t))}catch{}}return null}var le=Array.isArray,E=n.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,D=r.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,ue={pending:!1,data:null,method:null,action:null},de=[],fe=-1;function pe(e){return{current:e}}function me(e){0>fe||(e.current=de[fe],de[fe]=null,fe--)}function O(e,t){fe++,de[fe]=e.current,e.current=t}var he=pe(null),ge=pe(null),_e=pe(null),ve=pe(null);function ye(e,t){switch(O(_e,t),O(ge,e),O(he,null),t.nodeType){case 9:case 11:e=(e=t.documentElement)&&(e=e.namespaceURI)?Vd(e):0;break;default:if(e=t.tagName,t=t.namespaceURI)t=Vd(t),e=Hd(t,e);else switch(e){case`svg`:e=1;break;case`math`:e=2;break;default:e=0}}me(he),O(he,e)}function be(){me(he),me(ge),me(_e)}function xe(e){e.memoizedState!==null&&O(ve,e);var t=he.current,n=Hd(t,e.type);t!==n&&(O(ge,e),O(he,n))}function Se(e){ge.current===e&&(me(he),me(ge)),ve.current===e&&(me(ve),Qf._currentValue=ue)}var Ce,we;function Te(e){if(Ce===void 0)try{throw Error()}catch(e){var t=e.stack.trim().match(/\n( *(at )?)/);Ce=t&&t[1]||``,we=-1<e.stack.indexOf(`
+    at`)?` (<anonymous>)`:-1<e.stack.indexOf(`@`)?`@unknown:0:0`:``}return`
+`+Ce+e+we}var Ee=!1;function De(e,t){if(!e||Ee)return``;Ee=!0;var n=Error.prepareStackTrace;Error.prepareStackTrace=void 0;try{var r={DetermineComponentFrameRoot:function(){try{if(t){var n=function(){throw Error()};if(Object.defineProperty(n.prototype,`props`,{set:function(){throw Error()}}),typeof Reflect==`object`&&Reflect.construct){try{Reflect.construct(n,[])}catch(e){var r=e}Reflect.construct(e,[],n)}else{try{n.call()}catch(e){r=e}e.call(n.prototype)}}else{try{throw Error()}catch(e){r=e}(n=e())&&typeof n.catch==`function`&&n.catch(function(){})}}catch(e){if(e&&r&&typeof e.stack==`string`)return[e.stack,r.stack]}return[null,null]}};r.DetermineComponentFrameRoot.displayName=`DetermineComponentFrameRoot`;var i=Object.getOwnPropertyDescriptor(r.DetermineComponentFrameRoot,`name`);i&&i.configurable&&Object.defineProperty(r.DetermineComponentFrameRoot,`name`,{value:`DetermineComponentFrameRoot`});var a=r.DetermineComponentFrameRoot(),o=a[0],s=a[1];if(o&&s){var c=o.split(`
+`),l=s.split(`
+`);for(i=r=0;r<c.length&&!c[r].includes(`DetermineComponentFrameRoot`);)r++;for(;i<l.length&&!l[i].includes(`DetermineComponentFrameRoot`);)i++;if(r===c.length||i===l.length)for(r=c.length-1,i=l.length-1;1<=r&&0<=i&&c[r]!==l[i];)i--;for(;1<=r&&0<=i;r--,i--)if(c[r]!==l[i]){if(r!==1||i!==1)do if(r--,i--,0>i||c[r]!==l[i]){var u=`
+`+c[r].replace(` at new `,` at `);return e.displayName&&u.includes(`<anonymous>`)&&(u=u.replace(`<anonymous>`,e.displayName)),u}while(1<=r&&0<=i);break}}}finally{Ee=!1,Error.prepareStackTrace=n}return(n=e?e.displayName||e.name:``)?Te(n):``}function Oe(e,t){switch(e.tag){case 26:case 27:case 5:return Te(e.type);case 16:return Te(`Lazy`);case 13:return e.child!==t&&t!==null?Te(`Suspense Fallback`):Te(`Suspense`);case 19:return Te(`SuspenseList`);case 0:case 15:return De(e.type,!1);case 11:return De(e.type.render,!1);case 1:return De(e.type,!0);case 31:return Te(`Activity`);default:return``}}function ke(e){try{var t=``,n=null;do t+=Oe(e,n),n=e,e=e.return;while(e);return t}catch(e){return`
+Error generating stack: `+e.message+`
+`+e.stack}}var Ae=Object.prototype.hasOwnProperty,je=t.unstable_scheduleCallback,Me=t.unstable_cancelCallback,Ne=t.unstable_shouldYield,Pe=t.unstable_requestPaint,Fe=t.unstable_now,Ie=t.unstable_getCurrentPriorityLevel,Le=t.unstable_ImmediatePriority,Re=t.unstable_UserBlockingPriority,ze=t.unstable_NormalPriority,Be=t.unstable_LowPriority,Ve=t.unstable_IdlePriority,He=t.log,Ue=t.unstable_setDisableYieldValue,We=null,Ge=null;function Ke(e){if(typeof He==`function`&&Ue(e),Ge&&typeof Ge.setStrictMode==`function`)try{Ge.setStrictMode(We,e)}catch{}}var qe=Math.clz32?Math.clz32:Xe,Je=Math.log,Ye=Math.LN2;function Xe(e){return e>>>=0,e===0?32:31-(Je(e)/Ye|0)|0}var Ze=256,Qe=262144,$e=4194304;function et(e){var t=e&42;if(t!==0)return t;switch(e&-e){case 1:return 1;case 2:return 2;case 4:return 4;case 8:return 8;case 16:return 16;case 32:return 32;case 64:return 64;case 128:return 128;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:return e&261888;case 262144:case 524288:case 1048576:case 2097152:return e&3932160;case 4194304:case 8388608:case 16777216:case 33554432:return e&62914560;case 67108864:return 67108864;case 134217728:return 134217728;case 268435456:return 268435456;case 536870912:return 536870912;case 1073741824:return 0;default:return e}}function tt(e,t,n){var r=e.pendingLanes;if(r===0)return 0;var i=0,a=e.suspendedLanes,o=e.pingedLanes;e=e.warmLanes;var s=r&134217727;return s===0?(s=r&~a,s===0?o===0?n||(n=r&~e,n!==0&&(i=et(n))):i=et(o):i=et(s)):(r=s&~a,r===0?(o&=s,o===0?n||(n=s&~e,n!==0&&(i=et(n))):i=et(o)):i=et(r)),i===0?0:t!==0&&t!==i&&(t&a)===0&&(a=i&-i,n=t&-t,a>=n||a===32&&n&4194048)?t:i}function nt(e,t){return(e.pendingLanes&~(e.suspendedLanes&~e.pingedLanes)&t)===0}function rt(e,t){switch(e){case 1:case 2:case 4:case 8:case 64:return t+250;case 16:case 32:case 128:case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:return t+5e3;case 4194304:case 8388608:case 16777216:case 33554432:return-1;case 67108864:case 134217728:case 268435456:case 536870912:case 1073741824:return-1;default:return-1}}function it(){var e=$e;return $e<<=1,!($e&62914560)&&($e=4194304),e}function at(e){for(var t=[],n=0;31>n;n++)t.push(e);return t}function ot(e,t){e.pendingLanes|=t,t!==268435456&&(e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0)}function st(e,t,n,r,i,a){var o=e.pendingLanes;e.pendingLanes=n,e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0,e.expiredLanes&=n,e.entangledLanes&=n,e.errorRecoveryDisabledLanes&=n,e.shellSuspendCounter=0;var s=e.entanglements,c=e.expirationTimes,l=e.hiddenUpdates;for(n=o&~n;0<n;){var u=31-qe(n),d=1<<u;s[u]=0,c[u]=-1;var f=l[u];if(f!==null)for(l[u]=null,u=0;u<f.length;u++){var p=f[u];p!==null&&(p.lane&=-536870913)}n&=~d}r!==0&&ct(e,r,0),a!==0&&i===0&&e.tag!==0&&(e.suspendedLanes|=a&~(o&~t))}function ct(e,t,n){e.pendingLanes|=t,e.suspendedLanes&=~t;var r=31-qe(t);e.entangledLanes|=t,e.entanglements[r]=e.entanglements[r]|1073741824|n&261930}function lt(e,t){var n=e.entangledLanes|=t;for(e=e.entanglements;n;){var r=31-qe(n),i=1<<r;i&t|e[r]&t&&(e[r]|=t),n&=~i}}function ut(e,t){var n=t&-t;return n=n&42?1:dt(n),(n&(e.suspendedLanes|t))===0?n:0}function dt(e){switch(e){case 2:e=1;break;case 8:e=4;break;case 32:e=16;break;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:case 4194304:case 8388608:case 16777216:case 33554432:e=128;break;case 268435456:e=134217728;break;default:e=0}return e}function ft(e){return e&=-e,2<e?8<e?e&134217727?32:268435456:8:2}function pt(){var e=D.p;return e===0?(e=window.event,e===void 0?32:mp(e.type)):e}function mt(e,t){var n=D.p;try{return D.p=e,t()}finally{D.p=n}}var ht=Math.random().toString(36).slice(2),gt=`__reactFiber$`+ht,_t=`__reactProps$`+ht,vt=`__reactContainer$`+ht,yt=`__reactEvents$`+ht,bt=`__reactListeners$`+ht,xt=`__reactHandles$`+ht,St=`__reactResources$`+ht,Ct=`__reactMarker$`+ht;function wt(e){delete e[gt],delete e[_t],delete e[yt],delete e[bt],delete e[xt]}function Tt(e){var t=e[gt];if(t)return t;for(var n=e.parentNode;n;){if(t=n[vt]||n[gt]){if(n=t.alternate,t.child!==null||n!==null&&n.child!==null)for(e=df(e);e!==null;){if(n=e[gt])return n;e=df(e)}return t}e=n,n=e.parentNode}return null}function Et(e){if(e=e[gt]||e[vt]){var t=e.tag;if(t===5||t===6||t===13||t===31||t===26||t===27||t===3)return e}return null}function Dt(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e.stateNode;throw Error(i(33))}function Ot(e){var t=e[St];return t||=e[St]={hoistableStyles:new Map,hoistableScripts:new Map},t}function kt(e){e[Ct]=!0}var At=new Set,jt={};function Mt(e,t){Nt(e,t),Nt(e+`Capture`,t)}function Nt(e,t){for(jt[e]=t,e=0;e<t.length;e++)At.add(t[e])}var Pt=RegExp(`^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$`),Ft={},It={};function Lt(e){return Ae.call(It,e)?!0:Ae.call(Ft,e)?!1:Pt.test(e)?It[e]=!0:(Ft[e]=!0,!1)}function Rt(e,t,n){if(Lt(t))if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:e.removeAttribute(t);return;case`boolean`:var r=t.toLowerCase().slice(0,5);if(r!==`data-`&&r!==`aria-`){e.removeAttribute(t);return}}e.setAttribute(t,``+n)}}function zt(e,t,n){if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(t);return}e.setAttribute(t,``+n)}}function Bt(e,t,n,r){if(r===null)e.removeAttribute(n);else{switch(typeof r){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(n);return}e.setAttributeNS(t,n,``+r)}}function Vt(e){switch(typeof e){case`bigint`:case`boolean`:case`number`:case`string`:case`undefined`:return e;case`object`:return e;default:return``}}function Ht(e){var t=e.type;return(e=e.nodeName)&&e.toLowerCase()===`input`&&(t===`checkbox`||t===`radio`)}function Ut(e,t,n){var r=Object.getOwnPropertyDescriptor(e.constructor.prototype,t);if(!e.hasOwnProperty(t)&&r!==void 0&&typeof r.get==`function`&&typeof r.set==`function`){var i=r.get,a=r.set;return Object.defineProperty(e,t,{configurable:!0,get:function(){return i.call(this)},set:function(e){n=``+e,a.call(this,e)}}),Object.defineProperty(e,t,{enumerable:r.enumerable}),{getValue:function(){return n},setValue:function(e){n=``+e},stopTracking:function(){e._valueTracker=null,delete e[t]}}}}function Wt(e){if(!e._valueTracker){var t=Ht(e)?`checked`:`value`;e._valueTracker=Ut(e,t,``+e[t])}}function Gt(e){if(!e)return!1;var t=e._valueTracker;if(!t)return!0;var n=t.getValue(),r=``;return e&&(r=Ht(e)?e.checked?`true`:`false`:e.value),e=r,e===n?!1:(t.setValue(e),!0)}function Kt(e){if(e||=typeof document<`u`?document:void 0,e===void 0)return null;try{return e.activeElement||e.body}catch{return e.body}}var qt=/[\n"\\]/g;function Jt(e){return e.replace(qt,function(e){return`\\`+e.charCodeAt(0).toString(16)+` `})}function Yt(e,t,n,r,i,a,o,s){e.name=``,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`?e.type=o:e.removeAttribute(`type`),t==null?o!==`submit`&&o!==`reset`||e.removeAttribute(`value`):o===`number`?(t===0&&e.value===``||e.value!=t)&&(e.value=``+Vt(t)):e.value!==``+Vt(t)&&(e.value=``+Vt(t)),t==null?n==null?r!=null&&e.removeAttribute(`value`):Zt(e,o,Vt(n)):Zt(e,o,Vt(t)),i==null&&a!=null&&(e.defaultChecked=!!a),i!=null&&(e.checked=i&&typeof i!=`function`&&typeof i!=`symbol`),s!=null&&typeof s!=`function`&&typeof s!=`symbol`&&typeof s!=`boolean`?e.name=``+Vt(s):e.removeAttribute(`name`)}function Xt(e,t,n,r,i,a,o,s){if(a!=null&&typeof a!=`function`&&typeof a!=`symbol`&&typeof a!=`boolean`&&(e.type=a),t!=null||n!=null){if(!(a!==`submit`&&a!==`reset`||t!=null)){Wt(e);return}n=n==null?``:``+Vt(n),t=t==null?n:``+Vt(t),s||t===e.value||(e.value=t),e.defaultValue=t}r??=i,r=typeof r!=`function`&&typeof r!=`symbol`&&!!r,e.checked=s?e.checked:!!r,e.defaultChecked=!!r,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`&&(e.name=o),Wt(e)}function Zt(e,t,n){t===`number`&&Kt(e.ownerDocument)===e||e.defaultValue===``+n||(e.defaultValue=``+n)}function Qt(e,t,n,r){if(e=e.options,t){t={};for(var i=0;i<n.length;i++)t[`$`+n[i]]=!0;for(n=0;n<e.length;n++)i=t.hasOwnProperty(`$`+e[n].value),e[n].selected!==i&&(e[n].selected=i),i&&r&&(e[n].defaultSelected=!0)}else{for(n=``+Vt(n),t=null,i=0;i<e.length;i++){if(e[i].value===n){e[i].selected=!0,r&&(e[i].defaultSelected=!0);return}t!==null||e[i].disabled||(t=e[i])}t!==null&&(t.selected=!0)}}function $t(e,t,n){if(t!=null&&(t=``+Vt(t),t!==e.value&&(e.value=t),n==null)){e.defaultValue!==t&&(e.defaultValue=t);return}e.defaultValue=n==null?``:``+Vt(n)}function en(e,t,n,r){if(t==null){if(r!=null){if(n!=null)throw Error(i(92));if(le(r)){if(1<r.length)throw Error(i(93));r=r[0]}n=r}n??=``,t=n}n=Vt(t),e.defaultValue=n,r=e.textContent,r===n&&r!==``&&r!==null&&(e.value=r),Wt(e)}function tn(e,t){if(t){var n=e.firstChild;if(n&&n===e.lastChild&&n.nodeType===3){n.nodeValue=t;return}}e.textContent=t}var nn=new Set(`animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp`.split(` `));function rn(e,t,n){var r=t.indexOf(`--`)===0;n==null||typeof n==`boolean`||n===``?r?e.setProperty(t,``):t===`float`?e.cssFloat=``:e[t]=``:r?e.setProperty(t,n):typeof n!=`number`||n===0||nn.has(t)?t===`float`?e.cssFloat=n:e[t]=(``+n).trim():e[t]=n+`px`}function an(e,t,n){if(t!=null&&typeof t!=`object`)throw Error(i(62));if(e=e.style,n!=null){for(var r in n)!n.hasOwnProperty(r)||t!=null&&t.hasOwnProperty(r)||(r.indexOf(`--`)===0?e.setProperty(r,``):r===`float`?e.cssFloat=``:e[r]=``);for(var a in t)r=t[a],t.hasOwnProperty(a)&&n[a]!==r&&rn(e,a,r)}else for(var o in t)t.hasOwnProperty(o)&&rn(e,o,t[o])}function on(e){if(e.indexOf(`-`)===-1)return!1;switch(e){case`annotation-xml`:case`color-profile`:case`font-face`:case`font-face-src`:case`font-face-uri`:case`font-face-format`:case`font-face-name`:case`missing-glyph`:return!1;default:return!0}}var sn=new Map([[`acceptCharset`,`accept-charset`],[`htmlFor`,`for`],[`httpEquiv`,`http-equiv`],[`crossOrigin`,`crossorigin`],[`accentHeight`,`accent-height`],[`alignmentBaseline`,`alignment-baseline`],[`arabicForm`,`arabic-form`],[`baselineShift`,`baseline-shift`],[`capHeight`,`cap-height`],[`clipPath`,`clip-path`],[`clipRule`,`clip-rule`],[`colorInterpolation`,`color-interpolation`],[`colorInterpolationFilters`,`color-interpolation-filters`],[`colorProfile`,`color-profile`],[`colorRendering`,`color-rendering`],[`dominantBaseline`,`dominant-baseline`],[`enableBackground`,`enable-background`],[`fillOpacity`,`fill-opacity`],[`fillRule`,`fill-rule`],[`floodColor`,`flood-color`],[`floodOpacity`,`flood-opacity`],[`fontFamily`,`font-family`],[`fontSize`,`font-size`],[`fontSizeAdjust`,`font-size-adjust`],[`fontStretch`,`font-stretch`],[`fontStyle`,`font-style`],[`fontVariant`,`font-variant`],[`fontWeight`,`font-weight`],[`glyphName`,`glyph-name`],[`glyphOrientationHorizontal`,`glyph-orientation-horizontal`],[`glyphOrientationVertical`,`glyph-orientation-vertical`],[`horizAdvX`,`horiz-adv-x`],[`horizOriginX`,`horiz-origin-x`],[`imageRendering`,`image-rendering`],[`letterSpacing`,`letter-spacing`],[`lightingColor`,`lighting-color`],[`markerEnd`,`marker-end`],[`markerMid`,`marker-mid`],[`markerStart`,`marker-start`],[`overlinePosition`,`overline-position`],[`overlineThickness`,`overline-thickness`],[`paintOrder`,`paint-order`],[`panose-1`,`panose-1`],[`pointerEvents`,`pointer-events`],[`renderingIntent`,`rendering-intent`],[`shapeRendering`,`shape-rendering`],[`stopColor`,`stop-color`],[`stopOpacity`,`stop-opacity`],[`strikethroughPosition`,`strikethrough-position`],[`strikethroughThickness`,`strikethrough-thickness`],[`strokeDasharray`,`stroke-dasharray`],[`strokeDashoffset`,`stroke-dashoffset`],[`strokeLinecap`,`stroke-linecap`],[`strokeLinejoin`,`stroke-linejoin`],[`strokeMiterlimit`,`stroke-miterlimit`],[`strokeOpacity`,`stroke-opacity`],[`strokeWidth`,`stroke-width`],[`textAnchor`,`text-anchor`],[`textDecoration`,`text-decoration`],[`textRendering`,`text-rendering`],[`transformOrigin`,`transform-origin`],[`underlinePosition`,`underline-position`],[`underlineThickness`,`underline-thickness`],[`unicodeBidi`,`unicode-bidi`],[`unicodeRange`,`unicode-range`],[`unitsPerEm`,`units-per-em`],[`vAlphabetic`,`v-alphabetic`],[`vHanging`,`v-hanging`],[`vIdeographic`,`v-ideographic`],[`vMathematical`,`v-mathematical`],[`vectorEffect`,`vector-effect`],[`vertAdvY`,`vert-adv-y`],[`vertOriginX`,`vert-origin-x`],[`vertOriginY`,`vert-origin-y`],[`wordSpacing`,`word-spacing`],[`writingMode`,`writing-mode`],[`xmlnsXlink`,`xmlns:xlink`],[`xHeight`,`x-height`]]),cn=/^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i;function ln(e){return cn.test(``+e)?`javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')`:e}function un(){}var dn=null;function fn(e){return e=e.target||e.srcElement||window,e.correspondingUseElement&&(e=e.correspondingUseElement),e.nodeType===3?e.parentNode:e}var pn=null,mn=null;function hn(e){var t=Et(e);if(t&&(e=t.stateNode)){var n=e[_t]||null;a:switch(e=t.stateNode,t.type){case`input`:if(Yt(e,n.value,n.defaultValue,n.defaultValue,n.checked,n.defaultChecked,n.type,n.name),t=n.name,n.type===`radio`&&t!=null){for(n=e;n.parentNode;)n=n.parentNode;for(n=n.querySelectorAll(`input[name="`+Jt(``+t)+`"][type="radio"]`),t=0;t<n.length;t++){var r=n[t];if(r!==e&&r.form===e.form){var a=r[_t]||null;if(!a)throw Error(i(90));Yt(r,a.value,a.defaultValue,a.defaultValue,a.checked,a.defaultChecked,a.type,a.name)}}for(t=0;t<n.length;t++)r=n[t],r.form===e.form&&Gt(r)}break a;case`textarea`:$t(e,n.value,n.defaultValue);break a;case`select`:t=n.value,t!=null&&Qt(e,!!n.multiple,t,!1)}}}var gn=!1;function _n(e,t,n){if(gn)return e(t,n);gn=!0;try{return e(t)}finally{if(gn=!1,(pn!==null||mn!==null)&&(bu(),pn&&(t=pn,e=mn,mn=pn=null,hn(t),e)))for(t=0;t<e.length;t++)hn(e[t])}}function vn(e,t){var n=e.stateNode;if(n===null)return null;var r=n[_t]||null;if(r===null)return null;n=r[t];a:switch(t){case`onClick`:case`onClickCapture`:case`onDoubleClick`:case`onDoubleClickCapture`:case`onMouseDown`:case`onMouseDownCapture`:case`onMouseMove`:case`onMouseMoveCapture`:case`onMouseUp`:case`onMouseUpCapture`:case`onMouseEnter`:(r=!r.disabled)||(e=e.type,r=!(e===`button`||e===`input`||e===`select`||e===`textarea`)),e=!r;break a;default:e=!1}if(e)return null;if(n&&typeof n!=`function`)throw Error(i(231,t,typeof n));return n}var yn=!(typeof window>`u`||window.document===void 0||window.document.createElement===void 0),bn=!1;if(yn)try{var xn={};Object.defineProperty(xn,`passive`,{get:function(){bn=!0}}),window.addEventListener(`test`,xn,xn),window.removeEventListener(`test`,xn,xn)}catch{bn=!1}var Sn=null,Cn=null,wn=null;function Tn(){if(wn)return wn;var e,t=Cn,n=t.length,r,i=`value`in Sn?Sn.value:Sn.textContent,a=i.length;for(e=0;e<n&&t[e]===i[e];e++);var o=n-e;for(r=1;r<=o&&t[n-r]===i[a-r];r++);return wn=i.slice(e,1<r?1-r:void 0)}function En(e){var t=e.keyCode;return`charCode`in e?(e=e.charCode,e===0&&t===13&&(e=13)):e=t,e===10&&(e=13),32<=e||e===13?e:0}function Dn(){return!0}function On(){return!1}function kn(e){function t(t,n,r,i,a){for(var o in this._reactName=t,this._targetInst=r,this.type=n,this.nativeEvent=i,this.target=a,this.currentTarget=null,e)e.hasOwnProperty(o)&&(t=e[o],this[o]=t?t(i):i[o]);return this.isDefaultPrevented=(i.defaultPrevented==null?!1===i.returnValue:i.defaultPrevented)?Dn:On,this.isPropagationStopped=On,this}return h(t.prototype,{preventDefault:function(){this.defaultPrevented=!0;var e=this.nativeEvent;e&&(e.preventDefault?e.preventDefault():typeof e.returnValue!=`unknown`&&(e.returnValue=!1),this.isDefaultPrevented=Dn)},stopPropagation:function(){var e=this.nativeEvent;e&&(e.stopPropagation?e.stopPropagation():typeof e.cancelBubble!=`unknown`&&(e.cancelBubble=!0),this.isPropagationStopped=Dn)},persist:function(){},isPersistent:Dn}),t}var An={eventPhase:0,bubbles:0,cancelable:0,timeStamp:function(e){return e.timeStamp||Date.now()},defaultPrevented:0,isTrusted:0},jn=kn(An),k=h({},An,{view:0,detail:0}),Mn=kn(k),Nn,Pn,Fn,In=h({},k,{screenX:0,screenY:0,clientX:0,clientY:0,pageX:0,pageY:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,getModifierState:qn,button:0,buttons:0,relatedTarget:function(e){return e.relatedTarget===void 0?e.fromElement===e.srcElement?e.toElement:e.fromElement:e.relatedTarget},movementX:function(e){return`movementX`in e?e.movementX:(e!==Fn&&(Fn&&e.type===`mousemove`?(Nn=e.screenX-Fn.screenX,Pn=e.screenY-Fn.screenY):Pn=Nn=0,Fn=e),Nn)},movementY:function(e){return`movementY`in e?e.movementY:Pn}}),Ln=kn(In),Rn=kn(h({},In,{dataTransfer:0})),zn=kn(h({},k,{relatedTarget:0})),Bn=kn(h({},An,{animationName:0,elapsedTime:0,pseudoElement:0})),Vn=kn(h({},An,{clipboardData:function(e){return`clipboardData`in e?e.clipboardData:window.clipboardData}})),Hn=kn(h({},An,{data:0})),Un={Esc:`Escape`,Spacebar:` `,Left:`ArrowLeft`,Up:`ArrowUp`,Right:`ArrowRight`,Down:`ArrowDown`,Del:`Delete`,Win:`OS`,Menu:`ContextMenu`,Apps:`ContextMenu`,Scroll:`ScrollLock`,MozPrintableKey:`Unidentified`},Wn={8:`Backspace`,9:`Tab`,12:`Clear`,13:`Enter`,16:`Shift`,17:`Control`,18:`Alt`,19:`Pause`,20:`CapsLock`,27:`Escape`,32:` `,33:`PageUp`,34:`PageDown`,35:`End`,36:`Home`,37:`ArrowLeft`,38:`ArrowUp`,39:`ArrowRight`,40:`ArrowDown`,45:`Insert`,46:`Delete`,112:`F1`,113:`F2`,114:`F3`,115:`F4`,116:`F5`,117:`F6`,118:`F7`,119:`F8`,120:`F9`,121:`F10`,122:`F11`,123:`F12`,144:`NumLock`,145:`ScrollLock`,224:`Meta`},Gn={Alt:`altKey`,Control:`ctrlKey`,Meta:`metaKey`,Shift:`shiftKey`};function Kn(e){var t=this.nativeEvent;return t.getModifierState?t.getModifierState(e):(e=Gn[e])?!!t[e]:!1}function qn(){return Kn}var Jn=kn(h({},k,{key:function(e){if(e.key){var t=Un[e.key]||e.key;if(t!==`Unidentified`)return t}return e.type===`keypress`?(e=En(e),e===13?`Enter`:String.fromCharCode(e)):e.type===`keydown`||e.type===`keyup`?Wn[e.keyCode]||`Unidentified`:``},code:0,location:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,repeat:0,locale:0,getModifierState:qn,charCode:function(e){return e.type===`keypress`?En(e):0},keyCode:function(e){return e.type===`keydown`||e.type===`keyup`?e.keyCode:0},which:function(e){return e.type===`keypress`?En(e):e.type===`keydown`||e.type===`keyup`?e.keyCode:0}})),Yn=kn(h({},In,{pointerId:0,width:0,height:0,pressure:0,tangentialPressure:0,tiltX:0,tiltY:0,twist:0,pointerType:0,isPrimary:0})),Xn=kn(h({},k,{touches:0,targetTouches:0,changedTouches:0,altKey:0,metaKey:0,ctrlKey:0,shiftKey:0,getModifierState:qn})),Zn=kn(h({},An,{propertyName:0,elapsedTime:0,pseudoElement:0})),Qn=kn(h({},In,{deltaX:function(e){return`deltaX`in e?e.deltaX:`wheelDeltaX`in e?-e.wheelDeltaX:0},deltaY:function(e){return`deltaY`in e?e.deltaY:`wheelDeltaY`in e?-e.wheelDeltaY:`wheelDelta`in e?-e.wheelDelta:0},deltaZ:0,deltaMode:0})),$n=kn(h({},An,{newState:0,oldState:0})),er=[9,13,27,32],tr=yn&&`CompositionEvent`in window,nr=null;yn&&`documentMode`in document&&(nr=document.documentMode);var rr=yn&&`TextEvent`in window&&!nr,ir=yn&&(!tr||nr&&8<nr&&11>=nr),A=` `,ar=!1;function or(e,t){switch(e){case`keyup`:return er.indexOf(t.keyCode)!==-1;case`keydown`:return t.keyCode!==229;case`keypress`:case`mousedown`:case`focusout`:return!0;default:return!1}}function sr(e){return e=e.detail,typeof e==`object`&&`data`in e?e.data:null}var cr=!1;function lr(e,t){switch(e){case`compositionend`:return sr(t);case`keypress`:return t.which===32?(ar=!0,A):null;case`textInput`:return e=t.data,e===A&&ar?null:e;default:return null}}function ur(e,t){if(cr)return e===`compositionend`||!tr&&or(e,t)?(e=Tn(),wn=Cn=Sn=null,cr=!1,e):null;switch(e){case`paste`:return null;case`keypress`:if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case`compositionend`:return ir&&t.locale!==`ko`?null:t.data;default:return null}}var dr={color:!0,date:!0,datetime:!0,"datetime-local":!0,email:!0,month:!0,number:!0,password:!0,range:!0,search:!0,tel:!0,text:!0,time:!0,url:!0,week:!0};function fr(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t===`input`?!!dr[e.type]:t===`textarea`}function pr(e,t,n,r){pn?mn?mn.push(r):mn=[r]:pn=r,t=Ed(t,`onChange`),0<t.length&&(n=new jn(`onChange`,`change`,null,n,r),e.push({event:n,listeners:t}))}var mr=null,hr=null;function gr(e){yd(e,0)}function _r(e){if(Gt(Dt(e)))return e}function vr(e,t){if(e===`change`)return t}var yr=!1;if(yn){var br;if(yn){var xr=`oninput`in document;if(!xr){var Sr=document.createElement(`div`);Sr.setAttribute(`oninput`,`return;`),xr=typeof Sr.oninput==`function`}br=xr}else br=!1;yr=br&&(!document.documentMode||9<document.documentMode)}function Cr(){mr&&(mr.detachEvent(`onpropertychange`,wr),hr=mr=null)}function wr(e){if(e.propertyName===`value`&&_r(hr)){var t=[];pr(t,hr,e,fn(e)),_n(gr,t)}}function Tr(e,t,n){e===`focusin`?(Cr(),mr=t,hr=n,mr.attachEvent(`onpropertychange`,wr)):e===`focusout`&&Cr()}function Er(e){if(e===`selectionchange`||e===`keyup`||e===`keydown`)return _r(hr)}function Dr(e,t){if(e===`click`)return _r(t)}function j(e,t){if(e===`input`||e===`change`)return _r(t)}function Or(e,t){return e===t&&(e!==0||1/e==1/t)||e!==e&&t!==t}var M=typeof Object.is==`function`?Object.is:Or;function kr(e,t){if(M(e,t))return!0;if(typeof e!=`object`||!e||typeof t!=`object`||!t)return!1;var n=Object.keys(e),r=Object.keys(t);if(n.length!==r.length)return!1;for(r=0;r<n.length;r++){var i=n[r];if(!Ae.call(t,i)||!M(e[i],t[i]))return!1}return!0}function Ar(e){for(;e&&e.firstChild;)e=e.firstChild;return e}function jr(e,t){var n=Ar(e);e=0;for(var r;n;){if(n.nodeType===3){if(r=e+n.textContent.length,e<=t&&r>=t)return{node:n,offset:t-e};e=r}a:{for(;n;){if(n.nextSibling){n=n.nextSibling;break a}n=n.parentNode}n=void 0}n=Ar(n)}}function Mr(e,t){return e&&t?e===t?!0:e&&e.nodeType===3?!1:t&&t.nodeType===3?Mr(e,t.parentNode):`contains`in e?e.contains(t):e.compareDocumentPosition?!!(e.compareDocumentPosition(t)&16):!1:!1}function Nr(e){e=e!=null&&e.ownerDocument!=null&&e.ownerDocument.defaultView!=null?e.ownerDocument.defaultView:window;for(var t=Kt(e.document);t instanceof e.HTMLIFrameElement;){try{var n=typeof t.contentWindow.location.href==`string`}catch{n=!1}if(n)e=t.contentWindow;else break;t=Kt(e.document)}return t}function Pr(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t&&(t===`input`&&(e.type===`text`||e.type===`search`||e.type===`tel`||e.type===`url`||e.type===`password`)||t===`textarea`||e.contentEditable===`true`)}var Fr=yn&&`documentMode`in document&&11>=document.documentMode,Ir=null,Lr=null,Rr=null,zr=!1;function Br(e,t,n){var r=n.window===n?n.document:n.nodeType===9?n:n.ownerDocument;zr||Ir==null||Ir!==Kt(r)||(r=Ir,`selectionStart`in r&&Pr(r)?r={start:r.selectionStart,end:r.selectionEnd}:(r=(r.ownerDocument&&r.ownerDocument.defaultView||window).getSelection(),r={anchorNode:r.anchorNode,anchorOffset:r.anchorOffset,focusNode:r.focusNode,focusOffset:r.focusOffset}),Rr&&kr(Rr,r)||(Rr=r,r=Ed(Lr,`onSelect`),0<r.length&&(t=new jn(`onSelect`,`select`,null,t,n),e.push({event:t,listeners:r}),t.target=Ir)))}function Vr(e,t){var n={};return n[e.toLowerCase()]=t.toLowerCase(),n[`Webkit`+e]=`webkit`+t,n[`Moz`+e]=`moz`+t,n}var Hr={animationend:Vr(`Animation`,`AnimationEnd`),animationiteration:Vr(`Animation`,`AnimationIteration`),animationstart:Vr(`Animation`,`AnimationStart`),transitionrun:Vr(`Transition`,`TransitionRun`),transitionstart:Vr(`Transition`,`TransitionStart`),transitioncancel:Vr(`Transition`,`TransitionCancel`),transitionend:Vr(`Transition`,`TransitionEnd`)},Ur={},Wr={};yn&&(Wr=document.createElement(`div`).style,`AnimationEvent`in window||(delete Hr.animationend.animation,delete Hr.animationiteration.animation,delete Hr.animationstart.animation),`TransitionEvent`in window||delete Hr.transitionend.transition);function Gr(e){if(Ur[e])return Ur[e];if(!Hr[e])return e;var t=Hr[e],n;for(n in t)if(t.hasOwnProperty(n)&&n in Wr)return Ur[e]=t[n];return e}var Kr=Gr(`animationend`),qr=Gr(`animationiteration`),Jr=Gr(`animationstart`),Yr=Gr(`transitionrun`),Xr=Gr(`transitionstart`),Zr=Gr(`transitioncancel`),Qr=Gr(`transitionend`),$r=new Map,ei=`abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel`.split(` `);ei.push(`scrollEnd`);function ti(e,t){$r.set(e,t),Mt(t,[e])}var ni=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)},ri=[],ii=0,ai=0;function oi(){for(var e=ii,t=ai=ii=0;t<e;){var n=ri[t];ri[t++]=null;var r=ri[t];ri[t++]=null;var i=ri[t];ri[t++]=null;var a=ri[t];if(ri[t++]=null,r!==null&&i!==null){var o=r.pending;o===null?i.next=i:(i.next=o.next,o.next=i),r.pending=i}a!==0&&ui(n,i,a)}}function si(e,t,n,r){ri[ii++]=e,ri[ii++]=t,ri[ii++]=n,ri[ii++]=r,ai|=r,e.lanes|=r,e=e.alternate,e!==null&&(e.lanes|=r)}function ci(e,t,n,r){return si(e,t,n,r),di(e)}function li(e,t){return si(e,null,null,t),di(e)}function ui(e,t,n){e.lanes|=n;var r=e.alternate;r!==null&&(r.lanes|=n);for(var i=!1,a=e.return;a!==null;)a.childLanes|=n,r=a.alternate,r!==null&&(r.childLanes|=n),a.tag===22&&(e=a.stateNode,e===null||e._visibility&1||(i=!0)),e=a,a=a.return;return e.tag===3?(a=e.stateNode,i&&t!==null&&(i=31-qe(n),e=a.hiddenUpdates,r=e[i],r===null?e[i]=[t]:r.push(t),t.lane=n|536870912),a):null}function di(e){if(50<du)throw du=0,fu=null,Error(i(185));for(var t=e.return;t!==null;)e=t,t=e.return;return e.tag===3?e.stateNode:null}var fi={};function pi(e,t,n,r){this.tag=e,this.key=n,this.sibling=this.child=this.return=this.stateNode=this.type=this.elementType=null,this.index=0,this.refCleanup=this.ref=null,this.pendingProps=t,this.dependencies=this.memoizedState=this.updateQueue=this.memoizedProps=null,this.mode=r,this.subtreeFlags=this.flags=0,this.deletions=null,this.childLanes=this.lanes=0,this.alternate=null}function mi(e,t,n,r){return new pi(e,t,n,r)}function hi(e){return e=e.prototype,!(!e||!e.isReactComponent)}function gi(e,t){var n=e.alternate;return n===null?(n=mi(e.tag,t,e.key,e.mode),n.elementType=e.elementType,n.type=e.type,n.stateNode=e.stateNode,n.alternate=e,e.alternate=n):(n.pendingProps=t,n.type=e.type,n.flags=0,n.subtreeFlags=0,n.deletions=null),n.flags=e.flags&65011712,n.childLanes=e.childLanes,n.lanes=e.lanes,n.child=e.child,n.memoizedProps=e.memoizedProps,n.memoizedState=e.memoizedState,n.updateQueue=e.updateQueue,t=e.dependencies,n.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext},n.sibling=e.sibling,n.index=e.index,n.ref=e.ref,n.refCleanup=e.refCleanup,n}function _i(e,t){e.flags&=65011714;var n=e.alternate;return n===null?(e.childLanes=0,e.lanes=t,e.child=null,e.subtreeFlags=0,e.memoizedProps=null,e.memoizedState=null,e.updateQueue=null,e.dependencies=null,e.stateNode=null):(e.childLanes=n.childLanes,e.lanes=n.lanes,e.child=n.child,e.subtreeFlags=0,e.deletions=null,e.memoizedProps=n.memoizedProps,e.memoizedState=n.memoizedState,e.updateQueue=n.updateQueue,e.type=n.type,t=n.dependencies,e.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext}),e}function vi(e,t,n,r,a,o){var s=0;if(r=e,typeof e==`function`)hi(e)&&(s=1);else if(typeof e==`string`)s=Uf(e,n,he.current)?26:e===`html`||e===`head`||e===`body`?27:5;else a:switch(e){case re:return e=mi(31,n,t,a),e.elementType=re,e.lanes=o,e;case y:return yi(n.children,a,o,t);case b:s=8,a|=24;break;case x:return e=mi(12,n,t,a|2),e.elementType=x,e.lanes=o,e;case te:return e=mi(13,n,t,a),e.elementType=te,e.lanes=o,e;case w:return e=mi(19,n,t,a),e.elementType=w,e.lanes=o,e;default:if(typeof e==`object`&&e)switch(e.$$typeof){case S:s=10;break a;case ee:s=9;break a;case C:s=11;break a;case T:s=14;break a;case ne:s=16,r=null;break a}s=29,n=Error(i(130,e===null?`null`:typeof e,``)),r=null}return t=mi(s,n,t,a),t.elementType=e,t.type=r,t.lanes=o,t}function yi(e,t,n,r){return e=mi(7,e,r,t),e.lanes=n,e}function bi(e,t,n){return e=mi(6,e,null,t),e.lanes=n,e}function xi(e){var t=mi(18,null,null,0);return t.stateNode=e,t}function Si(e,t,n){return t=mi(4,e.children===null?[]:e.children,e.key,t),t.lanes=n,t.stateNode={containerInfo:e.containerInfo,pendingChildren:null,implementation:e.implementation},t}var Ci=new WeakMap;function wi(e,t){if(typeof e==`object`&&e){var n=Ci.get(e);return n===void 0?(t={value:e,source:t,stack:ke(t)},Ci.set(e,t),t):n}return{value:e,source:t,stack:ke(t)}}var Ti=[],Ei=0,Di=null,Oi=0,ki=[],N=0,Ai=null,ji=1,Mi=``;function Ni(e,t){Ti[Ei++]=Oi,Ti[Ei++]=Di,Di=e,Oi=t}function Pi(e,t,n){ki[N++]=ji,ki[N++]=Mi,ki[N++]=Ai,Ai=e;var r=ji;e=Mi;var i=32-qe(r)-1;r&=~(1<<i),n+=1;var a=32-qe(t)+i;if(30<a){var o=i-i%5;a=(r&(1<<o)-1).toString(32),r>>=o,i-=o,ji=1<<32-qe(t)+i|n<<i|r,Mi=a+e}else ji=1<<a|n<<i|r,Mi=e}function Fi(e){e.return!==null&&(Ni(e,1),Pi(e,1,0))}function Ii(e){for(;e===Di;)Di=Ti[--Ei],Ti[Ei]=null,Oi=Ti[--Ei],Ti[Ei]=null;for(;e===Ai;)Ai=ki[--N],ki[N]=null,Mi=ki[--N],ki[N]=null,ji=ki[--N],ki[N]=null}function Li(e,t){ki[N++]=ji,ki[N++]=Mi,ki[N++]=Ai,ji=t.id,Mi=t.overflow,Ai=e}var Ri=null,P=null,F=!1,zi=null,Bi=!1,Vi=Error(i(519));function Hi(e){throw Ji(wi(Error(i(418,1<arguments.length&&arguments[1]!==void 0&&arguments[1]?`text`:`HTML`,``)),e)),Vi}function Ui(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[gt]=e,t[_t]=r,n){case`dialog`:Q(`cancel`,t),Q(`close`,t);break;case`iframe`:case`object`:case`embed`:Q(`load`,t);break;case`video`:case`audio`:for(n=0;n<_d.length;n++)Q(_d[n],t);break;case`source`:Q(`error`,t);break;case`img`:case`image`:case`link`:Q(`error`,t),Q(`load`,t);break;case`details`:Q(`toggle`,t);break;case`input`:Q(`invalid`,t),Xt(t,r.value,r.defaultValue,r.checked,r.defaultChecked,r.type,r.name,!0);break;case`select`:Q(`invalid`,t);break;case`textarea`:Q(`invalid`,t),en(t,r.value,r.defaultValue,r.children)}n=r.children,typeof n!=`string`&&typeof n!=`number`&&typeof n!=`bigint`||t.textContent===``+n||!0===r.suppressHydrationWarning||Md(t.textContent,n)?(r.popover!=null&&(Q(`beforetoggle`,t),Q(`toggle`,t)),r.onScroll!=null&&Q(`scroll`,t),r.onScrollEnd!=null&&Q(`scrollend`,t),r.onClick!=null&&(t.onclick=un),t=!0):t=!1,t||Hi(e,!0)}function Wi(e){for(Ri=e.return;Ri;)switch(Ri.tag){case 5:case 31:case 13:Bi=!1;return;case 27:case 3:Bi=!0;return;default:Ri=Ri.return}}function Gi(e){if(e!==Ri)return!1;if(!F)return Wi(e),F=!0,!1;var t=e.tag,n;if((n=t!==3&&t!==27)&&((n=t===5)&&(n=e.type,n=!(n!==`form`&&n!==`button`)||Ud(e.type,e.memoizedProps)),n=!n),n&&P&&Hi(e),Wi(e),t===13){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));P=uf(e)}else if(t===31){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));P=uf(e)}else t===27?(t=P,Zd(e.type)?(e=lf,lf=null,P=e):P=t):P=Ri?cf(e.stateNode.nextSibling):null;return!0}function Ki(){P=Ri=null,F=!1}function qi(){var e=zi;return e!==null&&(Zl===null?Zl=e:Zl.push.apply(Zl,e),zi=null),e}function Ji(e){zi===null?zi=[e]:zi.push(e)}var Yi=pe(null),Xi=null,Zi=null;function Qi(e,t,n){O(Yi,t._currentValue),t._currentValue=n}function $i(e){e._currentValue=Yi.current,me(Yi)}function ea(e,t,n){for(;e!==null;){var r=e.alternate;if((e.childLanes&t)===t?r!==null&&(r.childLanes&t)!==t&&(r.childLanes|=t):(e.childLanes|=t,r!==null&&(r.childLanes|=t)),e===n)break;e=e.return}}function ta(e,t,n,r){var a=e.child;for(a!==null&&(a.return=e);a!==null;){var o=a.dependencies;if(o!==null){var s=a.child;o=o.firstContext;a:for(;o!==null;){var c=o;o=a;for(var l=0;l<t.length;l++)if(c.context===t[l]){o.lanes|=n,c=o.alternate,c!==null&&(c.lanes|=n),ea(o.return,n,e),r||(s=null);break a}o=c.next}}else if(a.tag===18){if(s=a.return,s===null)throw Error(i(341));s.lanes|=n,o=s.alternate,o!==null&&(o.lanes|=n),ea(s,n,e),s=null}else s=a.child;if(s!==null)s.return=a;else for(s=a;s!==null;){if(s===e){s=null;break}if(a=s.sibling,a!==null){a.return=s.return,s=a;break}s=s.return}a=s}}function na(e,t,n,r){e=null;for(var a=t,o=!1;a!==null;){if(!o){if(a.flags&524288)o=!0;else if(a.flags&262144)break}if(a.tag===10){var s=a.alternate;if(s===null)throw Error(i(387));if(s=s.memoizedProps,s!==null){var c=a.type;M(a.pendingProps.value,s.value)||(e===null?e=[c]:e.push(c))}}else if(a===ve.current){if(s=a.alternate,s===null)throw Error(i(387));s.memoizedState.memoizedState!==a.memoizedState.memoizedState&&(e===null?e=[Qf]:e.push(Qf))}a=a.return}e!==null&&ta(t,e,n,r),t.flags|=262144}function ra(e){for(e=e.firstContext;e!==null;){if(!M(e.context._currentValue,e.memoizedValue))return!0;e=e.next}return!1}function ia(e){Xi=e,Zi=null,e=e.dependencies,e!==null&&(e.firstContext=null)}function aa(e){return sa(Xi,e)}function oa(e,t){return Xi===null&&ia(e),sa(e,t)}function sa(e,t){var n=t._currentValue;if(t={context:t,memoizedValue:n,next:null},Zi===null){if(e===null)throw Error(i(308));Zi=t,e.dependencies={lanes:0,firstContext:t},e.flags|=524288}else Zi=Zi.next=t;return n}var ca=typeof AbortController<`u`?AbortController:function(){var e=[],t=this.signal={aborted:!1,addEventListener:function(t,n){e.push(n)}};this.abort=function(){t.aborted=!0,e.forEach(function(e){return e()})}},la=t.unstable_scheduleCallback,ua=t.unstable_NormalPriority,I={$$typeof:S,Consumer:null,Provider:null,_currentValue:null,_currentValue2:null,_threadCount:0};function da(){return{controller:new ca,data:new Map,refCount:0}}function fa(e){e.refCount--,e.refCount===0&&la(ua,function(){e.controller.abort()})}var pa=null,ma=0,ha=0,ga=null;function _a(e,t){if(pa===null){var n=pa=[];ma=0,ha=dd(),ga={status:`pending`,value:void 0,then:function(e){n.push(e)}}}return ma++,t.then(va,va),t}function va(){if(--ma===0&&pa!==null){ga!==null&&(ga.status=`fulfilled`);var e=pa;pa=null,ha=0,ga=null;for(var t=0;t<e.length;t++)(0,e[t])()}}function ya(e,t){var n=[],r={status:`pending`,value:null,reason:null,then:function(e){n.push(e)}};return e.then(function(){r.status=`fulfilled`,r.value=t;for(var e=0;e<n.length;e++)(0,n[e])(t)},function(e){for(r.status=`rejected`,r.reason=e,e=0;e<n.length;e++)(0,n[e])(void 0)}),r}var ba=E.S;E.S=function(e,t){eu=Fe(),typeof t==`object`&&t&&typeof t.then==`function`&&_a(e,t),ba!==null&&ba(e,t)};var xa=pe(null);function Sa(){var e=xa.current;return e===null?K.pooledCache:e}function Ca(e,t){t===null?O(xa,xa.current):O(xa,t.pool)}function wa(){var e=Sa();return e===null?null:{parent:I._currentValue,pool:e}}var Ta=Error(i(460)),Ea=Error(i(474)),Da=Error(i(542)),Oa={then:function(){}};function ka(e){return e=e.status,e===`fulfilled`||e===`rejected`}function Aa(e,t,n){switch(n=e[n],n===void 0?e.push(t):n!==t&&(t.then(un,un),t=n),t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,Pa(e),e;default:if(typeof t.status==`string`)t.then(un,un);else{if(e=K,e!==null&&100<e.shellSuspendCounter)throw Error(i(482));e=t,e.status=`pending`,e.then(function(e){if(t.status===`pending`){var n=t;n.status=`fulfilled`,n.value=e}},function(e){if(t.status===`pending`){var n=t;n.status=`rejected`,n.reason=e}})}switch(t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,Pa(e),e}throw Ma=t,Ta}}function ja(e){try{var t=e._init;return t(e._payload)}catch(e){throw typeof e==`object`&&e&&typeof e.then==`function`?(Ma=e,Ta):e}}var Ma=null;function Na(){if(Ma===null)throw Error(i(459));var e=Ma;return Ma=null,e}function Pa(e){if(e===Ta||e===Da)throw Error(i(483))}var Fa=null,Ia=0;function La(e){var t=Ia;return Ia+=1,Fa===null&&(Fa=[]),Aa(Fa,e,t)}function Ra(e,t){t=t.props.ref,e.ref=t===void 0?null:t}function za(e,t){throw t.$$typeof===g?Error(i(525)):(e=Object.prototype.toString.call(t),Error(i(31,e===`[object Object]`?`object with keys {`+Object.keys(t).join(`, `)+`}`:e)))}function Ba(e){function t(t,n){if(e){var r=t.deletions;r===null?(t.deletions=[n],t.flags|=16):r.push(n)}}function n(n,r){if(!e)return null;for(;r!==null;)t(n,r),r=r.sibling;return null}function r(e){for(var t=new Map;e!==null;)e.key===null?t.set(e.index,e):t.set(e.key,e),e=e.sibling;return t}function a(e,t){return e=gi(e,t),e.index=0,e.sibling=null,e}function o(t,n,r){return t.index=r,e?(r=t.alternate,r===null?(t.flags|=67108866,n):(r=r.index,r<n?(t.flags|=67108866,n):r)):(t.flags|=1048576,n)}function s(t){return e&&t.alternate===null&&(t.flags|=67108866),t}function c(e,t,n,r){return t===null||t.tag!==6?(t=bi(n,e.mode,r),t.return=e,t):(t=a(t,n),t.return=e,t)}function l(e,t,n,r){var i=n.type;return i===y?d(e,t,n.props.children,r,n.key):t!==null&&(t.elementType===i||typeof i==`object`&&i&&i.$$typeof===ne&&ja(i)===t.type)?(t=a(t,n.props),Ra(t,n),t.return=e,t):(t=vi(n.type,n.key,n.props,null,e.mode,r),Ra(t,n),t.return=e,t)}function u(e,t,n,r){return t===null||t.tag!==4||t.stateNode.containerInfo!==n.containerInfo||t.stateNode.implementation!==n.implementation?(t=Si(n,e.mode,r),t.return=e,t):(t=a(t,n.children||[]),t.return=e,t)}function d(e,t,n,r,i){return t===null||t.tag!==7?(t=yi(n,e.mode,r,i),t.return=e,t):(t=a(t,n),t.return=e,t)}function f(e,t,n){if(typeof t==`string`&&t!==``||typeof t==`number`||typeof t==`bigint`)return t=bi(``+t,e.mode,n),t.return=e,t;if(typeof t==`object`&&t){switch(t.$$typeof){case _:return n=vi(t.type,t.key,t.props,null,e.mode,n),Ra(n,t),n.return=e,n;case v:return t=Si(t,e.mode,n),t.return=e,t;case ne:return t=ja(t),f(e,t,n)}if(le(t)||oe(t))return t=yi(t,e.mode,n,null),t.return=e,t;if(typeof t.then==`function`)return f(e,La(t),n);if(t.$$typeof===S)return f(e,oa(e,t),n);za(e,t)}return null}function p(e,t,n,r){var i=t===null?null:t.key;if(typeof n==`string`&&n!==``||typeof n==`number`||typeof n==`bigint`)return i===null?c(e,t,``+n,r):null;if(typeof n==`object`&&n){switch(n.$$typeof){case _:return n.key===i?l(e,t,n,r):null;case v:return n.key===i?u(e,t,n,r):null;case ne:return n=ja(n),p(e,t,n,r)}if(le(n)||oe(n))return i===null?d(e,t,n,r,null):null;if(typeof n.then==`function`)return p(e,t,La(n),r);if(n.$$typeof===S)return p(e,t,oa(e,n),r);za(e,n)}return null}function m(e,t,n,r,i){if(typeof r==`string`&&r!==``||typeof r==`number`||typeof r==`bigint`)return e=e.get(n)||null,c(t,e,``+r,i);if(typeof r==`object`&&r){switch(r.$$typeof){case _:return e=e.get(r.key===null?n:r.key)||null,l(t,e,r,i);case v:return e=e.get(r.key===null?n:r.key)||null,u(t,e,r,i);case ne:return r=ja(r),m(e,t,n,r,i)}if(le(r)||oe(r))return e=e.get(n)||null,d(t,e,r,i,null);if(typeof r.then==`function`)return m(e,t,n,La(r),i);if(r.$$typeof===S)return m(e,t,n,oa(t,r),i);za(t,r)}return null}function h(i,a,s,c){for(var l=null,u=null,d=a,h=a=0,g=null;d!==null&&h<s.length;h++){d.index>h?(g=d,d=null):g=d.sibling;var _=p(i,d,s[h],c);if(_===null){d===null&&(d=g);break}e&&d&&_.alternate===null&&t(i,d),a=o(_,a,h),u===null?l=_:u.sibling=_,u=_,d=g}if(h===s.length)return n(i,d),F&&Ni(i,h),l;if(d===null){for(;h<s.length;h++)d=f(i,s[h],c),d!==null&&(a=o(d,a,h),u===null?l=d:u.sibling=d,u=d);return F&&Ni(i,h),l}for(d=r(d);h<s.length;h++)g=m(d,i,h,s[h],c),g!==null&&(e&&g.alternate!==null&&d.delete(g.key===null?h:g.key),a=o(g,a,h),u===null?l=g:u.sibling=g,u=g);return e&&d.forEach(function(e){return t(i,e)}),F&&Ni(i,h),l}function g(a,s,c,l){if(c==null)throw Error(i(151));for(var u=null,d=null,h=s,g=s=0,_=null,v=c.next();h!==null&&!v.done;g++,v=c.next()){h.index>g?(_=h,h=null):_=h.sibling;var y=p(a,h,v.value,l);if(y===null){h===null&&(h=_);break}e&&h&&y.alternate===null&&t(a,h),s=o(y,s,g),d===null?u=y:d.sibling=y,d=y,h=_}if(v.done)return n(a,h),F&&Ni(a,g),u;if(h===null){for(;!v.done;g++,v=c.next())v=f(a,v.value,l),v!==null&&(s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return F&&Ni(a,g),u}for(h=r(h);!v.done;g++,v=c.next())v=m(h,a,g,v.value,l),v!==null&&(e&&v.alternate!==null&&h.delete(v.key===null?g:v.key),s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return e&&h.forEach(function(e){return t(a,e)}),F&&Ni(a,g),u}function b(e,r,o,c){if(typeof o==`object`&&o&&o.type===y&&o.key===null&&(o=o.props.children),typeof o==`object`&&o){switch(o.$$typeof){case _:a:{for(var l=o.key;r!==null;){if(r.key===l){if(l=o.type,l===y){if(r.tag===7){n(e,r.sibling),c=a(r,o.props.children),c.return=e,e=c;break a}}else if(r.elementType===l||typeof l==`object`&&l&&l.$$typeof===ne&&ja(l)===r.type){n(e,r.sibling),c=a(r,o.props),Ra(c,o),c.return=e,e=c;break a}n(e,r);break}else t(e,r);r=r.sibling}o.type===y?(c=yi(o.props.children,e.mode,c,o.key),c.return=e,e=c):(c=vi(o.type,o.key,o.props,null,e.mode,c),Ra(c,o),c.return=e,e=c)}return s(e);case v:a:{for(l=o.key;r!==null;){if(r.key===l)if(r.tag===4&&r.stateNode.containerInfo===o.containerInfo&&r.stateNode.implementation===o.implementation){n(e,r.sibling),c=a(r,o.children||[]),c.return=e,e=c;break a}else{n(e,r);break}else t(e,r);r=r.sibling}c=Si(o,e.mode,c),c.return=e,e=c}return s(e);case ne:return o=ja(o),b(e,r,o,c)}if(le(o))return h(e,r,o,c);if(oe(o)){if(l=oe(o),typeof l!=`function`)throw Error(i(150));return o=l.call(o),g(e,r,o,c)}if(typeof o.then==`function`)return b(e,r,La(o),c);if(o.$$typeof===S)return b(e,r,oa(e,o),c);za(e,o)}return typeof o==`string`&&o!==``||typeof o==`number`||typeof o==`bigint`?(o=``+o,r!==null&&r.tag===6?(n(e,r.sibling),c=a(r,o),c.return=e,e=c):(n(e,r),c=bi(o,e.mode,c),c.return=e,e=c),s(e)):n(e,r)}return function(e,t,n,r){try{Ia=0;var i=b(e,t,n,r);return Fa=null,i}catch(t){if(t===Ta||t===Da)throw t;var a=mi(29,t,null,e.mode);return a.lanes=r,a.return=e,a}}}var Va=Ba(!0),Ha=Ba(!1),Ua=!1;function Wa(e){e.updateQueue={baseState:e.memoizedState,firstBaseUpdate:null,lastBaseUpdate:null,shared:{pending:null,lanes:0,hiddenCallbacks:null},callbacks:null}}function Ga(e,t){e=e.updateQueue,t.updateQueue===e&&(t.updateQueue={baseState:e.baseState,firstBaseUpdate:e.firstBaseUpdate,lastBaseUpdate:e.lastBaseUpdate,shared:e.shared,callbacks:null})}function Ka(e){return{lane:e,tag:0,payload:null,callback:null,next:null}}function qa(e,t,n){var r=e.updateQueue;if(r===null)return null;if(r=r.shared,G&2){var i=r.pending;return i===null?t.next=t:(t.next=i.next,i.next=t),r.pending=t,t=di(e),ui(e,null,n),t}return si(e,r,t,n),di(e)}function Ja(e,t,n){if(t=t.updateQueue,t!==null&&(t=t.shared,n&4194048)){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,lt(e,n)}}function Ya(e,t){var n=e.updateQueue,r=e.alternate;if(r!==null&&(r=r.updateQueue,n===r)){var i=null,a=null;if(n=n.firstBaseUpdate,n!==null){do{var o={lane:n.lane,tag:n.tag,payload:n.payload,callback:null,next:null};a===null?i=a=o:a=a.next=o,n=n.next}while(n!==null);a===null?i=a=t:a=a.next=t}else i=a=t;n={baseState:r.baseState,firstBaseUpdate:i,lastBaseUpdate:a,shared:r.shared,callbacks:r.callbacks},e.updateQueue=n;return}e=n.lastBaseUpdate,e===null?n.firstBaseUpdate=t:e.next=t,n.lastBaseUpdate=t}var Xa=!1;function Za(){if(Xa){var e=ga;if(e!==null)throw e}}function Qa(e,t,n,r){Xa=!1;var i=e.updateQueue;Ua=!1;var a=i.firstBaseUpdate,o=i.lastBaseUpdate,s=i.shared.pending;if(s!==null){i.shared.pending=null;var c=s,l=c.next;c.next=null,o===null?a=l:o.next=l,o=c;var u=e.alternate;u!==null&&(u=u.updateQueue,s=u.lastBaseUpdate,s!==o&&(s===null?u.firstBaseUpdate=l:s.next=l,u.lastBaseUpdate=c))}if(a!==null){var d=i.baseState;o=0,u=l=c=null,s=a;do{var f=s.lane&-536870913,p=f!==s.lane;if(p?(J&f)===f:(r&f)===f){f!==0&&f===ha&&(Xa=!0),u!==null&&(u=u.next={lane:0,tag:s.tag,payload:s.payload,callback:null,next:null});a:{var m=e,g=s;f=t;var _=n;switch(g.tag){case 1:if(m=g.payload,typeof m==`function`){d=m.call(_,d,f);break a}d=m;break a;case 3:m.flags=m.flags&-65537|128;case 0:if(m=g.payload,f=typeof m==`function`?m.call(_,d,f):m,f==null)break a;d=h({},d,f);break a;case 2:Ua=!0}}f=s.callback,f!==null&&(e.flags|=64,p&&(e.flags|=8192),p=i.callbacks,p===null?i.callbacks=[f]:p.push(f))}else p={lane:f,tag:s.tag,payload:s.payload,callback:s.callback,next:null},u===null?(l=u=p,c=d):u=u.next=p,o|=f;if(s=s.next,s===null){if(s=i.shared.pending,s===null)break;p=s,s=p.next,p.next=null,i.lastBaseUpdate=p,i.shared.pending=null}}while(1);u===null&&(c=d),i.baseState=c,i.firstBaseUpdate=l,i.lastBaseUpdate=u,a===null&&(i.shared.lanes=0),Gl|=o,e.lanes=o,e.memoizedState=d}}function $a(e,t){if(typeof e!=`function`)throw Error(i(191,e));e.call(t)}function eo(e,t){var n=e.callbacks;if(n!==null)for(e.callbacks=null,e=0;e<n.length;e++)$a(n[e],t)}var to=pe(null),no=pe(0);function ro(e,t){e=Wl,O(no,e),O(to,t),Wl=e|t.baseLanes}function io(){O(no,Wl),O(to,to.current)}function ao(){Wl=no.current,me(to),me(no)}var oo=pe(null),so=null;function co(e){var t=e.alternate;O(L,L.current&1),O(oo,e),so===null&&(t===null||to.current!==null||t.memoizedState!==null)&&(so=e)}function lo(e){O(L,L.current),O(oo,e),so===null&&(so=e)}function uo(e){e.tag===22?(O(L,L.current),O(oo,e),so===null&&(so=e)):fo(e)}function fo(){O(L,L.current),O(oo,oo.current)}function po(e){me(oo),so===e&&(so=null),me(L)}var L=pe(0);function mo(e){for(var t=e;t!==null;){if(t.tag===13){var n=t.memoizedState;if(n!==null&&(n=n.dehydrated,n===null||af(n)||of(n)))return t}else if(t.tag===19&&(t.memoizedProps.revealOrder===`forwards`||t.memoizedProps.revealOrder===`backwards`||t.memoizedProps.revealOrder===`unstable_legacy-backwards`||t.memoizedProps.revealOrder===`together`)){if(t.flags&128)return t}else if(t.child!==null){t.child.return=t,t=t.child;continue}if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return null;t=t.return}t.sibling.return=t.return,t=t.sibling}return null}var ho=0,R=null,z=null,B=null,go=!1,_o=!1,vo=!1,yo=0,bo=0,xo=null,So=0;function V(){throw Error(i(321))}function Co(e,t){if(t===null)return!1;for(var n=0;n<t.length&&n<e.length;n++)if(!M(e[n],t[n]))return!1;return!0}function wo(e,t,n,r,i,a){return ho=a,R=t,t.memoizedState=null,t.updateQueue=null,t.lanes=0,E.H=e===null||e.memoizedState===null?Bs:Vs,vo=!1,a=n(r,i),vo=!1,_o&&(a=Eo(t,n,r,i)),To(e),a}function To(e){E.H=zs;var t=z!==null&&z.next!==null;if(ho=0,B=z=R=null,go=!1,bo=0,xo=null,t)throw Error(i(300));e===null||ic||(e=e.dependencies,e!==null&&ra(e)&&(ic=!0))}function Eo(e,t,n,r){R=e;var a=0;do{if(_o&&(xo=null),bo=0,_o=!1,25<=a)throw Error(i(301));if(a+=1,B=z=null,e.updateQueue!=null){var o=e.updateQueue;o.lastEffect=null,o.events=null,o.stores=null,o.memoCache!=null&&(o.memoCache.index=0)}E.H=Hs,o=t(n,r)}while(_o);return o}function Do(){var e=E.H,t=e.useState()[0];return t=typeof t.then==`function`?No(t):t,e=e.useState()[0],(z===null?null:z.memoizedState)!==e&&(R.flags|=1024),t}function Oo(){var e=yo!==0;return yo=0,e}function ko(e,t,n){t.updateQueue=e.updateQueue,t.flags&=-2053,e.lanes&=~n}function Ao(e){if(go){for(e=e.memoizedState;e!==null;){var t=e.queue;t!==null&&(t.pending=null),e=e.next}go=!1}ho=0,B=z=R=null,_o=!1,bo=yo=0,xo=null}function jo(){var e={memoizedState:null,baseState:null,baseQueue:null,queue:null,next:null};return B===null?R.memoizedState=B=e:B=B.next=e,B}function H(){if(z===null){var e=R.alternate;e=e===null?null:e.memoizedState}else e=z.next;var t=B===null?R.memoizedState:B.next;if(t!==null)B=t,z=e;else{if(e===null)throw R.alternate===null?Error(i(467)):Error(i(310));z=e,e={memoizedState:z.memoizedState,baseState:z.baseState,baseQueue:z.baseQueue,queue:z.queue,next:null},B===null?R.memoizedState=B=e:B=B.next=e}return B}function Mo(){return{lastEffect:null,events:null,stores:null,memoCache:null}}function No(e){var t=bo;return bo+=1,xo===null&&(xo=[]),e=Aa(xo,e,t),t=R,(B===null?t.memoizedState:B.next)===null&&(t=t.alternate,E.H=t===null||t.memoizedState===null?Bs:Vs),e}function Po(e){if(typeof e==`object`&&e){if(typeof e.then==`function`)return No(e);if(e.$$typeof===S)return aa(e)}throw Error(i(438,String(e)))}function Fo(e){var t=null,n=R.updateQueue;if(n!==null&&(t=n.memoCache),t==null){var r=R.alternate;r!==null&&(r=r.updateQueue,r!==null&&(r=r.memoCache,r!=null&&(t={data:r.data.map(function(e){return e.slice()}),index:0})))}if(t??={data:[],index:0},n===null&&(n=Mo(),R.updateQueue=n),n.memoCache=t,n=t.data[t.index],n===void 0)for(n=t.data[t.index]=Array(e),r=0;r<e;r++)n[r]=ie;return t.index++,n}function Io(e,t){return typeof t==`function`?t(e):t}function Lo(e){return Ro(H(),z,e)}function Ro(e,t,n){var r=e.queue;if(r===null)throw Error(i(311));r.lastRenderedReducer=n;var a=e.baseQueue,o=r.pending;if(o!==null){if(a!==null){var s=a.next;a.next=o.next,o.next=s}t.baseQueue=a=o,r.pending=null}if(o=e.baseState,a===null)e.memoizedState=o;else{t=a.next;var c=s=null,l=null,u=t,d=!1;do{var f=u.lane&-536870913;if(f===u.lane?(ho&f)===f:(J&f)===f){var p=u.revertLane;if(p===0)l!==null&&(l=l.next={lane:0,revertLane:0,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null}),f===ha&&(d=!0);else if((ho&p)===p){u=u.next,p===ha&&(d=!0);continue}else f={lane:0,revertLane:u.revertLane,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=f,s=o):l=l.next=f,R.lanes|=p,Gl|=p;f=u.action,vo&&n(o,f),o=u.hasEagerState?u.eagerState:n(o,f)}else p={lane:f,revertLane:u.revertLane,gesture:u.gesture,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=p,s=o):l=l.next=p,R.lanes|=f,Gl|=f;u=u.next}while(u!==null&&u!==t);if(l===null?s=o:l.next=c,!M(o,e.memoizedState)&&(ic=!0,d&&(n=ga,n!==null)))throw n;e.memoizedState=o,e.baseState=s,e.baseQueue=l,r.lastRenderedState=o}return a===null&&(r.lanes=0),[e.memoizedState,r.dispatch]}function zo(e){var t=H(),n=t.queue;if(n===null)throw Error(i(311));n.lastRenderedReducer=e;var r=n.dispatch,a=n.pending,o=t.memoizedState;if(a!==null){n.pending=null;var s=a=a.next;do o=e(o,s.action),s=s.next;while(s!==a);M(o,t.memoizedState)||(ic=!0),t.memoizedState=o,t.baseQueue===null&&(t.baseState=o),n.lastRenderedState=o}return[o,r]}function Bo(e,t,n){var r=R,a=H(),o=F;if(o){if(n===void 0)throw Error(i(407));n=n()}else n=t();var s=!M((z||a).memoizedState,n);if(s&&(a.memoizedState=n,ic=!0),a=a.queue,ds(Uo.bind(null,r,a,e),[e]),a.getSnapshot!==t||s||B!==null&&B.memoizedState.tag&1){if(r.flags|=2048,os(9,{destroy:void 0},Ho.bind(null,r,a,n,t),null),K===null)throw Error(i(349));o||ho&127||Vo(r,t,n)}return n}function Vo(e,t,n){e.flags|=16384,e={getSnapshot:t,value:n},t=R.updateQueue,t===null?(t=Mo(),R.updateQueue=t,t.stores=[e]):(n=t.stores,n===null?t.stores=[e]:n.push(e))}function Ho(e,t,n,r){t.value=n,t.getSnapshot=r,Wo(t)&&Go(e)}function Uo(e,t,n){return n(function(){Wo(t)&&Go(e)})}function Wo(e){var t=e.getSnapshot;e=e.value;try{var n=t();return!M(e,n)}catch{return!0}}function Go(e){var t=li(e,2);t!==null&&hu(t,e,2)}function Ko(e){var t=jo();if(typeof e==`function`){var n=e;if(e=n(),vo){Ke(!0);try{n()}finally{Ke(!1)}}}return t.memoizedState=t.baseState=e,t.queue={pending:null,lanes:0,dispatch:null,lastRenderedReducer:Io,lastRenderedState:e},t}function qo(e,t,n,r){return e.baseState=n,Ro(e,z,typeof r==`function`?r:Io)}function Jo(e,t,n,r,a){if(Is(e))throw Error(i(485));if(e=t.action,e!==null){var o={payload:a,action:e,next:null,isTransition:!0,status:`pending`,value:null,reason:null,listeners:[],then:function(e){o.listeners.push(e)}};E.T===null?o.isTransition=!1:n(!0),r(o),n=t.pending,n===null?(o.next=t.pending=o,Yo(t,o)):(o.next=n.next,t.pending=n.next=o)}}function Yo(e,t){var n=t.action,r=t.payload,i=e.state;if(t.isTransition){var a=E.T,o={};E.T=o;try{var s=n(i,r),c=E.S;c!==null&&c(o,s),Xo(e,t,s)}catch(n){Qo(e,t,n)}finally{a!==null&&o.types!==null&&(a.types=o.types),E.T=a}}else try{a=n(i,r),Xo(e,t,a)}catch(n){Qo(e,t,n)}}function Xo(e,t,n){typeof n==`object`&&n&&typeof n.then==`function`?n.then(function(n){Zo(e,t,n)},function(n){return Qo(e,t,n)}):Zo(e,t,n)}function Zo(e,t,n){t.status=`fulfilled`,t.value=n,$o(t),e.state=n,t=e.pending,t!==null&&(n=t.next,n===t?e.pending=null:(n=n.next,t.next=n,Yo(e,n)))}function Qo(e,t,n){var r=e.pending;if(e.pending=null,r!==null){r=r.next;do t.status=`rejected`,t.reason=n,$o(t),t=t.next;while(t!==r)}e.action=null}function $o(e){e=e.listeners;for(var t=0;t<e.length;t++)(0,e[t])()}function es(e,t){return t}function ts(e,t){if(F){var n=K.formState;if(n!==null){a:{var r=R;if(F){if(P){b:{for(var i=P,a=Bi;i.nodeType!==8;){if(!a){i=null;break b}if(i=cf(i.nextSibling),i===null){i=null;break b}}a=i.data,i=a===`F!`||a===`F`?i:null}if(i){P=cf(i.nextSibling),r=i.data===`F!`;break a}}Hi(r)}r=!1}r&&(t=n[0])}}return n=jo(),n.memoizedState=n.baseState=t,r={pending:null,lanes:0,dispatch:null,lastRenderedReducer:es,lastRenderedState:t},n.queue=r,n=Ns.bind(null,R,r),r.dispatch=n,r=Ko(!1),a=Fs.bind(null,R,!1,r.queue),r=jo(),i={state:t,dispatch:null,action:e,pending:null},r.queue=i,n=Jo.bind(null,R,i,a,n),i.dispatch=n,r.memoizedState=e,[t,n,!1]}function ns(e){return rs(H(),z,e)}function rs(e,t,n){if(t=Ro(e,t,es)[0],e=Lo(Io)[0],typeof t==`object`&&t&&typeof t.then==`function`)try{var r=No(t)}catch(e){throw e===Ta?Da:e}else r=t;t=H();var i=t.queue,a=i.dispatch;return n!==t.memoizedState&&(R.flags|=2048,os(9,{destroy:void 0},is.bind(null,i,n),null)),[r,a,e]}function is(e,t){e.action=t}function as(e){var t=H(),n=z;if(n!==null)return rs(t,n,e);H(),t=t.memoizedState,n=H();var r=n.queue.dispatch;return n.memoizedState=e,[t,r,!1]}function os(e,t,n,r){return e={tag:e,create:n,deps:r,inst:t,next:null},t=R.updateQueue,t===null&&(t=Mo(),R.updateQueue=t),n=t.lastEffect,n===null?t.lastEffect=e.next=e:(r=n.next,n.next=e,e.next=r,t.lastEffect=e),e}function ss(){return H().memoizedState}function cs(e,t,n,r){var i=jo();R.flags|=e,i.memoizedState=os(1|t,{destroy:void 0},n,r===void 0?null:r)}function ls(e,t,n,r){var i=H();r=r===void 0?null:r;var a=i.memoizedState.inst;z!==null&&r!==null&&Co(r,z.memoizedState.deps)?i.memoizedState=os(t,a,n,r):(R.flags|=e,i.memoizedState=os(1|t,a,n,r))}function us(e,t){cs(8390656,8,e,t)}function ds(e,t){ls(2048,8,e,t)}function fs(e){R.flags|=4;var t=R.updateQueue;if(t===null)t=Mo(),R.updateQueue=t,t.events=[e];else{var n=t.events;n===null?t.events=[e]:n.push(e)}}function ps(e){var t=H().memoizedState;return fs({ref:t,nextImpl:e}),function(){if(G&2)throw Error(i(440));return t.impl.apply(void 0,arguments)}}function ms(e,t){return ls(4,2,e,t)}function hs(e,t){return ls(4,4,e,t)}function gs(e,t){if(typeof t==`function`){e=e();var n=t(e);return function(){typeof n==`function`?n():t(null)}}if(t!=null)return e=e(),t.current=e,function(){t.current=null}}function _s(e,t,n){n=n==null?null:n.concat([e]),ls(4,4,gs.bind(null,t,e),n)}function vs(){}function ys(e,t){var n=H();t=t===void 0?null:t;var r=n.memoizedState;return t!==null&&Co(t,r[1])?r[0]:(n.memoizedState=[e,t],e)}function bs(e,t){var n=H();t=t===void 0?null:t;var r=n.memoizedState;if(t!==null&&Co(t,r[1]))return r[0];if(r=e(),vo){Ke(!0);try{e()}finally{Ke(!1)}}return n.memoizedState=[r,t],r}function xs(e,t,n){return n===void 0||ho&1073741824&&!(J&261930)?e.memoizedState=t:(e.memoizedState=n,e=mu(),R.lanes|=e,Gl|=e,n)}function Ss(e,t,n,r){return M(n,t)?n:to.current===null?!(ho&42)||ho&1073741824&&!(J&261930)?(ic=!0,e.memoizedState=n):(e=mu(),R.lanes|=e,Gl|=e,t):(e=xs(e,n,r),M(e,t)||(ic=!0),e)}function Cs(e,t,n,r,i){var a=D.p;D.p=a!==0&&8>a?a:8;var o=E.T,s={};E.T=s,Fs(e,!1,t,n);try{var c=i(),l=E.S;l!==null&&l(s,c),typeof c==`object`&&c&&typeof c.then==`function`?Ps(e,t,ya(c,r),pu(e)):Ps(e,t,r,pu(e))}catch(n){Ps(e,t,{then:function(){},status:`rejected`,reason:n},pu())}finally{D.p=a,o!==null&&s.types!==null&&(o.types=s.types),E.T=o}}function ws(){}function Ts(e,t,n,r){if(e.tag!==5)throw Error(i(476));var a=Es(e).queue;Cs(e,a,t,ue,n===null?ws:function(){return Ds(e),n(r)})}function Es(e){var t=e.memoizedState;if(t!==null)return t;t={memoizedState:ue,baseState:ue,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:Io,lastRenderedState:ue},next:null};var n={};return t.next={memoizedState:n,baseState:n,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:Io,lastRenderedState:n},next:null},e.memoizedState=t,e=e.alternate,e!==null&&(e.memoizedState=t),t}function Ds(e){var t=Es(e);t.next===null&&(t=e.alternate.memoizedState),Ps(e,t.next.queue,{},pu())}function Os(){return aa(Qf)}function ks(){return H().memoizedState}function As(){return H().memoizedState}function js(e){for(var t=e.return;t!==null;){switch(t.tag){case 24:case 3:var n=pu();e=Ka(n);var r=qa(t,e,n);r!==null&&(hu(r,t,n),Ja(r,t,n)),t={cache:da()},e.payload=t;return}t=t.return}}function Ms(e,t,n){var r=pu();n={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null},Is(e)?Ls(t,n):(n=ci(e,t,n,r),n!==null&&(hu(n,e,r),Rs(n,t,r)))}function Ns(e,t,n){Ps(e,t,n,pu())}function Ps(e,t,n,r){var i={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null};if(Is(e))Ls(t,i);else{var a=e.alternate;if(e.lanes===0&&(a===null||a.lanes===0)&&(a=t.lastRenderedReducer,a!==null))try{var o=t.lastRenderedState,s=a(o,n);if(i.hasEagerState=!0,i.eagerState=s,M(s,o))return si(e,t,i,0),K===null&&oi(),!1}catch{}if(n=ci(e,t,i,r),n!==null)return hu(n,e,r),Rs(n,t,r),!0}return!1}function Fs(e,t,n,r){if(r={lane:2,revertLane:dd(),gesture:null,action:r,hasEagerState:!1,eagerState:null,next:null},Is(e)){if(t)throw Error(i(479))}else t=ci(e,n,r,2),t!==null&&hu(t,e,2)}function Is(e){var t=e.alternate;return e===R||t!==null&&t===R}function Ls(e,t){_o=go=!0;var n=e.pending;n===null?t.next=t:(t.next=n.next,n.next=t),e.pending=t}function Rs(e,t,n){if(n&4194048){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,lt(e,n)}}var zs={readContext:aa,use:Po,useCallback:V,useContext:V,useEffect:V,useImperativeHandle:V,useLayoutEffect:V,useInsertionEffect:V,useMemo:V,useReducer:V,useRef:V,useState:V,useDebugValue:V,useDeferredValue:V,useTransition:V,useSyncExternalStore:V,useId:V,useHostTransitionStatus:V,useFormState:V,useActionState:V,useOptimistic:V,useMemoCache:V,useCacheRefresh:V};zs.useEffectEvent=V;var Bs={readContext:aa,use:Po,useCallback:function(e,t){return jo().memoizedState=[e,t===void 0?null:t],e},useContext:aa,useEffect:us,useImperativeHandle:function(e,t,n){n=n==null?null:n.concat([e]),cs(4194308,4,gs.bind(null,t,e),n)},useLayoutEffect:function(e,t){return cs(4194308,4,e,t)},useInsertionEffect:function(e,t){cs(4,2,e,t)},useMemo:function(e,t){var n=jo();t=t===void 0?null:t;var r=e();if(vo){Ke(!0);try{e()}finally{Ke(!1)}}return n.memoizedState=[r,t],r},useReducer:function(e,t,n){var r=jo();if(n!==void 0){var i=n(t);if(vo){Ke(!0);try{n(t)}finally{Ke(!1)}}}else i=t;return r.memoizedState=r.baseState=i,e={pending:null,lanes:0,dispatch:null,lastRenderedReducer:e,lastRenderedState:i},r.queue=e,e=e.dispatch=Ms.bind(null,R,e),[r.memoizedState,e]},useRef:function(e){var t=jo();return e={current:e},t.memoizedState=e},useState:function(e){e=Ko(e);var t=e.queue,n=Ns.bind(null,R,t);return t.dispatch=n,[e.memoizedState,n]},useDebugValue:vs,useDeferredValue:function(e,t){return xs(jo(),e,t)},useTransition:function(){var e=Ko(!1);return e=Cs.bind(null,R,e.queue,!0,!1),jo().memoizedState=e,[!1,e]},useSyncExternalStore:function(e,t,n){var r=R,a=jo();if(F){if(n===void 0)throw Error(i(407));n=n()}else{if(n=t(),K===null)throw Error(i(349));J&127||Vo(r,t,n)}a.memoizedState=n;var o={value:n,getSnapshot:t};return a.queue=o,us(Uo.bind(null,r,o,e),[e]),r.flags|=2048,os(9,{destroy:void 0},Ho.bind(null,r,o,n,t),null),n},useId:function(){var e=jo(),t=K.identifierPrefix;if(F){var n=Mi,r=ji;n=(r&~(1<<32-qe(r)-1)).toString(32)+n,t=`_`+t+`R_`+n,n=yo++,0<n&&(t+=`H`+n.toString(32)),t+=`_`}else n=So++,t=`_`+t+`r_`+n.toString(32)+`_`;return e.memoizedState=t},useHostTransitionStatus:Os,useFormState:ts,useActionState:ts,useOptimistic:function(e){var t=jo();t.memoizedState=t.baseState=e;var n={pending:null,lanes:0,dispatch:null,lastRenderedReducer:null,lastRenderedState:null};return t.queue=n,t=Fs.bind(null,R,!0,n),n.dispatch=t,[e,t]},useMemoCache:Fo,useCacheRefresh:function(){return jo().memoizedState=js.bind(null,R)},useEffectEvent:function(e){var t=jo(),n={impl:e};return t.memoizedState=n,function(){if(G&2)throw Error(i(440));return n.impl.apply(void 0,arguments)}}},Vs={readContext:aa,use:Po,useCallback:ys,useContext:aa,useEffect:ds,useImperativeHandle:_s,useInsertionEffect:ms,useLayoutEffect:hs,useMemo:bs,useReducer:Lo,useRef:ss,useState:function(){return Lo(Io)},useDebugValue:vs,useDeferredValue:function(e,t){return Ss(H(),z.memoizedState,e,t)},useTransition:function(){var e=Lo(Io)[0],t=H().memoizedState;return[typeof e==`boolean`?e:No(e),t]},useSyncExternalStore:Bo,useId:ks,useHostTransitionStatus:Os,useFormState:ns,useActionState:ns,useOptimistic:function(e,t){return qo(H(),z,e,t)},useMemoCache:Fo,useCacheRefresh:As};Vs.useEffectEvent=ps;var Hs={readContext:aa,use:Po,useCallback:ys,useContext:aa,useEffect:ds,useImperativeHandle:_s,useInsertionEffect:ms,useLayoutEffect:hs,useMemo:bs,useReducer:zo,useRef:ss,useState:function(){return zo(Io)},useDebugValue:vs,useDeferredValue:function(e,t){var n=H();return z===null?xs(n,e,t):Ss(n,z.memoizedState,e,t)},useTransition:function(){var e=zo(Io)[0],t=H().memoizedState;return[typeof e==`boolean`?e:No(e),t]},useSyncExternalStore:Bo,useId:ks,useHostTransitionStatus:Os,useFormState:as,useActionState:as,useOptimistic:function(e,t){var n=H();return z===null?(n.baseState=e,[e,n.queue.dispatch]):qo(n,z,e,t)},useMemoCache:Fo,useCacheRefresh:As};Hs.useEffectEvent=ps;function Us(e,t,n,r){t=e.memoizedState,n=n(r,t),n=n==null?t:h({},t,n),e.memoizedState=n,e.lanes===0&&(e.updateQueue.baseState=n)}var Ws={enqueueSetState:function(e,t,n){e=e._reactInternals;var r=pu(),i=Ka(r);i.payload=t,n!=null&&(i.callback=n),t=qa(e,i,r),t!==null&&(hu(t,e,r),Ja(t,e,r))},enqueueReplaceState:function(e,t,n){e=e._reactInternals;var r=pu(),i=Ka(r);i.tag=1,i.payload=t,n!=null&&(i.callback=n),t=qa(e,i,r),t!==null&&(hu(t,e,r),Ja(t,e,r))},enqueueForceUpdate:function(e,t){e=e._reactInternals;var n=pu(),r=Ka(n);r.tag=2,t!=null&&(r.callback=t),t=qa(e,r,n),t!==null&&(hu(t,e,n),Ja(t,e,n))}};function Gs(e,t,n,r,i,a,o){return e=e.stateNode,typeof e.shouldComponentUpdate==`function`?e.shouldComponentUpdate(r,a,o):t.prototype&&t.prototype.isPureReactComponent?!kr(n,r)||!kr(i,a):!0}function Ks(e,t,n,r){e=t.state,typeof t.componentWillReceiveProps==`function`&&t.componentWillReceiveProps(n,r),typeof t.UNSAFE_componentWillReceiveProps==`function`&&t.UNSAFE_componentWillReceiveProps(n,r),t.state!==e&&Ws.enqueueReplaceState(t,t.state,null)}function qs(e,t){var n=t;if(`ref`in t)for(var r in n={},t)r!==`ref`&&(n[r]=t[r]);if(e=e.defaultProps)for(var i in n===t&&(n=h({},n)),e)n[i]===void 0&&(n[i]=e[i]);return n}function Js(e){ni(e)}function Ys(e){console.error(e)}function Xs(e){ni(e)}function Zs(e,t){try{var n=e.onUncaughtError;n(t.value,{componentStack:t.stack})}catch(e){setTimeout(function(){throw e})}}function Qs(e,t,n){try{var r=e.onCaughtError;r(n.value,{componentStack:n.stack,errorBoundary:t.tag===1?t.stateNode:null})}catch(e){setTimeout(function(){throw e})}}function $s(e,t,n){return n=Ka(n),n.tag=3,n.payload={element:null},n.callback=function(){Zs(e,t)},n}function ec(e){return e=Ka(e),e.tag=3,e}function tc(e,t,n,r){var i=n.type.getDerivedStateFromError;if(typeof i==`function`){var a=r.value;e.payload=function(){return i(a)},e.callback=function(){Qs(t,n,r)}}var o=n.stateNode;o!==null&&typeof o.componentDidCatch==`function`&&(e.callback=function(){Qs(t,n,r),typeof i!=`function`&&(ru===null?ru=new Set([this]):ru.add(this));var e=r.stack;this.componentDidCatch(r.value,{componentStack:e===null?``:e})})}function nc(e,t,n,r,a){if(n.flags|=32768,typeof r==`object`&&r&&typeof r.then==`function`){if(t=n.alternate,t!==null&&na(t,n,a,!0),n=oo.current,n!==null){switch(n.tag){case 31:case 13:return so===null?Du():n.alternate===null&&X===0&&(X=3),n.flags&=-257,n.flags|=65536,n.lanes=a,r===Oa?n.flags|=16384:(t=n.updateQueue,t===null?n.updateQueue=new Set([r]):t.add(r),Gu(e,r,a)),!1;case 22:return n.flags|=65536,r===Oa?n.flags|=16384:(t=n.updateQueue,t===null?(t={transitions:null,markerInstances:null,retryQueue:new Set([r])},n.updateQueue=t):(n=t.retryQueue,n===null?t.retryQueue=new Set([r]):n.add(r)),Gu(e,r,a)),!1}throw Error(i(435,n.tag))}return Gu(e,r,a),Du(),!1}if(F)return t=oo.current,t===null?(r!==Vi&&(t=Error(i(423),{cause:r}),Ji(wi(t,n))),e=e.current.alternate,e.flags|=65536,a&=-a,e.lanes|=a,r=wi(r,n),a=$s(e.stateNode,r,a),Ya(e,a),X!==4&&(X=2)):(!(t.flags&65536)&&(t.flags|=256),t.flags|=65536,t.lanes=a,r!==Vi&&(e=Error(i(422),{cause:r}),Ji(wi(e,n)))),!1;var o=Error(i(520),{cause:r});if(o=wi(o,n),Xl===null?Xl=[o]:Xl.push(o),X!==4&&(X=2),t===null)return!0;r=wi(r,n),n=t;do{switch(n.tag){case 3:return n.flags|=65536,e=a&-a,n.lanes|=e,e=$s(n.stateNode,r,e),Ya(n,e),!1;case 1:if(t=n.type,o=n.stateNode,!(n.flags&128)&&(typeof t.getDerivedStateFromError==`function`||o!==null&&typeof o.componentDidCatch==`function`&&(ru===null||!ru.has(o))))return n.flags|=65536,a&=-a,n.lanes|=a,a=ec(a),tc(a,e,n,r),Ya(n,a),!1}n=n.return}while(n!==null);return!1}var rc=Error(i(461)),ic=!1;function ac(e,t,n,r){t.child=e===null?Ha(t,null,n,r):Va(t,e.child,n,r)}function oc(e,t,n,r,i){n=n.render;var a=t.ref;if(`ref`in r){var o={};for(var s in r)s!==`ref`&&(o[s]=r[s])}else o=r;return ia(t),r=wo(e,t,n,o,a,i),s=Oo(),e!==null&&!ic?(ko(e,t,i),Ac(e,t,i)):(F&&s&&Fi(t),t.flags|=1,ac(e,t,r,i),t.child)}function sc(e,t,n,r,i){if(e===null){var a=n.type;return typeof a==`function`&&!hi(a)&&a.defaultProps===void 0&&n.compare===null?(t.tag=15,t.type=a,cc(e,t,a,r,i)):(e=vi(n.type,null,r,t,t.mode,i),e.ref=t.ref,e.return=t,t.child=e)}if(a=e.child,!jc(e,i)){var o=a.memoizedProps;if(n=n.compare,n=n===null?kr:n,n(o,r)&&e.ref===t.ref)return Ac(e,t,i)}return t.flags|=1,e=gi(a,r),e.ref=t.ref,e.return=t,t.child=e}function cc(e,t,n,r,i){if(e!==null){var a=e.memoizedProps;if(kr(a,r)&&e.ref===t.ref)if(ic=!1,t.pendingProps=r=a,jc(e,i))e.flags&131072&&(ic=!0);else return t.lanes=e.lanes,Ac(e,t,i)}return gc(e,t,n,r,i)}function lc(e,t,n,r){var i=r.children,a=e===null?null:e.memoizedState;if(e===null&&t.stateNode===null&&(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),r.mode===`hidden`){if(t.flags&128){if(a=a===null?n:a.baseLanes|n,e!==null){for(r=t.child=e.child,i=0;r!==null;)i=i|r.lanes|r.childLanes,r=r.sibling;r=i&~a}else r=0,t.child=null;return dc(e,t,a,n,r)}if(n&536870912)t.memoizedState={baseLanes:0,cachePool:null},e!==null&&Ca(t,a===null?null:a.cachePool),a===null?io():ro(t,a),uo(t);else return r=t.lanes=536870912,dc(e,t,a===null?n:a.baseLanes|n,n,r)}else a===null?(e!==null&&Ca(t,null),io(),fo(t)):(Ca(t,a.cachePool),ro(t,a),fo(t),t.memoizedState=null);return ac(e,t,i,n),t.child}function uc(e,t){return e!==null&&e.tag===22||t.stateNode!==null||(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),t.sibling}function dc(e,t,n,r,i){var a=Sa();return a=a===null?null:{parent:I._currentValue,pool:a},t.memoizedState={baseLanes:n,cachePool:a},e!==null&&Ca(t,null),io(),uo(t),e!==null&&na(e,t,r,!0),t.childLanes=i,null}function fc(e,t){return t=Tc({mode:t.mode,children:t.children},e.mode),t.ref=e.ref,e.child=t,t.return=e,t}function pc(e,t,n){return Va(t,e.child,null,n),e=fc(t,t.pendingProps),e.flags|=2,po(t),t.memoizedState=null,e}function mc(e,t,n){var r=t.pendingProps,a=(t.flags&128)!=0;if(t.flags&=-129,e===null){if(F){if(r.mode===`hidden`)return e=fc(t,r),t.lanes=536870912,uc(null,e);if(lo(t),(e=P)?(e=rf(e,Bi),e=e!==null&&e.data===`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:Ai===null?null:{id:ji,overflow:Mi},retryLane:536870912,hydrationErrors:null},n=xi(e),n.return=t,t.child=n,Ri=t,P=null)):e=null,e===null)throw Hi(t);return t.lanes=536870912,null}return fc(t,r)}var o=e.memoizedState;if(o!==null){var s=o.dehydrated;if(lo(t),a)if(t.flags&256)t.flags&=-257,t=pc(e,t,n);else if(t.memoizedState!==null)t.child=e.child,t.flags|=128,t=null;else throw Error(i(558));else if(ic||na(e,t,n,!1),a=(n&e.childLanes)!==0,ic||a){if(r=K,r!==null&&(s=ut(r,n),s!==0&&s!==o.retryLane))throw o.retryLane=s,li(e,s),hu(r,e,s),rc;Du(),t=pc(e,t,n)}else e=o.treeContext,P=cf(s.nextSibling),Ri=t,F=!0,zi=null,Bi=!1,e!==null&&Li(t,e),t=fc(t,r),t.flags|=4096;return t}return e=gi(e.child,{mode:r.mode,children:r.children}),e.ref=t.ref,t.child=e,e.return=t,e}function hc(e,t){var n=t.ref;if(n===null)e!==null&&e.ref!==null&&(t.flags|=4194816);else{if(typeof n!=`function`&&typeof n!=`object`)throw Error(i(284));(e===null||e.ref!==n)&&(t.flags|=4194816)}}function gc(e,t,n,r,i){return ia(t),n=wo(e,t,n,r,void 0,i),r=Oo(),e!==null&&!ic?(ko(e,t,i),Ac(e,t,i)):(F&&r&&Fi(t),t.flags|=1,ac(e,t,n,i),t.child)}function _c(e,t,n,r,i,a){return ia(t),t.updateQueue=null,n=Eo(t,r,n,i),To(e),r=Oo(),e!==null&&!ic?(ko(e,t,a),Ac(e,t,a)):(F&&r&&Fi(t),t.flags|=1,ac(e,t,n,a),t.child)}function vc(e,t,n,r,i){if(ia(t),t.stateNode===null){var a=fi,o=n.contextType;typeof o==`object`&&o&&(a=aa(o)),a=new n(r,a),t.memoizedState=a.state!==null&&a.state!==void 0?a.state:null,a.updater=Ws,t.stateNode=a,a._reactInternals=t,a=t.stateNode,a.props=r,a.state=t.memoizedState,a.refs={},Wa(t),o=n.contextType,a.context=typeof o==`object`&&o?aa(o):fi,a.state=t.memoizedState,o=n.getDerivedStateFromProps,typeof o==`function`&&(Us(t,n,o,r),a.state=t.memoizedState),typeof n.getDerivedStateFromProps==`function`||typeof a.getSnapshotBeforeUpdate==`function`||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(o=a.state,typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount(),o!==a.state&&Ws.enqueueReplaceState(a,a.state,null),Qa(t,r,a,i),Za(),a.state=t.memoizedState),typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!0}else if(e===null){a=t.stateNode;var s=t.memoizedProps,c=qs(n,s);a.props=c;var l=a.context,u=n.contextType;o=fi,typeof u==`object`&&u&&(o=aa(u));var d=n.getDerivedStateFromProps;u=typeof d==`function`||typeof a.getSnapshotBeforeUpdate==`function`,s=t.pendingProps!==s,u||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(s||l!==o)&&Ks(t,a,r,o),Ua=!1;var f=t.memoizedState;a.state=f,Qa(t,r,a,i),Za(),l=t.memoizedState,s||f!==l||Ua?(typeof d==`function`&&(Us(t,n,d,r),l=t.memoizedState),(c=Ua||Gs(t,n,c,r,f,l,o))?(u||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount()),typeof a.componentDidMount==`function`&&(t.flags|=4194308)):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),t.memoizedProps=r,t.memoizedState=l),a.props=r,a.state=l,a.context=o,r=c):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!1)}else{a=t.stateNode,Ga(e,t),o=t.memoizedProps,u=qs(n,o),a.props=u,d=t.pendingProps,f=a.context,l=n.contextType,c=fi,typeof l==`object`&&l&&(c=aa(l)),s=n.getDerivedStateFromProps,(l=typeof s==`function`||typeof a.getSnapshotBeforeUpdate==`function`)||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(o!==d||f!==c)&&Ks(t,a,r,c),Ua=!1,f=t.memoizedState,a.state=f,Qa(t,r,a,i),Za();var p=t.memoizedState;o!==d||f!==p||Ua||e!==null&&e.dependencies!==null&&ra(e.dependencies)?(typeof s==`function`&&(Us(t,n,s,r),p=t.memoizedState),(u=Ua||Gs(t,n,u,r,f,p,c)||e!==null&&e.dependencies!==null&&ra(e.dependencies))?(l||typeof a.UNSAFE_componentWillUpdate!=`function`&&typeof a.componentWillUpdate!=`function`||(typeof a.componentWillUpdate==`function`&&a.componentWillUpdate(r,p,c),typeof a.UNSAFE_componentWillUpdate==`function`&&a.UNSAFE_componentWillUpdate(r,p,c)),typeof a.componentDidUpdate==`function`&&(t.flags|=4),typeof a.getSnapshotBeforeUpdate==`function`&&(t.flags|=1024)):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),t.memoizedProps=r,t.memoizedState=p),a.props=r,a.state=p,a.context=c,r=u):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),r=!1)}return a=r,hc(e,t),r=(t.flags&128)!=0,a||r?(a=t.stateNode,n=r&&typeof n.getDerivedStateFromError!=`function`?null:a.render(),t.flags|=1,e!==null&&r?(t.child=Va(t,e.child,null,i),t.child=Va(t,null,n,i)):ac(e,t,n,i),t.memoizedState=a.state,e=t.child):e=Ac(e,t,i),e}function yc(e,t,n,r){return Ki(),t.flags|=256,ac(e,t,n,r),t.child}var bc={dehydrated:null,treeContext:null,retryLane:0,hydrationErrors:null};function xc(e){return{baseLanes:e,cachePool:wa()}}function Sc(e,t,n){return e=e===null?0:e.childLanes&~n,t&&(e|=Jl),e}function Cc(e,t,n){var r=t.pendingProps,a=!1,o=(t.flags&128)!=0,s;if((s=o)||(s=e!==null&&e.memoizedState===null?!1:(L.current&2)!=0),s&&(a=!0,t.flags&=-129),s=(t.flags&32)!=0,t.flags&=-33,e===null){if(F){if(a?co(t):fo(t),(e=P)?(e=rf(e,Bi),e=e!==null&&e.data!==`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:Ai===null?null:{id:ji,overflow:Mi},retryLane:536870912,hydrationErrors:null},n=xi(e),n.return=t,t.child=n,Ri=t,P=null)):e=null,e===null)throw Hi(t);return of(e)?t.lanes=32:t.lanes=536870912,null}var c=r.children;return r=r.fallback,a?(fo(t),a=t.mode,c=Tc({mode:`hidden`,children:c},a),r=yi(r,a,n,null),c.return=t,r.return=t,c.sibling=r,t.child=c,r=t.child,r.memoizedState=xc(n),r.childLanes=Sc(e,s,n),t.memoizedState=bc,uc(null,r)):(co(t),wc(t,c))}var l=e.memoizedState;if(l!==null&&(c=l.dehydrated,c!==null)){if(o)t.flags&256?(co(t),t.flags&=-257,t=Ec(e,t,n)):t.memoizedState===null?(fo(t),c=r.fallback,a=t.mode,r=Tc({mode:`visible`,children:r.children},a),c=yi(c,a,n,null),c.flags|=2,r.return=t,c.return=t,r.sibling=c,t.child=r,Va(t,e.child,null,n),r=t.child,r.memoizedState=xc(n),r.childLanes=Sc(e,s,n),t.memoizedState=bc,t=uc(null,r)):(fo(t),t.child=e.child,t.flags|=128,t=null);else if(co(t),of(c)){if(s=c.nextSibling&&c.nextSibling.dataset,s)var u=s.dgst;s=u,r=Error(i(419)),r.stack=``,r.digest=s,Ji({value:r,source:null,stack:null}),t=Ec(e,t,n)}else if(ic||na(e,t,n,!1),s=(n&e.childLanes)!==0,ic||s){if(s=K,s!==null&&(r=ut(s,n),r!==0&&r!==l.retryLane))throw l.retryLane=r,li(e,r),hu(s,e,r),rc;af(c)||Du(),t=Ec(e,t,n)}else af(c)?(t.flags|=192,t.child=e.child,t=null):(e=l.treeContext,P=cf(c.nextSibling),Ri=t,F=!0,zi=null,Bi=!1,e!==null&&Li(t,e),t=wc(t,r.children),t.flags|=4096);return t}return a?(fo(t),c=r.fallback,a=t.mode,l=e.child,u=l.sibling,r=gi(l,{mode:`hidden`,children:r.children}),r.subtreeFlags=l.subtreeFlags&65011712,u===null?(c=yi(c,a,n,null),c.flags|=2):c=gi(u,c),c.return=t,r.return=t,r.sibling=c,t.child=r,uc(null,r),r=t.child,c=e.child.memoizedState,c===null?c=xc(n):(a=c.cachePool,a===null?a=wa():(l=I._currentValue,a=a.parent===l?a:{parent:l,pool:l}),c={baseLanes:c.baseLanes|n,cachePool:a}),r.memoizedState=c,r.childLanes=Sc(e,s,n),t.memoizedState=bc,uc(e.child,r)):(co(t),n=e.child,e=n.sibling,n=gi(n,{mode:`visible`,children:r.children}),n.return=t,n.sibling=null,e!==null&&(s=t.deletions,s===null?(t.deletions=[e],t.flags|=16):s.push(e)),t.child=n,t.memoizedState=null,n)}function wc(e,t){return t=Tc({mode:`visible`,children:t},e.mode),t.return=e,e.child=t}function Tc(e,t){return e=mi(22,e,null,t),e.lanes=0,e}function Ec(e,t,n){return Va(t,e.child,null,n),e=wc(t,t.pendingProps.children),e.flags|=2,t.memoizedState=null,e}function Dc(e,t,n){e.lanes|=t;var r=e.alternate;r!==null&&(r.lanes|=t),ea(e.return,t,n)}function Oc(e,t,n,r,i,a){var o=e.memoizedState;o===null?e.memoizedState={isBackwards:t,rendering:null,renderingStartTime:0,last:r,tail:n,tailMode:i,treeForkCount:a}:(o.isBackwards=t,o.rendering=null,o.renderingStartTime=0,o.last=r,o.tail=n,o.tailMode=i,o.treeForkCount=a)}function kc(e,t,n){var r=t.pendingProps,i=r.revealOrder,a=r.tail;r=r.children;var o=L.current,s=(o&2)!=0;if(s?(o=o&1|2,t.flags|=128):o&=1,O(L,o),ac(e,t,r,n),r=F?Oi:0,!s&&e!==null&&e.flags&128)a:for(e=t.child;e!==null;){if(e.tag===13)e.memoizedState!==null&&Dc(e,n,t);else if(e.tag===19)Dc(e,n,t);else if(e.child!==null){e.child.return=e,e=e.child;continue}if(e===t)break a;for(;e.sibling===null;){if(e.return===null||e.return===t)break a;e=e.return}e.sibling.return=e.return,e=e.sibling}switch(i){case`forwards`:for(n=t.child,i=null;n!==null;)e=n.alternate,e!==null&&mo(e)===null&&(i=n),n=n.sibling;n=i,n===null?(i=t.child,t.child=null):(i=n.sibling,n.sibling=null),Oc(t,!1,i,n,a,r);break;case`backwards`:case`unstable_legacy-backwards`:for(n=null,i=t.child,t.child=null;i!==null;){if(e=i.alternate,e!==null&&mo(e)===null){t.child=i;break}e=i.sibling,i.sibling=n,n=i,i=e}Oc(t,!0,n,null,a,r);break;case`together`:Oc(t,!1,null,null,void 0,r);break;default:t.memoizedState=null}return t.child}function Ac(e,t,n){if(e!==null&&(t.dependencies=e.dependencies),Gl|=t.lanes,(n&t.childLanes)===0)if(e!==null){if(na(e,t,n,!1),(n&t.childLanes)===0)return null}else return null;if(e!==null&&t.child!==e.child)throw Error(i(153));if(t.child!==null){for(e=t.child,n=gi(e,e.pendingProps),t.child=n,n.return=t;e.sibling!==null;)e=e.sibling,n=n.sibling=gi(e,e.pendingProps),n.return=t;n.sibling=null}return t.child}function jc(e,t){return(e.lanes&t)===0?(e=e.dependencies,!!(e!==null&&ra(e))):!0}function Mc(e,t,n){switch(t.tag){case 3:ye(t,t.stateNode.containerInfo),Qi(t,I,e.memoizedState.cache),Ki();break;case 27:case 5:xe(t);break;case 4:ye(t,t.stateNode.containerInfo);break;case 10:Qi(t,t.type,t.memoizedProps.value);break;case 31:if(t.memoizedState!==null)return t.flags|=128,lo(t),null;break;case 13:var r=t.memoizedState;if(r!==null)return r.dehydrated===null?(n&t.child.childLanes)===0?(co(t),e=Ac(e,t,n),e===null?null:e.sibling):Cc(e,t,n):(co(t),t.flags|=128,null);co(t);break;case 19:var i=(e.flags&128)!=0;if(r=(n&t.childLanes)!==0,r||=(na(e,t,n,!1),(n&t.childLanes)!==0),i){if(r)return kc(e,t,n);t.flags|=128}if(i=t.memoizedState,i!==null&&(i.rendering=null,i.tail=null,i.lastEffect=null),O(L,L.current),r)break;return null;case 22:return t.lanes=0,lc(e,t,n,t.pendingProps);case 24:Qi(t,I,e.memoizedState.cache)}return Ac(e,t,n)}function Nc(e,t,n){if(e!==null)if(e.memoizedProps!==t.pendingProps)ic=!0;else{if(!jc(e,n)&&!(t.flags&128))return ic=!1,Mc(e,t,n);ic=!!(e.flags&131072)}else ic=!1,F&&t.flags&1048576&&Pi(t,Oi,t.index);switch(t.lanes=0,t.tag){case 16:a:{var r=t.pendingProps;if(e=ja(t.elementType),t.type=e,typeof e==`function`)hi(e)?(r=qs(e,r),t.tag=1,t=vc(null,t,e,r,n)):(t.tag=0,t=gc(null,t,e,r,n));else{if(e!=null){var a=e.$$typeof;if(a===C){t.tag=11,t=oc(null,t,e,r,n);break a}else if(a===T){t.tag=14,t=sc(null,t,e,r,n);break a}}throw t=ce(e)||e,Error(i(306,t,``))}}return t;case 0:return gc(e,t,t.type,t.pendingProps,n);case 1:return r=t.type,a=qs(r,t.pendingProps),vc(e,t,r,a,n);case 3:a:{if(ye(t,t.stateNode.containerInfo),e===null)throw Error(i(387));r=t.pendingProps;var o=t.memoizedState;a=o.element,Ga(e,t),Qa(t,r,null,n);var s=t.memoizedState;if(r=s.cache,Qi(t,I,r),r!==o.cache&&ta(t,[I],n,!0),Za(),r=s.element,o.isDehydrated)if(o={element:r,isDehydrated:!1,cache:s.cache},t.updateQueue.baseState=o,t.memoizedState=o,t.flags&256){t=yc(e,t,r,n);break a}else if(r!==a){a=wi(Error(i(424)),t),Ji(a),t=yc(e,t,r,n);break a}else{switch(e=t.stateNode.containerInfo,e.nodeType){case 9:e=e.body;break;default:e=e.nodeName===`HTML`?e.ownerDocument.body:e}for(P=cf(e.firstChild),Ri=t,F=!0,zi=null,Bi=!0,n=Ha(t,null,r,n),t.child=n;n;)n.flags=n.flags&-3|4096,n=n.sibling}else{if(Ki(),r===a){t=Ac(e,t,n);break a}ac(e,t,r,n)}t=t.child}return t;case 26:return hc(e,t),e===null?(n=kf(t.type,null,t.pendingProps,null))?t.memoizedState=n:F||(n=t.type,e=t.pendingProps,r=Bd(_e.current).createElement(n),r[gt]=t,r[_t]=e,Pd(r,n,e),kt(r),t.stateNode=r):t.memoizedState=kf(t.type,e.memoizedProps,t.pendingProps,e.memoizedState),null;case 27:return xe(t),e===null&&F&&(r=t.stateNode=ff(t.type,t.pendingProps,_e.current),Ri=t,Bi=!0,a=P,Zd(t.type)?(lf=a,P=cf(r.firstChild)):P=a),ac(e,t,t.pendingProps.children,n),hc(e,t),e===null&&(t.flags|=4194304),t.child;case 5:return e===null&&F&&((a=r=P)&&(r=tf(r,t.type,t.pendingProps,Bi),r===null?a=!1:(t.stateNode=r,Ri=t,P=cf(r.firstChild),Bi=!1,a=!0)),a||Hi(t)),xe(t),a=t.type,o=t.pendingProps,s=e===null?null:e.memoizedProps,r=o.children,Ud(a,o)?r=null:s!==null&&Ud(a,s)&&(t.flags|=32),t.memoizedState!==null&&(a=wo(e,t,Do,null,null,n),Qf._currentValue=a),hc(e,t),ac(e,t,r,n),t.child;case 6:return e===null&&F&&((e=n=P)&&(n=nf(n,t.pendingProps,Bi),n===null?e=!1:(t.stateNode=n,Ri=t,P=null,e=!0)),e||Hi(t)),null;case 13:return Cc(e,t,n);case 4:return ye(t,t.stateNode.containerInfo),r=t.pendingProps,e===null?t.child=Va(t,null,r,n):ac(e,t,r,n),t.child;case 11:return oc(e,t,t.type,t.pendingProps,n);case 7:return ac(e,t,t.pendingProps,n),t.child;case 8:return ac(e,t,t.pendingProps.children,n),t.child;case 12:return ac(e,t,t.pendingProps.children,n),t.child;case 10:return r=t.pendingProps,Qi(t,t.type,r.value),ac(e,t,r.children,n),t.child;case 9:return a=t.type._context,r=t.pendingProps.children,ia(t),a=aa(a),r=r(a),t.flags|=1,ac(e,t,r,n),t.child;case 14:return sc(e,t,t.type,t.pendingProps,n);case 15:return cc(e,t,t.type,t.pendingProps,n);case 19:return kc(e,t,n);case 31:return mc(e,t,n);case 22:return lc(e,t,n,t.pendingProps);case 24:return ia(t),r=aa(I),e===null?(a=Sa(),a===null&&(a=K,o=da(),a.pooledCache=o,o.refCount++,o!==null&&(a.pooledCacheLanes|=n),a=o),t.memoizedState={parent:r,cache:a},Wa(t),Qi(t,I,a)):((e.lanes&n)!==0&&(Ga(e,t),Qa(t,null,null,n),Za()),a=e.memoizedState,o=t.memoizedState,a.parent===r?(r=o.cache,Qi(t,I,r),r!==a.cache&&ta(t,[I],n,!0)):(a={parent:r,cache:r},t.memoizedState=a,t.lanes===0&&(t.memoizedState=t.updateQueue.baseState=a),Qi(t,I,r))),ac(e,t,t.pendingProps.children,n),t.child;case 29:throw t.pendingProps}throw Error(i(156,t.tag))}function Pc(e){e.flags|=4}function Fc(e,t,n,r,i){if((t=(e.mode&32)!=0)&&(t=!1),t){if(e.flags|=16777216,(i&335544128)===i)if(e.stateNode.complete)e.flags|=8192;else if(wu())e.flags|=8192;else throw Ma=Oa,Ea}else e.flags&=-16777217}function Ic(e,t){if(t.type!==`stylesheet`||t.state.loading&4)e.flags&=-16777217;else if(e.flags|=16777216,!Wf(t))if(wu())e.flags|=8192;else throw Ma=Oa,Ea}function Lc(e,t){t!==null&&(e.flags|=4),e.flags&16384&&(t=e.tag===22?536870912:it(),e.lanes|=t,Yl|=t)}function Rc(e,t){if(!F)switch(e.tailMode){case`hidden`:t=e.tail;for(var n=null;t!==null;)t.alternate!==null&&(n=t),t=t.sibling;n===null?e.tail=null:n.sibling=null;break;case`collapsed`:n=e.tail;for(var r=null;n!==null;)n.alternate!==null&&(r=n),n=n.sibling;r===null?t||e.tail===null?e.tail=null:e.tail.sibling=null:r.sibling=null}}function U(e){var t=e.alternate!==null&&e.alternate.child===e.child,n=0,r=0;if(t)for(var i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags&65011712,r|=i.flags&65011712,i.return=e,i=i.sibling;else for(i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags,r|=i.flags,i.return=e,i=i.sibling;return e.subtreeFlags|=r,e.childLanes=n,t}function zc(e,t,n){var r=t.pendingProps;switch(Ii(t),t.tag){case 16:case 15:case 0:case 11:case 7:case 8:case 12:case 9:case 14:return U(t),null;case 1:return U(t),null;case 3:return n=t.stateNode,r=null,e!==null&&(r=e.memoizedState.cache),t.memoizedState.cache!==r&&(t.flags|=2048),$i(I),be(),n.pendingContext&&(n.context=n.pendingContext,n.pendingContext=null),(e===null||e.child===null)&&(Gi(t)?Pc(t):e===null||e.memoizedState.isDehydrated&&!(t.flags&256)||(t.flags|=1024,qi())),U(t),null;case 26:var a=t.type,o=t.memoizedState;return e===null?(Pc(t),o===null?(U(t),Fc(t,a,null,r,n)):(U(t),Ic(t,o))):o?o===e.memoizedState?(U(t),t.flags&=-16777217):(Pc(t),U(t),Ic(t,o)):(e=e.memoizedProps,e!==r&&Pc(t),U(t),Fc(t,a,e,r,n)),null;case 27:if(Se(t),n=_e.current,a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&Pc(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return U(t),null}e=he.current,Gi(t)?Ui(t,e):(e=ff(a,r,n),t.stateNode=e,Pc(t))}return U(t),null;case 5:if(Se(t),a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&Pc(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return U(t),null}if(o=he.current,Gi(t))Ui(t,o);else{var s=Bd(_e.current);switch(o){case 1:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case 2:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;default:switch(a){case`svg`:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case`math`:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;case`script`:o=s.createElement(`div`),o.innerHTML=`<script><\/script>`,o=o.removeChild(o.firstChild);break;case`select`:o=typeof r.is==`string`?s.createElement(`select`,{is:r.is}):s.createElement(`select`),r.multiple?o.multiple=!0:r.size&&(o.size=r.size);break;default:o=typeof r.is==`string`?s.createElement(a,{is:r.is}):s.createElement(a)}}o[gt]=t,o[_t]=r;a:for(s=t.child;s!==null;){if(s.tag===5||s.tag===6)o.appendChild(s.stateNode);else if(s.tag!==4&&s.tag!==27&&s.child!==null){s.child.return=s,s=s.child;continue}if(s===t)break a;for(;s.sibling===null;){if(s.return===null||s.return===t)break a;s=s.return}s.sibling.return=s.return,s=s.sibling}t.stateNode=o;a:switch(Pd(o,a,r),a){case`button`:case`input`:case`select`:case`textarea`:r=!!r.autoFocus;break a;case`img`:r=!0;break a;default:r=!1}r&&Pc(t)}}return U(t),Fc(t,t.type,e===null?null:e.memoizedProps,t.pendingProps,n),null;case 6:if(e&&t.stateNode!=null)e.memoizedProps!==r&&Pc(t);else{if(typeof r!=`string`&&t.stateNode===null)throw Error(i(166));if(e=_e.current,Gi(t)){if(e=t.stateNode,n=t.memoizedProps,r=null,a=Ri,a!==null)switch(a.tag){case 27:case 5:r=a.memoizedProps}e[gt]=t,e=!!(e.nodeValue===n||r!==null&&!0===r.suppressHydrationWarning||Md(e.nodeValue,n)),e||Hi(t,!0)}else e=Bd(e).createTextNode(r),e[gt]=t,t.stateNode=e}return U(t),null;case 31:if(n=t.memoizedState,e===null||e.memoizedState!==null){if(r=Gi(t),n!==null){if(e===null){if(!r)throw Error(i(318));if(e=t.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(557));e[gt]=t}else Ki(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;U(t),e=!1}else n=qi(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=n),e=!0;if(!e)return t.flags&256?(po(t),t):(po(t),null);if(t.flags&128)throw Error(i(558))}return U(t),null;case 13:if(r=t.memoizedState,e===null||e.memoizedState!==null&&e.memoizedState.dehydrated!==null){if(a=Gi(t),r!==null&&r.dehydrated!==null){if(e===null){if(!a)throw Error(i(318));if(a=t.memoizedState,a=a===null?null:a.dehydrated,!a)throw Error(i(317));a[gt]=t}else Ki(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;U(t),a=!1}else a=qi(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=a),a=!0;if(!a)return t.flags&256?(po(t),t):(po(t),null)}return po(t),t.flags&128?(t.lanes=n,t):(n=r!==null,e=e!==null&&e.memoizedState!==null,n&&(r=t.child,a=null,r.alternate!==null&&r.alternate.memoizedState!==null&&r.alternate.memoizedState.cachePool!==null&&(a=r.alternate.memoizedState.cachePool.pool),o=null,r.memoizedState!==null&&r.memoizedState.cachePool!==null&&(o=r.memoizedState.cachePool.pool),o!==a&&(r.flags|=2048)),n!==e&&n&&(t.child.flags|=8192),Lc(t,t.updateQueue),U(t),null);case 4:return be(),e===null&&Sd(t.stateNode.containerInfo),U(t),null;case 10:return $i(t.type),U(t),null;case 19:if(me(L),r=t.memoizedState,r===null)return U(t),null;if(a=(t.flags&128)!=0,o=r.rendering,o===null)if(a)Rc(r,!1);else{if(X!==0||e!==null&&e.flags&128)for(e=t.child;e!==null;){if(o=mo(e),o!==null){for(t.flags|=128,Rc(r,!1),e=o.updateQueue,t.updateQueue=e,Lc(t,e),t.subtreeFlags=0,e=n,n=t.child;n!==null;)_i(n,e),n=n.sibling;return O(L,L.current&1|2),F&&Ni(t,r.treeForkCount),t.child}e=e.sibling}r.tail!==null&&Fe()>tu&&(t.flags|=128,a=!0,Rc(r,!1),t.lanes=4194304)}else{if(!a)if(e=mo(o),e!==null){if(t.flags|=128,a=!0,e=e.updateQueue,t.updateQueue=e,Lc(t,e),Rc(r,!0),r.tail===null&&r.tailMode===`hidden`&&!o.alternate&&!F)return U(t),null}else 2*Fe()-r.renderingStartTime>tu&&n!==536870912&&(t.flags|=128,a=!0,Rc(r,!1),t.lanes=4194304);r.isBackwards?(o.sibling=t.child,t.child=o):(e=r.last,e===null?t.child=o:e.sibling=o,r.last=o)}return r.tail===null?(U(t),null):(e=r.tail,r.rendering=e,r.tail=e.sibling,r.renderingStartTime=Fe(),e.sibling=null,n=L.current,O(L,a?n&1|2:n&1),F&&Ni(t,r.treeForkCount),e);case 22:case 23:return po(t),ao(),r=t.memoizedState!==null,e===null?r&&(t.flags|=8192):e.memoizedState!==null!==r&&(t.flags|=8192),r?n&536870912&&!(t.flags&128)&&(U(t),t.subtreeFlags&6&&(t.flags|=8192)):U(t),n=t.updateQueue,n!==null&&Lc(t,n.retryQueue),n=null,e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),r=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(r=t.memoizedState.cachePool.pool),r!==n&&(t.flags|=2048),e!==null&&me(xa),null;case 24:return n=null,e!==null&&(n=e.memoizedState.cache),t.memoizedState.cache!==n&&(t.flags|=2048),$i(I),U(t),null;case 25:return null;case 30:return null}throw Error(i(156,t.tag))}function Bc(e,t){switch(Ii(t),t.tag){case 1:return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 3:return $i(I),be(),e=t.flags,e&65536&&!(e&128)?(t.flags=e&-65537|128,t):null;case 26:case 27:case 5:return Se(t),null;case 31:if(t.memoizedState!==null){if(po(t),t.alternate===null)throw Error(i(340));Ki()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 13:if(po(t),e=t.memoizedState,e!==null&&e.dehydrated!==null){if(t.alternate===null)throw Error(i(340));Ki()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 19:return me(L),null;case 4:return be(),null;case 10:return $i(t.type),null;case 22:case 23:return po(t),ao(),e!==null&&me(xa),e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 24:return $i(I),null;case 25:return null;default:return null}}function Vc(e,t){switch(Ii(t),t.tag){case 3:$i(I),be();break;case 26:case 27:case 5:Se(t);break;case 4:be();break;case 31:t.memoizedState!==null&&po(t);break;case 13:po(t);break;case 19:me(L);break;case 10:$i(t.type);break;case 22:case 23:po(t),ao(),e!==null&&me(xa);break;case 24:$i(I)}}function Hc(e,t){try{var n=t.updateQueue,r=n===null?null:n.lastEffect;if(r!==null){var i=r.next;n=i;do{if((n.tag&e)===e){r=void 0;var a=n.create,o=n.inst;r=a(),o.destroy=r}n=n.next}while(n!==i)}}catch(e){Z(t,t.return,e)}}function Uc(e,t,n){try{var r=t.updateQueue,i=r===null?null:r.lastEffect;if(i!==null){var a=i.next;r=a;do{if((r.tag&e)===e){var o=r.inst,s=o.destroy;if(s!==void 0){o.destroy=void 0,i=t;var c=n,l=s;try{l()}catch(e){Z(i,c,e)}}}r=r.next}while(r!==a)}}catch(e){Z(t,t.return,e)}}function Wc(e){var t=e.updateQueue;if(t!==null){var n=e.stateNode;try{eo(t,n)}catch(t){Z(e,e.return,t)}}}function Gc(e,t,n){n.props=qs(e.type,e.memoizedProps),n.state=e.memoizedState;try{n.componentWillUnmount()}catch(n){Z(e,t,n)}}function Kc(e,t){try{var n=e.ref;if(n!==null){switch(e.tag){case 26:case 27:case 5:var r=e.stateNode;break;case 30:r=e.stateNode;break;default:r=e.stateNode}typeof n==`function`?e.refCleanup=n(r):n.current=r}}catch(n){Z(e,t,n)}}function qc(e,t){var n=e.ref,r=e.refCleanup;if(n!==null)if(typeof r==`function`)try{r()}catch(n){Z(e,t,n)}finally{e.refCleanup=null,e=e.alternate,e!=null&&(e.refCleanup=null)}else if(typeof n==`function`)try{n(null)}catch(n){Z(e,t,n)}else n.current=null}function Jc(e){var t=e.type,n=e.memoizedProps,r=e.stateNode;try{a:switch(t){case`button`:case`input`:case`select`:case`textarea`:n.autoFocus&&r.focus();break a;case`img`:n.src?r.src=n.src:n.srcSet&&(r.srcset=n.srcSet)}}catch(t){Z(e,e.return,t)}}function Yc(e,t,n){try{var r=e.stateNode;Fd(r,e.type,n,t),r[_t]=t}catch(t){Z(e,e.return,t)}}function Xc(e){return e.tag===5||e.tag===3||e.tag===26||e.tag===27&&Zd(e.type)||e.tag===4}function Zc(e){a:for(;;){for(;e.sibling===null;){if(e.return===null||Xc(e.return))return null;e=e.return}for(e.sibling.return=e.return,e=e.sibling;e.tag!==5&&e.tag!==6&&e.tag!==18;){if(e.tag===27&&Zd(e.type)||e.flags&2||e.child===null||e.tag===4)continue a;e.child.return=e,e=e.child}if(!(e.flags&2))return e.stateNode}}function Qc(e,t,n){var r=e.tag;if(r===5||r===6)e=e.stateNode,t?(n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n).insertBefore(e,t):(t=n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n,t.appendChild(e),n=n._reactRootContainer,n!=null||t.onclick!==null||(t.onclick=un));else if(r!==4&&(r===27&&Zd(e.type)&&(n=e.stateNode,t=null),e=e.child,e!==null))for(Qc(e,t,n),e=e.sibling;e!==null;)Qc(e,t,n),e=e.sibling}function $c(e,t,n){var r=e.tag;if(r===5||r===6)e=e.stateNode,t?n.insertBefore(e,t):n.appendChild(e);else if(r!==4&&(r===27&&Zd(e.type)&&(n=e.stateNode),e=e.child,e!==null))for($c(e,t,n),e=e.sibling;e!==null;)$c(e,t,n),e=e.sibling}function el(e){var t=e.stateNode,n=e.memoizedProps;try{for(var r=e.type,i=t.attributes;i.length;)t.removeAttributeNode(i[0]);Pd(t,r,n),t[gt]=e,t[_t]=n}catch(t){Z(e,e.return,t)}}var tl=!1,nl=!1,rl=!1,il=typeof WeakSet==`function`?WeakSet:Set,al=null;function ol(e,t){if(e=e.containerInfo,Rd=sp,e=Nr(e),Pr(e)){if(`selectionStart`in e)var n={start:e.selectionStart,end:e.selectionEnd};else a:{n=(n=e.ownerDocument)&&n.defaultView||window;var r=n.getSelection&&n.getSelection();if(r&&r.rangeCount!==0){n=r.anchorNode;var a=r.anchorOffset,o=r.focusNode;r=r.focusOffset;try{n.nodeType,o.nodeType}catch{n=null;break a}var s=0,c=-1,l=-1,u=0,d=0,f=e,p=null;b:for(;;){for(var m;f!==n||a!==0&&f.nodeType!==3||(c=s+a),f!==o||r!==0&&f.nodeType!==3||(l=s+r),f.nodeType===3&&(s+=f.nodeValue.length),(m=f.firstChild)!==null;)p=f,f=m;for(;;){if(f===e)break b;if(p===n&&++u===a&&(c=s),p===o&&++d===r&&(l=s),(m=f.nextSibling)!==null)break;f=p,p=f.parentNode}f=m}n=c===-1||l===-1?null:{start:c,end:l}}else n=null}n||={start:0,end:0}}else n=null;for(zd={focusedElem:e,selectionRange:n},sp=!1,al=t;al!==null;)if(t=al,e=t.child,t.subtreeFlags&1028&&e!==null)e.return=t,al=e;else for(;al!==null;){switch(t=al,o=t.alternate,e=t.flags,t.tag){case 0:if(e&4&&(e=t.updateQueue,e=e===null?null:e.events,e!==null))for(n=0;n<e.length;n++)a=e[n],a.ref.impl=a.nextImpl;break;case 11:case 15:break;case 1:if(e&1024&&o!==null){e=void 0,n=t,a=o.memoizedProps,o=o.memoizedState,r=n.stateNode;try{var h=qs(n.type,a);e=r.getSnapshotBeforeUpdate(h,o),r.__reactInternalSnapshotBeforeUpdate=e}catch(e){Z(n,n.return,e)}}break;case 3:if(e&1024){if(e=t.stateNode.containerInfo,n=e.nodeType,n===9)ef(e);else if(n===1)switch(e.nodeName){case`HEAD`:case`HTML`:case`BODY`:ef(e);break;default:e.textContent=``}}break;case 5:case 26:case 27:case 6:case 4:case 17:break;default:if(e&1024)throw Error(i(163))}if(e=t.sibling,e!==null){e.return=t.return,al=e;break}al=t.return}}function sl(e,t,n){var r=n.flags;switch(n.tag){case 0:case 11:case 15:xl(e,n),r&4&&Hc(5,n);break;case 1:if(xl(e,n),r&4)if(e=n.stateNode,t===null)try{e.componentDidMount()}catch(e){Z(n,n.return,e)}else{var i=qs(n.type,t.memoizedProps);t=t.memoizedState;try{e.componentDidUpdate(i,t,e.__reactInternalSnapshotBeforeUpdate)}catch(e){Z(n,n.return,e)}}r&64&&Wc(n),r&512&&Kc(n,n.return);break;case 3:if(xl(e,n),r&64&&(e=n.updateQueue,e!==null)){if(t=null,n.child!==null)switch(n.child.tag){case 27:case 5:t=n.child.stateNode;break;case 1:t=n.child.stateNode}try{eo(e,t)}catch(e){Z(n,n.return,e)}}break;case 27:t===null&&r&4&&el(n);case 26:case 5:xl(e,n),t===null&&r&4&&Jc(n),r&512&&Kc(n,n.return);break;case 12:xl(e,n);break;case 31:xl(e,n),r&4&&fl(e,n);break;case 13:xl(e,n),r&4&&pl(e,n),r&64&&(e=n.memoizedState,e!==null&&(e=e.dehydrated,e!==null&&(n=Ju.bind(null,n),sf(e,n))));break;case 22:if(r=n.memoizedState!==null||tl,!r){t=t!==null&&t.memoizedState!==null||nl,i=tl;var a=nl;tl=r,(nl=t)&&!a?Cl(e,n,(n.subtreeFlags&8772)!=0):xl(e,n),tl=i,nl=a}break;case 30:break;default:xl(e,n)}}function cl(e){var t=e.alternate;t!==null&&(e.alternate=null,cl(t)),e.child=null,e.deletions=null,e.sibling=null,e.tag===5&&(t=e.stateNode,t!==null&&wt(t)),e.stateNode=null,e.return=null,e.dependencies=null,e.memoizedProps=null,e.memoizedState=null,e.pendingProps=null,e.stateNode=null,e.updateQueue=null}var W=null,ll=!1;function ul(e,t,n){for(n=n.child;n!==null;)dl(e,t,n),n=n.sibling}function dl(e,t,n){if(Ge&&typeof Ge.onCommitFiberUnmount==`function`)try{Ge.onCommitFiberUnmount(We,n)}catch{}switch(n.tag){case 26:nl||qc(n,t),ul(e,t,n),n.memoizedState?n.memoizedState.count--:n.stateNode&&(n=n.stateNode,n.parentNode.removeChild(n));break;case 27:nl||qc(n,t);var r=W,i=ll;Zd(n.type)&&(W=n.stateNode,ll=!1),ul(e,t,n),pf(n.stateNode),W=r,ll=i;break;case 5:nl||qc(n,t);case 6:if(r=W,i=ll,W=null,ul(e,t,n),W=r,ll=i,W!==null)if(ll)try{(W.nodeType===9?W.body:W.nodeName===`HTML`?W.ownerDocument.body:W).removeChild(n.stateNode)}catch(e){Z(n,t,e)}else try{W.removeChild(n.stateNode)}catch(e){Z(n,t,e)}break;case 18:W!==null&&(ll?(e=W,Qd(e.nodeType===9?e.body:e.nodeName===`HTML`?e.ownerDocument.body:e,n.stateNode),Np(e)):Qd(W,n.stateNode));break;case 4:r=W,i=ll,W=n.stateNode.containerInfo,ll=!0,ul(e,t,n),W=r,ll=i;break;case 0:case 11:case 14:case 15:Uc(2,n,t),nl||Uc(4,n,t),ul(e,t,n);break;case 1:nl||(qc(n,t),r=n.stateNode,typeof r.componentWillUnmount==`function`&&Gc(n,t,r)),ul(e,t,n);break;case 21:ul(e,t,n);break;case 22:nl=(r=nl)||n.memoizedState!==null,ul(e,t,n),nl=r;break;default:ul(e,t,n)}}function fl(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null))){e=e.dehydrated;try{Np(e)}catch(e){Z(t,t.return,e)}}}function pl(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null&&(e=e.dehydrated,e!==null))))try{Np(e)}catch(e){Z(t,t.return,e)}}function ml(e){switch(e.tag){case 31:case 13:case 19:var t=e.stateNode;return t===null&&(t=e.stateNode=new il),t;case 22:return e=e.stateNode,t=e._retryCache,t===null&&(t=e._retryCache=new il),t;default:throw Error(i(435,e.tag))}}function hl(e,t){var n=ml(e);t.forEach(function(t){if(!n.has(t)){n.add(t);var r=Yu.bind(null,e,t);t.then(r,r)}})}function gl(e,t){var n=t.deletions;if(n!==null)for(var r=0;r<n.length;r++){var a=n[r],o=e,s=t,c=s;a:for(;c!==null;){switch(c.tag){case 27:if(Zd(c.type)){W=c.stateNode,ll=!1;break a}break;case 5:W=c.stateNode,ll=!1;break a;case 3:case 4:W=c.stateNode.containerInfo,ll=!0;break a}c=c.return}if(W===null)throw Error(i(160));dl(o,s,a),W=null,ll=!1,o=a.alternate,o!==null&&(o.return=null),a.return=null}if(t.subtreeFlags&13886)for(t=t.child;t!==null;)vl(t,e),t=t.sibling}var _l=null;function vl(e,t){var n=e.alternate,r=e.flags;switch(e.tag){case 0:case 11:case 14:case 15:gl(t,e),yl(e),r&4&&(Uc(3,e,e.return),Hc(3,e),Uc(5,e,e.return));break;case 1:gl(t,e),yl(e),r&512&&(nl||n===null||qc(n,n.return)),r&64&&tl&&(e=e.updateQueue,e!==null&&(r=e.callbacks,r!==null&&(n=e.shared.hiddenCallbacks,e.shared.hiddenCallbacks=n===null?r:n.concat(r))));break;case 26:var a=_l;if(gl(t,e),yl(e),r&512&&(nl||n===null||qc(n,n.return)),r&4){var o=n===null?null:n.memoizedState;if(r=e.memoizedState,n===null)if(r===null)if(e.stateNode===null){a:{r=e.type,n=e.memoizedProps,a=a.ownerDocument||a;b:switch(r){case`title`:o=a.getElementsByTagName(`title`)[0],(!o||o[Ct]||o[gt]||o.namespaceURI===`http://www.w3.org/2000/svg`||o.hasAttribute(`itemprop`))&&(o=a.createElement(r),a.head.insertBefore(o,a.querySelector(`head > title`))),Pd(o,r,n),o[gt]=e,kt(o),r=o;break a;case`link`:var s=Vf(`link`,`href`,a).get(r+(n.href||``));if(s){for(var c=0;c<s.length;c++)if(o=s[c],o.getAttribute(`href`)===(n.href==null||n.href===``?null:n.href)&&o.getAttribute(`rel`)===(n.rel==null?null:n.rel)&&o.getAttribute(`title`)===(n.title==null?null:n.title)&&o.getAttribute(`crossorigin`)===(n.crossOrigin==null?null:n.crossOrigin)){s.splice(c,1);break b}}o=a.createElement(r),Pd(o,r,n),a.head.appendChild(o);break;case`meta`:if(s=Vf(`meta`,`content`,a).get(r+(n.content||``))){for(c=0;c<s.length;c++)if(o=s[c],o.getAttribute(`content`)===(n.content==null?null:``+n.content)&&o.getAttribute(`name`)===(n.name==null?null:n.name)&&o.getAttribute(`property`)===(n.property==null?null:n.property)&&o.getAttribute(`http-equiv`)===(n.httpEquiv==null?null:n.httpEquiv)&&o.getAttribute(`charset`)===(n.charSet==null?null:n.charSet)){s.splice(c,1);break b}}o=a.createElement(r),Pd(o,r,n),a.head.appendChild(o);break;default:throw Error(i(468,r))}o[gt]=e,kt(o),r=o}e.stateNode=r}else Hf(a,e.type,e.stateNode);else e.stateNode=If(a,r,e.memoizedProps);else o===r?r===null&&e.stateNode!==null&&Yc(e,e.memoizedProps,n.memoizedProps):(o===null?n.stateNode!==null&&(n=n.stateNode,n.parentNode.removeChild(n)):o.count--,r===null?Hf(a,e.type,e.stateNode):If(a,r,e.memoizedProps))}break;case 27:gl(t,e),yl(e),r&512&&(nl||n===null||qc(n,n.return)),n!==null&&r&4&&Yc(e,e.memoizedProps,n.memoizedProps);break;case 5:if(gl(t,e),yl(e),r&512&&(nl||n===null||qc(n,n.return)),e.flags&32){a=e.stateNode;try{tn(a,``)}catch(t){Z(e,e.return,t)}}r&4&&e.stateNode!=null&&(a=e.memoizedProps,Yc(e,a,n===null?a:n.memoizedProps)),r&1024&&(rl=!0);break;case 6:if(gl(t,e),yl(e),r&4){if(e.stateNode===null)throw Error(i(162));r=e.memoizedProps,n=e.stateNode;try{n.nodeValue=r}catch(t){Z(e,e.return,t)}}break;case 3:if(Bf=null,a=_l,_l=gf(t.containerInfo),gl(t,e),_l=a,yl(e),r&4&&n!==null&&n.memoizedState.isDehydrated)try{Np(t.containerInfo)}catch(t){Z(e,e.return,t)}rl&&(rl=!1,bl(e));break;case 4:r=_l,_l=gf(e.stateNode.containerInfo),gl(t,e),yl(e),_l=r;break;case 12:gl(t,e),yl(e);break;case 31:gl(t,e),yl(e),r&4&&(r=e.updateQueue,r!==null&&(e.updateQueue=null,hl(e,r)));break;case 13:gl(t,e),yl(e),e.child.flags&8192&&e.memoizedState!==null!=(n!==null&&n.memoizedState!==null)&&($l=Fe()),r&4&&(r=e.updateQueue,r!==null&&(e.updateQueue=null,hl(e,r)));break;case 22:a=e.memoizedState!==null;var l=n!==null&&n.memoizedState!==null,u=tl,d=nl;if(tl=u||a,nl=d||l,gl(t,e),nl=d,tl=u,yl(e),r&8192)a:for(t=e.stateNode,t._visibility=a?t._visibility&-2:t._visibility|1,a&&(n===null||l||tl||nl||Sl(e)),n=null,t=e;;){if(t.tag===5||t.tag===26){if(n===null){l=n=t;try{if(o=l.stateNode,a)s=o.style,typeof s.setProperty==`function`?s.setProperty(`display`,`none`,`important`):s.display=`none`;else{c=l.stateNode;var f=l.memoizedProps.style,p=f!=null&&f.hasOwnProperty(`display`)?f.display:null;c.style.display=p==null||typeof p==`boolean`?``:(``+p).trim()}}catch(e){Z(l,l.return,e)}}}else if(t.tag===6){if(n===null){l=t;try{l.stateNode.nodeValue=a?``:l.memoizedProps}catch(e){Z(l,l.return,e)}}}else if(t.tag===18){if(n===null){l=t;try{var m=l.stateNode;a?$d(m,!0):$d(l.stateNode,!1)}catch(e){Z(l,l.return,e)}}}else if((t.tag!==22&&t.tag!==23||t.memoizedState===null||t===e)&&t.child!==null){t.child.return=t,t=t.child;continue}if(t===e)break a;for(;t.sibling===null;){if(t.return===null||t.return===e)break a;n===t&&(n=null),t=t.return}n===t&&(n=null),t.sibling.return=t.return,t=t.sibling}r&4&&(r=e.updateQueue,r!==null&&(n=r.retryQueue,n!==null&&(r.retryQueue=null,hl(e,n))));break;case 19:gl(t,e),yl(e),r&4&&(r=e.updateQueue,r!==null&&(e.updateQueue=null,hl(e,r)));break;case 30:break;case 21:break;default:gl(t,e),yl(e)}}function yl(e){var t=e.flags;if(t&2){try{for(var n,r=e.return;r!==null;){if(Xc(r)){n=r;break}r=r.return}if(n==null)throw Error(i(160));switch(n.tag){case 27:var a=n.stateNode;$c(e,Zc(e),a);break;case 5:var o=n.stateNode;n.flags&32&&(tn(o,``),n.flags&=-33),$c(e,Zc(e),o);break;case 3:case 4:var s=n.stateNode.containerInfo;Qc(e,Zc(e),s);break;default:throw Error(i(161))}}catch(t){Z(e,e.return,t)}e.flags&=-3}t&4096&&(e.flags&=-4097)}function bl(e){if(e.subtreeFlags&1024)for(e=e.child;e!==null;){var t=e;bl(t),t.tag===5&&t.flags&1024&&t.stateNode.reset(),e=e.sibling}}function xl(e,t){if(t.subtreeFlags&8772)for(t=t.child;t!==null;)sl(e,t.alternate,t),t=t.sibling}function Sl(e){for(e=e.child;e!==null;){var t=e;switch(t.tag){case 0:case 11:case 14:case 15:Uc(4,t,t.return),Sl(t);break;case 1:qc(t,t.return);var n=t.stateNode;typeof n.componentWillUnmount==`function`&&Gc(t,t.return,n),Sl(t);break;case 27:pf(t.stateNode);case 26:case 5:qc(t,t.return),Sl(t);break;case 22:t.memoizedState===null&&Sl(t);break;case 30:Sl(t);break;default:Sl(t)}e=e.sibling}}function Cl(e,t,n){for(n&&=(t.subtreeFlags&8772)!=0,t=t.child;t!==null;){var r=t.alternate,i=e,a=t,o=a.flags;switch(a.tag){case 0:case 11:case 15:Cl(i,a,n),Hc(4,a);break;case 1:if(Cl(i,a,n),r=a,i=r.stateNode,typeof i.componentDidMount==`function`)try{i.componentDidMount()}catch(e){Z(r,r.return,e)}if(r=a,i=r.updateQueue,i!==null){var s=r.stateNode;try{var c=i.shared.hiddenCallbacks;if(c!==null)for(i.shared.hiddenCallbacks=null,i=0;i<c.length;i++)$a(c[i],s)}catch(e){Z(r,r.return,e)}}n&&o&64&&Wc(a),Kc(a,a.return);break;case 27:el(a);case 26:case 5:Cl(i,a,n),n&&r===null&&o&4&&Jc(a),Kc(a,a.return);break;case 12:Cl(i,a,n);break;case 31:Cl(i,a,n),n&&o&4&&fl(i,a);break;case 13:Cl(i,a,n),n&&o&4&&pl(i,a);break;case 22:a.memoizedState===null&&Cl(i,a,n),Kc(a,a.return);break;case 30:break;default:Cl(i,a,n)}t=t.sibling}}function wl(e,t){var n=null;e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),e=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(e=t.memoizedState.cachePool.pool),e!==n&&(e!=null&&e.refCount++,n!=null&&fa(n))}function Tl(e,t){e=null,t.alternate!==null&&(e=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==e&&(t.refCount++,e!=null&&fa(e))}function El(e,t,n,r){if(t.subtreeFlags&10256)for(t=t.child;t!==null;)Dl(e,t,n,r),t=t.sibling}function Dl(e,t,n,r){var i=t.flags;switch(t.tag){case 0:case 11:case 15:El(e,t,n,r),i&2048&&Hc(9,t);break;case 1:El(e,t,n,r);break;case 3:El(e,t,n,r),i&2048&&(e=null,t.alternate!==null&&(e=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==e&&(t.refCount++,e!=null&&fa(e)));break;case 12:if(i&2048){El(e,t,n,r),e=t.stateNode;try{var a=t.memoizedProps,o=a.id,s=a.onPostCommit;typeof s==`function`&&s(o,t.alternate===null?`mount`:`update`,e.passiveEffectDuration,-0)}catch(e){Z(t,t.return,e)}}else El(e,t,n,r);break;case 31:El(e,t,n,r);break;case 13:El(e,t,n,r);break;case 23:break;case 22:a=t.stateNode,o=t.alternate,t.memoizedState===null?a._visibility&2?El(e,t,n,r):(a._visibility|=2,Ol(e,t,n,r,(t.subtreeFlags&10256)!=0||!1)):a._visibility&2?El(e,t,n,r):kl(e,t),i&2048&&wl(o,t);break;case 24:El(e,t,n,r),i&2048&&Tl(t.alternate,t);break;default:El(e,t,n,r)}}function Ol(e,t,n,r,i){for(i&&=(t.subtreeFlags&10256)!=0||!1,t=t.child;t!==null;){var a=e,o=t,s=n,c=r,l=o.flags;switch(o.tag){case 0:case 11:case 15:Ol(a,o,s,c,i),Hc(8,o);break;case 23:break;case 22:var u=o.stateNode;o.memoizedState===null?(u._visibility|=2,Ol(a,o,s,c,i)):u._visibility&2?Ol(a,o,s,c,i):kl(a,o),i&&l&2048&&wl(o.alternate,o);break;case 24:Ol(a,o,s,c,i),i&&l&2048&&Tl(o.alternate,o);break;default:Ol(a,o,s,c,i)}t=t.sibling}}function kl(e,t){if(t.subtreeFlags&10256)for(t=t.child;t!==null;){var n=e,r=t,i=r.flags;switch(r.tag){case 22:kl(n,r),i&2048&&wl(r.alternate,r);break;case 24:kl(n,r),i&2048&&Tl(r.alternate,r);break;default:kl(n,r)}t=t.sibling}}var Al=8192;function jl(e,t,n){if(e.subtreeFlags&Al)for(e=e.child;e!==null;)Ml(e,t,n),e=e.sibling}function Ml(e,t,n){switch(e.tag){case 26:jl(e,t,n),e.flags&Al&&e.memoizedState!==null&&Gf(n,_l,e.memoizedState,e.memoizedProps);break;case 5:jl(e,t,n);break;case 3:case 4:var r=_l;_l=gf(e.stateNode.containerInfo),jl(e,t,n),_l=r;break;case 22:e.memoizedState===null&&(r=e.alternate,r!==null&&r.memoizedState!==null?(r=Al,Al=16777216,jl(e,t,n),Al=r):jl(e,t,n));break;default:jl(e,t,n)}}function Nl(e){var t=e.alternate;if(t!==null&&(e=t.child,e!==null)){t.child=null;do t=e.sibling,e.sibling=null,e=t;while(e!==null)}}function Pl(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];al=r,Ll(r,e)}Nl(e)}if(e.subtreeFlags&10256)for(e=e.child;e!==null;)Fl(e),e=e.sibling}function Fl(e){switch(e.tag){case 0:case 11:case 15:Pl(e),e.flags&2048&&Uc(9,e,e.return);break;case 3:Pl(e);break;case 12:Pl(e);break;case 22:var t=e.stateNode;e.memoizedState!==null&&t._visibility&2&&(e.return===null||e.return.tag!==13)?(t._visibility&=-3,Il(e)):Pl(e);break;default:Pl(e)}}function Il(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];al=r,Ll(r,e)}Nl(e)}for(e=e.child;e!==null;){switch(t=e,t.tag){case 0:case 11:case 15:Uc(8,t,t.return),Il(t);break;case 22:n=t.stateNode,n._visibility&2&&(n._visibility&=-3,Il(t));break;default:Il(t)}e=e.sibling}}function Ll(e,t){for(;al!==null;){var n=al;switch(n.tag){case 0:case 11:case 15:Uc(8,n,t);break;case 23:case 22:if(n.memoizedState!==null&&n.memoizedState.cachePool!==null){var r=n.memoizedState.cachePool.pool;r!=null&&r.refCount++}break;case 24:fa(n.memoizedState.cache)}if(r=n.child,r!==null)r.return=n,al=r;else a:for(n=e;al!==null;){r=al;var i=r.sibling,a=r.return;if(cl(r),r===n){al=null;break a}if(i!==null){i.return=a,al=i;break a}al=a}}}var Rl={getCacheForType:function(e){var t=aa(I),n=t.data.get(e);return n===void 0&&(n=e(),t.data.set(e,n)),n},cacheSignal:function(){return aa(I).controller.signal}},zl=typeof WeakMap==`function`?WeakMap:Map,G=0,K=null,q=null,J=0,Y=0,Bl=null,Vl=!1,Hl=!1,Ul=!1,Wl=0,X=0,Gl=0,Kl=0,ql=0,Jl=0,Yl=0,Xl=null,Zl=null,Ql=!1,$l=0,eu=0,tu=1/0,nu=null,ru=null,iu=0,au=null,ou=null,su=0,cu=0,lu=null,uu=null,du=0,fu=null;function pu(){return G&2&&J!==0?J&-J:E.T===null?pt():dd()}function mu(){if(Jl===0)if(!(J&536870912)||F){var e=Qe;Qe<<=1,!(Qe&3932160)&&(Qe=262144),Jl=e}else Jl=536870912;return e=oo.current,e!==null&&(e.flags|=32),Jl}function hu(e,t,n){(e===K&&(Y===2||Y===9)||e.cancelPendingCommit!==null)&&(Su(e,0),yu(e,J,Jl,!1)),ot(e,n),(!(G&2)||e!==K)&&(e===K&&(!(G&2)&&(Kl|=n),X===4&&yu(e,J,Jl,!1)),rd(e))}function gu(e,t,n){if(G&6)throw Error(i(327));var r=!n&&(t&127)==0&&(t&e.expiredLanes)===0||nt(e,t),a=r?Au(e,t):Ou(e,t,!0),o=r;do{if(a===0){Hl&&!r&&yu(e,t,0,!1);break}else{if(n=e.current.alternate,o&&!vu(n)){a=Ou(e,t,!1),o=!1;continue}if(a===2){if(o=t,e.errorRecoveryDisabledLanes&o)var s=0;else s=e.pendingLanes&-536870913,s=s===0?s&536870912?536870912:0:s;if(s!==0){t=s;a:{var c=e;a=Xl;var l=c.current.memoizedState.isDehydrated;if(l&&(Su(c,s).flags|=256),s=Ou(c,s,!1),s!==2){if(Ul&&!l){c.errorRecoveryDisabledLanes|=o,Kl|=o,a=4;break a}o=Zl,Zl=a,o!==null&&(Zl===null?Zl=o:Zl.push.apply(Zl,o))}a=s}if(o=!1,a!==2)continue}}if(a===1){Su(e,0),yu(e,t,0,!0);break}a:{switch(r=e,o=a,o){case 0:case 1:throw Error(i(345));case 4:if((t&4194048)!==t)break;case 6:yu(r,t,Jl,!Vl);break a;case 2:Zl=null;break;case 3:case 5:break;default:throw Error(i(329))}if((t&62914560)===t&&(a=$l+300-Fe(),10<a)){if(yu(r,t,Jl,!Vl),tt(r,0,!0)!==0)break a;su=t,r.timeoutHandle=Kd(_u.bind(null,r,n,Zl,nu,Ql,t,Jl,Kl,Yl,Vl,o,`Throttled`,-0,0),a);break a}_u(r,n,Zl,nu,Ql,t,Jl,Kl,Yl,Vl,o,null,-0,0)}}break}while(1);rd(e)}function _u(e,t,n,r,i,a,o,s,c,l,u,d,f,p){if(e.timeoutHandle=-1,d=t.subtreeFlags,d&8192||(d&16785408)==16785408){d={stylesheets:null,count:0,imgCount:0,imgBytes:0,suspenseyImages:[],waitingForImages:!0,waitingForViewTransition:!1,unsuspend:un},Ml(t,a,d);var m=(a&62914560)===a?$l-Fe():(a&4194048)===a?eu-Fe():0;if(m=qf(d,m),m!==null){su=a,e.cancelPendingCommit=m(Lu.bind(null,e,t,a,n,r,i,o,s,c,u,d,null,f,p)),yu(e,a,o,!l);return}}Lu(e,t,a,n,r,i,o,s,c)}function vu(e){for(var t=e;;){var n=t.tag;if((n===0||n===11||n===15)&&t.flags&16384&&(n=t.updateQueue,n!==null&&(n=n.stores,n!==null)))for(var r=0;r<n.length;r++){var i=n[r],a=i.getSnapshot;i=i.value;try{if(!M(a(),i))return!1}catch{return!1}}if(n=t.child,t.subtreeFlags&16384&&n!==null)n.return=t,t=n;else{if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return!0;t=t.return}t.sibling.return=t.return,t=t.sibling}}return!0}function yu(e,t,n,r){t&=~ql,t&=~Kl,e.suspendedLanes|=t,e.pingedLanes&=~t,r&&(e.warmLanes|=t),r=e.expirationTimes;for(var i=t;0<i;){var a=31-qe(i),o=1<<a;r[a]=-1,i&=~o}n!==0&&ct(e,n,t)}function bu(){return G&6?!0:(id(0,!1),!1)}function xu(){if(q!==null){if(Y===0)var e=q.return;else e=q,Zi=Xi=null,Ao(e),Fa=null,Ia=0,e=q;for(;e!==null;)Vc(e.alternate,e),e=e.return;q=null}}function Su(e,t){var n=e.timeoutHandle;n!==-1&&(e.timeoutHandle=-1,qd(n)),n=e.cancelPendingCommit,n!==null&&(e.cancelPendingCommit=null,n()),su=0,xu(),K=e,q=n=gi(e.current,null),J=t,Y=0,Bl=null,Vl=!1,Hl=nt(e,t),Ul=!1,Yl=Jl=ql=Kl=Gl=X=0,Zl=Xl=null,Ql=!1,t&8&&(t|=t&32);var r=e.entangledLanes;if(r!==0)for(e=e.entanglements,r&=t;0<r;){var i=31-qe(r),a=1<<i;t|=e[i],r&=~a}return Wl=t,oi(),n}function Cu(e,t){R=null,E.H=zs,t===Ta||t===Da?(t=Na(),Y=3):t===Ea?(t=Na(),Y=4):Y=t===rc?8:typeof t==`object`&&t&&typeof t.then==`function`?6:1,Bl=t,q===null&&(X=1,Zs(e,wi(t,e.current)))}function wu(){var e=oo.current;return e===null?!0:(J&4194048)===J?so===null:(J&62914560)===J||J&536870912?e===so:!1}function Tu(){var e=E.H;return E.H=zs,e===null?zs:e}function Eu(){var e=E.A;return E.A=Rl,e}function Du(){X=4,Vl||(J&4194048)!==J&&oo.current!==null||(Hl=!0),!(Gl&134217727)&&!(Kl&134217727)||K===null||yu(K,J,Jl,!1)}function Ou(e,t,n){var r=G;G|=2;var i=Tu(),a=Eu();(K!==e||J!==t)&&(nu=null,Su(e,t)),t=!1;var o=X;a:do try{if(Y!==0&&q!==null){var s=q,c=Bl;switch(Y){case 8:xu(),o=6;break a;case 3:case 2:case 9:case 6:oo.current===null&&(t=!0);var l=Y;if(Y=0,Bl=null,Pu(e,s,c,l),n&&Hl){o=0;break a}break;default:l=Y,Y=0,Bl=null,Pu(e,s,c,l)}}ku(),o=X;break}catch(t){Cu(e,t)}while(1);return t&&e.shellSuspendCounter++,Zi=Xi=null,G=r,E.H=i,E.A=a,q===null&&(K=null,J=0,oi()),o}function ku(){for(;q!==null;)Mu(q)}function Au(e,t){var n=G;G|=2;var r=Tu(),a=Eu();K!==e||J!==t?(nu=null,tu=Fe()+500,Su(e,t)):Hl=nt(e,t);a:do try{if(Y!==0&&q!==null){t=q;var o=Bl;b:switch(Y){case 1:Y=0,Bl=null,Pu(e,t,o,1);break;case 2:case 9:if(ka(o)){Y=0,Bl=null,Nu(t);break}t=function(){Y!==2&&Y!==9||K!==e||(Y=7),rd(e)},o.then(t,t);break a;case 3:Y=7;break a;case 4:Y=5;break a;case 7:ka(o)?(Y=0,Bl=null,Nu(t)):(Y=0,Bl=null,Pu(e,t,o,7));break;case 5:var s=null;switch(q.tag){case 26:s=q.memoizedState;case 5:case 27:var c=q;if(s?Wf(s):c.stateNode.complete){Y=0,Bl=null;var l=c.sibling;if(l!==null)q=l;else{var u=c.return;u===null?q=null:(q=u,Fu(u))}break b}}Y=0,Bl=null,Pu(e,t,o,5);break;case 6:Y=0,Bl=null,Pu(e,t,o,6);break;case 8:xu(),X=6;break a;default:throw Error(i(462))}}ju();break}catch(t){Cu(e,t)}while(1);return Zi=Xi=null,E.H=r,E.A=a,G=n,q===null?(K=null,J=0,oi(),X):0}function ju(){for(;q!==null&&!Ne();)Mu(q)}function Mu(e){var t=Nc(e.alternate,e,Wl);e.memoizedProps=e.pendingProps,t===null?Fu(e):q=t}function Nu(e){var t=e,n=t.alternate;switch(t.tag){case 15:case 0:t=_c(n,t,t.pendingProps,t.type,void 0,J);break;case 11:t=_c(n,t,t.pendingProps,t.type.render,t.ref,J);break;case 5:Ao(t);default:Vc(n,t),t=q=_i(t,Wl),t=Nc(n,t,Wl)}e.memoizedProps=e.pendingProps,t===null?Fu(e):q=t}function Pu(e,t,n,r){Zi=Xi=null,Ao(t),Fa=null,Ia=0;var i=t.return;try{if(nc(e,i,t,n,J)){X=1,Zs(e,wi(n,e.current)),q=null;return}}catch(t){if(i!==null)throw q=i,t;X=1,Zs(e,wi(n,e.current)),q=null;return}t.flags&32768?(F||r===1?e=!0:Hl||J&536870912?e=!1:(Vl=e=!0,(r===2||r===9||r===3||r===6)&&(r=oo.current,r!==null&&r.tag===13&&(r.flags|=16384))),Iu(t,e)):Fu(t)}function Fu(e){var t=e;do{if(t.flags&32768){Iu(t,Vl);return}e=t.return;var n=zc(t.alternate,t,Wl);if(n!==null){q=n;return}if(t=t.sibling,t!==null){q=t;return}q=t=e}while(t!==null);X===0&&(X=5)}function Iu(e,t){do{var n=Bc(e.alternate,e);if(n!==null){n.flags&=32767,q=n;return}if(n=e.return,n!==null&&(n.flags|=32768,n.subtreeFlags=0,n.deletions=null),!t&&(e=e.sibling,e!==null)){q=e;return}q=e=n}while(e!==null);X=6,q=null}function Lu(e,t,n,r,a,o,s,c,l){e.cancelPendingCommit=null;do Hu();while(iu!==0);if(G&6)throw Error(i(327));if(t!==null){if(t===e.current)throw Error(i(177));if(o=t.lanes|t.childLanes,o|=ai,st(e,n,o,s,c,l),e===K&&(q=K=null,J=0),ou=t,au=e,su=n,cu=o,lu=a,uu=r,t.subtreeFlags&10256||t.flags&10256?(e.callbackNode=null,e.callbackPriority=0,Xu(ze,function(){return Uu(),null})):(e.callbackNode=null,e.callbackPriority=0),r=(t.flags&13878)!=0,t.subtreeFlags&13878||r){r=E.T,E.T=null,a=D.p,D.p=2,s=G,G|=4;try{ol(e,t,n)}finally{G=s,D.p=a,E.T=r}}iu=1,Ru(),zu(),Bu()}}function Ru(){if(iu===1){iu=0;var e=au,t=ou,n=(t.flags&13878)!=0;if(t.subtreeFlags&13878||n){n=E.T,E.T=null;var r=D.p;D.p=2;var i=G;G|=4;try{vl(t,e);var a=zd,o=Nr(e.containerInfo),s=a.focusedElem,c=a.selectionRange;if(o!==s&&s&&s.ownerDocument&&Mr(s.ownerDocument.documentElement,s)){if(c!==null&&Pr(s)){var l=c.start,u=c.end;if(u===void 0&&(u=l),`selectionStart`in s)s.selectionStart=l,s.selectionEnd=Math.min(u,s.value.length);else{var d=s.ownerDocument||document,f=d&&d.defaultView||window;if(f.getSelection){var p=f.getSelection(),m=s.textContent.length,h=Math.min(c.start,m),g=c.end===void 0?h:Math.min(c.end,m);!p.extend&&h>g&&(o=g,g=h,h=o);var _=jr(s,h),v=jr(s,g);if(_&&v&&(p.rangeCount!==1||p.anchorNode!==_.node||p.anchorOffset!==_.offset||p.focusNode!==v.node||p.focusOffset!==v.offset)){var y=d.createRange();y.setStart(_.node,_.offset),p.removeAllRanges(),h>g?(p.addRange(y),p.extend(v.node,v.offset)):(y.setEnd(v.node,v.offset),p.addRange(y))}}}}for(d=[],p=s;p=p.parentNode;)p.nodeType===1&&d.push({element:p,left:p.scrollLeft,top:p.scrollTop});for(typeof s.focus==`function`&&s.focus(),s=0;s<d.length;s++){var b=d[s];b.element.scrollLeft=b.left,b.element.scrollTop=b.top}}sp=!!Rd,zd=Rd=null}finally{G=i,D.p=r,E.T=n}}e.current=t,iu=2}}function zu(){if(iu===2){iu=0;var e=au,t=ou,n=(t.flags&8772)!=0;if(t.subtreeFlags&8772||n){n=E.T,E.T=null;var r=D.p;D.p=2;var i=G;G|=4;try{sl(e,t.alternate,t)}finally{G=i,D.p=r,E.T=n}}iu=3}}function Bu(){if(iu===4||iu===3){iu=0,Pe();var e=au,t=ou,n=su,r=uu;t.subtreeFlags&10256||t.flags&10256?iu=5:(iu=0,ou=au=null,Vu(e,e.pendingLanes));var i=e.pendingLanes;if(i===0&&(ru=null),ft(n),t=t.stateNode,Ge&&typeof Ge.onCommitFiberRoot==`function`)try{Ge.onCommitFiberRoot(We,t,void 0,(t.current.flags&128)==128)}catch{}if(r!==null){t=E.T,i=D.p,D.p=2,E.T=null;try{for(var a=e.onRecoverableError,o=0;o<r.length;o++){var s=r[o];a(s.value,{componentStack:s.stack})}}finally{E.T=t,D.p=i}}su&3&&Hu(),rd(e),i=e.pendingLanes,n&261930&&i&42?e===fu?du++:(du=0,fu=e):du=0,id(0,!1)}}function Vu(e,t){(e.pooledCacheLanes&=t)===0&&(t=e.pooledCache,t!=null&&(e.pooledCache=null,fa(t)))}function Hu(){return Ru(),zu(),Bu(),Uu()}function Uu(){if(iu!==5)return!1;var e=au,t=cu;cu=0;var n=ft(su),r=E.T,a=D.p;try{D.p=32>n?32:n,E.T=null,n=lu,lu=null;var o=au,s=su;if(iu=0,ou=au=null,su=0,G&6)throw Error(i(331));var c=G;if(G|=4,Fl(o.current),Dl(o,o.current,s,n),G=c,id(0,!1),Ge&&typeof Ge.onPostCommitFiberRoot==`function`)try{Ge.onPostCommitFiberRoot(We,o)}catch{}return!0}finally{D.p=a,E.T=r,Vu(e,t)}}function Wu(e,t,n){t=wi(n,t),t=$s(e.stateNode,t,2),e=qa(e,t,2),e!==null&&(ot(e,2),rd(e))}function Z(e,t,n){if(e.tag===3)Wu(e,e,n);else for(;t!==null;){if(t.tag===3){Wu(t,e,n);break}else if(t.tag===1){var r=t.stateNode;if(typeof t.type.getDerivedStateFromError==`function`||typeof r.componentDidCatch==`function`&&(ru===null||!ru.has(r))){e=wi(n,e),n=ec(2),r=qa(t,n,2),r!==null&&(tc(n,r,t,e),ot(r,2),rd(r));break}}t=t.return}}function Gu(e,t,n){var r=e.pingCache;if(r===null){r=e.pingCache=new zl;var i=new Set;r.set(t,i)}else i=r.get(t),i===void 0&&(i=new Set,r.set(t,i));i.has(n)||(Ul=!0,i.add(n),e=Ku.bind(null,e,t,n),t.then(e,e))}function Ku(e,t,n){var r=e.pingCache;r!==null&&r.delete(t),e.pingedLanes|=e.suspendedLanes&n,e.warmLanes&=~n,K===e&&(J&n)===n&&(X===4||X===3&&(J&62914560)===J&&300>Fe()-$l?!(G&2)&&Su(e,0):ql|=n,Yl===J&&(Yl=0)),rd(e)}function qu(e,t){t===0&&(t=it()),e=li(e,t),e!==null&&(ot(e,t),rd(e))}function Ju(e){var t=e.memoizedState,n=0;t!==null&&(n=t.retryLane),qu(e,n)}function Yu(e,t){var n=0;switch(e.tag){case 31:case 13:var r=e.stateNode,a=e.memoizedState;a!==null&&(n=a.retryLane);break;case 19:r=e.stateNode;break;case 22:r=e.stateNode._retryCache;break;default:throw Error(i(314))}r!==null&&r.delete(t),qu(e,n)}function Xu(e,t){return je(e,t)}var Zu=null,Qu=null,$u=!1,ed=!1,td=!1,nd=0;function rd(e){e!==Qu&&e.next===null&&(Qu===null?Zu=Qu=e:Qu=Qu.next=e),ed=!0,$u||($u=!0,ud())}function id(e,t){if(!td&&ed){td=!0;do for(var n=!1,r=Zu;r!==null;){if(!t)if(e!==0){var i=r.pendingLanes;if(i===0)var a=0;else{var o=r.suspendedLanes,s=r.pingedLanes;a=(1<<31-qe(42|e)+1)-1,a&=i&~(o&~s),a=a&201326741?a&201326741|1:a?a|2:0}a!==0&&(n=!0,ld(r,a))}else a=J,a=tt(r,r===K?a:0,r.cancelPendingCommit!==null||r.timeoutHandle!==-1),!(a&3)||nt(r,a)||(n=!0,ld(r,a));r=r.next}while(n);td=!1}}function ad(){od()}function od(){ed=$u=!1;var e=0;nd!==0&&Gd()&&(e=nd);for(var t=Fe(),n=null,r=Zu;r!==null;){var i=r.next,a=sd(r,t);a===0?(r.next=null,n===null?Zu=i:n.next=i,i===null&&(Qu=n)):(n=r,(e!==0||a&3)&&(ed=!0)),r=i}iu!==0&&iu!==5||id(e,!1),nd!==0&&(nd=0)}function sd(e,t){for(var n=e.suspendedLanes,r=e.pingedLanes,i=e.expirationTimes,a=e.pendingLanes&-62914561;0<a;){var o=31-qe(a),s=1<<o,c=i[o];c===-1?((s&n)===0||(s&r)!==0)&&(i[o]=rt(s,t)):c<=t&&(e.expiredLanes|=s),a&=~s}if(t=K,n=J,n=tt(e,e===t?n:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r=e.callbackNode,n===0||e===t&&(Y===2||Y===9)||e.cancelPendingCommit!==null)return r!==null&&r!==null&&Me(r),e.callbackNode=null,e.callbackPriority=0;if(!(n&3)||nt(e,n)){if(t=n&-n,t===e.callbackPriority)return t;switch(r!==null&&Me(r),ft(n)){case 2:case 8:n=Re;break;case 32:n=ze;break;case 268435456:n=Ve;break;default:n=ze}return r=cd.bind(null,e),n=je(n,r),e.callbackPriority=t,e.callbackNode=n,t}return r!==null&&r!==null&&Me(r),e.callbackPriority=2,e.callbackNode=null,2}function cd(e,t){if(iu!==0&&iu!==5)return e.callbackNode=null,e.callbackPriority=0,null;var n=e.callbackNode;if(Hu()&&e.callbackNode!==n)return null;var r=J;return r=tt(e,e===K?r:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r===0?null:(gu(e,r,t),sd(e,Fe()),e.callbackNode!=null&&e.callbackNode===n?cd.bind(null,e):null)}function ld(e,t){if(Hu())return null;gu(e,t,!0)}function ud(){Yd(function(){G&6?je(Le,ad):od()})}function dd(){if(nd===0){var e=ha;e===0&&(e=Ze,Ze<<=1,!(Ze&261888)&&(Ze=256)),nd=e}return nd}function fd(e){return e==null||typeof e==`symbol`||typeof e==`boolean`?null:typeof e==`function`?e:ln(``+e)}function pd(e,t){var n=t.ownerDocument.createElement(`input`);return n.name=t.name,n.value=t.value,e.id&&n.setAttribute(`form`,e.id),t.parentNode.insertBefore(n,t),e=new FormData(e),n.parentNode.removeChild(n),e}function md(e,t,n,r,i){if(t===`submit`&&n&&n.stateNode===i){var a=fd((i[_t]||null).action),o=r.submitter;o&&(t=(t=o[_t]||null)?fd(t.formAction):o.getAttribute(`formAction`),t!==null&&(a=t,o=null));var s=new jn(`action`,`action`,null,r,i);e.push({event:s,listeners:[{instance:null,listener:function(){if(r.defaultPrevented){if(nd!==0){var e=o?pd(i,o):new FormData(i);Ts(n,{pending:!0,data:e,method:i.method,action:a},null,e)}}else typeof a==`function`&&(s.preventDefault(),e=o?pd(i,o):new FormData(i),Ts(n,{pending:!0,data:e,method:i.method,action:a},a,e))},currentTarget:i}]})}}for(var hd=0;hd<ei.length;hd++){var gd=ei[hd];ti(gd.toLowerCase(),`on`+(gd[0].toUpperCase()+gd.slice(1)))}ti(Kr,`onAnimationEnd`),ti(qr,`onAnimationIteration`),ti(Jr,`onAnimationStart`),ti(`dblclick`,`onDoubleClick`),ti(`focusin`,`onFocus`),ti(`focusout`,`onBlur`),ti(Yr,`onTransitionRun`),ti(Xr,`onTransitionStart`),ti(Zr,`onTransitionCancel`),ti(Qr,`onTransitionEnd`),Nt(`onMouseEnter`,[`mouseout`,`mouseover`]),Nt(`onMouseLeave`,[`mouseout`,`mouseover`]),Nt(`onPointerEnter`,[`pointerout`,`pointerover`]),Nt(`onPointerLeave`,[`pointerout`,`pointerover`]),Mt(`onChange`,`change click focusin focusout input keydown keyup selectionchange`.split(` `)),Mt(`onSelect`,`focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange`.split(` `)),Mt(`onBeforeInput`,[`compositionend`,`keypress`,`textInput`,`paste`]),Mt(`onCompositionEnd`,`compositionend focusout keydown keypress keyup mousedown`.split(` `)),Mt(`onCompositionStart`,`compositionstart focusout keydown keypress keyup mousedown`.split(` `)),Mt(`onCompositionUpdate`,`compositionupdate focusout keydown keypress keyup mousedown`.split(` `));var _d=`abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting`.split(` `),vd=new Set(`beforetoggle cancel close invalid load scroll scrollend toggle`.split(` `).concat(_d));function yd(e,t){t=(t&4)!=0;for(var n=0;n<e.length;n++){var r=e[n],i=r.event;r=r.listeners;a:{var a=void 0;if(t)for(var o=r.length-1;0<=o;o--){var s=r[o],c=s.instance,l=s.currentTarget;if(s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){ni(e)}i.currentTarget=null,a=c}else for(o=0;o<r.length;o++){if(s=r[o],c=s.instance,l=s.currentTarget,s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){ni(e)}i.currentTarget=null,a=c}}}}function Q(e,t){var n=t[yt];n===void 0&&(n=t[yt]=new Set);var r=e+`__bubble`;n.has(r)||(Cd(t,e,2,!1),n.add(r))}function bd(e,t,n){var r=0;t&&(r|=4),Cd(n,e,r,t)}var xd=`_reactListening`+Math.random().toString(36).slice(2);function Sd(e){if(!e[xd]){e[xd]=!0,At.forEach(function(t){t!==`selectionchange`&&(vd.has(t)||bd(t,!1,e),bd(t,!0,e))});var t=e.nodeType===9?e:e.ownerDocument;t===null||t[xd]||(t[xd]=!0,bd(`selectionchange`,!1,t))}}function Cd(e,t,n,r){switch(mp(t)){case 2:var i=cp;break;case 8:i=lp;break;default:i=up}n=i.bind(null,t,n,e),i=void 0,!bn||t!==`touchstart`&&t!==`touchmove`&&t!==`wheel`||(i=!0),r?i===void 0?e.addEventListener(t,n,!0):e.addEventListener(t,n,{capture:!0,passive:i}):i===void 0?e.addEventListener(t,n,!1):e.addEventListener(t,n,{passive:i})}function wd(e,t,n,r,i){var a=r;if(!(t&1)&&!(t&2)&&r!==null)a:for(;;){if(r===null)return;var s=r.tag;if(s===3||s===4){var c=r.stateNode.containerInfo;if(c===i)break;if(s===4)for(s=r.return;s!==null;){var l=s.tag;if((l===3||l===4)&&s.stateNode.containerInfo===i)return;s=s.return}for(;c!==null;){if(s=Tt(c),s===null)return;if(l=s.tag,l===5||l===6||l===26||l===27){r=a=s;continue a}c=c.parentNode}}r=r.return}_n(function(){var r=a,i=fn(n),s=[];a:{var c=$r.get(e);if(c!==void 0){var l=jn,u=e;switch(e){case`keypress`:if(En(n)===0)break a;case`keydown`:case`keyup`:l=Jn;break;case`focusin`:u=`focus`,l=zn;break;case`focusout`:u=`blur`,l=zn;break;case`beforeblur`:case`afterblur`:l=zn;break;case`click`:if(n.button===2)break a;case`auxclick`:case`dblclick`:case`mousedown`:case`mousemove`:case`mouseup`:case`mouseout`:case`mouseover`:case`contextmenu`:l=Ln;break;case`drag`:case`dragend`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`dragstart`:case`drop`:l=Rn;break;case`touchcancel`:case`touchend`:case`touchmove`:case`touchstart`:l=Xn;break;case Kr:case qr:case Jr:l=Bn;break;case Qr:l=Zn;break;case`scroll`:case`scrollend`:l=Mn;break;case`wheel`:l=Qn;break;case`copy`:case`cut`:case`paste`:l=Vn;break;case`gotpointercapture`:case`lostpointercapture`:case`pointercancel`:case`pointerdown`:case`pointermove`:case`pointerout`:case`pointerover`:case`pointerup`:l=Yn;break;case`toggle`:case`beforetoggle`:l=$n}var d=(t&4)!=0,f=!d&&(e===`scroll`||e===`scrollend`),p=d?c===null?null:c+`Capture`:c;d=[];for(var m=r,h;m!==null;){var g=m;if(h=g.stateNode,g=g.tag,g!==5&&g!==26&&g!==27||h===null||p===null||(g=vn(m,p),g!=null&&d.push(Td(m,g,h))),f)break;m=m.return}0<d.length&&(c=new l(c,u,null,n,i),s.push({event:c,listeners:d}))}}if(!(t&7)){a:{if(c=e===`mouseover`||e===`pointerover`,l=e===`mouseout`||e===`pointerout`,c&&n!==dn&&(u=n.relatedTarget||n.fromElement)&&(Tt(u)||u[vt]))break a;if((l||c)&&(c=i.window===i?i:(c=i.ownerDocument)?c.defaultView||c.parentWindow:window,l?(u=n.relatedTarget||n.toElement,l=r,u=u?Tt(u):null,u!==null&&(f=o(u),d=u.tag,u!==f||d!==5&&d!==27&&d!==6)&&(u=null)):(l=null,u=r),l!==u)){if(d=Ln,g=`onMouseLeave`,p=`onMouseEnter`,m=`mouse`,(e===`pointerout`||e===`pointerover`)&&(d=Yn,g=`onPointerLeave`,p=`onPointerEnter`,m=`pointer`),f=l==null?c:Dt(l),h=u==null?c:Dt(u),c=new d(g,m+`leave`,l,n,i),c.target=f,c.relatedTarget=h,g=null,Tt(i)===r&&(d=new d(p,m+`enter`,u,n,i),d.target=h,d.relatedTarget=f,g=d),f=g,l&&u)b:{for(d=Dd,p=l,m=u,h=0,g=p;g;g=d(g))h++;g=0;for(var _=m;_;_=d(_))g++;for(;0<h-g;)p=d(p),h--;for(;0<g-h;)m=d(m),g--;for(;h--;){if(p===m||m!==null&&p===m.alternate){d=p;break b}p=d(p),m=d(m)}d=null}else d=null;l!==null&&Od(s,c,l,d,!1),u!==null&&f!==null&&Od(s,f,u,d,!0)}}a:{if(c=r?Dt(r):window,l=c.nodeName&&c.nodeName.toLowerCase(),l===`select`||l===`input`&&c.type===`file`)var v=vr;else if(fr(c))if(yr)v=j;else{v=Er;var y=Tr}else l=c.nodeName,!l||l.toLowerCase()!==`input`||c.type!==`checkbox`&&c.type!==`radio`?r&&on(r.elementType)&&(v=vr):v=Dr;if(v&&=v(e,r)){pr(s,v,n,i);break a}y&&y(e,c,r),e===`focusout`&&r&&c.type===`number`&&r.memoizedProps.value!=null&&Zt(c,`number`,c.value)}switch(y=r?Dt(r):window,e){case`focusin`:(fr(y)||y.contentEditable===`true`)&&(Ir=y,Lr=r,Rr=null);break;case`focusout`:Rr=Lr=Ir=null;break;case`mousedown`:zr=!0;break;case`contextmenu`:case`mouseup`:case`dragend`:zr=!1,Br(s,n,i);break;case`selectionchange`:if(Fr)break;case`keydown`:case`keyup`:Br(s,n,i)}var b;if(tr)b:{switch(e){case`compositionstart`:var x=`onCompositionStart`;break b;case`compositionend`:x=`onCompositionEnd`;break b;case`compositionupdate`:x=`onCompositionUpdate`;break b}x=void 0}else cr?or(e,n)&&(x=`onCompositionEnd`):e===`keydown`&&n.keyCode===229&&(x=`onCompositionStart`);x&&(ir&&n.locale!==`ko`&&(cr||x!==`onCompositionStart`?x===`onCompositionEnd`&&cr&&(b=Tn()):(Sn=i,Cn=`value`in Sn?Sn.value:Sn.textContent,cr=!0)),y=Ed(r,x),0<y.length&&(x=new Hn(x,e,null,n,i),s.push({event:x,listeners:y}),b?x.data=b:(b=sr(n),b!==null&&(x.data=b)))),(b=rr?lr(e,n):ur(e,n))&&(x=Ed(r,`onBeforeInput`),0<x.length&&(y=new Hn(`onBeforeInput`,`beforeinput`,null,n,i),s.push({event:y,listeners:x}),y.data=b)),md(s,e,r,n,i)}yd(s,t)})}function Td(e,t,n){return{instance:e,listener:t,currentTarget:n}}function Ed(e,t){for(var n=t+`Capture`,r=[];e!==null;){var i=e,a=i.stateNode;if(i=i.tag,i!==5&&i!==26&&i!==27||a===null||(i=vn(e,n),i!=null&&r.unshift(Td(e,i,a)),i=vn(e,t),i!=null&&r.push(Td(e,i,a))),e.tag===3)return r;e=e.return}return[]}function Dd(e){if(e===null)return null;do e=e.return;while(e&&e.tag!==5&&e.tag!==27);return e||null}function Od(e,t,n,r,i){for(var a=t._reactName,o=[];n!==null&&n!==r;){var s=n,c=s.alternate,l=s.stateNode;if(s=s.tag,c!==null&&c===r)break;s!==5&&s!==26&&s!==27||l===null||(c=l,i?(l=vn(n,a),l!=null&&o.unshift(Td(n,l,c))):i||(l=vn(n,a),l!=null&&o.push(Td(n,l,c)))),n=n.return}o.length!==0&&e.push({event:t,listeners:o})}var kd=/\r\n?/g,Ad=/\u0000|\uFFFD/g;function jd(e){return(typeof e==`string`?e:``+e).replace(kd,`
+`).replace(Ad,``)}function Md(e,t){return t=jd(t),jd(e)===t}function $(e,t,n,r,a,o){switch(n){case`children`:typeof r==`string`?t===`body`||t===`textarea`&&r===``||tn(e,r):(typeof r==`number`||typeof r==`bigint`)&&t!==`body`&&tn(e,``+r);break;case`className`:zt(e,`class`,r);break;case`tabIndex`:zt(e,`tabindex`,r);break;case`dir`:case`role`:case`viewBox`:case`width`:case`height`:zt(e,n,r);break;case`style`:an(e,r,o);break;case`data`:if(t!==`object`){zt(e,`data`,r);break}case`src`:case`href`:if(r===``&&(t!==`a`||n!==`href`)){e.removeAttribute(n);break}if(r==null||typeof r==`function`||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=ln(``+r),e.setAttribute(n,r);break;case`action`:case`formAction`:if(typeof r==`function`){e.setAttribute(n,`javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`);break}else typeof o==`function`&&(n===`formAction`?(t!==`input`&&$(e,t,`name`,a.name,a,null),$(e,t,`formEncType`,a.formEncType,a,null),$(e,t,`formMethod`,a.formMethod,a,null),$(e,t,`formTarget`,a.formTarget,a,null)):($(e,t,`encType`,a.encType,a,null),$(e,t,`method`,a.method,a,null),$(e,t,`target`,a.target,a,null)));if(r==null||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=ln(``+r),e.setAttribute(n,r);break;case`onClick`:r!=null&&(e.onclick=un);break;case`onScroll`:r!=null&&Q(`scroll`,e);break;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);break;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));e.innerHTML=n}}break;case`multiple`:e.multiple=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`muted`:e.muted=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`defaultValue`:case`defaultChecked`:case`innerHTML`:case`ref`:break;case`autoFocus`:break;case`xlinkHref`:if(r==null||typeof r==`function`||typeof r==`boolean`||typeof r==`symbol`){e.removeAttribute(`xlink:href`);break}n=ln(``+r),e.setAttributeNS(`http://www.w3.org/1999/xlink`,`xlink:href`,n);break;case`contentEditable`:case`spellCheck`:case`draggable`:case`value`:case`autoReverse`:case`externalResourcesRequired`:case`focusable`:case`preserveAlpha`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``+r):e.removeAttribute(n);break;case`inert`:case`allowFullScreen`:case`async`:case`autoPlay`:case`controls`:case`default`:case`defer`:case`disabled`:case`disablePictureInPicture`:case`disableRemotePlayback`:case`formNoValidate`:case`hidden`:case`loop`:case`noModule`:case`noValidate`:case`open`:case`playsInline`:case`readOnly`:case`required`:case`reversed`:case`scoped`:case`seamless`:case`itemScope`:r&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``):e.removeAttribute(n);break;case`capture`:case`download`:!0===r?e.setAttribute(n,``):!1!==r&&r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`cols`:case`rows`:case`size`:case`span`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`&&!isNaN(r)&&1<=r?e.setAttribute(n,r):e.removeAttribute(n);break;case`rowSpan`:case`start`:r==null||typeof r==`function`||typeof r==`symbol`||isNaN(r)?e.removeAttribute(n):e.setAttribute(n,r);break;case`popover`:Q(`beforetoggle`,e),Q(`toggle`,e),Rt(e,`popover`,r);break;case`xlinkActuate`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:actuate`,r);break;case`xlinkArcrole`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:arcrole`,r);break;case`xlinkRole`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:role`,r);break;case`xlinkShow`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:show`,r);break;case`xlinkTitle`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:title`,r);break;case`xlinkType`:Bt(e,`http://www.w3.org/1999/xlink`,`xlink:type`,r);break;case`xmlBase`:Bt(e,`http://www.w3.org/XML/1998/namespace`,`xml:base`,r);break;case`xmlLang`:Bt(e,`http://www.w3.org/XML/1998/namespace`,`xml:lang`,r);break;case`xmlSpace`:Bt(e,`http://www.w3.org/XML/1998/namespace`,`xml:space`,r);break;case`is`:Rt(e,`is`,r);break;case`innerText`:case`textContent`:break;default:(!(2<n.length)||n[0]!==`o`&&n[0]!==`O`||n[1]!==`n`&&n[1]!==`N`)&&(n=sn.get(n)||n,Rt(e,n,r))}}function Nd(e,t,n,r,a,o){switch(n){case`style`:an(e,r,o);break;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));e.innerHTML=n}}break;case`children`:typeof r==`string`?tn(e,r):(typeof r==`number`||typeof r==`bigint`)&&tn(e,``+r);break;case`onScroll`:r!=null&&Q(`scroll`,e);break;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);break;case`onClick`:r!=null&&(e.onclick=un);break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`innerHTML`:case`ref`:break;case`innerText`:case`textContent`:break;default:if(!jt.hasOwnProperty(n))a:{if(n[0]===`o`&&n[1]===`n`&&(a=n.endsWith(`Capture`),t=n.slice(2,a?n.length-7:void 0),o=e[_t]||null,o=o==null?null:o[n],typeof o==`function`&&e.removeEventListener(t,o,a),typeof r==`function`)){typeof o!=`function`&&o!==null&&(n in e?e[n]=null:e.hasAttribute(n)&&e.removeAttribute(n)),e.addEventListener(t,r,a);break a}n in e?e[n]=r:!0===r?e.setAttribute(n,``):Rt(e,n,r)}}}function Pd(e,t,n){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`img`:Q(`error`,e),Q(`load`,e);var r=!1,a=!1,o;for(o in n)if(n.hasOwnProperty(o)){var s=n[o];if(s!=null)switch(o){case`src`:r=!0;break;case`srcSet`:a=!0;break;case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,o,s,n,null)}}a&&$(e,t,`srcSet`,n.srcSet,n,null),r&&$(e,t,`src`,n.src,n,null);return;case`input`:Q(`invalid`,e);var c=o=s=a=null,l=null,u=null;for(r in n)if(n.hasOwnProperty(r)){var d=n[r];if(d!=null)switch(r){case`name`:a=d;break;case`type`:s=d;break;case`checked`:l=d;break;case`defaultChecked`:u=d;break;case`value`:o=d;break;case`defaultValue`:c=d;break;case`children`:case`dangerouslySetInnerHTML`:if(d!=null)throw Error(i(137,t));break;default:$(e,t,r,d,n,null)}}Xt(e,o,c,l,u,s,a,!1);return;case`select`:for(a in Q(`invalid`,e),r=s=o=null,n)if(n.hasOwnProperty(a)&&(c=n[a],c!=null))switch(a){case`value`:o=c;break;case`defaultValue`:s=c;break;case`multiple`:r=c;default:$(e,t,a,c,n,null)}t=o,n=s,e.multiple=!!r,t==null?n!=null&&Qt(e,!!r,n,!0):Qt(e,!!r,t,!1);return;case`textarea`:for(s in Q(`invalid`,e),o=a=r=null,n)if(n.hasOwnProperty(s)&&(c=n[s],c!=null))switch(s){case`value`:r=c;break;case`defaultValue`:a=c;break;case`children`:o=c;break;case`dangerouslySetInnerHTML`:if(c!=null)throw Error(i(91));break;default:$(e,t,s,c,n,null)}en(e,r,a,o);return;case`option`:for(l in n)if(n.hasOwnProperty(l)&&(r=n[l],r!=null))switch(l){case`selected`:e.selected=r&&typeof r!=`function`&&typeof r!=`symbol`;break;default:$(e,t,l,r,n,null)}return;case`dialog`:Q(`beforetoggle`,e),Q(`toggle`,e),Q(`cancel`,e),Q(`close`,e);break;case`iframe`:case`object`:Q(`load`,e);break;case`video`:case`audio`:for(r=0;r<_d.length;r++)Q(_d[r],e);break;case`image`:Q(`error`,e),Q(`load`,e);break;case`details`:Q(`toggle`,e);break;case`embed`:case`source`:case`link`:Q(`error`,e),Q(`load`,e);case`area`:case`base`:case`br`:case`col`:case`hr`:case`keygen`:case`meta`:case`param`:case`track`:case`wbr`:case`menuitem`:for(u in n)if(n.hasOwnProperty(u)&&(r=n[u],r!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,u,r,n,null)}return;default:if(on(t)){for(d in n)n.hasOwnProperty(d)&&(r=n[d],r!==void 0&&Nd(e,t,d,r,n,void 0));return}}for(c in n)n.hasOwnProperty(c)&&(r=n[c],r!=null&&$(e,t,c,r,n,null))}function Fd(e,t,n,r){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`input`:var a=null,o=null,s=null,c=null,l=null,u=null,d=null;for(m in n){var f=n[m];if(n.hasOwnProperty(m)&&f!=null)switch(m){case`checked`:break;case`value`:break;case`defaultValue`:l=f;default:r.hasOwnProperty(m)||$(e,t,m,null,r,f)}}for(var p in r){var m=r[p];if(f=n[p],r.hasOwnProperty(p)&&(m!=null||f!=null))switch(p){case`type`:o=m;break;case`name`:a=m;break;case`checked`:u=m;break;case`defaultChecked`:d=m;break;case`value`:s=m;break;case`defaultValue`:c=m;break;case`children`:case`dangerouslySetInnerHTML`:if(m!=null)throw Error(i(137,t));break;default:m!==f&&$(e,t,p,m,r,f)}}Yt(e,s,c,l,u,d,o,a);return;case`select`:for(o in m=s=c=p=null,n)if(l=n[o],n.hasOwnProperty(o)&&l!=null)switch(o){case`value`:break;case`multiple`:m=l;default:r.hasOwnProperty(o)||$(e,t,o,null,r,l)}for(a in r)if(o=r[a],l=n[a],r.hasOwnProperty(a)&&(o!=null||l!=null))switch(a){case`value`:p=o;break;case`defaultValue`:c=o;break;case`multiple`:s=o;default:o!==l&&$(e,t,a,o,r,l)}t=c,n=s,r=m,p==null?!!r!=!!n&&(t==null?Qt(e,!!n,n?[]:``,!1):Qt(e,!!n,t,!0)):Qt(e,!!n,p,!1);return;case`textarea`:for(c in m=p=null,n)if(a=n[c],n.hasOwnProperty(c)&&a!=null&&!r.hasOwnProperty(c))switch(c){case`value`:break;case`children`:break;default:$(e,t,c,null,r,a)}for(s in r)if(a=r[s],o=n[s],r.hasOwnProperty(s)&&(a!=null||o!=null))switch(s){case`value`:p=a;break;case`defaultValue`:m=a;break;case`children`:break;case`dangerouslySetInnerHTML`:if(a!=null)throw Error(i(91));break;default:a!==o&&$(e,t,s,a,r,o)}$t(e,p,m);return;case`option`:for(var h in n)if(p=n[h],n.hasOwnProperty(h)&&p!=null&&!r.hasOwnProperty(h))switch(h){case`selected`:e.selected=!1;break;default:$(e,t,h,null,r,p)}for(l in r)if(p=r[l],m=n[l],r.hasOwnProperty(l)&&p!==m&&(p!=null||m!=null))switch(l){case`selected`:e.selected=p&&typeof p!=`function`&&typeof p!=`symbol`;break;default:$(e,t,l,p,r,m)}return;case`img`:case`link`:case`area`:case`base`:case`br`:case`col`:case`embed`:case`hr`:case`keygen`:case`meta`:case`param`:case`source`:case`track`:case`wbr`:case`menuitem`:for(var g in n)p=n[g],n.hasOwnProperty(g)&&p!=null&&!r.hasOwnProperty(g)&&$(e,t,g,null,r,p);for(u in r)if(p=r[u],m=n[u],r.hasOwnProperty(u)&&p!==m&&(p!=null||m!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:if(p!=null)throw Error(i(137,t));break;default:$(e,t,u,p,r,m)}return;default:if(on(t)){for(var _ in n)p=n[_],n.hasOwnProperty(_)&&p!==void 0&&!r.hasOwnProperty(_)&&Nd(e,t,_,void 0,r,p);for(d in r)p=r[d],m=n[d],!r.hasOwnProperty(d)||p===m||p===void 0&&m===void 0||Nd(e,t,d,p,r,m);return}}for(var v in n)p=n[v],n.hasOwnProperty(v)&&p!=null&&!r.hasOwnProperty(v)&&$(e,t,v,null,r,p);for(f in r)p=r[f],m=n[f],!r.hasOwnProperty(f)||p===m||p==null&&m==null||$(e,t,f,p,r,m)}function Id(e){switch(e){case`css`:case`script`:case`font`:case`img`:case`image`:case`input`:case`link`:return!0;default:return!1}}function Ld(){if(typeof performance.getEntriesByType==`function`){for(var e=0,t=0,n=performance.getEntriesByType(`resource`),r=0;r<n.length;r++){var i=n[r],a=i.transferSize,o=i.initiatorType,s=i.duration;if(a&&s&&Id(o)){for(o=0,s=i.responseEnd,r+=1;r<n.length;r++){var c=n[r],l=c.startTime;if(l>s)break;var u=c.transferSize,d=c.initiatorType;u&&Id(d)&&(c=c.responseEnd,o+=u*(c<s?1:(s-l)/(c-l)))}if(--r,t+=8*(a+o)/(i.duration/1e3),e++,10<e)break}}if(0<e)return t/e/1e6}return navigator.connection&&(e=navigator.connection.downlink,typeof e==`number`)?e:5}var Rd=null,zd=null;function Bd(e){return e.nodeType===9?e:e.ownerDocument}function Vd(e){switch(e){case`http://www.w3.org/2000/svg`:return 1;case`http://www.w3.org/1998/Math/MathML`:return 2;default:return 0}}function Hd(e,t){if(e===0)switch(t){case`svg`:return 1;case`math`:return 2;default:return 0}return e===1&&t===`foreignObject`?0:e}function Ud(e,t){return e===`textarea`||e===`noscript`||typeof t.children==`string`||typeof t.children==`number`||typeof t.children==`bigint`||typeof t.dangerouslySetInnerHTML==`object`&&t.dangerouslySetInnerHTML!==null&&t.dangerouslySetInnerHTML.__html!=null}var Wd=null;function Gd(){var e=window.event;return e&&e.type===`popstate`?e===Wd?!1:(Wd=e,!0):(Wd=null,!1)}var Kd=typeof setTimeout==`function`?setTimeout:void 0,qd=typeof clearTimeout==`function`?clearTimeout:void 0,Jd=typeof Promise==`function`?Promise:void 0,Yd=typeof queueMicrotask==`function`?queueMicrotask:Jd===void 0?Kd:function(e){return Jd.resolve(null).then(e).catch(Xd)};function Xd(e){setTimeout(function(){throw e})}function Zd(e){return e===`head`}function Qd(e,t){var n=t,r=0;do{var i=n.nextSibling;if(e.removeChild(n),i&&i.nodeType===8)if(n=i.data,n===`/$`||n===`/&`){if(r===0){e.removeChild(i),Np(t);return}r--}else if(n===`$`||n===`$?`||n===`$~`||n===`$!`||n===`&`)r++;else if(n===`html`)pf(e.ownerDocument.documentElement);else if(n===`head`){n=e.ownerDocument.head,pf(n);for(var a=n.firstChild;a;){var o=a.nextSibling,s=a.nodeName;a[Ct]||s===`SCRIPT`||s===`STYLE`||s===`LINK`&&a.rel.toLowerCase()===`stylesheet`||n.removeChild(a),a=o}}else n===`body`&&pf(e.ownerDocument.body);n=i}while(n);Np(t)}function $d(e,t){var n=e;e=0;do{var r=n.nextSibling;if(n.nodeType===1?t?(n._stashedDisplay=n.style.display,n.style.display=`none`):(n.style.display=n._stashedDisplay||``,n.getAttribute(`style`)===``&&n.removeAttribute(`style`)):n.nodeType===3&&(t?(n._stashedText=n.nodeValue,n.nodeValue=``):n.nodeValue=n._stashedText||``),r&&r.nodeType===8)if(n=r.data,n===`/$`){if(e===0)break;e--}else n!==`$`&&n!==`$?`&&n!==`$~`&&n!==`$!`||e++;n=r}while(n)}function ef(e){var t=e.firstChild;for(t&&t.nodeType===10&&(t=t.nextSibling);t;){var n=t;switch(t=t.nextSibling,n.nodeName){case`HTML`:case`HEAD`:case`BODY`:ef(n),wt(n);continue;case`SCRIPT`:case`STYLE`:continue;case`LINK`:if(n.rel.toLowerCase()===`stylesheet`)continue}e.removeChild(n)}}function tf(e,t,n,r){for(;e.nodeType===1;){var i=n;if(e.nodeName.toLowerCase()!==t.toLowerCase()){if(!r&&(e.nodeName!==`INPUT`||e.type!==`hidden`))break}else if(!r)if(t===`input`&&e.type===`hidden`){var a=i.name==null?null:``+i.name;if(i.type===`hidden`&&e.getAttribute(`name`)===a)return e}else return e;else if(!e[Ct])switch(t){case`meta`:if(!e.hasAttribute(`itemprop`))break;return e;case`link`:if(a=e.getAttribute(`rel`),a===`stylesheet`&&e.hasAttribute(`data-precedence`)||a!==i.rel||e.getAttribute(`href`)!==(i.href==null||i.href===``?null:i.href)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin)||e.getAttribute(`title`)!==(i.title==null?null:i.title))break;return e;case`style`:if(e.hasAttribute(`data-precedence`))break;return e;case`script`:if(a=e.getAttribute(`src`),(a!==(i.src==null?null:i.src)||e.getAttribute(`type`)!==(i.type==null?null:i.type)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin))&&a&&e.hasAttribute(`async`)&&!e.hasAttribute(`itemprop`))break;return e;default:return e}if(e=cf(e.nextSibling),e===null)break}return null}function nf(e,t,n){if(t===``)return null;for(;e.nodeType!==3;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!n||(e=cf(e.nextSibling),e===null))return null;return e}function rf(e,t){for(;e.nodeType!==8;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!t||(e=cf(e.nextSibling),e===null))return null;return e}function af(e){return e.data===`$?`||e.data===`$~`}function of(e){return e.data===`$!`||e.data===`$?`&&e.ownerDocument.readyState!==`loading`}function sf(e,t){var n=e.ownerDocument;if(e.data===`$~`)e._reactRetry=t;else if(e.data!==`$?`||n.readyState!==`loading`)t();else{var r=function(){t(),n.removeEventListener(`DOMContentLoaded`,r)};n.addEventListener(`DOMContentLoaded`,r),e._reactRetry=r}}function cf(e){for(;e!=null;e=e.nextSibling){var t=e.nodeType;if(t===1||t===3)break;if(t===8){if(t=e.data,t===`$`||t===`$!`||t===`$?`||t===`$~`||t===`&`||t===`F!`||t===`F`)break;if(t===`/$`||t===`/&`)return null}}return e}var lf=null;function uf(e){e=e.nextSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`/$`||n===`/&`){if(t===0)return cf(e.nextSibling);t--}else n!==`$`&&n!==`$!`&&n!==`$?`&&n!==`$~`&&n!==`&`||t++}e=e.nextSibling}return null}function df(e){e=e.previousSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`$`||n===`$!`||n===`$?`||n===`$~`||n===`&`){if(t===0)return e;t--}else n!==`/$`&&n!==`/&`||t++}e=e.previousSibling}return null}function ff(e,t,n){switch(t=Bd(n),e){case`html`:if(e=t.documentElement,!e)throw Error(i(452));return e;case`head`:if(e=t.head,!e)throw Error(i(453));return e;case`body`:if(e=t.body,!e)throw Error(i(454));return e;default:throw Error(i(451))}}function pf(e){for(var t=e.attributes;t.length;)e.removeAttributeNode(t[0]);wt(e)}var mf=new Map,hf=new Set;function gf(e){return typeof e.getRootNode==`function`?e.getRootNode():e.nodeType===9?e:e.ownerDocument}var _f=D.d;D.d={f:vf,r:yf,D:Sf,C:Cf,L:wf,m:Tf,X:Df,S:Ef,M:Of};function vf(){var e=_f.f(),t=bu();return e||t}function yf(e){var t=Et(e);t!==null&&t.tag===5&&t.type===`form`?Ds(t):_f.r(e)}var bf=typeof document>`u`?null:document;function xf(e,t,n){var r=bf;if(r&&typeof t==`string`&&t){var i=Jt(t);i=`link[rel="`+e+`"][href="`+i+`"]`,typeof n==`string`&&(i+=`[crossorigin="`+n+`"]`),hf.has(i)||(hf.add(i),e={rel:e,crossOrigin:n,href:t},r.querySelector(i)===null&&(t=r.createElement(`link`),Pd(t,`link`,e),kt(t),r.head.appendChild(t)))}}function Sf(e){_f.D(e),xf(`dns-prefetch`,e,null)}function Cf(e,t){_f.C(e,t),xf(`preconnect`,e,t)}function wf(e,t,n){_f.L(e,t,n);var r=bf;if(r&&e&&t){var i=`link[rel="preload"][as="`+Jt(t)+`"]`;t===`image`&&n&&n.imageSrcSet?(i+=`[imagesrcset="`+Jt(n.imageSrcSet)+`"]`,typeof n.imageSizes==`string`&&(i+=`[imagesizes="`+Jt(n.imageSizes)+`"]`)):i+=`[href="`+Jt(e)+`"]`;var a=i;switch(t){case`style`:a=Af(e);break;case`script`:a=Pf(e)}mf.has(a)||(e=h({rel:`preload`,href:t===`image`&&n&&n.imageSrcSet?void 0:e,as:t},n),mf.set(a,e),r.querySelector(i)!==null||t===`style`&&r.querySelector(jf(a))||t===`script`&&r.querySelector(Ff(a))||(t=r.createElement(`link`),Pd(t,`link`,e),kt(t),r.head.appendChild(t)))}}function Tf(e,t){_f.m(e,t);var n=bf;if(n&&e){var r=t&&typeof t.as==`string`?t.as:`script`,i=`link[rel="modulepreload"][as="`+Jt(r)+`"][href="`+Jt(e)+`"]`,a=i;switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:a=Pf(e)}if(!mf.has(a)&&(e=h({rel:`modulepreload`,href:e},t),mf.set(a,e),n.querySelector(i)===null)){switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:if(n.querySelector(Ff(a)))return}r=n.createElement(`link`),Pd(r,`link`,e),kt(r),n.head.appendChild(r)}}}function Ef(e,t,n){_f.S(e,t,n);var r=bf;if(r&&e){var i=Ot(r).hoistableStyles,a=Af(e);t||=`default`;var o=i.get(a);if(!o){var s={loading:0,preload:null};if(o=r.querySelector(jf(a)))s.loading=5;else{e=h({rel:`stylesheet`,href:e,"data-precedence":t},n),(n=mf.get(a))&&Rf(e,n);var c=o=r.createElement(`link`);kt(c),Pd(c,`link`,e),c._p=new Promise(function(e,t){c.onload=e,c.onerror=t}),c.addEventListener(`load`,function(){s.loading|=1}),c.addEventListener(`error`,function(){s.loading|=2}),s.loading|=4,Lf(o,t,r)}o={type:`stylesheet`,instance:o,count:1,state:s},i.set(a,o)}}}function Df(e,t){_f.X(e,t);var n=bf;if(n&&e){var r=Ot(n).hoistableScripts,i=Pf(e),a=r.get(i);a||(a=n.querySelector(Ff(i)),a||(e=h({src:e,async:!0},t),(t=mf.get(i))&&zf(e,t),a=n.createElement(`script`),kt(a),Pd(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Of(e,t){_f.M(e,t);var n=bf;if(n&&e){var r=Ot(n).hoistableScripts,i=Pf(e),a=r.get(i);a||(a=n.querySelector(Ff(i)),a||(e=h({src:e,async:!0,type:`module`},t),(t=mf.get(i))&&zf(e,t),a=n.createElement(`script`),kt(a),Pd(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function kf(e,t,n,r){var a=(a=_e.current)?gf(a):null;if(!a)throw Error(i(446));switch(e){case`meta`:case`title`:return null;case`style`:return typeof n.precedence==`string`&&typeof n.href==`string`?(t=Af(n.href),n=Ot(a).hoistableStyles,r=n.get(t),r||(r={type:`style`,instance:null,count:0,state:null},n.set(t,r)),r):{type:`void`,instance:null,count:0,state:null};case`link`:if(n.rel===`stylesheet`&&typeof n.href==`string`&&typeof n.precedence==`string`){e=Af(n.href);var o=Ot(a).hoistableStyles,s=o.get(e);if(s||(a=a.ownerDocument||a,s={type:`stylesheet`,instance:null,count:0,state:{loading:0,preload:null}},o.set(e,s),(o=a.querySelector(jf(e)))&&!o._p&&(s.instance=o,s.state.loading=5),mf.has(e)||(n={rel:`preload`,as:`style`,href:n.href,crossOrigin:n.crossOrigin,integrity:n.integrity,media:n.media,hrefLang:n.hrefLang,referrerPolicy:n.referrerPolicy},mf.set(e,n),o||Nf(a,e,n,s.state))),t&&r===null)throw Error(i(528,``));return s}if(t&&r!==null)throw Error(i(529,``));return null;case`script`:return t=n.async,n=n.src,typeof n==`string`&&t&&typeof t!=`function`&&typeof t!=`symbol`?(t=Pf(n),n=Ot(a).hoistableScripts,r=n.get(t),r||(r={type:`script`,instance:null,count:0,state:null},n.set(t,r)),r):{type:`void`,instance:null,count:0,state:null};default:throw Error(i(444,e))}}function Af(e){return`href="`+Jt(e)+`"`}function jf(e){return`link[rel="stylesheet"][`+e+`]`}function Mf(e){return h({},e,{"data-precedence":e.precedence,precedence:null})}function Nf(e,t,n,r){e.querySelector(`link[rel="preload"][as="style"][`+t+`]`)?r.loading=1:(t=e.createElement(`link`),r.preload=t,t.addEventListener(`load`,function(){return r.loading|=1}),t.addEventListener(`error`,function(){return r.loading|=2}),Pd(t,`link`,n),kt(t),e.head.appendChild(t))}function Pf(e){return`[src="`+Jt(e)+`"]`}function Ff(e){return`script[async]`+e}function If(e,t,n){if(t.count++,t.instance===null)switch(t.type){case`style`:var r=e.querySelector(`style[data-href~="`+Jt(n.href)+`"]`);if(r)return t.instance=r,kt(r),r;var a=h({},n,{"data-href":n.href,"data-precedence":n.precedence,href:null,precedence:null});return r=(e.ownerDocument||e).createElement(`style`),kt(r),Pd(r,`style`,a),Lf(r,n.precedence,e),t.instance=r;case`stylesheet`:a=Af(n.href);var o=e.querySelector(jf(a));if(o)return t.state.loading|=4,t.instance=o,kt(o),o;r=Mf(n),(a=mf.get(a))&&Rf(r,a),o=(e.ownerDocument||e).createElement(`link`),kt(o);var s=o;return s._p=new Promise(function(e,t){s.onload=e,s.onerror=t}),Pd(o,`link`,r),t.state.loading|=4,Lf(o,n.precedence,e),t.instance=o;case`script`:return o=Pf(n.src),(a=e.querySelector(Ff(o)))?(t.instance=a,kt(a),a):(r=n,(a=mf.get(o))&&(r=h({},n),zf(r,a)),e=e.ownerDocument||e,a=e.createElement(`script`),kt(a),Pd(a,`link`,r),e.head.appendChild(a),t.instance=a);case`void`:return null;default:throw Error(i(443,t.type))}else t.type===`stylesheet`&&!(t.state.loading&4)&&(r=t.instance,t.state.loading|=4,Lf(r,n.precedence,e));return t.instance}function Lf(e,t,n){for(var r=n.querySelectorAll(`link[rel="stylesheet"][data-precedence],style[data-precedence]`),i=r.length?r[r.length-1]:null,a=i,o=0;o<r.length;o++){var s=r[o];if(s.dataset.precedence===t)a=s;else if(a!==i)break}a?a.parentNode.insertBefore(e,a.nextSibling):(t=n.nodeType===9?n.head:n,t.insertBefore(e,t.firstChild))}function Rf(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.title??=t.title}function zf(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.integrity??=t.integrity}var Bf=null;function Vf(e,t,n){if(Bf===null){var r=new Map,i=Bf=new Map;i.set(n,r)}else i=Bf,r=i.get(n),r||(r=new Map,i.set(n,r));if(r.has(e))return r;for(r.set(e,null),n=n.getElementsByTagName(e),i=0;i<n.length;i++){var a=n[i];if(!(a[Ct]||a[gt]||e===`link`&&a.getAttribute(`rel`)===`stylesheet`)&&a.namespaceURI!==`http://www.w3.org/2000/svg`){var o=a.getAttribute(t)||``;o=e+o;var s=r.get(o);s?s.push(a):r.set(o,[a])}}return r}function Hf(e,t,n){e=e.ownerDocument||e,e.head.insertBefore(n,t===`title`?e.querySelector(`head > title`):null)}function Uf(e,t,n){if(n===1||t.itemProp!=null)return!1;switch(e){case`meta`:case`title`:return!0;case`style`:if(typeof t.precedence!=`string`||typeof t.href!=`string`||t.href===``)break;return!0;case`link`:if(typeof t.rel!=`string`||typeof t.href!=`string`||t.href===``||t.onLoad||t.onError)break;switch(t.rel){case`stylesheet`:return e=t.disabled,typeof t.precedence==`string`&&e==null;default:return!0}case`script`:if(t.async&&typeof t.async!=`function`&&typeof t.async!=`symbol`&&!t.onLoad&&!t.onError&&t.src&&typeof t.src==`string`)return!0}return!1}function Wf(e){return!(e.type===`stylesheet`&&!(e.state.loading&3))}function Gf(e,t,n,r){if(n.type===`stylesheet`&&(typeof r.media!=`string`||!1!==matchMedia(r.media).matches)&&!(n.state.loading&4)){if(n.instance===null){var i=Af(r.href),a=t.querySelector(jf(i));if(a){t=a._p,typeof t==`object`&&t&&typeof t.then==`function`&&(e.count++,e=Jf.bind(e),t.then(e,e)),n.state.loading|=4,n.instance=a,kt(a);return}a=t.ownerDocument||t,r=Mf(r),(i=mf.get(i))&&Rf(r,i),a=a.createElement(`link`),kt(a);var o=a;o._p=new Promise(function(e,t){o.onload=e,o.onerror=t}),Pd(a,`link`,r),n.instance=a}e.stylesheets===null&&(e.stylesheets=new Map),e.stylesheets.set(n,t),(t=n.state.preload)&&!(n.state.loading&3)&&(e.count++,n=Jf.bind(e),t.addEventListener(`load`,n),t.addEventListener(`error`,n))}}var Kf=0;function qf(e,t){return e.stylesheets&&e.count===0&&Xf(e,e.stylesheets),0<e.count||0<e.imgCount?function(n){var r=setTimeout(function(){if(e.stylesheets&&Xf(e,e.stylesheets),e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}},6e4+t);0<e.imgBytes&&Kf===0&&(Kf=62500*Ld());var i=setTimeout(function(){if(e.waitingForImages=!1,e.count===0&&(e.stylesheets&&Xf(e,e.stylesheets),e.unsuspend)){var t=e.unsuspend;e.unsuspend=null,t()}},(e.imgBytes>Kf?50:800)+t);return e.unsuspend=n,function(){e.unsuspend=null,clearTimeout(r),clearTimeout(i)}}:null}function Jf(){if(this.count--,this.count===0&&(this.imgCount===0||!this.waitingForImages)){if(this.stylesheets)Xf(this,this.stylesheets);else if(this.unsuspend){var e=this.unsuspend;this.unsuspend=null,e()}}}var Yf=null;function Xf(e,t){e.stylesheets=null,e.unsuspend!==null&&(e.count++,Yf=new Map,t.forEach(Zf,e),Yf=null,Jf.call(e))}function Zf(e,t){if(!(t.state.loading&4)){var n=Yf.get(e);if(n)var r=n.get(null);else{n=new Map,Yf.set(e,n);for(var i=e.querySelectorAll(`link[data-precedence],style[data-precedence]`),a=0;a<i.length;a++){var o=i[a];(o.nodeName===`LINK`||o.getAttribute(`media`)!==`not all`)&&(n.set(o.dataset.precedence,o),r=o)}r&&n.set(null,r)}i=t.instance,o=i.getAttribute(`data-precedence`),a=n.get(o)||r,a===r&&n.set(null,i),n.set(o,i),this.count++,r=Jf.bind(this),i.addEventListener(`load`,r),i.addEventListener(`error`,r),a?a.parentNode.insertBefore(i,a.nextSibling):(e=e.nodeType===9?e.head:e,e.insertBefore(i,e.firstChild)),t.state.loading|=4}}var Qf={$$typeof:S,Provider:null,Consumer:null,_currentValue:ue,_currentValue2:ue,_threadCount:0};function $f(e,t,n,r,i,a,o,s,c){this.tag=1,this.containerInfo=e,this.pingCache=this.current=this.pendingChildren=null,this.timeoutHandle=-1,this.callbackNode=this.next=this.pendingContext=this.context=this.cancelPendingCommit=null,this.callbackPriority=0,this.expirationTimes=at(-1),this.entangledLanes=this.shellSuspendCounter=this.errorRecoveryDisabledLanes=this.expiredLanes=this.warmLanes=this.pingedLanes=this.suspendedLanes=this.pendingLanes=0,this.entanglements=at(0),this.hiddenUpdates=at(null),this.identifierPrefix=r,this.onUncaughtError=i,this.onCaughtError=a,this.onRecoverableError=o,this.pooledCache=null,this.pooledCacheLanes=0,this.formState=c,this.incompleteTransitions=new Map}function ep(e,t,n,r,i,a,o,s,c,l,u,d){return e=new $f(e,t,n,o,c,l,u,d,s),t=1,!0===a&&(t|=24),a=mi(3,null,null,t),e.current=a,a.stateNode=e,t=da(),t.refCount++,e.pooledCache=t,t.refCount++,a.memoizedState={element:r,isDehydrated:n,cache:t},Wa(a),e}function tp(e){return e?(e=fi,e):fi}function np(e,t,n,r,i,a){i=tp(i),r.context===null?r.context=i:r.pendingContext=i,r=Ka(t),r.payload={element:n},a=a===void 0?null:a,a!==null&&(r.callback=a),n=qa(e,r,t),n!==null&&(hu(n,e,t),Ja(n,e,t))}function rp(e,t){if(e=e.memoizedState,e!==null&&e.dehydrated!==null){var n=e.retryLane;e.retryLane=n!==0&&n<t?n:t}}function ip(e,t){rp(e,t),(e=e.alternate)&&rp(e,t)}function ap(e){if(e.tag===13||e.tag===31){var t=li(e,67108864);t!==null&&hu(t,e,67108864),ip(e,67108864)}}function op(e){if(e.tag===13||e.tag===31){var t=pu();t=dt(t);var n=li(e,t);n!==null&&hu(n,e,t),ip(e,t)}}var sp=!0;function cp(e,t,n,r){var i=E.T;E.T=null;var a=D.p;try{D.p=2,up(e,t,n,r)}finally{D.p=a,E.T=i}}function lp(e,t,n,r){var i=E.T;E.T=null;var a=D.p;try{D.p=8,up(e,t,n,r)}finally{D.p=a,E.T=i}}function up(e,t,n,r){if(sp){var i=dp(r);if(i===null)wd(e,t,r,fp,n),Cp(e,r);else if(Tp(i,e,t,n,r))r.stopPropagation();else if(Cp(e,r),t&4&&-1<Sp.indexOf(e)){for(;i!==null;){var a=Et(i);if(a!==null)switch(a.tag){case 3:if(a=a.stateNode,a.current.memoizedState.isDehydrated){var o=et(a.pendingLanes);if(o!==0){var s=a;for(s.pendingLanes|=2,s.entangledLanes|=2;o;){var c=1<<31-qe(o);s.entanglements[1]|=c,o&=~c}rd(a),!(G&6)&&(tu=Fe()+500,id(0,!1))}}break;case 31:case 13:s=li(a,2),s!==null&&hu(s,a,2),bu(),ip(a,2)}if(a=dp(r),a===null&&wd(e,t,r,fp,n),a===i)break;i=a}i!==null&&r.stopPropagation()}else wd(e,t,r,null,n)}}function dp(e){return e=fn(e),pp(e)}var fp=null;function pp(e){if(fp=null,e=Tt(e),e!==null){var t=o(e);if(t===null)e=null;else{var n=t.tag;if(n===13){if(e=s(t),e!==null)return e;e=null}else if(n===31){if(e=c(t),e!==null)return e;e=null}else if(n===3){if(t.stateNode.current.memoizedState.isDehydrated)return t.tag===3?t.stateNode.containerInfo:null;e=null}else t!==e&&(e=null)}}return fp=e,null}function mp(e){switch(e){case`beforetoggle`:case`cancel`:case`click`:case`close`:case`contextmenu`:case`copy`:case`cut`:case`auxclick`:case`dblclick`:case`dragend`:case`dragstart`:case`drop`:case`focusin`:case`focusout`:case`input`:case`invalid`:case`keydown`:case`keypress`:case`keyup`:case`mousedown`:case`mouseup`:case`paste`:case`pause`:case`play`:case`pointercancel`:case`pointerdown`:case`pointerup`:case`ratechange`:case`reset`:case`resize`:case`seeked`:case`submit`:case`toggle`:case`touchcancel`:case`touchend`:case`touchstart`:case`volumechange`:case`change`:case`selectionchange`:case`textInput`:case`compositionstart`:case`compositionend`:case`compositionupdate`:case`beforeblur`:case`afterblur`:case`beforeinput`:case`blur`:case`fullscreenchange`:case`focus`:case`hashchange`:case`popstate`:case`select`:case`selectstart`:return 2;case`drag`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`mousemove`:case`mouseout`:case`mouseover`:case`pointermove`:case`pointerout`:case`pointerover`:case`scroll`:case`touchmove`:case`wheel`:case`mouseenter`:case`mouseleave`:case`pointerenter`:case`pointerleave`:return 8;case`message`:switch(Ie()){case Le:return 2;case Re:return 8;case ze:case Be:return 32;case Ve:return 268435456;default:return 32}default:return 32}}var hp=!1,gp=null,_p=null,vp=null,yp=new Map,bp=new Map,xp=[],Sp=`mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset`.split(` `);function Cp(e,t){switch(e){case`focusin`:case`focusout`:gp=null;break;case`dragenter`:case`dragleave`:_p=null;break;case`mouseover`:case`mouseout`:vp=null;break;case`pointerover`:case`pointerout`:yp.delete(t.pointerId);break;case`gotpointercapture`:case`lostpointercapture`:bp.delete(t.pointerId)}}function wp(e,t,n,r,i,a){return e===null||e.nativeEvent!==a?(e={blockedOn:t,domEventName:n,eventSystemFlags:r,nativeEvent:a,targetContainers:[i]},t!==null&&(t=Et(t),t!==null&&ap(t)),e):(e.eventSystemFlags|=r,t=e.targetContainers,i!==null&&t.indexOf(i)===-1&&t.push(i),e)}function Tp(e,t,n,r,i){switch(t){case`focusin`:return gp=wp(gp,e,t,n,r,i),!0;case`dragenter`:return _p=wp(_p,e,t,n,r,i),!0;case`mouseover`:return vp=wp(vp,e,t,n,r,i),!0;case`pointerover`:var a=i.pointerId;return yp.set(a,wp(yp.get(a)||null,e,t,n,r,i)),!0;case`gotpointercapture`:return a=i.pointerId,bp.set(a,wp(bp.get(a)||null,e,t,n,r,i)),!0}return!1}function Ep(e){var t=Tt(e.target);if(t!==null){var n=o(t);if(n!==null){if(t=n.tag,t===13){if(t=s(n),t!==null){e.blockedOn=t,mt(e.priority,function(){op(n)});return}}else if(t===31){if(t=c(n),t!==null){e.blockedOn=t,mt(e.priority,function(){op(n)});return}}else if(t===3&&n.stateNode.current.memoizedState.isDehydrated){e.blockedOn=n.tag===3?n.stateNode.containerInfo:null;return}}}e.blockedOn=null}function Dp(e){if(e.blockedOn!==null)return!1;for(var t=e.targetContainers;0<t.length;){var n=dp(e.nativeEvent);if(n===null){n=e.nativeEvent;var r=new n.constructor(n.type,n);dn=r,n.target.dispatchEvent(r),dn=null}else return t=Et(n),t!==null&&ap(t),e.blockedOn=n,!1;t.shift()}return!0}function Op(e,t,n){Dp(e)&&n.delete(t)}function kp(){hp=!1,gp!==null&&Dp(gp)&&(gp=null),_p!==null&&Dp(_p)&&(_p=null),vp!==null&&Dp(vp)&&(vp=null),yp.forEach(Op),bp.forEach(Op)}function Ap(e,n){e.blockedOn===n&&(e.blockedOn=null,hp||(hp=!0,t.unstable_scheduleCallback(t.unstable_NormalPriority,kp)))}var jp=null;function Mp(e){jp!==e&&(jp=e,t.unstable_scheduleCallback(t.unstable_NormalPriority,function(){jp===e&&(jp=null);for(var t=0;t<e.length;t+=3){var n=e[t],r=e[t+1],i=e[t+2];if(typeof r!=`function`){if(pp(r||n)===null)continue;break}var a=Et(n);a!==null&&(e.splice(t,3),t-=3,Ts(a,{pending:!0,data:i,method:n.method,action:r},r,i))}}))}function Np(e){function t(t){return Ap(t,e)}gp!==null&&Ap(gp,e),_p!==null&&Ap(_p,e),vp!==null&&Ap(vp,e),yp.forEach(t),bp.forEach(t);for(var n=0;n<xp.length;n++){var r=xp[n];r.blockedOn===e&&(r.blockedOn=null)}for(;0<xp.length&&(n=xp[0],n.blockedOn===null);)Ep(n),n.blockedOn===null&&xp.shift();if(n=(e.ownerDocument||e).$$reactFormReplay,n!=null)for(r=0;r<n.length;r+=3){var i=n[r],a=n[r+1],o=i[_t]||null;if(typeof a==`function`)o||Mp(n);else if(o){var s=null;if(a&&a.hasAttribute(`formAction`)){if(i=a,o=a[_t]||null)s=o.formAction;else if(pp(i)!==null)continue}else s=o.action;typeof s==`function`?n[r+1]=s:(n.splice(r,3),r-=3),Mp(n)}}}function Pp(){function e(e){e.canIntercept&&e.info===`react-transition`&&e.intercept({handler:function(){return new Promise(function(e){return i=e})},focusReset:`manual`,scroll:`manual`})}function t(){i!==null&&(i(),i=null),r||setTimeout(n,20)}function n(){if(!r&&!navigation.transition){var e=navigation.currentEntry;e&&e.url!=null&&navigation.navigate(e.url,{state:e.getState(),info:`react-transition`,history:`replace`})}}if(typeof navigation==`object`){var r=!1,i=null;return navigation.addEventListener(`navigate`,e),navigation.addEventListener(`navigatesuccess`,t),navigation.addEventListener(`navigateerror`,t),setTimeout(n,100),function(){r=!0,navigation.removeEventListener(`navigate`,e),navigation.removeEventListener(`navigatesuccess`,t),navigation.removeEventListener(`navigateerror`,t),i!==null&&(i(),i=null)}}}function Fp(e){this._internalRoot=e}Ip.prototype.render=Fp.prototype.render=function(e){var t=this._internalRoot;if(t===null)throw Error(i(409));var n=t.current;np(n,pu(),e,t,null,null)},Ip.prototype.unmount=Fp.prototype.unmount=function(){var e=this._internalRoot;if(e!==null){this._internalRoot=null;var t=e.containerInfo;np(e.current,2,null,e,null,null),bu(),t[vt]=null}};function Ip(e){this._internalRoot=e}Ip.prototype.unstable_scheduleHydration=function(e){if(e){var t=pt();e={blockedOn:null,target:e,priority:t};for(var n=0;n<xp.length&&t!==0&&t<xp[n].priority;n++);xp.splice(n,0,e),n===0&&Ep(e)}};var Lp=n.version;if(Lp!==`19.2.4`)throw Error(i(527,Lp,`19.2.4`));D.findDOMNode=function(e){var t=e._reactInternals;if(t===void 0)throw typeof e.render==`function`?Error(i(188)):(e=Object.keys(e).join(`,`),Error(i(268,e)));return e=d(t),e=e===null?null:p(e),e=e===null?null:e.stateNode,e};var Rp={bundleType:0,version:`19.2.4`,rendererPackageName:`react-dom`,currentDispatcherRef:E,reconcilerVersion:`19.2.4`};if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`){var zp=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!zp.isDisabled&&zp.supportsFiber)try{We=zp.inject(Rp),Ge=zp}catch{}}e.createRoot=function(e,t){if(!a(e))throw Error(i(299));var n=!1,r=``,o=Js,s=Ys,c=Xs;return t!=null&&(!0===t.unstable_strictMode&&(n=!0),t.identifierPrefix!==void 0&&(r=t.identifierPrefix),t.onUncaughtError!==void 0&&(o=t.onUncaughtError),t.onCaughtError!==void 0&&(s=t.onCaughtError),t.onRecoverableError!==void 0&&(c=t.onRecoverableError)),t=ep(e,1,!1,null,null,n,r,null,o,s,c,Pp),e[vt]=t.current,Sd(e),new Fp(t)},e.hydrateRoot=function(e,t,n){if(!a(e))throw Error(i(299));var r=!1,o=``,s=Js,c=Ys,l=Xs,u=null;return n!=null&&(!0===n.unstable_strictMode&&(r=!0),n.identifierPrefix!==void 0&&(o=n.identifierPrefix),n.onUncaughtError!==void 0&&(s=n.onUncaughtError),n.onCaughtError!==void 0&&(c=n.onCaughtError),n.onRecoverableError!==void 0&&(l=n.onRecoverableError),n.formState!==void 0&&(u=n.formState)),t=ep(e,1,!0,t,n??null,r,o,u,s,c,l,Pp),t.context=tp(null),n=t.current,r=pu(),r=dt(r),o=Ka(r),o.callback=null,qa(n,o,r),n=r,t.current.lanes=n,ot(t,n),rd(t),e[vt]=t.current,Sd(e),new Ip(t)}})),g=o(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=h()})),_=c(u(),1),v=g(),y=`modulepreload`,b=function(e){return`/`+e},x={},ee=function(e,t,n){let r=Promise.resolve();if(t&&t.length>0){let e=document.getElementsByTagName(`link`),i=document.querySelector(`meta[property=csp-nonce]`),a=i?.nonce||i?.getAttribute(`nonce`);function o(e){return Promise.all(e.map(e=>Promise.resolve(e).then(e=>({status:`fulfilled`,value:e}),e=>({status:`rejected`,reason:e}))))}r=o(t.map(t=>{if(t=b(t,n),t in x)return;x[t]=!0;let r=t.endsWith(`.css`),i=r?`[rel="stylesheet"]`:``;if(n)for(let n=e.length-1;n>=0;n--){let i=e[n];if(i.href===t&&(!r||i.rel===`stylesheet`))return}else if(document.querySelector(`link[href="${t}"]${i}`))return;let o=document.createElement(`link`);if(o.rel=r?`stylesheet`:y,r||(o.as=`script`),o.crossOrigin=``,o.href=t,a&&o.setAttribute(`nonce`,a),document.head.appendChild(o),r)return new Promise((e,n)=>{o.addEventListener(`load`,e),o.addEventListener(`error`,()=>n(Error(`Unable to preload CSS for ${t}`)))})}))}function i(e){let t=new Event(`vite:preloadError`,{cancelable:!0});if(t.payload=e,window.dispatchEvent(t),!t.defaultPrevented)throw e}return r.then(t=>{for(let e of t||[])e.status===`rejected`&&i(e.reason);return e().catch(i)})},S=`popstate`;function C(e){return typeof e==`object`&&!!e&&`pathname`in e&&`search`in e&&`hash`in e&&`state`in e&&`key`in e}function te(e={}){function t(e,t){let n=t.state?.masked,{pathname:r,search:i,hash:a}=n||e.location;return ie(``,{pathname:r,search:i,hash:a},t.state&&t.state.usr||null,t.state&&t.state.key||`default`,n?{pathname:e.location.pathname,search:e.location.search,hash:e.location.hash}:void 0)}function n(e,t){return typeof t==`string`?t:ae(t)}return se(t,n,null,e)}function w(e,t){if(e===!1||e==null)throw Error(t)}function T(e,t){if(!e){typeof console<`u`&&console.warn(t);try{throw Error(t)}catch{}}}function ne(){return Math.random().toString(36).substring(2,10)}function re(e,t){return{usr:e.state,key:e.key,idx:t,masked:e.unstable_mask?{pathname:e.pathname,search:e.search,hash:e.hash}:void 0}}function ie(e,t,n=null,r,i){return{pathname:typeof e==`string`?e:e.pathname,search:``,hash:``,...typeof t==`string`?oe(t):t,state:n,key:t&&t.key||r||ne(),unstable_mask:i}}function ae({pathname:e=`/`,search:t=``,hash:n=``}){return t&&t!==`?`&&(e+=t.charAt(0)===`?`?t:`?`+t),n&&n!==`#`&&(e+=n.charAt(0)===`#`?n:`#`+n),e}function oe(e){let t={};if(e){let n=e.indexOf(`#`);n>=0&&(t.hash=e.substring(n),e=e.substring(0,n));let r=e.indexOf(`?`);r>=0&&(t.search=e.substring(r),e=e.substring(0,r)),e&&(t.pathname=e)}return t}function se(e,t,n,r={}){let{window:i=document.defaultView,v5Compat:a=!1}=r,o=i.history,s=`POP`,c=null,l=u();l??(l=0,o.replaceState({...o.state,idx:l},``));function u(){return(o.state||{idx:null}).idx}function d(){s=`POP`;let e=u(),t=e==null?null:e-l;l=e,c&&c({action:s,location:h.location,delta:t})}function f(e,t){s=`PUSH`;let r=C(e)?e:ie(h.location,e,t);n&&n(r,e),l=u()+1;let d=re(r,l),f=h.createHref(r.unstable_mask||r);try{o.pushState(d,``,f)}catch(e){if(e instanceof DOMException&&e.name===`DataCloneError`)throw e;i.location.assign(f)}a&&c&&c({action:s,location:h.location,delta:1})}function p(e,t){s=`REPLACE`;let r=C(e)?e:ie(h.location,e,t);n&&n(r,e),l=u();let i=re(r,l),d=h.createHref(r.unstable_mask||r);o.replaceState(i,``,d),a&&c&&c({action:s,location:h.location,delta:0})}function m(e){return ce(e)}let h={get action(){return s},get location(){return e(i,o)},listen(e){if(c)throw Error(`A history only accepts one active listener`);return i.addEventListener(S,d),c=e,()=>{i.removeEventListener(S,d),c=null}},createHref(e){return t(i,e)},createURL:m,encodeLocation(e){let t=m(e);return{pathname:t.pathname,search:t.search,hash:t.hash}},push:f,replace:p,go(e){return o.go(e)}};return h}function ce(e,t=!1){let n=`http://localhost`;typeof window<`u`&&(n=window.location.origin===`null`?window.location.href:window.location.origin),w(n,`No window.location.(origin|href) available to create URL`);let r=typeof e==`string`?e:ae(e);return r=r.replace(/ $/,`%20`),!t&&r.startsWith(`//`)&&(r=n+r),new URL(r,n)}function le(e,t,n=`/`){return E(e,t,n,!1)}function E(e,t,n,r){let i=Te((typeof t==`string`?oe(t):t).pathname||`/`,n);if(i==null)return null;let a=ue(e);fe(a);let o=null;for(let e=0;o==null&&e<a.length;++e){let t=we(i);o=xe(a[e],t,r)}return o}function D(e,t){let{route:n,pathname:r,params:i}=e;return{id:n.id,pathname:r,params:i,data:t[n.id],loaderData:t[n.id],handle:n.handle}}function ue(e,t=[],n=[],r=``,i=!1){let a=(e,a,o=i,s)=>{let c={relativePath:s===void 0?e.path||``:s,caseSensitive:e.caseSensitive===!0,childrenIndex:a,route:e};if(c.relativePath.startsWith(`/`)){if(!c.relativePath.startsWith(r)&&o)return;w(c.relativePath.startsWith(r),`Absolute route path "${c.relativePath}" nested under path "${r}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`),c.relativePath=c.relativePath.slice(r.length)}let l=Ne([r,c.relativePath]),u=n.concat(c);e.children&&e.children.length>0&&(w(e.index!==!0,`Index routes must not have child routes. Please remove all child routes from route path "${l}".`),ue(e.children,t,u,l,o)),!(e.path==null&&!e.index)&&t.push({path:l,score:ye(l,e.index),routesMeta:u})};return e.forEach((e,t)=>{if(e.path===``||!e.path?.includes(`?`))a(e,t);else for(let n of de(e.path))a(e,t,!0,n)}),t}function de(e){let t=e.split(`/`);if(t.length===0)return[];let[n,...r]=t,i=n.endsWith(`?`),a=n.replace(/\?$/,``);if(r.length===0)return i?[a,``]:[a];let o=de(r.join(`/`)),s=[];return s.push(...o.map(e=>e===``?a:[a,e].join(`/`))),i&&s.push(...o),s.map(t=>e.startsWith(`/`)&&t===``?`/`:t)}function fe(e){e.sort((e,t)=>e.score===t.score?be(e.routesMeta.map(e=>e.childrenIndex),t.routesMeta.map(e=>e.childrenIndex)):t.score-e.score)}var pe=/^:[\w-]+$/,me=3,O=2,he=1,ge=10,_e=-2,ve=e=>e===`*`;function ye(e,t){let n=e.split(`/`),r=n.length;return n.some(ve)&&(r+=_e),t&&(r+=O),n.filter(e=>!ve(e)).reduce((e,t)=>e+(pe.test(t)?me:t===``?he:ge),r)}function be(e,t){return e.length===t.length&&e.slice(0,-1).every((e,n)=>e===t[n])?e[e.length-1]-t[t.length-1]:0}function xe(e,t,n=!1){let{routesMeta:r}=e,i={},a=`/`,o=[];for(let e=0;e<r.length;++e){let s=r[e],c=e===r.length-1,l=a===`/`?t:t.slice(a.length)||`/`,u=Se({path:s.relativePath,caseSensitive:s.caseSensitive,end:c},l),d=s.route;if(!u&&c&&n&&!r[r.length-1].route.index&&(u=Se({path:s.relativePath,caseSensitive:s.caseSensitive,end:!1},l)),!u)return null;Object.assign(i,u.params),o.push({params:i,pathname:Ne([a,u.pathname]),pathnameBase:Pe(Ne([a,u.pathnameBase])),route:d}),u.pathnameBase!==`/`&&(a=Ne([a,u.pathnameBase]))}return o}function Se(e,t){typeof e==`string`&&(e={path:e,caseSensitive:!1,end:!0});let[n,r]=Ce(e.path,e.caseSensitive,e.end),i=t.match(n);if(!i)return null;let a=i[0],o=a.replace(/(.)\/+$/,`$1`),s=i.slice(1);return{params:r.reduce((e,{paramName:t,isOptional:n},r)=>{if(t===`*`){let e=s[r]||``;o=a.slice(0,a.length-e.length).replace(/(.)\/+$/,`$1`)}let i=s[r];return n&&!i?e[t]=void 0:e[t]=(i||``).replace(/%2F/g,`/`),e},{}),pathname:a,pathnameBase:o,pattern:e}}function Ce(e,t=!1,n=!0){T(e===`*`||!e.endsWith(`*`)||e.endsWith(`/*`),`Route path "${e}" will be treated as if it were "${e.replace(/\*$/,`/*`)}" because the \`*\` character must always follow a \`/\` in the pattern. To get rid of this warning, please change the route path to "${e.replace(/\*$/,`/*`)}".`);let r=[],i=`^`+e.replace(/\/*\*?$/,``).replace(/^\/*/,`/`).replace(/[\\.*+^${}|()[\]]/g,`\\$&`).replace(/\/:([\w-]+)(\?)?/g,(e,t,n,i,a)=>{if(r.push({paramName:t,isOptional:n!=null}),n){let t=a.charAt(i+e.length);return t&&t!==`/`?`/([^\\/]*)`:`(?:/([^\\/]*))?`}return`/([^\\/]+)`}).replace(/\/([\w-]+)\?(\/|$)/g,`(/$1)?$2`);return e.endsWith(`*`)?(r.push({paramName:`*`}),i+=e===`*`||e===`/*`?`(.*)$`:`(?:\\/(.+)|\\/*)$`):n?i+=`\\/*$`:e!==``&&e!==`/`&&(i+=`(?:(?=\\/|$))`),[new RegExp(i,t?void 0:`i`),r]}function we(e){try{return e.split(`/`).map(e=>decodeURIComponent(e).replace(/\//g,`%2F`)).join(`/`)}catch(t){return T(!1,`The URL path "${e}" could not be decoded because it is a malformed URL segment. This is probably due to a bad percent encoding (${t}).`),e}}function Te(e,t){if(t===`/`)return e;if(!e.toLowerCase().startsWith(t.toLowerCase()))return null;let n=t.endsWith(`/`)?t.length-1:t.length,r=e.charAt(n);return r&&r!==`/`?null:e.slice(n)||`/`}var Ee=/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;function De(e,t=`/`){let{pathname:n,search:r=``,hash:i=``}=typeof e==`string`?oe(e):e,a;return n?(n=n.replace(/\/\/+/g,`/`),a=n.startsWith(`/`)?Oe(n.substring(1),`/`):Oe(n,t)):a=t,{pathname:a,search:Fe(r),hash:Ie(i)}}function Oe(e,t){let n=t.replace(/\/+$/,``).split(`/`);return e.split(`/`).forEach(e=>{e===`..`?n.length>1&&n.pop():e!==`.`&&n.push(e)}),n.length>1?n.join(`/`):`/`}function ke(e,t,n,r){return`Cannot include a '${e}' character in a manually specified \`to.${t}\` field [${JSON.stringify(r)}].  Please separate it out to the \`to.${n}\` field. Alternatively you may provide the full path as a string in <Link to="..."> and the router will parse it for you.`}function Ae(e){return e.filter((e,t)=>t===0||e.route.path&&e.route.path.length>0)}function je(e){let t=Ae(e);return t.map((e,n)=>n===t.length-1?e.pathname:e.pathnameBase)}function Me(e,t,n,r=!1){let i;typeof e==`string`?i=oe(e):(i={...e},w(!i.pathname||!i.pathname.includes(`?`),ke(`?`,`pathname`,`search`,i)),w(!i.pathname||!i.pathname.includes(`#`),ke(`#`,`pathname`,`hash`,i)),w(!i.search||!i.search.includes(`#`),ke(`#`,`search`,`hash`,i)));let a=e===``||i.pathname===``,o=a?`/`:i.pathname,s;if(o==null)s=n;else{let e=t.length-1;if(!r&&o.startsWith(`..`)){let t=o.split(`/`);for(;t[0]===`..`;)t.shift(),--e;i.pathname=t.join(`/`)}s=e>=0?t[e]:`/`}let c=De(i,s),l=o&&o!==`/`&&o.endsWith(`/`),u=(a||o===`.`)&&n.endsWith(`/`);return!c.pathname.endsWith(`/`)&&(l||u)&&(c.pathname+=`/`),c}var Ne=e=>e.join(`/`).replace(/\/\/+/g,`/`),Pe=e=>e.replace(/\/+$/,``).replace(/^\/*/,`/`),Fe=e=>!e||e===`?`?``:e.startsWith(`?`)?e:`?`+e,Ie=e=>!e||e===`#`?``:e.startsWith(`#`)?e:`#`+e,Le=class{constructor(e,t,n,r=!1){this.status=e,this.statusText=t||``,this.internal=r,n instanceof Error?(this.data=n.toString(),this.error=n):this.data=n}};function Re(e){return e!=null&&typeof e.status==`number`&&typeof e.statusText==`string`&&typeof e.internal==`boolean`&&`data`in e}function ze(e){return e.map(e=>e.route.path).filter(Boolean).join(`/`).replace(/\/\/*/g,`/`)||`/`}var Be=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;function Ve(e,t){let n=e;if(typeof n!=`string`||!Ee.test(n))return{absoluteURL:void 0,isExternal:!1,to:n};let r=n,i=!1;if(Be)try{let e=new URL(window.location.href),r=n.startsWith(`//`)?new URL(e.protocol+n):new URL(n),a=Te(r.pathname,t);r.origin===e.origin&&a!=null?n=a+r.search+r.hash:i=!0}catch{T(!1,`<Link to="${n}"> contains an invalid URL which will probably break when clicked - please update to a valid URL path.`)}return{absoluteURL:r,isExternal:i,to:n}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);var He=[`POST`,`PUT`,`PATCH`,`DELETE`];new Set(He);var Ue=[`GET`,...He];new Set(Ue);var We=_.createContext(null);We.displayName=`DataRouter`;var Ge=_.createContext(null);Ge.displayName=`DataRouterState`;var Ke=_.createContext(!1);function qe(){return _.useContext(Ke)}var Je=_.createContext({isTransitioning:!1});Je.displayName=`ViewTransition`;var Ye=_.createContext(new Map);Ye.displayName=`Fetchers`;var Xe=_.createContext(null);Xe.displayName=`Await`;var Ze=_.createContext(null);Ze.displayName=`Navigation`;var Qe=_.createContext(null);Qe.displayName=`Location`;var $e=_.createContext({outlet:null,matches:[],isDataRoute:!1});$e.displayName=`Route`;var et=_.createContext(null);et.displayName=`RouteError`;var tt=`REACT_ROUTER_ERROR`,nt=`REDIRECT`,rt=`ROUTE_ERROR_RESPONSE`;function it(e){if(e.startsWith(`${tt}:${nt}:{`))try{let t=JSON.parse(e.slice(28));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`&&typeof t.location==`string`&&typeof t.reloadDocument==`boolean`&&typeof t.replace==`boolean`)return t}catch{}}function at(e){if(e.startsWith(`${tt}:${rt}:{`))try{let t=JSON.parse(e.slice(40));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`)return new Le(t.status,t.statusText,t.data)}catch{}}function ot(e,{relative:t}={}){w(st(),`useHref() may be used only in the context of a <Router> component.`);let{basename:n,navigator:r}=_.useContext(Ze),{hash:i,pathname:a,search:o}=mt(e,{relative:t}),s=a;return n!==`/`&&(s=a===`/`?n:Ne([n,a])),r.createHref({pathname:s,search:o,hash:i})}function st(){return _.useContext(Qe)!=null}function ct(){return w(st(),`useLocation() may be used only in the context of a <Router> component.`),_.useContext(Qe).location}var lt=`You should call navigate() in a React.useEffect(), not when your component is first rendered.`;function ut(e){_.useContext(Ze).static||_.useLayoutEffect(e)}function dt(){let{isDataRoute:e}=_.useContext($e);return e?Nt():ft()}function ft(){w(st(),`useNavigate() may be used only in the context of a <Router> component.`);let e=_.useContext(We),{basename:t,navigator:n}=_.useContext(Ze),{matches:r}=_.useContext($e),{pathname:i}=ct(),a=JSON.stringify(je(r)),o=_.useRef(!1);return ut(()=>{o.current=!0}),_.useCallback((r,s={})=>{if(T(o.current,lt),!o.current)return;if(typeof r==`number`){n.go(r);return}let c=Me(r,JSON.parse(a),i,s.relative===`path`);e==null&&t!==`/`&&(c.pathname=c.pathname===`/`?t:Ne([t,c.pathname])),(s.replace?n.replace:n.push)(c,s.state,s)},[t,n,a,i,e])}_.createContext(null);function pt(){let{matches:e}=_.useContext($e),t=e[e.length-1];return t?t.params:{}}function mt(e,{relative:t}={}){let{matches:n}=_.useContext($e),{pathname:r}=ct(),i=JSON.stringify(je(n));return _.useMemo(()=>Me(e,JSON.parse(i),r,t===`path`),[e,i,r,t])}function ht(e,t){return gt(e,t)}function gt(e,t,n){w(st(),`useRoutes() may be used only in the context of a <Router> component.`);let{navigator:r}=_.useContext(Ze),{matches:i}=_.useContext($e),a=i[i.length-1],o=a?a.params:{},s=a?a.pathname:`/`,c=a?a.pathnameBase:`/`,l=a&&a.route;{let e=l&&l.path||``;Ft(s,!l||e.endsWith(`*`)||e.endsWith(`*?`),`You rendered descendant <Routes> (or called \`useRoutes()\`) at "${s}" (under <Route path="${e}">) but the parent route path has no trailing "*". This means if you navigate deeper, the parent won't match anymore and therefore the child routes will never render.
+
+Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}/*`}">.`)}let u=ct(),d;if(t){let e=typeof t==`string`?oe(t):t;w(c===`/`||e.pathname?.startsWith(c),`When overriding the location using \`<Routes location>\` or \`useRoutes(routes, location)\`, the location pathname must begin with the portion of the URL pathname that was matched by all parent routes. The current pathname base is "${c}" but pathname "${e.pathname}" was given in the \`location\` prop.`),d=e}else d=u;let f=d.pathname||`/`,p=f;if(c!==`/`){let e=c.replace(/^\//,``).split(`/`);p=`/`+f.replace(/^\//,``).split(`/`).slice(e.length).join(`/`)}let m=le(e,{pathname:p});T(l||m!=null,`No routes matched location "${d.pathname}${d.search}${d.hash}" `),T(m==null||m[m.length-1].route.element!==void 0||m[m.length-1].route.Component!==void 0||m[m.length-1].route.lazy!==void 0,`Matched leaf route at location "${d.pathname}${d.search}${d.hash}" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.`);let h=Ct(m&&m.map(e=>Object.assign({},e,{params:Object.assign({},o,e.params),pathname:Ne([c,r.encodeLocation?r.encodeLocation(e.pathname.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathname]),pathnameBase:e.pathnameBase===`/`?c:Ne([c,r.encodeLocation?r.encodeLocation(e.pathnameBase.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathnameBase])})),i,n);return t&&h?_.createElement(Qe.Provider,{value:{location:{pathname:`/`,search:``,hash:``,state:null,key:`default`,unstable_mask:void 0,...d},navigationType:`POP`}},h):h}function _t(){let e=Mt(),t=Re(e)?`${e.status} ${e.statusText}`:e instanceof Error?e.message:JSON.stringify(e),n=e instanceof Error?e.stack:null,r=`rgba(200,200,200, 0.5)`,i={padding:`0.5rem`,backgroundColor:r},a={padding:`2px 4px`,backgroundColor:r},o=null;return console.error(`Error handled by React Router default ErrorBoundary:`,e),o=_.createElement(_.Fragment,null,_.createElement(`p`,null,`💿 Hey developer 👋`),_.createElement(`p`,null,`You can provide a way better UX than this when your app throws errors by providing your own `,_.createElement(`code`,{style:a},`ErrorBoundary`),` or`,` `,_.createElement(`code`,{style:a},`errorElement`),` prop on your route.`)),_.createElement(_.Fragment,null,_.createElement(`h2`,null,`Unexpected Application Error!`),_.createElement(`h3`,{style:{fontStyle:`italic`}},t),n?_.createElement(`pre`,{style:i},n):null,o)}var vt=_.createElement(_t,null),yt=class extends _.Component{constructor(e){super(e),this.state={location:e.location,revalidation:e.revalidation,error:e.error}}static getDerivedStateFromError(e){return{error:e}}static getDerivedStateFromProps(e,t){return t.location!==e.location||t.revalidation!==`idle`&&e.revalidation===`idle`?{error:e.error,location:e.location,revalidation:e.revalidation}:{error:e.error===void 0?t.error:e.error,location:t.location,revalidation:e.revalidation||t.revalidation}}componentDidCatch(e,t){this.props.onError?this.props.onError(e,t):console.error(`React Router caught the following error during render`,e)}render(){let e=this.state.error;if(this.context&&typeof e==`object`&&e&&`digest`in e&&typeof e.digest==`string`){let t=at(e.digest);t&&(e=t)}let t=e===void 0?this.props.children:_.createElement($e.Provider,{value:this.props.routeContext},_.createElement(et.Provider,{value:e,children:this.props.component}));return this.context?_.createElement(xt,{error:e},t):t}};yt.contextType=Ke;var bt=new WeakMap;function xt({children:e,error:t}){let{basename:n}=_.useContext(Ze);if(typeof t==`object`&&t&&`digest`in t&&typeof t.digest==`string`){let e=it(t.digest);if(e){let r=bt.get(t);if(r)throw r;let i=Ve(e.location,n);if(Be&&!bt.get(t))if(i.isExternal||e.reloadDocument)window.location.href=i.absoluteURL||i.to;else{let n=Promise.resolve().then(()=>window.__reactRouterDataRouter.navigate(i.to,{replace:e.replace}));throw bt.set(t,n),n}return _.createElement(`meta`,{httpEquiv:`refresh`,content:`0;url=${i.absoluteURL||i.to}`})}}return e}function St({routeContext:e,match:t,children:n}){let r=_.useContext(We);return r&&r.static&&r.staticContext&&(t.route.errorElement||t.route.ErrorBoundary)&&(r.staticContext._deepestRenderedBoundaryId=t.route.id),_.createElement($e.Provider,{value:e},n)}function Ct(e,t=[],n){let r=n?.state;if(e==null){if(!r)return null;if(r.errors)e=r.matches;else if(t.length===0&&!r.initialized&&r.matches.length>0)e=r.matches;else return null}let i=e,a=r?.errors;if(a!=null){let e=i.findIndex(e=>e.route.id&&a?.[e.route.id]!==void 0);w(e>=0,`Could not find a matching route for errors on route IDs: ${Object.keys(a).join(`,`)}`),i=i.slice(0,Math.min(i.length,e+1))}let o=!1,s=-1;if(n&&r){o=r.renderFallback;for(let e=0;e<i.length;e++){let t=i[e];if((t.route.HydrateFallback||t.route.hydrateFallbackElement)&&(s=e),t.route.id){let{loaderData:e,errors:a}=r,c=t.route.loader&&!e.hasOwnProperty(t.route.id)&&(!a||a[t.route.id]===void 0);if(t.route.lazy||c){n.isStatic&&(o=!0),i=s>=0?i.slice(0,s+1):[i[0]];break}}}}let c=n?.onError,l=r&&c?(e,t)=>{c(e,{location:r.location,params:r.matches?.[0]?.params??{},unstable_pattern:ze(r.matches),errorInfo:t})}:void 0;return i.reduceRight((e,n,c)=>{let u,d=!1,f=null,p=null;r&&(u=a&&n.route.id?a[n.route.id]:void 0,f=n.route.errorElement||vt,o&&(s<0&&c===0?(Ft(`route-fallback`,!1,"No `HydrateFallback` element provided to render during initial hydration"),d=!0,p=null):s===c&&(d=!0,p=n.route.hydrateFallbackElement||null)));let m=t.concat(i.slice(0,c+1)),h=()=>{let t;return t=u?f:d?p:n.route.Component?_.createElement(n.route.Component,null):n.route.element?n.route.element:e,_.createElement(St,{match:n,routeContext:{outlet:e,matches:m,isDataRoute:r!=null},children:t})};return r&&(n.route.ErrorBoundary||n.route.errorElement||c===0)?_.createElement(yt,{location:r.location,revalidation:r.revalidation,component:f,error:u,children:h(),routeContext:{outlet:null,matches:m,isDataRoute:!0},onError:l}):h()},null)}function wt(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function Tt(e){let t=_.useContext(We);return w(t,wt(e)),t}function Et(e){let t=_.useContext(Ge);return w(t,wt(e)),t}function Dt(e){let t=_.useContext($e);return w(t,wt(e)),t}function Ot(e){let t=Dt(e),n=t.matches[t.matches.length-1];return w(n.route.id,`${e} can only be used on routes that contain a unique "id"`),n.route.id}function kt(){return Ot(`useRouteId`)}function At(){return Et(`useNavigation`).navigation}function jt(){let{matches:e,loaderData:t}=Et(`useMatches`);return _.useMemo(()=>e.map(e=>D(e,t)),[e,t])}function Mt(){let e=_.useContext(et),t=Et(`useRouteError`),n=Ot(`useRouteError`);return e===void 0?t.errors?.[n]:e}function Nt(){let{router:e}=Tt(`useNavigate`),t=Ot(`useNavigate`),n=_.useRef(!1);return ut(()=>{n.current=!0}),_.useCallback(async(r,i={})=>{T(n.current,lt),n.current&&(typeof r==`number`?await e.navigate(r):await e.navigate(r,{fromRouteId:t,...i}))},[e,t])}var Pt={};function Ft(e,t,n){!t&&!Pt[e]&&(Pt[e]=!0,T(!1,n))}_.useOptimistic,_.memo(It);function It({routes:e,future:t,state:n,isStatic:r,onError:i}){return gt(e,void 0,{state:n,isStatic:r,onError:i,future:t})}function Lt(e){w(!1,`A <Route> is only ever to be used as the child of <Routes> element, never rendered directly. Please wrap your <Route> in a <Routes>.`)}function Rt({basename:e=`/`,children:t=null,location:n,navigationType:r=`POP`,navigator:i,static:a=!1,unstable_useTransitions:o}){w(!st(),`You cannot render a <Router> inside another <Router>. You should never have more than one in your app.`);let s=e.replace(/^\/*/,`/`),c=_.useMemo(()=>({basename:s,navigator:i,static:a,unstable_useTransitions:o,future:{}}),[s,i,a,o]);typeof n==`string`&&(n=oe(n));let{pathname:l=`/`,search:u=``,hash:d=``,state:f=null,key:p=`default`,unstable_mask:m}=n,h=_.useMemo(()=>{let e=Te(l,s);return e==null?null:{location:{pathname:e,search:u,hash:d,state:f,key:p,unstable_mask:m},navigationType:r}},[s,l,u,d,f,p,r,m]);return T(h!=null,`<Router basename="${s}"> is not able to match the URL "${l}${u}${d}" because it does not start with the basename, so the <Router> won't render anything.`),h==null?null:_.createElement(Ze.Provider,{value:c},_.createElement(Qe.Provider,{children:t,value:h}))}function zt({children:e,location:t}){return ht(Bt(e),t)}_.Component;function Bt(e,t=[]){let n=[];return _.Children.forEach(e,(e,r)=>{if(!_.isValidElement(e))return;let i=[...t,r];if(e.type===_.Fragment){n.push.apply(n,Bt(e.props.children,i));return}w(e.type===Lt,`[${typeof e.type==`string`?e.type:e.type.name}] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>`),w(!e.props.index||!e.props.children,`An index route cannot have child routes.`);let a={id:e.props.id||i.join(`-`),caseSensitive:e.props.caseSensitive,element:e.props.element,Component:e.props.Component,index:e.props.index,path:e.props.path,middleware:e.props.middleware,loader:e.props.loader,action:e.props.action,hydrateFallbackElement:e.props.hydrateFallbackElement,HydrateFallback:e.props.HydrateFallback,errorElement:e.props.errorElement,ErrorBoundary:e.props.ErrorBoundary,hasErrorBoundary:e.props.hasErrorBoundary===!0||e.props.ErrorBoundary!=null||e.props.errorElement!=null,shouldRevalidate:e.props.shouldRevalidate,handle:e.props.handle,lazy:e.props.lazy};e.props.children&&(a.children=Bt(e.props.children,i)),n.push(a)}),n}var Vt=`get`,Ht=`application/x-www-form-urlencoded`;function Ut(e){return typeof HTMLElement<`u`&&e instanceof HTMLElement}function Wt(e){return Ut(e)&&e.tagName.toLowerCase()===`button`}function Gt(e){return Ut(e)&&e.tagName.toLowerCase()===`form`}function Kt(e){return Ut(e)&&e.tagName.toLowerCase()===`input`}function qt(e){return!!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}function Jt(e,t){return e.button===0&&(!t||t===`_self`)&&!qt(e)}function Yt(e=``){return new URLSearchParams(typeof e==`string`||Array.isArray(e)||e instanceof URLSearchParams?e:Object.keys(e).reduce((t,n)=>{let r=e[n];return t.concat(Array.isArray(r)?r.map(e=>[n,e]):[[n,r]])},[]))}function Xt(e,t){let n=Yt(e);return t&&t.forEach((e,r)=>{n.has(r)||t.getAll(r).forEach(e=>{n.append(r,e)})}),n}var Zt=null;function Qt(){if(Zt===null)try{new FormData(document.createElement(`form`),0),Zt=!1}catch{Zt=!0}return Zt}var $t=new Set([`application/x-www-form-urlencoded`,`multipart/form-data`,`text/plain`]);function en(e){return e!=null&&!$t.has(e)?(T(!1,`"${e}" is not a valid \`encType\` for \`<Form>\`/\`<fetcher.Form>\` and will default to "${Ht}"`),null):e}function tn(e,t){let n,r,i,a,o;if(Gt(e)){let o=e.getAttribute(`action`);r=o?Te(o,t):null,n=e.getAttribute(`method`)||Vt,i=en(e.getAttribute(`enctype`))||Ht,a=new FormData(e)}else if(Wt(e)||Kt(e)&&(e.type===`submit`||e.type===`image`)){let o=e.form;if(o==null)throw Error(`Cannot submit a <button> or <input type="submit"> without a <form>`);let s=e.getAttribute(`formaction`)||o.getAttribute(`action`);if(r=s?Te(s,t):null,n=e.getAttribute(`formmethod`)||o.getAttribute(`method`)||Vt,i=en(e.getAttribute(`formenctype`))||en(o.getAttribute(`enctype`))||Ht,a=new FormData(o,e),!Qt()){let{name:t,type:n,value:r}=e;if(n===`image`){let e=t?`${t}.`:``;a.append(`${e}x`,`0`),a.append(`${e}y`,`0`)}else t&&a.append(t,r)}}else if(Ut(e))throw Error(`Cannot submit element that is not <form>, <button>, or <input type="submit|image">`);else n=Vt,r=null,i=Ht,o=e;return a&&i===`text/plain`&&(o=a,a=void 0),{action:r,method:n.toLowerCase(),encType:i,formData:a,body:o}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);var nn={"&":`\\u0026`,">":`\\u003e`,"<":`\\u003c`,"\u2028":`\\u2028`,"\u2029":`\\u2029`},rn=/[&><\u2028\u2029]/g;function an(e){return e.replace(rn,e=>nn[e])}function on(e,t){if(e===!1||e==null)throw Error(t)}function sn(e,t,n,r){let i=typeof e==`string`?new URL(e,typeof window>`u`?`server://singlefetch/`:window.location.origin):e;return n?i.pathname.endsWith(`/`)?i.pathname=`${i.pathname}_.${r}`:i.pathname=`${i.pathname}.${r}`:i.pathname===`/`?i.pathname=`_root.${r}`:t&&Te(i.pathname,t)===`/`?i.pathname=`${t.replace(/\/$/,``)}/_root.${r}`:i.pathname=`${i.pathname.replace(/\/$/,``)}.${r}`,i}async function cn(e,t){if(e.id in t)return t[e.id];try{let n=await ee(()=>import(e.module),[]);return t[e.id]=n,n}catch(t){return console.error(`Error loading route module \`${e.module}\`, reloading page...`),console.error(t),window.__reactRouterContext&&window.__reactRouterContext.isSpaMode,window.location.reload(),new Promise(()=>{})}}function ln(e){return e!=null&&typeof e.page==`string`}function un(e){return e==null?!1:e.href==null?e.rel===`preload`&&typeof e.imageSrcSet==`string`&&typeof e.imageSizes==`string`:typeof e.rel==`string`&&typeof e.href==`string`}async function dn(e,t,n){return gn((await Promise.all(e.map(async e=>{let r=t.routes[e.route.id];if(r){let e=await cn(r,n);return e.links?e.links():[]}return[]}))).flat(1).filter(un).filter(e=>e.rel===`stylesheet`||e.rel===`preload`).map(e=>e.rel===`stylesheet`?{...e,rel:`prefetch`,as:`style`}:{...e,rel:`prefetch`}))}function fn(e,t,n,r,i,a){let o=(e,t)=>n[t]?e.route.id!==n[t].route.id:!0,s=(e,t)=>n[t].pathname!==e.pathname||n[t].route.path?.endsWith(`*`)&&n[t].params[`*`]!==e.params[`*`];return a===`assets`?t.filter((e,t)=>o(e,t)||s(e,t)):a===`data`?t.filter((t,a)=>{let c=r.routes[t.route.id];if(!c||!c.hasLoader)return!1;if(o(t,a)||s(t,a))return!0;if(t.route.shouldRevalidate){let r=t.route.shouldRevalidate({currentUrl:new URL(i.pathname+i.search+i.hash,window.origin),currentParams:n[0]?.params||{},nextUrl:new URL(e,window.origin),nextParams:t.params,defaultShouldRevalidate:!0});if(typeof r==`boolean`)return r}return!0}):[]}function pn(e,t,{includeHydrateFallback:n}={}){return mn(e.map(e=>{let r=t.routes[e.route.id];if(!r)return[];let i=[r.module];return r.clientActionModule&&(i=i.concat(r.clientActionModule)),r.clientLoaderModule&&(i=i.concat(r.clientLoaderModule)),n&&r.hydrateFallbackModule&&(i=i.concat(r.hydrateFallbackModule)),r.imports&&(i=i.concat(r.imports)),i}).flat(1))}function mn(e){return[...new Set(e)]}function hn(e){let t={},n=Object.keys(e).sort();for(let r of n)t[r]=e[r];return t}function gn(e,t){let n=new Set,r=new Set(t);return e.reduce((e,i)=>{if(t&&!ln(i)&&i.as===`script`&&i.href&&r.has(i.href))return e;let a=JSON.stringify(hn(i));return n.has(a)||(n.add(a),e.push({key:a,link:i})),e},[])}function _n(){let e=_.useContext(We);return on(e,`You must render this element inside a <DataRouterContext.Provider> element`),e}function vn(){let e=_.useContext(Ge);return on(e,`You must render this element inside a <DataRouterStateContext.Provider> element`),e}var yn=_.createContext(void 0);yn.displayName=`FrameworkContext`;function bn(){let e=_.useContext(yn);return on(e,`You must render this element inside a <HydratedRouter> element`),e}function xn(e,t){let n=_.useContext(yn),[r,i]=_.useState(!1),[a,o]=_.useState(!1),{onFocus:s,onBlur:c,onMouseEnter:l,onMouseLeave:u,onTouchStart:d}=t,f=_.useRef(null);_.useEffect(()=>{if(e===`render`&&o(!0),e===`viewport`){let e=new IntersectionObserver(e=>{e.forEach(e=>{o(e.isIntersecting)})},{threshold:.5});return f.current&&e.observe(f.current),()=>{e.disconnect()}}},[e]),_.useEffect(()=>{if(r){let e=setTimeout(()=>{o(!0)},100);return()=>{clearTimeout(e)}}},[r]);let p=()=>{i(!0)},m=()=>{i(!1),o(!1)};return n?e===`intent`?[a,f,{onFocus:Sn(s,p),onBlur:Sn(c,m),onMouseEnter:Sn(l,p),onMouseLeave:Sn(u,m),onTouchStart:Sn(d,p)}]:[a,f,{}]:[!1,f,{}]}function Sn(e,t){return n=>{e&&e(n),n.defaultPrevented||t(n)}}function Cn({page:e,...t}){let n=qe(),{router:r}=_n(),i=_.useMemo(()=>le(r.routes,e,r.basename),[r.routes,e,r.basename]);return i?n?_.createElement(Tn,{page:e,matches:i,...t}):_.createElement(En,{page:e,matches:i,...t}):null}function wn(e){let{manifest:t,routeModules:n}=bn(),[r,i]=_.useState([]);return _.useEffect(()=>{let r=!1;return dn(e,t,n).then(e=>{r||i(e)}),()=>{r=!0}},[e,t,n]),r}function Tn({page:e,matches:t,...n}){let r=ct(),{future:i}=bn(),{basename:a}=_n(),o=_.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=sn(e,a,i.unstable_trailingSlashAwareDataRequests,`rsc`),o=!1,s=[];for(let e of t)typeof e.route.shouldRevalidate==`function`?o=!0:s.push(e.route.id);return o&&s.length>0&&n.searchParams.set(`_routes`,s.join(`,`)),[n.pathname+n.search]},[a,i.unstable_trailingSlashAwareDataRequests,e,r,t]);return _.createElement(_.Fragment,null,o.map(e=>_.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})))}function En({page:e,matches:t,...n}){let r=ct(),{future:i,manifest:a,routeModules:o}=bn(),{basename:s}=_n(),{loaderData:c,matches:l}=vn(),u=_.useMemo(()=>fn(e,t,l,a,r,`data`),[e,t,l,a,r]),d=_.useMemo(()=>fn(e,t,l,a,r,`assets`),[e,t,l,a,r]),f=_.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=new Set,l=!1;if(t.forEach(e=>{let t=a.routes[e.route.id];!t||!t.hasLoader||(!u.some(t=>t.route.id===e.route.id)&&e.route.id in c&&o[e.route.id]?.shouldRevalidate||t.hasClientLoader?l=!0:n.add(e.route.id))}),n.size===0)return[];let d=sn(e,s,i.unstable_trailingSlashAwareDataRequests,`data`);return l&&n.size>0&&d.searchParams.set(`_routes`,t.filter(e=>n.has(e.route.id)).map(e=>e.route.id).join(`,`)),[d.pathname+d.search]},[s,i.unstable_trailingSlashAwareDataRequests,c,r,a,u,t,e,o]),p=_.useMemo(()=>pn(d,a),[d,a]),m=wn(d);return _.createElement(_.Fragment,null,f.map(e=>_.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})),p.map(e=>_.createElement(`link`,{key:e,rel:`modulepreload`,href:e,...n})),m.map(({key:e,link:t})=>_.createElement(`link`,{key:e,nonce:n.nonce,...t,crossOrigin:t.crossOrigin??n.crossOrigin})))}function Dn(...e){return t=>{e.forEach(e=>{typeof e==`function`?e(t):e!=null&&(e.current=t)})}}_.Component;var On=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;try{On&&(window.__reactRouterVersion=`7.14.0`)}catch{}function kn({basename:e,children:t,unstable_useTransitions:n,window:r}){let i=_.useRef();i.current??=te({window:r,v5Compat:!0});let a=i.current,[o,s]=_.useState({action:a.action,location:a.location}),c=_.useCallback(e=>{n===!1?s(e):_.startTransition(()=>s(e))},[n]);return _.useLayoutEffect(()=>a.listen(c),[a,c]),_.createElement(Rt,{basename:e,children:t,location:o.location,navigationType:o.action,navigator:a,unstable_useTransitions:n})}function An({basename:e,children:t,history:n,unstable_useTransitions:r}){let[i,a]=_.useState({action:n.action,location:n.location}),o=_.useCallback(e=>{r===!1?a(e):_.startTransition(()=>a(e))},[r]);return _.useLayoutEffect(()=>n.listen(o),[n,o]),_.createElement(Rt,{basename:e,children:t,location:i.location,navigationType:i.action,navigator:n,unstable_useTransitions:r})}An.displayName=`unstable_HistoryRouter`;var jn=/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,k=_.forwardRef(function({onClick:e,discover:t=`render`,prefetch:n=`none`,relative:r,reloadDocument:i,replace:a,unstable_mask:o,state:s,target:c,to:l,preventScrollReset:u,viewTransition:d,unstable_defaultShouldRevalidate:f,...p},m){let{basename:h,navigator:g,unstable_useTransitions:v}=_.useContext(Ze),y=typeof l==`string`&&jn.test(l),b=Ve(l,h);l=b.to;let x=ot(l,{relative:r}),ee=ct(),S=null;if(o){let e=Me(o,[],ee.unstable_mask?ee.unstable_mask.pathname:`/`,!0);h!==`/`&&(e.pathname=e.pathname===`/`?h:Ne([h,e.pathname])),S=g.createHref(e)}let[C,te,w]=xn(n,p),T=Rn(l,{replace:a,unstable_mask:o,state:s,target:c,preventScrollReset:u,relative:r,viewTransition:d,unstable_defaultShouldRevalidate:f,unstable_useTransitions:v});function ne(t){e&&e(t),t.defaultPrevented||T(t)}let re=!(b.isExternal||i),ie=_.createElement(`a`,{...p,...w,href:(re?S:void 0)||b.absoluteURL||x,onClick:re?ne:e,ref:Dn(m,te),target:c,"data-discover":!y&&t===`render`?`true`:void 0});return C&&!y?_.createElement(_.Fragment,null,ie,_.createElement(Cn,{page:x})):ie});k.displayName=`Link`;var Mn=_.forwardRef(function({"aria-current":e=`page`,caseSensitive:t=!1,className:n=``,end:r=!1,style:i,to:a,viewTransition:o,children:s,...c},l){let u=mt(a,{relative:c.relative}),d=ct(),f=_.useContext(Ge),{navigator:p,basename:m}=_.useContext(Ze),h=f!=null&&Yn(u)&&o===!0,g=p.encodeLocation?p.encodeLocation(u).pathname:u.pathname,v=d.pathname,y=f&&f.navigation&&f.navigation.location?f.navigation.location.pathname:null;t||(v=v.toLowerCase(),y=y?y.toLowerCase():null,g=g.toLowerCase()),y&&m&&(y=Te(y,m)||y);let b=g!==`/`&&g.endsWith(`/`)?g.length-1:g.length,x=v===g||!r&&v.startsWith(g)&&v.charAt(b)===`/`,ee=y!=null&&(y===g||!r&&y.startsWith(g)&&y.charAt(g.length)===`/`),S={isActive:x,isPending:ee,isTransitioning:h},C=x?e:void 0,te;te=typeof n==`function`?n(S):[n,x?`active`:null,ee?`pending`:null,h?`transitioning`:null].filter(Boolean).join(` `);let w=typeof i==`function`?i(S):i;return _.createElement(k,{...c,"aria-current":C,className:te,ref:l,style:w,to:a,viewTransition:o},typeof s==`function`?s(S):s)});Mn.displayName=`NavLink`;var Nn=_.forwardRef(({discover:e=`render`,fetcherKey:t,navigate:n,reloadDocument:r,replace:i,state:a,method:o=Vt,action:s,onSubmit:c,relative:l,preventScrollReset:u,viewTransition:d,unstable_defaultShouldRevalidate:f,...p},m)=>{let{unstable_useTransitions:h}=_.useContext(Ze),g=Hn(),v=Un(s,{relative:l}),y=o.toLowerCase()===`get`?`get`:`post`,b=typeof s==`string`&&jn.test(s);return _.createElement(`form`,{ref:m,method:y,action:v,onSubmit:r?c:e=>{if(c&&c(e),e.defaultPrevented)return;e.preventDefault();let r=e.nativeEvent.submitter,s=r?.getAttribute(`formmethod`)||o,p=()=>g(r||e.currentTarget,{fetcherKey:t,method:s,navigate:n,replace:i,state:a,relative:l,preventScrollReset:u,viewTransition:d,unstable_defaultShouldRevalidate:f});h&&n!==!1?_.startTransition(()=>p()):p()},...p,"data-discover":!b&&e===`render`?`true`:void 0})});Nn.displayName=`Form`;function Pn({getKey:e,storageKey:t,...n}){let r=_.useContext(yn),{basename:i}=_.useContext(Ze),a=ct(),o=jt();qn({getKey:e,storageKey:t});let s=_.useMemo(()=>{if(!r||!e)return null;let t=Kn(a,o,i,e);return t===a.key?null:t},[]);if(!r||r.isSpaMode)return null;let c=((e,t)=>{if(!window.history.state||!window.history.state.key){let e=Math.random().toString(32).slice(2);window.history.replaceState({key:e},``)}try{let n=JSON.parse(sessionStorage.getItem(e)||`{}`)[t||window.history.state.key];typeof n==`number`&&window.scrollTo(0,n)}catch(t){console.error(t),sessionStorage.removeItem(e)}}).toString();return _.createElement(`script`,{...n,suppressHydrationWarning:!0,dangerouslySetInnerHTML:{__html:`(${c})(${an(JSON.stringify(t||Wn))}, ${an(JSON.stringify(s))})`}})}Pn.displayName=`ScrollRestoration`;function Fn(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function In(e){let t=_.useContext(We);return w(t,Fn(e)),t}function Ln(e){let t=_.useContext(Ge);return w(t,Fn(e)),t}function Rn(e,{target:t,replace:n,unstable_mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,unstable_defaultShouldRevalidate:c,unstable_useTransitions:l}={}){let u=dt(),d=ct(),f=mt(e,{relative:o});return _.useCallback(p=>{if(Jt(p,t)){p.preventDefault();let t=n===void 0?ae(d)===ae(f):n,m=()=>u(e,{replace:t,unstable_mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,unstable_defaultShouldRevalidate:c});l?_.startTransition(()=>m()):m()}},[d,u,f,n,r,i,t,e,a,o,s,c,l])}function zn(e){T(typeof URLSearchParams<`u`,"You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params.");let t=_.useRef(Yt(e)),n=_.useRef(!1),r=ct(),i=_.useMemo(()=>Xt(r.search,n.current?null:t.current),[r.search]),a=dt();return[i,_.useCallback((e,t)=>{let r=Yt(typeof e==`function`?e(new URLSearchParams(i)):e);n.current=!0,a(`?`+r,t)},[a,i])]}var Bn=0,Vn=()=>`__${String(++Bn)}__`;function Hn(){let{router:e}=In(`useSubmit`),{basename:t}=_.useContext(Ze),n=kt(),r=e.fetch,i=e.navigate;return _.useCallback(async(e,a={})=>{let{action:o,method:s,encType:c,formData:l,body:u}=tn(e,t);a.navigate===!1?await r(a.fetcherKey||Vn(),n,a.action||o,{unstable_defaultShouldRevalidate:a.unstable_defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,flushSync:a.flushSync}):await i(a.action||o,{unstable_defaultShouldRevalidate:a.unstable_defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,replace:a.replace,state:a.state,fromRouteId:n,flushSync:a.flushSync,viewTransition:a.viewTransition})},[r,i,t,n])}function Un(e,{relative:t}={}){let{basename:n}=_.useContext(Ze),r=_.useContext($e);w(r,`useFormAction must be used inside a RouteContext`);let[i]=r.matches.slice(-1),a={...mt(e||`.`,{relative:t})},o=ct();if(e==null){a.search=o.search;let e=new URLSearchParams(a.search),t=e.getAll(`index`);if(t.some(e=>e===``)){e.delete(`index`),t.filter(e=>e).forEach(t=>e.append(`index`,t));let n=e.toString();a.search=n?`?${n}`:``}}return(!e||e===`.`)&&i.route.index&&(a.search=a.search?a.search.replace(/^\?/,`?index&`):`?index`),n!==`/`&&(a.pathname=a.pathname===`/`?n:Ne([n,a.pathname])),ae(a)}var Wn=`react-router-scroll-positions`,Gn={};function Kn(e,t,n,r){let i=null;return r&&(i=r(n===`/`?e:{...e,pathname:Te(e.pathname,n)||e.pathname},t)),i??=e.key,i}function qn({getKey:e,storageKey:t}={}){let{router:n}=In(`useScrollRestoration`),{restoreScrollPosition:r,preventScrollReset:i}=Ln(`useScrollRestoration`),{basename:a}=_.useContext(Ze),o=ct(),s=jt(),c=At();_.useEffect(()=>(window.history.scrollRestoration=`manual`,()=>{window.history.scrollRestoration=`auto`}),[]),Jn(_.useCallback(()=>{if(c.state===`idle`){let t=Kn(o,s,a,e);Gn[t]=window.scrollY}try{sessionStorage.setItem(t||Wn,JSON.stringify(Gn))}catch(e){T(!1,`Failed to save scroll positions in sessionStorage, <ScrollRestoration /> will not work properly (${e}).`)}window.history.scrollRestoration=`auto`},[c.state,e,a,o,s,t])),typeof document<`u`&&(_.useLayoutEffect(()=>{try{let e=sessionStorage.getItem(t||Wn);e&&(Gn=JSON.parse(e))}catch{}},[t]),_.useLayoutEffect(()=>{let t=n?.enableScrollRestoration(Gn,()=>window.scrollY,e?(t,n)=>Kn(t,n,a,e):void 0);return()=>t&&t()},[n,a,e]),_.useLayoutEffect(()=>{if(r!==!1){if(typeof r==`number`){window.scrollTo(0,r);return}try{if(o.hash){let e=document.getElementById(decodeURIComponent(o.hash.slice(1)));if(e){e.scrollIntoView();return}}}catch{T(!1,`"${o.hash.slice(1)}" is not a decodable element ID. The view will not scroll to it.`)}i!==!0&&window.scrollTo(0,0)}},[o,r,i]))}function Jn(e,t){let{capture:n}=t||{};_.useEffect(()=>{let t=n==null?void 0:{capture:n};return window.addEventListener(`pagehide`,e,t),()=>{window.removeEventListener(`pagehide`,e,t)}},[e,n])}function Yn(e,{relative:t}={}){let n=_.useContext(Je);w(n!=null,"`useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?");let{basename:r}=In(`useViewTransitionState`),i=mt(e,{relative:t});if(!n.isTransitioning)return!1;let a=Te(n.currentLocation.pathname,r)||n.currentLocation.pathname,o=Te(n.nextLocation.pathname,r)||n.nextLocation.pathname;return Se(i.pathname,o)!=null||Se(i.pathname,a)!=null}var Xn=(...e)=>e.filter((e,t,n)=>!!e&&e.trim()!==``&&n.indexOf(e)===t).join(` `).trim(),Zn=e=>e.replace(/([a-z0-9])([A-Z])/g,`$1-$2`).toLowerCase(),Qn=e=>e.replace(/^([A-Z])|[\s-_]+(\w)/g,(e,t,n)=>n?n.toUpperCase():t.toLowerCase()),$n=e=>{let t=Qn(e);return t.charAt(0).toUpperCase()+t.slice(1)},er={xmlns:`http://www.w3.org/2000/svg`,width:24,height:24,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`},tr=e=>{for(let t in e)if(t.startsWith(`aria-`)||t===`role`||t===`title`)return!0;return!1},nr=(0,_.createContext)({}),rr=()=>(0,_.useContext)(nr),ir=(0,_.forwardRef)(({color:e,size:t,strokeWidth:n,absoluteStrokeWidth:r,className:i=``,children:a,iconNode:o,...s},c)=>{let{size:l=24,strokeWidth:u=2,absoluteStrokeWidth:d=!1,color:f=`currentColor`,className:p=``}=rr()??{},m=r??d?Number(n??u)*24/Number(t??l):n??u;return(0,_.createElement)(`svg`,{ref:c,...er,width:t??l??er.width,height:t??l??er.height,stroke:e??f,strokeWidth:m,className:Xn(`lucide`,p,i),...!a&&!tr(s)&&{"aria-hidden":`true`},...s},[...o.map(([e,t])=>(0,_.createElement)(e,t)),...Array.isArray(a)?a:[a]])}),A=(e,t)=>{let n=(0,_.forwardRef)(({className:n,...r},i)=>(0,_.createElement)(ir,{ref:i,iconNode:t,className:Xn(`lucide-${Zn($n(e))}`,`lucide-${e}`,n),...r}));return n.displayName=$n(e),n},ar=A(`arrow-right`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}],[`path`,{d:`m12 5 7 7-7 7`,key:`xquz4c`}]]),or=A(`arrow-up`,[[`path`,{d:`m5 12 7-7 7 7`,key:`hav0vg`}],[`path`,{d:`M12 19V5`,key:`x0mq9r`}]]),sr=A(`award`,[[`path`,{d:`m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526`,key:`1yiouv`}],[`circle`,{cx:`12`,cy:`8`,r:`6`,key:`1vp47v`}]]),cr=A(`bookmark`,[[`path`,{d:`M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z`,key:`oz39mx`}]]),lr=A(`calendar`,[[`path`,{d:`M8 2v4`,key:`1cmpym`}],[`path`,{d:`M16 2v4`,key:`4m81vk`}],[`rect`,{width:`18`,height:`18`,x:`3`,y:`4`,rx:`2`,key:`1hopcy`}],[`path`,{d:`M3 10h18`,key:`8toen8`}]]),ur=A(`check`,[[`path`,{d:`M20 6 9 17l-5-5`,key:`1gmf2c`}]]),dr=A(`chevron-down`,[[`path`,{d:`m6 9 6 6 6-6`,key:`qrunsl`}]]),fr=A(`chevron-left`,[[`path`,{d:`m15 18-6-6 6-6`,key:`1wnfg3`}]]),pr=A(`chevron-right`,[[`path`,{d:`m9 18 6-6-6-6`,key:`mthhwq`}]]),mr=A(`clock`,[[`circle`,{cx:`12`,cy:`12`,r:`10`,key:`1mglay`}],[`path`,{d:`M12 6v6l4 2`,key:`mmk7yg`}]]),hr=A(`external-link`,[[`path`,{d:`M15 3h6v6`,key:`1q9fwt`}],[`path`,{d:`M10 14 21 3`,key:`gplh6r`}],[`path`,{d:`M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6`,key:`a6xqqp`}]]),gr=A(`heart`,[[`path`,{d:`M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5`,key:`mvr1a0`}]]),_r=A(`image`,[[`rect`,{width:`18`,height:`18`,x:`3`,y:`3`,rx:`2`,ry:`2`,key:`1m3agn`}],[`circle`,{cx:`9`,cy:`9`,r:`2`,key:`af1f0g`}],[`path`,{d:`m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21`,key:`1xmnt7`}]]),vr=A(`link-2`,[[`path`,{d:`M9 17H7A5 5 0 0 1 7 7h2`,key:`8i5ue5`}],[`path`,{d:`M15 7h2a5 5 0 1 1 0 10h-2`,key:`1b9ql8`}],[`line`,{x1:`8`,x2:`16`,y1:`12`,y2:`12`,key:`1jonct`}]]),yr=A(`menu`,[[`path`,{d:`M4 5h16`,key:`1tepv9`}],[`path`,{d:`M4 12h16`,key:`1lakjw`}],[`path`,{d:`M4 19h16`,key:`1djgab`}]]),br=A(`play`,[[`path`,{d:`M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z`,key:`10ikf1`}]]),xr=A(`quote`,[[`path`,{d:`M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z`,key:`rib7q0`}],[`path`,{d:`M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z`,key:`1ymkrd`}]]),Sr=A(`send`,[[`path`,{d:`M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z`,key:`1ffxy3`}],[`path`,{d:`m21.854 2.147-10.94 10.939`,key:`12cjpa`}]]),Cr=A(`share-2`,[[`circle`,{cx:`18`,cy:`5`,r:`3`,key:`gq8acd`}],[`circle`,{cx:`6`,cy:`12`,r:`3`,key:`w7nqdw`}],[`circle`,{cx:`18`,cy:`19`,r:`3`,key:`1xt0gg`}],[`line`,{x1:`8.59`,x2:`15.42`,y1:`13.51`,y2:`17.49`,key:`47mynk`}],[`line`,{x1:`15.41`,x2:`8.59`,y1:`6.51`,y2:`10.49`,key:`1n3mei`}]]),wr=A(`sparkles`,[[`path`,{d:`M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z`,key:`1s2grr`}],[`path`,{d:`M20 2v4`,key:`1rf3ol`}],[`path`,{d:`M22 4h-4`,key:`gwowj6`}],[`circle`,{cx:`4`,cy:`20`,r:`2`,key:`6kqj1y`}]]),Tr=A(`users`,[[`path`,{d:`M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2`,key:`1yyitq`}],[`path`,{d:`M16 3.128a4 4 0 0 1 0 7.744`,key:`16gr8j`}],[`path`,{d:`M22 21v-2a4 4 0 0 0-3-3.87`,key:`kshegd`}],[`circle`,{cx:`9`,cy:`7`,r:`4`,key:`nufk8`}]]),Er=A(`x`,[[`path`,{d:`M18 6 6 18`,key:`1bl5f8`}],[`path`,{d:`m6 6 12 12`,key:`d8bk6v`}]]),Dr=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),j=o(((e,t)=>{t.exports=Dr()}))(),Or=[{label:`Trends`,items:[`Color`,`Technique`,`Cut & Style`,`Texture`]},{label:`Inspiration`,items:[`Tips`,`Business`]},{label:`Hair Care`,items:[`Products`,`Hair Thinning`,`At-Home Tips`]}];function M(){let[e,t]=(0,_.useState)(!1),[n,r]=(0,_.useState)(null);return(0,j.jsxs)(`header`,{className:`relative z-50 bg-black border-b border-white/10`,children:[(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4`,children:(0,j.jsxs)(`div`,{className:`flex items-center justify-between h-16 md:h-20 relative`,children:[(0,j.jsx)(`button`,{className:`md:hidden text-charcoal-300 hover:text-white p-1 z-10`,onClick:()=>t(!e),"aria-label":`Toggle menu`,children:e?(0,j.jsx)(Er,{size:22}):(0,j.jsx)(yr,{size:22})}),(0,j.jsxs)(k,{to:`/`,className:`absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex flex-col items-center md:items-start`,children:[(0,j.jsx)(`img`,{src:`/image/site-logo.svg`,alt:`HairProVoices`,className:`h-8 md:h-12 object-contain`}),(0,j.jsx)(`span`,{className:`text-[8px] tracking-[0.35em] uppercase text-charcoal-400 hidden md:block mt-0.5`,children:`Your Guide to Great Hair`})]}),(0,j.jsxs)(`nav`,{className:`hidden md:flex items-center gap-1`,children:[Or.map(e=>(0,j.jsxs)(`div`,{className:`relative group`,onMouseEnter:()=>r(e.label),onMouseLeave:()=>r(null),children:[(0,j.jsxs)(`button`,{className:`flex items-center gap-1 px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors`,children:[e.label,(0,j.jsx)(dr,{size:10,className:`opacity-60`})]}),n===e.label&&(0,j.jsx)(`div`,{className:`absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl`,children:e.items.map(e=>(0,j.jsx)(k,{to:`/articles?category=${encodeURIComponent(e)}`,className:`block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors`,onClick:()=>r(null),children:e},e))})]},e.label)),(0,j.jsx)(k,{to:`/gallery`,className:`px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors`,children:`Gallery`}),(0,j.jsx)(k,{to:`/articles`,className:`px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors`,children:`All Articles`}),(0,j.jsxs)(`div`,{className:`relative group`,onMouseEnter:()=>r(`Community`),onMouseLeave:()=>r(null),children:[(0,j.jsxs)(`button`,{className:`flex items-center gap-1 px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors`,children:[`Community`,(0,j.jsx)(dr,{size:10,className:`opacity-60`})]}),n===`Community`&&(0,j.jsxs)(`div`,{className:`absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl`,children:[(0,j.jsx)(k,{to:`/contributors`,className:`block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors`,onClick:()=>r(null),children:`Contributors`}),(0,j.jsx)(k,{to:`/about`,className:`block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors`,onClick:()=>r(null),children:`About Us`})]})]})]})]})}),e&&(0,j.jsxs)(`div`,{className:`md:hidden bg-black border-t border-white/10 pb-4`,children:[Or.map(e=>(0,j.jsxs)(`div`,{className:`border-b border-white/5`,children:[(0,j.jsxs)(`button`,{onClick:()=>r(n===e.label?null:e.label),className:`flex justify-between items-center w-full px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300`,children:[e.label,(0,j.jsx)(dr,{size:12,className:`transition-transform ${n===e.label?`rotate-180`:``}`})]}),n===e.label&&(0,j.jsx)(`div`,{className:`px-4 pb-3 flex flex-col gap-2`,children:e.items.map(e=>(0,j.jsx)(k,{to:`/articles?category=${encodeURIComponent(e)}`,className:`text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500`,onClick:()=>{t(!1),r(null)},children:e},e))})]},e.label)),(0,j.jsx)(`div`,{className:`border-b border-white/5`,children:(0,j.jsx)(k,{to:`/gallery`,className:`block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500`,onClick:()=>t(!1),children:`Gallery`})}),(0,j.jsx)(`div`,{className:`border-b border-white/5`,children:(0,j.jsx)(k,{to:`/articles`,className:`block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500`,onClick:()=>t(!1),children:`All Articles`})}),(0,j.jsxs)(`div`,{className:`border-b border-white/5`,children:[(0,j.jsxs)(`button`,{onClick:()=>r(n===`Community`?null:`Community`),className:`flex justify-between items-center w-full px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300`,children:[`Community`,(0,j.jsx)(dr,{size:12,className:`transition-transform ${n===`Community`?`rotate-180`:``}`})]}),n===`Community`&&(0,j.jsxs)(`div`,{className:`px-4 pb-3 flex flex-col gap-2`,children:[(0,j.jsx)(k,{to:`/contributors`,className:`text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500`,onClick:()=>{t(!1),r(null)},children:`Contributors`}),(0,j.jsx)(k,{to:`/about`,className:`text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500`,onClick:()=>{t(!1),r(null)},children:`About Us`})]})]})]})]})}var kr=[{label:`Trends`,items:[`Color`,`Technique`,`Cut & Style`,`Texture`]},{label:`Inspiration`,items:[`Tips`,`Business`]},{label:`Hair Care`,items:[`Products`,`Hair Thinning`,`At-Home Tips`]},{label:`Community`,items:[`Contributors`,`About Us`]}],Ar={Contributors:`/contributors`,"About Us":`/about`};function jr(){let[e,t]=(0,_.useState)(!1),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(null);(0,_.useEffect)(()=>{let e=()=>{t(window.scrollY>80),window.scrollY<=80&&r(!1)};return window.addEventListener(`scroll`,e,{passive:!0}),()=>window.removeEventListener(`scroll`,e)},[]);let o=()=>{r(!1),a(null)};return e?(0,j.jsxs)(j.Fragment,{children:[n&&(0,j.jsx)(`div`,{className:`fixed inset-0 z-40`,onClick:o}),(0,j.jsxs)(`div`,{className:`fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2`,children:[n&&(0,j.jsxs)(`div`,{className:`bg-black border border-white/10 shadow-2xl py-2 w-56`,children:[(0,j.jsxs)(`button`,{onClick:()=>{window.scrollTo({top:0,behavior:`smooth`}),o()},className:`flex items-center gap-3 w-full px-4 py-2.5 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors`,children:[(0,j.jsx)(or,{size:11}),` Back to Top`]}),(0,j.jsx)(`div`,{className:`h-px bg-white/5 my-1`}),kr.map(e=>(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`button`,{onClick:()=>a(i===e.label?null:e.label),className:`flex items-center justify-between w-full px-4 py-2.5 text-[11px] tracking-widest uppercase text-charcoal-300 hover:text-white hover:bg-white/5 transition-colors`,children:[e.label,(0,j.jsx)(dr,{size:10,className:`opacity-60 transition-transform ${i===e.label?`rotate-180`:``}`})]}),i===e.label&&(0,j.jsx)(`div`,{className:`bg-white/[0.03] border-t border-b border-white/5 py-1`,children:e.items.map(e=>(0,j.jsx)(k,{to:Ar[e]??`/articles?category=${encodeURIComponent(e)}`,onClick:o,className:`block pl-7 pr-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-500 hover:text-gold-500 transition-colors`,children:e},e))})]},e.label)),(0,j.jsx)(`div`,{className:`h-px bg-white/5 my-1`}),[{label:`Gallery`,to:`/gallery`},{label:`All Articles`,to:`/articles`}].map(({label:e,to:t})=>(0,j.jsx)(k,{to:t,onClick:o,className:`block px-4 py-2.5 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors`,children:e},t))]}),(0,j.jsx)(`button`,{onClick:()=>r(e=>!e),className:`w-10 h-10 bg-gold-500 hover:bg-gold-400 text-black flex items-center justify-center shadow-lg transition-colors`,"aria-label":`Toggle navigation`,children:n?(0,j.jsx)(Er,{size:16}):(0,j.jsx)(yr,{size:16})})]})]}):null}var Mr={"Leila Fernandez":{name:`Leila Fernandez`,title:`Senior Color Editor`,bio:`Leila has been covering professional hair color for over a decade. A former colorist herself, she splits her time between salon visits, brand labs, and competitions to bring color professionals the most actionable, accurate coverage in the industry. She is based in Miami, FL.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b7/57/10/75/fe/v1_E10/E10IFLPC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=fb2875a42a0637430bcf64ce271045fd74eb5ecbec5a836b387f8581ab12cf25`},"Tom Harley":{name:`Tom Harley`,title:`Technique Editor`,bio:`Tom spent 12 years behind the chair in London and New York before turning to editorial. He specializes in cutting technique, men's grooming, and the science of layering. His work has appeared in trade publications across Europe and North America.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/43/9d/d8/e5/b2/v1_E10/E104D2JB.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=be0bdede456b2492c1b2c830d2cb8c359ce5b64f97a4fd6f6e219626a489cf41`},"Alex Nguyen":{name:`Alex Nguyen`,title:`Vivid Color Specialist`,bio:`Alex is a vivid color educator and session stylist based in Los Angeles. With a background in fashion editorial and a cult following for bold, saturated work, Alex writes about color formulation, creative technique, and building a specialty service menu.`,image:`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop&facepad=3`},"Imani Okafor":{name:`Imani Okafor`,title:`Texture & Curl Editor`,bio:`Imani is a curl specialist and educator with over eight years of experience working exclusively with textured hair. Based in Atlanta, she consults for salons transitioning to curl-forward service menus and writes about curl science, client communication, and product formulation.`,image:`https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80&auto=format&fit=crop&facepad=3`},"Dana Reeves":{name:`Dana Reeves`,title:`Salon Business Coach`,bio:`Dana runs a six-figure solo suite in Nashville and coaches stylists on pricing, retention, and building specialty service menus. She writes about the business side of the industry, from rebooking strategy to retail systems, with a focus on what actually works in the real world.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/bd92db6c-4bf9-45fc-83a9-60eadde7f7e7/5086e550-4ef9-4fab-9093-6fa52c0c349a.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a0f1c62eb426d2746b0289820d5b3f26441673747d02470dc54c95d46a358570`},"Michelle Torres":{name:`Michelle Torres`,title:`Color Technique Contributor`,bio:`Michelle is a balayage specialist and color educator based in Chicago. She has trained stylists across the Midwest on freehand techniques and tone correction, and writes about color placement, client consultations, and the art of the seamless grow-out.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/37/70/8f/6b/b1/v1_E10/E109UG8A.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9bef22b3e1b7e4a05829dfd77d8ad1b16179898b2b3d2ab02db876e21625c424`},"Maria Chen":{name:`Maria Chen`,title:`Client Experience Editor`,bio:`Maria covers the client side of the salon experience, from booking and consultation to aftercare and retention. A former salon manager turned writer, she brings an operational perspective to topics like stylist-client communication, service design, and building long-term loyalty.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/bc/bf/04/9b/f9/v1_E10/E101AL0Z.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9feb1f05368c7935079e43aa4ada5128981ac46c3b32722bc6cbc70f60c767e7`},"James Olivier":{name:`James Olivier`,title:`Hair Care & Science Writer`,bio:`James writes about the chemistry and biology behind healthy hair, from bond structure and porosity to scalp health and ingredient science. With a background in cosmetic chemistry, he translates complex formulation topics into practical guidance for stylists and clients alike.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/33/88/9e/b2/60/v1_E10/E1052XSF.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3d7e80ec154f9b1d851388991a4828e886eb4bf5f02dbb3bba565579131d4ef5`},"Dr. Sarah Kline":{name:`Dr. Sarah Kline`,title:`Trichology Advisor`,bio:`Dr. Kline is a board-certified trichologist and dermatology consultant who advises on scalp health, hair loss, and the clinical side of hair care. She contributes expert commentary on topics where science and salon practice intersect, including bond builders, porosity, and treatment protocols.`,image:`https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80&auto=format&fit=crop&facepad=3`},"Lauren Chavez":{name:`Lauren Chavez`,title:`Hair Health & Thinning Specialist`,bio:`Lauren is a senior stylist and hair health educator based in Miami with over 14 years behind the chair. She specializes in thinning hair, scalp care, and early-stage hair loss, and works closely with trichologists to bridge the gap between clinical advice and everyday salon practice. She writes about what stylists see, and what clients often miss.`,image:`/image/lauren.jpeg`},"Marissa Chen":{name:`Marissa Chen`,title:`Scalp Health & Wellness Editor`,bio:`Marissa is a scalp-focused stylist and wellness writer based in Los Angeles. With a background in trichology and holistic hair care, she specializes in scalp treatments, hair loss prevention, and the intersection of wellness rituals and professional hair care. She writes about what actually works, and what the science says.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/39/94/23/3e/90/v1_E10/E109INAW.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=9fdddee103b45b4f269091ec5c9b9fe9996232df6a60874ae79d81d9020baae4`},"Sophie Marchand":{name:`Sophie Marchand`,title:`Color & Client Experience Writer`,bio:`Sophie spent years as a salon client before training as a colorist in her late twenties. That dual perspective, knowing what it feels like to sit in the chair and not understand what is happening, shapes everything she writes. She covers color, consultations, and the client side of professional hair care from a place of genuine experience.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0b/a4/2f/25/66/v1_E10/E10APXJJ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=dc073b9de49c052fd6591ccc8b5e1978273c968e62eb9e8cdb363e98f3c1fe2e`},"Priya Allison":{name:`Priya Allison`,title:`At-Home Hair Care Editor`,bio:`Priya is a beauty writer and certified trichologist based in London who specializes in translating professional hair care advice into practical at-home routines. She has spent years interviewing stylists, testing products, and building guides that help people get better results between salon visits. She writes about scalp health, product selection, and the habits that actually move the needle.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/81/4e/42/a7/5b/v1_E10/E10Z9RG.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=7030a09d7ab3fa388f9a03d14111fd50d5b91d1f4a30e4e831bf1012447ee904`},"Cleo Hartley":{name:`Cleo Hartley`,title:`Salon Culture & Client Experience Writer`,bio:`Cleo is a writer and former salon receptionist who spent years watching consultations from the front desk before moving into editorial. She covers the human side of the salon experience, what stylists see, what clients miss, and the unspoken language that happens in the first five minutes of every appointment. Based in New York.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/79/0d/79/25/50/v1_E11/E118GL6Q.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f07cd042417aba19eee7d5e82c34e18742b8a6cebe8c9aa5b8e1d6bdff2710b7`},"Kasia Nowak":{name:`Kasia Nowak`,title:`Hair Health & Technique Specialist`,bio:`Kasia is a licensed cosmetologist with 12 years behind the chair, specializing in hair health diagnostics, damage prevention, and client education. She works with stylists across the country to improve consultation techniques and help clients understand the difference between cosmetic fixes and structural solutions. Based in Portland.`,image:`/image/kasia-nowak.jpg`},"Ji-Woo Park":{name:`Ji-Woo Park`,title:`K-Style & Editorial Hair Writer`,bio:`Ji-Woo is a Seoul-based hair writer and former assistant at one of Korea's top editorial agencies. She covers K-pop and K-drama hair trends, the stylists behind them, and how Korean hair culture influences global salon work. She writes about technique, color, and the cultural context that makes Korean hair aesthetics so widely referenced.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/07/fd/41/e8/3f/v1_E10/E10AGBRO.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=05fffed1db341fa09475a871261fb3369c2051016f8bdb14d8c73c682303d500`},"Charlotte Conaway":{name:`Charlotte Moss`,title:`Red Carpet & Editorial Hair Writer`,bio:`Charlotte is a beauty journalist and former session stylist assistant who has covered red carpet hair for over eight years. She has been on the ground at fashion weeks in New York, Paris, and Milan, and writes about the craft behind high-profile looks, the technique, the intention, and what stylists are actually saying about them. Based in Los Angeles.`,image:`https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80&auto=format&fit=crop&facepad=3`},"Nora Bell":{name:`Nora Bell`,title:`Cut & Styling Contributor`,bio:`Nora is a salon stylist and beauty writer based in Charleston. She specializes in soft occasion styling, wearable updos, and low-effort finishing techniques that help clients feel polished without looking overdone.`,image:`https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop&facepad=3`},"Yuna Seo":{name:`Yuna Seo`,title:`Cut & Style Editor`,bio:`Yuna is a Seoul-trained stylist and beauty writer based in Los Angeles. With over ten years behind the chair across Korean and American salons, she specializes in Asian hair texture, face-framing cuts, and the cultural crossover between K-beauty aesthetics and Western editorial styling. She writes about haircuts, texture work, and the technique behind looks that travel well from the salon to real life.`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/81/3d/7c/d2/v1_E10/E1069JVC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=009a37938da8a6f623bf541c1b9fe132452dcf5df30e54b91a7f3c67f5bc0079`}},Nr=[{id:1,slug:`copper-renaissance-2026`,tag:`Color`,title:`The Copper Renaissance: Why This Shade Rules 2026`,excerpt:`From warm cognacs to deep auburn, copper-family tones are reclaiming editorial dominance. We spoke with 10 top colorists about how they're mixing, applying, and retailing this season's must-have hue.`,author:`Leila Fernandez`,date:`Apr 8, 2026`,readTime:`8 min`,image:`/image/copper.avif`,category:`Color`,section:`Trends`,body:``,metaTitle:`The Copper Renaissance: Why This Shade Rules 2026`,metaDescription:`Copper hair is dominating 2026. Learn why top colorists love it and how to ask for it at your next appointment.`},{id:2,slug:`brunette-glazing`,tag:`Color`,title:`Brunette Glazing: The Salon Treatment Everyone's Asking For`,excerpt:`Your colorist's secret weapon for mirror-shine brunettes is now the most-requested treatment of the year. Here's what it is and how to ask for it.`,author:`Leila Fernandez`,date:`Apr 5, 2026`,readTime:`4 min`,image:`/image/brunette-glazing.jpg`,category:`Color`,section:`Trends`,body:`## Brunette Glazing salon treatment: what it is + who it’s for
+
+If your brunette looks fine in the mirror but dull in daylight, you’re not imagining it. Over time, brunette color can lose its “reflective” quality,especially when it’s been colored, highlighted, or even just sun-exposed. That’s where a **Brunette Glazing salon treatment** comes in.
+
+In salon terms, glazing (sometimes called glossing) is typically a **demi-permanent, deposit-only** color service designed to enhance shine and refine tone rather than lift your hair dramatically. Wella describes color glossing as a **demi-permanent treatment that deposits color while adding shine**. They also note that glazing is often a **clear (non-pigmented) or demi-/semi-permanent color** that creates a **translucent, reflective finish**. In other words: it’s about making your existing brunette look more dimensional and “alive,” not changing your hair’s base to a totally new shade.
+
+This service is especially helpful if you’re dealing with:
+
+- **Dullness** (your color looks flat or chalky)
+- **Fading** (warmth or depth disappears faster than you expect)
+- **Brassiness or uneven tone** (especially around the face, ends, or previously lightened pieces)
+
+What to expect in a typical appointment? Your stylist will start with a quick consultation,looking at your current color, porosity, and where you tend to fade first. Then they’ll apply the glaze (or a clear glaze plus a veil of tint, depending on the plan) and allow it to develop. Some services are designed to build in layers; for example, Wella’s **Golden Glass** process includes adding a top glaze layer after the base layer develops, with options for a **clear glaze** (tint-free surface) or a **translucent veil of color** . The goal is that when you rinse, your hair looks smoother, shinier, and more evenly toned.
+
+If you want a polished brunette without a high-maintenance color commitment, glazing is often a sweet spot.
+
+## How brunette glazing works (the science of shine + tone)
+
+You might be wondering: if glazing doesn’t “lift” like highlights, how does it make hair look so much better?
+
+Here’s the key idea: **shine is not just about gloss products,it’s about how light reflects off the hair surface and how evenly tone sits within the hair.** Glazing works by depositing a **small amount of color** (or none, if clear) that coats the hair with a more uniform, reflective finish. Because most glossing/glazing is **demi-/semi-permanent**, it tends to sit on top or within the hair’s outer layers rather than drastically changing your natural or previously colored base.
+
+Wella positions their **Shinefinity** as a demi-permanent color glaze with **“zero lift, zero damage”** and claims of increased shine and smoother hair compared to untreated bleached hair. While everyone’s results vary, the positioning is consistent with the service purpose: enhance the surface and refine tone without the heavy lift process.
+
+So how does your stylist choose what to apply?
+
+- **Translucent vs. tinted glazes:** A **clear glaze** can boost shine and make hair look freshly finished without changing the shade. A **tinted glaze** adds or corrects warmth,like neutralizing brass or reintroducing depth.
+- **Shade depth matching:** Even within brunette families, the “right” glaze depends on whether your hair is more cool, neutral, or warm, and how porous your ends are. Stylists consider where the color fades first and how your hair catches light.
+
+It’s also why glazing can be a great companion to cutting. A great cut gives shape, but glazing can improve how that shape reads. When the tone is even and reflective, layers look more intentional,and less like they’re sitting flat.
+
+## Why your haircut feels flat: the real causes of “flat layers”
+
+Flat layers can happen even when you *love* your hair in the salon chair. Then, a week later, you notice the movement isn’t there,or your hair looks thicker in the wrong places, with ends that don’t separate.
+
+The most common reason? **Hair doesn’t fall the way a stylist assumes unless the cut matches your natural movement and your styling routine.** Layers are about creating shape and weight distribution, not just adding “shorter pieces.” When the geometry or weight placement is off, the result can look heavy, lifeless, or oddly uniform.
+
+Here are the real culprits behind “flat layers,” and what to do about each:
+
+### 1) Cut geometry doesn’t match your natural fall
+
+If your hair naturally parts a certain way or falls in a specific direction, but your layers were cut without taking that into account, they may collapse when you’re at home. For example, layers that look great when held at one angle can fall flat when your hair dries in its usual pattern.
+
+**Practical fix:** Ask for shape mapping and a cut that reflects how your hair actually dries,especially around the crown and mid-lengths.
+
+### 2) Weight distribution is off (too much bulk or too little support)
+
+Layers can feel flat when they’re either too heavy (they don’t lift) or over-thinned (they can’t hold shape). Over-thinning,sometimes from aggressive point cutting or razor use,can make ends look wispy but also “stuck together,” because there’s not enough internal structure to separate.
+
+**Practical fix:** Request controlled removal of bulk. You want movement, not emptiness.
+
+### 3) The ends are doing all the work
+
+If the bulk wasn’t redistributed upward, the ends can become the only “moving” part. That often leads to a look that’s smooth but not dimensional, especially when hair dries straight.
+
+**Practical fix:** Have your stylist preserve lift at the roots while shaping mid-lengths and ends so the hair separates naturally.
+
+### 4) Your styling routine doesn’t match the cut
+
+A layered cut can be “dry-shape friendly” or “blowout-dependent.” If your hair was cut with one styling expectation but you mostly air-dry, the layers may not activate.
+
+**Practical fix:** Clarify whether you want a blowout look or an air-dry movement look,and build the cut around that.
+
+### 5) Tone and shine issues make layers look flatter
+
+Even if the cut is good, dullness makes hair look less dimensional. When color fades or looks uneven, light reflects less clearly,so the layers appear less defined.
+
+**Practical fix:** Combine the haircut with a **Brunette Glazing salon treatment** to restore reflective tone. A translucent finish can help layers “read” better in real life.
+
+## What to ask your stylist if your layers collapse
+
+If you’ve been to the salon and still feel like your layers fall flat at home, you don’t need to guess,you can ask for specifics. Here’s a client-friendly script you can use.
+
+“Can we shape my layers based on how my hair naturally dries? I want movement, but I don’t want my ends to be too thin. I’m noticing my layers collapse,especially around the crown/mid-lengths. Could you map the shape on me while it’s dry so you can see the fall and adjust the geometry?
+
+Also, I want to keep root lift, but control bulk at my mid-lengths and ends. Do you recommend a dry-cutting approach for that? And can you tell me exactly how to style it at home,should I blow-dry with a direction, or can we get movement with air-dry styling?”
+
+If you want to be extra clear, add: “I’d like my brunette color to look more dimensional and reflective again. Would a glazing or gloss service help with shine and tone between appointments?” Glazing can be a smart follow-up when tone fading makes layers look less defined.
+
+## Vivid color: what your stylist wants you to know (so it lasts)
+
+Vivid color is breathtaking when it’s fresh,but it has a reputation for fading faster than people expect. The reason is simple: vivid shades tend to be more sensitive to the factors that strip or dull color.
+
+Even the most skilled application can’t fully override everyday variables like water temperature, wash habits, heat exposure, and sun. Plus, hair porosity matters,some hair grabs and releases color quickly.
+
+Wella notes that glazing is often a **clear or demi-/semi-permanent** finish that adds a **translucent, reflective** surface, which is exactly why stylists often recommend it to help vivid tones look smoother and more vibrant over time.
+
+But vivid color fading can still happen due to:
+
+- **Frequent washing** (especially with harsh cleansers)
+- **Hot water** (opens the hair cuticle more)
+- **Heat styling** without protection
+- **UV exposure** (sun can shift tone)
+- **Porosity changes** (over-processed ends often fade first)
+
+Safety matters too,especially if you’re going for a major shift or using dye at home. The FDA advises people who dye their hair to follow safety precautions, including doing a **patch test before using dye on hair**. If you’re working with a salon, your stylist will typically follow proper procedures, but it’s still worth understanding why patch testing exists: it helps reduce the risk of adverse reactions.
+
+One more thing your stylist wants you to know: vivid color isn’t just “the dye.” It’s also the aftercare. If you want it to stay vibrant, you need a maintenance routine that supports the hair rather than stripping it.
+
+## A vivid-color maintenance plan (between appointments)
+
+You don’t need a complicated routine to keep vivid color looking fresh. You need consistency and the right kind of gentleness.
+
+Start with cleansing. Use a **color-safe, sulfate-free shampoo** when possible, and focus on scalp health rather than scrubbing the lengths aggressively. If your hair gets oily quickly, try washing on a schedule that still protects your color,many people do best with fewer washes per week and a gentle approach.
+
+Next, rinse smart. A **cooler water rinse** helps reduce cuticle lift and can make color look smoother and more reflective. Then, protect from heat. If you blow-dry or use hot tools, use a **heat protectant** every time. Heat accelerates fading, especially for bright shades.
+
+Finally, consider timing your refresh services. Many people think the only solution is re-dyeing, but a salon can often refresh tone and shine with services like glossing/glazing/toning. Since glazing is often **demi-permanent** and designed to deposit color while adding shine, it can be a strategic way to keep vivid tones from turning dull or uneven.
+
+If you’re noticing your vivid shade drifting,like it’s becoming too warm, too muted, or uneven,talk to your stylist about a glaze refresh before it gets to the “start over” stage. And if you’re also dealing with flat layers, combining better tone with better shape can be the double-win: more shine helps define movement, and a more reflective finish makes layers look intentional.
+
+## Conclusion
+
+A **Brunette Glazing salon treatment** can be one of the easiest ways to revive dullness, smooth tone, and bring back that reflective, dimensional look,without the commitment of major lift. And if you’ve been asking yourself, “Why does my haircut feel flat layers?” the answer is usually cut geometry, weight distribution, and styling mismatch,not that your hair “changed.”
+
+When you pair a cut that matches your natural fall with a tone-refresh service that restores shine, your layers start reading the way you meant them to. And if you’re working with vivid color, remember: fade resistance is a partnership between chemistry and aftercare,so follow safety guidance, wash gently, protect from heat, and refresh tone before it slips too far.`,metaTitle:`Why Flat Layers Happen,and How Glazing Helps`,metaDescription:`Learn why brunette layers look flat and how glazing restores shine and tone for a more dimensional, reflective finish.`},{id:3,slug:`haircut-layers`,tag:`Cut & Style`,title:`Why a Good Haircut Is More Than Just "Taking Length Off"`,excerpt:`Stylists are thinking about shape, weight, and grow-out, not just length. Here is what is actually happening when you sit in the chair.`,author:`Tom Harley`,date:`Apr 4, 2026`,readTime:`6 min`,image:`/image/haircut-layers.avif`,category:`Cut & Style`,section:`Trends`,body:`## Why a Good Haircut Is More Than Just "Taking Length Off"
+
+Most clients still walk into the salon thinking a haircut is maintenance.
+
+"Just a trim."
+"Take an inch off."
+"Clean it up."
+
+From a stylist's perspective, that's rarely what's actually happening.
+
+A haircut is structure. It decides how your hair moves, how it sits when you do nothing to it, and whether your styling routine works or constantly fights you.
+
+> "The haircut is the foundation. If that's off, no amount of styling is going to fix it."
+> — Nina Patel, Salon Educator, Chicago
+
+## Cutting Is About Shape, Not Length
+
+Length is the most visible change, but it's not the most important one.
+
+Stylists are thinking about:
+
+- Where the weight sits
+- How the hair collapses or expands
+- How it frames your face
+- How it grows out over time
+
+Two people can leave with the same "length," and one will feel full and polished while the other feels flat or uneven.
+
+That difference is shape.
+
+This is why a blunt cut can make thin ends look thicker, while soft layering can add movement to heavier hair. It's not about trends. It's about what the hair needs.
+
+## The Balance Between Movement and Density
+
+This is where most haircuts go wrong.
+
+Clients ask for layers because they want volume. But if the hair is already fine or low density, too many layers can remove the very thing they need, which is weight.
+
+On the other hand, leaving everything one length can make thick hair feel heavy and unmanageable.
+
+Stylists are constantly balancing:
+
+- **Movement** (so the hair doesn't sit flat)
+- **Density** (so the hair still looks full)
+
+> "You're either building shape or removing it. There's no neutral when you're cutting."
+> — Marcus Bell, London
+
+## Why Your Hair Doesn't Look the Same at Home
+
+One of the most common frustrations: it looked amazing at the salon, but you can't get it to do that at home.
+
+Part of that is styling, but a lot of it comes back to the haircut.
+
+A good haircut should:
+
+- Fall into place without heavy styling
+- Work with your natural texture
+- Still look intentional air-dried
+
+If your hair only looks good after a full blowout with multiple products, something in the cut is doing too little or too much.
+
+## Texture Changes Everything
+
+Curly, wavy, and straight hair all respond differently to cutting.
+
+- Straight hair shows every line, so precision matters
+- Wavy hair needs balance so it doesn't puff or collapse
+- Curly hair requires cutting for shape when dry or in its natural pattern
+
+This is why the same reference photo can't be applied universally.
+
+A layered haircut on straight hair looks clean and defined. On curly hair, it can either create beautiful shape or unwanted volume depending on how it's done.
+
+> "Texture isn't a detail. It's the whole plan."
+> — Dana Reeves, Nashville
+
+## The Role of the Hairline and Face Shape
+
+Stylists don't just cut hair. They design around the face.
+
+That includes:
+
+- Where the shortest pieces hit
+- How the front frames the cheekbones or jaw
+- Whether the hairline is strong, soft, or uneven
+
+Face-framing is one of the most customized parts of any haircut. A few inches too short or too long can completely change how the haircut feels.
+
+This is why fringe, layers, and front pieces are never one-size-fits-all.
+
+## Why Grow-Out Matters More Than the First Day
+
+A haircut shouldn't only look good when you leave the salon.
+
+Stylists are thinking ahead:
+
+- How will this sit in 3 weeks?
+- Will the layers collapse?
+- Will the ends start to feel thin?
+- Will the shape still make sense as it grows?
+
+This is where experience shows. A good cut grows out softly. A bad one looks off within weeks.
+
+> "I'm not cutting for today. I'm cutting for the next two months."
+> — Nina Patel
+
+## The Difference Between a Trim and a Haircut
+
+Clients use "trim" as a safe word. It feels less risky.
+
+But technically:
+
+- A **trim** is removing minimal length, usually for maintenance
+- A **haircut** reshapes the hair
+
+Most appointments are actually somewhere in between.
+
+Even taking off half an inch can change the way the hair sits if the ends were uneven or damaged. And sometimes, what a client calls a trim turns into a necessary reshape once the stylist sees the condition.
+
+## When to Cut vs When to Treat
+
+Not every problem is solved with scissors.
+
+If the issue is dryness, frizz, breakage, or damage from color or heat, then a treatment may be just as important as the cut itself.
+
+But if the issue is flat shape, heavy ends, uneven growth, or lack of movement, then cutting is what fixes it.
+
+Good stylists know the difference and will usually combine both when needed.
+
+## What Stylists Wish Clients Would Say Instead
+
+Instead of saying "just a trim," try:
+
+- "My ends feel thin"
+- "My hair falls flat here"
+- "It doesn't sit right when I style it"
+- "I want it to look fuller / softer / lighter"
+
+This gives your stylist something to work with beyond length. Because the goal isn't shorter hair. It's better hair.
+
+## The Bottom Line
+
+A haircut is not just maintenance. It's the structure everything else depends on.
+
+It affects how your hair looks without effort, how long your style lasts, and how often you feel like you need to fix it.
+
+> "A good cut makes styling easier. A great cut makes it almost unnecessary."
+> — Marcus Bell`,metaTitle:`Why a Good Haircut Is More Than Just Taking Length Off`,metaDescription:`Stylists are thinking about shape, weight, and grow-out, not just length. Here is what is actually happening when you sit in the chair.`},{id:4,slug:`vivid-color-guide`,tag:`Color`,title:`Ready for Vivid Color? Here's What Your Stylist Wants You to Know`,excerpt:`Before you go bold, your colorist has a few things to tell you about the journey, and it's worth the read.`,author:`Alex Nguyen`,date:`Apr 3, 2026`,readTime:`5 min`,image:`/image/vivid-color-guide.avif`,category:`Color`,section:`Trends`,body:`## Pastel-to-vivid goals (and what your clients actually want)
+When clients ask for a “pastel to vivid color formula,” they usually mean two things at once: they want a shade that looks intentional in real life (not flat or muddy), and they want it to last long enough to feel worth the appointment. When clients ask for a “solo stylist business blueprint,” they’re looking for the same clarity,what to offer, what to charge, how to book, and what to do when hair behaves unpredictably.
+
+This post is built for both. You’ll get a practical color framework for moving from pastel softness to vivid saturation, plus a solo-stylist plan for building a repeatable service menu, pricing strategy, marketing system, and operations routine. Throughout, the guardrail is simple: **hair health first**. Vivid results are not worth breakage, patchy fading, or unnecessary lift.
+
+You’ll also learn why the “right” ratios depend on your specific brand line and starting hair condition. Manufacturer instructions matter because different clear bases, developers, and shade families are designed for different outcomes. Use the formulas here as patterns you can adapt,not as a substitute for the exact product directions for your chosen brand.
+
+## Color formulation: the dilute vs. concentrate framework
+A pastel-to-vivid transformation is mostly about saturation control. Think of it like this: pastel is typically achieved by increasing dilution (more “softening” base relative to the pigment), while vivid is achieved by reducing dilution (more pigment relative to the base) and ensuring the hair is light enough to carry that pigment.
+
+In practice, you’ll see this show up in two places:
+
+First, **your clear/pastel versus clear/dilute choice**. Many brands offer multiple “clear” options or pigment families that behave differently. For example, PRAVANA notes that you should not mix **Pravana Vivids Clear-Dilute** with **Pravana Vivids Clear-Pastel**, because they are intended for different outcomes: bright/vibrant versus muted tones. That’s a key reminder that “clear” is not always interchangeable,follow the line’s intended use for the look you’re aiming for.
+
+Second, **your ratio of color to developer and the processing plan**. Some vivid workflows are designed to lift and deposit differently than pastel workflows. PRAVANA’s Vivids guidance includes an example where you use a “mix it in a ratio of 1:1 ½” (color to developer) in the context of using Vivids for lighter outcomes . Separately, PRAVANA’s FAQ provides a ratio example for its ChromaSilk Creme Hair Color: **1 part color to 1.5 parts 20 volume developer** processed **45 minutes with no heat**. The takeaway isn’t to memorize numbers,it’s to understand that *developer amount and processing time are part of the formula logic*, not an afterthought.
+
+### Concrete formula patterns you can adapt
+
+Below are three formula patterns based on manufacturer guidance and common pastel-to-vivid logic. Treat them as templates: keep the line-specific rules, then adjust for your client’s starting level and porosity.
+
+**Pattern A: Pastel “muted tone” using a pastel clear base (then increase saturation)**
+- Use a brand’s **clear/pastel approach** for the initial pastel result.
+- Then, for a vivid version, replace the pastel-softening clear with a vivid/bright-oriented clear (or reduce the dilution effect).
+- PRAVANA specifically warns against combining its Clear-Dilute and Clear-Pastel intended outcomes in the same formula, so choose one direction per appointment .
+
+**How to adapt:**
+- Start with a pastel formula that matches the client’s inspiration photo.
+- If they later want “more pop,” increase pigment relative to the softening base rather than mixing incompatible clears.
+
+**Pattern B: Vivid “lighter outcome” workflow using the brand’s color-to-developer ratio direction**
+- When aiming for a vivid look that relies on a lighter end result, follow the manufacturer’s stated mix direction.
+- PRAVANA’s Vivids guidance includes the “**1:1 ½** (color to developer)” ratio instruction in the context of using Vivids for lighter outcomes .
+
+**How to adapt:**
+- Keep the ratio and timing consistent with the instruction.
+- If you need more intensity, don’t “freehand” by changing developer strength,consider increasing pigment within the approved system, or adjust your base-lightness and application density.
+
+**Pattern C: Shade-specific vivid building using the brand’s pastel-to-vivid pairing logic**
+PRAVANA’s blog provides example workflows using **VIVIDS Clear–Pastel plus specific VIVIDS shades**, including developer/process details for that workflow. Use this as a model: pick the clear base that matches the vibe (pastel versus vivid), then add the shade(s) the way the manufacturer describes for that family.
+
+**How to adapt:**
+- If you’re mixing multiple shades, keep the clear base consistent with the intended outcome.
+- If your client wants a vivid result but your hair isn’t ready, prioritize preparation (lightness and condition) rather than forcing pigment.
+
+## Developer and oxidation safety: strand test + timing control
+Solo stylists often feel pressured to “make it work” without extra steps. But vivid color is where small timing differences can create big consequences,uneven fade, unexpected banding, or hair that becomes weak after lift.
+
+Wella recommends doing a **strand test each time you color** to determine optimal timing and color results. Wella also provides guidance for hair color safety tests, including mixing **small amounts of colorant and developer** for testing. That’s not just about allergy prevention; it’s about predicting how your client’s hair will respond to your exact formula and timing.
+
+### A simple test-first workflow (solo-stylist friendly)
+
+1. **Confirm readiness:** Check the hair’s condition and elasticity. If it feels gummy, brittle, or unusually fragile, vivid goals may need to be postponed.
+2. **Do a strand test:** Mix a small amount using your chosen formula and developer, apply to a hidden section, and monitor timing based on the hair’s response.
+3. **Record your results:** Note the start level, the test result, and the time it took to reach the desired tone.
+4. **Match the full-head timing:** Use the strand test timing to guide your application schedule.
+
+Because vivid saturation is sensitive to both base lightness and processing time, this workflow helps you deliver consistent results even when your client’s hair isn’t identical to the last one.
+
+## Hair health guardrails: readiness, porosity, and aftercare
+A pastel-to-vivid color transformation is not only a chemistry project,it’s a hair-strength project. Vivid pigment can look gorgeous on healthy hair, but when hair is compromised, you’re more likely to see:
+- patchy fading (uneven porosity)
+- increased breakage (weak cuticle support)
+- dullness quickly (loss of deposit and moisture)
+
+### Pre-lightening readiness: assess before you chase saturation
+
+Before attempting vivid results, you need to evaluate whether the hair can handle the preparation required for strong pigment. Ask yourself:
+- Does the hair feel strong and springy, or does it feel dry and fragile?
+- Is the hair previously colored, bleached, or chemically processed?
+- Does the hair show signs of uneven porosity (for example, one section grabs color faster than another)?
+
+If you’re working on hair that’s already fragile, consider a “journey approach.” It’s often safer to build toward vivid over multiple visits rather than forcing high saturation in one session.
+
+### Porosity and application density: reduce patchiness
+
+Patchy fading often comes from uneven porosity and uneven saturation during application. Strand testing helps, but technique matters too: saturate consistently, section carefully, and avoid rushing through contact time. If the hair has variable porosity, your goal is even pigment distribution.
+
+### Aftercare: the real longevity factor
+
+Even the best pastel-to-vivid formula won’t look good if maintenance is neglected. Color longevity depends on how gently the hair is washed, how heat is managed, and how moisture is restored.
+
+To protect vivid vibrancy:
+- Use a color-safe routine and avoid harsh cleansing.
+- Manage heat and protect the hair when styling.
+- Add conditioning support so the hair holds onto softness and shine.
+
+When aftercare is consistent, you reduce the “cycle” of damage → color loss → more aggressive re-coloring. That’s one of the most practical ways solo stylists protect their client relationships and reduce color corrections.
+
+## Conclusion
+A “pastel to vivid color formula” isn’t just about pigment,it’s about saturation control, correct product pairing, and timing you can trust. Strand testing and hair safety checks help you deliver vivid results without sacrificing hair health. And a “solo stylist business blueprint” turns that craft into a predictable income system: clear offers, confident pricing, conversion-focused marketing, and solid operations.
+
+When you combine both,smart color formulation and a repeatable business rhythm,you don’t just create beautiful color. You create a client experience people want to return to.`,metaTitle:`Pastel to Vivid Color Formulas + Solo Stylist Blueprint`,metaDescription:`Build vivid color safely with strand tests and ratio logic, then launch a solo stylist business plan for pricing, marketing, and rebooking.`},{id:5,slug:`curl-consultation`,tag:`Texture`,title:`The Curl Consultation: What to Say to Get Your Best Curls Ever`,excerpt:`A guide to communicating with your stylist about curl type, hydration, and the products that actually work.`,author:`Imani Okafor`,date:`Apr 2, 2026`,readTime:`8 min`,image:`/image/curl-consultation.avif`,category:`Texture`,section:`Trends`,body:`A “curl consultation best curls” should feel like more than a friendly chat,it should be a plan. The best consultations start by mapping your curl pattern and understanding your real-life routine, then setting realistic goals based on your hair texture, density, and porosity. You should leave knowing exactly what will happen in the chair, what to expect during styling, and how to maintain results between visits.
+
+If you’ve ever walked out with a cut that looked great wet but fell flat dry (or a color that looked gorgeous for two weeks and then turned brassy or dry), this guide is for you. We’ll cover how to find a stylist for your hair, what to ask in a curl consultation, and what “best curls” truly means,plus how to approach balayage when you have curls.
+
+### How to find a stylist for your hair (step-by-step)
+
+Finding a great stylist for curls is less about chasing a trend and more about matching your hair needs with someone who understands curl behavior. Start with your research: look for portfolios that show multiple curl types,not just one “model hair day.” Search for stylists who post consistent work across different lengths and who demonstrate how they style at home, not only how they style in-salon.
+
+Next, vet experience in a way that’s specific to you. Reviews can be helpful, but the most important clues are in the details: Do their before/after photos look consistent under similar lighting? Do they show how the cut grows out? Do they mention curl mapping, shrinkage, or styling education? A stylist who can explain how curl patterns change with humidity and product choice is usually a safer bet than someone who only talks about the haircut “shape.”
+
+Where to look matters too. Beyond Instagram and Google reviews, curl communities (local groups, meetups, and reputable curl education platforms) can connect you with stylists known for curl-first results. When you contact a salon, ask a simple question upfront: “Do you do curl mapping or a curl consultation before cutting?” Their answer tells you how they work.
+
+Finally, trust your gut during the first interaction. The best curl consultations don’t rush. A good stylist asks about your wash schedule, your go-to products, and what you hate (frizz, flat roots, dryness, uneven curl clumps). They should also ask what you want most,wash-and-go definition, bouncy volume, or a style that can stretch without losing shape. You’re looking for a match, not a gamble.
+
+### The curl consultation checklist (questions to ask)
+
+A great curl consultation should feel structured. If you’re not sure what to ask, use this as your guide. The goal is to learn how your stylist thinks, what techniques they use, and whether they’ll teach you how to maintain the results.
+
+Start with the fundamentals: “Will you map my curls before cutting?” Curl mapping helps ensure the cut respects your natural growth patterns and avoids surprises like weight pulling certain sections flat. Then ask about their approach to shrinkage and styling differences: “How do you account for shrinkage from wet to dry?” Shrinkage isn’t a problem to “fix”,it’s part of your curl identity, and a stylist should build the shape accordingly.
+
+Next, ask what products and techniques they plan to use. For example: “What styling method will you use for my consultation,wet-to-dry, diffusing, or a specific set routine?” If you prefer a wash-and-go, don’t let the consultation be built around a finish you’ll never do at home.
+
+You should also ask about product recommendations that match your hair’s needs, not just what’s trendy. “How will you choose products for my porosity and density?” Porosity affects how curls absorb moisture and hold definition, while density affects how much weight your hair can handle without going flat.
+
+Finally, ask what happens after you leave: “Will you teach me how to style at home?” The best stylists don’t just cut,they coach. You want a plan you can repeat: how much product to use, where to apply it, and how to refresh curls between washes.
+
+If your stylist can answer these questions clearly and confidently, you’re likely in good hands. If they dodge details or say “we’ll figure it out later,” that’s a sign to look elsewhere.
+
+### What “best curls” means (tailoring the cut to your curl pattern)
+
+“Best curls” isn’t one haircut,it’s a customized outcome. A curl-first stylist adjusts for curl pattern, density, and growth direction so your shape looks intentional in your everyday life. That means the cut should support your natural curl architecture, not fight it.
+
+Curl pattern matters because different curl types behave differently. Looser waves may need more structure to hold shape, while tighter curls often need careful layering so they don’t become triangular or overly puffy. Density matters because thick, heavy hair may require targeted thinning or strategic layering to prevent the roots from collapsing. Porosity matters because hair that struggles to retain moisture may need a cut that reduces dryness-looking ends and supports a more consistent styling routine.
+
+Growth direction is another big factor. If your curls grow outward or downward in certain zones, a uniform “all-over” approach can create imbalance. A skilled stylist will observe where your curls naturally fall and then cut to enhance that pattern.
+
+Communication is key. Bring clarity to your preferences so your stylist can tailor the result. Ask yourself what you actually do at home. Do you want a wash-and-go with defined clumps and bounce? Do you like a “set” with finger coils or twists? Do you air-dry, diffuse, or do a combination? Tell your stylist your routine and your constraints: your time, your humidity environment, and what products you already own.
+
+When your stylist understands your goals, they can design a cut that makes styling easier,not harder. The “best curls” outcome should look good even when you don’t spend an hour in the mirror.
+
+### What is balayage stylist explains (and what to ask before booking)
+
+Balayage is commonly described as a freehand highlighting technique where color/lightener is applied in a sweeping motion to create natural-looking dimension that grows out with less obvious regrowth lines [turn0search8]. In simpler terms: instead of placing color in perfectly spaced sections all the way to the roots, balayage is typically applied to mid-lengths and ends for a softer, sun-kissed effect [turn0news12].
+
+If you’re booking a “balayage stylist explains” session, you want them to do more than name the technique. You want them to explain how it will work with your hair’s texture and curl pattern.
+
+For curls, placement is everything. A balayage that’s beautiful on straight hair can look uneven on curls if the lift and placement aren’t adjusted for how your curls clump and dry. Ask: “How will you place color so my curl pattern stays balanced?” A good stylist should talk about lift level and where the lightener will go, considering how your curls frame your face and how your ends behave.
+
+Timing and curl health also matter. The more lift you’re chasing, the more potential stress your hair may experience,especially if your curls are already prone to dryness. Ask: “How will you protect my curl integrity during the process?” You can also ask whether they recommend a pre-color assessment of porosity and elasticity, and what bond-support or conditioning steps they include.
+
+Finally, ask how the service will be finished for your curl goals. “Will you style my hair after coloring in a curl-friendly way so I can see the true result?” You want to leave with a realistic preview of your final look, not just a flat, straightened sample.
+
+### Balayage + curls: common pitfalls and how to avoid them
+
+Balayage can be stunning on curls, but the details determine whether you’ll love it long-term. Common pitfalls include uneven lift, dryness, and brassiness. Uneven lift can happen when color placement doesn’t respect curl clumps, or when processing time isn’t tailored to your hair’s starting level and porosity. Dryness often shows up when lightening is too aggressive or when aftercare hydration isn’t part of the plan.
+
+Brassiness is another concern, especially if you’re going lighter. Even though balayage grows out more naturally than some other highlight methods [turn0search8], the tone still needs maintenance. Your stylist should propose a realistic plan, including glossing or toning cadence based on how quickly your hair shifts.
+
+The key is that the stylist should explain what they’re aiming for and why. Instead of promising a perfect “forever” color, they should talk about the fade-out process,how it will look as it grows, and what you can do to keep it looking fresh without over-processing.
+
+Ask questions that protect your curls: “How will you prevent my ends from getting too porous?” “What toner or gloss will you use, and how often will I need it?” “What should I expect during the first wash after color?” A curl-friendly color plan also includes aftercare guidance: gentle cleansing, moisture support, and heat minimization when possible.
+
+If a stylist can’t discuss maintenance or only sells the service without the follow-through plan, that’s a risk. The best balayage results are the ones that remain wearable for months.
+
+### Wrap-up: your booking script + next steps
+
+Now that you know what to look for, you can book with confidence. Here’s a simple message you can copy and paste when contacting a salon:
+
+“Hi! I’m looking for a curl-first consultation and a cut that works with my natural curl pattern. Can you do curl mapping and explain how you account for shrinkage from wet to dry? I also want balayage guidance,can you explain placement and how you protect curl health during lightening? I’m hoping for a result I can style at home with my routine (wash-and-go / defined sets).”
+
+For your consultation, bring what helps your stylist make the right plan quickly. Bring photos of your current hair in both wet and dry states, plus photos of the inspiration look you love. Include details on your routine: how often you wash, what products you use, whether you diffuse or air-dry, and what your biggest frustrations are (frizz, flat roots, dryness, uneven clumps). If you’ve recently changed products or noticed increased shedding, mention that too.
+
+Good hair days start with the right plan. When you choose a stylist who understands curls, asks the right questions, and explains both the cut and the color process, you’re much more likely to get “best curls” you can actually maintain,without guesswork.`,metaTitle:`Curl Cut & Color: Consultation to Aftercare Guide`,metaDescription:`Learn how to choose a curl specialist, ask the right questions, nail balayage placement, and keep results looking great after your appointment.`},{id:6,slug:`find-right-stylist`,tag:`Tips`,title:`How to Find a Stylist Who Gets Your Hair (And Keeps It)`,excerpt:`The difference between a good haircut and a great one often comes down to finding the right match. Here's how.`,author:`Dana Reeves`,date:`Apr 1, 2026`,readTime:`10 min`,image:`/image/find-right-stylist.avif`,category:`Tips`,section:`Inspiration`,body:`## Quick intro: stylist vs. dermatologist (and why it matters)
+
+Booking a new stylist can feel like a gamble,especially if you’ve had a cut that made your curls look undefined, or a color that didn’t flatter your undertone. The good news is that for most styling and cosmetic needs, a licensed cosmetologist/hairstylist is exactly who you should book. Even better? You can stack the odds in your favor by matching your hair type and goals to the stylist’s specialty.
+
+That said, there’s an important boundary. If your concern is medical,like sudden shedding, scalp itching with scaling, patchy hair loss, or hair loss that feels “out of nowhere”,a dermatologist is the right starting point. Dermatologists treat hair loss and scalp conditions, and they may recommend medications or other medical care depending on what’s causing the issue. A stylist can help you look and feel your best day-to-day, but they can’t diagnose the underlying cause of hair loss.
+
+Think of it this way: the right stylist helps with cut, color, styling, and hair health through education and product guidance. The right dermatologist helps with diagnosis and treatment when symptoms suggest a medical issue. If you’re unsure which route to take, it’s okay to ask your stylist what they see and whether your scalp/hair behavior sounds like something that should be medically evaluated.
+
+## Start with your hair profile (so you book from a position of clarity)
+
+Before you book, take 10 minutes to describe your hair as accurately as you can. This isn’t about labeling yourself perfectly,it’s about giving your stylist the right “map” of what your hair tends to do.
+
+Start with the basics:
+
+- **Texture**: straight, wavy, curly, or coily
+- **Density**: fine, medium, or thick strands,and how much hair you have overall
+- **Hair diameter / feel**: does your hair feel wispy, sturdy, or coarse?
+- **Porosity (how hair responds to moisture)**: does your hair drink products quickly and feel dry again fast, or does it resist moisture?
+- **Curl pattern / shape**: if you have curls, how do they form (rings, S-waves, zig-zags)? Where is the pattern most defined?
+- **Shrinkage**: do you lose a lot of length when dry?
+- **Scalp**: does your scalp feel oily quickly, dry and tight, itchy, sensitive, or flaky?
+- **Sensitivity and history**: do you react to certain products, heat, or dyes?
+
+Then add the “what matters” details:
+
+- What has **worked**?
+- What has **not** worked (and what exactly happened)?
+- What’s your priority: **volume**, **definition**, **less frizz**, **length retention**, **easier styling**, or **a shape that grows out well**?
+
+Bring photos,both of you on your best hair days and of your hair when it’s behaving in a less-than-ideal way (for example, when curls fall flat or the roots get oily fast). Photos help stylists spot patterns quickly, including how your hair clumps, where it gets weighed down, and how your ends behave.
+
+If you’re dealing with hair loss, also track what’s happening: when it began, whether shedding is diffuse or patchy, and whether your scalp symptoms changed. Even if you plan to see a dermatologist, this info helps you advocate for yourself.
+
+## Match the stylist’s specialties to your hair goals
+
+The “right stylist” isn’t just someone who cuts hair,it’s someone whose technique fits your hair type and your outcome.
+
+Start by identifying your goal, then look for a stylist whose specialty aligns. Here are common goals and what to look for:
+
+### Curly, wavy, and coily goals
+
+If you want **curl definition** and **less frizz**, look for stylists who highlight curl mapping, custom layering, and techniques that respect shrinkage and natural movement. A curly-cut is not just a shorter haircut,it’s a plan for how your curl pattern will fall when dry. If you’ve ever left a salon with a cut that looked great wet but turned into a triangle shape when dry, that’s often a sign the cutting method wasn’t tailored.
+
+If your goal is **length retention**, ask how they protect your ends during cutting. For many curl patterns, blunt ends, overly aggressive thinning, or cutting without considering how curls spring can lead to faster tangling and breakage.
+
+### Volume and shape goals
+
+If your hair needs **lift** (especially at the crown) or you want a shape that grows out gracefully, ask about their approach to layering and weight distribution. Fine hair often benefits from strategic layering and lightweight styling methods, while thick hair may need more precise shaping so it doesn’t become bulky.
+
+### Color goals
+
+Color is where “one-size-fits-all” can be especially risky. If you want **natural-looking dimension**, **root blending**, or **color placement** that flatters your face, look for someone who talks about tone, undertones, and how your hair’s base color reacts. If you’re trying to minimize damage, ask about their plan for strand health,how they prep, what they recommend between appointments, and how they tailor your aftercare.
+
+### Protective styles, extensions, and heat-free styling
+
+If you’re booking for **protective styles**, **extensions**, or **low-heat styling**, choose someone who can explain how they protect your scalp and hairline. Extensions should be installed with comfort and long-term maintenance in mind,tight installation can worsen breakage and irritation. If you’re trying to reduce heat, ask what styling method they use to create shape without excessive thermal stress.
+
+When you’re booking, don’t be shy about stating your hair type and goal in one sentence. For example: “I have wavy hair with high frizz and I want defined waves with minimal daily styling.” The stylist’s response tells you whether they understand your hair.
+
+## How to vet a stylist before you book (portfolio + consultation signals)
+
+You can learn a lot before the appointment by reviewing a stylist’s work and how they communicate.
+
+What to check:
+
+- **Portfolio variety that matches your hair type**: Look for clients with similar texture, density, and pattern. If every photo looks like the same hair type and the same result, that’s a clue.
+- **Consistency in before/after results**: Great portfolios show repeatable results, not only one dramatic transformation.
+- **Product knowledge**: A good stylist can explain why they recommend certain products for your hair’s needs (hydration, slip, hold, frizz control) and how you’ll use them.
+- **Consultation quality**: Do they ask detailed questions? Do they pay attention to your scalp comfort? Do they discuss what you want to change and what you want to keep?
+- **Realistic expectations**: The best stylists don’t promise a miracle. They explain the steps needed to get there.
+
+Red flags to watch for:
+
+- **No questions** or a rushed “you’ll be fine” vibe
+- **One-size-fits-all promises**, like “We can fix any hair in one appointment”
+- Ignoring **scalp comfort** (itchiness, flakiness, sensitivity) and focusing only on style
+- Avoiding discussion about styling method, maintenance, or what happens when hair behaves differently than expected
+
+A strong sign is when the stylist asks you to describe your hair routine and your goals in detail,because that’s how they’ll build a plan you can actually follow at home.
+
+## The consultation script: questions to ask about your hair type
+
+If you want to feel confident going in, use a question list. You’re not interviewing them for a job,you’re ensuring they understand your hair and your priorities.
+
+Ask:
+
+1. **Cut approach**: “How do you tailor the cut for my texture and density?”
+2. **Layering strategy**: “How will you add shape without making my hair triangle or stringy?”
+3. **Shrinkage and movement**: “How do you account for shrinkage when cutting curly/wavy hair?”
+4. **Curl/wave mapping**: “Do you cut with curl/wave pattern in mind so the shape holds when dry?”
+5. **Products and styling method**: “What products will you use for my hair type, and what’s the step-by-step routine at home?”
+6. **Frizz plan**: “What’s your strategy for reducing frizz while still keeping volume?”
+7. **Color technique** (if applicable): “How do you choose placement and tone for my undertone and hair history?”
+8. **Extensions/protective styles** (if applicable): “How do you protect my scalp and hairline, and what maintenance do you recommend?”
+9. **If it behaves differently**: “If my hair doesn’t respond the way we expect,what’s the plan to adjust?”
+
+The “plan if it behaves differently” question is especially important. Hair is living, and seasons, hormones, humidity, and product changes can shift how it acts. A good stylist will have a realistic adjustment strategy rather than blaming your hair.
+
+## Booking details that prevent mismatches (service wording, timing, expectations)
+
+Even if you find a stylist who seems like a perfect match, booking the wrong service can cause disappointment.
+
+When you book, be specific about what you’re booking:
+
+- **Cut only** vs. **cut + style**: If you want to see how your hair looks styled (especially for curls or waves), ensure the appointment includes styling time.
+- **Curl service** vs. a general cut: If you’re seeking curl definition, ask whether the appointment includes techniques designed for your pattern.
+- **Color**: Confirm whether it’s all-over, highlights, balayage, root touch-up, or something else.
+- **Extensions/protective styles**: Make sure the service includes consultation time and any necessary prep.
+
+Also request the right appointment length. If a curly cut is scheduled for the same time as a basic trim, you’re likely to miss out on the detailed shaping and styling steps that make curly results last.
+
+Clarify what’s included:
+
+- Will you get a wash?
+- Is there a deep conditioning step?
+- What styling method will they use (diffuse, air-dry guidance, product layering)?
+- Will you receive a take-home routine recommendation?
+
+The goal is alignment: you should leave the salon with a style that matches your hair’s behavior and a plan you can repeat at home.
+
+## When to see a dermatologist instead of relying on a stylist
+
+If you’re experiencing hair loss or scalp symptoms, it’s worth knowing when to switch from “stylist-first” to “doctor-first.” Dermatologists are typically the clinicians who handle hair loss treatment, and they may recommend care based on the cause.
+
+Consider booking with a dermatologist if you notice:
+
+- sudden or heavy shedding
+- patchy hair loss
+- scalp itching, burning, scaling, or redness that doesn’t improve
+- thinning at the part or crown that’s progressing
+- hair loss that started alongside other symptoms (fatigue, skin changes, or systemic symptoms)
+
+If you suspect **alopecia areata**, the National Alopecia Areata Foundation offers a **Doctor Finder** designed to help people find board-certified dermatologists (and some other qualified clinicians) experienced in diagnosing and treating alopecia areata.
+
+When you meet a clinician, they’ll typically evaluate the pattern and severity of hair loss as part of care planning . That’s a major reason medical evaluation matters,because the right treatment depends on what’s happening under the surface, not just how the hair looks today.
+
+If you want a reputable way to locate board-certified dermatologists, the American Academy of Dermatology provides a public **Find a Dermatologist** search where you can enter your city/state/zip to find board-certified providers [1,5].
+
+A stylist can still support you with gentle styling, scalp-friendly product recommendations, and confidence-building looks,but for diagnosis and treatment, a dermatologist is the right role.
+
+## Aftercare plan: what to ask for so your style lasts
+
+A great appointment doesn’t end when you leave the salon. Ask for an aftercare plan that matches your hair type and your lifestyle.
+
+Request a personalized routine that includes:
+
+- **Wash frequency**: How often should you wash based on your scalp oiliness or dryness?
+- **How to style at home**: For curls/waves, ask about drying method, product order, and whether you should diffuse or air-dry.
+- **Product types**: What should you use for hydration, frizz control, hold, and softness?
+- **How to maintain shape between appointments**: For example, how to refresh without over-washing or disturbing your pattern.
+
+If your hair is prone to dryness or breakage, ask how to reduce friction and protect your ends. If your scalp is sensitive, ask which ingredients or product categories to avoid.
+
+Most importantly, ask for a routine you can realistically follow. The “right stylist” is the one who can translate salon technique into a home plan that fits your time and budget.
+
+If you’re in a hair-loss journey, aftercare matters even more,comfort and gentleness become non-negotiable. A dermatologist-led plan plus stylist support can help you maintain a healthy scalp environment while you work on treatment.
+
+## FAQ + quick checklist (printable)
+
+### FAQ
+
+**Can I book a curly cut if my hair is transitioning (straight to curly)?**
+Yes,just be upfront. Transitioning hair can behave differently across sections, so ask how the stylist will cut and style both textures so the shape stays flattering as your pattern evolves.
+
+**What if my scalp is flaky or itchy,should I still book a cut?**
+If symptoms are active, consider seeing a dermatologist first. Hair loss treatment and scalp conditions are typically medical topics, and a clinician can help determine what’s going on. A stylist can help with gentle styling, but they shouldn’t be the only step if your scalp is uncomfortable.
+
+**How do I know if my stylist is right for my hair type?**
+You’ll notice it during the consultation: they ask detailed questions, explain their approach, and recommend products and steps that match your texture, density, and goals.
+
+**Do I need a special stylist for color?**
+Color results depend heavily on technique and planning. If you want subtle dimension, minimal damage, or precise tone, look for a stylist who demonstrates consistent color work and can explain their process.
+
+### Quick checklist
+
+Before you confirm your appointment, make sure you have:
+
+- A clear description of your hair profile (texture, density, scalp)
+- A goal stated in plain language (definition, volume, length retention, frizz reduction)
+- A stylist whose portfolio matches your texture and desired outcome
+- A consultation that includes questions and a tailored plan
+- Service wording that matches what you want (cut vs. cut+style vs. curl service)
+- An aftercare routine you understand and can follow
+
+When you match the right stylist to your hair type,and know when to involve a dermatologist,you stop relying on luck. You book with intention, you get results you can maintain, and your hair finally starts cooperating the way you’ve been hoping it would.`,metaTitle:`How to Book the Right Hair Stylist for Your Hair Type`,metaDescription:`Learn how to match your hair type and goals to a stylist’s specialty,plus when to see a dermatologist for hair loss or scalp issues.`},{id:8,slug:`book-right-stylist`,tag:`Tips`,title:`How to Book the Right Stylist for Your Hair Type`,excerpt:`Matching your hair type to the right specialist makes all the difference. Here's how to find yours.`,author:`Maria Chen`,date:`Mar 28, 2026`,readTime:`5 min`,image:`/image/book-the-right.avif`,category:`Tips`,section:`Inspiration`,body:`## Quick intro: stylist vs. dermatologist (and why it matters)
+
+Booking a new stylist can feel like a gamble,especially if you’ve had a cut that made your curls look undefined, or a color that didn’t flatter your undertone. The good news is that for most styling and cosmetic needs, a licensed cosmetologist/hairstylist is exactly who you should book. Even better? You can stack the odds in your favor by matching your hair type and goals to the stylist’s specialty.
+
+That said, there’s an important boundary. If your concern is medical,like sudden shedding, scalp itching with scaling, patchy hair loss, or hair loss that feels “out of nowhere”,a dermatologist is the right starting point. Dermatologists treat hair loss and scalp conditions, and they may recommend medications or other medical care depending on what’s causing the issue. A stylist can help you look and feel your best day-to-day, but they can’t diagnose the underlying cause of hair loss.
+
+Think of it this way: the right stylist helps with cut, color, styling, and hair health through education and product guidance. The right dermatologist helps with diagnosis and treatment when symptoms suggest a medical issue. If you’re unsure which route to take, it’s okay to ask your stylist what they see and whether your scalp/hair behavior sounds like something that should be medically evaluated.
+
+## Start with your hair profile (so you book from a position of clarity)
+
+Before you book, take 10 minutes to describe your hair as accurately as you can. This isn’t about labeling yourself perfectly,it’s about giving your stylist the right “map” of what your hair tends to do.
+
+Start with the basics:
+
+- **Texture**: straight, wavy, curly, or coily
+- **Density**: fine, medium, or thick strands,and how much hair you have overall
+- **Hair diameter / feel**: does your hair feel wispy, sturdy, or coarse?
+- **Porosity (how hair responds to moisture)**: does your hair drink products quickly and feel dry again fast, or does it resist moisture?
+- **Curl pattern / shape**: if you have curls, how do they form (rings, S-waves, zig-zags)? Where is the pattern most defined?
+- **Shrinkage**: do you lose a lot of length when dry?
+- **Scalp**: does your scalp feel oily quickly, dry and tight, itchy, sensitive, or flaky?
+- **Sensitivity and history**: do you react to certain products, heat, or dyes?
+
+Then add the “what matters” details:
+
+- What has **worked**?
+- What has **not** worked (and what exactly happened)?
+- What’s your priority: **volume**, **definition**, **less frizz**, **length retention**, **easier styling**, or **a shape that grows out well**?
+
+Bring photos,both of you on your best hair days and of your hair when it’s behaving in a less-than-ideal way (for example, when curls fall flat or the roots get oily fast). Photos help stylists spot patterns quickly, including how your hair clumps, where it gets weighed down, and how your ends behave.
+
+If you’re dealing with hair loss, also track what’s happening: when it began, whether shedding is diffuse or patchy, and whether your scalp symptoms changed. Even if you plan to see a dermatologist, this info helps you advocate for yourself.
+
+## Match the stylist’s specialties to your hair goals
+
+The “right stylist” isn’t just someone who cuts hair,it’s someone whose technique fits your hair type and your outcome.
+
+Start by identifying your goal, then look for a stylist whose specialty aligns. Here are common goals and what to look for:
+
+### Curly, wavy, and coily goals
+
+If you want **curl definition** and **less frizz**, look for stylists who highlight curl mapping, custom layering, and techniques that respect shrinkage and natural movement. A curly-cut is not just a shorter haircut,it’s a plan for how your curl pattern will fall when dry. If you’ve ever left a salon with a cut that looked great wet but turned into a triangle shape when dry, that’s often a sign the cutting method wasn’t tailored.
+
+If your goal is **length retention**, ask how they protect your ends during cutting. For many curl patterns, blunt ends, overly aggressive thinning, or cutting without considering how curls spring can lead to faster tangling and breakage.
+
+### Volume and shape goals
+
+If your hair needs **lift** (especially at the crown) or you want a shape that grows out gracefully, ask about their approach to layering and weight distribution. Fine hair often benefits from strategic layering and lightweight styling methods, while thick hair may need more precise shaping so it doesn’t become bulky.
+
+### Color goals
+
+Color is where “one-size-fits-all” can be especially risky. If you want **natural-looking dimension**, **root blending**, or **color placement** that flatters your face, look for someone who talks about tone, undertones, and how your hair’s base color reacts. If you’re trying to minimize damage, ask about their plan for strand health,how they prep, what they recommend between appointments, and how they tailor your aftercare.
+
+### Protective styles, extensions, and heat-free styling
+
+If you’re booking for **protective styles**, **extensions**, or **low-heat styling**, choose someone who can explain how they protect your scalp and hairline. Extensions should be installed with comfort and long-term maintenance in mind,tight installation can worsen breakage and irritation. If you’re trying to reduce heat, ask what styling method they use to create shape without excessive thermal stress.
+
+When you’re booking, don’t be shy about stating your hair type and goal in one sentence. For example: “I have wavy hair with high frizz and I want defined waves with minimal daily styling.” The stylist’s response tells you whether they understand your hair.
+
+## How to vet a stylist before you book (portfolio + consultation signals)
+
+You can learn a lot before the appointment by reviewing a stylist’s work and how they communicate.
+
+What to check:
+
+- **Portfolio variety that matches your hair type**: Look for clients with similar texture, density, and pattern. If every photo looks like the same hair type and the same result, that’s a clue.
+- **Consistency in before/after results**: Great portfolios show repeatable results, not only one dramatic transformation.
+- **Product knowledge**: A good stylist can explain why they recommend certain products for your hair’s needs (hydration, slip, hold, frizz control) and how you’ll use them.
+- **Consultation quality**: Do they ask detailed questions? Do they pay attention to your scalp comfort? Do they discuss what you want to change and what you want to keep?
+- **Realistic expectations**: The best stylists don’t promise a miracle. They explain the steps needed to get there.
+
+Red flags to watch for:
+
+- **No questions** or a rushed “you’ll be fine” vibe
+- **One-size-fits-all promises**, like “We can fix any hair in one appointment”
+- Ignoring **scalp comfort** (itchiness, flakiness, sensitivity) and focusing only on style
+- Avoiding discussion about styling method, maintenance, or what happens when hair behaves differently than expected
+
+A strong sign is when the stylist asks you to describe your hair routine and your goals in detail,because that’s how they’ll build a plan you can actually follow at home.
+
+## The consultation script: questions to ask about your hair type
+
+If you want to feel confident going in, use a question list. You’re not interviewing them for a job,you’re ensuring they understand your hair and your priorities.
+
+Ask:
+
+1. **Cut approach**: “How do you tailor the cut for my texture and density?”
+2. **Layering strategy**: “How will you add shape without making my hair triangle or stringy?”
+3. **Shrinkage and movement**: “How do you account for shrinkage when cutting curly/wavy hair?”
+4. **Curl/wave mapping**: “Do you cut with curl/wave pattern in mind so the shape holds when dry?”
+5. **Products and styling method**: “What products will you use for my hair type, and what’s the step-by-step routine at home?”
+6. **Frizz plan**: “What’s your strategy for reducing frizz while still keeping volume?”
+7. **Color technique** (if applicable): “How do you choose placement and tone for my undertone and hair history?”
+8. **Extensions/protective styles** (if applicable): “How do you protect my scalp and hairline, and what maintenance do you recommend?”
+9. **If it behaves differently**: “If my hair doesn’t respond the way we expect,what’s the plan to adjust?”
+
+The “plan if it behaves differently” question is especially important. Hair is living, and seasons, hormones, humidity, and product changes can shift how it acts. A good stylist will have a realistic adjustment strategy rather than blaming your hair.
+
+## Booking details that prevent mismatches (service wording, timing, expectations)
+
+Even if you find a stylist who seems like a perfect match, booking the wrong service can cause disappointment.
+
+When you book, be specific about what you’re booking:
+
+- **Cut only** vs. **cut + style**: If you want to see how your hair looks styled (especially for curls or waves), ensure the appointment includes styling time.
+- **Curl service** vs. a general cut: If you’re seeking curl definition, ask whether the appointment includes techniques designed for your pattern.
+- **Color**: Confirm whether it’s all-over, highlights, balayage, root touch-up, or something else.
+- **Extensions/protective styles**: Make sure the service includes consultation time and any necessary prep.
+
+Also request the right appointment length. If a curly cut is scheduled for the same time as a basic trim, you’re likely to miss out on the detailed shaping and styling steps that make curly results last.
+
+Clarify what’s included:
+
+- Will you get a wash?
+- Is there a deep conditioning step?
+- What styling method will they use (diffuse, air-dry guidance, product layering)?
+- Will you receive a take-home routine recommendation?
+
+The goal is alignment: you should leave the salon with a style that matches your hair’s behavior and a plan you can repeat at home.
+
+## When to see a dermatologist instead of relying on a stylist
+
+If you’re experiencing hair loss or scalp symptoms, it’s worth knowing when to switch from “stylist-first” to “doctor-first.” Dermatologists are typically the clinicians who handle hair loss treatment, and they may recommend care based on the cause.
+
+Consider booking with a dermatologist if you notice:
+
+- sudden or heavy shedding
+- patchy hair loss
+- scalp itching, burning, scaling, or redness that doesn’t improve
+- thinning at the part or crown that’s progressing
+- hair loss that started alongside other symptoms (fatigue, skin changes, or systemic symptoms)
+
+If you suspect **alopecia areata**, the National Alopecia Areata Foundation offers a **Doctor Finder** designed to help people find board-certified dermatologists (and some other qualified clinicians) experienced in diagnosing and treating alopecia areata.
+
+When you meet a clinician, they’ll typically evaluate the pattern and severity of hair loss as part of care planning. That’s a major reason medical evaluation matters,because the right treatment depends on what’s happening under the surface, not just how the hair looks today.
+
+If you want a reputable way to locate board-certified dermatologists, the American Academy of Dermatology provides a public **Find a Dermatologist** search where you can enter your city/state/zip to find board-certified providers [1,5].
+
+A stylist can still support you with gentle styling, scalp-friendly product recommendations, and confidence-building looks,but for diagnosis and treatment, a dermatologist is the right role.
+
+## Aftercare plan: what to ask for so your style lasts
+
+A great appointment doesn’t end when you leave the salon. Ask for an aftercare plan that matches your hair type and your lifestyle.
+
+Request a personalized routine that includes:
+
+- **Wash frequency**: How often should you wash based on your scalp oiliness or dryness?
+- **How to style at home**: For curls/waves, ask about drying method, product order, and whether you should diffuse or air-dry.
+- **Product types**: What should you use for hydration, frizz control, hold, and softness?
+- **How to maintain shape between appointments**: For example, how to refresh without over-washing or disturbing your pattern.
+
+If your hair is prone to dryness or breakage, ask how to reduce friction and protect your ends. If your scalp is sensitive, ask which ingredients or product categories to avoid.
+
+Most importantly, ask for a routine you can realistically follow. The “right stylist” is the one who can translate salon technique into a home plan that fits your time and budget.
+
+If you’re in a hair-loss journey, aftercare matters even more,comfort and gentleness become non-negotiable. A dermatologist-led plan plus stylist support can help you maintain a healthy scalp environment while you work on treatment.
+
+## FAQ + quick checklist (printable)
+
+### FAQ
+
+**Can I book a curly cut if my hair is transitioning (straight to curly)?**
+Yes,just be upfront. Transitioning hair can behave differently across sections, so ask how the stylist will cut and style both textures so the shape stays flattering as your pattern evolves.
+
+**What if my scalp is flaky or itchy,should I still book a cut?**
+If symptoms are active, consider seeing a dermatologist first. Hair loss treatment and scalp conditions are typically medical topics, and a clinician can help determine what’s going on. A stylist can help with gentle styling, but they shouldn’t be the only step if your scalp is uncomfortable.
+
+**How do I know if my stylist is right for my hair type?**
+You’ll notice it during the consultation: they ask detailed questions, explain their approach, and recommend products and steps that match your texture, density, and goals.
+
+**Do I need a special stylist for color?**
+Color results depend heavily on technique and planning. If you want subtle dimension, minimal damage, or precise tone, look for a stylist who demonstrates consistent color work and can explain their process.
+
+### Quick checklist
+
+Before you confirm your appointment, make sure you have:
+
+- A clear description of your hair profile (texture, density, scalp)
+- A goal stated in plain language (definition, volume, length retention, frizz reduction)
+- A stylist whose portfolio matches your texture and desired outcome
+- A consultation that includes questions and a tailored plan
+- Service wording that matches what you want (cut vs. cut+style vs. curl service)
+- An aftercare routine you understand and can follow
+
+When you match the right stylist to your hair type,and know when to involve a dermatologist,you stop relying on luck. You book with intention, you get results you can maintain, and your hair finally starts cooperating the way you’ve been hoping it would.`,metaTitle:`How to Book the Right Hair Stylist for Your Hair Type`,metaDescription:`Learn how to match your hair type and goals to a stylist’s specialty,plus when to see a dermatologist for hair loss or scalp issues.`},{id:9,slug:`questions-before-color`,tag:`Tips`,title:`10 Questions to Ask Before Your Next Color Appointment`,excerpt:`Walk into your next color appointment prepared. These questions will protect your hair and your results.`,author:`James Olivier`,date:`Mar 26, 2026`,readTime:`7 min`,image:`/image/questions-before-color.avif`,category:`Tips`,section:`Inspiration`,body:`Color can be transformative,until it isn’t. The best way to protect your results (and your scalp) is to ask smart questions before the dye ever touches your hair. Think of this as your pre-appointment checklist: you’re not being difficult; you’re being informed. A great stylist will welcome these questions, explain their process clearly, and help you feel confident about timing, maintenance, and safety.
+
+Below are 10 questions to ask before your color appointment, with the goal of getting a plan that matches your hair history and your health needs.
+
+### 1. What exactly are we doing to my hair (and why)?
+
+Start by confirming the service type and the “why” behind it. Ask your stylist whether you’re getting highlights, an all-over color, a root touch-up, gloss/toner, or corrective color. Then connect the technique to your goal: Are you aiming for more dimension, better gray coverage, a softer tone, or a specific shade? A helpful follow-up is to request a step-by-step plan,what happens first, what gets applied where, and what gets adjusted if your hair behaves differently than expected.
+
+It’s also okay to ask what products and techniques they’ll use. For example, will they be using a toner to refine warmth, or a gloss to add shine and reduce brassiness? If you’ve had bleach or previous dye, ask how that history affects their approach. The more clearly the plan is communicated, the more likely you are to love the outcome,and feel prepared for aftercare.
+
+### 2. Which shade(s) and formula(s) will you use,and how will you choose the right one?
+
+Color results depend on more than the shade name. Ask how they’ll match your current level (how light or dark your hair already is) and your undertone (warm, cool, or neutral). If you have gray hair, ask how they’ll handle coverage,gray can lift and deposit differently than natural pigment. If you’ve dyed or bleached before, ask what adjustments they’ll make based on your prior formula and condition.
+
+Then ask the most important “real life” question: what if it doesn’t lift or take color the way we expect? A professional plan often includes an if/then approach,such as changing tone density, extending or shortening processing time, or using additional toning to refine warmth. You can also ask what they’ll do if the result is too warm, too cool, or uneven.
+
+This is also where you can discuss expectations. Color usually isn’t “one and done,” especially if bleach is involved or if you’re moving across several shades. A good stylist will explain what’s achievable in a single session versus what may require a second appointment.
+
+### 3. What’s the health risk profile for my scalp and hair?
+
+Safety should be part of the conversation, not an afterthought. Ask what potential irritation or allergy concerns exist for the specific products they’ll use. Then ask what ingredients you should watch for,especially if you have sensitive skin, eczema, or a history of reactions.
+
+One ingredient that deserves special attention is paraphenylenediamine (PPD), which is a common allergen in hair dye contact allergy. The National Eczema Society notes PPD as a trigger for contact dermatitis, and DermNet NZ describes PPD as a key allergen in hair dye contact allergy. If you’ve ever had itching, burning, rash, or swelling after coloring (even years ago), tell your stylist before your appointment.
+
+Also ask how the salon handles product application to reduce risk,like avoiding unnecessary contact with skin, using barrier protection when appropriate, and ensuring the right product is used for the right area. Allergic reactions to cosmetics most often show up as itchy, red rashes (contact dermatitis), so you want a plan that prioritizes scalp comfort and early prevention.
+
+### 4. Do you require (or recommend) a patch test,and when should I do it?
+
+Patch testing is one of the easiest ways to reduce the chance of a bad reaction. The FDA advises people who dye their hair to “do a patch test before using dye on your hair,” and notes that salons should also do patch testing before dyeing hair. Ask whether the salon performs patch testing for new clients or new products, and what timing they use before appointment day.
+
+If they do patch tests, ask which area they test and how they record results. If they don’t, ask whether they can recommend an at-home patch test using the specific product you’ll be using. The key is that you’re testing the actual dye/toner system,not just “something similar.”
+
+You should also ask what to do if you react. Delayed reactions can happen: the NHS notes that symptoms of hair dye reactions can take up to 72 hours to appear. That means you shouldn’t treat patch testing as a quick “same-day” step,watch for delayed signs and follow the guidance from the product instructions and your healthcare provider if needed.
+
+### 5) What developer strength and processing time will you use?
+
+Processing time and developer strength can make or break both your color result and your hair comfort. Ask what developer strength they’ll use and how long the products will be on your scalp and strands. Also ask whether timing differs by section,many stylists adjust based on saturation, porosity, and how hair has responded in the past.
+
+Then ask how they prevent over-processing. For instance, will they check strand progress during processing? Will they monitor porosity so the ends don’t grab color faster than the roots? A good stylist will explain how they reduce risk of dryness, breakage, and uneven tone.
+
+It’s also smart to ask what signs they watch for. If your hair feels overly hot, becomes overly tight, or your scalp becomes uncomfortable, ask what their immediate response protocol is,because your comfort matters.
+
+Finally, confirm whether they plan to use toning at the end (common with highlights, bleach, and many gray-coverage goals). Toning is often what refines warmth, but it can also be where irritation risk comes in if you’re sensitive,so connect this question to the patch test and scalp comfort plan.
+
+### 6. How will you protect my hair from damage (especially if there’s bleach involved)?
+
+If bleach is part of your service, ask about strand integrity checks and protective steps. A stylist can often evaluate your hair’s current condition,how porous it is, how elastic it feels, and how it’s likely to respond to lightener. Ask whether they’ll do a strand test (or at least a progress check) before full processing.
+
+You can also ask what bond-building or protective steps they’ll use during the process. Many salons use specialized additives designed to support hair structure during chemical services. While results vary depending on your hair history, the question itself matters: it shows you’re looking for a damage-aware approach, not just a “get it done quickly” one.
+
+Be realistic about texture after color. Color can leave hair feeling different,sometimes softer, sometimes drier, especially if there’s bleach or significant lift. Ask what softness or porosity changes they expect for your hair specifically, and what they recommend immediately after the appointment to restore feel and reduce tangling.
+
+### 7. What should I expect for maintenance, fading, and re-color timing?
+
+Maintenance is where most people feel surprised,because “great on day one” doesn’t always translate to “great for months.” Ask how long the result typically lasts for your specific technique and shade. For example, highlights and toners may fade differently than all-over color. Gray coverage timelines also vary based on your natural regrowth pattern and the type of formula used.
+
+Then ask when you should schedule the next appointment. A common mistake is waiting until the color looks noticeably off; a better strategy is often to plan based on when brassiness, fading, or regrowth becomes the main issue.
+
+Also ask what to use at home to reduce brassiness and dryness. Your stylist might recommend a color-safe shampoo, a conditioner designed for chemically treated hair, and possibly a toner-supporting product for at-home maintenance. If you’re prone to dryness, ask for a routine that supports hydration without stripping your color.
+
+If you’ve experienced hair loss in the past, ask whether color timing and scalp comfort could indirectly affect it. While hair dye doesn’t “cause” hair loss in the way some medical conditions do, irritation and inflammation can worsen shedding for some people,so the maintenance plan should include scalp care.
+
+### 8. What are the aftercare rules for sensitive skin and scalp comfort?
+
+Color aftercare isn’t just about shine,it’s also about skin comfort. Ask for specific instructions: how soon you can wash, how often to wash, and what to avoid (like harsh exfoliants or fragranced products) during the first days after coloring.
+
+Also ask what symptoms mean you should stop and contact a professional. Because reactions can be delayed, it’s important to know what’s “normal” versus what’s a warning sign. The NHS notes that symptoms can take up to 72 hours to appear, so you should know what to watch for after you leave the salon.
+
+Your stylist should also encourage you to follow safety precautions and manufacturer directions/labeling for hair dye use. The FDA emphasizes following manufacturer instructions and safety precautions when using hair dye. If you’re using any at-home products to maintain tone, ask which ones are safest for a sensitive scalp.
+
+If you have eczema or a history of contact dermatitis, ask what precautions the salon takes to reduce exposure and irritation. And if you’ve ever had a reaction, share it clearly,what happened, how soon it happened, and what the skin looked like. That information helps them tailor the process.
+
+### 9. What’s the total cost,and what could change the price?
+
+No one wants a surprise at checkout. Ask for a clear quote that includes the service, any toning/corrective work, and the products used. Then ask what triggers additional cost.
+
+Common price changes include extra toning to achieve the desired tone, corrective work if the hair doesn’t lift or deposit as expected, longer processing time, or additional products for protection and aftercare. If the salon offers a consultation or strand test, ask whether those have separate fees.
+
+A helpful question is: “If we need to adjust during the appointment, how will you communicate that and confirm before proceeding?” Great salons will set expectations early and keep you in the loop.
+
+### 10. How will you handle “color correction” if the result isn’t what I expected?
+
+Even with excellent planning, results can vary,especially on previously dyed or bleached hair. Ask about the salon’s policy for remakes or corrections. Clarify the timeline: when they’ll assess the result, what happens if you’re unhappy, and what conditions apply.
+
+Also ask what information they’ll need from you for correction. Photos are usually helpful, but be specific: ask whether they want close-ups of roots, mid-lengths, and ends, and whether they’ll review your product history.
+
+Most importantly, ask how they set expectations before processing begins. The best time to discuss outcomes is before the color is mixed and applied,not after. A good stylist will explain what can be corrected in one session, what may require gradual adjustment, and how they’ll protect your hair while doing it.
+
+### Conclusion
+
+Asking questions before your color appointment isn’t just smart,it’s empowering. It helps you confirm the service and goal, choose the right shade strategy, and protect your hair’s health and your scalp comfort. It also sets you up for realistic maintenance expectations and a clear path forward if you need correction.
+
+If you want one takeaway, make it this: safety and communication matter as much as the final tone. When you ask these 10 questions, you’re more likely to leave the salon feeling confident, comfortable, and excited about your color,not worried about what happens next.`,metaTitle:`10 Questions to Ask Before Your Hair Color Appointment`,metaDescription:`Protect your results and scalp. Ask these 10 questions about shade, processing, patch tests, aftercare, cost, and correction.`},{id:10,slug:`bond-builders`,tag:`Products`,title:`Bond Builders: What They Are and Why Your Hair Needs One`,excerpt:`The science behind bond-building treatments and why colorists swear by them.`,author:`Dr. Sarah Kline`,date:`Mar 24, 2026`,readTime:`6 min`,image:`/image/bond-builders.avif`,category:`Products`,section:`Hair Care`,body:`Everyone says damaged hair needs a bond builder. The tricky part is that "bond builder" is not a tightly regulated term, and different products can work in different ways. Some claims are stronger than the evidence behind them. Some products may help hair behave stronger without literally rebuilding the exact bonds the marketing talks about.
+
+The useful way to think about bond builders is this: they are treatments designed to support the inside of the hair fiber, not just coat the surface. That matters most for hair that has been bleached, colored, permed, relaxed, heat styled often, exposed to UV, or worn down by repeated brushing and washing.
+
+### Start with the hair structure
+
+Hair has a cuticle on the outside and a cortex on the inside. The cuticle is made of overlapping cells that behave a little like roof shingles, while the cortex contains long protein-rich cells that give hair much of its strength, shape, stretch, and resilience.
+
+Inside those structures, hair proteins are held together by different types of bonds. Those bonds act like tiny points of connection between protein chains. When enough of them are disrupted, hair can become weaker, rougher, more porous, and more likely to snap.
+
+There is also a cell membrane complex, often shortened to CMC, that helps hold hair structures together. Think of it as the material between the "bricks" of the hair fiber. Surface care still matters because the cuticle is the part you touch, see, brush, towel-dry, and style. But bond builders are usually positioned around what is happening deeper inside the fiber.
+
+### The three main hair bonds
+
+The bonds people usually mean when they talk about bond repair are:
+
+- **Disulfide bonds:** Strong, relatively permanent bonds that have a major effect on hair strength and shape.
+- **Ionic bonds:** Medium-strength salt bonds that can be affected by pH and chemical conditions.
+- **Hydrogen bonds:** Weaker bonds that break and reform constantly with water, humidity, washing, and heat styling.
+
+Disulfide and ionic bonds are usually changed most dramatically by chemical services. Hydrogen bonds are much more temporary, but there are a lot of them, so they still have a huge effect on how hair behaves day to day.
+
+### Why damage makes hair weaker
+
+Chemical treatments are the big source of bond damage. Bleach can disrupt many disulfide bonds, and permanent color can create some of the same stress. Perms and many straightening services intentionally break disulfide bonds, then try to reconnect them in a new shape. The problem is that not every bond rejoins neatly.
+
+Heat styling and UV exposure are usually less dramatic than bleach, but their effects build over time. Regular brushing, washing, towel friction, humidity changes, and styling tension also add to the wear.
+
+When bonds break, hair needs less force to stretch, distort, or snap. Tiny protein fragments can also loosen and leave gaps inside the fiber. On the outside, that can show up as breakage, roughness, looser curl pattern, frizz, tangles, and ends that feel weak or "mushy."
+
+### How bond builders probably work
+
+This is where the science gets murky. There is not a lot of independent, high-quality, head-to-head research comparing bond-builder ingredients or finished products. Beauty research is often industry funded, and that does create conflicts of interest. At the same time, large cosmetic companies and specialist labs may have better equipment, more samples, and more experience running hair tests than independent academic groups.
+
+The best current big-picture read is that many bond builders may not work by directly repairing disulfide bonds in the simple way brands sometimes describe. A lot of reliable evidence points toward a more practical mechanism: they help reduce water's ability to disrupt the hair fiber.
+
+Water breaks hydrogen bonds between hair proteins. When water gets in, proteins stop "holding hands" with each other and interact with water instead. Some bond-building ingredients can act like connectors with more than one bonding site. They can form hydrogen bonds, and sometimes ionic interactions, between parts of the hair protein. That creates a different kind of internal support.
+
+That may sound different from repairing disulfide bonds, and it is. But from the hair's point of view, another kind of "glue" can still help. Hydrogen bonding sites are much more common on hair proteins than sulfur sites, so ingredients that can form multiple hydrogen bonds have many more possible places to attach.
+
+### Why blocking water matters
+
+Damaged hair often absorbs more water because it has more gaps and a more compromised structure. More water swelling can make hair more fragile, especially during washing and detangling.
+
+Some bond builders may help by taking up space, attaching to protein sites, and making it harder for water to get in and loosen the structure. If the fiber swells less and holds together better, hair can feel smoother, tangle less, and break less during normal handling.
+
+For coloring and bleaching, some bond builders may also help limit damage in secondary ways. They may reduce swelling so lightener penetrates in a more controlled way, or they may bind metal ions that would otherwise contribute to extra oxidative damage during bleach services.
+
+### Common bond-builder ingredient families
+
+Different brands use different ingredient stories, but many bond-building ingredients have something in common: they contain groups that can form hydrogen bonds, ionic bonds, or both.
+
+Common examples include:
+
+- **Bis-aminopropyl diglycol dimaleate:** The ingredient associated with Olaplex.
+- **Maleic acid:** Used in some professional bond-building systems.
+- **Citric acid:** Seen in acidic bonding lines from brands like Redken and L'Oreal.
+- **Malic acid and succinic acid:** Smaller acids that have appeared in bond-care patents and products.
+- **Panthenol:** A classic hair-care ingredient that can hydrogen bond and has newer research around bond-building behavior.
+- **Phytic acid and gluconolactone:** Used in some repair-focused formulas.
+- **Hydroxypropyl gluconamide and hydroxypropyl ammonium gluconate:** Found in several bond-repair retail products.
+- **Arginine:** An amino acid used in some damage-repair lines.
+- **Peptides and hydrolyzed proteins:** Protein fragments that can attach to hair and may support the fiber through multiple hydrogen-bonding sites.
+
+The ingredient list alone does not tell the full story. A finished formula matters: pH, solvent system, conditioning agents, concentration, product format, and how well the ingredient can penetrate damaged hair all change the result.
+
+### What about Olaplex-style disulfide repair claims?
+
+Olaplex helped make bond builders famous, and it deserves credit for turning bond repair into a mainstream category. But the original explanation of exactly how its ingredient repaired disulfide bonds has been debated.
+
+The important consumer takeaway is not that Olaplex "does nothing." It is that a product can improve damaged hair while the marketing explanation is incomplete, simplified, or not fully proven. Similar results from ingredients with very different structures suggest that many bond builders may be helping through broader hydrogen-bonding, water-control, ionic, or conditioning effects rather than one neat disulfide-repair pathway.
+
+### Why some bond builders make hair feel worse
+
+If a bond builder makes your hair feel rough, dry, or more breakage-prone, it may not be giving your hair enough surface conditioning. Hair still needs slip. If the surface is not smooth, strands snag on each other, brushes, towels, and clothing. That friction can cause more breakage even if the product is doing something helpful inside the fiber.
+
+Some formulas also include proteins or film-formers that certain hair types find stiff or rough. That does not mean all bond builders are bad for your hair; it means the formula may not match your hair's damage pattern, texture, porosity, or conditioning needs.
+
+### How to choose a bond builder
+
+Look for a product with ingredients that have some evidence behind them, but do not shop by ingredient name alone. Read reviews from people with hair like yours: similar texture, similar damage, similar color history, and similar styling habits.
+
+If you want to test a product properly, try it consistently for a few weeks. The most useful signs are practical ones:
+
+- Less snapping during detangling
+- Ends that feel stronger instead of limp or mushy
+- Less roughness after washing
+- Hair that tangles more slowly
+- Curls or waves that hold their shape better
+- Color-treated hair that feels less fragile between appointments
+
+For a more controlled experiment, apply the product to one side or one section of your hair and compare it with the untreated side over several washes. Hair is variable, so a side-by-side test can tell you more than one dramatic first impression.
+
+### Bond builders are not a full routine
+
+Bond builders are not a replacement for conditioner, masks, gentle cleansing, heat protection, trims, or lower-tension styling. They are one part of a damage-care routine.
+
+If your hair is bleached, vivid-colored, relaxed, permed, or heat-styled often, pair bond care with:
+
+- A gentle shampoo that does not leave your hair squeaky or stripped
+- A conditioner with enough slip for detangling
+- A moisturizing mask when hair feels dry or rough
+- Heat protectant before hot tools
+- Lower heat settings whenever possible
+- Careful detangling from ends upward
+
+### Bottom line
+
+Bond builders can be useful, especially for hair that has been chemically processed or repeatedly stressed. But the category is more complicated than "this product rebuilds broken disulfide bonds." Many products may work by forming other helpful connections inside the hair, reducing water-related swelling, improving internal support, or adding enough structure that damaged hair breaks less easily.
+
+Choose based on your hair's actual behavior, not just the boldest claim on the bottle. If the product helps your hair feel stronger, tangle less, and snap less while still staying soft and conditioned, that is the result that matters.
+
+**CTA:** If your hair feels rougher, tangles faster, or keeps snapping after processing or styling, consider adding a bond builder to your wash routine. Start with the product directions, commit for a few weeks, and build a full regimen that includes moisture and protection so your strands can stay strong.`,metaTitle:`Bond Builders 101: What They Are & How to Use Them`,metaDescription:`Learn what bond builders do, how they differ from conditioner, who benefits most, and how to use them correctly to reduce breakage.`},{id:12,slug:`solo-stylist-blueprint`,tag:`Business`,title:`The $100K Solo Stylist Blueprint`,excerpt:`The exact milestones that separate growing stylists from stalled ones, from pricing logic and service menus to rebooking systems and the numbers that actually matter.`,author:`Dana Reeves`,date:`Mar 20, 2026`,readTime:`14 min`,image:`/image/solo-stylist-blueprint.avif`,category:`Business`,section:`Inspiration`,body:`A solo stylist does not reach $100K because every appointment is perfect. They reach it because every appointment connects to a system.
+
+The client knows what to book first. They understand why maintenance matters. They know how pricing works. They leave with a plan, not just a finished style.
+
+That is the difference between being busy and building a business.
+
+For this blueprint, $100K means annual gross service revenue, not take-home pay. A solo stylist still has business expenses: suite rent or booth rent, color, back-bar product, tools, towels, insurance, booking software, card processing fees, education, marketing, and taxes. The U.S. Bureau of Labor Statistics reported the May 2024 median hourly wage for hairdressers, hairstylists, and cosmetologists at $16.95, which shows why a stylist aiming for $100K has to think beyond simply taking more appointments. The path is not just more labor. It is better structure.
+
+Whether your specialty is pastel-to-vivid color, blonding, lived-in brunettes, extensions, curls, smoothing, or precision cutting, the business problem is the same: your craft needs a repeatable client journey.
+
+## The $100K Math
+
+A $100K year breaks down like this:
+
+| Revenue Target | Number |
+|---|---|
+| Annual gross revenue | $100,000 |
+| Monthly gross revenue | $8,333 |
+| Weekly gross revenue, assuming 48 working weeks | $2,083 |
+| Daily gross revenue, 5 client days per week | $417 |
+| Daily gross revenue, 4 client days per week | $521 |
+| Daily gross revenue, 3 client days per week | $694 |
+
+This is where the goal becomes less abstract. A solo stylist does not need to guess whether they are “doing well.” The schedule either supports the target or it does not.
+
+Here is what that looks like by average ticket:
+
+| Average Ticket | Clients Needed Per Week to Reach $100K Gross |
+|---|---|
+| $150 | 14 clients/week |
+| $175 | 12 clients/week |
+| $200 | 11 clients/week |
+| $250 | 9 clients/week |
+| $300 | 7 clients/week |
+| $350 | 6 clients/week |
+
+The takeaway is simple: a $100K solo stylist is usually not built on random walk-ins and underpriced appointments. It is built on a controlled mix of average ticket, rebooking, maintenance services, and schedule discipline.
+
+If you work 4 client days per week, your daily target is about $521 before expenses. If you have 6 true bookable client hours in a day, your gross hourly target is about $87. If you only have 5 bookable client hours, it is about $104. That does not mean every service needs to be priced hourly, but it does mean every service has to respect the amount of chair time it takes.
+
+## Milestone 1: Choose a Specialty Clients Can Understand
+
+A stylist can be talented at many things, but a solo business grows faster when the client can clearly understand what you are known for.
+
+For example, “I do hair color” is broad. “I specialize in soft blonding and lived-in color” is clearer. “I specialize in pastel-to-vivid creative color with a hair-health-first process” is even more specific.
+
+A strong specialty does three things:
+
+- It tells clients what result you are best at.
+- It helps you build a service menu around repeatable appointments.
+- It makes your content easier to create because your work has a clear point of view.
+
+For a pastel-to-vivid color specialist, the brand differentiator is not only the final color. It is the process: consultation, hair history, strand testing, realistic timing, color placement, tone maintenance, and aftercare. That is what turns a one-time dramatic appointment into a client relationship.
+
+The milestone is not “I can do the service.” The milestone is: clients know when to choose you.
+
+## Milestone 2: Build a Service Menu That Guides the Next Booking
+
+A stalled stylist often has a menu that lists services. A growing stylist has a menu that guides the client through a path.
+
+Your menu should answer three client questions:
+
+- What do I book first?
+- What happens during the appointment?
+- When do I come back?
+
+For a color-focused solo stylist, the menu can be built around this structure:
+
+| Service | Purpose | Best For | Rebooking Logic |
+|---|---|---|---|
+| New Client Consultation | Assess goals, hair history, budget, timing, and maintenance ability | New color clients, corrections, vivid transformations | Leads into full service, prep session, or correction plan |
+| Signature Color Service | Main creative or corrective appointment | Pastel, vivid, blonding, major transformations | Follow-up refresh or gloss |
+| Maintenance Refresh | Keep tone, brightness, and shape controlled | Existing clients whose color is fading | Every 4 to 8 weeks, depending on formula and home care |
+| Gloss or Toning Visit | Adjust warmth, dullness, or fading | Blondes, brunettes, fashion shades | Every 6 to 10 weeks |
+| Strength Support or Prep Session | Improve readiness before bigger color work | Fragile, compromised, or high-risk hair | Before transformation or between color sessions |
+| Color Correction Roadmap | Multi-step repair and color reset | Box dye, banding, uneven lift, overprocessed hair | Consultation required before booking |
+
+This kind of menu helps clients understand that color is not a single event. It is a process.
+
+Add-ons can include glossing, toning, bond-support care, conditioning treatments, extra product for long or dense hair, haircut reshaping, or take-home aftercare. But the core service should never feel incomplete without add-ons. Add-ons should refine the result, not patch holes in the service.
+
+## Milestone 3: Price With Logic, Not Fear
+
+Pricing is one of the biggest reasons solo stylists stall. They quote too quickly, undercharge complicated work, and then try to make up the difference by squeezing too many clients into the week.
+
+A better pricing system is based on four variables:
+
+- **Time:** how many hours the appointment requires.
+- **Complexity:** blonding, correction, vivid placement, density, length, and previous color history.
+- **Product cost:** color, lightener, toner, treatment, back-bar usage.
+- **Risk and expertise:** the skill required to protect the hair and deliver the result safely.
+
+A practical quote should sound clear, not apologetic.
+
+For example: “Based on your hair history and the result you want, this is a transformation appointment, not a standard color refresh. The starting range is based on time, density, product, and whether we need extra prep. After the consultation and strand test, I can give you the most accurate plan.”
+
+That kind of language helps the client understand that pricing is not random. It is connected to the work.
+
+For creative color, corrections, or major blonding, avoid giving final pricing from a single photo. Photos help, but they do not show porosity, previous layers of color, breakage risk, or how the hair will lift. A consultation protects both the stylist and the client.
+
+> If a service takes half your day, it needs to produce half your daily revenue target or more.
+
+If your daily target is $521 and a transformation takes 5 hours, that appointment cannot be priced like a simple gloss. Otherwise, your calendar looks full but your business still underperforms.
+
+## Milestone 4: Turn Maintenance Into a Normal Part of the Result
+
+A client should never leave wondering, “When do I come back?”
+
+For color clients, especially pastel, vivid, blonde, or corrective color clients, maintenance is not an upsell. It is part of the result. Vivid tones fade. Blondes warm up. Glosses soften. Roots grow. Ends lose polish. If the client does not understand the maintenance rhythm, they may blame the service instead of the natural life cycle of the color.
+
+A strong rebooking script sounds like this: “To keep this tone looking intentional, I’d like to see you in about six weeks for a refresh. That visit is shorter than today, and it keeps the color from fading too far before we correct it.”
+
+This is how a stylist builds predictable income without sounding pushy. You are not selling a random appointment. You are protecting the work the client already invested in.
+
+A simple retention rhythm:
+
+- Before checkout: recommend the next visit.
+- After the appointment: send aftercare instructions.
+- Two to three weeks later: check in on tone, fading, and home care.
+- Four to eight weeks later: bring the client back for maintenance.
+- Every few visits: reassess shape, color direction, and long-term goals.
+
+The milestone is not “I got a client to book once.” The milestone is: the client understands their maintenance plan before they leave.
+
+## Milestone 5: Create Content That Converts, Not Just Content That Looks Pretty
+
+Hair content should do more than show the final photo. It should reduce client anxiety.
+
+Clients want to know: Can you get me close to this result? Will my hair survive the process? How long will it take? How much maintenance will it need? What should I book? Is my current hair a good starting point?
+
+A strong solo stylist content system answers those questions every week.
+
+| Content Type | Purpose |
+|---|---|
+| Before-and-after post | Show transformation and result quality |
+| Process reel | Show the steps, not just the finish |
+| Hair health education | Build trust around porosity, lightening, fading, and maintenance |
+| Formula direction story | Explain the color family or technique without exposing every professional detail |
+| Client maintenance reminder | Normalize refresh visits |
+| Availability post | Turn attention into bookings |
+| Testimonial or client reaction | Add social proof |
+
+For a pastel-to-vivid color specialist, a caption should not only say, “Purple transformation.” It should explain the work: “This client came in with previous warmth through the mids and ends, so our goal was not just vivid color. The first priority was creating an even canvas. We lifted carefully, adjusted tone, then placed the vivid shade in a way that would fade softer over time. Maintenance: refresh in 6 weeks, color-safe wash routine, and lower heat styling.”
+
+That caption tells the client you are not guessing. You are planning.
+
+Every content post should lead somewhere. Use a clear booking link, consultation form, or call to action. A post without a next step is just a portfolio piece. A post with a next step becomes part of your revenue system.
+
+## Milestone 6: Protect the Business With Policies
+
+A solo stylist is not just behind the chair. They are also the front desk, scheduler, service provider, bookkeeper, marketer, and client experience manager.
+
+Policies are not there to make the business feel cold. They protect the quality of the work.
+
+At minimum, a solo stylist should have:
+
+- Deposit policy
+- Cancellation and no-show policy
+- Late arrival policy
+- New client consultation form
+- Color history form
+- Photo consent form
+- Service consent for chemical work
+- Correction policy
+- Refund or adjustment policy
+- Maintenance timing guidance
+- Aftercare instructions
+
+The adjustment policy is especially important. Clients need to know the difference between a service issue and normal color fading. A good policy does not need to sound harsh. It can sound professional: “Color adjustments must be requested within 7 days of the appointment. This does not include normal fading, changes caused by home care, hard water, heat styling, or products outside the recommended routine.”
+
+That kind of language sets boundaries before there is a problem.
+
+## Milestone 7: Build the Boring Foundation Before Scaling
+
+Before pushing for bigger color services, more clients, or higher-ticket appointments, the business foundation has to be clean.
+
+In the U.S., the basics usually include choosing a business structure, registering the business where required, getting federal and state tax IDs if applicable, applying for the required licenses and permits, opening a business bank account, and getting business insurance. The SBA notes that registration requirements depend on business structure and location, and that license and permit requirements vary by activity, location, and government rules.
+
+Cosmetology licensing is also state-based. The Bureau of Labor Statistics states that all states require barbers, hairstylists, and cosmetologists to be licensed, typically through a state-approved program and exam. If your business structure requires an EIN, apply through the IRS directly, getting an EIN online is free.
+
+The business foundation should include:
+
+- Cosmetology license in good standing
+- Local business license or registration, if required
+- Sales tax setup, if applicable to your services or retail
+- Professional liability insurance
+- Booking and payment system
+- Business bank account
+- Separate business records
+- Formula and client history records
+- Signed intake and consent forms
+
+This section is not glamorous, but it matters. A stylist cannot scale cleanly if the foundation is messy.
+
+## Milestone 8: Track the Numbers That Actually Matter
+
+A stalled stylist tracks how full the calendar feels. A growing stylist tracks the numbers that explain the business.
+
+| Metric | Why It Matters |
+|---|---|
+| Gross revenue | Shows whether you are moving toward the $100K target |
+| Average ticket | Shows whether pricing and service mix are working |
+| Clients per week | Shows whether demand is strong enough |
+| Rebooking rate | Shows whether clients are returning |
+| New client inquiries | Shows whether marketing is producing demand |
+| Consultation-to-booking conversion | Shows whether your consultation process works |
+| No-show or cancellation rate | Shows whether policies need tightening |
+| Top revenue service | Shows what should be featured more |
+| Lowest-margin service | Shows what may need repricing or removal |
+| Maintenance bookings | Shows whether clients understand the long-term plan |
+
+These numbers prevent emotional business decisions. A slow week does not automatically mean the business is failing. A full week does not automatically mean the business is profitable.
+
+## A 30/60/90 Plan for the Solo Stylist
+
+### First 30 Days: Build the Foundation
+
+The first 30 days are about clarity. Set up your menu, policies, consultation form, booking flow, and core content direction. Decide what your specialty is and what kind of client you want to attract. Build a small but strong portfolio around your best work.
+
+By the end of the first 30 days, you should have:
+
+- A clear service menu
+- Consultation and intake forms
+- Deposit and cancellation policies
+- A booking link
+- A photo consent process
+- 10 to 15 strong portfolio images
+- A basic aftercare guide
+- A defined specialty statement
+
+Example specialty statement: “I specialize in soft blonding and pastel-to-vivid color with a hair-health-first approach, clear maintenance plans, and realistic transformation timing.”
+
+### Days 31 to 60: Build Demand
+
+Once the foundation is clean, focus on visibility. Post consistently. Explain your work. Show transformations. Show maintenance. Show why a consultation matters. Start building referral relationships with photographers, makeup artists, bridal vendors, local boutiques, gyms, barbershops, or other beauty professionals who serve a similar client base.
+
+By the end of 60 days, you should be tracking how many inquiries you receive each week, which posts lead to booking requests, which services clients ask about most, which questions come up repeatedly, and how many consultations convert into appointments.
+
+This is where content becomes market research. If clients keep asking the same question, turn it into a post. If clients are confused about pricing, create a pricing-explainer story. If clients do not know what to book, simplify your menu language.
+
+### Days 61 to 90: Improve Retention and Pricing
+
+By the third month, you should have enough information to refine. Look at your calendar. Which appointments are profitable? Which ones take too long for the price? Which clients rebook? Which services create the most stress but the least revenue?
+
+By the end of 90 days, you should have a clear average ticket, a weekly revenue target, a rebooking script, a maintenance service or package, a stronger consultation process, a list of services to feature more, and a list of services to reprice, restructure, or remove.
+
+This is the point where the business starts becoming less reactive.
+
+## What Separates a Growing Stylist From a Stalled Stylist
+
+A stalled stylist says: “I just need more clients.” “I don’t know what to charge.” “People keep asking for quotes from photos.” “Clients do not come back consistently.” “My calendar is full, but I still feel broke.”
+
+A growing stylist says: “I know my weekly revenue target.” “I know my average ticket.” “I know which services are profitable.” “My clients know when to come back.” “My pricing is tied to time, complexity, and product use.” “My content tells clients what to book.”
+
+The difference is not talent. The difference is structure.
+
+## Final Stylist Takeaway
+
+A $100K solo stylist business is not built from random busy weeks. It is built from repeatable offers, confident pricing, clear client communication, strong rebooking habits, and clean business operations.
+
+The craft gets the client in the chair. The system brings them back.
+
+When your menu, pricing, content, policies, and maintenance rhythm all work together, your business becomes easier for clients to understand and easier for you to manage.
+
+That is the real blueprint: not just doing beautiful hair, but building a chair that can support the stylist behind it.`,metaTitle:`The $100K Solo Stylist Blueprint: 8 Milestones to Six Figures`,metaDescription:`A practical roadmap for solo stylists to reach $100K gross  --  covering pricing logic, service menus, rebooking systems, content strategy, and the numbers that actually matter.`},{id:13,slug:`what-is-balayage`,tag:`Technique`,title:`What Is Balayage? Your Stylist Explains`,excerpt:`Everything you need to know about the freehand coloring technique that changed the industry, and why no two results look the same.`,author:`Michelle Torres`,date:`Apr 10, 2026`,readTime:`7 min`,image:`/image/what-is-balayage.avif`,category:`Technique`,section:`Trends`,body:`Balayage used to mean one thing to clients. Soft, beachy highlights and a Pinterest reference from ten years ago. What we're seeing in salons now is much more considered. The color sits deeper at the root, the brightness is placed with intention, and the finish reads expensive without looking overworked. In 2026, balayage is not just a look clients ask for. It is a technique stylists build around the person in the chair.
+
+## What Balayage Really Means
+
+At the most basic level, balayage is a hand-painted lightening technique. No strict foil pattern, no uniform sections. Color is applied where the stylist wants light to live. But that definition is only half the story.
+
+> “Balayage is not about painting randomly. It is controlled placement. If you do it right, the client should not see where it starts. They just see better hair.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+That is the goal every time. Seamless, grown-in color that looks natural even when it is not.
+
+## Why Clients Keep Coming Back to It
+
+Balayage fits how people actually maintain their hair now. Clients want dimension without feeling locked into a schedule. They want something that grows out softly, especially if they are juggling work, travel, and everything else.
+
+This is why balayage continues to outperform traditional highlights in most salons:
+
+- No harsh regrowth line
+- Longer time between appointments
+- Works on straight, wavy, and curly hair
+- Adapts to different haircuts, from long layers to a pixie cut
+
+It also photographs well, which matters more than ever. The soft blend and brightness around the face translate on camera in a way flat color does not.
+
+## Balayage vs Highlights, Explained Simply
+
+This is where clients get mixed up, so we explain it every day. Traditional highlights are structured. They rely on foils, consistent sectioning, and root-to-end lift. The result is brighter but more uniform.
+
+Balayage is different. It is visual, not mechanical.
+
+- Light is painted where it flatters
+- The root stays softer or shadowed
+- The ends carry more brightness
+- The overall effect is blended, not striped
+
+Most of the best work we see now is actually a combination. A few foils at the hairline, balayage through the lengths, and a toner or gloss to finish.
+
+## Why No Two Balayage Clients Look the Same
+
+If balayage looks identical on every client, something is off. A good stylist is adjusting everything in real time:
+
+- Natural base color
+- Hair density and texture
+- Previous color history, especially bleach
+- Skin tone and undertone
+- Overall hair health
+
+> “On curly clients, I am painting for how the hair falls dry, not how it looks wet. You have to respect the pattern or the color disappears.”
+> — Alana Brooks, Curl Specialist
+
+That is why balayage on curly hair often looks softer but more dimensional. The placement follows movement, not sections.
+
+## What Happens During a Real Balayage Appointment
+
+From the outside, it can look simple. A brush, some lightener, and a few painted pieces. Behind the chair, it is much more controlled.
+
+**Sectioning based on the haircut**, The color follows layers and shape, not a perfect grid.
+
+**Soft diffusion at the root**, No hard starting lines. Everything is blended upward.
+
+**Controlled saturation**, Too little product leads to patchy lift. Too much creates heavy bands. This is where experience shows.
+
+**Focused brightness**, The face frame and part line get the most attention. That is what clients notice first.
+
+**Toning and finishing**, A gloss or toner refines the result, adds shine, and locks in tone. This step is what makes balayage look polished instead of unfinished.
+
+## Maintenance, According to Stylists
+
+Balayage is lower maintenance, but it is not maintenance-free. Color fades, especially on lighter pieces. Tone can shift warmer over time. And lightened hair needs support.
+
+What we are recommending in salons right now:
+
+- A shampoo for color-treated hair to hold tone
+- A lightweight leave-in treatment for shine
+- A hair moisturizer or protein treatment if the ends feel dry
+- Regular scalp care to keep the foundation healthy
+
+> “You cannot have expensive-looking color sitting on an unhealthy scalp. The finish starts at the root, literally.”
+> — Marcus Bell, Colorist, London
+
+## When Balayage Is Not a One-Session Service
+
+This is the part clients do not always expect. If the hair has box dye, heavy previous color, or damage, lifting to a bright balayage in one appointment is not always realistic.
+
+In those cases, stylists are spacing it out and protecting the hair:
+
+- Bond-building or protein treatments during the service
+- Hair breakage treatment after
+- Sometimes the best decision is to slow down, health first, then brightness
+
+## Why Stylists Prioritize Balayage
+
+There is a reason balayage is on almost every service menu. It allows for customization, which means better results and higher service value. It also creates visible transformation without constant upkeep, which keeps clients loyal.
+
+And from a business standpoint, it opens the door to retail. Haircare products, glosses, and treatments all support the color and extend the result.
+
+## The Bottom Line
+
+Balayage today is not a trend clients bring in on their phone. It is a core skill that defines how modern color is done. Done well, it grows out clean, complements the haircut, and works with the client's natural features instead of fighting them.
+
+> “Good balayage should look like you were born with it. Great balayage makes people ask where you go.”
+> — Nina Patel`,metaTitle:`What Is Balayage? Your Stylist Explains Everything`,metaDescription:`A stylist breaks down what balayage really is, how it differs from highlights, what happens during the appointment, and how to maintain it.`},{id:14,slug:`stylist-notices-thinning`,tag:`Hair Thinning`,title:`What Your Stylist Notices About Thinning Before You Do`,excerpt:`Hair loss rarely shows up the way clients expect. By the time you notice it, your stylist has usually been tracking it for months.`,author:`Lauren Chavez`,date:`Apr 12, 2026`,readTime:`8 min`,image:`/image/tylist-notices-thinning.avif`,category:`Hair Thinning`,section:`Hair Care`,body:`Hair loss rarely shows up the way clients expect it to. There is no dramatic moment, no overnight bald spot for most people. What actually happens is slower, quieter, and much easier to catch from behind the chair than in your own mirror.
+
+By the time a client says, “I feel like my hair is thinning,” their stylist has usually been tracking it for months.
+
+## The First Signs Are Not What You Think
+
+Most people look for shedding. Hair on the brush, hair in the shower, more strands on the floor. But that is not what stylists clock first.
+
+It is density.
+
+> “We notice it in the ponytail before anything else. The elastic wraps one extra time. The braid feels smaller. That is the first flag.”
+> — Lauren Chavez, Senior Stylist, Miami
+
+Other early signs we see every day:
+
+- A wider part, especially under bright light
+- Less fullness around the hairline or temples
+- The crown laying flatter than usual
+- Ends looking thinner even after a fresh haircut
+
+This is what professionals refer to as **diffuse thinning hair**, and it often shows up long before visible hair loss or bald patches.
+
+## The Hairline Tells the Story First
+
+Clients rarely study their own hairline closely. Stylists do.
+
+Subtle changes around the front can signal early hair thinning patterns or even the beginning of a receding hairline in women, which is more common than most people think.
+
+> “We are looking at baby hairs, density at the temples, and how the hair frames the face. When that starts to shift, it is usually not just breakage. It is something systemic.”
+> — Marcus Bell, Colorist, London
+
+This is especially relevant for clients dealing with:
+
+- Hormonal shifts like postpartum hair loss or perimenopause hair loss
+- Conditions like PCOS hair thinning or thyroid hair loss
+- Stress-related shedding, also known as telogen effluvium
+
+## Texture Changes Before Volume Loss
+
+One of the biggest tells is not less hair. It is different hair.
+
+Clients will say their hair feels dry, frizzy, or harder to style. What stylists often see is a change in strand quality tied to thinning.
+
+- Hair feels finer through the mid-lengths
+- Ends tangle more easily
+- Styles do not hold the same way
+
+This is where people start reaching for more hair serum or heavier moisturizers, thinking it is a texture issue. Sometimes it is. But sometimes it is early-stage thinning.
+
+## The Scalp Is a Dead Giveaway
+
+Stylists spend more time looking at your scalp than you do. That matters.
+
+A healthy scalp supports growth. A compromised one often shows early warning signs of hair loss.
+
+We are looking for:
+
+- Increased scalp visibility
+- Redness or irritation
+- Flaking linked to dandruff
+- Tightness or dryness from lack of proper scalp care
+
+> “Clients underestimate how much scalp condition affects hair growth. If I see dryness or buildup, I am already thinking about scalp treatment before we even talk color.”
+> — Dana Reeves, Salon Owner, Nashville
+
+This is why more salons are recommending in-salon scalp treatments, at-home dry scalp routines, and regular use of scalp oils or targeted treatments.
+
+## Breakage vs Thinning, and Why It Matters
+
+Not all thinning is true hair loss. Sometimes it is breakage, especially in clients using heat tools, bleach, or aggressive styling.
+
+Signs of breakage:
+
+- Short, uneven pieces around the crown
+- Frayed ends that do not improve with trimming
+- Damage from bleach or repeated chemical services
+
+True thinning, on the other hand, affects the root. The hair simply is not growing back at the same density.
+
+> “Clients confuse damaged hair with thinning hair all the time. They will buy every damaged hair treatment on the shelf when what they actually need is to address growth.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+## When Stylists Start Talking About It
+
+Most stylists do not bring up hair loss immediately. It is a sensitive topic, and early changes can be subtle.
+
+But once patterns are consistent, the conversation shifts. That might include:
+
+- Recommending volumizing shampoo and conditioner for fine or thinning hair
+- Suggesting products that support the scalp
+- Adjusting color placement to create the illusion of density
+- Talking through treatments like PRP or topical options like minoxidil
+
+> “Sometimes my job is not to fix it in one appointment. It is to help the client understand what is happening early enough that they have options.”
+> — Lauren Chavez, Senior Stylist, Miami
+
+## The Role of Haircare in Early Thinning
+
+What clients use at home matters more than they think. Stylists are increasingly steering clients toward:
+
+- Professional hair care products over harsh formulas
+- Lightweight leave-in treatments instead of heavy buildup
+- Gentle, scalp-friendly formulas that do not cause irritation
+- Targeted solutions like shampoo for hair fall or growth-focused serums
+
+There is also a shift toward routines that support long-term scalp health, not just styling.
+
+## Cutting and Styling for Thinning Hair
+
+A good haircut can make thinning less noticeable immediately. We are seeing stylists lean into:
+
+- Layered haircuts for movement and lift
+- Shorter shapes like a pixie cut or soft bob to create density
+- Avoiding heavy, one-length cuts that emphasize thin ends
+
+Even styling matters. The right mousse or styling foam can create fullness without weighing the hair down.
+
+## The Bottom Line
+
+Hair thinning does not start when you notice hair falling out. It starts much earlier, in ways that are easy to miss unless you are trained to look for them.
+
+Stylists see it in the part, the ponytail, the scalp, and the subtle changes in how your hair behaves.
+
+> “By the time a client is worried, we have usually already seen it coming. The advantage is, if you catch it early, you can actually do something about it.”
+> — Marcus Bell, Colorist, London
+
+Pay attention to small changes. Invest in the right haircare. And listen when your stylist brings it up, because in most cases, they are not guessing. They are noticing what you cannot see yet.`,metaTitle:`What Your Stylist Notices About Hair Thinning Before You Do`,metaDescription:`Stylists track hair thinning long before clients notice it. Here is what they see first, and what you can do about it early.`},{id:15,slug:`layers-thin-hair`,tag:`Cut & Style`,title:`Why Layers Can Either Help or Ruin Thin Hair`,excerpt:`Layers are one of the most misunderstood tools for thin hair. Done right, they create volume. Done wrong, they make things worse. Here is the difference.`,author:`Tom Harley`,date:`Apr 14, 2026`,readTime:`7 min`,image:`/image/layers-thin-hair.avif`,category:`Cut & Style`,section:`Trends`,body:`Layers are one of the most misunderstood tools in a stylist's arsenal, especially when it comes to thin hair. Clients walk in asking for "more volume" and assume layers are the answer. Sometimes they are. Sometimes they are exactly what causes the problem.
+
+What matters is not whether you add layers. It is how, where, and how much.
+
+## The Promise of Layers (When They Work)
+
+Done right, layers can completely shift how thin hair looks and moves. They create lift, break up flat sections, and give the illusion of density.
+
+> “Thin hair does not need more hair. It needs better structure. That is what layers are supposed to do.”
+> — Nina Patel, Salon Educator, Chicago
+
+When executed well, layers can:
+
+1. **Add movement** so hair does not sit flat against the scalp
+2. **Create volume at the crown**, especially for crown thinning concerns
+3. **Support styling**, making it easier to use volumizing products for fine hair
+4. **Enhance shape**, particularly with layered cuts or a soft fringe
+
+This is where layering becomes a tool for correction, not just style.
+
+## Where It Goes Wrong
+
+The issue is not layers themselves. It is over-layering.
+
+Thin hair cannot afford to lose too much weight. Once you remove too much density, the ends start to collapse, and the hair can look even thinner than before.
+
+> “We see this all the time. Someone comes in with thin hair and leaves with less of it. Too many layers, and suddenly the perimeter disappears.”
+> — Marcus Bell, Colorist, London
+
+Here is where layers start to work against you:
+
+1. **Over-thinning the ends**, The fastest way to make hair look sparse. The bottom line should feel solid, not wispy.
+2. **Short layers at the crown**, Too much creates separation, exposing more scalp.
+3. **Ignoring hair density**, Fine hair and low-density hair both require restraint.
+4. **Cutting for movement instead of fullness**, Movement matters, but fullness is the priority with thin hair.
+
+## The Line Between Volume and Loss
+
+This is where professional judgment comes in. Stylists are constantly balancing two things: creating lift and movement, and preserving as much visible density as possible.
+
+> “You cannot cut your way out of thinning hair. You can only cut in a way that respects it.”
+> — Dana Reeves, Stylist, Nashville
+
+If a client is already experiencing hair fall or early thinning, aggressive layering can exaggerate the issue.
+
+## How Stylists Approach Layers for Thin Hair Now
+
+The approach has shifted over the last few years. It is less about dramatic shape and more about subtle engineering.
+
+### Keeping the perimeter strong
+
+The baseline of the haircut stays blunt or slightly softened. This maintains the appearance of thickness.
+
+### Adding internal layers only
+
+Instead of visible layers, stylists remove weight from inside the haircut. The outside still looks full.
+
+### Focusing on the crown strategically
+
+A small amount of lift at the crown can help, but it has to be controlled.
+
+### Customizing for texture
+
+Clients with wavy or curly hair may need different layering to avoid frizz or collapse.
+
+### Pairing with the right styling routine
+
+Layers only work if the client can style them. This often includes:
+
+- Volumizing shampoo and conditioner
+- Lightweight mousse or styling foam
+- A targeted hair serum for ends without weighing them down
+
+## The Role of Hair Health
+
+Layers will not fix compromised hair. If the hair is dealing with severe breakage, damage from bleach, or chronic dryness, layering too much will expose those weak areas.
+
+Treatment comes first:
+
+- Protein treatment to strengthen strands
+- Hair breakage treatment to reduce snapping
+- Regular scalp treatment to support growth at the root
+
+> “Healthy hair holds a shape. Damaged hair falls apart. No haircut can override that.”
+> — Nina Patel, Salon Educator, Chicago
+
+## When Shorter Cuts Make More Sense
+
+Sometimes the solution is not more layers. It is less length.
+
+Shorter cuts can instantly create the illusion of density:
+
+- A pixie cut concentrates fullness at the crown
+- A soft bob keeps weight at the perimeter
+- A structured short cut can make thinning less noticeable
+
+This is especially true for clients dealing with ongoing thinning or progressive hair loss.
+
+## What Clients Should Actually Ask For
+
+Instead of asking for layers, the better conversation is about outcome.
+
+A good consultation sounds like:
+
+- “I want my hair to look fuller”
+- “I feel like my ends are thin”
+- “My crown looks flat”
+
+From there, the stylist decides how much layering is appropriate. Because layers are not a universal fix. They are a precision tool.
+
+## The Bottom Line
+
+Layers can be one of the best things you do for thin hair or the fastest way to make it look worse. The difference comes down to restraint, placement, and understanding what the hair can handle.
+
+> “With thin hair, every snip shows. You are either building density or taking it away. There is no neutral.”
+> — Marcus Bell, Colorist, London
+
+Keep the strength, create the illusion, and support it with the right products and styling routine. That is what makes layers work.`,metaTitle:`Why Layers Can Either Help or Ruin Thin Hair`,metaDescription:`Layers are a precision tool for thin hair, not a universal fix. Here is how stylists use them to build density, and where they go wrong.`},{id:16,slug:`gua-sha-scalp`,tag:`Hair Thinning`,title:`Gua Sha for Scalp: The Treatment Stylists Are Watching Closely`,excerpt:`Gua sha has had its face moment. Now stylists are paying attention to what it can do for the scalp, and where it fits into a serious hair care routine.`,author:`Marissa Chen`,date:`Apr 16, 2026`,readTime:`9 min`,image:`/image/gua-sha-scalp.avif`,category:`Hair Thinning`,section:`Hair Care`,body:`Gua sha has already had its beauty-world moment for the face. The sculpted cheekbones, the lymphatic drainage claims, the jade tools sitting on every bathroom shelf. But behind the chair, the more interesting shift is happening higher up: clients are now asking about gua sha for the scalp.
+
+And stylists are paying attention.
+
+Not because it is a miracle cure for hair loss or hair thinning. It is not. But because scalp work is becoming a serious part of modern hair care, and gua sha fits neatly into that conversation. It sits somewhere between massage, ritual, circulation support, and a more intentional way to apply scalp products.
+
+> “The scalp has been ignored for too long. Clients will spend $300 on hair color products, then forget that the hair grows from skin. Gua sha makes them pay attention to the root.”
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
+
+That is exactly why it is showing up in salons, treatment rooms, and at-home routines.
+
+## What Is Scalp Gua Sha?
+
+Scalp gua sha uses a smooth-edged tool to gently massage and scrape across the scalp. The technique comes from traditional East Asian bodywork, where gua sha is used on the skin to encourage movement, release tension, and support circulation.
+
+For the scalp, the pressure is lighter and the goal is different. You are not trying to aggressively scrape the skin. You are trying to wake up the scalp, loosen tight areas, and help products like hair serum, scalp oil, or scalp treatment spread more evenly.
+
+Think of it as scalp massage with more precision.
+
+## Why Everyone Is Talking About the Scalp Now
+
+The scalp conversation has changed. A few years ago, clients mostly thought about hair length, shine, frizz, and color. Now they are asking more direct questions:
+
+1. Why is my hair falling out?
+2. Why does my scalp feel tight?
+3. Is buildup making my hair flat?
+4. Can scalp care help with hair growth?
+5. What is the best treatment for thinning hair I can actually maintain?
+
+> “Scalp care is where skin care was ten years ago. People are realizing that if the scalp is inflamed, dry, congested, or ignored, the hair is going to show it.”
+> — Dana Reeves, Salon Owner, Nashville
+
+## What Scalp Gua Sha Can Actually Help With
+
+Let's be clear. Gua sha is not a replacement for minoxidil, PRP hair treatment, a dermatologist visit, or medical treatment for alopecia, female pattern baldness, or thyroid hair loss.
+
+But it can support a better scalp-care routine. Stylists like it for a few practical reasons.
+
+### 1. It helps release scalp tension
+
+A tight scalp is common, especially in clients who clench their jaw, wear tight ponytails, or carry stress in the head and neck. Scalp gua sha can help loosen that tight feeling around the temples, crown, and nape.
+
+> “Clients do not always realize their scalp has tension until we start working through it. The crown and hairline are usually where they feel it first.”
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
+
+### 2. It encourages product distribution
+
+If you are using a scalp serum, hair growth serum, or scalp oil, a gua sha tool can help work the product across the scalp without using your nails. Many clients apply scalp products unevenly, a tool slows the process down and ensures better coverage.
+
+### 3. It supports circulation through massage
+
+Massage can temporarily increase blood flow to the area being worked. That does not mean gua sha will regrow hair on its own, but it makes sense as part of a broader scalp care routine, especially for clients dealing with stress-related shedding or telogen effluvium.
+
+### 4. It helps loosen buildup before washing
+
+Used gently before shampooing, scalp gua sha can help lift oil, sweat, dry flakes, and product buildup. It is especially helpful before a clarifying wash or targeted scalp treatment.
+
+## Who Scalp Gua Sha Is Best For
+
+Scalp gua sha makes the most sense for clients who want a healthier, cleaner, more responsive scalp. It can be a good fit if you have:
+
+1. Dry scalp or tightness
+2. Mild flaking or buildup
+3. Flat roots from product congestion
+4. Stress-related scalp tension
+5. Fine hair that gets weighed down easily
+6. A routine focused on hair growth or hair regrowth
+7. Early thinning, where scalp care is part of the bigger plan
+
+## Who Should Be Careful
+
+This is where stylists get serious. Scalp gua sha should never hurt. It should never leave cuts, bruising, or burning. And it is not for every scalp.
+
+Avoid scalp gua sha if you have:
+
+1. Open sores or scratches
+2. Active scalp infection
+3. Severe dandruff or inflamed patches
+4. Psoriasis flare-ups
+5. Recent hair transplant or scalp procedure
+6. Sudden, unexplained bald patches
+
+> “A tool should never be your diagnosis. If the scalp looks angry or the shedding is sudden, that is not a spa moment. That is a referral.”
+> — Marcus Bell, Colorist, London
+
+If you are dealing with scarring alopecia, frontal fibrosing alopecia, or rapidly changing hair loss, see a dermatologist before starting any at-home scalp tool routine.
+
+## How to Do Scalp Gua Sha at Home
+
+The technique is simple, but the pressure matters. You want firm enough contact to feel movement, not so much that the scalp feels sore afterward.
+
+### 1. Start on a dry or lightly oiled scalp
+
+You can do this before shampooing or at night with a lightweight scalp product. Good options include a lightweight hair serum, scalp oil, or scalp moisturizer. Avoid heavy oils if your hair gets greasy quickly.
+
+### 2. Work in sections
+
+Part the hair so the tool touches the scalp, not just the hair. Start with:
+
+1. Hairline
+2. Temples
+3. Crown
+4. Sides
+5. Nape
+
+### 3. Use short, gentle strokes
+
+Move the tool in slow strokes from front to back or from the center outward. Do not scratch, dig, or drag aggressively through tangled hair.
+
+### 4. Spend extra time where the scalp feels tight
+
+Most clients feel tension at the temples, crown, or behind the ears. Use lighter pressure around the hairline, especially if you are concerned about thinning at the front or temples.
+
+### 5. Shampoo if needed
+
+If you used oil or loosened buildup, follow with shampoo. Clients with flakes may need a medicated dandruff shampoo or specific dandruff treatment.
+
+## How Often Should You Do It?
+
+For most scalps, two to three times a week is enough. If your scalp is sensitive, start once a week.
+
+1. **Once a week** for sensitive scalps
+2. **Two to three times a week** for dry scalp, buildup, or tension
+3. **Before wash day** if using oils or heavier treatments
+4. **At night** if pairing with lightweight scalp serum
+
+More is not always better. Overworking the scalp can create irritation, which defeats the point.
+
+## The Salon Version vs the At-Home Version
+
+In salons, scalp gua sha is usually part of a bigger service, an add-on to a scalp treatment, gloss, blowout, or restorative appointment. A stylist might combine it with steam, scalp exfoliation, a tea tree treatment, or a hydrating scalp mask.
+
+At home, the goal is maintenance. You are not trying to replicate a full treatment room service. You are just keeping the scalp mobile, clean, and cared for between appointments.
+
+## Can Scalp Gua Sha Help With Hair Growth?
+
+This is the question everyone asks. The honest answer: scalp gua sha may support a healthy scalp environment, but it should not be positioned as a guaranteed hair growth treatment.
+
+It can be part of a supportive routine alongside dermatologist-recommended treatments, topical minoxidil, microneedling, red light therapy, or PRP, depending on the person and the diagnosis.
+
+> “Scalp gua sha is support, not the whole strategy. The problem is when people confuse a good ritual with a medical treatment.”
+> — Dana Reeves, Salon Owner, Nashville
+
+## What Products Pair Well With Scalp Gua Sha?
+
+The best products are lightweight, scalp-safe, and easy to wash out. Stylists usually recommend:
+
+1. **Scalp serum**, Best for targeted application without greasiness
+2. **Oil for scalp**, Better before shampooing, especially for dry or tight scalps
+3. **Scalp moisturizer**, Good for clients dealing with dryness, flakes, or tightness
+4. **Tea tree scalp treatment**, Useful for a cooling, fresh feeling, though may be too strong for sensitive scalps
+5. **Shampoo for hair fall**, A supportive wash option when paired with a full thinning-hair routine
+6. **Volumizing shampoo and conditioner**, Helpful if the goal is a cleaner scalp and fuller-looking roots
+
+Avoid applying heavy masks, thick conditioners, or styling creams directly to the scalp unless they are designed for scalp use.
+
+## The Mistakes Stylists See All the Time
+
+Scalp gua sha looks easy, but people still overdo it. The most common mistakes:
+
+1. **Using too much pressure**, If the scalp feels sore later, you went too hard
+2. **Using the tool on tangled hair**, This can cause pulling and breakage
+3. **Scraping over irritation**, Flakes, redness, or sores need care, not friction
+4. **Expecting overnight hair growth**, Scalp health is long-term
+5. **Using heavy oils too often**, This can create buildup and make fine hair look flatter
+6. **Ignoring actual hair loss symptoms**, Excessive shedding or bald patches should be checked by a professional
+
+## The Bottom Line
+
+Scalp gua sha is not a magic fix. It will not cure hair loss, reverse alopecia, or replace clinical treatments.
+
+But as part of a serious scalp-care routine, it makes sense. It helps clients slow down, touch their scalp, notice changes earlier, and apply treatment products more intentionally.
+
+> “The best scalp routine is the one a client will actually do. Gua sha works because it feels good enough to become a habit.”
+> — Marissa Chen, Scalp-Focused Stylist, Los Angeles
+
+And in hair care, consistency is usually where the real results start.`,metaTitle:`Gua Sha for Scalp: What Stylists Actually Think`,metaDescription:`Scalp gua sha is showing up in salons and at-home routines. Here is what it can actually do, who it is for, and where stylists draw the line.`},{id:17,slug:`low-maintenance-color`,tag:`Color`,title:`How to Ask for a Low-Maintenance Color That Actually Lasts`,excerpt:`Low-maintenance color is one of the most requested services in salons right now. Here is how to ask for it properly, and what actually makes it last.`,author:`Sophie Marchand`,date:`Apr 18, 2026`,readTime:`9 min`,image:`/image/hair-coloring.avif`,category:`Color`,section:`Trends`,body:`Low-maintenance hair color is one of the most requested services in salons right now. Clients want dimension, brightness, shine, and something that still looks good eight weeks later. What they do not want is a hard grow-out line, a toner that disappears in two shampoos, or a color that only looks right under salon lighting.
+
+The problem is that “low-maintenance” means different things to different people.
+
+To a client, it usually means fewer appointments. To a stylist, it means smarter placement, better tone selection, realistic lift, and a home-care routine that protects the work.
+
+> “Low-maintenance color is not lazy color. It actually takes more planning because you are designing the grow-out before you even mix the bowl.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+That is the part most clients do not see. The best low-maintenance color is built to age well.
+
+![A soft rooted blonde with lived-in dimension, the grow-out is part of the design](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/8e/bd/b7/80/34/v1_E11/E117RM56.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c788e18caf3fa6e4a5c15498b6e1bc3b23bdd5fc3d80d2d55f0dd50cd0c82eec)
+
+## First, Say What You Actually Mean by Low-Maintenance
+
+This is where the consultation matters. If you sit down and say “I want something low-maintenance,” your stylist still has to decode what that means. The better way to ask is specific:
+
+1. “I want my grow-out to look soft.”
+2. “I do not want to touch up my roots every month.”
+3. “I want brightness around my face, but I still want my natural base.”
+4. “I can realistically come in every 10 to 12 weeks.”
+5. “I want the color to fade nicely, not turn orange or dull.”
+
+That gives your stylist something useful to work with.
+
+> “Clients think they are asking for a color. What they are really asking for is a maintenance schedule. Once we know that, we can design the color properly.”
+> — Marcus Bell, Colorist, London
+
+## The Color Terms That Usually Mean Low-Maintenance
+
+Not every service is built to last. A global bleach-and-tone blonde is high-maintenance by design. A soft dimensional brunette or root-shadowed blonde is much easier to live with.
+
+### 1. Lived-in color
+
+Lived-in color usually means the root stays soft, natural, or intentionally shadowed. The brightness is placed through the mid-lengths and ends, so the color keeps its shape as it grows. It works especially well for brunettes, blondes, and brondes.
+
+### 2. Root shadow
+
+A root shadow softens the transition between your natural hair and the colored pieces. It prevents the “freshly highlighted stripe” look and buys you more time between appointments. This is one of the most important techniques for low-maintenance blondes.
+
+### 3. Balayage
+
+Balayage is hand-painted color designed to grow out softly. It does not mean zero upkeep, but it usually requires fewer touch-ups than traditional highlights. The best balayage still needs a gloss or toner appointment, especially if the hair lifts warm.
+
+### 4. Dimensional brunette
+
+For brunettes, low-maintenance often means keeping the base rich and adding subtle ribbons of warmth or brightness, espresso, chestnut, caramel, soft mocha, or golden brown. It gives movement without committing to constant root work.
+
+### 5. Gloss or glaze
+
+A gloss hair treatment is often the secret behind expensive-looking color. It refreshes tone, adds shine, and can make older color look intentional again. This is the appointment stylists love because it keeps the color alive without a full lightening service every time.
+
+![Dimensional brunette with caramel ribbons, one of the easiest color families to maintain](https://i.pinimg.com/564x/07/66/08/076608816956e391d7c5e8848a2fa9a7.jpg)
+
+## What Actually Makes Color Last
+
+Long-lasting color is not just about the formula. It is about how the color is placed. Stylists are thinking about several things before they paint:
+
+1. **Your natural base color**, The closer the final result stays to your natural level, the easier the maintenance.
+2. **Your undertone**, If your hair naturally pulls orange, asking for icy beige blonde may mean constant toning. A warmer beige, caramel, or honey shade may last better.
+3. **Your hair history**, Previous bleach, box dye, old toner, and permanent color all affect how evenly the hair lifts and fades.
+4. **Your haircut**, Layered haircuts, face-framing pieces, and shorter shapes can all change where brightness should be placed.
+5. **Your lifestyle**, Heat styling, washing frequency, sun exposure, swimming, and hard water can all shift color faster.
+
+> “Clients want the color to last, but they do not always realize their routine is part of the formula. If you wash daily with the wrong shampoo, no toner is surviving that.”
+> — Dana Reeves, Salon Owner, Nashville
+
+## The Best Low-Maintenance Color Families
+
+Some shades naturally age better than others. That does not mean you cannot have the color you want, but it does mean your stylist may steer you toward a version that fits your real life.
+
+### Brunette
+
+Brunette is one of the easiest families to keep low-maintenance, especially when the base is not pushed too far from natural. Ask for:
+
+1. Soft espresso
+2. Chestnut brown
+3. Mocha brunette
+4. Caramel ribbons
+5. Subtle face-frame brightness
+
+Avoid overly ashy brunette if your hair naturally pulls warm. It may look beautiful on day one and flat by week four.
+
+### Blonde
+
+Blonde can be low-maintenance, but only if the root is handled correctly. Ask for:
+
+1. Rooted blonde
+2. Beige blonde
+3. Honey blonde
+4. Bronde
+5. Soft money piece with a root melt
+
+Avoid asking for bright, root-to-tip blonde if you do not want frequent appointments. That is not low-maintenance color. That is a relationship.
+
+### Red and copper
+
+Copper is having a major salon moment, but it fades faster than most shades. If you want a lower-maintenance version, ask for a softer copper brunette, auburn gloss, or warm cinnamon dimension instead of a high-voltage orange copper.
+
+> “Copper is gorgeous, but it is honest. It will tell on you if you skip the home care.”
+> — Marcus Bell, Colorist, London
+
+### Gray blending
+
+For clients with natural gray, the most low-maintenance option is often blending, not covering. Softer highlights, lowlights, glosses, and demi-permanent color can make the grow-out feel less severe. This is one of the biggest shifts stylists are seeing with clients over 40, they do not necessarily want to erase gray. They want it to look intentional.
+
+## What to Ask Your Stylist For
+
+The best salon consultations are clear without being overly technical. You do not need to know formulas. You just need to communicate the result and the upkeep. Try saying:
+
+1. “I want brightness, but I want my natural root left soft.”
+2. “Can we do a root shadow so it grows out better?”
+3. “I want something I can maintain with gloss appointments.”
+4. “I do not want to be locked into monthly root touch-ups.”
+5. “Can we keep the color within two to three levels of my natural base?”
+6. “I want dimension, but I do not want chunky contrast.”
+7. “I want the fade to still look expensive.”
+
+That last line matters. Good color should not only look good fresh. It should fade well.
+
+## What Photos to Bring
+
+Photos help, but only if you bring the right kind. Do not bring one heavily edited image and expect your stylist to reverse-engineer it. Bring a few examples and point out:
+
+1. The root
+2. The brightness around the face
+3. The tone
+4. The amount of contrast
+5. The overall depth
+
+A photo of the root is especially important. Most clients only save the bright ends. Stylists are looking at the top three inches.
+
+> “We can tell from a reference photo whether the color is going to be high-maintenance. If the root is erased, that client is coming back often.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+## What to Avoid Asking For
+
+Some requests sound low-maintenance but are not. Avoid these if your goal is longevity:
+
+1. **“Make me really bright all over.”**, Full brightness usually means visible regrowth.
+2. **“I want icy blonde but low-maintenance.”**, Icy tones fade quickly and need frequent toning.
+3. **“Can we cover all my gray permanently?”**, You can, but expect a root line.
+4. **“I want a big change, but I do not want upkeep.”**, Big changes usually require maintenance.
+5. **“Just do whatever.”**, Stylists love trust, but low-maintenance color still needs boundaries.
+
+## The Home Care That Keeps Color Looking Expensive
+
+This is where clients either protect the color or undo it. Your stylist may recommend:
+
+1. **Shampoo for color treated hair**, Helps slow fading and keeps tone cleaner.
+2. **Hair serum or leave-in treatment**, Especially useful for lightened ends that need shine and softness.
+3. **Hair moisturizer**, Color lasts better when the hair is not dry and porous.
+4. **Glossing appointments**, Refreshes tone and shine without a full color service.
+5. **Heat protection**, Hot tools fade color faster than most clients realize.
+6. **Scalp care**, A healthy scalp supports better-looking hair overall.
+
+Professional hair care products are not always about luxury. In color work, they are part of the maintenance plan.
+
+## How Often Should You Come Back?
+
+This depends on the color, but most low-maintenance schedules look something like this:
+
+1. **Gloss refresh:** every 6 to 8 weeks
+2. **Face-frame touch-up:** every 8 to 12 weeks
+3. **Balayage refresh:** every 3 to 5 months
+4. **Full color redesign:** 1 to 2 times per year
+
+The more natural the root and tone, the longer you can stretch it. The brighter and cooler the color, the sooner you will be back.
+
+## The Bottom Line
+
+Low-maintenance color is not about doing less. It is about doing the right things in the right places. The root has to be soft. The tone has to work with your natural warmth. The brightness has to be placed where it will still make sense months later.
+
+> “The best low-maintenance color does not look forgotten at week ten. It looks like it was planned that way.”
+> — Dana Reeves, Salon Owner, Nashville
+
+That is what you should ask for. Not just pretty color on day one, but color that grows out quietly, fades softly, and still looks like you meant it.`,metaTitle:`How to Ask for Low-Maintenance Hair Color That Actually Lasts`,metaDescription:`Low-maintenance color takes more planning, not less. Here is how to ask for it, what terms to use, and what actually makes it last.`},{id:18,slug:`at-home-hair-care`,tag:`At-Home Tips`,title:`At-Home Hair Care That Actually Makes a Difference (According to Stylists)`,excerpt:`The clients with the best hair are not the ones doing the most in-salon. They are the ones doing the right things consistently at home.`,author:`Priya Allison`,date:`Apr 20, 2026`,readTime:`8 min`,image:`/image/at-home-hair-care.avif`,category:`At-Home Tips`,section:`Hair Care`,body:`Most clients think better hair comes from bigger salon appointments. More color, more treatments, more time in the chair. What stylists actually see is the opposite.
+
+The clients with the best hair are not the ones doing the most in-salon. They are the ones doing the right things consistently at home.
+
+> “Your hair lives with you, not with us. We can reset it in the chair, but what you do between appointments decides how it looks 80 percent of the time.”
+> — Dana Reeves, Salon Owner, Nashville
+
+This is where at-home hair care stops being optional and starts being the entire strategy.
+
+![A well-maintained blowout, the result of consistent at-home care, not just salon visits](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ee/f9/d3/57/04/v1_E10/E10B9UPC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6516535bd186f44758e01ec96b50590c3a09624b21f2d2a6d1f852258247424a)
+
+## Start With the Scalp, Not the Ends
+
+Most people build routines around damaged ends. Masks, oils, leave-ins. Meanwhile the scalp, where hair actually grows, gets ignored.
+
+If your scalp is dry, irritated, or congested, it shows up as:
+
+- **Hair thinning** or slower growth
+- **Hair fall** or excessive shedding
+- Flat roots that never hold volume
+- Flaking linked to dandruff
+- Tightness or itchiness
+
+That is why stylists are pushing scalp-first routines.
+
+### What to do at home:
+
+1. Use a scalp treatment once or twice a week
+2. Try a dry scalp treatment at home if you notice flaking
+3. Apply a lightweight scalp oil or scalp moisturizer before washing
+4. If needed, rotate in a medicated dandruff shampoo
+
+> “Healthy scalp, better hair. It sounds simple, but it is the part most people skip.”
+> — Marcus Bell, Colorist, London
+
+## Wash Less, But Wash Better
+
+Overwashing is still one of the biggest issues stylists see. It strips natural oils, fades color, and dries out the hair and scalp. At the same time, under-washing with too much product buildup can clog the scalp.
+
+### A better wash routine:
+
+1. Use a shampoo for color treated hair if you have any color
+2. Focus shampoo on the scalp, not the ends
+3. Rinse longer than you think you need to
+4. Condition mid-lengths to ends only
+
+If you are dealing with hair loss, hair thinning, or excessive shedding, gentle washing is key. Aggressive scrubbing or harsh formulas can make shedding feel worse.
+
+![Scalp-focused washing, the technique matters as much as the product](https://elements-resized.envatousercontent.com/envato-dam-assets-production/214b747b-f1af-4f3d-9236-2323436c5e79/9e2c3562-b0a0-4ae4-81b8-d7799486e3a2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=601bfb355b840e0115a818f14c215973b41660c5261941b5585134829d337284)
+
+## Treat the Hair You Have, Not the Hair You Want
+
+Clients often buy products for aspirational hair. Thick, glossy, high-density hair. Not the hair they actually have. This is where routines fall apart.
+
+### For dry or damaged hair:
+
+- Use a hair treatment for damaged hair weekly
+- Add a protein treatment if the strands feel weak
+- Use a lightweight hair moisturizer or leave-in treatment
+
+### For thinning or fine hair:
+
+- Look for products specifically for thinning hair
+- Use volumizing shampoo and conditioner
+- Avoid heavy oils on the roots
+
+### For frizz or texture:
+
+- Use a hair treatment for frizzy hair
+- Layer in a small amount of hair serum for control
+
+> “People overload their hair trying to fix it. Most of the time, less product used correctly works better than more product used randomly.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+## Heat Styling Is Where Most Damage Happens
+
+Flat irons, curling wands, and even high-heat blow dryers are still the fastest way to undo healthy hair. This is especially true for clients already dealing with severe breakage, bleach damage, or ongoing shedding.
+
+### Smarter heat habits:
+
+1. Always use heat protection
+2. Lower the temperature when possible
+3. Avoid daily straightening or curling
+4. Let hair air dry partially before styling
+
+Tools can help reduce damage, but technique still matters more than the tool.
+
+![Air drying before heat styling, one of the simplest ways to reduce damage](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/08/7d/f4/c5/94/v1_E10/E106L7XU.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=02101d831d2be8ddf516d386717a48420b6537ae8d819339f4eaf20bec820f84)
+
+## The Weekly Reset Routine Stylists Recommend
+
+If you want a simple system that works, this is what many stylists suggest.
+
+### Once a week:
+
+1. Apply scalp oil or a scalp treatment
+2. Use a dry scalp treatment if needed
+3. Shampoo thoroughly
+4. Apply a deep conditioner or hair treatment
+5. Finish with a lightweight leave-in treatment
+
+### Daily or every other day:
+
+1. Use minimal styling products
+2. Add a small amount of hair serum for ends
+3. Avoid buildup at the roots
+
+### Every few weeks:
+
+1. Clarify if you use a lot of product
+2. Refresh with a gloss treatment at the salon if you have color
+
+Consistency matters more than intensity. A simple routine done regularly will outperform a complicated one done occasionally.
+
+## When Hair Loss or Thinning Needs More Than Home Care
+
+At-home care helps, but it is not always enough. If you are noticing sudden hair loss, diffuse thinning that is getting worse, a visible thinning hairline, or ongoing shedding that does not slow down, it may be time to look beyond products.
+
+Options stylists often discuss with clients include:
+
+- Seeing a hair loss specialist or dermatologist
+- Treatments like PRP hair treatment
+- Topical solutions like minoxidil
+- Scalp-focused therapies
+
+> “Products support the hair you have. If the issue is internal or hormonal, you need a bigger plan.”
+> — Dana Reeves, Salon Owner, Nashville
+
+## The Products That Actually Make a Difference
+
+There is a lot of noise in the haircare space. What stylists consistently see working:
+
+- Professional hair care products over harsh formulas
+- Lightweight, targeted treatments instead of heavy layering
+- Scalp-focused products for long-term results
+- Simple routines using good products instead of constantly switching
+
+Whether it is vegan hair products, natural hair care products, or specific targeted lines, the key is choosing products that match your hair type and sticking with them long enough to see results.
+
+## The Bottom Line
+
+At-home hair care is not about doing everything. It is about doing the right things consistently. Focus on the scalp. Use the right products for your actual hair type. Be mindful with heat. And build a routine you can maintain.
+
+> “The best hair we see in the salon is never an accident. It is always someone doing the basics well, over and over again.”
+> — Marcus Bell, Colorist, London
+
+Not more products, not more steps. Just better habits.`,metaTitle:`At-Home Hair Care That Actually Makes a Difference`,metaDescription:`Stylists share the at-home habits that make the biggest difference between appointments, from scalp care to heat styling to product selection.`},{id:19,slug:`busiest-stylists-system`,tag:`Business`,title:`Why the Busiest Stylists Aren't Doing More Clients, They're Doing This Instead`,excerpt:`A full schedule doesn't always mean high income. The stylists building sustainable careers in 2026 are doing fewer things, better, and charging accordingly.`,author:`Dana Reeves`,date:`Apr 22, 2026`,readTime:`7 min`,image:`/image/hair-salon.avif`,category:`Business`,section:`Inspiration`,body:`There's a point in most stylists' careers where more bookings stop being the answer.
+
+The schedule is full. The days are long. The income plateaus anyway.
+
+What separates working stylists from high-performing ones in 2026 is not how many clients they take. It's how they structure the work they're already doing.
+
+> “The shift is when you stop thinking in appointments and start thinking in systems. That's where your income changes.”
+> — Dana Reeves, Salon Owner & Business Coach, Nashville
+
+![A stylist reviewing their schedule, the work behind the chair is only part of the picture](/image/schedule.png)
+
+## The Old Model Is Breaking
+
+For years, the model was simple: more clients equals more money. But that model has limits, physical limits, time limits, and burnout.
+
+Stylists who rely only on volume eventually hit the same ceiling:
+
+- No time for consultations
+- Rushed services
+- Lower-ticket appointments filling prime hours
+- Minimal retail conversations
+- Constant fatigue
+
+And ironically, the client experience drops right when the schedule fills up.
+
+## What High-Earning Stylists Do Differently
+
+The stylists who are consistently booked, charging premium prices, and not overworked are doing a few key things differently.
+
+### 1. They specialize
+
+Instead of offering everything, they become known for something, lived-in color, blondes, copper and reds, curly hair, or transformations. This attracts higher-intent clients and allows them to refine and speed up their process.
+
+> “I stopped saying yes to everything. Once I focused on dimensional color, my bookings didn't go down. My prices went up.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+### 2. They price based on outcome, not time
+
+Charging by the hour or by service menu alone is outdated in high-performing salons. Clients are paying for the result, the expertise, and the customization. A two-hour gloss appointment and a two-hour corrective color should not be priced the same.
+
+### 3. They build maintenance into the service
+
+The best stylists are not selling one appointment. They are selling a plan:
+
+- Initial color service
+- Gloss refresh every 6–8 weeks
+- Full refresh every 4–6 months
+
+This creates predictable income and keeps the client's hair looking consistent.
+
+> “I don't sell color. I sell how your hair is going to look for the next six months.”
+> — Marcus Bell, Colorist, London
+
+### 4. They treat retail as part of the service
+
+Retail is still one of the most underused revenue streams in salons. The top stylists don't sell, they prescribe. Shampoo for color treated hair, hair serum for shine, scalp treatment for long-term health, volumizing products for fine or thinning hair.
+
+> “Clients are already asking what to use. If you're not answering that, they're buying it somewhere else.”
+> — Dana Reeves, Salon Owner & Business Coach, Nashville
+
+### 5. They protect their schedule
+
+Not every hour should be filled the same way. High-performing stylists reserve prime time for high-ticket services, avoid stacking low-value appointments back-to-back, build in consultation time, and leave space for adjustments and add-ons.
+
+![A well-structured salon day, intentional scheduling is a skill in itself](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fc/6b/44/ae/47/v1_E10/E10F9W2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=ffd30589afe066c6a890b6882020ae1e52b64b50f789613a8157ca8599cc4978)
+
+## The Shift From Technician to Operator
+
+At a certain point, being a great stylist is not enough. You also need to think like an operator. That means understanding which services drive revenue, which clients rebook consistently, which work brings in referrals, and which days and times are most valuable.
+
+> “You can love the craft and still run it like a business. In fact, you have to.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+## What This Looks Like in Practice
+
+A fully booked stylist working 5 days a week might take fewer clients per day, focus on higher-value services like balayage, transformations, or specialty color, build in gloss and maintenance appointments, recommend targeted haircare products, and increase pricing based on demand and results.
+
+The result: higher average ticket, better client experience, more consistent income, and less burnout.
+
+## The Role of Content and Visibility
+
+Another shift happening right now is how stylists attract clients. It is no longer just referrals and walk-ins. It is visual proof, before-and-after transformations, consistent portfolio updates, and clear specialization.
+
+Clients are choosing stylists based on what they can see.
+
+> “If your work isn't visible, it's not being considered.”
+> — Marcus Bell, Colorist, London
+
+This is why categories like Transformations perform so well. They show capability instantly.
+
+![Portfolio work, visible proof of specialization is one of the most powerful marketing tools a stylist has](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/40/1c/70/7b/35/v1_E11/E117U9UP.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=4a70f19fdfe208663ac7e7fef2266077f6a3499fb19ad8b1e675e71f7e3c743a)
+
+## The Bottom Line
+
+The busiest stylists are not always the most successful. The ones building sustainable, high-income careers are doing fewer things, better, and charging accordingly.
+
+They specialize. They structure their services. They build maintenance into the experience. And they treat their work like a business, not just a schedule to fill.
+
+> “You don't need more clients. You need a better system for the ones you already have.”
+> — Dana Reeves, Salon Owner & Business Coach, Nashville`,metaTitle:`Why the Busiest Stylists Aren't Doing More Clients`,metaDescription:`High-earning stylists in 2026 are not taking more clients, they are specializing, pricing smarter, and building systems that work.`},{id:20,slug:`smoothing-products-stylists-use`,tag:`Products`,title:`The Types of Products Stylists Actually Use for Smoothing Hair`,excerpt:`Smooth hair is never one product. Stylists build it in layers, the right prep, the right treatment, and the right finish.`,author:`James Olivier`,date:`Apr 24, 2026`,readTime:`8 min`,image:`/image/type-of-product.avif`,category:`Products`,section:`Hair Care`,body:`Smoothing hair is where clients and stylists often talk past each other.
+
+A client says “I want my hair smoother,” and usually means less frizz, more shine, easier styling, and something that does not puff up the second they step outside. A stylist hears something more specific: cuticle condition, porosity, humidity response, heat history, and whether the hair needs moisture, protein, or actual chemical smoothing.
+
+That is why there is no single smoothing product that works for everyone. In the salon, smoothing is built in layers.
+
+> “Smooth hair is never one product. It is the right prep, the right treatment, and the right finish. If one of those is wrong, the hair tells on you.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+![The smoothing process starts before styling, product selection at the wash stage sets the foundation](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/f3/d8/4c/8f/13/v1_E10/E107L00O.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1c54a363093754a4f3bbfd8979242085e3a9662bccc058fec857726430bd46b5)
+
+## It Usually Starts With the Wash
+
+The first smoothing decision happens before styling even begins. If the shampoo is too harsh, the hair swells, the cuticle lifts, and the finish gets rough before the blow-dry starts.
+
+Stylists usually reach for a smoothing shampoo and conditioner when the hair feels dry, coarse, frizzy, or overworked. For colored clients, a shampoo for color treated hair matters because faded, porous color often looks frizzier than it really is.
+
+> “People blame the weather, but half the time it is the shampoo. If the hair is stripped in the shower, you are already fighting frizz before you pick up a brush.”
+> — Marcus Bell, Colorist, London
+
+## Then Comes the Treatment Layer
+
+When stylists talk about smoothing, they are often talking about repair. Frizz is not always a hair type issue. A lot of the time, it is damage, bleach, heat tools, old color, rough brushing, and chemical services all create openings in the cuticle. Once the cuticle is uneven, the hair stops reflecting light and starts grabbing moisture from the air.
+
+That is when a stylist may recommend a hair treatment for damaged hair, a protein treatment for hair, or a deeper moisturizing mask. These are not just “nice extras.” They help the strand behave better.
+
+For clients with severe hair breakage and thinning, smoothing has to be approached carefully. Heavy products can make the hair look flatter, but skipping treatment leaves the ends looking frayed. The sweet spot is usually lightweight repair, not coating the hair until it collapses.
+
+![Treatment products work at the strand level, they change how the hair behaves, not just how it looks](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/17/18/09/9a/0f/v1_E11/E114HCS4.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6a8bf7ae5de70b10cdb42ca625dc9d16259b52b2b917a8bfd0cddc119372b9f8)
+
+## Leave-In Products Do Most of the Daily Work
+
+If there is one category stylists rely on constantly, it is leave-in smoothing care. A leave-in hair treatment gives the hair slip, softness, and control before styling. A creamier formula works well on thick, coarse, dry hair. A lighter hair serum is better for fine hair that gets greasy or flat quickly.
+
+The mistake clients make is using too much. Stylists rarely load the hair from root to end. They work product through the mid-lengths and ends, then use what is left on the hands to skim the surface.
+
+> “Most smoothing products are not bad. They are just overused. The difference between glossy and greasy is usually one extra pump.”
+> — Dana Reeves, Salon Owner, Nashville
+
+## For Real Frizz Control, Stylists Use Heat-Activated Products
+
+A salon blowout does not last longer by accident. Stylists often use blow-dry creams, heat protectants, and smoothing lotions that are designed to activate with heat. These products help seal the cuticle as the hair is dried into shape.
+
+That is why the same client can use a serum at home and still not get the salon finish. The product matters, but the blow-dry technique matters just as much. Tension, airflow, section size, and heat direction all decide whether the cuticle lies flat.
+
+For clients who use hot tools often, this step is non-negotiable. Heat without protection may look smooth for the day, but over time it creates the exact frizz and breakage the client is trying to fix.
+
+## Salon Smoothing Treatments Are a Different Category
+
+Keratin treatments, hair botox, and other professional smoothing services sit in their own lane. These are for clients who want smoother hair for weeks or months, not just until the next wash. They are especially helpful for hair that expands in humidity, takes too long to blow-dry, or never feels polished without heavy styling.
+
+But modern smoothing treatments are not always about making the hair pin-straight. Most stylists are using them to soften frizz, improve manageability, and cut down styling time while keeping some natural movement.
+
+> “Clients used to ask for straight hair. Now they ask for hair that behaves. That is a very different consultation.”
+> — Marcus Bell, Colorist, London
+
+A good stylist will look at the hair's condition first. If the hair is over-bleached, fragile, or already breaking, the formula and timing need to be adjusted. Smooth should never come at the expense of strength.
+
+![A professional smoothing service, the consultation determines the formula, not the other way around](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/de/1c/6e/36/51/v1_E10/E1020HOE.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=140b54d4a815107572fecd522d881990d9df921efc3d1aa99868deae2e634bb7)
+
+## The Finish Is Usually a Serum or Oil
+
+The final polish often comes from a hair serum or lightweight oil. This adds shine, controls flyaways, and makes the ends look cleaner. But finishing products are not repair products, they make the hair look better in the moment. They do not replace treatments, moisture, or a proper smoothing routine.
+
+For fine hair, stylists usually keep this step very light. For coarse, curly, or dry hair, they may use a richer oil, especially through the ends. The goal is reflection, not weight.
+
+## Scalp Care Matters More Than Clients Think
+
+Smoothing is not only about the ends. A dry, tight, or irritated scalp can affect how the root area sits, especially on clients who deal with flakes, buildup, or oil imbalance.
+
+That is why more stylists are adding scalp treatment, dry scalp treatment, scalp moisturizer, or scalp oil into the conversation. If the scalp is congested, the roots can look dull and flat. If the scalp is dry, the hair can feel rough right from the base.
+
+## What Stylists Actually Want Clients to Understand
+
+The best smoothing routine is not the most expensive one. It is the one that matches the hair.
+
+- Fine, frizzy hair usually needs lightweight leave-in care and heat protection
+- Thick, coarse hair may need richer creams and deeper treatments
+- Color-treated or bleached hair often needs repair before it can look smooth
+- Curly and wavy hair needs smoothing products that control frizz without erasing texture
+
+> “Good smoothing is personal. Two clients can both say they have frizz, but one needs moisture and the other needs protein. If you treat them the same, one of them is going to hate the result.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+## The Bottom Line
+
+Stylists do not rely on one miracle smoothing product. They build smoothness through cleansing, treatment, leave-in care, heat protection, and finishing products. When the system is right, hair looks softer, shinier, and more controlled without feeling heavy.
+
+The real secret is knowing what kind of smoothing your hair actually needs. Because sometimes the answer is a serum. Sometimes it is a protein treatment. Sometimes it is a keratin service. And sometimes it starts with changing your shampoo.`,metaTitle:`The Types of Products Stylists Actually Use for Smoothing Hair`,metaDescription:`Smooth hair is built in layers. Stylists break down the products they actually use, from wash to treatment to finish, and why one product is never enough.`},{id:21,slug:`what-stylist-sees-when-you-sit-down`,tag:`Tips`,title:`What Your Stylist Is Actually Looking at When You Sit Down`,excerpt:`The consultation starts before you say a word. Here's what your stylist is reading the moment you walk in.`,author:`Cleo Hartley`,date:`Apr 26, 2026`,readTime:`9 min`,image:`/image/sit-down.avif`,category:`Tips`,section:`Inspiration`,body:`The second you sit in the chair, your stylist is already working.
+
+You may still be taking off your coat, unlocking your phone, or saying, “I don't really know what I want, but I need a change.” Meanwhile, your stylist has already clocked the root, the ends, the shape, the scalp, the color history, and the one piece in the front that clearly has its own personality.
+
+Stylists are trained observers. The consultation is not just about what you say. It is about what your hair is saying before you even start.
+
+> “Clients think the appointment starts when we ask what they want. For us, it starts the second they walk in.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+![The first few minutes in the chair, your stylist is already reading the whole picture](https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/51/0d/6d/da/30/v1_E10/E1096J9K.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a4cb791a5ad03f1a41b34dbaef591f289979c41bfb5cd30cb6789db23b35c454)
+
+## The Way Your Hair Falls Naturally
+
+Before anyone touches a brush, your stylist wants to see how your hair lives. Not how it looks freshly styled. Not how it looks in your inspo photo. How it naturally sits when you walk in from real life.
+
+They are noticing where your part wants to fall, whether your crown splits, how your front pieces frame your face, and whether your ends flip, collapse, or puff out.
+
+> “Every head of hair has a routine. Our job is to work with it, not bully it into behaving for one salon photo.”
+> — Marcus Bell, Colorist, London
+
+## Your Root Situation
+
+Stylists look at roots the way detectives look at footprints. Your root tells them how long it has been since your last color, how fast your hair grows, how much contrast you are dealing with, and whether your current maintenance plan makes sense.
+
+For color clients, the root reveals everything: how harsh the grow-out is, how much gray is coming in, whether the previous color was blended well, and whether you are actually low-maintenance or just hoping to be.
+
+The ends can lie. The root does not.
+
+## The Ends, Also Known as the Receipts
+
+If the root tells the present, the ends tell the past. Old bleach, heat damage, box dye, previous highlights, hard water, rough brushing, too much hot tool work. It all shows up at the ends.
+
+> “Ends are receipts. They tell me what the hair has been through, even when the client says, 'I barely do anything to it.'”
+> — Dana Reeves, Salon Owner, Nashville
+
+This is where your stylist decides whether your hair can handle a big color change, whether you need a hair treatment for damaged hair first, or whether those “just a little trim” ends actually need more than a little.
+
+![Ends tell the full story of a client's hair history, stylists read them before making any decisions](https://elements-resized.envatousercontent.com/envato-dam-assets-production/6c54279f-8d01-452b-9052-64f196b93c46/83f20189-fbaf-4bd0-9153-baddd7db64b5.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=89898d8fdc319cdacb8a4d252c02b46b351c820e5580c229059110b34a8cca2f)
+
+## Your Scalp
+
+Yes, your stylist is looking at your scalp. The scalp is the foundation of the whole appointment. If it is dry, irritated, oily, flaky, or sensitive, it affects everything from color application to styling.
+
+A stylist may notice dryness or flaking, product buildup, redness or irritation, tender areas, or visible thinning at the part or crown. This is where conversations about scalp treatment, dandruff treatment, or scalp moisturizer come in, not because your stylist is trying to upsell you, but because healthy hair starts at the scalp.
+
+## The Density, Not Just the Thickness
+
+Clients often say “my hair is thick” when they mean the strands are coarse. Or “my hair is thin” when they mean the strands are fine. Stylists separate the two.
+
+**Texture** is the size of each strand. **Density** is how much hair you have on your head. You can have fine hair with high density. You can have coarse hair with low density.
+
+> “With density, we are not guessing. We are checking what the haircut can support.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+This is why layers can look incredible on one client and tragic on another. Same reference photo, totally different hair reality.
+
+## Your Hairline
+
+The hairline determines how bangs sit, how face-framing layers fall, how a ponytail looks, and how color should be placed around the face. It can also reveal early signs of hair thinning, breakage, postpartum hair loss, or tension from tight styles.
+
+Those little baby hairs around the temples? Your stylist is reading them like subtitles.
+
+## Your Previous Color, Even the One You Forgot About
+
+Hair has a memory. That “temporary” dark gloss from last year. The box dye from college. The highlights under the brunette. The toner that grabbed weird. The bleach that still lives on the last four inches.
+
+Your stylist is looking for all of it. This is why they ask color history questions that feel oddly specific. Old color can affect lift, tone, porosity, and whether your dream blonde is happening today or becoming a six-month plan.
+
+## Your Inspo Photo, But Not the Way You Think
+
+When you show a reference photo, your stylist is not just looking at the pretty part. They are checking whether the lighting is realistic, whether the hair is filtered or heavily edited, what the client's natural base is, how much styling is involved, and whether your hair has the density for it.
+
+This is why a good stylist might say, “I love this direction, but here is what it would look like on your hair.” That is not rejection. That is translation.
+
+![A reference photo consultation, stylists are reading the root, the density, and the styling, not just the finish](https://elements-resized.envatousercontent.com/envato-dam-assets-production/76ee7236-dfc0-4266-a839-c84de7921ad9/ec4c2b5a-2bb2-413e-8d84-805cee9fd955.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=77c820c4a3352a6bb986f5afeb6d32810897ed77c6b32d1eb7936cd48fda9880)
+
+## Your Lifestyle, Based on Clues
+
+Stylists are not judging. They are gathering evidence. If your hair is always in a bun, that matters. If the front pieces are heat-damaged, that matters. If your color is faded but your roots are six months grown out, that really matters.
+
+> “Some clients ask for hair that belongs to a person with a completely different schedule. Our job is to make it beautiful and realistic.”
+> — Marcus Bell, Colorist, London
+
+## The One Thing You Keep Apologizing For
+
+Clients apologize for everything. “My roots are so bad.” “I know my ends are terrible.” “I tried to cut my bangs.” “I used box dye but only once.”
+
+Your stylist is usually not shocked. They have seen everything. Truly everything.
+
+> “Clients confess like they are in trouble. I'm not mad. I just need accurate information so I can get them where they want to go.”
+> — Dana Reeves, Salon Owner, Nashville
+
+So yes, tell the truth. No, your stylist is probably not judging you. They are just updating the formula in their head.
+
+## What Your Stylist Is Really Deciding
+
+By the end of those first few minutes, your stylist is already mapping the appointment, whether your goal is possible today, what needs to be adjusted, where the haircut should hold weight, where the color should be brightest, what treatment your hair needs, and what maintenance plan will keep you from hating it in six weeks.
+
+The consultation is not small talk. It is the blueprint.
+
+## The Bottom Line
+
+When you sit down, your stylist is not just looking at your hair. They are reading the whole story: the root, the ends, the scalp, the density, the history, the lifestyle, and the version of yourself you are trying to walk out as.
+
+> “The hair tells us what it can do. The client tells us what they want. The appointment is where we make those two things meet.”
+> — Nina Patel, Colorist & Educator, Chicago
+
+That is the real work behind the chair.`,metaTitle:`What Your Stylist Is Actually Looking at When You Sit Down`,metaDescription:`The consultation starts before you say a word. Here is what your stylist reads the moment you walk in, and why it shapes everything that follows.`},{id:22,slug:`gdragon-hairstyles-stylists-reference`,tag:`Cut & Style`,title:`10 G-Dragon Hairstyles Stylists Still Reference`,excerpt:`G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from, and why they actually work.`,author:`Ji-Woo Park`,date:`Apr 28, 2026`,readTime:`6 min`,image:`https://s.yimg.com/ny/api/res/1.2/Lq1vk6kjUgL5SRQyCjjgUg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xNTE4O2NmPXdlYnA-/https://media.zenfs.com/en/mmail.com.my/4440162b287bbefca7b488c1c58194b3`,category:`Cut & Style`,section:`Trends`,body:`G-Dragon has never treated hair like an accessory. For him, it is part of the concept, the era, and the performance. The source you shared rounds up 25 of his most memorable looks, from cherry-blossom pink and lake green to his multi-tonal “flower field” color, tennis-ball green, wolf cuts, and the now-iconic tamagoyaki-inspired style.
+
+
+## 1. The Flower Field Color
+
+This is G-Dragon at full volume.
+
+Built on a platinum base, the look mixes saturated pink, yellow, red, and green pieces through long hair, creating the effect of a wild, blooming garden. It is vivid, strange, and somehow still fashion.
+
+From a stylist’s point of view, the reason it works is placement. Multi-color hair can turn messy fast. Here, the platinum base gives the color room to breathe, so every shade looks intentional.
+
+> This is the kind of color that only works when the chaos is planned. On the wrong cut, it becomes costume. On GD, it becomes editorial.
+> — Marcus Bell, Colorist, London
+
+![Style from 'Still Life' Music Video, 2022](/image/still-life.jpg)
+
+## 2. Mint Green
+
+This is one of his most recognizable color eras.
+
+After experimenting with yellow-green tones, G-Dragon went even greener.
+
+This is not an easy color. Neon green can look harsh, gimmicky, or unfinished. On GD, it reads intentional because the styling stays controlled.
+
+The salon lesson is simple: when the color is loud, the shape has to be clean.
+
+![Style from Instagram 8lo8lo8lowme, 2025](/image/mint-green.png)
+
+## 3. The Tamagoyaki Part
+
+This one is pure G-Dragon lore.
+
+The look features bright golden hair slicked into a center part, with the darker regrowth line showing right through the middle. Fans compared it to tamagoyaki, the Japanese rolled omelet.
+
+It sounds ridiculous until you see it. Then it makes perfect sense.
+
+What makes it interesting is that the “flaw” becomes the feature. Most clients panic over visible roots. GD turned the root line into the concept.
+
+> That is the difference between trend and styling. A normal grow-out becomes iconic when someone decides it belongs there.
+> — Dana Reeves, Salon owner, Nashville
+
+![Style from Mnet Asian Music Awards, 2013](https://hips.hearstapps.com/hmg-prod/images/dragon-of-bigbang-performs-on-the-stage-during-the-2013-news-photo-1649488839.jpg?crop=0.543xw:0.814xh;0.182xw,0.0740xh)
+
+## 4. The Fantastic Baby Seaweed Ends
+
+From the *Fantastic Baby* era, this single-sided long hair with gradient ends became one of his most unforgettable stage looks.
+
+It is asymmetrical, dramatic, and built for movement.
+
+The reason stylists still remember it is because it is not just a color moment. It is a silhouette. The long piece changes how the whole head shape reads, especially on stage.
+
+This is hair as choreography.
+
+![Style from 'Fantastic Baby' Music Video, 2012](https://www.billboard.com/wp-content/uploads/media/big-bang-fantastic-baby-vid-billboard-1548.jpg)
+
+## 5. Cherry-Blossom Pink
+
+G-Dragon’s cherry-blossom pink feels softer than his neon eras, but it is still unmistakably him.
+
+The look is worn both fluffy and slightly messy, or styled into a more defined, piecey texture.
+
+That duality is what makes it good. One day it feels romantic. The next it feels punk.
+
+![Style from BSX 'Victory Or Nothing', 2012](/image/pink.png)
+
+## 6. Sunset Amber Blonde
+
+GD has always gravitated toward bold, high-saturation shades, and this look is a perfect example. Blending warm orange with golden tones, the color melts together like a sunset, creating a rich, glowing finish. It adds just the right amount of contrast and lift against an all-black outfit, making the whole look feel intentional rather than simple.
+
+![Style from G-Dragon x Airbnb Press Conference, 2015](https://media.gettyimages.com/id/485515764/photo/seoul-south-korea-g-dragon-of-bigbang-attends-the-collaboration-of-himself-and-airbnb-press.jpg?s=612x612&w=gi&k=20&c=SLLehYCi5m5NImx-HUbiu78NK9rzRrnKKpvj1vIBHS0=)
+
+## 7. Platinum Blonde with Baby Bangs
+
+Platinum is a classic idol move, but GD’s version had bite.
+
+The transparent platinum tone paired with above-brow fringe made the whole look feel sharper, not softer.
+
+> Platinum does not forgive lazy maintenance. If the condition is off, the whole look collapses.
+> — Adam Kim, Hair Stylist, Los Angeles
+
+![Style during the filming of 'Crooked' Music Video, 2013](https://i.ytimg.com/vi/XquYfFI3_2M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5w8BjgCjoZsIfNLkf3Mdsr5yUog)
+
+## 8. The Neon Red Wolf Cut
+
+GD has worn plenty of wolf-tail and mullet-inspired shapes, but the bright red version is one of the strongest.
+
+A wolf cut can look cool or chaotic depending on where the weight sits. On GD, the shorter sides sharpen the silhouette, while the red makes it feel performance-ready.
+
+It is not a casual haircut. It is a statement.
+
+![Style from Paris Fashion Week, 2018](https://assets.vogue.com/photos/59d399eb6809c33f5c2d735b/16:9/w_1792,h_1008,c_limit/g-dragon-chanel-tout.jpg)
+
+## 9. Silver-White Slicked-Back Hair
+
+This is one of his most polished looks.
+
+The silver-white color gives the hair that icy, almost glowing quality, while the slicked-back styling keeps everything formal and controlled.
+
+What stylists like here is the contrast. The styling is classic, almost traditional. The color keeps it futuristic.
+
+![Style from G-Dragon x Shinsegae Duty Free, 2016](/image/white.png)
+
+## 10. The Center-Parted Dark Wolf Tail
+
+This is the quietest look on the list, which is exactly why it works.
+
+Smooth, dark, center-parted wolf-tail hair feels restrained, but the shape still carries that signature edge.
+
+This is probably the most wearable GD-inspired look for real clients.
+
+![Style from G-Dragon x TS Shampoo, 2021](/image/gd-shampoo.jpg)
+
+## The Stylist Takeaway
+
+G-Dragon’s best hair works because it is never just color and never just cut. The two are always in conversation.
+
+The loudest shades usually sit on cleaner shapes. The stranger silhouettes are balanced with styling control. Even the messier looks have structure underneath.
+
+That is why his hair keeps getting referenced.
+
+> GD’s hair is never random. It just looks brave enough to be.
+> — Cassie Miller, Salon Business Coach, New Jersey `,metaTitle:`10 G-Dragon Hairstyles Stylists Still Reference`,metaDescription:`G-Dragon's hair keeps changing without ever feeling random. Here are 10 looks stylists still pull from, and why the system behind them works.`},{id:23,slug:`2026-met-gala-best-hair-looks`,tag:`Cut & Style`,title:`10 Best Hair Looks at the 2026 Met Gala`,excerpt:`The 2026 Met Gala theme was "Costume Art", and the hair teams took it literally. From gold wire pin curls to Botticelli-length waves, here are the 10 hair moments stylists will actually be talking about.`,author:`Charlotte Moss`,date:`May 6, 2026`,readTime:`8 min`,image:`/image/cover.webp`,category:`Cut & Style`,section:`Trends`,body:`The 2026 Met Gala theme was "Costume Art," with the dress code "Fashion Is Art," and the hair teams clearly took that literally. This was not a night of safe blowouts. Hair became structure, reference, texture, ornament, and in more than one case, its own accessory. Vogue also called out one of the biggest beauty through-lines of the night: extra-long hair, from Botticelli-like lengths to waist-skimming extensions and mermaid waves.
+
+What made the best looks work was not just drama. It was intention. The hair either extended the story of the gown, sharpened the silhouette, or gave the whole look a stronger point of view.
+
+Here are the 10 hair moments stylists will actually be talking about.
+
+## 1. Chase Infiniti's Natural Curls
+
+Chase Infiniti had one of the most beautiful texture moments of the night. Her curls were full, defined, glossy, and shaped with a soft roundness that felt powerful without being overworked.
+
+What made it land was the balance: the hair had volume, but it still looked touchable. The curl pattern was kept consistent between her natural hair and added length, with the roots picked out to build that airy, sculptural shape.
+
+This was red carpet hair that celebrated natural texture instead of smoothing it into something more predictable.
+
+> Stylist read: movement, definition, and shine carried the whole look. No unnecessary control, no flattening, no apology.
+
+![Chase Infiniti's natural curls at the 2026 Met Gala](/image/chase-i.png)
+
+## 2. Emma Chamberlain's Platinum Pixie
+
+Emma Chamberlain's hair was the opposite of the ultra-long trend, which is exactly why it stood out.
+
+Her platinum pixie felt personal, sharp, and slightly undone. Paired with a Mugler look inspired by painted surfaces and artistic texture, the short hair made the whole thing feel more intimate and less costume-driven. Vogue described her look as one that turned the body into a canvas, and the hair supported that by staying cropped, pale, and expressive rather than overly polished.
+
+> Stylist read: this is how short hair wins on a maximalist carpet. It does not compete. It edits.
+
+![Emma Chamberlain's platinum pixie at the 2026 Met Gala](/image/emma.webp)
+
+## 3. Madonna's Theatrical Gothic Length
+
+Madonna went fully conceptual, with extremely long, dark, textured hair crowned by a surreal ship-like headpiece. The result felt gothic, theatrical, and completely aligned with the art-history mood of the night.
+
+The hair was not there to be "pretty." It was there to build a scene. Reports connected the look to surrealist references, and that comes through in the way the hair and headpiece worked together as one object.
+
+> Stylist read: sometimes hair is not the finish. Sometimes it is architecture.
+
+![Madonna's theatrical gothic length at the 2026 Met Gala](/image/Madonna.webp)
+
+## 4. Rihanna's Gold Wire Pin Curls
+
+Rihanna's hair was one of the clearest examples of the theme becoming beauty. Her look featured an intricate crown of 40 gold wire pin curls, turning classic pin-curl structure into something metallic, sculptural, and almost jewel-like.
+
+The genius was in the restraint of the base. The hair stayed sleek and controlled so the gold detailing could become the focal point. It did not read like decoration placed on top of a hairstyle. It read like the hairstyle had become jewelry.
+
+> Stylist read: pin curls, but elevated into metalwork.
+
+![Rihanna's gold wire pin curls at the 2026 Met Gala](/image/Rihanna.jpg)
+
+## 5. Sabrina Carpenter's 1920s Faux Bob
+
+Sabrina Carpenter traded her usual long, soft curls for a 1920s-inspired faux bob, complete with sculpted rolls and a jeweled headpiece. The look played perfectly against her Dior film-strip gown, which referenced classic Hollywood and her namesake film inspiration.
+
+This was one of the strongest examples of styling illusion. Her hair was not actually cut short. It was shaped into a bob effect, giving the drama of a transformation without losing the length.
+
+> Stylist read: faux bobs are only convincing when the curl set is strong. This one had the shape, the bounce, and the period reference.
+
+![Sabrina Carpenter's 1920s faux bob at the 2026 Met Gala](/image/Sabrina Carpenter.avif)
+
+## 6. Nicole Kidman's Ultra-Long Blonde
+
+Nicole Kidman helped set the long-hair tone early. Her waist-length blonde extensions, paired with soft fringe, gave the look that almost Rapunzel effect that kept showing up across the carpet. Vogue noted that her long hair, styled by Adir Abergel, helped define the evening's extra-long hair mood.
+
+The reason this worked was polish. The length was dramatic, but the finish stayed soft and expensive rather than heavy.
+
+> Stylist read: long hair on a red carpet needs movement. If it just hangs, it drags the look down. This had flow.
+
+![Nicole Kidman's ultra-long blonde at the 2026 Met Gala](/image/Nicole Kidman.jpg)
+
+## 7. Beyoncé's Mermaid Waves
+
+Beyoncé's return to the Met Gala came with long mermaid waves, a warm blonde tone, sculptural face-framing pieces, and a crystal headpiece that echoed the maximalist energy of her gown. Reports noted that the look was styled by Neal Farinah and played into controlled volume and high-impact glamour.
+
+This was not beach hair. It was red carpet mermaid hair: polished, expensive, and built to hold its shape under cameras.
+
+> Stylist read: the face frame did the heavy lifting. It kept all that length from overwhelming her features.
+
+![Beyoncé's mermaid waves at the 2026 Met Gala](/image/beyonce.jpg)
+
+## 8. EJAE's Binyeo Updo
+
+EJAE's look brought cultural detail into the hair in a way that felt polished and relevant. Her updo was held with binyeo, traditional Korean hairpins, creating a sculptural shape that connected directly to heritage while still reading modern on the Met steps.
+
+Her silver sculptural gown already leaned futuristic, but the hair gave it history and specificity. Reports highlighted the silver embellishment and artistic styling around her debut look.
+
+> Stylist read: hair accessories work best when they are not afterthoughts. Here, the pins were part of the identity of the look.
+
+![EJAE's binyeo updo at the 2026 Met Gala](/image/EJAE.webp)
+
+## 9. Troye Sivan's Shiny Brunette Volume
+
+Troye Sivan's hair was a grooming standout: glossy brunette, lifted, sculpted, and slightly rebellious. GQ connected his look to Robert Mapplethorpe references, with deliberately disheveled height and texture playing against his Prada styling.
+
+What made it interesting was the finish. It was not matte or messy in the usual rock-star way. It had rich tonal depth and a lacquered quality, which made the volume feel more editorial.
+
+> Stylist read: brunette can be just as high-impact as bleach when the gloss is right.
+
+![Troye Sivan's shiny brunette volume at the 2026 Met Gala](/image/Troye Sivan.png)
+
+## 10. Lisa's Extra-Long Hair and Sculptural Veil
+
+Lisa leaned into the night's ultra-long hair movement with dramatic length and a sculptural veil detail. Vogue included her among the key extra-long hair references of the night, noting how accessories helped turn length into a full visual statement.
+
+The look worked because the hair was not just long for length's sake. It was part of the silhouette, extending the line of the outfit and giving the styling a more ceremonial feeling.
+
+> Stylist read: when hair is this long, the accessory has to justify it. Here, it did.
+
+![Lisa's extra-long hair and sculptural veil at the 2026 Met Gala](/image/lisa.png)
+
+## The Bottom Line
+
+The best Met Gala hair this year was not about one trend, even though the extra-long hair wave was impossible to miss. The stronger story was that hair became part of the artwork.
+
+Long waves turned into Botticelli references. Pin curls became sculpture. Updos became cultural storytelling. Pixies became edits. Curls became volume, texture, and identity.
+
+That is what made 2026 interesting. The hair was not just finishing the look. It was helping explain it.`,metaTitle:`10 Best Hair Looks at the 2026 Met Gala`,metaDescription:`From gold wire pin curls to Botticelli-length waves, these are the 10 hair moments from the 2026 Met Gala that stylists will actually be talking about.`},{id:24,slug:`mothers-day-effortless-hairstyles`,tag:`Cut & Style`,title:`Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving`,excerpt:`Mother's Day hair should feel soft, pretty, and easy to wear. These six stylist-loved looks bring polish, lift, and movement with very little fuss.`,author:`Nora Bell`,date:`May 8, 2026`,readTime:`5 min`,image:`/image/woman-in-bathrobe-using-hair-dryer-in-bathroom-2026-03-25-22-37-47-utc.jpg`,category:`Cut & Style`,section:`Trends`,body:`Mother's Day hair should feel soft, pretty, and easy to wear. Think polished texture, flattering shape, and styles that hold up through brunch, family photos, flowers, and a full day of being celebrated.
+
+From a stylist's perspective, these are the easy looks we keep coming back to because they work beautifully on real clients. They give the hair lift, movement, and that sweet finished feel with very little fuss.
+
+## 1. The Soft Half-Up Claw Clip
+
+A half-up claw clip is one of the quickest ways to make hair look lifted and styled. Take the top section, twist it back, secure it with a pretty clip, then let the ends fall softly over the clip for extra volume.
+
+The vibe is feminine, fresh, and relaxed. It keeps the hair away from the face while still showing off length, waves, or curls.
+
+![Image placeholder: a soft half-up claw clip hairstyle with lifted crown volume and loose lengths falling over the clip.](/image/soft-half-up-claw-clip.png)
+
+## 2. The Elevated Low Ponytail
+
+A low ponytail always feels chic when the crown has a little softness. Gather the hair low, loosen the top slightly, and smooth the sides with your hands for that effortless salon finish.
+
+This style feels clean and elegant. It pairs beautifully with soft knits, dresses, button-downs, and anything with a pretty neckline.
+
+![Image placeholder: an elevated low ponytail with a soft crown, smooth sides, and a polished low tie.](/image/low.png)
+
+## 3. The Claw Clip Messy Bun
+
+This is the easy updo clients always love because it looks casual and styled at the same time. Gather the hair low, twist it into a loose bun, and secure it with a claw clip. Leave a few face-framing pieces out for softness.
+
+The finish feels cool, modern, and very wearable. It is great for moms who want their hair up while still looking put together.
+
+![Image placeholder: a claw clip messy bun with loose texture, soft face-framing pieces, and a relaxed low shape.](/image/bun.png)
+
+## 4. The Voluminous Half-Up Style
+
+For instant lift, a voluminous half-up style is always a good choice. Secure the top section into a small ponytail, then gently loosen the crown and sides to create shape.
+
+This look gives the hair that fresh, bouncy feel while keeping everything simple. It is especially pretty for photos because it opens up the face and keeps the overall shape full.
+
+![Image placeholder: a voluminous half-up hairstyle with crown lift, soft sides, and bouncy loose lengths.](/image/half up.png)
+
+## 5. The Soft Twisted Low Pony
+
+A twisted low ponytail adds just enough detail to feel special. Twist the side sections back, secure them low, then let the rest of the hair fall into a soft ponytail.
+
+The feel is graceful and romantic. It works beautifully for brunch, garden lunches, family gatherings, or any Mother's Day outfit with a softer, more classic mood.
+
+![Image placeholder: a soft twisted low ponytail with side twists gathered into a graceful low pony.](/image/low-ponytail.avif)
+
+## 6. The Effortless Textured Bun
+
+A textured bun is always a stylist favorite for easy polish. Start with soft waves or heatless curls, gather the hair into a bun, and gently pull it apart to build shape and fullness.
+
+This style feels romantic, modern, and very photo-friendly. A few loose pieces around the face make it even prettier, especially with statement earrings or a floral dress.
+
+![Image placeholder: an effortless textured bun with soft waves, fullness, and loose face-framing pieces.](/image/back.png)
+
+## Stylist Tip
+
+The secret is softness, balance, and a little lift at the crown. A cute claw clip, a small elastic, or a few loose curls can make the whole style feel intentional in seconds.
+
+Mother's Day hair should feel like you, just a little more polished. Chic, touchable, and ready for every sweet photo moment.`,metaTitle:`Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving`,metaDescription:`Soft, pretty, and easy Mother's Day hairstyles stylists love, from claw clip looks to low ponytails, textured buns, and romantic half-up styles.`},{id:25,slug:`history-of-hair-color`,tag:`Color`,title:`A Stylish History of Hair Color: From Ancient Pigment to Modern Salon Craft`,excerpt:`Before gloss bowls and toner charts, people were already using plants, minerals, and early chemistry to change the way hair looked. A colorist's guide to where it all started, and what it means behind the chair today.`,author:`Leila Fernandez`,date:`May 12, 2026`,readTime:`12 min`,image:`/image/ancient.png`,category:`Color`,section:`Trends`,body:`Hair color has always carried a mood. Before gloss bowls, toner charts, balayage boards, and bond builders, people were already using plants, minerals, sunlight, and early chemistry to change the way hair looked and felt.
+
+From a stylist's perspective, that part is fascinating. The tools have changed completely, but the client desire feels very familiar. People have always wanted hair that feels softer, richer, brighter, bolder, younger, more polished, or more personal.
+
+> "A good hair color tells us two things: how the client wants to feel and how they want to be seen."
+
+## Hair Color Through the Ages: A Quick Timeline
+
+| Era / Region | What People Used | What It Represented | What Stylists See Today |
+|---|---|---|---|
+| Ancient Egypt | Henna and plant-based pigment | Ritual, beauty, warmth, status | Copper, auburn, cinnamon brunette |
+| Ancient China | Herbal and mineral formulas | Youthfulness, refinement, dark glossy hair | Gray coverage, black gloss, rich brunette |
+| Indian subcontinent and henna cultures | Henna for hair, skin, and ceremony | Celebration, beauty, tradition | Warm red glosses, natural stain, shine |
+| Indigenous Americas | Plants, clays, minerals, natural pigments | Identity, ceremony, adornment, storytelling | Color as personal expression |
+| Ancient Mediterranean and Rome | Plant dyes, metals, ash, natural mixtures | Fashion, status, tone shifting | Blonding, darkening, tonal correction |
+| Renaissance Venice | Lightening recipes and sun exposure | Golden hair as a beauty ideal | Honey blonde, vanilla blonde, soft bronde |
+| 19th century chemistry | Synthetic dye discoveries | More control, stronger color science | Modern formulation begins |
+| Early 20th century salons | Professional hair dye systems | Color becomes a salon craft | Consultations, formulas, shade families |
+| 1950s and beyond | Home color and mass advertising | Everyday beauty maintenance | Natural gray coverage, polished brunettes |
+| 1970s to now | Bleach, vivid color, fashion shades | Rebellion, personality, self-expression | Vivids, color blocking, peekaboo panels |
+
+## 1. Ancient Egypt: The Original Warm Gloss
+
+One of the earliest beauty stories in hair color starts with henna. In ancient Egypt, henna was used to stain mummies and mummy wrappings, and some mummies have been found with red hair dyed by henna. That tells us hair color was connected to ritual, preservation, and beauty long before modern salons existed.
+
+From behind the chair, this feels very full circle. Warmth is still one of the most powerful ways to make hair look alive. Copper, auburn, cinnamon brown, and soft chestnut all bring that same richness clients love when they want their hair to catch light beautifully.
+
+> Warm tones have staying power because they make the hair look glossy, healthy, and dimensional.
+
+![Ancient henna pigments and natural dye materials, the original color palette](/image/henna.webp)
+
+## 2. Ancient China: Dark Hair, Youth, and Refinement
+
+Ancient Chinese hair-coloring traditions also deserve a clear place in the story. Research on reconstructed Chinese hair colors notes that recipes for herbal and mineral hair color were documented from the Jin Dynasty period, including formulas for coloring white hair and beards black.
+
+That sounds historical, but the salon connection is very current. A lot of clients still come in asking for rich dark hair because it feels polished, youthful, and clean. The modern version may be a soft black gloss, a deep espresso brunette, or gray coverage that blends naturally through the hairline.
+
+Dark color looks simple, but it needs balance. Too flat can feel heavy. Too ashy can look dull. The prettiest dark shades usually have shine, softness, and a customized undertone.
+
+![Deep espresso brunette with gloss finish, the modern version of an ancient ideal](/image/espresso.png)
+
+## 3. Indigenous Americas: Color as Identity and Storytelling
+
+Across Indigenous communities in the Americas, natural pigments from plants, minerals, and clay have been used for decoration, ceremony, craft, hair, and body adornment. The U.S. Forest Service notes that native plant dyes have been used to decorate animal skins, fabrics, crafts, hair, and bodies.
+
+This part of the history should be handled with respect because meanings vary by community. Still, the larger beauty takeaway is clear: color has often carried identity, symbolism, and story.
+
+In the salon today, we see a modern version of that same idea. Some clients choose cherry cola brunette because it feels confident. Some choose icy blonde because it feels fresh. Some choose hidden panels of pink or blue because they want a little personality without changing their whole look.
+
+> Color is visual language. Even a subtle gloss says something.
+
+![Natural plant-based pigments, color as ceremony, identity, and personal expression](/image/natural.avif)
+
+## 4. Ancient Rome and the Early Blonding Conversation
+
+Ancient Mediterranean hair-coloring practices used naturally occurring materials from plants and minerals, and historical summaries describe Roman hair dyes made from ingredients such as henna, saffron, beechwood ash, and other natural mixtures.
+
+To a colorist, this reads like the earliest version of tone shifting. People were already trying to go warmer, darker, brighter, or lighter. The desire to change the reflection of the hair is ancient.
+
+The professional difference today is control. We understand lift levels, underlying pigment, developer strength, porosity, toner timing, and bond support. Blonding still has glamour, but the modern salon approach is much more strategic.
+
+What clients ask for now:
+
+- "I want to be brighter around my face."
+- "I want blonde, but soft."
+- "I want it to grow out pretty."
+- "I want lighter hair without losing shine."
+
+Those requests are never one-size-fits-all. A soft beige blonde and a high-contrast platinum require completely different plans.
+
+![Face-framing highlights, the modern answer to the ancient desire for lighter hair](/image/face-framing.avif)
+
+## 5. Renaissance Venice: Golden Hair Becomes the Moment
+
+By the Renaissance era, blonde hair had a strong beauty pull, especially in places like Venice. The Walters Art Museum discusses a Venetian cosmetic manuscript from around 1500 that included hair-lightening recipes, showing how intentional beauty routines had become.
+
+As stylists, we still see this every day. Blonde is one of the most requested transformations because it changes the way the face reads. It can soften, brighten, lift, or create that fresh "new season" feeling.
+
+The chic salon version today is placement-led. We use face-framing highlights, root melts, lowlights, glosses, and toners to make blonde feel wearable.
+
+![Honey blonde with root melt, the Renaissance golden ideal, made wearable for modern life](/image/Honey blonde with root melt.webp)
+
+## 6. The Chemistry Shift: Color Becomes More Predictable
+
+A major turning point came in 1856, when William Henry Perkin accidentally discovered mauveine, the first commercialized synthetic dye. That discovery helped open the door to synthetic dye chemistry and a new era of color control.
+
+That moment matters to the beauty industry because modern hair color depends on chemistry. Every formula a colorist mixes is built on control: tone, depth, lift, deposit, timing, and condition.
+
+> "Color became a craft when we stopped guessing and started formulating."
+
+This is where hair color begins to feel closer to the professional salon world we know today.
+
+![Color formulation tools, the chemistry behind every shade a colorist mixes](/image/color.avif)
+
+## 7. The Birth of Professional Salon Color
+
+In 1907, Eugène Schueller launched his first hair dyes, and two years later he founded the company that became L'Oréal. L'Oréal's own history connects the brand's beginning to early hair dye innovation and professional beauty science.
+
+This changed the industry language. Hair coloring became more connected to salons, stylists, formulas, education, and client trust.
+
+Today, a client may bring in an inspiration photo, but the stylist has to translate that photo into a realistic formula based on:
+
+- Natural level
+- Previous color
+- Hair density
+- Porosity
+- Scalp sensitivity
+- Undertone
+- Maintenance schedule
+- Desired finish
+
+That is where professional color becomes more than product. It becomes judgment, experience, and technical skill.
+
+![A colorist reviewing a client's hair history before mixing, the consultation is the foundation](/image/consultation.avif)
+
+## 8. The 1950s: Hair Color Becomes Everyday Beauty
+
+By the 1950s, hair color started moving into mainstream beauty culture. Clairol's "Does she or doesn't she?" campaign helped change the public conversation around hair coloring and made natural-looking color feel more accepted as everyday beauty maintenance.
+
+From a salon perspective, this was huge. Hair color became less secretive and more connected to looking polished, fresh, and well cared for.
+
+That influence still shows up in client language today:
+
+- "I want it to look natural."
+- "I want gray coverage that feels soft."
+- "I want people to notice I look good."
+- "I want my brunette to look expensive."
+- "I want my blonde to look clean, but easy."
+
+This is where subtle color became powerful. A root touch-up, a soft gloss, or a tone refresh can completely change how finished the hair looks.
+
+![Polished brunette with soft gray blending, the everyday beauty ideal that started in the 1950s](/image/grey.jpeg)
+
+## 9. The 1970s and Beyond: Hair Color Gets Bold
+
+By the late twentieth century, hair color moved strongly into self-expression. Punk became an international movement between 1975 and 1980, and its aesthetic helped push fashion, hair, and beauty into a more rebellious visual space.
+
+That energy is still alive in salons. We see it in vivid panels, blue-black glosses, pink money pieces, smoky lavender, copper shags, platinum pixies, and color blocking.
+
+The modern version feels more customized. A client can go bold with a full vivid transformation, or they can keep it soft with a hidden peekaboo shade under the hair. Expression has range now.
+
+![Vivid color panels, bold self-expression that traces back to the punk movement of the 1970s](/image/self-expression.avif)
+
+## Then vs. Now: What Changed Behind the Chair
+
+| Then | Now |
+|---|---|
+| Color came mostly from plants, minerals, and natural materials | Colorists can customize tone, depth, brightness, and finish |
+| Results were harder to predict | Formulas are built around hair history, lift level, and porosity |
+| Hair color often carried ritual, status, or symbolism | Hair color carries lifestyle, identity, maintenance, and personal style |
+| Blonding was rougher and less controlled | Modern blonding uses strategic placement, toner, and bond support |
+| Gray coverage was often the main goal | Gray blending, glossing, and dimensional color are just as important |
+| Bold color was more subcultural | Vivids, pastels, and creative color are part of mainstream salon work |
+
+## What Stylists Actually See Working on Clients Now
+
+The prettiest modern color work is customized. The shade matters, but placement matters just as much.
+
+A brunette can look richer with soft ribbons of warmth. A blonde can feel expensive with a root shadow and gloss. A red can feel wearable when the copper, gold, and brown tones are balanced. A vivid color can look elevated when the cut and styling support it.
+
+The modern client usually wants one of these color moods:
+
+**Soft enhancement**, Glosses, beige blondes, warm brunettes, and natural-looking reds.
+
+**Low-maintenance dimension**, Balayage, root melts, lived-in blondes, and soft money pieces.
+
+**Healthy-looking shine**, Demi color, toner refreshes, acidic glossing, and bond care.
+
+**Gray blending**, Softer grow-out with highlights, lowlights, or translucent coverage.
+
+**Personality color**, Copper, cherry cola, rose brown, pastel panels, vivid ends, or hidden color.
+
+## Stylist Consultation Checklist
+
+Before we mix anything, we read the hair like a map.
+
+| What We Check | Why It Matters |
+|---|---|
+| Hair history | Old color, bleach, henna, box dye, or toner can change the result |
+| Natural level | This tells us how much lift or deposit is realistic |
+| Porosity | Porous hair can grab color quickly and fade unevenly |
+| Elasticity | Weak hair may need treatment before lightening |
+| Scalp sensitivity | Comfort and safety come first |
+| Skin tone | The right undertone makes the color more flattering |
+| Lifestyle | Maintenance should match the client's real routine |
+| Inspiration photos | Photos help us understand tone, placement, and finish |
+
+## What This Means for Clients Today
+
+Hair color has moved from ancient pigment to precise personalization. The options are endless now, but the best results still come from a smart plan.
+
+A beautiful color should fit the client's face, hair condition, schedule, and style. It should grow out gracefully. It should make the hair feel better, not weaker. It should look good in real life, under salon lighting, in selfies, and on day three after styling.
+
+**Choose a color plan instead of chasing one photo.**
+
+Bring inspiration, but let your stylist customize the version that works for your hair. A photo shows the goal. The consultation builds the route.
+
+For low-maintenance beauty, ask about glossing, dimensional brunette, soft balayage, root melting, or gray blending. For high-impact color, plan for maintenance. Bright blonde, copper, vivids, and color blocking can be gorgeous, but they need the right schedule and home care.
+
+Also, be honest about your hair history. Box dye, henna, old bleach, keratin treatments, hard water, and previous toners all matter. Many brands and professional resources also recommend allergy testing and strand testing before coloring, especially with a new formula or bigger change.
+
+The chicest color is the one that looks intentional, feels wearable, and keeps the hair healthy. History gave us the pigments. Chemistry gave us control. Stylists bring the eye, the formula, and the care plan that make the color feel personal.
+`,metaTitle:`A Stylish History of Hair Color: From Ancient Pigment to Modern Salon Craft`,metaDescription:`From henna in ancient Egypt to modern balayage, explore how hair color evolved across cultures and what it means for the salon today.`},{id:29,slug:`mens-haircuts-hot-guy-energy`,tag:`Cut & Style`,title:`Clean Cuts, Strong Lines, Hot-Guy Energy`,excerpt:`From buzz cuts to textured crops, these are the styles giving hot guy energy right now. The best ones do not need heavy styling. They work because the shape is strong and the lines are clean.`,author:`Tom Harley`,date:`May 31, 2026`,readTime:`7 min`,image:`/image/mens-cuts-hero.avif`,category:`Cut & Style`,section:`Trends`,body:`Some men's haircuts just hit differently.
+
+They make the jawline look sharper, the face look cleaner, and the whole look feel more confident. The best ones do not need heavy styling or a complicated routine. They work because the shape is strong, the lines are clean, and the hair actually suits the face.
+
+From buzz cuts to textured crops, these are the styles giving hot guy energy right now.
+
+## 1. Buzz Cut
+
+A buzz cut is simple, clean, and hard to fake.
+
+The modern version does not have to be one flat length all over. You can keep the top slightly longer, add a soft fade on the sides, or adjust the length based on head shape.
+
+This cut puts all the focus on the face. It works especially well when the brows, cheekbones, jawline, or overall bone structure can carry the look.
+
+- **Best for:** square faces, diamond faces, sharper features
+- **Vibe:** clean, direct, low-maintenance
+- **Ask for:** a short buzz cut with subtle shape, not a completely flat one-length cut
+
+:::image-row
+![Buzz cut, close-cropped with soft fade](/image/buzz-cut-1.webp)
+![Buzz cut variation, slightly longer on top](/image/buzz-cut-3.jpg)
+![Buzz cut on square jaw](/image/buzz-cut-2.webp)
+:::
+
+## 2. Crew Cut
+
+The crew cut is the clean haircut that always works.
+
+It is short enough to feel fresh, but still has a little length on top so the haircut has shape. It is easy to maintain and looks good without much styling.
+
+This is a good choice for guys who want to look put together without looking overly styled.
+
+- **Best for:** square, oval, and balanced face shapes
+- **Vibe:** clean, easy, athletic
+- **Ask for:** a short crew cut with slightly more length on top and tapered sides
+
+:::image-row
+![Classic crew cut with tapered sides](/image/crew-cut-1.webp)
+![Crew cut, natural finish](/image/crew-cut-2.jpg)
+![Crew cut styled forward](/image/crew-cut-3.webp)
+:::
+
+
+## 3. Undercut
+
+The undercut is bold because of the contrast.
+
+The sides are cut short, while the top stays longer. This opens up the face and gives the haircut a stronger shape. It also makes the neck, ears, and jawline look cleaner.
+
+The current version looks best when the top still has movement. Too much product can make it feel stiff or dated.
+
+- **Best for:** oval, square, and diamond faces
+- **Vibe:** confident, sharp, noticeable
+- **Ask for:** shorter sides with length on top, but keep the finish natural
+
+:::image-row
+![Elvis' Undercut](/image/under-cut-1.jpeg)
+![MIYAVI‘s undercut, longer top](/image/under-cut-2.webp)
+![Undercut from the side](/image/under-cut-3.webp)
+:::
+
+## 4. Slick Back
+
+The slick back is the grown-up version of hot guy energy.
+
+The hair is brushed back from the forehead, which shows the full face and creates a cleaner, more polished look. It can feel classic, expensive, and a little intense when done right.
+
+The key is product choice. Use something with flexible hold and light shine. Too much gel can make it look greasy.
+
+- **Best for:** oval, square, and longer face shapes
+- **Vibe:** polished, confident, date-night ready
+- **Ask for:** medium length on top with tapered sides, styled back with a natural finish
+
+:::image-row
+![Slick back with natural shine](/image/slick-back-1.png)
+![Jake Gyllenhaal's Slick back](/image/slick-back-2.jpg)
+![David Beckham's Slick back](/image/slick-back-3.jpg)
+:::
+
+## 5. Wet-Look Fringe
+
+The wet-look fringe is softer and more fashion-forward.
+
+This does not mean soaking the hair or making it look oily. The modern version has light shine, separation, and movement. It should look like clean hair with a little texture and gloss.
+
+This style works well with medium-length hair, soft waves, or a slightly longer fringe around the face.
+
+- **Best for:** long, diamond, round, and square faces
+- **Vibe:** cool, moody, effortless
+- **Ask for:** soft layers with a fringe that can fall naturally around the face
+
+:::image-row
+![Wet-look fringe, light shine](/image/wet-look-1.webp)
+![Wet-look fringe on wavy hair](/image/wet-look-2.webp)
+![Timothee Chalamet's wet-look fringe styled to one side](/image/wet-look-3.jpg)
+:::
+
+## 6. Spiky Texture
+
+Spiky hair is back, but softer than before.
+
+The updated version is piecey, messy, and light. The layers create lift at the roots, while the texture makes the hair look fuller. It should feel relaxed, not stiff.
+
+This is a strong option for guys who want volume without a full quiff or heavy styling routine.
+
+- **Best for:** round, oval, heart-shaped, and diamond faces
+- **Vibe:** playful, fresh, low-effort
+- **Ask for:** short textured layers on top with natural blending on the sides
+
+:::image-row
+![Brad Pitt's Fight Club spiky hair, light and piecey](/image/spiky.avif)
+![Spiky texture with root lift](/image/spiky-1.webp)
+![Spiky texture on fine hair](/image/spiky-2.webp)
+:::
+
+## The Takeaway
+
+The best men's haircut is the one that makes the face look cleaner, the hair look intentional, and the whole style feel easier.
+
+A buzz cut can make sharp features stand out. A fade can clean up the face shape. A textured crop can make the hair look fuller. A slick back can make everything feel more polished.
+
+The goal is simple: look good without looking like you tried too hard.
+
+Save this before your next barber appointment.`,metaTitle:`Clean Cuts, Strong Lines, Hot-Guy Energy: 9 Men's Haircuts That Just Work`,metaDescription:`From buzz cuts to textured crops and slick backs, these are the clean, strong men's haircuts delivering hot-guy energy right now. Find your style before your next appointment.`},{id:26,slug:`slick-back-bun`,tag:`Cut & Style`,title:`How to Make a Slick-Back Bun Look Polished`,excerpt:`The slick-back bun looks effortless and elegant. The difference between sleek and greasy is all technique. Here is exactly how stylists do it.`,author:`Nora Bell`,date:`May 14, 2026`,readTime:`7 min`,image:`/image/pose.png`,category:`Cut & Style`,section:`Trends`,body:`The slick-back bun has become one of those styles clients ask for constantly because it looks effortless, expensive, and clean. You see it on runways, red carpets, and "off-duty model" beauty looks. But behind the chair, stylists know the truth: a good slick-back bun is not just hair pulled tight with gel.
+
+The difference between sleek and greasy-looking is technique.
+
+Done well, it makes your face look lifted, your outfit look sharper, and even second or third-day hair look intentional. Done poorly, it can flatten the head shape, expose every bump, and make the hair look heavy instead of polished.
+
+Here is how stylists approach it.
+
+![A polished slick-back on a model, the kind of finish that reads editorial, not rushed](/image/slick-back-model.png)
+
+## Start With the Right Kind of Hair
+
+A slick-back bun actually works best when the hair is not freshly washed. Slightly oily roots can help the hair stay in place, which is why this style is perfect for days when your hair is due for a wash but you still need to look put together.
+
+That does not mean the hair should feel dirty or overloaded with product. Think of this as a controlled, polished finish rather than a cover-up. If your roots are very oily, use a small amount of dry shampoo first, let it sit, then brush it through before styling.
+
+The goal is grip, not buildup.
+
+## What You Need
+
+- **Fine-tooth comb**: for drawing a clean center part
+- **Smoothing brush**: for controlling the surface and brushing the hair back without bumps
+- **Hair tie**: to secure the ponytail base
+- **U-pins or bobby pins**: to hold the bun shape without bulk
+- **Styling product**: gel, wax, pomade, or smoothing balm depending on your hair type
+
+**Optional:** Dry shampoo if the roots look too oily or separated. Use it before styling, let it sit, then brush it through. You still want some natural grip, that is what helps this style hold.
+
+**Choosing your product:** Thicker or frizzier hair usually needs stronger hold. Fine or already-oily hair needs less. The goal is to smooth the hairline, sides, flyaways, and nape, not coat the entire head.
+
+> The stylist rule: shape first, product second. The brush creates the polish. Product should only refine it.
+
+![The right tools laid out, comb, smoothing brush, gel, U-pins, and a hair tie](/image/tool.png)
+
+## Step 1: Create a Clean Middle Part
+
+The part is one of the most important details in this look.
+
+Use the tail end of a fine-tooth comb to draw a straight line down the center of your head. Then separate the hair evenly on both sides. A clean part immediately makes the style look more intentional.
+
+Stylists usually start by perfecting the part before touching the rest of the shape. If the part is uneven, the finished bun can look rushed, even if everything else is smooth.
+
+![A clean center part drawn with a fine-tooth comb, the foundation of the whole look](/image/comb.png)
+
+## Step 2: Brush From the Part Outward
+
+Once the part is set, brush the hair away from the center part on both sides. This keeps the top looking smooth and symmetrical.
+
+Do not just brush everything backward right away. That can blur the part and create bumps near the crown. Instead, work from the part outward, then guide the hair back into the direction of the ponytail.
+
+This is the step that gives the slick-back bun that clean, sculpted look.
+
+## Step 3: Place the Ponytail Slightly Higher
+
+Placement changes the entire mood of the style.
+
+If the ponytail sits too low, the look can feel more severe or formal. If it sits slightly higher, the face looks more lifted and the bun feels more modern.
+
+A good guide: place the ponytail around the middle-back of the head, not too close to the neck and not too high on the crown. You want the bun to feel elegant, not like a ballet bun or a gym bun.
+
+Tie the hair securely, but do not pull so tightly that the scalp looks strained. A slick-back bun should look polished, not uncomfortable.
+
+![Ponytail placement at the mid-back of the head, the position that reads elegant rather than severe](/image/back.jpeg)
+
+## Step 4: Lift the Crown Before You Finish
+
+This is the stylist trick most people skip.
+
+After tying the ponytail, look at the top and crown area. If everything is pulled too flat, gently loosen the crown with your fingers or the end of your comb. Lift it just enough to give the head shape a softer curve.
+
+This makes the style more flattering from the side. It also prevents the slick-back from looking too harsh.
+
+The key is subtlety. You are not teasing the hair or creating volume. You are simply giving the head shape a little balance.
+
+## Step 5: Twist the Bun and Secure It With Pins
+
+Twist the ponytail into a bun and wrap it around the base. Keep the shape tight enough to stay in place, but not so tight that it becomes tiny and stiff.
+
+Secure the bun with U-shaped pins, especially at the top and bottom. U-pins are useful because they hold the shape without creating the bulky feeling you sometimes get from too many elastics.
+
+After pinning, gently pull the bun outward a little. This makes it look fuller and more natural. A slick-back bun does not need to be huge, but it should have shape.
+
+![A wrapped bun secured with U-pins, full enough to read elegant, tight enough to stay polished](/image/bun.jpeg)
+
+## Step 6: Smooth the Hairline, Sides, and Nape
+
+This is where the style becomes truly sleek.
+
+Use a small amount of gel, wax, or pomade and smooth down the short hairs around the hairline. Work in thin layers. It is better to add a little more product later than to start with too much and make the roots look oily.
+
+Brush the sides down and back so the hair follows the shape of the head. Then check the back of the neck. Those small hairs at the nape are often what make a slick-back style look unfinished.
+
+Brush them upward toward the bun and set them with product.
+
+> From a stylist's perspective, the back matters just as much as the front. You may not see it in the mirror, but everyone else does.
+
+![Smoothing the nape with a fine brush and product, the detail most people miss but everyone sees](/image/gel.jpeg)
+
+## Step 7: Soften the Look If Needed
+
+A very clean slick-back can look chic, but it can also feel intense depending on your face shape, outfit, or occasion.
+
+For a softer finish, pull out two tiny pieces near the sideburns or in front of the ears. Keep them minimal. The point is not to create loose tendrils everywhere, but to break up the severity around the face.
+
+This works especially well if you want the style to feel more wearable for daytime.
+
+## Common Mistakes Stylists Notice
+
+The biggest mistake is using too much product at the roots before the hair is shaped. Product should refine the style, not do all the work. Brush and tension create the foundation. Gel or wax creates the finish.
+
+Another common mistake is pulling the hair straight back without considering head shape. A little lift at the crown makes the style look more flattering and less flat.
+
+The third mistake is ignoring the nape. If the front is sleek but the back has loose baby hairs sticking out, the look loses its polish.
+
+Finally, avoid making the bun too tight and tiny unless that is the exact look you want. A slightly fuller bun usually feels more elegant and less severe.
+
+![Lifted, sculpted finish](/image/slick-cover.png)
+
+## The Stylist Takeaway
+
+The slick-back bun is not just a no-wash day shortcut. It is a styling technique that turns natural root oil, controlled tension, and careful smoothing into a polished finish.
+
+The clean part makes it sharp. The lifted crown makes it flattering. The smooth hairline and nape make it look professional. The bun shape keeps it modern.
+
+So the next time your roots feel a little oily, do not automatically reach for a hat. Pull the hair back, sculpt the shape, smooth the details, and make it intentional.
+
+A good slick-back bun should not look like you are hiding your hair.
+
+It should look like you meant to wear it that way.`,metaTitle:`How to Make a Slick-Back Bun Look Polished, Not Greasy`,metaDescription:`The difference between a sleek slick-back bun and a greasy one is all technique. Here is how stylists do it, step by step.`},{id:27,slug:`fine-frizzy-wavy-hair`,tag:`Hair Care`,title:`Your Fine, Frizzy Hair Might Actually Be Wavy`,excerpt:`A stylist's guide to bringing out soft texture without making your hair feel crunchy, heavy, or overdone.`,author:`Priya Allison`,date:`May 18, 2026`,readTime:`10 min`,image:`/image/wavy.jpg`,category:`At-Home Tips`,section:`Hair Care`,body:`A lot of clients sit in the chair and describe their hair the same way.
+
+:::quote-carousel
+It looks straight, but it never dries smooth.
+---
+It gets huge the second there is humidity.
+---
+It has a little bend when wet, but once it dries, it just looks puffy.
+:::
+
+This is usually the moment I tell them: your hair may not be straight. It may be wavy hair that has never been styled like wavy hair.
+
+Fine, frizzy hair can be tricky because it does not always form obvious curls. You may not have ringlets. You may not look at your hair and think, "I have curly hair." But if your hair expands in humidity, looks bendy when wet, and dries into an undefined puff, there is probably a natural wave pattern hiding underneath.
+
+The goal is not to force your hair into curls. The goal is to help your natural texture organize itself.
+
+![A close-up of fine wavy hair air-drying with soft, grouped texture, the kind of result this guide is working toward](/image/dry hair.png)
+
+## Why Fine, Frizzy Hair Gets So Puffy
+
+Straight hair usually dries in a more predictable direction. Wavy hair does not. It has bends, curves, and uneven movement through the strand. When there is not enough water, moisture, or hold, those bends separate from each other instead of grouping together.
+
+That separation is what we see as frizz.
+
+From a stylist's point of view, frizz is often not just "damage." Sometimes it is texture without structure. The hair wants to wave, but it has no support, so it dries fluffy instead of defined.
+
+This is especially common with fine hair because fine strands are easy to weigh down, but they also lose shape quickly. You need hydration, but not too much. You need hold, but not a heavy, stiff finish.
+
+Here is how to bring out the wave without making your hair feel greasy, crunchy, or flat.
+
+## 1. Start Styling When Your Hair Is Very Wet
+
+If you want waves to form, do not wait until your hair is half dry.
+
+The best time to style wavy or curly texture is when the hair is soaking wet. Not towel-dried. Not just damp. Wet enough that the strands can still move together and form clumps.
+
+This matters because water helps the hair group into natural sections. When the hair starts drying before product is applied, the strands separate, and that is when frizz starts showing up.
+
+A stylist tip: keep a spray bottle nearby. If one side dries while you are working on another section, rewet it before applying product or scrunching. Fine hair dries quickly, so this step makes a big difference.
+
+![Spray bottle being used to rewet sections of hair before styling, a key step for fine wavy hair](/image/spray.png)
+
+## 2. Use Leave-In Conditioner, But Keep It Away From the Roots
+
+Wavy hair needs moisture because the natural oils from your scalp do not always travel evenly down the strand. The bends in the hair make it harder for oil to coat the full length. That is why wavy hair can feel dry even when your scalp gets oily.
+
+A lightweight leave-in conditioner gives the hair slip, softness, and a smoother base before styling.
+
+For fine hair, placement matters. Do not load leave-in conditioner directly onto your roots unless your hair is very dry there. Apply it from the mid-lengths to the ends, where frizz and dryness usually show the most.
+
+Think of leave-in conditioner as the prep step. It softens the hair so the wave can form. It is not the product that creates the hold.
+
+## 3. Add a Lightweight Gel or Mousse for Shape
+
+A lot of people avoid gel because they think it will make their hair hard or crunchy. The truth is, wavy hair usually needs some kind of hold while it dries.
+
+Without hold, your hair may look wavy when wet, then dry into a soft cloud with no definition.
+
+A lightweight gel or mousse helps create a temporary cast around the hair. That cast holds the wave pattern in place while the hair dries. It also helps reduce frizz because the strands are not moving around as much during the drying process.
+
+For fine hair, look for something lightweight. You want support, not stiffness. Apply it while the hair is still very wet, then scrunch upward to encourage the wave.
+
+The crunch is not the final look. It is part of the setting process.
+
+![Lightweight gel being scrunched into soaking-wet wavy hair, the cast will soften once the hair is fully dry](/image/gel.png)
+
+## 4. Do Not Create a Hard Straight Part Right Away
+
+This is one of the most overlooked styling mistakes.
+
+If your hair is fine, frizzy, and slightly wavy, a very clean middle part or side part can make the top look flat while the sides puff out. That creates the shape many clients complain about: flat at the crown, wide at the sides, and undefined everywhere else.
+
+Instead, use a softer parting technique.
+
+Take small sections at the top and gently zigzag the part with a comb or your fingers. Then lift the sections slightly at the root and let them fall naturally. This helps the waves settle in different directions instead of clumping into one flat line.
+
+In salon language, we are trying to avoid a harsh split at the scalp. A softer part gives you more natural volume and a better wave pattern through the top.
+
+After that, scrunch the hair while it is still wet. Flip your head forward if you need more root lift, then scrunch upward from the ends toward the scalp.
+
+## 5. Start Drying With Hover Diffusing
+
+If you use a diffuser, do not immediately scoop the hair into it and push it up to the scalp.
+
+For fine, loose waves, that can disturb the pattern too early and create frizz before the style has a chance to set.
+
+Start with hover diffusing instead. Hold the diffuser near the hair without touching it. Let the warm air begin to set the gel or mousse cast. This helps the wave pattern become more stable before you introduce movement.
+
+Move from side to side so the hair does not dry in one stiff position. Once your hair is about halfway dry, then you can begin gently cupping sections into the diffuser.
+
+Use low speed when possible. High airflow can rough up the cuticle and blow the wave pattern apart.
+
+![A diffuser held several inches from wet hair during the hover diffusing phase, letting the cast set before touching it](/image/diffuser.png)
+
+## 6. Dry the Roots Before Over-Drying the Ends
+
+Fine wavy hair often holds moisture near the scalp. If you only dry the ends first, you can end up with dry, frizzy ends and damp, flat roots.
+
+Instead, focus some drying time at the roots.
+
+Place the diffuser near the scalp and let the roots dry before scrunching all the hair into the diffuser. This helps give the crown more lift and prevents the top from collapsing.
+
+Once the roots are mostly dry, you can continue diffusing the mid-lengths and ends. Stop when the hair is about 80 to 90 percent dry, then let the rest air dry if you have time.
+
+The main rule: do not keep touching it while it dries. Touching breaks the cast too early and creates frizz.
+
+## 7. Scrunch Out the Cast Only When Hair Is Fully Dry
+
+When gel or mousse dries, your hair may feel a little stiff. That is normal.
+
+Do not panic and brush it out. Do not keep running your hands through it. That cast is protecting the wave underneath.
+
+Once your hair is fully dry, gently scrunch it with clean hands to soften the finish. This is often called "scrunching out the crunch." The goal is to break the cast without breaking the shape.
+
+If your hair is very fine, you may not need oil. Oil can make fine waves fall flat. If your hair is thicker, drier, or more frizz-prone, you can use a tiny amount of lightweight hair oil on your hands before scrunching.
+
+Use less than you think. You can always add more, but you cannot easily remove too much oil once it is in the hair.
+
+![Hands gently scrunching dry wavy hair to release the cast, soft, defined waves underneath](/image/scrub.png)
+
+## 8. Touch Up Undefined Pieces With a Small Curling Wand
+
+Natural texture does not always dry perfectly, especially if the hair has heat damage, color damage, or uneven wave patterns.
+
+As stylists, we know that not every piece of hair behaves the same way. The front pieces may be straighter. One side may wave better than the other. Some sections may bend at the root, then go flat through the ends.
+
+You can touch up those pieces with a small curling wand.
+
+The key is to use a narrow barrel, usually 3/4 inch or smaller. A larger curling iron can make the piece look too styled and separate from the rest of your natural texture.
+
+Look at the direction the hair is already trying to move, then follow that pattern. You are not creating a full curled hairstyle. You are helping the awkward pieces blend in.
+
+Use heat protection and keep this step minimal, especially if your hair is fine or fragile.
+
+## The Best Product Order for Fine, Frizzy Waves
+
+For most fine, frizzy, hidden-wavy hair, the order should be:
+
+- Soaking wet hair
+- Lightweight leave-in conditioner on mid-lengths and ends
+- Lightweight gel or mousse
+- Scrunch
+- Hover diffuse
+- Diffuse roots
+- Let the hair fully dry
+- Scrunch out the cast
+- Touch up only the pieces that need it
+
+The biggest mistake is trying to smooth this hair the same way you would smooth straight hair. If your hair naturally wants to bend, brushing it into place while it dries can make it look bigger, not sleeker.
+
+## Why Humidity Makes This Hair Look Worse, But Also Gives a Clue
+
+Humidity is usually the giveaway.
+
+If your blowout disappears the second the air gets damp, but your natural texture starts looking more alive, your hair is probably trying to wave. Moisture in the air activates the bend, but without the right styling steps, that bend turns into puffiness.
+
+That does not mean you have to wear your hair natural every day. You can still blow it out. You can still use hot tools. But when the weather is humid, working with your wave pattern may give you a better result than fighting it.
+
+![Side-by-side comparison, blowout in humidity vs. embraced wave pattern styled correctly](/image/before-and-after.jpg)
+
+## Final Stylist Takeaway
+
+Fine, frizzy hair is not always straight hair that needs more smoothing. Sometimes it is wavy hair that needs more water, better product placement, and a drying method that protects the pattern.
+
+Start soaking wet. Use lightweight hydration. Add hold. Diffuse gently. Do not touch it too much while it dries.
+
+The first time you style it this way, it may not be perfect. That is normal. Natural texture has a learning curve. But once you understand what your hair is trying to do, frizz becomes much easier to control.`,metaTitle:`Your Fine, Frizzy Hair Might Actually Be Wavy | A Stylist's Guide`,metaDescription:`If your hair never dries smooth and explodes in humidity, it may be wavy. A stylist's step-by-step guide to bringing out soft waves without crunch or frizz.`},{id:28,slug:`wolf-cut-2026`,tag:`Cut & Style`,title:`The 2026 Wolf Cut: Messy is the new Sexy`,excerpt:`The wolf cut is back, and this time it is softer, more wearable, and more personal. A stylist breaks down five versions of the cut, who they work for, and how to ask for exactly what you want.`,author:`Yuna Seo`,date:`May 19, 2026`,readTime:`11 min`,image:`/image/Wolf-cut.jpeg`,category:`Cut & Style`,section:`Trends`,metaTitle:`The 2026 Wolf Cut: Messy is the new Sexy`,metaDescription:`The wolf cut is back for 2026. Softer, more wearable, and more personal. A stylist breaks down five versions of the cut and how to ask for exactly what you want.`,body:`The most current haircut this year is not perfectly smooth, tucked under, or overly controlled. It moves. It bends. It has pieces that flip out around the cheekbones, jawline, collarbone, and neckline.
+
+That is why the wolf cut keeps showing up in salons again.
+
+But from a stylist's point of view, the wolf cut is often misunderstood. It is not just messy hair. It is a cut designed to look a little undone while still having shape. The difference is important: texture looks intentional, while frizz looks unmanaged.
+
+![Kendall Jenner's wolf cut with choppy layers and soft movement through the ends.](/image/kendall.png)
+
+A modern wolf cut blends the structure of a shag with the attitude of a mullet. It usually has shorter, choppier layers around the crown for lift, with longer, softer pieces through the face and ends so the hair still feels wearable. Hair.com describes the wolf cut as a mix between a shag and a mullet, while Cosmopolitan notes that the cut is built around crown volume, face-framing layers, and longer movement through the bottom.
+
+## Why the Wolf Cut Works So Well Now
+
+Clients are moving away from hair that has to sit perfectly all day. The newer mood is softer, looser, and more personal. The hair does not need to look freshly blown out every second. It needs to have life.
+
+This is also why the wolf cut has stayed popular in Asian beauty references, especially in K-pop, Thai celebrity styling, and Korean salon trends. Teen Vogue has noted that the wolf cut has long been a favorite in South Korean salons and K-pop styling, with its mix of soft face-framing, choppy texture, and gender-fluid shape.
+
+> The wolf cut is not about looking undone. It is about looking like you did not try too hard, and that takes real skill to cut.
+> — Yuna Seo, Cut & Style Editor
+
+For many non-Asian hair types, especially straight, medium-thick, or dense hair, this cut can also be very useful. It removes heaviness without taking away the whole length. It gives straight hair more direction. It helps medium-length hair look less flat. And for clients growing out a bob or short cut, it gives the awkward stage a clear shape.
+
+## The New Wolf Cut Is Softer Than Before
+
+The early wolf cut was often more rebellious: heavy fringe, dramatic crown layers, and a stronger mullet shape. The 2026 version is more flexible.
+
+It can be sweet, cool, feminine, boyish, polished, or edgy depending on the length, bang shape, and texture. Orm Kornnaphat's recent Dior front-row look is a good Asian reference for the softer direction: airy layers, wispy bangs, brushed-out texture, and flipped ends that still feel clean.
+
+Suki Waterhouse is another useful reference. Her mid-length wolf cut was styled with long curtain bangs, an off-center part, and polished airy layers, which makes the cut feel less harsh and more wearable for everyday clients.
+
+That is the version most clients should be asking for: movement without losing softness.
+
+![Suki's soft wolf cut with curtain bangs and airy layers. The 2026 direction is less rebellious, more wearable](/image/Suki Waterhouse.jpeg)
+
+## Style 1: The Soft Collarbone Wolf Cut
+
+**Best for:** oval, heart-shaped, diamond, and longer face shapes
+
+**Good references:** Karina, LingLing Kwong, Suki Waterhouse, Jenna Ortega
+
+This is the easiest wolf cut to try if you are not ready for anything too extreme. The length usually sits around the collarbone or slightly below. The layers are visible, but they are not cut too high. The face-framing pieces sit around the cheekbones and jawline, which helps soften the face without making the hair feel too thin.
+
+From a stylist's perspective, this version works because it keeps enough weight at the bottom. That matters. If the ends are over-layered, the hair can start to look stringy, especially on fine or naturally straight hair.
+
+For styling, use a lightweight leave-in conditioner or smoothing cream if the hair gets frizzy. Then use a flat iron to slightly bend the ends outward or inward. You do not need to curl the whole head. A few bends around the face and ends are enough.
+
+![Collarbone-length wolf cut with soft face-framing layers and slightly flipped ends - the most wearable entry point into the style](/image/Jenna Ortega.jpeg)
+
+## Style 2: The Airy Wolf Cut
+
+**Best for:** round, oval, soft-featured, and fuller face shapes
+
+**Good references:** Orm Kornnaphat, Winter
+
+This version feels light, youthful, and slightly androgynous. The layers are broken up around the cheekbones, the bangs are usually wispy or piecey, and the neckline has movement instead of a blunt finish.
+
+This is a strong option for clients who say, "My hair is heavy, but I do not want it short." It gives the top more lift and makes the sides feel less bulky.
+
+The key is the bang area. Curtain bangs make it softer. Wispy bangs make it more Korean salon-inspired. A shorter fringe makes it more editorial. For rounder faces, I would avoid cutting the side layers too short near the cheek unless the client wants a very bold shape. Keeping some softness around the jawline is usually more flattering.
+
+![Airy wolf cut with wispy bangs and lifted crown, a K-beauty-influenced take that works especially well on straight, medium-thick hair](/image/Orm Kornnaphat.webp)
+
+## Style 3: The Short Statement Wolf Cut
+
+**Best for:** oval faces, strong features, clients who like a bolder look
+
+**Good references:** Soyeon, Miley Cyrus, Keke Palmer
+
+This version leans closer to the mullet side of the wolf cut. The crown is shorter, the sides are more separated, and the ends have more flick. It can look very cool, but it needs the right client and the right haircut.
+
+InStyle describes the wolf cut as a celebrity-favored layered haircut with volume, choppier top layers, and longer back layers, and points to examples like Miley Cyrus, Billie Eilish, and Keke Palmer.
+
+For Asian references, Soyeon-style short wolf cuts work because they use the haircut almost like part of the whole image. It is not just a soft beauty cut. It changes the attitude of the face and outfit.
+
+**Stylist note:** this is not the best version for someone who wants low-risk hair. If the top layers are cut too short, the grow-out can feel awkward. If the sides are too thin, the face can look wider. This version needs balance.
+
+![Short statement wolf cut with dramatic crown layers and strong flick at the ends, the boldest version of the style](/image/Soyeon.png)
+
+## Style 4: The Long Wavy Wolf Cut
+
+**Best for:** wavy hair, medium-to-thick hair, clients who want change without losing length
+
+**Good references:** Cara Delevingne, Billie Eilish
+
+This version keeps more length through the back but adds shape through the crown and face. It works well when the client wants movement but still wants to feel like they have long hair.
+
+Bangstyle describes Cara Delevingne's 2026 wolf cut as a softer, more refined version of the shag-mullet shape, with crown volume, textured ends, and movement that does not rely on perfect styling.
+
+This is one of my favorite versions for clients with natural waves because the cut helps the wave pattern show up. Instead of forcing the hair into a smooth blowout, the layers let the hair separate naturally.
+
+**Stylist note:** the shortest layer should not be too high unless the client has enough density to support it. If the top is too short and the bottom is too long, the haircut can look disconnected.
+
+![Long wavy wolf cut with crown volume and textured ends. The layers activate the wave pattern without forcing a blowout](/image/wolf-cut-billie-eilish.jpg)
+
+## Why This Cut Is Good for Growing Hair Out
+
+A lot of clients get stuck between short and long hair. The bottom starts to feel heavy, the top goes flat, and the front pieces no longer frame the face.
+
+The wolf cut gives that in-between stage a purpose.
+
+Instead of waiting for the hair to grow while it loses shape, the stylist can carve out movement around the crown, cheekbones, and neckline. The hair still grows, but it grows with direction.
+
+This is especially helpful for clients growing out a bob, lob, short shag, or shoulder-length cut. The wolf cut makes the transition feel more intentional.
+
+## What to Ask Your Stylist For
+
+Do not just say, "I want a wolf cut." That can mean too many different things.
+
+Say something more specific:
+
+> "I want a soft wolf cut with face-framing layers, lightness through the ends, and some volume at the crown, but I do not want the top layers too short."
+
+Then bring references. Bring one Asian reference and one Western reference if possible. This helps your stylist understand whether you want the cut to feel soft, edgy, feminine, boyish, polished, or more dramatic.
+
+| Your Hair Type | What to Ask For |
+|---|---|
+| Fine hair | Longer layers so the ends do not become too thin |
+| Thick hair | Weight removal without making the sides too bulky |
+| Straight hair | Soft texturizing so the layers do not look like steps |
+| Wavy or curly hair | Ask your stylist to cut with your natural texture in mind |
+
+## How to Style a Wolf Cut at Home
+
+The wolf cut does not need perfect styling, but it does need some direction.
+
+**First, dry the roots.** If the crown goes flat, the haircut loses its shape. Focus on lifting the top and front sections before worrying about the ends.
+
+**Second, choose the right product for your texture.** Fine hair can use dry shampoo or texture spray at the roots for lift. Davines notes that dry shampoo can help very fine hair create volume and texture between washes.
+
+For most wolf cuts, a volumizing mousse, texturizing spray, heat protectant, and light hairspray are enough. John Frieda's wolf cut styling guide also recommends mousse at the roots, a hairdryer, a round brush, and a curling iron or straightener for shaping the layers.
+
+**Third, do not over-style every piece.** Flip out a few ends. Bend the face-framing pieces. Let some sections fall naturally. The haircut looks better when it has variation.
+
+![Styling a wolf cut at home: mousse at the roots, a diffuser or round brush, and a few bent ends are all you need](/image/style-wolf-cut.png)
+
+## The Stylist Takeaway
+
+The wolf cut is popular because it gives hair movement again. It is not stiff. It is not overly neat. It lets the hair have personality.
+
+But the best wolf cuts are not random. They are customized. The stylist has to consider hair density, face shape, curl pattern, natural volume, and how much time the client actually wants to spend styling.
+
+The real goal is not "messy hair." The goal is controlled texture: soft layers, visible movement, healthy ends, and a shape that still looks good when the hair is not perfectly done.`},{id:30,slug:`bangs-guide-2026`,tag:`Cut & Style`,title:`Find the Bangs That Actually Suit You`,excerpt:`Bangs can change your whole look faster than a new color. The 2026 guide to fringe trends, face shapes, and exactly what to ask your stylist.`,author:`Yuna Seo`,date:`May 31, 2026`,readTime:`10 min`,image:`/image/bang-cover.webp`,category:`Cut & Style`,section:`Trends`,body:`Bangs can change your whole look faster than a new color.
+
+They sit right at the center of the face, so they affect the way people notice your eyes, cheekbones, forehead, and overall face shape. The right bangs can make a haircut feel softer, cooler, sharper, or more styled with very little effort.
+
+For 2026, bangs are moving in two directions: softer, lived-in texture and bolder, more intentional shapes. Wispy bangs, curtain bangs, side bangs, micro bangs, curly fringe, and customized face-framing cuts are all key fringe directions this year.
+
+The big shift: bangs do not need to look heavy, flat, or overly done. The best versions have movement, softness, and a little bend so they work with the rest of the haircut.
+
+## The 2026 Bangs Mood: Soft Layers and Natural Bend
+
+The strongest bangs trend this year is not one single cut. It is the way bangs are being finished.
+
+Think lighter ends, softer face-framing, small bends instead of perfect curls, bangs that grow out well, and texture that feels natural, not forced.
+
+This is why airy bangs, bottleneck bangs, side bangs, and soft curtain shapes are showing up everywhere. They give the face a focal point without locking you into a high-maintenance haircut.
+
+## Bottleneck Bangs
+
+Bottleneck bangs are shorter in the center and gradually get longer toward the sides. They frame the upper part of the face and blend into the rest of the haircut.
+
+This is one of the most wearable bang shapes because it gives structure without feeling too blunt. It can soften cheekbones, balance a rounder face, and add shape around the eyes.
+
+On short hair, bottleneck bangs feel cool and slightly undone. On medium or long hair, they feel softer and more effortless.
+
+- **Best for:** round faces, square faces, diamond faces, higher cheekbones
+- **Ask for:** shorter pieces in the center with longer, blended face-framing pieces on the sides
+- **Style note:** blow-dry the center forward, then curve the side pieces away from the face
+
+:::image-row
+![Bottleneck bangs on straight hair, shorter center with blended sides](/image/bottleneck-bangs-1.webp)
+![Bottleneck bangs on medium-length hair](/image/bottleneck-bangs-2.webp)
+![Bottleneck bangs with soft face-framing layers](/image/bottleneck-bangs-3.webp)
+:::
+
+## Soft Side-Swept Bangs
+
+Side-swept bangs are back, but the 2026 version is softer and less structured than before.
+
+The shape moves across the forehead in a light diagonal line, helping soften the cheekbone and jaw area. It works especially well if you want bangs but do not want a full forehead-covering fringe.
+
+Straight hair makes this style look polished. Wavy or medium-length hair makes it look more relaxed and romantic.
+
+- **Best for:** round faces, diamond faces, higher cheekbones
+- **Ask for:** a soft side bang that blends into face-framing layers
+- **Style note:** keep the ends slightly curved, not curled under too tightly
+
+:::image-row
+![Soft side-swept bangs on short hair](/image/soft-side-swept-1.webp)
+![Side-swept bangs on wavy, medium-length hair](/image/soft-side-swept.webp)
+![Side-swept bangs blending into long layers](/image/soft-side-swept-3.webp)
+:::
+
+## Curved Bangs
+
+Curved bangs have a soft bend through the ends, usually with the movement opening slightly outward.
+
+This shape is useful because it adds softness around the cheekbones and jaw without adding too much height at the roots. That matters for longer face shapes, where too much lift on top can make the face look even longer.
+
+Curved bangs also look good when the hair is tied up because the face-framing pieces keep the style from looking too bare.
+
+- **Best for:** long faces, round faces, square faces, higher cheekbones
+- **Ask for:** light bangs with curved ends and soft side pieces
+- **Style note:** use a round brush or flat iron only on the ends to create a small bend
+
+:::image-row
+![Curved bangs with outward-opening ends](/image/curved-1.webp)
+![Curved bangs on a longer face shape](/image/curved-2.webp)
+![Curved bangs styled with the colored hair](/image/curved-3.webp)
+:::
+
+## Airy Blunt Bangs
+
+Airy blunt bangs give the look of a straight-across bang without the heaviness.
+
+They usually sit around the brow area, but the density is lighter than a classic blunt bang. You still get that clean, pretty shape across the forehead, but the result feels softer and easier to wear.
+
+This is a good choice for someone who wants a visible change but does not want thick, helmet-like bangs.
+
+- **Best for:** long faces, round faces, diamond faces
+- **Ask for:** brow-length bangs with a soft, airy finish and slightly blended sides
+- **Style note:** the key is density. Too much hair makes them heavy; too little makes them stringy
+
+:::image-row
+![Airy blunt bangs at brow level, light density](/image/airy-1.webp)
+![Airy blunt bangs on fine hair](/image/airy-2.webp)
+![Airy blunt bangs with blended sides](/image/airy-3.webp)
+:::
+
+## Brow-Grazing Bangs
+
+Brow-grazing bangs sit right around the eyebrow or slightly below it.
+
+This length draws attention to the eyes and can make the whole haircut feel more styled. It is a strong option for someone with a longer forehead or a face shape that benefits from more softness at the top.
+
+The only caution: this length needs maintenance. Once the bangs start touching the lashes, they can feel annoying quickly.
+
+- **Best for:** long faces, higher foreheads
+- **Ask for:** bangs that softly skim the brows, with the length customized to your eye shape
+- **Style note:** plan on trims every few weeks if you want to keep the exact length
+
+:::image-row
+![Brow-grazing bangs on straight hair](/image/brow-1.webp)
+![Brow-grazing bangs drawing focus to the eyes](/image/brow-2.webp)
+![Brow-grazing bangs with a side part](/image/brow-3.webp)
+:::
+
+## Choppy Baby Bangs
+
+Baby bangs are short, bold, and very visible.
+
+The 2026 version is less perfect and more piecey. Instead of a clean straight line, the ends can be slightly uneven or textured. This gives the cut more attitude and makes it feel modern.
+
+This is not the easiest bang to grow out, so it is better for someone who already likes a strong beauty look. It works especially well with sharp features, short cuts, bobs, and fashion-forward styling.
+
+- **Best for:** oval faces, petite features, strong personal style
+- **Ask for:** short choppy bangs above the brows with soft uneven texture
+- **Style note:** keep the rest of the haircut intentional so the bangs look cool, not accidental
+
+:::image-row
+![Choppy baby bangs above the brows on a bob](/image/choppy-1.webp)
+![Baby bangs with piecey, textured ends](/image/choppy-2.webp)
+![Baby bangs on a long cut](/image/choppy-3.webp)
+:::
+
+## Contour Bangs
+
+Contour bangs are customized face-framing pieces cut around the cheekbones, jawline, and sides of the face.
+
+This is one of the most practical options because it can be adjusted to the person. The stylist can place the shortest and longest pieces based on what needs more balance: cheekbones, jawline, forehead, or face width.
+
+The goal is not to hide the face. The goal is to create a better frame.
+
+- **Best for:** round faces, higher cheekbones, stronger jawlines
+- **Ask for:** customized face-framing pieces that blend into the haircut
+- **Style note:** bring photos from the front and side so your stylist can see the exact shape you want
+
+:::image-row
+![Contour bangs framing cheekbones and jaw](/image/contour-1.webp)
+![Contour bangs on a round face shape](/image/contour-3.webp)
+![Contour bangs on red hair](/image/contour-2.webp)
+:::
+
+## Soft Hime-Inspired Face Frame
+
+The classic hime cut has very defined face-framing panels. The softer version is lighter, thinner, and easier to wear.
+
+The length can sit near the cheekbone, jaw, or chin, depending on the face shape. It gives structure around the face without looking too graphic.
+
+This is a good option for someone who wants a trendier shape but still needs it to work in real life.
+
+- **Best for:** square faces, stronger jawlines, higher cheekbones
+- **Ask for:** soft hime-inspired face-framing pieces with lighter density
+- **Style note:** a slight inward bend at the ends helps the pieces sit better
+
+:::image-row
+![Soft hime-inspired face frame at cheekbone length](/image/hime-1.webp)
+![Hime face frame on straight hair](/image/hime-2.webp)
+![Soft hime pieces at jaw length](/image/hime-3.webp)
+:::
+
+## Flipped-Out Bangs
+
+Flipped-out bangs are all about the direction of the ends.
+
+The pieces are cut to frame the face, then styled outward to open up the cheekbone and jaw area. This can make the mid-face look more lifted and give the haircut a more styled finish.
+
+It works especially well with layered cuts, medium-length hair, and soft blowouts.
+
+- **Best for:** wider jawlines, higher cheekbones, flatter mid-face areas
+- **Ask for:** face-framing bangs long enough to flip away from the face
+- **Style note:** use a round brush or flat iron to flick the ends outward
+
+:::image-row
+![Flipped-out bangs on short hair](/image/flipped-3.webp)
+![Flipped-out face-framing on medium layered hair](/image/flipped-1.webp)
+![Flipped ends on a soft blowout](/image/flipped-2.webp)
+:::
+
+## Sleek Side Bangs
+
+This is the K-beauty version of side bangs: smooth, close to the forehead, and softly separated.
+
+Instead of big volume, the shape follows the natural part and lays closer to the face. It works well with straight hair, sleek ponytails, and soft waves.
+
+This style can help visually shorten a longer forehead and create a more styled look without cutting a full bang.
+
+- **Best for:** long faces, higher foreheads
+- **Ask for:** a longer side bang that can be styled close to the forehead
+- **Style note:** use a small amount of styling balm to separate the pieces without making them stiff
+
+:::image-row
+![Sleek side bangs lying close to the forehead](/image/sleek-1.webp)
+![Sleek side bangs on a sharp, short hair](/image/sleek-2.webp)
+![Side bangs with a soft, defined part](/image/sleek-3.webp)
+:::
+
+## How to Choose the Right Bangs
+
+Look at your eyes and brows first. Bangs pull attention toward the center of the face. If your eyes and brows are already your strongest features, a lighter bang, curtain bang, or face-framing piece can soften the forehead while keeping the eyes open. If you want more focus around the eyes, brow-grazing or airy blunt bangs can help.
+
+Look at the overall strength of your features. Stronger features can usually handle more visible bangs. Softer features often work better with airy bangs, side bangs, bottleneck bangs, or tendrils.
+
+Look at the space between your eyes and temples. If the outer sides of the face feel wider, side pieces can help bring the focus inward. Bottleneck bangs, contour bangs, and tendril bangs work well here.
+
+Look at your forehead and hairline. A strong cowlick, widow's peak, or uneven hairline can affect how bangs sit. In this case, avoid forcing a perfectly straight bang. A side bang, curtain bang, or textured bang will usually be easier.
+
+Be honest about styling time. If you do not want to style every morning, choose long face-framing bangs, bottleneck bangs, tendril bangs, or airy curtain bangs. If you are comfortable with a round brush or flat iron, you can handle brow-grazing, curved, flipped-out, or straight-across bangs.
+
+## How to Maintain Bangs
+
+Bangs are small, but they need attention. If they look oily or flat in the morning, separate the bangs, lightly wet or wash that section, then blow-dry them back into shape.
+
+A small round brush, flat iron, dry shampoo, and light hairspray can make bangs much easier to live with.
+
+For most full bangs, plan on a trim every three to four weeks. Long face-framing bangs can grow out for weeks and still look good. Brow-length and straight-across bangs need more frequent attention because even a small amount of growth changes the look.
+
+## The Takeaway
+
+The best bangs are not just the trendiest bangs. They are the bangs that work with your face shape, hair texture, hairline, and daily routine.
+
+For 2026, the most wearable options are soft, customized, and easy to grow out. Bottleneck bangs, airy bangs, side bangs, tendrils, and face-framing layers give the face shape without making the haircut feel high-maintenance.
+
+Before cutting, bring reference photos, talk through your styling routine, and ask your stylist how the bangs will grow out. The right bangs should make your haircut look better on day one and still make sense six weeks later.`,metaTitle:`Find the Bangs That Actually Suit You: The 2026 Bangs Guide`,metaDescription:`From bottleneck bangs to baby bangs, tendrils to straight-across fringe: the complete 2026 guide to bangs trends, face shapes, and what to ask your stylist.`},{id:31,slug:`female-hair-loss-stylist-guide`,tag:`Hair Thinning`,title:`What Stylists Should Know About Female Hair Loss`,excerpt:`Clients describe hair loss by what they notice first. As hair professionals, we need to read the pattern. A practical guide to the layers behind female hair loss and how to have better conversations about it.`,author:`Lauren Chavez`,date:`Jun 1, 2026`,readTime:`8 min`,image:`/image/thinning.png`,category:`Hair Thinning`,section:`Hair Care`,body:`
+Female hair loss can come from several places. Sometimes the issue is shedding. Sometimes the follicle is slowly producing finer hair. Sometimes the hair is breaking before it has a chance to grow longer. Scalp inflammation, stress, postpartum changes, medication shifts, nutrition, thyroid issues, and tension styling can all be part of the picture.
+
+The goal is simple: help the client understand what we are seeing, what may be driving it, and when she needs medical support.
+
+## The Main Patterns Stylists Should Separate
+
+| Pattern | What it looks like | What to explain to the client |
+|---|---|---|
+| Pattern thinning | Wider part, thinner crown, more visible scalp | The follicle is still active, but it may be producing finer, weaker hair over time. |
+| Shedding | More hair in the shower, brush, pillow, or floor | The hair cycle may have been pushed into a shedding phase by stress, illness, postpartum changes, medication, nutrition, or thyroid issues. |
+| Breakage | Thin ends, uneven lengths, short broken pieces | The hair may be snapping from damage, heat, color, tension, or extensions. |
+| Scalp inflammation | Itching, flakes, redness, soreness, oil imbalance | The scalp environment may be making it harder for the follicle to function well. |
+| Tension loss | Weak edges, thinning temples, tight-style history | Repeated pulling can stress the follicle, especially around the hairline. |
+
+
+## Pattern Thinning: The Follicle Gets Smaller Over Time
+
+Female pattern hair loss usually shows up through the part, crown, and top of the head. The hairline may stay mostly intact, but the scalp becomes more visible.
+
+The main process is miniaturization.
+
+The follicle keeps working, but each cycle may produce a smaller, finer strand. A strong hair becomes softer. The part looks wider. The ponytail feels thinner. Under salon lighting, we start seeing more scalp between strands.
+
+This is why early pattern thinning can be easy for clients to miss. They may still be growing hair, but the quality and size of the hair coming in has changed.
+
+**Where hormones fit**
+
+Androgens are part of the pattern-thinning conversation. Women naturally make testosterone, and in the scalp, testosterone can convert into DHT. In follicles that are sensitive to that signal, the growth phase may shorten and the follicle may gradually produce finer hair.
+
+This does not always mean the client has a major hormone imbalance. Many women with pattern thinning have normal bloodwork. The issue can be local follicle sensitivity, genetics, life stage, and scalp biology.
+
+| Client says | What to say |
+|---|---|
+| “Are my hormones messed up?” | “Not always. Some follicles are more sensitive to hormone signals, even when bloodwork looks normal.” |
+| “Why is the top thinning more?” | “Different areas of the scalp respond differently. The crown and part line are usually more vulnerable.” |
+| “Will I go completely bald?” | “Female pattern thinning usually causes gradual density loss on top, rather than full scalp baldness.” |
+
+## Shedding: The Hair Cycle Gets Disrupted
+
+Clients focus on shedding because they can see it. Hair in the shower feels urgent.
+
+Shedding can happen after stress, illness, surgery, rapid weight change, postpartum changes, medication shifts, nutrition gaps, or thyroid issues. The trigger often happens months before the shedding starts, so clients may not connect the two.
+
+Pattern thinning moves slower. Shedding can feel sudden.
+
+That difference matters. A product may reduce fallout, but density only improves if stronger hair is growing back from the follicle.
+
+
+| What to ask | Why it matters |
+|---|---|
+| “When did this start?” | Sudden shedding and slow thinning point to different causes. |
+| “Did anything major happen 2 to 4 months before?” | Delayed shedding often follows stress, illness, surgery, postpartum shifts, or weight changes. |
+| “Any new medication, supplement, or birth control change?” | These can affect the hair cycle. |
+
+## Breakage: The Hair Is Snapping, Not Falling
+
+Before recommending a growth product, check whether the hair is falling from the root or breaking along the length.
+
+Breakage often shows up as thin ends, uneven mid-lengths, short broken pieces, or fragile hair after lightening, heat styling, chemical services, tight ponytails, or extensions.
+
+For these clients, the first step may be a lower-tension routine, gentler color plan, heat reduction, bond support, or a cut that removes weak ends.
+
+A growth serum will not fix hair that keeps snapping from the shaft.
+
+## Scalp Environment: The Follicle Lives There
+
+The scalp is the follicle's working environment.
+
+Inflammation, itching, flakes, oil imbalance, tightness, or irritation can make thinning harder to manage. Clients may treat scalp symptoms like a side issue, but the follicle is sitting inside that environment every day.
+
+Persistent redness, scaling, pain, sores, or patchy loss should be referred to a dermatologist.
+
+
+| What to ask | Why it matters |
+|---|---|
+| “Any itching, burning, soreness, or flaking?” | Scalp inflammation may be involved. |
+| “Does your scalp feel oily, tight, or irritated?” | Scalp imbalance can affect comfort and consistency with routines. |
+| “Have you noticed patches or sudden bald spots?” | Patchy loss needs medical evaluation. |
+
+## The Deeper Follicle Conversation
+
+This is the part clients rarely hear.
+
+Hair growth depends on the follicle and the tissue around it. 
+
+- **Inside the follicle,** dermal papilla cells help control hair size, growth rhythm, and follicle strength. 
+- **Around the follicle,** blood flow, oxygen response, hormone signals, inflammation, and local energy support all influence how well the follicle performs.
+
+Clients do not need the technical terms. They need the useful takeaway:
+
+Healthy-looking hair starts with a follicle that can produce stronger hair and stay in the growth phase long enough for density to show.
+
+This is why one simple product story often falls short. A formula may support the scalp. Another may reduce shedding. Another may improve the feel of the hair. Real density change usually requires more direct support at the follicle and the environment around it.
+
+## What Stylists Should Say Before Recommending Products
+
+Use language that keeps expectations realistic.
+
+| Client concern | Stylist response |
+|---|---|
+| “I just need something for shedding.” | “Let's track shedding, but also your part line, temples, and strand thickness.” |
+| “This serum says it grows hair.” | “Some formulas support the scalp or reduce fallout. We want to watch whether density actually changes.” |
+| “My ponytail feels smaller.” | “That can come from shedding, breakage, or finer regrowth. Let's check the scalp and the ends.” |
+| “I've used a serum for months and still look thin.” | “Less shedding is one sign, but visible density depends on the quality of the hair growing back.” |
+
+## When to Refer Out
+
+Recommend a dermatologist when the client has sudden heavy shedding, patchy loss, scalp pain, burning, scaling, sores, eyebrow loss, irregular periods, acne with facial hair growth, or thinning that keeps progressing despite routine changes.
+
+Stylists can spot patterns, protect the hair, adjust services, and guide clients away from unrealistic product expectations. Medical providers can check for scalp disease, internal triggers, and treatment options.
+
+## Chair-Side Takeaway
+
+Female hair loss needs a layered consultation.
+
+Start with what you can see: part line, crown density, temples, scalp condition, strand quality, and breakage. Then separate the likely pattern before recommending anything.
+
+The most important distinction for clients is this: shedding less and rebuilding density are different outcomes.
+
+That makes the product conversation more honest. Some products support the scalp. Some improve hair feel. Some may reduce fallout. Stronger solutions need to work closer to the follicle and support the environment that helps thicker hair grow.`,metaTitle:`What Stylists Should Know About Female Hair Loss`,metaDescription:`A practical chair-side guide to reading female hair loss patterns, understanding shedding vs. thinning, and having better conversations with clients about density and growth.`},{id:32,slug:`french-open-tennis-hairstyles`,tag:`Cut & Style`,title:`Game, Set, Hair`,excerpt:`Clay-court season has a very specific beauty mood. From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear now and into U.S. Open season.`,author:`Nora Bell`,date:`Jun 4, 2026`,readTime:`8 min`,image:`/image/french-open-tennis-hairstyles.avif`,category:`Cut & Style`,section:`Trends`,body:`Clay-court season has a very specific beauty mood: sun, sweat, red clay, crisp tennis whites, slicked-back hair, braided ponytails, and hair accessories that actually have a job.
+
+With Roland-Garros running through June 7 and the U.S. Open already on the late-summer calendar, tennis hair is moving from the court into everyday summer styling. Think less "perfect blowout," more court-ready, sweat-proof, still looks good after the match.
+
+## Why Athlete Hair Works So Well for Summer
+
+A match-day hairstyle has to survive running, serving, jumping, sweating, wind, visors, towels, and warmups. It cannot fall apart five minutes in and cannot pull so hard that your scalp hurts before the first set is over.
+
+That is why tennis players keep coming back to a few reliable shapes: high ponytails, braided ponytails, bubble ponies, headbands, slick buns, visor-friendly styles, and face-framing tendrils. Coco Gauff, Serena Williams, Venus Williams, Aryna Sabalenka, and Ons Jabeur all show different versions of the same idea: athletic hair can be practical and still have personality.
+
+
+## The Bubble Ponytail
+
+For long hair, a regular ponytail can swing, tangle, hit your face, and pull on the scalp. A bubble ponytail keeps the length controlled.
+
+Tie your hair into a ponytail, then add small elastics every few inches down the length. Gently pull each section outward to create soft bubbles. It gives shape without needing braiding skills.
+
+- **Best for:** long hair, thick hair, high-impact movement
+- **Works well with:** tennis skirts, oversized jerseys, summer dresses
+- **Why it works:** controls hair movement and keeps the ponytail from whipping around
+- **Style tip:** use clear or color-matched elastics for a clean look, or bright elastics for U.S. Open energy
+
+:::image-row
+![Bubble ponytail with evenly spaced soft sections on long hair](/image/bubble1.webp)
+![Bubble ponytail from the side showing shape](/image/bubble2.webp)
+![Bubble ponytail with brightly colored elastics](/image/bubble3.webp)
+:::
+
+
+## The Braided Ponytail
+
+The braided ponytail is a classic athlete hairstyle for a reason. It keeps the hair together, limits tangling, and still gives movement. It also looks good with visors, headbands, and tennis dresses.
+
+Serena and Venus Williams made braids one of the most iconic beauty signatures in tennis, especially with beaded styles early in their careers. Their influence is still part of how we talk about hair, sport, and self-expression on court.
+
+- **Best for:** tennis, training, long hair, textured hair, protective styling
+- **Works well with:** headbands, ribbons, beads, wrapped elastics
+- **Why it works:** keeps the length controlled while still looking strong
+- **Style tip:** start with a secure ponytail base first, then braid the length so the base does not loosen
+
+:::image-row
+![Braided ponytail secured with a ribbon at the base](/image/braided1.webp)
+![Double Braided ponytail on textured hair with beaded ends](/image/braided2.webp)
+![Braided ponytail worn under a cap](/image/braided3.webp)
+:::
+
+## Boxer Braids
+
+Boxer braids, also known as double Dutch braids, are one of the most secure sport hairstyles. They sit close to the scalp, keep layers controlled, and work for everything from tennis to boxing to dance workouts.
+
+This is the style to choose when you do not want to think about your hair again for the rest of the day.
+
+- **Best for:** high-impact workouts, layered hair, thick hair, long days outside
+- **Works well on:** straight, wavy, curly, and textured hair
+- **Why it works:** maximum hold with minimal loose hair
+- **Style tip:** add a little dry shampoo or texture spray before braiding so the hair has grip
+
+:::image-row
+![Boxer braids sitting close to the scalp on straight hair](/image/boxer1.webp)
+![Double Dutch braids on thick textured hair](/image/boxer2.webp)
+![Boxer braids tied off with bright elastics](/image/boxer3.webp)
+:::
+
+## The Ribbon Ponytail
+
+A ribbon is the easiest way to make a plain ponytail feel French Open-inspired. Tie your hair into a ponytail or braid, then add a ribbon at the base or around the end.
+
+For Roland-Garros energy, choose clay red, cream, espresso brown, dusty pink, or navy. For U.S. Open energy, go brighter: cobalt, white, yellow, metallic silver, or black.
+
+- **Best for:** simple ponytails, braids, low buns, half-up hair
+- **Works well with:** tennis dresses, polos, pleated skirts, sporty summer outfits
+- **Why it works:** inexpensive, easy, and instantly styled
+- **Style tip:** choose a grosgrain ribbon if you want it to hold better than satin
+
+:::image-row
+![Ribbon ponytail in clay red for Roland-Garros styling](/image/ribbon1.webp)
+![Cream grosgrain ribbon tied at a low ponytail base](/image/ribbon2.webp)
+![Bright cobalt ribbon on a braided ponytail for U.S. Open energy](/image/ribbon3.webp)
+:::
+
+
+## How to Make Sport Hair Actually Stay
+
+Start with hair that has grip. Freshly washed, silky hair can slip out faster, so a little dry shampoo, texture spray, or light styling cream helps.
+
+Use strong elastics. Do not tie every style at maximum tension. A hairstyle can feel secure without pulling at the hairline. If your scalp hurts before you leave the house, redo it.
+
+For outdoor tennis or summer workouts, keep a mini kit in your bag: extra elastics, a few bobby pins, a small brush, dry shampoo, and a soft headband.
+
+## The Takeaway
+
+The best athletic hairstyles are not complicated. They are secure, clean, and easy to refresh.
+
+French Open-inspired hair gives you clay-court polish: braids, ribbons, visors, slick buns, and soft sporty details. U.S. Open season brings the late-summer version: brighter colors, harder hold, sweat-proof styling, and a little New York attitude.
+
+Whether you are playing tennis, watching from the stands, or just wearing the tennis-core outfit because it looks good, the rule is simple: your hair should stay out of your face and still look like part of the look.`,metaTitle:`Game, Set, Hair: French Open-Inspired Sport Hairstyles for Summer 2026`,metaDescription:`From double-anchor ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear through French Open and into U.S. Open season.`},{id:33,slug:`what-your-hair-says-about-you-sex-and-the-city`,tag:`Style & Culture`,title:`Your Hair Is Already Talking. Are You Listening?`,excerpt:`From Nicole Kidman's iconic curls making a comeback to the four women of Sex and the City, here's why a haircut says more about who you are—and who you're becoming—than almost anything else.`,author:`Nora Bell`,date:`Jun 7, 2026`,readTime:`10 min`,image:`/image/change-hair-1.webp`,category:`Style & Culture`,section:`Inspiration`,body:`A new hairstyle really does change your face. Not metaphorically, literally.
+
+There's a reason Nicole Kidman's golden curls set off a whole internet moment not long ago. She'd just made headlines for her first solo Christmas post-divorce, but what people couldn't stop talking about wasn't her relationship status, it was her *energy*. Silk Doen dress, a Chanel wicker bag, Manolo Blahnik gold sandals, effortlessly cool and completely unbothered. And then those curls.
+
+"Those curls are back and suddenly she looks 25 again," someone wrote. And honestly? Not wrong.
+
+The classic "transformation" arc almost always plays out the same way: frizzy curls smoothed into sleek straight hair signals a character's arrival, her polish, her upgrade. It's the *Princess Diaries* makeover in visual shorthand.
+
+:::image-row
+![Nicole's curly hair](/image/nicole1.webp)
+![Nicole in Princess Diaries](/image/nicole2.webp)
+:::
+
+There was also a different kind of reading going around, photos from other recent appearances, her hair loose and a little undone. Some people saw that look and called it messy. Others called it freedom.
+
+Same person, two different hairstyles, two completely different conversations.
+
+## Hair Changes More Than Your Look
+
+People say a new haircut changes everything. But it's not really that the cut changes *you*, it's that the cut reflects something that was already shifting inside. Nicole Kidman stepping out with her signature curls wasn't just a styling choice. It was a signal.
+
+Film directors have known this forever. When a character needs to evolve on screen, the costume department gets involved, but the hair department goes first.
+
+:::image-row
+![Sarah Snook in Succession](/image/succession1.webp)
+![Sarah Snook in Succession](/image/succession2.webp)
+:::
+
+When a character crosses into power, really starts playing the game, the hair gets shorter. Sharper. Think *Succession*: the longer something stays in the family, the more aggressive the lines become.
+
+And then there's the moment that hits differently every time you see it. The mirror scene. The scissors. A character cutting off her own hair is never just about hair. *Gone Girl*, *Blue Is the Warmest Color*, dozens of others, the haircut is the turning point, the declaration, the thing that says: *I'm done being who I was.*
+
+:::image-row
+![Gone Girl](/image/Gone Girl.webp)
+![Blue Is the Warmest Colour](/image/Blue Is the Warmest Colour.webp)
+![Eternal Sunshine of the Spotless Mind](/image/eternal.webp)
+:::
+
+Hair doesn't need a line of dialogue. It's already telling the whole story.
+
+## Which Brings Us to Sex and the City
+
+If there's one piece of television that turned the idea of "hair equals personality" into an actual philosophy, it's *Sex and the City*. Four women, four hairstyles, four completely different ways of moving through the world.
+
+The show invented a template for a certain kind of urban women's story, and it did it as much through hair as through plot. Each character's relationship to her own hair was a direct reflection of her relationship to herself.
+
+:::image-row
+![](/image/sex1.webp)
+![](/image/sex2.webp)
+:::
+
+## Carrie: The Curl Is the Character
+
+Carrie Bradshaw's curls are the most iconic hair in the show, possibly in all of 90s and early 2000s television. But here's the thing: they were never *styled*. That's exactly the point.
+
+The hair always looked like she'd just woken up. Or like she'd been walking fast in the wind and didn't care. Untamed. Impractical. Alive.
+
+One look and you already knew: this woman runs on feeling. She doesn't follow rules because she finds rules less interesting than the exception.
+
+:::image-row
+![](/image/sex3.webp)
+![](/image/sex4.webp)
+![](/image/sex5.webp)
+:::
+
+Carrie wrote a sex and relationships column in New York City without a stable income, without a steady relationship, and without a consistent sense of whether she was making the right choices. Her apartment was rent-controlled and barely affordable. Her closet was full of things she couldn't afford. Her love life was chaos.
+She was drawn to Mr. Big precisely *because* he was wrong. The danger, the ambiguity, the sense that she could never quite pin him down, that was the appeal. She walked away from Aidan, who was good and stable and kind, more than once.
+
+The hair reflected all of it.
+
+The only times Carrie straightened her hair were the moments she was trying to become someone else, someone more upper-east-side, more controlled, more acceptable to a world that made her feel like she wasn't quite enough. It never lasted. The curls came back. Because *she* came back.
+
+Carrie once said: "I will never be the woman with the perfect hair who can wear white and not spill on it." She said it like it was a flaw. It wasn't. It was the whole point.
+
+:::image-row
+![](/image/sex6.webp)
+![](/image/sex7.webp)
+![](/image/sex8.webp)
+:::
+
+## Miranda: The Bob That Doesn't Apologize
+
+Miranda's auburn bob said everything before she opened her mouth. Short. Precise. Not interested in softening itself for anyone.
+
+She was a lawyer in the 1990s, in a field that was still overwhelmingly male. The cut made sense as a strategic choice, but Miranda was never purely strategic. She chose an arresting shade of orange-red, a color that refused to disappear into the background. The logic was sharp; the execution was bold. That tension ran through everything she did.
+
+:::image-row
+![](/image/sex9.webp)
+![](/image/sex10.webp)
+![](/image/sex11.webp)
+:::
+
+Miranda was the most rational one at the table, the one who'd say, in the middle of a conversation about men, "Can we please talk about something else for five minutes?" But she was also the one who consistently chose Steve, a man the world told her was below her grade. She hated loneliness more than she hated anything else. That was the crack in the armor, and she knew it.
+
+Watch the hair change over the seasons. When she leaned into vulnerability, pregnancy, single motherhood, learning to be a partner without disappearing into it, the bob got softer. The color went deeper, more burnished. Less attack, more depth.
+
+The bob never fully relaxed. But it learned to breathe.
+
+## Charlotte: The Perfect Hair, the Imperfect Life
+
+Charlotte York's hair was always immaculate. Center-parted, glossy, the exact right amount of wave, never too much, never too little. It looked like it had been brushed 100 times before she left the apartment. It probably had.
+
+She dressed the same way: Chanel suits, silk blouses, ladylike cuts that telegraphed Upper East Side good breeding even before she said a word. She was the one who still believed in The Right Man, The Right Marriage, The Right Life, and she was going to look the part while she waited for it.
+
+:::image-row
+![](/image/sex12.webp)
+![](/image/sex13.webp)
+![](/image/sex18.webp)
+:::
+
+Here's the thing, though: Charlotte's perfectionism wasn't confidence. It was anxiety wearing a silk blouse.
+
+She couldn't walk into a sauna without her robe. She couldn't deviate from the plan because the plan was the only thing holding everything together. She married a man who was objectively correct on paper, handsome, wealthy, old family, and moved into an apartment so tasteful it looked like a magazine spread. And then she found out her perfect husband had a problem he'd never told her about, and the magazine-spread life didn't have a chapter on what to do next.
+
+She divorced him. She converted religions for a man she actually loved. She stopped performing perfection and started living through imperfection instead.
+
+The hair, in those later seasons, became a little less lacquered. Not messy, Charlotte would never be messy, but *breathing*. Human. That was the whole arc, visible in the gloss level of a blowout.
+
+:::image-row
+![](/image/sex17.webp)
+![](/image/sex15.webp)
+![](/image/sex16.webp)
+:::
+
+## Samantha: Controlled, Maximalist, Unapologetic
+
+Samantha Jones's hair was the opposite of Carrie's in almost every technical sense. Where Carrie's was all movement and chaos, Samantha's was engineered. The cut, the volume, the shine, nothing was accidental.
+
+And yet the spirit behind it was the same energy dialed up to eleven: *I am exactly who I want to be, and I dressed for myself, not for you.*
+
+Samantha wore high-saturation color, leopard print, sequins, things with architectural shoulders. Her style wasn't soft sexy, it was what you might call *dominant* sexy. She built an image the way a publicist builds a brand, which made sense, because she was a publicist. She lived by the same principle she applied to her clients: you are the message.
+
+:::image-row
+![](/image/sex19.webp)
+![](/image/sex20.webp)
+![](/image/sex21.webp)
+:::
+
+What the show did with Samantha that felt genuinely subversive was this: she didn't perform sexuality for men's benefit. She exercised it for her own. She didn't want to be chosen. She chose. Every time.
+
+The season six breast cancer storyline is where it all landed. When chemo took her hair and she had to remove the wig in front of her partner, Samantha stood there, no constructed image, no performance, no product, and she was still entirely herself. The glamour turned out to be the least interesting thing about her. The life force underneath it was the real story.
+
+:::image-row
+![](/image/sex22.webp)
+![](/image/sex24.webp)
+![](/image/sex23.webp)
+:::
+
+## Hair as a Language You're Already Speaking
+
+Four women, four hairstyles, four ways of being a person in the world.
+
+What *Sex and the City* understood, and what every good stylist already knows, is that hair isn't decoration. It's communication. Before anyone reads your bio or hears your voice or learns your name, they've already received a signal. The question is whether the signal you're sending matches the one you meant to send.
+
+In real life, most of us are somewhere in the middle. Not fully Samantha, not fully Charlotte, maybe a bit Carrie on a good day, a bit Miranda on a deadline. But we're all doing the same thing: constantly editing our hair to match who we're becoming. Sometimes the cut leads the change. Sometimes it just confirms what was already happening.
+
+There's a reason finding a stylist who actually *gets you* feels so rare and so good. Because a great haircut isn't just technique. It's someone seeing you clearly enough to make you look like yourself, maybe even a version of yourself you hadn't quite met yet.
+
+What's your current hair doing for you? And has there been a cut, or a moment of not cutting, that felt like a turning point?`,metaTitle:`What Your Hair Is Already Saying About You, From Nicole Kidman to Sex and the City`,metaDescription:`Carrie's curls, Miranda's sharp bob, Charlotte's perfect blowout, Samantha's engineered glamour: how the four women of Sex and the City turned hairstyles into character studies, and what that means for the rest of us.`},{id:32,slug:`NOVOGRO™-vs-minoxidil`,tag:`Hair Thinning`,title:`Minoxidil vs. Proprietary Molecules: Is NOVOGRO™ the Industry's Best Kept Secret?`,excerpt:`For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.`,author:`Lauren Chavez`,date:`Jun 13, 2026`,readTime:`10 min`,image:`/image/mino-cover.avif`,category:`Hair Thinning`,section:`Hair Care`,body:`Hair serums are everywhere. From pharmacy shelves to premium cosmetic lines, the number of hair and scalp serums have expanded rapidly as consumers look for convenient, topical solutions to thinning hair. As stylists, we have a responsibility to our clients to provide them with solutions that actually live up to their promises. For decades, minoxidil serums have been the go-to active: widely recognized, FDA-approved, with deep roots in many medical spas and salons.
+
+But the category is changing quickly. New products keep appearing, and most do not deserve a second look. Recently, though, one name started moving through our stylist network: [NOVOGRO™ (NV)](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1). It came through a research paper being shared in professional circles, and the science goes deep. The short version: NOVOGRO™ is a proprietary class of molecules designed around follicle biology, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a more biology-first approach to female hair thinning.
+
+## Minoxidil: The Benchmark That Defined the Category
+
+It may be a surprise to you, but Minoxidil wasn't originally designed for hair at all. It began as a treatment for ==hypertension==, before its hair growth effects were accidentally discovered and it was repurposed into one of the most widely used topical solutions today.
+
+It works, but for some clients, it comes with real trade-offs. Our clients often report itching, irritation, and devastatingly, initial shedding.
+
+:::quote-carousel
+The growth was not the only thing I noticed. I also had to deal with itching and irritation, which made the routine feel like part-time maintenance work.
+— Salon client, 32, using topical minoxidil for 6 months
+---
+I'm also not a great responder to the medication so far. I basically stagnated for about a year even though my shedding definitely ramped up.
+— Hair-loss client, 29, using minoxidil for 1.5 years
+---
+Get ready for the under eyes that look like you haven't slept in a week.
+— New York salon client, 34, using oral minoxidil for 8 months
+---
+Minoxidil is lethally toxic to cats and dogs. I had one of my cats die suddenly of acute liver failure and couldn't figure out what happened until months later. Be VERY careful with storage and handling in pet households!
+— Pet owner and hair-loss client, 34, using oral minoxidil for 9 months
+:::
+
+And sometimes, the trade-off can become part of the hairstyle.
+
+:::case-study-separator:::
+
+After four years, one of my clients decided to stop using minoxidil. In January 2021, she started using topical 5% liquid minoxidil and in June 2023, she reduced the minoxidil strength to 2% because of side effects.
+
+:::split-table
+left-heading: What improved
+- Hair count increased
+- Some strands became thicker in diameter
+
+right-heading: What became difficult
+- Unwanted facial hair growth and facial swelling (improved after switching from 5% to 2%)
+- Texture change in applied area; the hair became much curlier, hairline changed into tighter ringlets
+- Constant frizz; some hairs only grew a few inches before shedding, while others grew longer. Made styling difficult.
+- Had to shampoo every morning (liquid formula was greasy). Made the curls even puffier.
+:::
+
+> The curliness is the last straw and why I'm pulling the plug. It became curly slowly over the years and I only recently realized what was happening ... It's ridiculous looking and absolutely impossible to style. I literally haven't had a good hair day in years.
+> — Female hair-loss client, diagnosed with pattern hair loss, using topical minoxidil for 4 years
+
+
+Clients do not just ask what grows hair. They ask what will actually make their hair easier to live with.
+
+Minoxidil results typically depend on consistent, long-term use, often across six months or more. Even then, outcomes vary. A lot.
+
+A key limitation lies in its design. Minoxidil primarily operates through a single biological pathway (or so scientists think), which can leave other causes of hair thinning unaddressed.
+
+
+## NOVOGRO™: A Multi-Pathway Approach to Hair Support
+
+NOVOGRO™ represents a shift in how hair serums are developed and positioned. Rather than relying on a single mechanism, it is built around a multi-target strategy to address several root causes of hair thinning at once.
+
+Our team was able to get in touch with the researchers behind NOVOGRO™ to better understand how they went about their discovery. What stood out to us was not just that they found new ingredients, it was how intentionally they searched for them.
+
+1. First, they used AI-enabled screening to search through a massive ingredient universe and hone in on molecules that can actually support the hair follicle.
+2. Second, they tested candidates in models that behave more like real hair follicles.
+3. Third, they evaluated safety, specificity, and performance before treating the ingredients as serious candidates.
+
+At a functional level, NOVOGRO™ works across three follicle-relevant pathways:
+
+:::cascade-list
+- Supports oxygen-response, metabolic signaling, VEGF-related activity, and the local environment around the follicle. This partly associates with minoxidil’s blood-flow logic, but goes broader.
+- Helps reduce DHT production, the major driver of hair follicle miniaturization. 
+- Works with the other pathways to support the health and vitality of hair follicle cells responsible for growing new hair, especially the cellular environment that helps determine whether hair grows stronger, weaker, or not at all.
+:::
+
+No client needs to remind us how complex hair thinning can be, and how it can vary so significantly between one client and another. Across dozens of experts we spoke to, they agreed that this is the most comprehensive approach they've ever seen across dozens of other brands (e.g., Vegamour, KilgourMD, Nutrafol, etc.). This approach is one that actually aligns the most closely with the complex biology of hair growth, according to our medical experts.
+
+> I am never looking at just one thing when a client sits in my chair with thinning hair. I am looking at density, scalp condition, breakage, miniaturization, styling habits, stress, and how the hair is behaving week to week. A multi-pathway approach makes sense because thinning rarely shows up as a single-pathway problem.
+> — Amy Wisney, Senior salon educator and trichology-trained stylist
+
+## What Sets NOVOGRO™ Apart
+
+The distinction between Minoxidil and NOVOGRO™ reflects a broader shift in the category.
+
+| Category | Minoxidil | NOVOGRO™ |
+|---|---|---|
+| Where it came from | A repurposed medical active originally developed as a blood pressure medication | A newer ingredient system discovered and optimized around real hair follicle biology |
+| Main approach | A focused hair-growth active with a long history of use | A multi-pathway system designed to support several causes of thinning at once |
+| What it supports | Hair regrowth for some users with consistent long-term use | Follicle-cell vitality, DHT-related miniaturization support, and oxygen/nutrient-related follicle signaling |
+| Client experience | Can be effective, but some clients struggle with irritation, shedding, greasiness, unwanted hair growth, or styling disruption | Designed as a lightweight, water-based serum system that may fit more easily into a daily routine |
+| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 150+ participants comparing NOVOGRO™ against minoxidil is also ongoing](https://getreyou.com/). |
+| Stylist read | Still the category benchmark | One of the more interesting new approaches because it treats thinning like a multi-cause problem |
+
+But a product story only matters if the results show up. In early lab testing, NOVOGRO™ (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO™’s signal here points to a broader follicle-support pathway.
+
+:::bar-chart
+title: HIF-1α activation % change vs. untreated control
+- NV: 52
+- Minoxidil: 7
+footnote: NV showed about ~~7.9x~~ higher HIF-1α activation than the minoxidil-based formula.
+:::
+
+But NOVOGRO™ is designed to go further. It also supports dermal papilla cells, which help drive hair growth, and targets 5α-reductase, the DHT-related enzyme involved in follicle miniaturization.
+
+The researchers behind NOVOGRO™ also built 3D mini hair follicles in the lab to see whether a treatment is actually encouraging follicle activity. These are not the same as real hair growing from a scalp, but they are one of the more realistic lab tools for studying early follicle behavior because the cells can interact and form follicle-like structures instead of sitting flat in a dish.
+
+In the comparison, they tested three groups: vehicle, meaning the base formula without the active growth ingredients; a minoxidil-based formula; and NOVOGRO™. The minoxidil-treated mini follicle showed outgrowth close to the vehicle group, while the NOVOGRO™-treated mini follicle showed the clearest elongation: ~~40.9%~~ more follicle-like outgrowth than the 2% minoxidil formula, suggesting a more active response.
+
+![Preclinical hair follicloid imaging gives a visual snapshot of early growth activity, with the NOVOGRO™-treated mini follicle extending farther in the lab model (D4=Day 4, D6=Day 6; D10=Day 10).|full](/image/mino-follicle.png)
+
+For clients, the data takeaway is simple: this early data suggests NOVOGRO™ may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
+
+Of course, what matters most is what happens on actual scalps. NOVOGRO™ is currently being evaluated in == a double-blind, head-to-head study against minoxidil with 150+ participants==, and that is the data I am waiting for. As soon as we know more, I will share it.
+
+## Tying it Together
+
+Minoxidil helped define the modern hair serum category and will remain the gold standard. But hair science has moved forward, and the industry is overdue for ingredients developed specifically around the complexity of thinning hair.
+
+NOVOGRO™ is early, but it has already started moving through the hair professionals we pay attention to based on its strong scientific data. Is it the industry’s best kept secret? Too soon to call, but it is one of the few new names we are actually watching. We are waiting to see how RE:YOU brings the technology into a real serum, and we will share updates as more product details and clinical data become available.
+
+The new generation of hair serums will feature ingredients developed specifically for hair thinning. They won't be designed around a single pathway, but multiple pathways to tackle hair thinning in a comprehensive, systematic way.
+
+:::references
+- Rossi A, Cantisani C, Melis L, Iorio A, Scali E, Calvieri S. Minoxidil use in dermatology, side effects and recent patents. Recent Pat Inflamm Allergy Drug Discov. 2012;6(2):130-136.
+- DailyMed. Minoxidil Topical Aerosol 5% Foam, for women: Drug facts and consumer information. U.S. National Library of Medicine. 
+- DailyMed. Minoxidil Topical Solution 2%: Drug facts and consumer information. U.S. National Library of Medicine. 
+- Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
+:::`,metaTitle:`Minoxidil vs. NOVOGRO™: Is This the Industry's Best Kept Secret?`,metaDescription:`For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO™ is making the rounds in salon networks — here's what the science says.`},{id:34,slug:`wet-look-hair-chic-not-greasy`,tag:`Cut & Style`,title:`Wet-Look Hair Can Be Chic. It Just Can't Look Greasy.`,excerpt:`A stylist's guide to the difference between editorial shine and oily hair, and how to place product so the finish looks polished, not unwashed.`,author:`Ji-Woo Park`,date:`Jun 15, 2026`,readTime:`9 min`,image:`/image/wet-hair.jpg`,category:`Cut & Style`,section:`Trends`,body:`Wet-look hair has lived on runways and magazine covers for years.
+
+In editorials, it almost always works. The lighting is controlled. The makeup is intentional. The clothes are styled around it. The whole look says fashion.
+
+In real life, the same finish can go wrong very fast.
+
+Once wet-look hair leaves the runway, clients may read it differently. Instead of cool, it can look oily. Instead of effortless, it can look flat. Instead of styled, it can look like the client skipped wash day.
+
+That does not mean the wet look is off-limits. It just needs control.
+
+For salon clients, the goal should be soft shine, clean separation, and a slightly damp-looking finish. The hair should look polished, fresh, and intentional, never greasy.
+
+## Why Wet-Look Hair Goes Wrong
+
+Most wet-look mistakes come down to product placement.
+
+Too much product at the root can make the hair look oily. Too much shine through the entire head can make the style feel heavy. On fine hair, the finish can collapse the shape and make the scalp more visible.
+
+For stylists, the conversation should start with this:
+
+Wet-look styling is about placing shine where it helps the haircut. It should not coat the whole head by default.
+
+| What Goes Wrong | What Clients See |
+|---|---|
+| Too much product at the root | Oily or dirty-looking hair |
+| Hair is slicked too flat | Less volume, more visible scalp |
+| Long hair has too much wet surface area | Heavy, weighed-down finish |
+| Wet bangs separate into strips | Stringy, greasy-looking fringe |
+| Skin is also very dewy | Overall look becomes too shiny |
+| Fine hair loses lift | Hair looks thinner than it is |
+
+The best wet finish still has air, movement, and shape.
+
+:::image-row
+![](/image/wet-look-1.webp)
+![](/image/wet-look-2.webp)
+![](/image/wet-look-3.jpg)
+:::
+
+## Rule 1: Keep the Wet Area Smaller
+
+Wet-look hair usually works better when the shiny area is controlled.
+
+That is why short hair, bobs, lobs, and collarbone-length cuts tend to handle this trend better than very long hair. Shorter shapes already have movement and lightness. A little shine can make them look sharper.
+
+On very long hair, a full wet finish can make the style feel dense, heavy, and harder to wear.
+
+**Stylist note:**
+For long-haired clients, keep the wet texture on the ends, face frame, or selected surface pieces. Avoid coating the full head from root to tip.
+
+:::image-row
+![](/image/wet1.webp)
+![](/image/wet2.webp)
+![Megan Fox's wet-hair look might be a bit too much for the average person.](/image/wet3.webp)
+:::
+
+## Rule 2: Go Slightly Wet, Not Soaked
+
+The soaked red-carpet version belongs on editorials, campaigns, and stage looks.
+
+For clients, a micro-wet finish is much easier to wear.
+
+A little shine can smooth frizz, define layers, and make the haircut look more styled. Too much shine makes the hair look heavy and unwashed.
+
+**What to tell clients:**
+"You want a few glossy, polished pieces. You do not need the whole head to look wet."
+
+This small language shift helps clients understand the difference between fashion shine and greasy hair.
+
+:::image-row
+![](/image/wet4.png)
+![](/image/wet5.png)
+![](/image/wet6.png)
+:::
+
+## Rule 3: Be Careful With Bangs
+
+Wet bangs are one of the easiest places to lose control.
+
+Once the fringe separates into thin strips, the whole look can turn oily. This is especially risky on fine hair, sparse bangs, oily skin, or clients with a cowlick at the front hairline.
+
+If the client wants a wet finish but has bangs, use one of these safer options:
+
+| Safer Option | Best For |
+|---|---|
+| Keep the bangs mostly dry and add shine only to the ends | Airy bangs, soft fringe, fine hair |
+| Sweep the bangs back completely | Slick bobs, short cuts, stronger styling looks |
+| Add product only to side pieces | Face-framing layers, curtain bangs |
+
+**Stylist note:**
+When in doubt, leave the fringe softer and cleaner. A dry fringe with a polished bob often looks more expensive than wet bangs that separate.
+
+:::image-row
+![](/image/wet7.webp)
+![](/image/wet8.webp)
+![Mitsuki Kimura's wet hair with bangs looks less sleek and polished.](/image/wet9.webp)
+:::
+
+## Rule 4: Balance the Makeup
+
+Wet-look hair already reflects light.
+
+If the skin is also very glossy, highlighted, or dewy, the whole look can become too shiny under real lighting. Even a beautiful client can look greasy if the hair, forehead, cheeks, and lips are all competing for shine.
+
+**Best pairing:**
+Wet-look hair with satin skin or soft matte skin.
+
+**Risky pairing:**
+Wet-look hair with heavy highlighter, glossy forehead, and shiny cheeks.
+
+**What to tell clients:**
+"If the hair has shine, keep the skin cleaner."
+
+This is especially important for event styling, bridal trials, photo shoots, and red-carpet-inspired looks.
+
+## Rule 5: Fine Hair Needs Lift at the Root
+
+Wet-look styling naturally makes hair sit closer to the head.
+
+For clients with fine hair, low density, or a wider part, product at the root can make the hair look thinner. The scalp becomes more visible, and the cut loses its shape.
+
+These clients can still wear the trend, but the wet finish needs to stay away from the root area.
+
+**Best placement for fine hair:**
+Mid-lengths, ends, face frame, and selected outer pieces.
+
+**Avoid:**
+Root-heavy product, slick center parts, and wet fringe.
+
+A lifted crown, airy front section, or soft side part can completely change the result.
+
+:::image-row
+![](/image/wet13.webp)
+![](/image/wet14.webp)
+![For fine, soft hair like Victoria Song’s, the wet-hair look can make the hair appear much thinner, so it’s important to keep volume at the roots.](/image/wet15.webp)
+:::
+
+## What Stylists Should Tell Clients
+
+Wet-look hair can be chic in real life, but the salon version needs to be much softer than the runway version.
+
+The most wearable finish has:
+
+| Detail | Why It Matters |
+|---|---|
+| Clean roots | Keeps the hair from looking oily |
+| Light shine | Adds polish without heaviness |
+| Lift at the crown | Protects volume |
+| Defined ends | Makes the cut look intentional |
+| Controlled frizz | Keeps the finish clean |
+| Minimal product on bangs | Prevents stringy separation |
+
+The line is thin. A little shine can make a haircut look modern and expensive. Too much product can make the same hair look unwashed.
+
+## Stylist Takeaway
+
+Wet-look hair works best when shine is used as a detail.
+
+Keep the roots clean. Protect the volume. Use less product than you think. Place the gloss only where it improves the haircut.
+
+For everyday clients, the best version is simple:
+
+Wet enough to look styled. Clean enough to look fresh.`,metaTitle:`Wet-Look Hair Can Be Chic. It Just Can't Look Greasy. | Stylist Guide`,metaDescription:`A stylist's guide to the difference between editorial shine and oily hair — product placement, bang management, fine hair tips, and what to tell clients.`},{id:35,slug:`finasteride-vs-novogro-women-hair-loss`,tag:`Hair Thinning`,title:`Finasteride vs. NOVOGRO™: Why I'm Tired of Watching Women Borrow Men's Hair-Loss Drugs`,excerpt:`Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution like NOVOGRO™, not another "just try this."`,author:`Lauren Chavez`,date:`Jun 22, 2026`,readTime:`12 min`,image:`/image/finasteride-novogro-cover.jpg`,category:`Hair Thinning`,section:`Hair Care`,body:`I have been a stylist long enough to know when a client is pretending to be fine.
+
+A longtime customer of mine came in a few months ago, sat in my chair, and before I even touched her hair, I knew something was off. She had always been bright and talkative. That day, she was quiet. Eventually, she told me she had started taking finasteride for hair loss. Her shedding might have been improving, she said, but then came the part I hear too often: "I don't feel like myself anymore."
+
+She described depression, headaches, and a drop in libido. She was not being dramatic. She was scared, and honestly, I was angry for her. Because she was not the problem. The product category was.
+
+As stylists, we see the emotional side of hair thinning long before most people talk about it openly. So when a product adds more stress to an already sensitive situation, I have very little patience for it. 
+
+Women do not need more guilt, more guessing, or more side effects brushed off as the cost of caring about their hair. They need options that were actually designed with them in mind.
+
+## Finasteride Was Not Built for Women
+
+Finasteride works by turning down a hormone signal called ==DHT==.
+
+Here is the simplest way I explain it to clients: there is an enzyme in the body that acts like a little conversion station. It helps turn testosterone into DHT. In people whose follicles are sensitive to DHT, that signal can tell the follicle to slowly shrink, produce finer strands, and spend less time in the active growth phase. Finasteride blocks that conversion station, so less DHT gets made.
+
+But we need to know that finasteride has a serious medical history. This is not some cute little scalp booster you casually add between shampoo and conditioner.
+
+The 5 mg version, Proscar, was approved in the U.S. in 1992 for benign prostatic hyperplasia, the medical term for an enlarged prostate. The 1 mg version, Propecia, was approved later for male pattern hair loss.
+
+![Finasteride 1 mg film-coated tablet box printed with "For use by men only."|full](/image/finasteride-box-men-only.png)
+
+The FDA label is very clear: Propecia is indicated for male pattern hair loss in men only, and it is not indicated for use in women.
+
+Still, some women take finasteride off-label, often because the emotional burden of hair loss is real. I understand why. When a woman starts seeing her part widen, her ponytail shrink, or her scalp show under bright light, it can feel like losing control over her identity.
+
+> "Hair is never 'just hair' to the person losing it."
+> — Salon client, 52, using off-label finasteride for 2 months
+
+So when someone offers an off-label prescription that might help, many women are willing to try. Not because they are careless, but because fear becomes very easy to market when the product aisle is thin, confusing, and full of treatments that were never built around women's real experience.
+
+We hear the same questions all the time when finasteride comes up:
+
+:::quote-carousel
+Can I use the topical and the oral together?
+---
+What if I just try a low dose?
+---
+What if the side effects don't happen to me?
+---
+What if this is the only thing that works?
+:::
+
+But willingness does not erase risk. And a disclaimer like "use with proper counseling and medical supervision" does not magically make a medication casual or safe for everyone.
+
+![Propecia (finasteride) 1 mg label showing the warning that women who are or may become pregnant should not handle crushed or broken tablets.|full](/image/propecia-pregnancy-warning.png)
+
+The FDA label warns that women who are pregnant or may become pregnant should not handle crushed or broken tablets because of the potential risk to a male fetus.
+
+Finasteride is contraindicated in pregnancy because it can interfere with male fetal development. That is not a small footnote. That is a major biological warning.
+
+And then there are the side effects, especially in women, where the data is thinner and the conversation is often way too casual. In published studies and reviews on women using finasteride, reported side effects have included headache, menstrual irregularities, dizziness, increased body hair growth, dry skin, mild acne, breast swelling or tenderness, gastrointestinal discomfort, and decreased libido. More recently, regulators from different regions added ==depression and suicidal ideation== as side effects of finasteride tablets, although the frequency is unknown.
+
+So yes, finasteride may help some people. But let's not pretend it belongs in the same conversation as a leave-in conditioner or a "just try this" serum. And it should not be treated like another product women are expected to tolerate just because the industry has not given them enough better options.
+
+## NOVOGRO™ Feels Like a Different Direction
+
+Recently, [NOVOGRO™](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) has been coming up in stylist circles. It is not one ingredient but a set of active molecules, each targeting a different part of the hair-growth environment, and it is the technology behind [RE:YOU](https://getreyou.com/), an emerging brand taking a biology-first approach to female hair thinning. In the finasteride conversation, the molecule that matters is NV-1065.
+
+NV-1065 is NOVOGRO™'s answer to DHT. Like finasteride, its job is to lower DHT, the hormone signal that pushes follicles to shrink. To see how well it actually does that, the NOVOGRO™ team tested it head-to-head against dutasteride, the stronger, more aggressive cousin of finasteride.
+
+They compared the two across a full range of doses. NV-1065 kept pace with dutasteride almost the whole way up the curve, and at the highest doses it matched and even edged ahead. On the enzyme that builds DHT, ==NV-1065 is as effective as dutasteride==.
+
+:::line-chart
+title: NV-1065 vs. dutasteride: DHT-Building Enzyme Blocked by dose
+x-label: Concentration (µM)
+y-label: % DHT-Building Enzyme Blocked
+series: NV-1065
+series: Dutasteride
+- 9.375: 41.7, 50.2
+- 18.75: 41.0, 58.3
+- 37.5: 56.6, 73.0
+- 75: 64.6, 77.3
+- 150: 79.3, 77.8
+- 300: 96.6, 88.4
+:::
+
+Which is exactly where the next comparison comes in. Once you line the finished NOVOGRO™ serum up against the cosmetic serums clients actually buy off the shelf, the gap is hard to unsee. The serum sits with the dutasteride; the others sit near baseline.
+
+:::bar-chart
+title: DHT-building enzyme blocked vs. control (%)
+- NOVOGRO™ serum: 47
+- Dutasteride: 51
+- Minoxidil: 3
+- KilgourMD: 1
+- Vegamour: 0
+- Nutrafol: 2
+- Ordinary: 3
+- Kerastase: 4
+:::
+
+The second reason matters even more: NV-1065 is non-steroidal. The researchers tested this using steroid-sensitive cells, a model designed to flag steroid-like activity. Testosterone, DHT, and dutasteride showed strong steroidal responses, while NV-1065 did not trigger the same steroidal signal.
+
+:::bar-chart
+title: Steroidal activity signal, average (%)
+- NV-1065: 4
+- Dutasteride: 18
+- Testosterone: 35
+footnote: Average of three replicates. Lower means a cleaner, less steroidal signal: NV-1065 ~~3.6%~~ barely registers next to dutasteride ~~18.0%~~ and testosterone ~~35.2%~~.
+:::
+
+That is important because the goal is to reduce DHT-related follicle stress without unnecessarily disturbing other hormone-linked biological pathways. 
+
+The team also tested NV-1065 in a tiny lab-grown follicle model made from human skin and follicle cells. When testosterone or DHT was added, the mini follicle's growth slowed, almost like it was receiving a shrink signal. When NV-1065 was added, that growth recovered. In the [research data](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) shared, NV-1065 performed ==34.3% better== than dutasteride at helping the mini follicle push back against DHT-related stress.
+
+![Preclinical hair follicloid imaging at Day 4, Day 6, and Day 10 across vehicle, testosterone, DHT, and NV-1065, with a length-ratio plot showing NV-1065 outperforming the comparators.|full](/image/nv1065-follicloid.png)
+
+Human data is still needed, but this is a cleaner and more targeted direction than the older hormonal drug approach.
+
+## More Than DHT: Treating the Whole Follicle
+
+NOVOGRO™ does not stop at DHT. Based on what the team presented, it treats the follicle more like a full growing system. For healthy hair to appear on the scalp, three things need to work together: the follicle has to resist shrinkage signals, the cells that coordinate growth need to stay active, and the surrounding root environment needs to support that growth.
+
+| Follicle problem | Stylist translation | NOVOGRO™ angle |
+|---|---|---|
+| DHT pressure | The follicle is being pushed toward miniaturization | NV-1065 |
+| Weak dermal papilla cells | The cells that coordinate growth are losing strength | NV-623 + NV-624 |
+| Poor root environment | The surrounding support system is not strong enough | NV-273 |
+
+We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/NOVOGRO™-vs-minoxidil), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
+
+> "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
+> — Mara Ellis, Scalp-Care Educator & Master Stylist
+
+## The Texture Matters Too
+
+Here is something scientists sometimes overlook but stylists never do: if a product feels terrible, people stop using it.
+
+A greasy serum can ruin a blowout. A sticky formula can make fine hair look even thinner. A heavy oil can force extra wash days, irritate the scalp, or make someone quit by week two.
+
+![A comb dragging through wet, oily-looking dark hair, the strands clumped and flattened at the root.|full](/image/oily-serum-thin-hair.png)
+
+An oily formulation might make hair look thinner. When the roots collapse, the scalp shows more. That is the opposite of what a nervous client wants to see in the mirror. That is another reason NOVOGRO™ stood out.
+
+In the research, the lead molecules were formulated into a ==water-based formula==, and after 150 days under normal storage conditions, more than 90% of each compound remained. I still want to see the final consumer product format, but a lightweight, stable formula suitable for daily use is the difference between a product someone actually uses and one that sits in the cabinet.
+
+## My Stylist's Take
+
+Finasteride can be a serious medical option, but for women, it comes with a lot of baggage. NOVOGRO™ represents a different kind of DHT strategy, led by its NV-1065 molecule: non-steroidal, enzyme-targeted, and tested in hair-relevant lab models. And because NOVOGRO™ is built as a multi-molecule system rather than a single drug, it works on the broader follicle environment at the same time. It still needs human clinical proof, but as hair professionals, this is the kind of science we want to see more of.
+
+:::references
+- Review on finasteride and androgen-pathway therapy in female hair loss. PubMed Central (PMC5803857), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC5803857/
+- Review on finasteride use and reported adverse effects in women. PubMed Central (PMC10172713), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC10172713/
+- Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
+:::`,metaTitle:`Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,metaDescription:`A stylist on why finasteride was built for men, the side effects women face off-label, and how NOVOGRO™'s non-steroidal NV-1065 offers a cleaner DHT strategy.`},{id:36,slug:`french-bob-every-face-shape`,tag:`Cut & Style`,title:`Short Without the Hard Edges: The French Bob I Reach For`,excerpt:`Soft, lived-in layers, length that lands right at the jaw, and zero attitude. Here's how I cut and consult the French bob that flatters round, square, and diamond faces alike, and why it keeps walking out of my chair looking expensive.`,author:`Nora Bell`,date:`Jun 18, 2026`,readTime:`7 min`,image:`/image/bob-cover.jpg`,category:`Cut & Style`,section:`Trends`,body:`Every stylist knows this consult. A client sits down, says she wants to go short, and then immediately walks it back: "But I don't want to look harsh. Or older. Or like I'm trying too hard." What she's really telling you is that the last short cut she had was too sharp, too blunt, too much edge and not enough softness.
+
+That's the gap this cut fills. The soft-layered French bob, the one half the European editorial feeds have been running for two seasons now, splits the difference perfectly. It reads clean and intentional, but it moves. And here's the part I love behind the chair: it doesn't fight the face shape. Round, square, diamond, it doesn't matter. The shape wraps the face instead of exposing it, so even a bare-faced client heading to the office walks out looking pulled together and quietly expensive. It's the kind of cut that doesn't date.
+
+![The soft-layered French bob: jaw-length, lived-in, and built to wrap the face|full](/image/bob1.jpg)
+
+## Why I Keep Recommending It
+
+Three things make this cut earn its keep.
+
+1. **It does the face-flattering work for the client.** I build curved, face-framing layers down the sides and keep the perimeter sitting somewhere between the cheekbone and the jaw. That curve softly drapes over a high cheekbone or a wider jaw and creates that natural hair-hugging-the-face effect, which visually narrows the width of the face. You're not relying on the client to style around her features—the cut handles it.
+2. **It's genuinely low-maintenance, which clients only believe after they try it.** No perm required. A round brush with a slight inward turn at the finish is all the shape needs. Fine, flat hair gets its lift from those side layers propping up the crown instead of collapsing. Coarse, thick hair gets softened with careful thinning so it doesn't blow out wide. Either way, it's a five-minute styling job, and a client who can actually replicate the look at home is a client who rebooks.
+3. **It flexes across them whole life.** This is where color and parting come in. A blue-black or cool brown keeps it office-appropriate and quietly flatters warmer skin tones. A lighter chestnut brown gives it that softer, daytime-date energy. A center part reads cool and a little intellectual; a side part softens everything and takes years off. I've put this cut on clients from their twenties to their mid-forties and it lands every time.
+
+## Four Versions, Depending on Who's in the Chair
+
+I don't cut this one identical on everybody. There are really four variations, and matching the right one to the client is most of the job.
+
+:::card-grid
+title: Clean Center-Part
+tag: Sharpest · most office-forward
+The minimalist take, no extra face-framing pieces, just a precise line. Save it for clients with strong, balanced features and a good amount of height at the crown.
+---
+title: Curtain Bang
+tag: Most forgiving · youthful
+My go-to for anyone nervous about going short. Those soft, parted-down-the-middle fringe pieces quietly fill in hollow temples and shave width off a rounder face, exactly what I reach for with a first-time short-hair client.
+---
+title: Side-Part Layered
+tag: Best for fine, flat hair
+Built to add lift. The extra texture and the deeper part create movement, which fixes that pressed-to-the-scalp, flat-on-top problem fine hair tends to have.
+---
+title: Soft Inward-Curl
+tag: Effortless · no-makeup friendly
+Lets the ends collect a little weight and bend gently toward the face. It gives you that rounded, lived-in finish that looks great even on a bare-faced day.
+:::
+
+![Curved face-framing layers and a soft fringe doing the shaping work|full](/image/bob2.jpg)
+
+## How I Actually Cut It
+
+If you're cutting this, or coaching a newer stylist through it, here's the part that keeps it from going wrong.
+
+Set the length between the jaw and the middle of the collarbone, and leave weight in the ends. Resist the urge to over-thin. A French bob that's been point-cut into oblivion loses the soft body that makes it work.
+
+Build curved, soft layers around the cheeks and pair them with a light curtain or side fringe. No heavy, blunt, straight-across bangs—that's what tips it from "soft and modern" into "severe."
+
+And don't forget the back. A little stacked weight through the occipital gives you a full, rounded head shape. Skip it and you get that flat, heavy look at the back that ages the whole cut.
+
+![Stacked weight through the back for a full, rounded silhouette|full](/image/bob3.jpg)
+
+## The Takeaway
+
+The thing I want every client, and every stylist, to understand is that the "expensive" look in short hair was never about a harder, more dramatic line. It's about soft layers placed exactly where they need to be. That's the whole trick.
+
+So next time a client says she wants short but soft, you already know the cut. What's your go-to French bob variation chairside, and which face shapes are you matching it to? Drop it in the comments.`,metaTitle:`The French Bob That Flatters Every Face Shape: A Stylist's Cutting & Consult Guide`,metaDescription:`A salon pro breaks down the soft-layered French bob: why it flatters round, square, and diamond faces, the four variations to match to your client, and how to cut and consult it without it reading severe.`},{id:37,slug:`shedding-vs-breakage-chairside-test`,tag:`Hair Thinning`,title:`Shedding vs. Breakage: The 2-Minute Chairside Test Every Stylist Should Know`,excerpt:`A client says "I'm losing so much hair." Here's how to tell in two minutes whether it's shedding or breakage, and what to recommend for each.`,author:`Kasia Nowak`,date:`Jun 24, 2026`,readTime:`7 min`,image:`/image/stylist-notices-thinning.jpg`,category:`Hair Health`,section:`Hair Care`,body:`A client sits down, lifts a section at her crown, and says the line every one of us has heard: "I'm losing so much hair. Is something wrong with me?"
+
+Here's the thing most clients don't know, and honestly something a lot of newer stylists get tangled up on too: "losing hair" and "losing length" are two completely different problems. One is happening at the root. The other is happening somewhere along the strand. And if you treat breakage like shedding, or shedding like breakage, you'll send your client home with the wrong routine and watch them get frustrated when nothing changes.
+
+The good news is you can tell the difference at the chair in about two minutes, without any special tools. Here's exactly how I do it.
+
+## First, Get Clear on What You're Actually Looking At
+
+**Shedding** is hair leaving the scalp at the follicle. It's a whole-strand event, root and all. We shed 50 to 100 hairs a day normally, so "I see hair in my brush" is not, by itself, a problem. Shedding becomes worth a conversation when the volume jumps noticeably or stays elevated for weeks.
+
+**Breakage** is the strand snapping somewhere along its length. The follicle is fine and still anchored. The hair is just failing structurally, usually from mechanical stress, heat, chemical services, or a compromised cuticle.
+
+**Why it matters:** Shedding is a follicle/cycle conversation (and sometimes a medical one). Breakage is a hair-integrity conversation you can usually fix in the salon and at home. Same symptom (hair "everywhere"), totally different fix.
+
+![Comparison of shed hair with bulb vs broken hair without bulb|full](/image/shedding-breakage-comparison.jpg)
+
+## The 2-Minute Chairside Test
+
+### 1. Pick up a few of the lost hairs
+
+Ask the client to bring you what's in their brush, or pull a few strands you find on the cape. Look at the ends.
+
+- **A tiny white or translucent bulb on one end** = shed hair. That bulb is the root; the hair completed its cycle and released. This points to shedding.
+- **Both ends blunt or frayed, no bulb** = breakage. The strand snapped. This points to mechanical or chemical damage.
+
+### 2. Check the lengths
+
+Shed hairs are usually full-length and fairly uniform. A pile of short, uneven pieces, especially little broken bits around the hairline, part, or crown, is the signature of breakage.
+
+### 3. Do a gentle stretch test on a single strand
+
+Hold one hair between your fingers and stretch slightly. Healthy hair has give and bounces back. Hair that snaps immediately with almost no stretch is telling you the cuticle and cortex are compromised (breakage territory).
+
+### 4. Look at the scalp and the line
+
+Part the hair in a few places. Widening at the part or diffuse thinning across the top leans toward a shedding/density issue. Breakage tends to show up as flyaways, a "halo" of short regrowth-looking pieces, or spots that line up with tension (extensions, tight ponytails) or heat habits.
+
+**Two minutes, no magnification needed.** You'll be right the large majority of the time.
+
+![Stylist performing chairside hair assessment with client](/image/chairside-hair-test.avif)
+
+## What You Tell the Client (For Each Path)
+
+### If it reads like breakage
+
+This is your wheelhouse, and it's reassuring news for them. Walk through the likely culprits (over-processing, hot tools without protection, aggressive brushing, tight styles) and build a repair plan:
+
+- Bond-building treatments
+- Lower heat settings
+- A wide-tooth comb on wet hair
+- Looser styling
+
+They'll often see improvement within a few weeks, which builds enormous trust.
+
+### If it reads like shedding
+
+Set expectations honestly. Some shedding is cyclical and self-resolving (post-stress, postpartum, seasonal). Persistent or heavy shedding, a rapidly widening part, or any patchiness deserves a referral to a dermatologist or trichologist. Say so, kindly and clearly.
+
+For the cosmetic, maintenance side of a shedding phase, a consistent scalp-and-growth routine helps clients feel proactive while the cycle sorts itself out. This is where I'll talk through a daily growth serum like re:you as the "treat" step (not a cure, but a low-effort way to support the scalp environment and stay consistent during the regrowth phase). I frame it exactly that way with clients, because over-promising is how you lose them.
+
+**A quick note on scope:** We are not diagnosing medical hair loss at the chair. Our job is to tell cosmetic from structural, support what's in our lane, and refer out confidently when something looks medical. Clients respect that line. It's part of why they trust us.
+
+## Quick Reference: Shedding vs. Breakage
+
+| | Shedding | Breakage |
+|---|---|---|
+| **What you see** | Full-length hairs with white/translucent bulb at one end | Short, uneven pieces with blunt or frayed ends (no bulb) |
+| **Where it happens** | At the follicle/scalp | Along the hair shaft |
+| **Common causes** | Stress, postpartum, hormones, seasonal cycles, medical conditions | Heat damage, chemical over-processing, tight styles, aggressive brushing |
+| **What it feels like** | Hair feels normal to the touch but more comes out | Hair feels dry, brittle, snaps easily when stretched |
+| **Scalp appearance** | Widening part, diffuse thinning | Halo of short broken pieces, damage concentrated around tension points |
+| **Your lane** | Support + refer out when needed | Fix it: bond builders, heat control, gentler handling |
+| **Timeline** | May resolve on its own (weeks to months); medical intervention if persistent | Often improves within 2 to 4 weeks with proper care |
+
+## Keep This Where You Can Reach It
+
+Print the four-step test and tape it inside a station drawer for your newer team members. The strand-end check alone (bulb vs. blunt) resolves most of these conversations, and getting it right in front of the client is one of those small moments that turns a worried guest into a loyal one.
+
+## Chairside FAQ
+
+**How much daily shedding is normal?**
+Roughly 50 to 100 hairs a day. Volume that's clearly higher than the client's normal, sustained over weeks, is what's worth a closer look.
+
+**Can someone have both at once?**
+Absolutely, and it's common. A postpartum client with heat-damaged ends, for example. Address the breakage you can fix and set realistic expectations on the shedding side.
+
+**When should I refer out instead of recommending a routine?**
+Patchy or circular loss, a fast-widening part, scalp pain, redness or scaling, or shedding that doesn't settle. When in doubt, refer. It protects your client and your credibility.
+
+**Will a growth serum fix breakage?**
+No. Breakage is a strand-integrity issue (that's bond-builders, heat control, and gentler handling). Growth serums belong to the scalp/shedding conversation, not the breakage one.`,metaTitle:`Shedding vs. Breakage: The 2-Minute Chairside Test Every Stylist Should Know`,metaDescription:`A client says "I'm losing hair." Here's how to tell in two minutes whether it's shedding or breakage at the chair, and what to recommend for each path.`},{id:38,slug:`head-spa-salon-revenue-opportunity`,tag:`Business`,title:`The Head Spa Opportunity: Turning Viral Interest Into Real Salon Revenue`,excerpt:`Head spas are trending everywhere online. Here's how to turn that client curiosity into a profitable service menu addition, from lite builds to full spa setups.`,author:`Dana Reeves`,date:`Jun 24, 2026`,readTime:`10 min`,image:`/image/head-spa.jpg`,category:`Business`,section:`Hair Care`,body:`If you have been on social media in the past year, you have seen head spa content. The scalp massage videos, the satisfying extraction shots, the ASMR-style treatment reveals. Millions of views, comment sections full of "where can I get this done," and an entire aesthetic built around relaxation, luxury, and scalp health.
+
+The demand is real. The question is: how do you turn viral curiosity into actual revenue in your chair?
+
+I run a six-figure solo suite, and I added a head spa offering eight months ago. It now accounts for 18% of my service revenue and has a 72% rebook rate. It brings in new clients who have never been to a salon for anything other than a cut, and it turns existing color clients into regulars who come in between appointments just for the treatment.
+
+Here is what I have learned about building a head spa service that actually makes money.
+
+## What a Head Spa Actually Is
+
+A head spa is a scalp-focused treatment built around massage, cleansing, exfoliation, and hydration. The experience matters as much as the technique. Clients are paying for relaxation, care, and visible results (clean scalp, less buildup, healthier-looking hair).
+
+The treatment typically includes:
+
+- **Deep scalp cleansing** to remove buildup, oil, and dead skin
+- **Exfoliation or detox** using scrubs, brushes, or steam
+- **Scalp massage** for circulation and relaxation (this is the part that goes viral)
+- **Treatment masks or serums** tailored to scalp condition
+- **Finishing rinse and style**
+
+Total service time ranges from 45 minutes (lite) to 90 minutes (full spa experience). Pricing runs from $75 to $200+ depending on your market and what you include.
+
+![Head spa treatment setup with massage tools](/image/head-spa-setup.avif)
+
+## The Business Case: Why This Works
+
+Head spa services hit three revenue goals at once:
+
+### 1. New client acquisition
+
+These treatments bring in people who would not otherwise book with you. They are not looking for color or a major cut. They saw a video, got curious, and want to try it. Many become long-term clients once they experience your space and your work.
+
+### 2. Increased service frequency
+
+Your color client who comes every 10 weeks? She might add a head spa at week 5. Your cut-and-go client who stretches appointments to 8 weeks? He might book a standalone scalp treatment in between. You are adding visits without cannibalizing your core services.
+
+### 3. Retail attachment
+
+Head spa clients leave wanting to maintain the results. Scalp serums, exfoliating shampoos, massage tools, and treatment masks all become easy retail add-ons. My head spa clients have a 60% retail conversion rate, compared to 35% across my other services.
+
+## Build Options: Lite vs. Full
+
+You do not need to invest thousands upfront. Start small, test demand, and scale as the service proves itself.
+
+### Lite Build ($200 to $500 setup cost)
+
+This is where I started. You are adding the service with minimal equipment investment.
+
+**What you need:**
+- Silicone scalp massager or brush ($15 to $30)
+- Exfoliating scalp scrub ($20 to $40)
+- Treatment mask or serum ($30 to $50)
+- Warm towels (you already have these)
+- A relaxing playlist and dimmed lighting
+
+**Service structure:**
+- 45 to 60 minutes
+- Priced at $75 to $100
+- Basic scalp massage, cleanse, treatment, style
+
+This setup lets you test client interest without a major financial commitment. If it books consistently for three months, consider upgrading.
+
+### Mid-Tier Build ($800 to $1,500 setup cost)
+
+This adds specialized tools and a more polished experience.
+
+**What you add:**
+- Handheld scalp massager with heat or vibration ($80 to $150)
+- Steamer for deeper product penetration ($150 to $300)
+- Scalp camera or scope for before/after documentation ($100 to $400)
+- Upgraded product line with multiple treatment options
+
+**Service structure:**
+- 60 to 75 minutes
+- Priced at $120 to $150
+- Includes scalp analysis, customized treatment, extended massage
+
+The scalp camera is a game-changer for client buy-in. Showing before-and-after close-ups of their scalp makes the results tangible and drives retail and rebooking.
+
+### Full Build ($2,000 to $5,000+ setup cost)
+
+This is the premium experience, closest to what clients see in viral videos.
+
+**What you add:**
+- Professional-grade massage chair or shampoo bowl with built-in massage ($1,000 to $3,000)
+- High-end steamer with adjustable settings ($300 to $600)
+- Complete product suite (multiple scrubs, masks, serums, oils) ($300 to $500)
+- Aromatherapy diffuser and curated scent library ($50 to $100)
+- Noise-canceling headphones or guided meditation audio
+
+**Service structure:**
+- 75 to 90 minutes
+- Priced at $150 to $200+
+- Full sensory experience with customized treatment protocols
+
+This level works best if you have consistent demand, a client base willing to pay premium prices, or you are positioning your salon as a wellness destination.
+
+## Pricing Strategy That Actually Works
+
+Your pricing should reflect three things: your market, your experience level, and what you include. Get this wrong and you either price yourself out of the market or work hard for margins that don't make sense.
+
+**Start by anchoring to your local market.** Look at what spas, nail salons, and massage studios charge in your area. Head spa pricing tends to land between a luxury manicure and a one-hour massage. If massages in your market run $90 to $120, your signature head spa should sit in that range or just above, because the results are visible and the retail follow-through makes the experience feel like more than a massage.
+
+**Your experience level matters too.** If you are adding head spa to your menu for the first time, start soft. You are learning the service flow, building your confidence, and collecting testimonials. A lower introductory price during the first few months lets you iterate without the pressure of justifying a premium rate before you have earned it.
+
+**Introductory pricing (first 3 months)**
+
+Price 10% to 15% below your target rate while you build demand and gather reviews. A $90 to $95 introductory rate on your signature service can move to $110 to $120 once you have strong word-of-mouth, consistent bookings, and before-and-after content that proves your results. Communicate the price increase in advance ("launching at introductory pricing through July") so clients feel like they caught something, not that they were undercharged.
+
+Do not stay at introductory pricing longer than 3 months. Underpricing long-term trains clients to expect low rates and makes it harder to raise prices without pushback.
+
+**Build a tiered menu**
+
+Offer at least two options. Clients want to choose based on their budget and how much time they have. A single price point leaves money on the table from clients who would happily pay more for a longer experience.
+
+| Service Level | Time | Price Range | What's Included |
+|---|---|---|---|
+| **Express Scalp Treatment** | 30-45 min | $65-$85 | Scalp cleanse, focused massage, treatment mask, quick blowout |
+| **Signature Head Spa** | 60-75 min | $110-$140 | Scalp analysis, exfoliation, extended massage, customized mask, style |
+| **Luxury Head Spa Experience** | 90 min | $160-$200 | Full sensory experience with aromatherapy, hot towel compress, premium product protocol, extended massage, style |
+
+Price the top tier at roughly 2x your entry-level option. That gap gives clients a clear sense of value progression and makes the middle tier feel like a smart choice, which is often your highest-volume seller.
+
+**Add-ons are easy upsells** once clients are already booked. Common options include a hot stone scalp massage ($20 to $30), a CBD or nourishing oil upgrade ($15 to $25), or a take-home mini treatment kit ($25 to $40). Introduce one or two add-ons at booking or during the consultation, not mid-service.
+
+**Package pricing and pre-sells**
+
+Pre-sold packages drive rebooking, stabilize your cash flow, and give clients a reason to commit to the scalp health journey rather than treating it as a one-time thing.
+
+A 3-session package priced at 10% off and a 6-session package at 15% off is a simple starting point. The math works in your favor: you collect cash upfront, fill future appointments, and dramatically increase the likelihood of retention. Clients who buy a package almost always see results because they complete the treatment series.
+
+Example package pricing based on a $120 Signature Head Spa:
+
+- 3-session package: $324 (saves $36, 10% off)
+- 6-session package: $612 (saves $108, 15% off)
+
+You can also bundle a package with a retail starter kit. Offer the 3-session package plus a home scalp maintenance kit (serum, exfoliating shampoo, massager tool) at a combined price that saves them $20 to $30 off retail. The kit reinforces results between visits and pre-empts the "what should I use at home" conversation.
+
+Limit packages to your top two service tiers. There is no reason to discount your express service, and a package should feel like an investment, not a coupon.
+
+## Retail Tie-In: Where the Real Margin Lives
+
+Head spa services are profitable, but the real money is in retail attachment. Clients leave relaxed, their scalp feels clean and healthy, and they want to keep that feeling going.
+
+### High-conversion retail items:
+
+- **Scalp serums** (daily maintenance, $30 to $60)
+- **Exfoliating shampoo** (weekly use, $25 to $45)
+- **Scalp massagers** (at-home tool, $15 to $35)
+- **Treatment masks** (weekly or bi-weekly, $30 to $50)
+
+Frame it as a home care routine, not a product pitch. I say: "The scalp treatment we did today works best when supported at home. Here is what I would use between visits." My conversion rate on that exact line is over 60%.
+
+### Sample retail menu:
+
+- Scalp serum: $45 (cost: $18, margin: 60%)
+- Exfoliating shampoo: $32 (cost: $13, margin: 59%)
+- Handheld massager: $22 (cost: $9, margin: 59%)
+
+If 60% of your head spa clients buy one product at an average of $35, and you are doing 15 head spa services per month, that is $315 in retail revenue with roughly $190 in profit. Over 12 months, that is $2,280 in additional profit from retail alone.
+
+## Equipment Breakdown: What to Buy First
+
+Start with the essentials. Add specialized equipment only after you have consistent bookings.
+
+### Phase 1: Essentials (under $300)
+
+1. **Silicone scalp brush** ($15 to $25) – for manual massage and exfoliation
+2. **Scalp scrub or detox treatment** ($30 to $50) – removes buildup
+3. **Hydrating or soothing scalp mask** ($30 to $50) – treatment step
+4. **Scalp oil or serum** ($25 to $40) – finishing product
+5. **Warm towel warmer** (if you don't already have one, $80 to $120)
+
+### Phase 2: Mid-Tier Upgrades ($500 to $1,200)
+
+1. **Handheld electric scalp massager** ($80 to $150) – adds vibration or heat
+2. **Facial steamer** ($150 to $300) – improves product penetration
+3. **Scalp camera** ($100 to $400) – shows before/after, builds trust and retail sales
+
+### Phase 3: Premium Add-Ons ($1,000+)
+
+1. **Massage chair or upgraded shampoo bowl** ($1,000 to $3,000)
+2. **Professional-grade steamer** ($300 to $600)
+3. **Aromatherapy system** ($50 to $150)
+
+Do not buy everything at once. Test with Phase 1, track your bookings and revenue, then upgrade when demand justifies it.
+
+Essential head spa equipment laid out on salon counter](/image/head-spa-equipment.jpg)
+
+## Marketing: How to Fill Your Books
+
+Head spa services market themselves if you do two things right: post the experience and make booking easy.
+
+### What to post:
+
+- **Before-and-after scalp shots** (scalp camera footage is gold for this)
+- **ASMR-style massage clips** (no sound, just visuals and ambient music)
+- **Client testimonials** focused on relaxation and results
+- **Behind-the-scenes setup** (products, tools, the experience you are creating)
+
+Post these as Reels, TikToks, and Stories. Head spa content performs exceptionally well because it is visually satisfying and taps into the wellness trend.
+
+### Booking tips:
+
+- Add the service to your online booking system immediately
+- Offer a "first-time head spa" discount to lower the barrier
+- Create a package deal (e.g., "Try it twice, save 15%")
+- Cross-promote to existing clients via email or text
+
+One stylist I coach added a single Instagram Reel of her doing a scalp massage. It got 47,000 views and booked her head spa menu solid for six weeks. This content works.
+
+## Common Mistakes to Avoid
+
+### 1. Overbuilding before testing demand
+
+Do not spend $3,000 on equipment before you know clients will book. Start lite, prove demand, then scale.
+
+### 2. Underpricing to compete
+
+If you price too low, clients will not value the service and your margins disappear. Price for the experience and your expertise, not just the time.
+
+### 3. Skipping the consultation
+
+Even a 2-minute scalp check builds trust and lets you customize the treatment. Clients pay more when they feel seen and cared for.
+
+### 4. Not tracking retail conversion
+
+If you are doing head spas but not selling retail, you are leaving 40% of potential revenue on the table. Track what you recommend and what converts.
+
+### 5. Treating it like a side service
+
+If you add head spa to your menu but never talk about it, never post it, and only offer it when someone asks, it will not grow. Promote it like you would any other signature service.
+
+## Real Numbers: What to Expect
+
+Here is what head spa revenue looked like for me in the first year:
+
+| Month | Services Booked | Service Revenue | Retail Revenue | Total Revenue |
+|---|---|---|---|---|
+| **Month 1-3** | 8/month avg | $880 | $210 | $1,090 |
+| **Month 4-6** | 15/month avg | $1,650 | $420 | $2,070 |
+| **Month 7-12** | 22/month avg | $2,420 | $630 | $3,050 |
+
+By month 12, my head spa offering was generating over $3,000 per month in combined service and retail revenue, with roughly $2,100 in profit after product and labor costs.
+
+That is an extra $25,000+ per year from a service I did not offer 12 months earlier.
+
+## Is It Right for Your Salon?
+
+Head spa services work best if you have:
+
+- **Clients interested in wellness and self-care** (not just cuts and color)
+- **Time in your schedule** to offer 60 to 90-minute services
+- **A private or semi-private space** where clients can relax
+- **Willingness to promote the service** through social media and in-person
+- **A retail mindset** (this service thrives when paired with product sales)
+
+If you are booked solid with color and cutting and have no capacity, head spa might not be the right move yet. But if you have gaps in your schedule, want to attract new clients, or are looking for a service that drives retail, this is one of the strongest opportunities in the industry right now.
+
+## Start Small, Scale Smart
+
+You do not need a complete spa setup to get started. You need a scalp brush, a treatment product, and the willingness to test the market.
+
+Start with the lite build. Book five clients. Track your revenue, your retail conversion, and your rebook rate. If the numbers work, upgrade your tools and raise your prices.
+
+Head spas are not a fad. Clients want them, they pay well, and they rebook at rates most other services cannot match. The only question is whether you are going to be the stylist in your area offering them, or the one watching your competitors fill their books with something you could have added months ago.`,metaTitle:`The Head Spa Opportunity: Turning Viral Interest Into Real Salon Revenue`,metaDescription:`Head spas are trending everywhere. Here's how to turn client curiosity into profitable revenue with lite builds, full spa setups, pricing strategy, and retail tie-ins that actually work.`}];function Pr(e){return Nr.find(t=>t.slug===e)}var Fr={Color:`COLOR`,"Cut & Style":`STYLE`,Texture:`TEXTURE`,Tips:`TIPS`,Products:`PRODUCTS`,Technique:`TECHNIQUE`,"Hair Thinning":`HAIR CARE`,"At-Home Tips":`AT HOME`,Business:`BUSINESS`},Ir=Nr.filter(e=>e.slug!==`copper-renaissance-2026`),Lr=[...Ir,...Ir];function Rr(){return(0,j.jsx)(`div`,{className:`bg-gold-500 text-black overflow-hidden h-8 flex items-center`,children:(0,j.jsx)(`div`,{className:`flex gap-12 whitespace-nowrap ticker-scroll`,style:{width:`max-content`},children:Lr.map((e,t)=>(0,j.jsxs)(`a`,{href:`/article/${e.slug}`,className:`text-[10px] font-semibold tracking-widest uppercase hover:underline`,children:[`✦ `,Fr[e.tag]??e.tag.toUpperCase(),`: `,e.title]},t))})})}var zr=`/image/mino-cover.avif`,Br=`/image/change-hair-1.webp`;function Vr(){return(0,j.jsxs)(`section`,{className:`bg-black`,children:[(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 pt-6 pb-2`,children:(0,j.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,j.jsx)(`div`,{className:`h-px bg-gold-500 w-8`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`June 2026 · Curated by Stylists`}),(0,j.jsx)(`div`,{className:`h-px bg-gold-500 flex-1`})]})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 pb-12`,children:(0,j.jsxs)(`div`,{className:`grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 mt-6`,children:[(0,j.jsx)(k,{to:`/article/NOVOGRO™-vs-minoxidil`,className:`lg:col-span-8 relative group cursor-pointer img-zoom block`,children:(0,j.jsxs)(`div`,{className:`relative overflow-hidden aspect-[16/10] lg:aspect-[4/3]`,children:[(0,j.jsx)(`img`,{src:zr,alt:`Editorial hair feature`,className:`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent`}),(0,j.jsx)(`div`,{className:`absolute top-4 left-4`,children:(0,j.jsx)(`span`,{className:`bg-gold-500 text-black text-[9px] font-bold tracking-[0.25em] uppercase px-3 py-1`,children:`Cover Story`})}),(0,j.jsxs)(`div`,{className:`absolute bottom-0 left-0 right-0 p-6 lg:p-10`,children:[(0,j.jsxs)(`h1`,{className:`text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3`,style:{fontFamily:`'Playfair Display', serif`},children:[`Is NOVOGRO™ the Industry's Best Kept Secret?`,(0,j.jsx)(`br`,{})]}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-sm md:text-base max-w-xl leading-relaxed mb-6 hidden md:block`,children:`For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.`}),(0,j.jsxs)(`div`,{className:`flex items-center gap-4`,children:[(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5 bg-gold-500 text-black text-[10px] font-bold tracking-widest uppercase px-3 py-2 group-hover:bg-gold-400 transition-colors`,children:[`Read Review `,(0,j.jsx)(ar,{size:10})]}),(0,j.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[10px] tracking-widest uppercase text-charcoal-400`,children:`Hair Care`}),(0,j.jsx)(`span`,{className:`text-charcoal-600`,children:`·`}),(0,j.jsx)(`span`,{className:`text-[10px] text-charcoal-400`,children:`Jun 13, 2026`})]})]})]})]})}),(0,j.jsxs)(`div`,{className:`lg:col-span-4 flex flex-col gap-0 border-l border-white/5`,children:[(0,j.jsx)(k,{to:`/article/what-your-hair-says-about-you-sex-and-the-city`,className:`group cursor-pointer img-zoom block`,children:(0,j.jsxs)(`div`,{className:`relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]`,children:[(0,j.jsx)(`img`,{src:Br,alt:`Secondary feature`,className:`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent`}),(0,j.jsxs)(`div`,{className:`absolute bottom-0 left-0 right-0 p-5`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase text-gold-500 font-medium`,children:`Cut & Style`}),(0,j.jsxs)(`h2`,{className:`text-white text-xl font-bold leading-snug mt-1`,style:{fontFamily:`'Playfair Display', serif`},children:[`Your Hair Is Already Talking. `,(0,j.jsx)(`em`,{children:`Are You Listening?`})]})]})]})}),(0,j.jsx)(`div`,{className:`flex flex-col divide-y divide-white/5 mt-4 lg:mt-0 lg:border-t border-white/5`,children:[{tag:`Cut & Style`,title:`10 Best Hair Looks at the 2026 Met Gala`,author:`Vera Moss`,readTime:`8 min`,slug:`2026-met-gala-best-hair-looks`},{tag:`Cut & Style`,title:`Mother's Day Special Edition: 6 Effortless Hairstyles Stylists Are Loving`,author:`Nora Bell`,readTime:`5 min`,slug:`mothers-day-effortless-hairstyles`},{tag:`Hair Care`,title:`Your Fine, Frizzy Hair Might Actually Be Wavy`,author:`Priya Nair`,readTime:`10 min`,slug:`fine-frizzy-wavy-hair`}].map(e=>(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`flex flex-col gap-1.5 p-4 lg:px-4 hover:bg-white/[0.03] transition-colors group`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase text-gold-500 font-medium`,children:e.tag}),(0,j.jsx)(`h3`,{className:`text-sm font-semibold text-charcoal-200 group-hover:text-white transition-colors leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsxs)(`div`,{className:`flex items-center gap-2 text-[10px] text-charcoal-500`,children:[(0,j.jsx)(`span`,{children:e.author}),(0,j.jsx)(`span`,{children:`·`}),(0,j.jsxs)(`span`,{children:[e.readTime,` read`]})]})]},e.title))})]})]})})]})}var Hr=[{id:35,tag:`Hair Thinning`,title:`Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,excerpt:`Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution like NOVOGRO™, not another "just try this."`,author:`Lauren Chavez`,date:`Jun 18, 2026`,readTime:`9 min`,image:`/image/finasteride-novogro-cover.jpg`,featured:!0,slug:`finasteride-vs-novogro-women-hair-loss`},{id:30,tag:`Cut & Style`,title:`Find the Bangs That Actually Suit You`,excerpt:`Bangs can change your whole look faster than a new color. The 2026 guide to fringe trends, face shapes, and exactly what to ask your stylist.`,author:`Yuna Seo`,date:`May 31, 2026`,readTime:`10 min`,image:`/image/bang-cover.webp`,featured:!1,slug:`bangs-guide-2026`},{id:31,tag:`Hair Thinning`,title:`What Stylists Should Know About Female Hair Loss`,excerpt:`Clients describe hair loss by what they notice first. As hair professionals, we need to read the pattern. A practical guide to the layers behind female hair loss and how to have better conversations about it.`,author:`Lauren Chavez`,date:`Jun 1, 2026`,readTime:`8 min`,image:`/image/thinning.png`,featured:!1,slug:`female-hair-loss-stylist-guide`},{id:32,tag:`Cut & Style`,title:`Game, Set, Hair`,excerpt:`Clay-court season has a very specific beauty mood. From bubble ponytails to ribbon braids and boxer braids, these are the tennis-inspired sport hairstyles to wear now and into U.S. Open season.`,author:`Nora Bell`,date:`Jun 4, 2026`,readTime:`8 min`,image:`https://images.unsplash.com/photo-1548920168-70d61248a912?fm=jpg&q=80&w=1600&auto=format&fit=crop`,featured:!1,slug:`french-open-tennis-hairstyles`},{id:33,tag:`Style & Culture`,title:`Your Hair Is Already Talking. Are You Listening?`,excerpt:`From Nicole Kidman's iconic curls to the four women of Sex and the City — why a haircut says more about who you are than almost anything else.`,author:`Nora Bell`,date:`Jun 7, 2026`,readTime:`10 min`,image:`/image/change-hair-1.webp`,featured:!1,slug:`what-your-hair-says-about-you-sex-and-the-city`}];function Ur({article:e,size:t=`normal`}){return(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`group flex flex-col cursor-pointer card-hover`,children:[(0,j.jsxs)(`div`,{className:`img-zoom overflow-hidden ${t===`large`?`aspect-[4/3]`:`aspect-[3/2]`} relative`,children:[(0,j.jsx)(`img`,{src:e.image,alt:e.title,className:`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`})]}),(0,j.jsxs)(`div`,{className:`pt-4 flex flex-col gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-[0.25em] uppercase text-gold-500 font-semibold`,children:e.tag}),(0,j.jsx)(`h3`,{className:`font-bold leading-snug text-charcoal-100 group-hover:text-white transition-colors ${t===`large`?`text-2xl md:text-3xl`:`text-lg`}`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),t===`large`&&(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed line-clamp-2`,children:e.excerpt}),(0,j.jsxs)(`div`,{className:`flex items-center justify-between mt-1`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-2 text-[10px] text-charcoal-500`,children:[(0,j.jsx)(`span`,{className:`font-medium text-charcoal-400`,children:e.author}),(0,j.jsx)(`span`,{children:`·`}),(0,j.jsxs)(`span`,{children:[e.readTime,` read`]})]}),(0,j.jsx)(ar,{size:14,className:`text-charcoal-600 group-hover:text-gold-500 group-hover:translate-x-1 transition-all`})]})]})]})}function Wr(){let[e,...t]=Hr;return(0,j.jsx)(`section`,{className:`bg-charcoal-950 py-16 lg:py-20`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsxs)(`div`,{className:`flex items-center justify-between mb-10`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-4`,children:[(0,j.jsx)(`div`,{className:`w-8 h-0.5 bg-gold-500`}),(0,j.jsx)(`h2`,{className:`text-lg md:text-xl font-bold tracking-widest uppercase text-white`,style:{fontFamily:`'Playfair Display', serif`},children:`Latest Stories`})]}),(0,j.jsxs)(`a`,{href:`/articles`,className:`hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors`,children:[`All Articles `,(0,j.jsx)(ar,{size:12})]})]}),(0,j.jsxs)(`div`,{className:`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10`,children:[(0,j.jsx)(`div`,{className:`lg:col-span-5`,children:(0,j.jsx)(Ur,{article:e,size:`large`})}),(0,j.jsx)(`div`,{className:`hidden lg:block lg:col-span-1 border-l border-white/5`}),(0,j.jsx)(`div`,{className:`lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8`,children:t.map(e=>(0,j.jsx)(Ur,{article:e},e.id))})]})]})})}var Gr=[{id:1,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b7/38/c9/68/ae/v1_E10/E103ZHL3.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=de8b86bb978fbeade4eff880b7d635cd4fa72055f5dc6f934b2ec5517686e205`,title:`Caramel Balayage`,stylist:`@hairbylucia`,category:`Color`,likes:2847},{id:2,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/61/a3/7c/c5/c2/v1_E11/E117PKJM.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=8b0830802c80b8cba5e98bc95454a6334a4b6d7b50586efd2c08b594ea4f8962`,title:`Glass Hair`,stylist:`@smoothbytomasz`,category:`Cut`,likes:3201},{id:3,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/70/83/45/30/v1_E11/E117QTBN.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=90c9ce1bcb36c3b28bb9bb990dcb182919e6e9e41570ae3f369c5632515f8337`,title:`Vivid Coral Melt`,stylist:`@vividsbyimani`,category:`Color`,likes:4512},{id:4,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/fc/2f/88/5c/19/v1_E10/E104MFU7.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=c39ec640de77e4653962b20de0a2e1cf4ff988c16e8fc002a521094c8e2c367b`,title:`Natural Curl Set`,stylist:`@curlsbynadia`,category:`Styling`,likes:1988},{id:5,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/7a/0b/23/e4/bb/v1_E10/E101NKNV.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1f8f01aa90eb0070c3692ae15baab9ce5872e46abbe9ddaeeb43751827444218`,title:`Shadow Root Blonde`,stylist:`@rootsbysophia`,category:`Color`,likes:3765},{id:6,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/45/b9/da/7d/7e/v1_E10/E109XHQP.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=498ed0538a64127ad4d8878808a9f8c0889b9d00f06ddb0ab90f931bbc9921ca`,title:`Bob with Texture`,stylist:`@precision.alex`,category:`Cut`,likes:2100},{id:7,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/31/31/67/c7/d1/v1_E10/E105INWD.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3fefda14e215cf3e88aeee5422dcca73540d7cdd9e3451160c35c7afb2c44218`,title:`Curl Consultation Look`,stylist:`@curlsbynadia`,category:`Styling`,likes:2340},{id:8,src:`https://images.unsplash.com/photo-1554519515-242161756769?w=800&q=80&auto=format&fit=crop`,title:`Balayage Dimension`,stylist:`@hairbylucia`,category:`Color`,likes:1876},{id:9,src:`https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80&auto=format&fit=crop`,title:`Vivid Fantasy`,stylist:`@vividsbyimani`,category:`Color`,likes:5102},{id:10,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/10/84/bd/c4/75/v1_E10/E104GYRQ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=0e4e94c28de4c65bc42a6bb6f56d2007175ce763bd1f8684eecb898807d3f3d8`,title:`Precision Bob`,stylist:`@precision.alex`,category:`Cut`,likes:2654},{id:11,src:`https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop`,title:`Brunette Gloss`,stylist:`@rootsbysophia`,category:`Color`,likes:3120},{id:12,src:`https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80&auto=format&fit=crop`,title:`Textured Layers`,stylist:`@smoothbytomasz`,category:`Styling`,likes:1450},{id:13,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/88/17/21/b9/54/v1_E10/E1089JNL.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=cea456455124d52a9475a81dc2afd822cfe0da6b86d5749999b3ebbb8bfd2dd0`,title:`Pink Curly`,stylist:`@hairbylucia`,category:`Color`,likes:3890},{id:14,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ee/14/d0/dd/60/v1_E10/E10HFA3N.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=24ddf2603827bc7d0604788483a77aeebeeb723fb3c7eaf1da02222ed1dc391b`,title:`Lived-In Blonde`,stylist:`@rootsbysophia`,category:`Color`,likes:2670},{id:15,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/32/7e/5c/06/de/v1_E10/E108YPGU.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=a9f56975143b11e15b68a6c1e1d12d220a5ab0b1e8cf44baf1f100ac93a5d463`,title:`Rainbow Color`,stylist:`@precision.alex`,category:`Color`,likes:1920},{id:16,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/30/36/9b/82/68/v1_E10/E107O6Z5.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=d4f8b35152d574ea289cababfddf000f7607d1813dff75dc1d86dbf2f46f2121`,title:`Flowing Red Hair`,stylist:`@smoothbytomasz`,category:`Color`,likes:1340},{id:17,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/e9/25/d7/d4/b7/v1_E10/E10216T6.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=ef3eea7c96f26ca7e22aa4c4c8974ac209fccf1241fa29d986e7bfec468f186e`,title:`Brunette Gloss`,stylist:`@rootsbysophia`,category:`Color`,likes:3120},{id:18,src:`https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80&auto=format&fit=crop`,title:`Defined Curls`,stylist:`@curlsbynadia`,category:`Styling`,likes:2890},{id:19,src:`https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80&auto=format&fit=crop`,title:`Honey Highlights`,stylist:`@hairbylucia`,category:`Color`,likes:2210},{id:20,src:`https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80&auto=format&fit=crop`,title:`Pastel Fade`,stylist:`@vividsbyimani`,category:`Color`,likes:4780},{id:21,src:`https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop`,title:`Soft Waves`,stylist:`@rootsbysophia`,category:`Styling`,likes:1650},{id:22,src:`https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80&auto=format&fit=crop`,title:`Teeny Weeny Afro`,stylist:`@curlsbynadia`,category:`Styling`,likes:3340},{id:23,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4a/41/35/2f/77/v1_E10/E105PZEO.jpeg?w=1600&cf_fit=scale-down&q=85&format=auto&s=899d46aca29ba638c1525102f804e8fde8e410498b7569141d53865553328ef6`,title:`Men's Texture Cut`,stylist:`@precision.alex`,category:`Cut`,likes:1780},{id:24,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/38/3f/e6/3c/53/v1_E10/E10HOMA5.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f5ea4f3f4d677728147fe05e0a05e02a3fdf6a90fdd9813c62fa0e47ef3c5cc2`,title:`Vivid Blue Roots`,stylist:`@vividsbyimani`,category:`Color`,likes:5230},{id:25,src:`/image/Dark-to-Blonde.jpeg`,title:`Dark to Blonde`,stylist:`@hairbylucia`,category:`Transformations`,likes:6120},{id:26,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/44/71/75/24/94/v1_E11/E117R8B7.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=813bb9abc5f873ec439cb5329912fc2ddd193e800b920a999c0af7e087b64b5e`,title:`Red Queen`,stylist:`@rootsbysophia`,category:`Transformations`,likes:4340},{id:27,src:`/image/straight-to-curly.avif`,title:`Straight to Curly`,stylist:`@curlsbynadia`,category:`Transformations`,likes:7890},{id:28,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/9e/66/67/d6/3c/v1_E10/E106BGNC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=81c150b8ad47635a1764229986024afd6658f42b0df76c19f4cfabebfdd4c767`,title:`Orange Transformation`,stylist:`@hairbylucia`,category:`Transformations`,likes:5670},{id:29,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/94/69/ca/40/56/v1_E10/E1017QDH.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1a7d49f4b655a1c1b618362935cd90c462c07e8cf83781b45131a42bc47105a7`,title:`Long Auburn Hair Styling`,stylist:`@esindeniz`,category:`Styling`,likes:220},{id:30,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/14/68/32/83/4e/v1_E10/E10GLXS2.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=2a5e73befdb9c7706599231f59fb75dae7ee6fcc79fed5da2e2fac0972723e07`,title:`Bob Cut`,stylist:`@precision.alex`,category:`Cut`,likes:2430},{id:31,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/55/4a/be/9d/51/v1_E10/E109XGVQ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=1697373643bfbbc6841c2424f36dff67efd2111dde1e02d78f661956de605aad`,title:`Bleached Buzz Cut`,stylist:`@vividsbyimani`,category:`Cut`,likes:3870},{id:32,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/da/00/74/a9/d8/v1_E10/E108BSKF.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=0171136284f19544cb1334b817003909f44ea56a9a6e680422143095ef0282e5`,title:`Long Side-swept Bangs`,stylist:`@rootsbysophia`,category:`Cut`,likes:1960},{id:33,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/de/f0/1d/60/59/v1_E11/E113VFZM.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6dc818bfebff7bf7b292d9fec0419dbea72e3b83ff734b1934b10e0f7cc8d931`,title:`Subtle but Beautiful`,stylist:`@hairbylucia`,category:`Transformations`,likes:4120},{id:34,src:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/aa/ea/9c/37/14/v1_E10/E108YQLB.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=565377dbef7f88f773792960f8e9085323d5280a0309bc188180dd0909b3782a`,title:`Root Transformation`,stylist:`@rootsbysophia`,category:`Transformations`,likes:3550},{id:35,src:`/image/cover.webp`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:4810},{id:36,src:`/image/lisa.png`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:14810},{id:37,src:`/image/Nicole Kidman.jpg`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:42810},{id:38,src:`/image/Rihanna.jpg`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:81302},{id:39,src:`/image/Sabrina Carpenter.avif`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:42342},{id:40,src:`/image/Troye Sivan.png`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:48101},{id:41,src:`/image/chase-i.png`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:4810},{id:42,src:`/image/emma.webp`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:14810},{id:43,src:`/image/Madonna.webp`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:42810},{id:44,src:`/image/EJAE.webp`,title:`2026 Met Gala Hair`,stylist:`Met Gala`,category:`Styling`,likes:81302},{id:45,src:`/image/buzz-cut-1.webp`,title:`Buzz Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:1340},{id:46,src:`/image/buzz-cut-3.jpg`,title:`Buzz Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:980},{id:47,src:`/image/buzz-cut-2.webp`,title:`Buzz Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:1120},{id:48,src:`/image/crew-cut-1.webp`,title:`Crew Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:2210},{id:49,src:`/image/crew-cut-2.jpg`,title:`Crew Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:1760},{id:50,src:`/image/crew-cut-3.webp`,title:`Crew Cut`,stylist:`@cuts.byjake`,category:`Cut`,likes:1890},{id:51,src:`/image/under-cut-1.jpeg`,title:`Undercut`,stylist:`@cuts.byjake`,category:`Cut`,likes:3040},{id:52,src:`/image/under-cut-2.webp`,title:`Undercut`,stylist:`@cuts.byjake`,category:`Cut`,likes:2670},{id:53,src:`/image/under-cut-3.webp`,title:`Undercut`,stylist:`@cuts.byjake`,category:`Cut`,likes:2450},{id:54,src:`/image/slick-back-1.png`,title:`Slick Back`,stylist:`@cuts.byjake`,category:`Cut`,likes:1580},{id:55,src:`/image/slick-back-2.jpg`,title:`Slick Back`,stylist:`@cuts.byjake`,category:`Cut`,likes:1930},{id:56,src:`/image/slick-back-3.jpg`,title:`Slick Back`,stylist:`@cuts.byjake`,category:`Cut`,likes:2100},{id:57,src:`/image/wet-look-1.webp`,title:`Wet Look`,stylist:`@cuts.byjake`,category:`Cut`,likes:1440},{id:58,src:`/image/wet-look-2.webp`,title:`Wet Look`,stylist:`@cuts.byjake`,category:`Cut`,likes:1270},{id:59,src:`/image/wet-look-3.jpg`,title:`Wet Look`,stylist:`@cuts.byjake`,category:`Cut`,likes:1650},{id:60,src:`/image/spiky.avif`,title:`Spiky Texture`,stylist:`@cuts.byjake`,category:`Cut`,likes:2380},{id:61,src:`/image/spiky-1.webp`,title:`Spiky Texture`,stylist:`@cuts.byjake`,category:`Cut`,likes:2050},{id:62,src:`/image/spiky-2.webp`,title:`Spiky Texture`,stylist:`@cuts.byjake`,category:`Cut`,likes:1820},{id:63,src:`/image/bottleneck-bangs-1.webp`,title:`Bottleneck Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3120},{id:64,src:`/image/bottleneck-bangs-2.webp`,title:`Bottleneck Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2890},{id:65,src:`/image/bottleneck-bangs-3.webp`,title:`Bottleneck Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2740},{id:66,src:`/image/soft-side-swept-1.webp`,title:`Soft Side-Swept Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1980},{id:67,src:`/image/soft-side-swept.webp`,title:`Soft Side-Swept Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2210},{id:68,src:`/image/soft-side-swept-3.webp`,title:`Soft Side-Swept Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1760},{id:69,src:`/image/curved-1.webp`,title:`Curved Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2540},{id:70,src:`/image/curved-2.webp`,title:`Curved Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2310},{id:71,src:`/image/curved-3.webp`,title:`Curved Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2080},{id:72,src:`/image/airy-1.webp`,title:`Airy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3450},{id:73,src:`/image/airy-2.webp`,title:`Airy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3190},{id:74,src:`/image/airy-3.webp`,title:`Airy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2870},{id:75,src:`/image/brow-1.webp`,title:`Brow-Length Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1640},{id:76,src:`/image/brow-2.webp`,title:`Brow-Length Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1420},{id:77,src:`/image/brow-3.webp`,title:`Brow-Length Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1580},{id:78,src:`/image/choppy-1.webp`,title:`Choppy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2760},{id:79,src:`/image/choppy-2.webp`,title:`Choppy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2490},{id:80,src:`/image/choppy-3.webp`,title:`Choppy Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2230},{id:81,src:`/image/contour-1.webp`,title:`Contour Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3680},{id:82,src:`/image/contour-3.webp`,title:`Contour Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3410},{id:83,src:`/image/contour-2.webp`,title:`Contour Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:3150},{id:84,src:`/image/hime-1.webp`,title:`Hime Cut`,stylist:`@fringe.bymia`,category:`Cut`,likes:4120},{id:85,src:`/image/hime-2.webp`,title:`Hime Cut`,stylist:`@fringe.bymia`,category:`Cut`,likes:3870},{id:86,src:`/image/hime-3.webp`,title:`Hime Cut`,stylist:`@fringe.bymia`,category:`Cut`,likes:3590},{id:87,src:`/image/flipped-3.webp`,title:`Flipped Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2140},{id:88,src:`/image/flipped-1.webp`,title:`Flipped Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1960},{id:89,src:`/image/flipped-2.webp`,title:`Flipped Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:1780},{id:90,src:`/image/sleek-1.webp`,title:`Sleek Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2920},{id:91,src:`/image/sleek-2.webp`,title:`Sleek Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2650},{id:92,src:`/image/sleek-3.webp`,title:`Sleek Bangs`,stylist:`@fringe.bymia`,category:`Cut`,likes:2380}];function Kr(e,t){let n=[...e],r=t;for(let e=n.length-1;e>0;e--){r=(r*16807+0)%2147483647;let t=Math.floor(r/2147483647*(e+1));[n[e],n[t]]=[n[t],n[e]]}return n}var qr=[`All`,`Color`,`Cut`,`Styling`,`Transformations`];function Jr(){let[e,t]=(0,_.useState)(`All`),[n,r]=(0,_.useState)(new Set),[i]=(0,_.useState)(()=>Math.random()),a=(0,_.useMemo)(()=>Kr(e===`All`?Gr:Gr.filter(t=>t.category===e),i).slice(0,6),[e,i]),o=(e,t)=>{t.preventDefault(),t.stopPropagation(),r(t=>{let n=new Set(t);return n.has(e)?n.delete(e):n.add(e),n})};return(0,j.jsx)(`section`,{className:`bg-black py-16 lg:py-20`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsxs)(`div`,{className:`flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-2`,children:[(0,j.jsx)(`div`,{className:`w-6 h-0.5 bg-gold-500`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`Lookbook`})]}),(0,j.jsx)(`h2`,{className:`text-2xl md:text-3xl font-bold text-white`,style:{fontFamily:`'Playfair Display', serif`},children:`Trending Looks This Week`})]}),(0,j.jsx)(`div`,{className:`flex gap-1 flex-wrap`,children:qr.map(n=>(0,j.jsx)(`button`,{onClick:()=>t(n),className:`text-[10px] tracking-widest uppercase px-4 py-1.5 font-medium border transition-colors ${e===n?`bg-gold-500 border-gold-500 text-black`:`border-white/10 text-charcoal-400 hover:border-white/30 hover:text-white`}`,children:n},n))})]}),(0,j.jsx)(`div`,{className:`grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4`,children:a.map(e=>(0,j.jsxs)(`div`,{className:`relative group overflow-hidden aspect-[3/4] cursor-default block`,children:[(0,j.jsx)(`img`,{src:e.src,alt:e.title,className:`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105`}),(0,j.jsxs)(`div`,{className:`absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4`,children:[(0,j.jsx)(`div`,{className:`flex justify-end gap-2`,children:(0,j.jsx)(`button`,{onClick:t=>o(e.id,t),className:`w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm border transition-all ${n.has(e.id)?`bg-red-500/20 border-red-400 text-red-400`:`bg-black/30 border-white/20 text-white hover:border-white/60`}`,children:(0,j.jsx)(gr,{size:12,fill:n.has(e.id)?`currentColor`:`none`})})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-white text-sm font-semibold`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-xs mt-0.5`,children:e.stylist}),(0,j.jsxs)(`div`,{className:`flex items-center gap-1 mt-2 text-[10px] text-charcoal-400`,children:[(0,j.jsx)(gr,{size:9}),(0,j.jsx)(`span`,{children:(e.likes+ +!!n.has(e.id)).toLocaleString()})]})]})]}),(0,j.jsx)(`div`,{className:`absolute top-2 left-2`,children:(0,j.jsx)(`span`,{className:`text-[8px] tracking-widest uppercase bg-black/60 backdrop-blur-sm text-charcoal-300 px-2 py-0.5`,children:e.category})})]},e.id))}),(0,j.jsx)(`div`,{className:`flex justify-center mt-8`,children:(0,j.jsxs)(k,{to:`/gallery`,className:`flex items-center gap-2 border border-white/10 text-charcoal-300 hover:border-gold-500 hover:text-gold-500 text-[11px] tracking-widest uppercase px-8 py-3 transition-colors`,children:[`View Full Gallery `,(0,j.jsx)(ar,{size:12})]})})]})})}var Yr=[{id:1,title:`Balayage Explained: What It Is, What It Costs, What to Expect`,instructor:`Michelle Torres`,instructorRole:`Master Colorist, NYC`,duration:`1h 30m`,students:`12,400+`,level:`All Levels`,badge:`New`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4d/21/71/c4/f7/v1_E10/E107PYVL.JPG?w=1600&cf_fit=scale-down&q=85&format=auto&s=ffe7c33416cffc10313fcdd81e16d4dc53960c1dc6307e58d3f33910e2b5aa27`,modules:[`Color Theory`,`Placement`,`Toning`,`Maintenance Tips`]},{id:2,title:`The Right Cut for Your Face Shape: A Stylist's Guide`,instructor:`David Kwan`,instructorRole:`Session Stylist, London`,duration:`2h 15m`,students:`8,200+`,level:`Intermediate`,badge:`New`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/e5/be/4a/a2/cf/v1_E10/E105N38V.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=6f43550081f73f2f93e464f2b00bd78e578f21f8dda5ddb38f1356c7094cfa15`,modules:[`Face Shapes`,`Bob Styles`,`Layers`,`Finishing`]},{id:3,title:`Curl Care 101: Products, Routines & Salon Tips`,instructor:`Amara Johnson`,instructorRole:`Curl Specialist, Atlanta`,duration:`45m`,students:`9,800+`,level:`Beginner Friendly`,badge:`Top Rated`,image:`https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/23/01/50/12/6e/v1_E10/E104HNYZ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=40d7b48407e5025800504d3c6bba113ccc7efca5a9c75c190738a53618a36024`,modules:[`Curl Types`,`Hydration`,`Product Picks`,`Salon Prep`]}],Xr={"All Levels":`text-blue-400`,Intermediate:`text-yellow-400`,"Beginner Friendly":`text-green-400`},Zr={"Best Seller":`bg-gold-500 text-black`,New:`bg-blue-500 text-white`,"Top Rated":`bg-emerald-500 text-white`};function Qr(){let[e,t]=(0,_.useState)(!1);return(0,j.jsxs)(`section`,{className:`bg-charcoal-950 py-16 lg:py-24`,children:[(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsx)(`div`,{className:`flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12`,children:(0,j.jsxs)(`div`,{className:`max-w-xl`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-3`,children:[(0,j.jsx)(`div`,{className:`w-6 h-0.5 bg-gold-500`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`Hair Guides`})]}),(0,j.jsxs)(`h2`,{className:`text-2xl md:text-4xl font-bold text-white leading-tight`,style:{fontFamily:`'Playfair Display', serif`},children:[`Understand Your Hair,`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`em`,{children:`From the Experts`})]}),(0,j.jsx)(`p`,{className:`text-charcoal-400 text-sm mt-3 leading-relaxed`,children:`Stylist-created guides that help you walk into your next appointment knowing exactly what you want, and why.`})]})}),(0,j.jsx)(`div`,{className:`grid grid-cols-3 gap-px bg-white/5 mb-12 border border-white/5`,children:[{value:`200+`,label:`Contributing Stylists`},{value:`50K+`,label:`Readers This Month`},{value:`4.9★`,label:`Average Rating`}].map(e=>(0,j.jsxs)(`div`,{className:`bg-charcoal-950 px-6 py-4 text-center`,children:[(0,j.jsx)(`div`,{className:`text-2xl font-bold text-gold-500`,style:{fontFamily:`'Playfair Display', serif`},children:e.value}),(0,j.jsx)(`div`,{className:`text-[10px] tracking-widest uppercase text-charcoal-500 mt-0.5`,children:e.label})]},e.label))}),(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-3 gap-6`,children:Yr.map(e=>(0,j.jsxs)(`a`,{onClick:()=>t(!0),className:`group bg-charcoal-900/50 border border-white/5 hover:border-gold-500/30 transition-all duration-300 cursor-pointer card-hover flex flex-col`,children:[(0,j.jsxs)(`div`,{className:`relative overflow-hidden aspect-[16/9]`,children:[(0,j.jsx)(`img`,{src:e.image,alt:e.title,className:`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity`,children:(0,j.jsx)(`div`,{className:`w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center`,children:(0,j.jsx)(br,{size:16,className:`text-black ml-0.5`})})}),(0,j.jsx)(`div`,{className:`absolute top-3 left-3`,children:(0,j.jsx)(`span`,{className:`text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 ${Zr[e.badge]}`,children:e.badge})})]}),(0,j.jsxs)(`div`,{className:`p-5 flex flex-col flex-1 gap-3`,children:[(0,j.jsx)(`h3`,{className:`text-base font-bold text-charcoal-100 group-hover:text-white transition-colors leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,j.jsx)(`div`,{className:`w-6 h-6 rounded-full bg-charcoal-700 flex items-center justify-center text-[9px] text-charcoal-300 font-bold`,children:e.instructor.split(` `).map(e=>e[0]).join(``)}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-[11px] text-charcoal-300 font-medium`,children:e.instructor}),(0,j.jsx)(`p`,{className:`text-[10px] text-charcoal-500`,children:e.instructorRole})]})]}),(0,j.jsx)(`div`,{className:`flex flex-wrap gap-1.5 mt-1`,children:e.modules.map(e=>(0,j.jsx)(`span`,{className:`text-[9px] tracking-wider uppercase bg-white/5 text-charcoal-400 px-2 py-0.5`,children:e},e))}),(0,j.jsxs)(`div`,{className:`flex items-center gap-4 text-[10px] text-charcoal-500 mt-auto pt-3 border-t border-white/5`,children:[(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(mr,{size:10}),` `,e.duration]}),(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(Tr,{size:10}),` `,e.students]}),(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5 ml-auto ${Xr[e.level]}`,children:[(0,j.jsx)(sr,{size:10}),` `,e.level]})]})]})]},e.id))})]}),e&&(0,j.jsx)(`div`,{className:`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm`,onClick:()=>t(!1),children:(0,j.jsxs)(`div`,{className:`relative bg-charcoal-950 border border-white/10 max-w-md w-full p-8 text-center`,onClick:e=>e.stopPropagation(),children:[(0,j.jsx)(`button`,{onClick:()=>t(!1),className:`absolute top-4 right-4 text-charcoal-500 hover:text-white transition-colors`,"aria-label":`Close`,children:(0,j.jsx)(Er,{size:16})}),(0,j.jsx)(`div`,{className:`w-12 h-12 bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mx-auto mb-5`,children:(0,j.jsx)(br,{size:20,className:`text-gold-500 ml-0.5`})}),(0,j.jsx)(`h3`,{className:`text-xl font-bold text-white mb-3`,style:{fontFamily:`'Playfair Display', serif`},children:`This course has ended`}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed mb-6`,children:`This guide is no longer available, but more are on the way. We are working with our contributors to bring you new stylist-led courses soon.`}),(0,j.jsx)(`button`,{onClick:()=>t(!1),className:`text-[11px] tracking-widest uppercase text-gold-500 hover:text-gold-400 transition-colors font-semibold`,children:`Got it`})]})})]})}var $r=[{id:1,category:`Color`,tip:`Ask your colorist to show you a strand test before committing to a big color change. It takes 10 minutes and saves months of regret.`,stylist:`Leila Fernandez`,role:`Senior Color Editor`,location:`Miami, FL`,image:Mr[`Leila Fernandez`].image,slug:`leila-fernandez`},{id:2,category:`Cut`,tip:`Bring a photo to your appointment, but be open to your stylist's take on how it works with your texture and face shape.`,stylist:`Tom Harley`,role:`Technique Editor`,location:`London, UK`,image:Mr[`Tom Harley`].image,slug:`tom-harley`},{id:3,category:`Business`,tip:`If you love your stylist, rebook before you leave the chair. The best appointment slots go to regulars.`,stylist:`Dana Reeves`,role:`Salon Business Coach`,location:`Nashville, TN`,image:Mr[`Dana Reeves`].image,slug:`dana-reeves`},{id:4,category:`Texture`,tip:`Tell your stylist your full hair routine at home, the products you use matter as much as what happens in the salon.`,stylist:`Imani Okafor`,role:`Texture & Curl Editor`,location:`Atlanta, GA`,image:Mr[`Imani Okafor`].image,slug:`imani-okafor`}],ei={Color:`bg-amber-500/10 text-amber-400`,Cut:`bg-blue-500/10 text-blue-400`,Business:`bg-emerald-500/10 text-emerald-400`,Texture:`bg-purple-500/10 text-purple-400`};function ti(){return(0,j.jsx)(`section`,{className:`bg-black py-16 lg:py-20`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsxs)(`div`,{className:`flex items-center justify-between mb-12`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-2`,children:[(0,j.jsx)(`div`,{className:`w-6 h-0.5 bg-gold-500`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`Pro Tips`})]}),(0,j.jsx)(`h2`,{className:`text-2xl md:text-3xl font-bold text-white`,style:{fontFamily:`'Playfair Display', serif`},children:`Wisdom From the Chair`})]}),(0,j.jsxs)(k,{to:`/contributors`,className:`hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors`,children:[`Meet the Experts `,(0,j.jsx)(ar,{size:12})]})]}),(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5`,children:$r.map(e=>(0,j.jsxs)(k,{to:`/author/${e.slug}`,className:`group bg-black hover:bg-white/[0.03] transition-colors p-6 md:p-8 flex flex-col gap-5 cursor-pointer`,children:[(0,j.jsxs)(`div`,{className:`flex items-start justify-between gap-4`,children:[(0,j.jsx)(xr,{size:28,className:`text-gold-500/30 group-hover:text-gold-500/60 transition-colors flex-shrink-0 mt-1`}),(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full ${ei[e.category]}`,children:e.category})]}),(0,j.jsx)(`p`,{className:`text-lg md:text-xl text-charcoal-200 group-hover:text-white transition-colors leading-relaxed`,style:{fontFamily:`'Playfair Display', serif`},children:e.tip}),(0,j.jsxs)(`div`,{className:`flex items-center gap-3 pt-2 border-t border-white/5`,children:[(0,j.jsxs)(`div`,{className:`relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0`,children:[(0,j.jsx)(`img`,{src:e.image,alt:e.stylist,className:`w-full h-full object-cover object-top`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-gold-500/0 group-hover:bg-gold-500/10 transition-colors`})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-sm font-semibold text-charcoal-200 group-hover:text-white transition-colors`,children:e.stylist}),(0,j.jsxs)(`p`,{className:`text-[10px] text-charcoal-500`,children:[e.role,` · `,e.location]})]}),(0,j.jsx)(ar,{size:14,className:`ml-auto text-charcoal-700 group-hover:text-gold-500 group-hover:translate-x-1 transition-all`})]})]},e.id))})]})})}function ni(){let[e,t]=(0,_.useState)(``),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(!1);return(0,j.jsxs)(`section`,{className:`relative overflow-hidden bg-charcoal-950 py-20 lg:py-28`,children:[(0,j.jsxs)(`div`,{className:`absolute inset-0 pointer-events-none`,children:[(0,j.jsx)(`div`,{className:`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl`}),(0,j.jsx)(`div`,{className:`absolute top-0 left-0 right-0 h-px`,style:{background:`linear-gradient(90deg, transparent, #C9A84C40, transparent)`}}),(0,j.jsx)(`div`,{className:`absolute bottom-0 left-0 right-0 h-px`,style:{background:`linear-gradient(90deg, transparent, #C9A84C40, transparent)`}})]}),(0,j.jsxs)(`div`,{className:`max-w-2xl mx-auto px-4 text-center relative z-10`,children:[(0,j.jsxs)(`div`,{className:`flex items-center justify-center gap-3 mb-6`,children:[(0,j.jsx)(`div`,{className:`h-px w-12 bg-gold-500`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.35em] uppercase text-gold-500 font-medium`,children:`Newsletter`}),(0,j.jsx)(`div`,{className:`h-px w-12 bg-gold-500`})]}),(0,j.jsxs)(`h2`,{className:`text-3xl md:text-5xl font-bold text-white leading-tight mb-4`,style:{fontFamily:`'Playfair Display', serif`},children:[`Get the Best Hair`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`em`,{children:`Advice, Weekly`})]}),(0,j.jsx)(`p`,{className:`text-charcoal-400 text-sm md:text-base leading-relaxed mb-10 max-w-md mx-auto`,children:`Join 85,000+ readers getting stylist-curated trend reports, care tips, and inspiration, straight to your inbox.`}),n?(0,j.jsxs)(`div`,{className:`flex flex-col items-center gap-3 text-white`,children:[(0,j.jsx)(`div`,{className:`w-14 h-14 rounded-full bg-gold-500 flex items-center justify-center`,children:(0,j.jsx)(ur,{size:24,className:`text-black`})}),(0,j.jsx)(`p`,{className:`text-lg font-semibold`,style:{fontFamily:`'Playfair Display', serif`},children:`You're in!`}),(0,j.jsx)(`p`,{className:`text-charcoal-400 text-sm`,children:`Check your inbox for a confirmation email.`})]}):(0,j.jsxs)(j.Fragment,{children:[(0,j.jsxs)(`form`,{onSubmit:t=>{t.preventDefault(),e.trim()&&(a(!0),setTimeout(()=>{a(!1),r(!0)},1e3))},className:`flex flex-col sm:flex-row gap-0 max-w-md mx-auto`,children:[(0,j.jsx)(`input`,{type:`email`,value:e,onChange:e=>t(e.target.value),placeholder:`your@email.com`,required:!0,className:`flex-1 bg-white/5 border border-white/10 border-r-0 text-white placeholder-charcoal-600 px-5 py-3.5 text-sm outline-none focus:border-gold-500/50 transition-colors`}),(0,j.jsx)(`button`,{type:`submit`,disabled:i,className:`flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-black text-[11px] font-bold tracking-widest uppercase px-6 py-3.5 transition-colors disabled:opacity-70 min-w-[140px]`,children:i?(0,j.jsx)(`span`,{className:`w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin`}):(0,j.jsxs)(j.Fragment,{children:[`Subscribe `,(0,j.jsx)(Sr,{size:11})]})})]}),(0,j.jsxs)(`div`,{className:`flex items-center justify-center gap-6 mt-6 text-[10px] text-charcoal-600 uppercase tracking-wider`,children:[(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(ur,{size:10,className:`text-gold-500/50`}),` No spam, ever`]}),(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(ur,{size:10,className:`text-gold-500/50`}),` Weekly digest`]}),(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(ur,{size:10,className:`text-gold-500/50`}),` Unsubscribe anytime`]})]})]})]})]})}var ri={Editorial:[{label:`All Articles`,to:`/articles`},{label:`Trends`,to:`/articles?section=Trends`},{label:`Inspiration`,to:`/articles?section=Inspiration`},{label:`Hair Care`,to:`/articles?section=Hair+Care`},{label:`Gallery`,to:`/gallery`}],Explore:[{label:`Color`,to:`/articles?category=Color`},{label:`Cut & Style`,to:`/articles?category=Cut+%26+Style`},{label:`Hair Thinning`,to:`/articles?category=Hair+Thinning`},{label:`At-Home Tips`,to:`/articles?category=At-Home+Tips`},{label:`Products`,to:`/articles?category=Products`}],Community:[{label:`About Us`,to:`/about`},{label:`Contributors`,to:`/contributors`}]},ii=[{label:`Instagram`,href:`https://www.instagram.com/hairprovoices/`,initial:`IG`},{label:`Facebook`,href:`https://www.facebook.com/people/Hairpro-Voices/61564779778738/`,initial:`FB`}],ai=[`Wella Professionals`,`Redken`,`Schwarzkopf`,`L'Oréal Professionnel`,`Kenra Professional`];function oi(){return(0,j.jsxs)(`footer`,{className:`bg-black border-t border-white/5`,children:[(0,j.jsx)(`div`,{className:`border-b border-white/5 py-6`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.3em] uppercase text-charcoal-600 text-center mb-4`,children:`Proud Partners`}),(0,j.jsx)(`div`,{className:`flex flex-wrap items-center justify-center gap-6 md:gap-10`,children:ai.map(e=>(0,j.jsx)(`span`,{className:`text-[11px] tracking-widest uppercase text-charcoal-600 hover:text-charcoal-400 transition-colors cursor-pointer font-medium`,children:e},e))})]})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-14`,children:(0,j.jsxs)(`div`,{className:`grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-10`,children:[(0,j.jsxs)(`div`,{className:`col-span-2 md:col-span-2 flex flex-col gap-4`,children:[(0,j.jsxs)(k,{to:`/`,className:`flex flex-col gap-1`,children:[(0,j.jsx)(`img`,{src:`/image/site-logo.svg`,alt:`HairProVoices`,className:`h-8 object-contain object-left`}),(0,j.jsx)(`span`,{className:`text-[9px] tracking-[0.3em] uppercase text-charcoal-600`,children:`Great Hair Starts with Great Advice`})]}),(0,j.jsx)(`p`,{className:`text-xs text-charcoal-500 leading-relaxed max-w-[240px]`,children:`Stylist-created guides, trends, and inspiration to help you get the most out of every salon visit.`}),(0,j.jsx)(`div`,{className:`flex items-center gap-3 mt-2`,children:ii.map(({label:e,href:t,initial:n})=>(0,j.jsx)(`a`,{href:t,"aria-label":e,title:e,target:`_blank`,rel:`noopener noreferrer`,className:`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-charcoal-400 hover:border-gold-500 hover:text-gold-500 transition-colors text-[9px] font-bold tracking-wider`,children:n},e))})]}),Object.entries(ri).map(([e,t])=>(0,j.jsxs)(`div`,{className:`flex flex-col gap-3`,children:[(0,j.jsx)(`h4`,{className:`text-[10px] font-semibold tracking-[0.25em] uppercase text-white mb-1`,children:e}),t.map(({label:e,to:t})=>(0,j.jsx)(k,{to:t,className:`text-xs text-charcoal-500 hover:text-charcoal-200 transition-colors`,children:e},e))]},e))]})}),(0,j.jsx)(`div`,{className:`border-t border-white/5 py-5`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] text-charcoal-600 tracking-wider`,children:[(0,j.jsx)(`span`,{children:`© 2026 HairProVoices Media, LLC. All rights reserved.`}),(0,j.jsxs)(`div`,{className:`flex items-center gap-5`,children:[(0,j.jsx)(k,{to:`/about`,className:`hover:text-charcoal-400 transition-colors`,children:`About`}),(0,j.jsx)(`a`,{href:`mailto:editorial@hairprovoices.com`,className:`hover:text-charcoal-400 transition-colors`,children:`Contact`})]})]})})]})}function si(){return(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(Vr,{}),(0,j.jsx)(Wr,{}),(0,j.jsx)(Jr,{}),(0,j.jsx)(Qr,{}),(0,j.jsx)(ti,{}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]})}function ci({article:e}){return(0,j.jsxs)(`section`,{className:`bg-black`,children:[(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 pt-6 pb-4`,children:(0,j.jsxs)(`nav`,{className:`flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 flex-wrap`,children:[(0,j.jsx)(k,{to:`/`,className:`hover:text-gold-500 transition-colors`,children:`Home`}),(0,j.jsx)(pr,{size:10}),(0,j.jsx)(k,{to:`/articles?section=${encodeURIComponent(e.section)}`,className:`hover:text-gold-500 transition-colors`,children:e.section}),(0,j.jsx)(pr,{size:10}),(0,j.jsx)(k,{to:`/articles?section=${encodeURIComponent(e.section)}&category=${encodeURIComponent(e.category)}`,className:`hover:text-gold-500 transition-colors`,children:e.category}),(0,j.jsx)(pr,{size:10}),(0,j.jsx)(`span`,{className:`text-charcoal-400 truncate max-w-[200px]`,children:e.title})]})}),(0,j.jsxs)(`div`,{className:`relative aspect-[21/9] overflow-hidden`,children:[(0,j.jsx)(`img`,{src:e.image.replace(/w=\d+/,`w=1600`).replace(/q=\d+/,`q=90`),alt:e.title,className:`w-full h-full object-cover`}),(0,j.jsx)(`div`,{className:`absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent`}),(0,j.jsx)(`div`,{className:`absolute top-6 left-4 md:left-10`,children:(0,j.jsx)(`span`,{className:`bg-gold-500 text-black text-[9px] font-bold tracking-[0.25em] uppercase px-3 py-1`,children:e.tag})})]}),(0,j.jsxs)(`div`,{className:`max-w-4xl mx-auto px-4 -mt-px pt-10 pb-10`,children:[(0,j.jsx)(`h1`,{className:`text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-5`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl`,children:e.excerpt}),(0,j.jsxs)(`div`,{className:`flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-white/10`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3`,children:[(0,j.jsx)(`div`,{className:`w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-charcoal-800 flex items-center justify-center text-charcoal-400 text-sm font-bold`,children:e.author.split(` `).map(e=>e[0]).join(``)}),(0,j.jsx)(`div`,{children:(0,j.jsxs)(`p`,{className:`text-sm font-semibold text-charcoal-200`,children:[`By`,` `,(0,j.jsx)(k,{to:`/author/${e.author.toLowerCase().replace(/\s+/g,`-`)}`,className:`text-white hover:text-gold-500 transition-colors`,children:e.author})]})})]}),(0,j.jsxs)(`div`,{className:`flex items-center gap-5 text-[11px] text-charcoal-500 tracking-wider`,children:[(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(lr,{size:11}),` `,e.date]}),(0,j.jsxs)(`span`,{className:`flex items-center gap-1.5`,children:[(0,j.jsx)(mr,{size:11}),` `,e.readTime,` read`]}),(0,j.jsxs)(`div`,{className:`flex items-center gap-2 ml-2`,children:[(0,j.jsxs)(`button`,{className:`flex items-center gap-1.5 border border-white/10 hover:border-gold-500 hover:text-gold-500 text-charcoal-400 transition-colors px-3 py-1.5 text-[10px] tracking-widest uppercase`,"aria-label":`Bookmark`,children:[(0,j.jsx)(cr,{size:11}),` Save`]}),(0,j.jsxs)(`button`,{className:`flex items-center gap-1.5 border border-white/10 hover:border-white/30 text-charcoal-400 hover:text-white transition-colors px-3 py-1.5 text-[10px] tracking-widest uppercase`,"aria-label":`Share`,children:[(0,j.jsx)(Cr,{size:11}),` Share`]})]})]})]})]})]})}var li=`/image/copper-1.png`,ui=`/image/copper-re.png`;function di({children:e,id:t}){return(0,j.jsx)(`h2`,{id:t,className:`text-2xl md:text-3xl font-bold text-white mt-12 mb-5 leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e})}function fi({children:e,id:t}){return(0,j.jsxs)(`h3`,{id:t,className:`text-lg font-semibold text-charcoal-100 mt-8 mb-3 flex items-center gap-3`,style:{fontFamily:`'Playfair Display', serif`},children:[(0,j.jsx)(`span`,{className:`inline-block w-4 h-0.5 bg-gold-500 flex-shrink-0`}),e]})}function pi({children:e}){return(0,j.jsx)(`p`,{className:`text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5`,children:e})}function mi({quote:e,attribution:t}){return(0,j.jsxs)(`div`,{className:`my-10 border-l-4 border-gold-500 pl-6 md:pl-8 py-2`,children:[(0,j.jsx)(xr,{size:24,className:`text-gold-500/40 mb-3`}),(0,j.jsx)(`p`,{className:`text-xl md:text-2xl text-white font-medium leading-snug italic`,style:{fontFamily:`'Playfair Display', serif`},children:e}),(0,j.jsxs)(`p`,{className:`text-[11px] tracking-widest uppercase text-gold-500 mt-4 font-medium`,children:[`— `,t]})]})}function hi({title:e,children:t}){return(0,j.jsxs)(`div`,{className:`my-8 bg-white/[0.04] border border-gold-500/20 p-6`,children:[(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-2`,children:`Pro Tip`}),(0,j.jsx)(`p`,{className:`text-sm font-semibold text-charcoal-100 mb-2`,style:{fontFamily:`'Playfair Display', serif`},children:e}),(0,j.jsx)(`div`,{className:`text-sm text-charcoal-400 leading-relaxed`,children:t})]})}function gi({steps:e}){return(0,j.jsx)(`div`,{className:`my-8 flex flex-col gap-4`,children:e.map(({step:e,title:t,body:n})=>(0,j.jsxs)(`div`,{className:`flex gap-4`,children:[(0,j.jsx)(`div`,{className:`flex-shrink-0 w-8 h-8 bg-gold-500 flex items-center justify-center text-black text-xs font-bold`,children:e}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-sm font-semibold text-charcoal-100 mb-1`,children:t}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed`,children:n})]})]},e))})}function _i({src:e,caption:t,full:n}){let[r,i]=(0,_.useState)(!1);return(0,j.jsxs)(`figure`,{className:`my-10 -mx-4 md:mx-0`,children:[(0,j.jsxs)(`div`,{className:`relative overflow-hidden`,children:[!r&&(0,j.jsx)(`div`,{className:`absolute inset-0 bg-charcoal-800 animate-pulse`,style:{minHeight:`200px`}}),(0,j.jsx)(`img`,{src:e,alt:t,loading:`lazy`,onLoad:()=>i(!0),className:`w-full object-cover transition-opacity duration-500`,style:{opacity:+!!r,...n?{}:{maxHeight:`360px`}}})]}),(0,j.jsx)(`figcaption`,{className:`text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0`,children:t})]})}function vi({children:e}){return(0,j.jsx)(`aside`,{className:`my-12 overflow-hidden border border-gold-500/30 bg-[linear-gradient(135deg,rgba(201,168,76,0.16),rgba(255,255,255,0.04)_46%,rgba(10,10,10,0.92))] p-6 md:p-8`,children:(0,j.jsxs)(`div`,{className:`flex flex-col gap-5 sm:flex-row sm:items-start`,children:[(0,j.jsx)(`div`,{className:`flex h-11 w-11 flex-shrink-0 items-center justify-center bg-gold-500 text-black`,children:(0,j.jsx)(wr,{size:19})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`mb-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-500`,children:`Next Step`}),(0,j.jsx)(`p`,{className:`text-lg leading-[1.75] text-charcoal-100 md:text-xl`,children:e})]})]})})}function yi({quotes:e}){let[t,n]=(0,_.useState)(0),[r,i]=(0,_.useState)(`right`),[a,o]=(0,_.useState)(!1),s=(0,_.useRef)(null),c=(e,t)=>{a||(i(t),o(!0),s.current=setTimeout(()=>{n(e),o(!1)},280))},l=()=>c((t-1+e.length)%e.length,`left`),u=()=>c((t+1)%e.length,`right`);(0,_.useEffect)(()=>{let n=setInterval(()=>c((t+1)%e.length,`right`),6e3);return()=>clearInterval(n)});let{text:d,attribution:f}=e[t];return(0,j.jsxs)(`div`,{className:`my-10 border border-gold-500/20 bg-white/[0.02] relative overflow-hidden select-none`,children:[(0,j.jsxs)(`div`,{className:`px-8 py-8 md:px-12 md:py-10`,children:[(0,j.jsx)(xr,{size:28,className:`text-gold-500/30 mb-4`}),(0,j.jsxs)(`div`,{style:{opacity:+!a,transform:a?`translateX(${r===`right`?`-18px`:`18px`})`:`translateX(0)`,transition:`opacity 0.28s ease, transform 0.28s ease`},children:[(0,j.jsx)(`p`,{className:`text-xl md:text-2xl text-white font-medium leading-snug italic mb-4`,style:{fontFamily:`'Playfair Display', serif`},children:d}),f&&(0,j.jsxs)(`p`,{className:`text-[11px] tracking-widest uppercase text-gold-500 font-medium`,children:[`— `,f]})]}),(0,j.jsx)(`div`,{className:`flex items-center gap-1.5 mt-6`,children:e.map((e,n)=>(0,j.jsx)(`button`,{onClick:()=>c(n,n>t?`right`:`left`),className:`transition-all rounded-full ${n===t?`w-4 h-1.5 bg-gold-500`:`w-1.5 h-1.5 bg-white/20 hover:bg-white/40`}`,"aria-label":`Go to quote ${n+1}`},n))})]}),(0,j.jsx)(`button`,{onClick:l,className:`absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors`,"aria-label":`Previous quote`,children:(0,j.jsx)(fr,{size:18})}),(0,j.jsx)(`button`,{onClick:u,className:`absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors`,"aria-label":`Next quote`,children:(0,j.jsx)(pr,{size:18})})]})}function bi({images:e}){return(0,j.jsx)(`div`,{className:`my-10 -mx-4 md:mx-0`,children:(0,j.jsx)(`div`,{className:`flex gap-3 overflow-x-auto pb-3 px-4 md:px-0 snap-x snap-mandatory`,children:e.map(({src:e,caption:t},n)=>(0,j.jsxs)(`figure`,{className:`flex-shrink-0 w-56 md:w-64 snap-start`,children:[(0,j.jsx)(`div`,{className:`relative overflow-hidden bg-charcoal-900 border border-white/5`,style:{aspectRatio:`3/4`},children:e?(0,j.jsx)(`img`,{src:e,alt:t,loading:`lazy`,className:`w-full h-full object-cover`}):(0,j.jsxs)(`div`,{className:`absolute inset-0 flex flex-col items-center justify-center gap-2`,children:[(0,j.jsx)(_r,{size:24,className:`text-charcoal-700`}),(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.2em] uppercase text-charcoal-600 font-medium`,children:`Photo`})]})}),t&&(0,j.jsx)(`figcaption`,{className:`text-[10px] text-charcoal-500 tracking-wider mt-2 leading-snug`,children:t})]},n))})})}function xi({caption:e}){return(0,j.jsxs)(`figure`,{className:`my-10 -mx-4 md:mx-0`,children:[(0,j.jsxs)(`div`,{className:`relative overflow-hidden bg-charcoal-900 border border-white/5 flex flex-col items-center justify-center gap-3`,style:{aspectRatio:`16/9`,minHeight:`320px`},children:[(0,j.jsx)(_r,{size:32,className:`text-charcoal-700`}),(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium`,children:`Image placeholder`})]}),(0,j.jsx)(`figcaption`,{className:`text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0`,children:e})]})}function Si({title:e,bars:t,footnote:n}){let r=Math.max(...t.map(e=>e.value),1);return(0,j.jsxs)(`div`,{className:`my-10 border border-white/10 bg-white/[0.02] p-6 md:p-8`,children:[(0,j.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-gold-500 font-medium mb-6`,children:e.replace(/[a-z]/g,e=>e.toUpperCase())}),(0,j.jsx)(`div`,{className:`flex flex-col gap-5`,children:t.map(({label:e,value:t},n)=>(0,j.jsxs)(`div`,{className:`flex items-center gap-4`,children:[(0,j.jsx)(`span`,{className:`w-24 flex-shrink-0 text-[12px] text-charcoal-400 text-right leading-tight`,children:e}),(0,j.jsxs)(`div`,{className:`flex-1 flex items-center gap-3`,children:[(0,j.jsx)(`div`,{className:`flex-1 bg-white/5 h-8 relative overflow-hidden`,children:(0,j.jsx)(`div`,{className:`absolute inset-y-0 left-0 bg-gold-500 transition-all duration-700`,style:{width:`${t/r*100}%`,opacity:n===0?1:.45}})}),(0,j.jsxs)(`span`,{className:`text-sm font-semibold text-charcoal-200 w-10 flex-shrink-0`,children:[t,`%`]})]})]},n))}),n&&(0,j.jsx)(`p`,{className:`text-[13px] text-charcoal-400 mt-5 leading-relaxed`,children:N(n)})]})}function Ci({title:e,xLabel:t,yLabel:n,series:r,points:i,footnote:a}){let o=[`#D9B655`,`#7E97B8`,`#C98F8F`,`#8FB8A0`],[s,c]=(0,_.useState)(null),[l,u]=(0,_.useState)(new Set),d=e=>u(t=>{let n=new Set(t);return n.has(e)?n.delete(e):n.add(e),n}),f=[0,20,40,60,80,100],p=i.length,m=e=>56+(p===1?642/2:642*e/(p-1)),h=e=>356-Math.max(0,Math.min(e,100))/100*328;return(0,j.jsxs)(`div`,{className:`my-10 border border-white/10 bg-white/[0.02] p-6 md:p-8`,children:[(0,j.jsx)(`p`,{className:`text-[11px] tracking-[0.25em] text-gold-500 font-medium mb-1`,children:e.replace(/[a-z]/g,e=>e.toUpperCase())}),(0,j.jsx)(`div`,{className:`flex flex-wrap gap-3 mt-3 mb-2`,children:r.map((e,t)=>{let n=l.has(t);return(0,j.jsxs)(`button`,{onClick:()=>d(t),className:`flex items-center gap-2 text-[11px] tracking-wide px-2.5 py-1 border transition-colors ${n?`border-white/10 text-charcoal-600`:`border-white/20 text-charcoal-200 hover:border-white/40`}`,children:[(0,j.jsx)(`span`,{className:`inline-block w-3 h-3 rounded-sm`,style:{background:n?`transparent`:o[t%o.length],border:`1.5px solid ${o[t%o.length]}`}}),e]},t)})}),(0,j.jsxs)(`svg`,{viewBox:`0 0 720 420`,width:`100%`,style:{height:`auto`,display:`block`,touchAction:`pan-y`},onMouseLeave:()=>c(null),children:[f.map(e=>{let t=h(e);return(0,j.jsxs)(`g`,{children:[(0,j.jsx)(`line`,{x1:56,y1:t,x2:698,y2:t,stroke:`rgba(255,255,255,0.08)`,strokeWidth:1}),(0,j.jsx)(`text`,{x:46,y:t+4,textAnchor:`end`,fontSize:12,fill:`#7C7468`,fontFamily:`Inter,Arial,sans-serif`,children:e})]},e)}),n&&(0,j.jsx)(`text`,{transform:`translate(16,192) rotate(-90)`,textAnchor:`middle`,fontSize:12.5,fill:`#9a9488`,fontFamily:`Inter,Arial,sans-serif`,children:n}),t&&(0,j.jsx)(`text`,{x:377,y:408,textAnchor:`middle`,fontSize:12.5,fill:`#9a9488`,fontFamily:`Inter,Arial,sans-serif`,children:t}),i.map((e,t)=>(0,j.jsx)(`text`,{x:m(t),y:378,textAnchor:`middle`,fontSize:12,fill:`#9a9488`,fontFamily:`Inter,Arial,sans-serif`,children:e.x},t)),(0,j.jsx)(`line`,{x1:56,y1:356,x2:698,y2:356,stroke:`rgba(255,255,255,0.25)`,strokeWidth:1.5}),s!==null&&(0,j.jsx)(`line`,{x1:m(s),y1:28,x2:m(s),y2:356,stroke:`rgba(217,182,85,0.5)`,strokeWidth:1,strokeDasharray:`4 4`}),r.map((e,t)=>{if(l.has(t))return null;let n=o[t%o.length];return(0,j.jsxs)(`g`,{children:[(0,j.jsx)(`path`,{d:i.map((e,n)=>`${n===0?`M`:`L`} ${m(n)} ${h(e.values[t])}`).join(` `),fill:`none`,stroke:n,strokeWidth:2.5,strokeLinejoin:`round`,strokeLinecap:`round`}),i.map((e,r)=>(0,j.jsx)(`circle`,{cx:m(r),cy:h(e.values[t]),r:s===r?5.5:3.5,fill:n,stroke:`#0d0d0d`,strokeWidth:1},r))]},t)}),i.map((e,t)=>{let n=642/Math.max(1,p-1);return(0,j.jsx)(`rect`,{x:m(t)-n/2,y:28,width:n,height:328,fill:`transparent`,onMouseEnter:()=>c(t),onTouchStart:()=>c(t)},t)}),s!==null&&(()=>{let e=i[s],n=r.map((e,t)=>({name:e,si:t})).filter(({si:e})=>!l.has(e)),a=26+n.length*18,c=m(s)>377?m(s)-150-12:m(s)+12;return(0,j.jsxs)(`g`,{pointerEvents:`none`,children:[(0,j.jsx)(`rect`,{x:c,y:34,width:150,height:a,rx:5,fill:`#15140f`,stroke:`rgba(217,182,85,0.4)`,strokeWidth:1}),(0,j.jsx)(`text`,{x:c+12,y:52,fontSize:12,fill:`#cfc6b6`,fontFamily:`Inter,Arial,sans-serif`,children:t?`${e.x} µM`:e.x}),n.map(({name:t,si:n},r)=>(0,j.jsxs)(`g`,{children:[(0,j.jsx)(`rect`,{x:c+12,y:60+r*18+1,width:9,height:9,rx:1.5,fill:o[n%o.length]}),(0,j.jsxs)(`text`,{x:c+27,y:60+r*18+9,fontSize:12,fill:`#e6e1d6`,fontFamily:`Inter,Arial,sans-serif`,children:[t,`: `,e.values[n],`%`]})]},n))]})})()]}),a&&(0,j.jsx)(`p`,{className:`text-[13px] text-charcoal-400 mt-5 leading-relaxed`,children:N(a)})]})}function wi({left:e,right:t}){return(0,j.jsx)(`div`,{className:`my-8 grid grid-cols-1 sm:grid-cols-2 gap-0 border border-white/10 overflow-hidden`,children:[e,t].map((e,t)=>(0,j.jsxs)(`div`,{className:`p-5 ${t===0?`border-b sm:border-b-0 sm:border-r border-white/10`:``}`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 ${t===0?`text-gold-500`:`text-charcoal-500`}`,children:e.heading}),(0,j.jsx)(`ul`,{className:`flex flex-col gap-3`,children:e.items.map((e,n)=>(0,j.jsxs)(`li`,{className:`flex gap-2.5 text-sm text-charcoal-300 leading-relaxed`,children:[(0,j.jsx)(`span`,{className:`flex-shrink-0 mt-1.5 w-1 h-1 rounded-full ${t===0?`bg-gold-500`:`bg-charcoal-600`}`}),N(e)]},n))})]},t))})}function Ti(){return(0,j.jsxs)(`div`,{className:`my-10 flex items-center gap-4`,children:[(0,j.jsx)(`div`,{className:`flex-1 h-px bg-white/10`}),(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.3em] uppercase text-gold-500/60 font-semibold flex-shrink-0 px-2`,children:`Client Case Study`}),(0,j.jsx)(`div`,{className:`flex-1 h-px bg-white/10`})]})}function Ei({items:e}){return(0,j.jsxs)(`div`,{className:`mt-12 border border-white/10 p-6`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4`,children:`References & Sources`}),(0,j.jsx)(`ol`,{className:`flex flex-col gap-3`,children:e.map((e,t)=>(0,j.jsxs)(`li`,{className:`flex gap-3 text-[12px] text-charcoal-500 leading-relaxed`,children:[(0,j.jsxs)(`span`,{className:`flex-shrink-0 text-gold-500/50 font-medium w-4`,children:[t+1,`.`]}),(0,j.jsx)(`span`,{children:N(e)})]},t))})]})}function Di({items:e}){return(0,j.jsx)(`div`,{className:`my-8 flex flex-col`,children:e.map((t,n)=>(0,j.jsxs)(`div`,{className:`flex gap-0`,children:[(0,j.jsxs)(`div`,{className:`flex flex-col items-center`,style:{width:`${20+n*20}px`,flexShrink:0},children:[(0,j.jsx)(`div`,{className:`w-2 h-2 rounded-full border-2 flex-shrink-0 ${n===e.length-1?`bg-gold-500 border-gold-500`:`border-gold-500/50 bg-transparent`}`}),(0,j.jsx)(`div`,{className:`w-px flex-1 bg-gold-500/20`})]}),(0,j.jsxs)(`div`,{className:`pb-6 pt-0.5 pl-4 flex-1 ${n===e.length-1?`pb-0`:``}`,children:[n===0&&(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5`,style:{color:`rgba(201,168,76,0.75)`},children:`Scalp environment support | NV-273`}),n===1&&(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5`,style:{color:`rgba(201,168,76,0.75)`},children:`DHT-related stress modulation | NV-1065`}),n===e.length-1&&n>1&&(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.25em] uppercase font-semibold mb-1.5`,style:{color:`rgba(201,168,76,0.75)`},children:`Follicle cell support | NV-623 + NV-624`}),(0,j.jsx)(`p`,{className:`text-base md:text-[17px] leading-[1.8] text-charcoal-300`,children:N(t)})]})]},n))})}function Oi({cards:e}){return(0,j.jsx)(`div`,{className:`my-8 grid grid-cols-1 sm:grid-cols-2 gap-4`,children:e.map((e,t)=>(0,j.jsxs)(`div`,{className:`group relative border border-white/10 p-5 transition-all duration-300 hover:border-gold-500/60 hover:bg-white/[0.03] hover:-translate-y-0.5`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-2.5`,children:[(0,j.jsx)(`span`,{className:`flex-shrink-0 w-7 h-7 bg-gold-500 text-black text-[11px] font-bold flex items-center justify-center`,children:t+1}),(0,j.jsx)(`h4`,{className:`text-charcoal-100 font-semibold text-[15px] leading-tight`,children:e.title})]}),e.tag&&(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.2em] uppercase text-gold-500/80 font-semibold mb-2.5`,children:e.tag}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-sm md:text-[15px] leading-[1.7]`,children:N(e.body)})]},t))})}var ki=[{col1:`Wella Koleston Perfect`,col2:`7/43: Medium Blonde Red-Gold`,col3:`50g`},{col1:`Wella Koleston Perfect`,col2:`8/43: Light Blonde Red-Gold`,col3:`20g`},{col1:`Developer`,col2:`6% (20 vol)`,col3:`70ml`},{col1:`Processing Time`,col2:`35 minutes, no heat`,col3:``}];function N(e){let t=/(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|==(.+?)==|~~(.+?)~~|\[([^\]]+)\]\(([^)]+)\))/g,n=[],r=0,i,a=0;for(;(i=t.exec(e))!==null;)i.index>r&&n.push(e.slice(r,i.index)),i[2]?n.push((0,j.jsx)(`strong`,{className:`text-charcoal-100 font-semibold`,children:i[2]},a++)):i[3]?n.push((0,j.jsx)(`em`,{children:i[3]},a++)):i[4]?n.push((0,j.jsx)(`code`,{className:`text-[0.9em] bg-white/10 px-1 rounded font-mono`,children:i[4]},a++)):i[5]?n.push((0,j.jsx)(`mark`,{className:`bg-gold-500 text-black font-semibold px-0.5 rounded-sm not-italic`,children:i[5]},a++)):i[6]?n.push((0,j.jsx)(`span`,{className:`text-gold-500`,children:i[6]},a++)):i[7]&&n.push((0,j.jsx)(`a`,{href:i[8]??`#`,className:`text-gold-500 hover:underline`,target:`_blank`,rel:`noopener noreferrer`,children:i[7]},a++)),r=i.index+i[0].length;return r<e.length&&n.push(e.slice(r)),n}function Ai(e){return e.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/(^-|-$)/g,``)}function ji({body:e}){let t=[],n=[],r=[],i=[],a=[],o=e.replace(/:::cascade-list\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(`
+`).filter(e=>e.trim().startsWith(`- `)).map(e=>e.replace(/^-\s+/,``).trim()),r=a.length;return a.push({items:n}),`CASCADE_LIST_PLACEHOLDER_${r}`});o=o.replace(/:::bar-chart\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(`
+`).filter(Boolean),i=n.find(e=>e.startsWith(`title:`)),a=i?i.replace(/^title:\s*/,``):``,o=n.find(e=>e.startsWith(`footnote:`)),s=o?o.replace(/^footnote:\s*/,``):void 0,c=n.filter(e=>e.startsWith(`- `)).map(e=>{let t=e.match(/^-\s+(.+?)\s*:\s*(\d+)$/);return t?{label:t[1],value:parseInt(t[2])}:null}).filter(Boolean),l=r.length;return r.push({title:a,bars:c,footnote:s}),`BARCHART_PLACEHOLDER_${l}`}),o=o.replace(/:::line-chart\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(`
+`).filter(Boolean),r=e=>{let t=n.find(t=>t.startsWith(`${e}:`));return t?t.replace(RegExp(`^${e}:\\s*`),``).trim():void 0},a=r(`title`)??``,o=r(`x-label`),s=r(`y-label`),c=r(`footnote`),l=n.filter(e=>e.startsWith(`series:`)).map(e=>e.replace(/^series:\s*/,``).trim()),u=n.filter(e=>e.startsWith(`- `)).map(e=>{let t=e.match(/^-\s+(.+?)\s*:\s*(.+)$/);return t?{x:t[1].trim(),values:t[2].split(`,`).map(e=>parseFloat(e.trim()))}:null}).filter(Boolean),d=i.length;return i.push({title:a,xLabel:o,yLabel:s,series:l,points:u,footnote:c}),`LINECHART_PLACEHOLDER_${d}`}),o=o.replace(/:::image-row\n([\s\S]*?):::/g,(e,t)=>{let r=t.trim().split(`
+`).filter(Boolean).map(e=>{let t=e.match(/^!\[([^\]]*)\]\(([^)]*)\)$/);return t?{caption:t[1],src:t[2]}:{caption:e,src:``}}),i=n.length;return n.push({images:r}),`IMAGEROW_PLACEHOLDER_${i}`}),o=o.replace(/:::quote-carousel\n([\s\S]*?):::/g,(e,n)=>{let r=n.trim().split(/\n---\n/).map(e=>{let t=e.trim().split(`
+`),n=t.findIndex(e=>e.startsWith(`— `));return{text:(n>-1?t.slice(0,n):t).join(` `).replace(/^> /,``).trim(),attribution:n>-1?t[n].replace(/^— /,``).trim():void 0}}),i=t.length;return t.push({quotes:r}),`CAROUSEL_PLACEHOLDER_${i}`});let s=[];o=o.replace(/:::split-table\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(`
+`),r=``,i=``,a=[],o=[],c=null;for(let e of n){let t=e.match(/^left-heading:\s*(.+)$/),n=e.match(/^right-heading:\s*(.+)$/);if(t){r=t[1],c=`left`;continue}if(n){i=n[1],c=`right`;continue}e.trim().startsWith(`- `)&&c===`left`&&a.push(e.replace(/^-\s+/,``).trim()),e.trim().startsWith(`- `)&&c===`right`&&o.push(e.replace(/^-\s+/,``).trim())}let l=s.length;return s.push({left:{heading:r,items:a},right:{heading:i,items:o}}),`SPLIT_TABLE_PLACEHOLDER_${l}`});let c=[];o=o.replace(/:::references\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(`
+`).filter(e=>e.trim().startsWith(`- `)).map(e=>e.replace(/^-\s+/,``).trim()),r=c.length;return c.push({items:n}),`REFERENCES_PLACEHOLDER_${r}`});let l=[];return o=o.replace(/:::card-grid\n([\s\S]*?):::/g,(e,t)=>{let n=t.trim().split(/\n---\n/).map(e=>{let t=e.trim().split(`
+`),n=``,r,i=[];for(let e of t){let t=e.match(/^title:\s*(.+)$/),a=e.match(/^tag:\s*(.+)$/);if(t){n=t[1].trim();continue}if(a){r=a[1].trim();continue}i.push(e)}return{title:n,tag:r,body:i.join(` `).trim()}}),r=l.length;return l.push({cards:n}),`CARD_GRID_PLACEHOLDER_${r}`}),o=o.replace(/:::case-study-separator:::/g,`CASE_STUDY_SEPARATOR`),(0,j.jsx)(`article`,{className:`max-w-2xl`,children:o.split(/\n\n+/).map((e,o)=>{let u=e.trim();if(!u)return null;if(u===`CASE_STUDY_SEPARATOR`)return(0,j.jsx)(Ti,{},o);let d=u.match(/^REFERENCES_PLACEHOLDER_(\d+)$/);if(d){let e=c[parseInt(d[1])];return(0,j.jsx)(Ei,{items:e.items},o)}let f=u.match(/^BARCHART_PLACEHOLDER_(\d+)$/);if(f){let e=r[parseInt(f[1])];return(0,j.jsx)(Si,{title:e.title,bars:e.bars,footnote:e.footnote},o)}let p=u.match(/^LINECHART_PLACEHOLDER_(\d+)$/);if(p){let e=i[parseInt(p[1])];return(0,j.jsx)(Ci,{title:e.title,xLabel:e.xLabel,yLabel:e.yLabel,series:e.series,points:e.points,footnote:e.footnote},o)}let m=u.match(/^SPLIT_TABLE_PLACEHOLDER_(\d+)$/);if(m){let e=s[parseInt(m[1])];return(0,j.jsx)(wi,{left:e.left,right:e.right},o)}let h=u.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/);if(h){let e=t[parseInt(h[1])];return(0,j.jsx)(yi,{quotes:e.quotes},o)}let g=u.match(/^IMAGEROW_PLACEHOLDER_(\d+)$/);if(g){let e=n[parseInt(g[1])];return(0,j.jsx)(bi,{images:e.images},o)}let _=u.match(/^CASCADE_LIST_PLACEHOLDER_(\d+)$/);if(_){let e=a[parseInt(_[1])];return(0,j.jsx)(Di,{items:e.items},o)}let v=u.match(/^CARD_GRID_PLACEHOLDER_(\d+)$/);if(v){let e=l[parseInt(v[1])];return(0,j.jsx)(Oi,{cards:e.cards},o)}let y=u.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s);if(y)return(0,j.jsx)(vi,{children:N(y[2])},o);let b=u.match(/^## (.+)/);if(b)return(0,j.jsx)(di,{id:Ai(b[1]),children:b[1]},o);let x=u.match(/^!\[([^\]]*)\]\(([^)]*)\)$/);if(x){let e=x[1].endsWith(`|full`),t=e?x[1].slice(0,-5):x[1];return x[2]?(0,j.jsx)(_i,{src:x[2],caption:t,full:e},o):(0,j.jsx)(xi,{caption:t},o)}let ee=u.match(/^### (.+)/);if(ee)return(0,j.jsx)(fi,{id:Ai(ee[1]),children:ee[1]},o);let S=u.match(/^# (.+)/);if(S)return(0,j.jsx)(di,{id:Ai(S[1]),children:S[1]},o);if(u.startsWith(`- `)||u.startsWith(`* `))return(0,j.jsx)(`ul`,{className:`list-disc list-inside text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5 space-y-1 pl-2`,children:u.split(`
+`).filter(e=>e.trim().startsWith(`- `)||e.trim().startsWith(`* `)).map((e,t)=>(0,j.jsx)(`li`,{children:N(e.replace(/^[-*]\s+/,``))},t))},o);if(/^\d+\.\s/.test(u))return(0,j.jsx)(`div`,{className:`my-6 flex flex-col gap-3`,children:u.split(`
+`).filter(e=>/^\d+\.\s/.test(e.trim())).map((e,t)=>(0,j.jsxs)(`div`,{className:`flex gap-4`,children:[(0,j.jsx)(`div`,{className:`flex-shrink-0 w-7 h-7 bg-gold-500 flex items-center justify-center text-black text-[11px] font-bold`,children:t+1}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-base md:text-[17px] leading-[1.85] pt-0.5`,children:N(e.replace(/^\d+\.\s+/,``))})]},t))},o);if(u.startsWith(`|`)){let e=u.split(`
+`).filter(e=>e.trim().startsWith(`|`)).map(e=>e.split(`|`).slice(1,-1).map(e=>e.trim())),t=e=>e.every(e=>/^[-: ]+$/.test(e)),n=e[0],r=e.slice(1).filter(e=>!t(e));return(0,j.jsxs)(`div`,{className:`my-8 border border-white/10`,children:[(0,j.jsx)(`div`,{className:`md:hidden divide-y divide-white/5`,children:r.map((e,t)=>(0,j.jsx)(`div`,{className:`p-4 flex flex-col gap-3`,children:e.map((e,t)=>e?(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1`,children:n[t]}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-300 leading-relaxed`,children:N(e)})]},t):null)},t))}),(0,j.jsx)(`div`,{className:`hidden md:block overflow-x-auto`,children:(0,j.jsxs)(`table`,{className:`w-full text-sm`,children:[(0,j.jsx)(`thead`,{children:(0,j.jsx)(`tr`,{className:`bg-white/[0.04] border-b border-white/10`,children:n.map((e,t)=>(0,j.jsx)(`th`,{className:`text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium`,children:e},t))})}),(0,j.jsx)(`tbody`,{className:`divide-y divide-white/5`,children:r.map((e,t)=>(0,j.jsx)(`tr`,{className:`hover:bg-white/[0.02]`,children:e.map((e,t)=>(0,j.jsx)(`td`,{className:`px-4 py-3 text-charcoal-300 align-top`,children:N(e)},t))},t))})]})})]},o)}if(u.startsWith(`> `)){let e=u.split(`
+`).map(e=>e.replace(/^> /,``)),t=e.findIndex(e=>e.startsWith(`— `)),n=(t>-1?e.slice(0,t):e).join(` `),r=t>-1?e[t].replace(/^— /,``):null;return(0,j.jsxs)(`div`,{className:`my-10 border-l-4 border-gold-500 pl-6 md:pl-8 py-2`,children:[(0,j.jsx)(xr,{size:24,className:`text-gold-500/40 mb-3`}),(0,j.jsx)(`p`,{className:`text-xl md:text-2xl text-white font-medium leading-snug italic`,style:{fontFamily:`'Playfair Display', serif`},children:n}),r&&(0,j.jsxs)(`p`,{className:`text-[11px] tracking-widest uppercase text-gold-500 mt-4 font-medium`,children:[`— `,r]})]},o)}return(0,j.jsx)(`p`,{className:`text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5`,children:N(u)},o)})})}function Mi({article:e}){return e.body?(0,j.jsx)(ji,{body:e.body}):(0,j.jsx)(Ni,{})}function Ni(){return(0,j.jsxs)(`article`,{className:`max-w-2xl`,children:[(0,j.jsxs)(`p`,{className:`text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5`,style:{position:`relative`},children:[(0,j.jsx)(`span`,{className:`float-left text-[5.5rem] font-bold text-gold-500 leading-[0.8] mr-3 mt-2 select-none`,style:{fontFamily:`'Playfair Display', serif`},"aria-hidden":`true`,children:`C`}),`opper hair isn't new, but what's happening to it right now is. This isn't the brassy, over-processed orange of 2008. The 2026 version is something altogether more intentional: warm, dimensional, deeply saturated at the root and feathered into molten gold at the ends. It reads editorial in the chair and natural in the street.`]}),(0,j.jsx)(pi,{children:`The shift started quietly. A handful of top colorists posting client work featuring cognac, auburn, and spiced-peach blends. Then brands started pushing copper-adjacent shades in their new collections. By February 2026, search trends for "copper balayage" and "rust hair" had tripled year-over-year. Now every client wants it, and the good stylists are already fluent in it.`}),(0,j.jsx)(mi,{quote:`Copper is the perfect intersection of wearable and editorial. It works on every skin tone if you understand undertones.`,attribution:`Lucia Vargas, Celebrity Colorist, Los Angeles`}),(0,j.jsx)(di,{id:`why-copper-works`,children:`Why Copper Works on Every Client`}),(0,j.jsx)(pi,{children:`The genius of the copper family is its versatility. Unlike cool-toned blondes or pure blacks, copper tones have warm undertones that complement nearly every complexion, they just need to be calibrated correctly. A client with cool undertones wears a deeper, more muted auburn. Warm undertones? Push toward the bright, almost electric cognac. Neutral? The classic 7/43-based formula lands perfectly.`}),(0,j.jsx)(pi,{children:`This is something colorist Marcus Bell has been preaching for years from his London studio. "I've never had a client walk out unhappy with a copper that was chosen for them but not applied to them," he says. "The consultation is everything. We're looking at skin, eye color, even their wardrobe. Copper is a system, not a formula."`}),(0,j.jsx)(hi,{title:`Read undertones before mixing`,children:`Check the inside of the wrist and the neck hairline. Blue veins = cool; green veins = warm; both = neutral. Use this to skew your copper warmer or cooler by adjusting the red-to-gold ratio.`}),(0,j.jsx)(_i,{src:li,caption:`A warm cognac balayage by Marcus Bell, shot in natural light. Note the seamless melt from root shadow to mid-shaft copper.`}),(0,j.jsx)(di,{id:`the-formula-breakdown`,children:`The Formula Breakdown`}),(0,j.jsx)(pi,{children:`While every colorist adapts their formula to the client, a reliable starting base has emerged from the conversations we had with 10 professionals for this piece. Here is the foundation. Adjust developer strength based on existing hair condition:`}),(0,j.jsx)(`div`,{className:`my-8 border border-white/10 overflow-x-auto`,children:(0,j.jsxs)(`table`,{className:`w-full text-sm`,children:[(0,j.jsx)(`thead`,{children:(0,j.jsxs)(`tr`,{className:`bg-white/[0.04] border-b border-white/10`,children:[(0,j.jsx)(`th`,{className:`text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium`,children:`Product`}),(0,j.jsx)(`th`,{className:`text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium`,children:`Shade`}),(0,j.jsx)(`th`,{className:`text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium`,children:`Amount`})]})}),(0,j.jsx)(`tbody`,{className:`divide-y divide-white/5`,children:ki.map((e,t)=>(0,j.jsxs)(`tr`,{className:`hover:bg-white/[0.02]`,children:[(0,j.jsx)(`td`,{className:`px-4 py-3 text-charcoal-300`,children:e.col1}),(0,j.jsx)(`td`,{className:`px-4 py-3 text-charcoal-300`,children:e.col2}),(0,j.jsx)(`td`,{className:`px-4 py-3 text-charcoal-400`,children:e.col3})]},t))})]})}),(0,j.jsx)(fi,{id:`application-technique`,children:`Application Technique`}),(0,j.jsx)(pi,{children:`The placement is what separates a dated copper from a current one. Forget uniform application. The modern approach is a hybrid: shadow root for depth, with freehand balayage panels through the mid-shaft and ends to create dimension and movement.`}),(0,j.jsx)(gi,{steps:[{step:1,title:`Shadow the root zone (0–3 inches)`,body:`Mix 1 part copper with 1 part a neutral brown one level darker than target. Apply directly to root zone with no foil. This creates a seamless, lived-in base.`},{step:2,title:`Freehand panels, mid-shaft to ends`,body:`Using a balayage board, saturate the backcombed mid-shaft sections with your main copper formula. Work diagonal-back sections for the most natural result.`},{step:3,title:`Foil highlights, optional brightness`,body:`On clients requesting maximum vibrancy, place 4–6 fine foils at the face-frame and part line. Use a one shade lighter copper formula here.`},{step:4,title:`Tone at the bowl`,body:`After rinsing, apply a clear or peach gloss for 10 minutes to close the cuticle and add mirror shine. This is non-negotiable for the glass-copper finish.`}]}),(0,j.jsx)(_i,{src:ui,caption:`The finished result: a copper balayage with glass-finish toning. Client: Zara T., photographed by Studio Lumen.`}),(0,j.jsx)(di,{id:`selling-the-maintenance-story`,children:`Selling the Maintenance Story`}),(0,j.jsx)(pi,{children:`Copper fades faster than cool tones, and that's actually a selling point if you frame it right. Colorist Dana Reeves has made copper her bread and butter by building a "copper journey" program at her Nashville suite. Clients book in every 8 weeks, and between visits, they use a copper-depositing conditioner she retails.`}),(0,j.jsx)(mi,{quote:`I don't sell copper as a color. I sell it as a season-long transformation. They leave the first appointment warm and bright. By the third, they're a rich, burnished auburn. Clients are addicted.`,attribution:`Dana Reeves, Salon Business Coach, Nashville, TN`}),(0,j.jsx)(pi,{children:`The retail angle alone can add $40–$80 per visit. Combined with the rebooking frequency copper naturally demands, this single color specialization has real revenue potential for working stylists.`}),(0,j.jsx)(pi,{children:`The bottom line: copper in 2026 is not a trend to chase. It's a skill to own. Learn the undertone system, build a signature formula, and position it as a premium service. Your clients are already asking for it. The stylists who master it this year will still be the go-to for it in 2030.`}),(0,j.jsx)(`div`,{className:`mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-2`,children:[`Copper Color`,`Balayage`,`Color Formulas`,`Techniques`,`Trending`,`Business Strategy`].map(e=>(0,j.jsx)(`a`,{href:`#`,className:`text-[10px] tracking-widest uppercase border border-white/10 text-charcoal-400 hover:border-gold-500 hover:text-gold-500 transition-colors px-3 py-1.5`,children:e},e))})]})}var Pi=[{id:`why-copper-works`,label:`Why Copper Works`},{id:`the-formula-breakdown`,label:`The Formula`},{id:`application-technique`,label:`Application Technique`},{id:`selling-the-maintenance-story`,label:`Selling Maintenance`}];function Fi(e){return e.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/(^-|-$)/g,``)}var Ii=new Set(`find-right-stylist.brunette-glazing.vivid-color-guide.haircut-layers.layers-thin-hair.what-is-balayage.stylist-notices-thinning.gua-sha-scalp.low-maintenance-color.at-home-hair-care.busiest-stylists-system.smoothing-products-stylists-use.what-stylist-sees-when-you-sit-down.gdragon-hairstyles-stylists-reference.2026-met-gala-best-hair-looks.mothers-day-effortless-hairstyles.history-of-hair-color.slick-back-bun.fine-frizzy-wavy-hair.wolf-cut-2026.solo-stylist-blueprint.mens-haircuts-hot-guy-energy.bangs-guide-2026.female-hair-loss-stylist-guide.french-open-tennis-hairstyles.NOVOGRO™-vs-minoxidil.what-your-hair-says-about-you-sex-and-the-city.wet-look-hair-chic-not-greasy.finasteride-vs-novogro-women-hair-loss.french-bob-every-face-shape`.split(`.`));function Li(e){if(!e.body)return Pi;let t=Ii.has(e.slug)?/^##\s+(?!#)(.+)$/gm:/^###\s+(.+)$/gm,n=[...e.body.matchAll(t)];return n.length===0?Pi:n.map(e=>({id:Fi(e[1]),label:e[1]}))}var Ri=[{label:`Copy Link`,icon:vr,action:`copy`},{label:`X / Twitter`,icon:hr,action:`twitter`},{label:`Facebook`,icon:hr,action:`facebook`},{label:`Instagram`,icon:hr,action:`instagram`}];function P({article:e}){let[t,n]=(0,_.useState)(!1),[r,i]=(0,_.useState)(``),a=Li(e);(0,_.useEffect)(()=>{let e=[];return a.forEach(({id:t})=>{let n=document.getElementById(t);if(!n)return;let r=new IntersectionObserver(([e])=>{e.isIntersecting&&i(t)},{rootMargin:`-20% 0px -70% 0px`});r.observe(n),e.push(r)}),()=>e.forEach(e=>e.disconnect())},[a]);let o=e=>{let t=encodeURIComponent(window.location.href);e===`copy`?(navigator.clipboard.writeText(window.location.href).catch(()=>{}),n(!0),setTimeout(()=>n(!1),2e3)):e===`twitter`?window.open(`https://twitter.com/intent/tweet?url=${t}`,`_blank`,`noopener,noreferrer`):e===`facebook`?window.open(`https://www.facebook.com/sharer/sharer.php?u=${t}`,`_blank`,`noopener,noreferrer`):e===`instagram`&&(navigator.clipboard.writeText(window.location.href).catch(()=>{}),n(!0),setTimeout(()=>n(!1),2e3),window.open(`https://www.instagram.com/hairprovoices/`,`_blank`,`noopener,noreferrer`))};return(0,j.jsxs)(`div`,{className:`lg:sticky lg:top-6 flex flex-col gap-8`,children:[(0,j.jsxs)(`div`,{className:`hidden lg:block border border-white/10 p-5`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4`,children:`In This Article`}),(0,j.jsx)(`nav`,{className:`flex flex-col gap-1`,children:a.map(e=>(0,j.jsxs)(`a`,{href:`#${e.id}`,className:`flex items-center gap-3 text-xs tracking-wide py-1.5 transition-colors group ${r===e.id?`text-gold-500`:`text-charcoal-500 hover:text-charcoal-200`}`,children:[(0,j.jsx)(`span`,{className:`w-4 h-0.5 flex-shrink-0 transition-colors ${r===e.id?`bg-gold-500`:`bg-charcoal-700 group-hover:bg-charcoal-500`}`}),e.label]},e.id))})]}),(0,j.jsxs)(`div`,{className:`border border-white/10 p-5`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4`,children:`Share This Story`}),(0,j.jsx)(`div`,{className:`grid grid-cols-2 gap-2`,children:Ri.map(({label:e,icon:n,action:r})=>(0,j.jsxs)(`button`,{onClick:()=>o(r),className:`flex items-center gap-2 text-[10px] tracking-wider uppercase text-charcoal-400 hover:text-white border border-white/10 hover:border-white/30 px-3 py-2 transition-colors`,children:[(0,j.jsx)(n,{size:11}),r===`copy`&&t?`Copied!`:e]},e))})]}),(0,j.jsxs)(`div`,{className:`p-5 relative overflow-hidden`,style:{background:`linear-gradient(135deg, #1a1a0a 0%, #0d0d0d 100%)`,border:`1px solid rgba(201, 168, 76, 0.2)`},children:[(0,j.jsx)(`div`,{className:`absolute top-0 right-0 w-24 h-24 bg-gold-500/5 rounded-full blur-2xl pointer-events-none`}),(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-2`,children:`Newsletter`}),(0,j.jsxs)(`p`,{className:`text-sm font-semibold text-white mb-1`,style:{fontFamily:`'Playfair Display', serif`},children:[`Get weekly color`,(0,j.jsx)(`br`,{}),`trends in your inbox`]}),(0,j.jsx)(`p`,{className:`text-xs text-charcoal-500 mb-4`,children:`Join 85,000+ stylists.`}),(0,j.jsxs)(`div`,{className:`flex`,children:[(0,j.jsx)(`input`,{type:`email`,placeholder:`your@email.com`,className:`flex-1 bg-white/5 border border-white/10 text-white placeholder-charcoal-600 px-3 py-2 text-xs outline-none focus:border-gold-500/50 transition-colors min-w-0`}),(0,j.jsx)(`button`,{className:`bg-gold-500 hover:bg-gold-400 text-black px-3 py-2 text-[10px] font-bold tracking-wider transition-colors flex-shrink-0`,children:`Go`})]})]})]})}var F=`https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=80&auto=format&fit=crop&facepad=3`;function zi(e){return e.toLowerCase().replace(/\s+/g,`-`)}function Bi({article:e}){let t=Mr[e.author],n=t?.name??e.author,r=t?.title??`Contributor`,i=t?.bio??`${n} is a contributor to HairProVoices, covering ${e.category.toLowerCase()} and professional hair industry topics.`,a=t?.image??F,o=zi(n);return(0,j.jsxs)(`div`,{className:`mt-14 pt-8 border-t border-white/10`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-charcoal-600 mb-6`,children:`About the Author`}),(0,j.jsxs)(`div`,{className:`flex flex-col sm:flex-row gap-6 bg-white/[0.03] border border-white/8 p-6`,children:[(0,j.jsx)(`div`,{className:`flex-shrink-0`,children:(0,j.jsx)(k,{to:`/author/${o}`,children:(0,j.jsx)(`div`,{className:`w-20 h-20 rounded-full overflow-hidden ring-2 ring-gold-500/20 hover:ring-gold-500/60 transition-all`,children:(0,j.jsx)(`img`,{src:a,alt:n,className:`w-full h-full object-cover object-top`})})})}),(0,j.jsxs)(`div`,{className:`flex flex-col gap-2`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(k,{to:`/author/${o}`,className:`text-lg font-bold text-white hover:text-gold-500 transition-colors`,style:{fontFamily:`'Playfair Display', serif`},children:n}),(0,j.jsxs)(`p`,{className:`text-[10px] tracking-widest uppercase text-gold-500 mt-0.5 font-medium`,children:[r,` · HairProVoices`]})]}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed`,children:i}),(0,j.jsx)(`div`,{className:`flex items-center gap-4 mt-2`,children:(0,j.jsxs)(k,{to:`/author/${o}`,className:`text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors flex items-center gap-1`,children:[`All Articles `,(0,j.jsx)(ar,{size:9})]})})]})]})]})}function Vi(e,t){let n=0;for(let e=0;e<t.length;e++)n=Math.imul(31,n)+t.charCodeAt(e)|0;let r=[...e];for(let e=r.length-1;e>0;e--){n=Math.imul(n^n>>>16,73244475)|0,n=Math.imul(n^n>>>16,73244475)|0;let t=Math.abs(n)%(e+1);[r[e],r[t]]=[r[t],r[e]]}return r}function Hi({currentSlug:e}){let t=Vi(Nr.filter(t=>t.slug!==e),e).slice(0,3);return(0,j.jsx)(`section`,{className:`bg-black py-16 lg:py-20 border-t border-white/5`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4`,children:[(0,j.jsxs)(`div`,{className:`flex items-center justify-between mb-10`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-4`,children:[(0,j.jsx)(`div`,{className:`w-8 h-0.5 bg-gold-500`}),(0,j.jsx)(`h2`,{className:`text-lg font-bold tracking-widest uppercase text-white`,style:{fontFamily:`'Playfair Display', serif`},children:`You May Also Like`})]}),(0,j.jsxs)(k,{to:`/articles`,className:`hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors`,children:[`All Articles `,(0,j.jsx)(ar,{size:12})]})]}),(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-3 gap-8`,children:t.map(e=>(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`group flex flex-col cursor-pointer card-hover`,children:[(0,j.jsx)(`div`,{className:`overflow-hidden aspect-[3/2]`,children:(0,j.jsx)(`img`,{src:e.image,alt:e.title,className:`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`})}),(0,j.jsxs)(`div`,{className:`pt-4 flex flex-col gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-[0.25em] uppercase text-gold-500 font-semibold`,children:e.tag}),(0,j.jsx)(`h3`,{className:`text-lg font-bold text-charcoal-100 group-hover:text-white transition-colors leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-500 leading-relaxed line-clamp-2`,children:e.excerpt}),(0,j.jsxs)(`div`,{className:`flex items-center justify-between mt-1`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-2 text-[10px] text-charcoal-500`,children:[(0,j.jsx)(`span`,{className:`font-medium text-charcoal-400`,children:e.author}),(0,j.jsx)(`span`,{children:`·`}),(0,j.jsxs)(`span`,{children:[e.readTime,` read`]})]}),(0,j.jsx)(ar,{size:14,className:`text-charcoal-600 group-hover:text-gold-500 group-hover:translate-x-1 transition-all`})]})]})]},e.title))})]})})}var Ui=new Set(`find-right-stylist.brunette-glazing.vivid-color-guide.haircut-layers.layers-thin-hair.what-is-balayage.stylist-notices-thinning.gua-sha-scalp.low-maintenance-color.at-home-hair-care.busiest-stylists-system.smoothing-products-stylists-use.what-stylist-sees-when-you-sit-down.gdragon-hairstyles-stylists-reference.2026-met-gala-best-hair-looks.mothers-day-effortless-hairstyles.history-of-hair-color.slick-back-bun.fine-frizzy-wavy-hair.wolf-cut-2026.solo-stylist-blueprint.mens-haircuts-hot-guy-energy.bangs-guide-2026.female-hair-loss-stylist-guide.french-open-tennis-hairstyles.NOVOGRO™-vs-minoxidil.wet-look-hair-chic-not-greasy.finasteride-vs-novogro-women-hair-loss.french-bob-every-face-shape.head-spa-salon-revenue-opportunity`.split(`.`));function Wi(e){return e.toLowerCase().replace(/[^a-z0-9]+/g,`-`).replace(/(^-|-$)/g,``)}var Gi=[{id:`why-copper-works`,label:`Why Copper Works`},{id:`the-formula-breakdown`,label:`The Formula`},{id:`application-technique`,label:`Application`},{id:`selling-the-maintenance-story`,label:`Maintenance`}];function Ki(e){if(!e.body)return e.slug===`copper-renaissance-2026`?Gi:[];let t=Ui.has(e.slug)?/^##\s+(?!#)(.+)$/gm:/^###\s+(.+)$/gm;return[...e.body.matchAll(t)].map(e=>({id:Wi(e[1]),label:e[1]}))}function qi({article:e}){let[t,n]=(0,_.useState)(``),r=(0,_.useRef)(null),i=(0,_.useRef)(null),a=(0,_.useRef)(null),o=Ki(e);(0,_.useEffect)(()=>{let e=[];return o.forEach(({id:t})=>{let r=document.getElementById(t);if(!r)return;let i=new IntersectionObserver(([e])=>{e.isIntersecting&&n(t)},{rootMargin:`-20% 0px -70% 0px`});i.observe(r),e.push(i)}),()=>e.forEach(e=>e.disconnect())},[o]),(0,_.useEffect)(()=>{r.current&&i.current&&r.current.scrollIntoView({behavior:`smooth`,block:`nearest`,inline:`center`})},[t]);let s=(e,t)=>{e.preventDefault();let n=document.getElementById(t);if(!n)return;let r=a.current?.offsetHeight??0,i=n.getBoundingClientRect().top+window.scrollY-r-64-1;window.scrollTo({top:i,behavior:`smooth`})};return o.length===0?null:(0,j.jsx)(`div`,{ref:a,className:`lg:hidden sticky top-0 z-40 bg-black/95 backdrop-blur border-b border-white/10`,children:(0,j.jsx)(`div`,{ref:i,className:`flex items-center gap-2 overflow-x-auto px-4 py-3 scrollbar-none`,style:{scrollbarWidth:`none`,msOverflowStyle:`none`},children:o.map(e=>{let n=t===e.id;return(0,j.jsx)(`a`,{href:`#${e.id}`,ref:n?r:null,onClick:t=>s(t,e.id),className:`flex-shrink-0 text-[10px] tracking-wide px-3 py-1 border transition-colors whitespace-nowrap ${n?`border-gold-500 text-gold-500 bg-gold-500/10`:`border-white/10 text-charcoal-400 hover:text-white hover:border-white/30`}`,children:e.label},e.id)})})})}function Ji(){let{slug:e}=pt(),t=e?Pr(e):void 0;return t?(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(ci,{article:t}),(0,j.jsx)(qi,{article:t}),(0,j.jsx)(`div`,{className:`bg-charcoal-950`,children:(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:(0,j.jsxs)(`div`,{className:`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14`,children:[(0,j.jsxs)(`div`,{className:`lg:col-span-8`,children:[(0,j.jsx)(Mi,{article:t}),(0,j.jsx)(Bi,{article:t})]}),(0,j.jsx)(`aside`,{className:`lg:col-span-4`,children:(0,j.jsx)(P,{article:t})})]})})}),(0,j.jsx)(Hi,{currentSlug:t.slug}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]}):(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100 flex flex-col items-center justify-center gap-4`,children:[(0,j.jsx)(`p`,{className:`text-2xl font-bold`,style:{fontFamily:`'Playfair Display', serif`},children:`Article not found`}),(0,j.jsx)(k,{to:`/`,className:`text-gold-500 hover:underline text-sm tracking-widest uppercase`,children:`← Back to Home`})]})}var Yi=Nr.filter(e=>e.slug!==`what-is-balayage-old`),Xi=[`All`,`Trends`,`Inspiration`,`Hair Care`],Zi={All:[`All`,`Color`,`Technique`,`Cut & Style`,`Texture`,`Tips`,`Business`,`Products`,`Hair Thinning`,`At-Home Tips`],Trends:[`All`,`Color`,`Technique`,`Cut & Style`,`Texture`],Inspiration:[`All`,`Tips`,`Business`],"Hair Care":[`All`,`Products`,`Hair Thinning`,`At-Home Tips`]};function Qi(){let[e,t]=zn(),n=e.get(`section`)??`All`,r=e.get(`category`)??`All`,i=e=>{t(e===`All`?{}:{section:e})},a=e=>{let r={};n!==`All`&&(r.section=n),e!==`All`&&(r.category=e),t(r)},o=Zi[n]??Zi.All,s=Yi.filter(e=>{let t=n===`All`||e.section===n,i=r===`All`||e.category===r;return t&&i});return(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`div`,{className:`border-b border-white/10`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-4`,children:[(0,j.jsx)(`div`,{className:`h-px bg-gold-500 w-8`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`HairProVoices`})]}),(0,j.jsx)(`h1`,{className:`text-3xl md:text-4xl font-bold text-white mb-2`,style:{fontFamily:`'Playfair Display', serif`},children:`All Articles`}),(0,j.jsxs)(`p`,{className:`text-sm text-charcoal-400`,children:[s.length,` pieces from our contributors`]})]})}),(0,j.jsxs)(`div`,{className:`border-b border-white/10 sticky top-0 z-40 bg-charcoal-950`,children:[(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 border-b border-white/5`,children:(0,j.jsx)(`div`,{className:`flex items-center gap-1 py-3 overflow-x-auto scrollbar-none`,style:{scrollbarWidth:`none`},children:Xi.map(e=>(0,j.jsx)(`button`,{onClick:()=>i(e),className:`flex-shrink-0 px-5 py-1.5 text-[11px] tracking-widest uppercase font-semibold transition-colors ${n===e?`text-white border-b-2 border-gold-500`:`text-charcoal-500 hover:text-charcoal-200`}`,children:e},e))})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4`,children:(0,j.jsx)(`div`,{className:`flex items-center gap-1 overflow-x-auto py-3 scrollbar-none`,style:{scrollbarWidth:`none`},children:o.map(e=>(0,j.jsx)(`button`,{onClick:()=>a(e),className:`flex-shrink-0 px-4 py-1.5 text-[10px] tracking-widest uppercase font-medium transition-colors border ${r===e?`bg-gold-500 text-black border-gold-500`:`text-charcoal-400 border-white/10 hover:text-white hover:border-white/30`}`,children:e},e))})})]}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5`,children:s.map(e=>(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors`,children:[(0,j.jsx)(`div`,{className:`overflow-hidden aspect-[16/9]`,children:(0,j.jsx)(`img`,{src:e.image,alt:e.title,className:`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105`})}),(0,j.jsxs)(`div`,{className:`flex flex-col gap-2`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase text-gold-500 font-medium`,children:e.tag}),(0,j.jsx)(`span`,{className:`text-charcoal-700`,children:`·`}),(0,j.jsx)(`span`,{className:`text-[10px] text-charcoal-500`,children:e.date})]}),(0,j.jsx)(`h2`,{className:`text-base font-bold text-charcoal-100 group-hover:text-white transition-colors leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-500 leading-relaxed line-clamp-2`,children:e.excerpt}),(0,j.jsxs)(`div`,{className:`flex items-center gap-2 text-[10px] text-charcoal-600 mt-1`,children:[(0,j.jsx)(`span`,{children:e.author}),(0,j.jsx)(`span`,{children:`·`}),(0,j.jsxs)(`span`,{children:[e.readTime,` read`]})]})]})]},e.slug))})}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]})}function $i(){let{slug:e}=pt(),t=e?Object.values(Mr).find(t=>t.name.toLowerCase().replace(/\s+/g,`-`)===e.toLowerCase()):void 0,n=Nr.filter(t=>t.author.toLowerCase().replace(/\s+/g,`-`)===(e??``).toLowerCase());return t?(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`div`,{className:`border-b border-white/10`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-14 lg:py-20`,children:[(0,j.jsx)(k,{to:`/contributors`,className:`inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors mb-8`,children:`← All Contributors`}),(0,j.jsxs)(`div`,{className:`flex flex-col sm:flex-row gap-8 items-start sm:items-center`,children:[(0,j.jsx)(`div`,{className:`w-24 h-24 rounded-full overflow-hidden ring-2 ring-gold-500/30 flex-shrink-0`,children:(0,j.jsx)(`img`,{src:t.image,alt:t.name,className:`w-full h-full object-cover object-top`})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-2`,children:`Contributor`}),(0,j.jsx)(`h1`,{className:`text-3xl md:text-4xl font-bold text-white mb-1`,style:{fontFamily:`'Playfair Display', serif`},children:t.name}),(0,j.jsxs)(`p`,{className:`text-[11px] tracking-widest uppercase text-charcoal-400 mb-4`,children:[t.title,` · HairProVoices`]}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed max-w-2xl`,children:t.bio})]})]})]})}),(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:[(0,j.jsxs)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-8`,children:[`Articles by `,t.name,`: `,n.length,` `,n.length===1?`piece`:`pieces`]}),n.length===0?(0,j.jsx)(`p`,{className:`text-charcoal-500 text-sm`,children:`No articles found.`}):(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5`,children:n.map(e=>(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors`,children:[(0,j.jsx)(`div`,{className:`overflow-hidden aspect-[16/9]`,children:(0,j.jsx)(`img`,{src:e.image,alt:e.title,className:`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105`})}),(0,j.jsxs)(`div`,{className:`flex flex-col gap-2`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase text-gold-500 font-medium`,children:e.tag}),(0,j.jsx)(`span`,{className:`text-charcoal-700`,children:`·`}),(0,j.jsx)(`span`,{className:`text-[10px] text-charcoal-500`,children:e.date})]}),(0,j.jsx)(`h2`,{className:`text-base font-bold text-charcoal-100 group-hover:text-white transition-colors leading-snug`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-500 leading-relaxed line-clamp-2`,children:e.excerpt}),(0,j.jsxs)(`span`,{className:`text-[10px] text-charcoal-600 mt-1`,children:[e.readTime,` read`]})]})]},e.slug))})]}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]}):(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100 flex flex-col items-center justify-center gap-4`,children:[(0,j.jsx)(`p`,{className:`text-2xl font-bold`,style:{fontFamily:`'Playfair Display', serif`},children:`Author not found`}),(0,j.jsx)(k,{to:`/`,className:`text-gold-500 hover:underline text-sm tracking-widest uppercase`,children:`← Back to Home`})]})}var ea=[`All`,`Color`,`Cut`,`Styling`,`Transformations`];function ta(){let[e,t]=(0,_.useState)(`All`),[n,r]=(0,_.useState)(new Set),i=e===`All`?Gr:Gr.filter(t=>t.category===e),a=(e,t)=>{t.preventDefault(),r(t=>{let n=new Set(t);return n.has(e)?n.delete(e):n.add(e),n})};return(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`div`,{className:`border-b border-white/10`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-4`,children:[(0,j.jsx)(`div`,{className:`h-px bg-gold-500 w-8`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`Lookbook`})]}),(0,j.jsx)(`h1`,{className:`text-3xl md:text-4xl font-bold text-white mb-2`,style:{fontFamily:`'Playfair Display', serif`},children:`Gallery`}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400`,children:`Trending looks from our community of stylists`})]})}),(0,j.jsx)(`div`,{className:`border-b border-white/10 sticky top-0 z-40 bg-charcoal-950`,children:(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4`,children:(0,j.jsx)(`div`,{className:`flex items-center gap-1 py-3`,children:ea.map(n=>(0,j.jsx)(`button`,{onClick:()=>t(n),className:`flex-shrink-0 px-4 py-1.5 text-[10px] tracking-widest uppercase font-medium transition-colors border ${e===n?`bg-gold-500 text-black border-gold-500`:`text-charcoal-400 border-white/10 hover:text-white hover:border-white/30`}`,children:n},n))})})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:(0,j.jsx)(`div`,{className:`columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4`,children:i.map(e=>(0,j.jsxs)(`div`,{className:`relative group overflow-hidden cursor-pointer break-inside-avoid`,children:[(0,j.jsx)(`img`,{src:e.src,alt:e.title,className:`w-full object-cover transition-transform duration-500 group-hover:scale-105`}),(0,j.jsxs)(`div`,{className:`absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4`,children:[(0,j.jsx)(`div`,{className:`flex justify-end gap-2`,children:(0,j.jsx)(`button`,{onClick:t=>a(e.id,t),className:`w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm border transition-all ${n.has(e.id)?`bg-red-500/20 border-red-400 text-red-400`:`bg-black/30 border-white/20 text-white hover:border-white/60`}`,children:(0,j.jsx)(gr,{size:12,fill:n.has(e.id)?`currentColor`:`none`})})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`text-white text-sm font-semibold`,style:{fontFamily:`'Playfair Display', serif`},children:e.title}),(0,j.jsx)(`p`,{className:`text-charcoal-300 text-xs mt-0.5`,children:e.stylist}),(0,j.jsxs)(`div`,{className:`flex items-center gap-1 mt-2 text-[10px] text-charcoal-400`,children:[(0,j.jsx)(gr,{size:9}),(0,j.jsx)(`span`,{children:(e.likes+ +!!n.has(e.id)).toLocaleString()})]})]})]}),(0,j.jsx)(`div`,{className:`absolute top-2 left-2`,children:(0,j.jsx)(`span`,{className:`text-[8px] tracking-widest uppercase bg-black/60 backdrop-blur-sm text-charcoal-300 px-2 py-0.5`,children:e.category})})]},e.id))})}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]})}function na(e){return e.toLowerCase().replace(/\s+/g,`-`)}function ra(){let e=Object.values(Mr);return(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`div`,{className:`border-b border-white/10`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-4`,children:[(0,j.jsx)(`div`,{className:`h-px bg-gold-500 w-8`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`HairProVoices`})]}),(0,j.jsx)(`h1`,{className:`text-3xl md:text-4xl font-bold text-white mb-2`,style:{fontFamily:`'Playfair Display', serif`},children:`Our Contributors`}),(0,j.jsxs)(`p`,{className:`text-sm text-charcoal-400`,children:[e.length,` writers, stylists, and industry experts`]})]})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-12 lg:py-16`,children:(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5`,children:e.map(e=>{let t=na(e.name),n=Nr.filter(t=>t.author===e.name&&t.slug!==`what-is-balayage-old`).length,r=Nr.filter(t=>t.author===e.name&&t.slug!==`what-is-balayage-old`).slice(0,2);return(0,j.jsxs)(`div`,{className:`bg-charcoal-950 p-6 flex flex-col gap-5 hover:bg-white/[0.03] transition-colors`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-4`,children:[(0,j.jsx)(k,{to:`/author/${t}`,children:(0,j.jsx)(`div`,{className:`w-16 h-16 rounded-full overflow-hidden ring-2 ring-gold-500/20 hover:ring-gold-500/50 transition-all flex-shrink-0`,children:(0,j.jsx)(`img`,{src:e.image,alt:e.name,className:`w-full h-full object-cover object-top`})})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(k,{to:`/author/${t}`,className:`text-base font-bold text-white hover:text-gold-500 transition-colors`,style:{fontFamily:`'Playfair Display', serif`},children:e.name}),(0,j.jsx)(`p`,{className:`text-[10px] tracking-widest uppercase text-gold-500 mt-0.5`,children:e.title}),(0,j.jsxs)(`p`,{className:`text-[10px] text-charcoal-600 mt-0.5`,children:[n,` `,n===1?`article`:`articles`]})]})]}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-400 leading-relaxed line-clamp-3`,children:e.bio}),r.length>0&&(0,j.jsxs)(`div`,{className:`flex flex-col gap-2 pt-3 border-t border-white/5`,children:[r.map(e=>(0,j.jsxs)(k,{to:`/article/${e.slug}`,className:`group flex items-start gap-2`,children:[(0,j.jsx)(`span`,{className:`text-[9px] tracking-widest uppercase text-gold-500 font-medium mt-0.5 flex-shrink-0`,children:e.tag}),(0,j.jsx)(`span`,{className:`text-xs text-charcoal-400 group-hover:text-white transition-colors leading-snug line-clamp-1`,children:e.title})]},e.slug)),(0,j.jsx)(k,{to:`/author/${t}`,className:`text-[10px] tracking-widest uppercase text-charcoal-600 hover:text-gold-500 transition-colors mt-1`,children:`All articles →`})]})]},e.name)})})}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]})}function ia(){return(0,j.jsxs)(`div`,{className:`min-h-screen bg-charcoal-950 text-charcoal-100`,children:[(0,j.jsx)(M,{}),(0,j.jsx)(Rr,{}),(0,j.jsx)(jr,{}),(0,j.jsxs)(`main`,{children:[(0,j.jsx)(`div`,{className:`border-b border-white/10`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-16 lg:py-24`,children:[(0,j.jsxs)(`div`,{className:`flex items-center gap-3 mb-6`,children:[(0,j.jsx)(`div`,{className:`h-px bg-gold-500 w-8`}),(0,j.jsx)(`span`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-medium`,children:`About`})]}),(0,j.jsxs)(`h1`,{className:`text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl`,style:{fontFamily:`'Playfair Display', serif`},children:[`Written by stylists.`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`em`,{children:`Built for everyone.`})]})]})}),(0,j.jsx)(`div`,{className:`max-w-7xl mx-auto px-4 py-14 lg:py-20`,children:(0,j.jsxs)(`div`,{className:`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20`,children:[(0,j.jsxs)(`div`,{className:`lg:col-span-7`,children:[(0,j.jsx)(`p`,{className:`text-lg md:text-xl text-charcoal-300 leading-relaxed mb-6`,children:`HairProVoices started with a simple frustration: the best hair knowledge lived inside salons, not on the internet. Colorists, curl specialists, and business coaches were sharing hard-won expertise with clients one chair at a time, but none of it was being written down.`}),(0,j.jsx)(`p`,{className:`text-base text-charcoal-400 leading-relaxed mb-6`,children:`We built this publication to change that. Every article on HairProVoices is written or reviewed by a working professional: someone who has spent years behind the chair, in the color lab, or running a salon. We cover technique, trends, hair health, and the business of beauty with the same depth you would expect from a trade publication, but written for anyone who cares about their hair.`}),(0,j.jsx)(`p`,{className:`text-base text-charcoal-400 leading-relaxed`,children:`We are independent. We do not accept payment for editorial coverage. When we recommend a product or technique, it is because our contributors believe in it — not because a brand paid us to say so.`})]}),(0,j.jsx)(`div`,{className:`lg:col-span-5 flex flex-col gap-8`,children:[{stat:`85,000+`,label:`Stylists in our community`},{stat:`200+`,label:`Articles in planning`},{stat:`15+`,label:`Contributing professionals`}].map(({stat:e,label:t})=>(0,j.jsxs)(`div`,{className:`border-l-2 border-gold-500 pl-6`,children:[(0,j.jsx)(`p`,{className:`text-4xl font-bold text-white mb-1`,style:{fontFamily:`'Playfair Display', serif`},children:e}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-500 tracking-wide`,children:t})]},t))})]})}),(0,j.jsx)(`div`,{className:`border-t border-white/5 bg-black`,children:(0,j.jsxs)(`div`,{className:`max-w-7xl mx-auto px-4 py-14 lg:py-20`,children:[(0,j.jsx)(`p`,{className:`text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-10`,children:`What we stand for`}),(0,j.jsx)(`div`,{className:`grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5`,children:[{title:`Expertise first`,body:`Every piece of advice on this site comes from someone who has done the work.`},{title:`Editorial independence`,body:`We are not a brand channel. Our contributors write freely, and our editors do not accept payment to shape coverage.`},{title:`Accessible knowledge`,body:`Professional hair knowledge should not be locked behind a paywall or a salon appointment. We write for stylists and clients alike. Clearly, without jargon.`}].map(({title:e,body:t})=>(0,j.jsxs)(`div`,{className:`bg-black p-8`,children:[(0,j.jsx)(`h3`,{className:`text-lg font-bold text-white mb-3`,style:{fontFamily:`'Playfair Display', serif`},children:e}),(0,j.jsx)(`p`,{className:`text-sm text-charcoal-500 leading-relaxed`,children:t})]},e))})]})}),(0,j.jsx)(ni,{})]}),(0,j.jsx)(oi,{})]})}var aa=`hpv_session_pv_count`,oa=`hpv_fired_pv2`,sa=`hpv_fired_pv3`;function ca(){let{pathname:e}=ct();return(0,_.useEffect)(()=>{let e=setTimeout(()=>{let e=window.cvg;if(!e)return;window.resetScrollDepth?.(),e({method:`track`,eventName:`$page_load`});let t=parseInt(sessionStorage.getItem(aa)??`0`,10),n=isFinite(t)?t+1:1;sessionStorage.setItem(aa,String(n)),n===2&&!sessionStorage.getItem(oa)&&(sessionStorage.setItem(oa,`1`),e({method:`track`,eventName:`Session Pageviews 2`,properties:{session_page_views:2}})),n===3&&!sessionStorage.getItem(sa)&&(sessionStorage.setItem(sa,`1`),e({method:`track`,eventName:`Session Pageviews 3`,properties:{session_page_views:3}}))},200);return()=>clearTimeout(e)},[e]),null}function la(){let{pathname:e}=ct();return(0,_.useEffect)(()=>{window.scrollTo(0,0)},[e]),null}function ua(){return(0,j.jsxs)(zt,{children:[(0,j.jsx)(Lt,{path:`/`,element:(0,j.jsx)(si,{})}),(0,j.jsx)(Lt,{path:`/articles`,element:(0,j.jsx)(Qi,{})}),(0,j.jsx)(Lt,{path:`/article/:slug`,element:(0,j.jsx)(Ji,{})}),(0,j.jsx)(Lt,{path:`/author/:slug`,element:(0,j.jsx)($i,{})}),(0,j.jsx)(Lt,{path:`/gallery`,element:(0,j.jsx)(ta,{})}),(0,j.jsx)(Lt,{path:`/contributors`,element:(0,j.jsx)(ra,{})}),(0,j.jsx)(Lt,{path:`/about`,element:(0,j.jsx)(ia,{})})]})}function I(){return(0,_.useEffect)(()=>{if(window.cvg)return;window.cvg=function(){window.cvg.process?window.cvg.process.apply(window.cvg,arguments):window.cvg.queue.push(arguments)},window.cvg.queue=[];let e=document.createElement(`script`);e.src=`https://static.runconverge.com/pixels/3LoMDN.js`,e.async=!0,document.head.appendChild(e)},[]),(0,j.jsxs)(kn,{children:[(0,j.jsx)(la,{}),(0,j.jsx)(ca,{}),(0,j.jsx)(ua,{})]})}var da=document.getElementById(`root`);da.firstElementChild?(0,v.hydrateRoot)(da,(0,j.jsx)(_.StrictMode,{children:(0,j.jsx)(I,{})})):(0,v.createRoot)(da).render((0,j.jsx)(_.StrictMode,{children:(0,j.jsx)(I,{})}));
