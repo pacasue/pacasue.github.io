@@ -137,6 +137,12 @@ export const authors: Record<string, Author> = {
     bio: 'Yuna is a Seoul-trained stylist and beauty writer based in Los Angeles. With over ten years behind the chair across Korean and American salons, she specializes in Asian hair texture, face-framing cuts, and the cultural crossover between K-beauty aesthetics and Western editorial styling. She writes about haircuts, texture work, and the technique behind looks that travel well from the salon to real life.',
     image: 'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/81/3d/7c/d2/v1_E10/E1069JVC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=009a37938da8a6f623bf541c1b9fe132452dcf5df30e54b91a7f3c67f5bc0079',
   },
+  'Bianca Russo': {
+    name: 'Bianca Russo',
+    title: 'Extensions Specialist',
+    bio: 'Bianca Russo is an extensions specialist with more than a decade behind the chair. She has installed, removed, and rescued more extensions than she can count, and still thinks they are worth it for the right client.',
+    image: '/image/Bianca.jpg',
+  },
 }
 
 export const articles: Article[] = [
@@ -5911,6 +5917,150 @@ Start with the lite build. Book five clients. Track your revenue, your retail co
 Head spas are not a fad. Clients want them, they pay well, and they rebook at rates most other services cannot match. The only question is whether you are going to be the stylist in your area offering them, or the one watching your competitors fill their books with something you could have added months ago.`,
     metaTitle: 'The Head Spa Opportunity: Turning Viral Interest Into Real Salon Revenue',
     metaDescription: 'Head spas are trending everywhere. Here\'s how to turn client curiosity into profitable revenue with lite builds, full spa setups, pricing strategy, and retail tie-ins that actually work.',
+  },
+//   {
+//     id: 39,
+//     slug: 'pp405-vs-novogro',
+//     tag: 'Hair Thinning',
+//     title: 'PP405 vs. NOVOGRO™: Why Salon Pros Are Questioning the Dormant Follicle Hype',
+//     excerpt: 'PP405 is still waiting on fuller proof, while NOVOGRO™ is already showing a more data-backed path toward stronger, visible hair growth. A salon-side look at what each treatment is actually trying to do for the follicle.',
+//     author: 'Lauren Chavez',
+//     date: 'Jun 28, 2026',
+//     readTime: '8 min',
+//     image: '/image/pp405-cover.webp',
+//     category: 'Hair Thinning',
+//     section: 'Hair Care',
+//     body: `Between color consults, scalp treatments, blowouts, and the usual "is my part getting wider?" conversations, new hair-growth treatments are coming up more than ever.
+
+// PP405 is one of the names clients keep asking about. Some have even mentioned trying supplier-sourced molecules they believe act like PP405. The appeal is easy to understand: PP405 is being talked about as a topical that may wake up dormant follicles without directly touching hormones. For clients who are tired of minoxidil or finasteride, or not ready for PRP or transplant conversations, that sounds like a dream.
+
+// [NOVOGRO™](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) is also part of this next wave, but it approaches thinning hair differently. Built around a science-led, multi-pathway system, NOVOGRO™ looks at hair support from several cellular angles. New growth is only meaningful if the follicle has the right conditions to produce hair that looks thicker and more lasting.
+
+// From the chair, we have learned to be careful with anything that promises a big hair comeback too quickly. So in this article, we are looking at both approaches with a clearer lens. We brought the science team into the conversation to compare PP405 and NOVOGRO™ more systematically, by what each one is actually trying to do for the follicle.
+
+// ## What PP405 Is Trying to Do
+
+// PP405 is being developed by Pelage Pharmaceuticals as a topical treatment for androgenetic alopecia. The idea is different from the usual hair-loss playbook. It is not positioned as a DHT blocker like finasteride, and it is not just another minoxidil-style growth stimulant.
+
+// Instead, PP405 is being talked about as a way to help "wake up" sleeping hair follicles. The thinking is that it may change how follicle cells use energy, which could help inactive follicles become active again.
+
+// That is why people are excited. Many people with thinning hair like the idea of potentially restarting hair growth without using hormone-related treatments.
+
+// ## The Data Sounds Exciting Until You Read It Closely
+
+// A lot of people online are repeating the idea that ==31% of trial participants saw more than 20% hair growth in eight weeks==. That sounds incredible. But that is not exactly what the reported language says.
+
+// The key result appears to apply to only a subset of participants, men with a higher degree of hair loss, not the entire trial population. The study included men and women, and different levels of hair loss. So when the strongest number is reported only for a subgroup, we have to ask what happened with everyone else.
+
+// There is also a second issue: the result is reported as a percentage increase in hair density. Percentages can sound more dramatic than they are, especially when someone starts with very little hair in the measured area.
+
+// ![If a nearly bald patch goes from 5 hairs to 7 hairs, that is a 40% increase. On paper it looks big. In the mirror, it may mean almost nothing.|full](/image/pp405-density.webp)
+
+// There is another issue with hair-density claims: what kind of hairs were counted?
+
+// In the salon, we see a lot of baby hairs. Some are promising. Some stay soft, short, and barely visible. These are often called vellus-like hairs. They can show up under close scalp imaging but may not add real coverage. That is why serious hair studies usually separate vellus hairs from non-vellus or terminal hairs.
+
+// ![Terminal hairs are the thicker, stronger hairs that actually change how full the scalp looks. Vellus hairs are fine, wispy, and often not cosmetically meaningful.|full](/image/pp405-vellus-terminal.webp)
+
+// If a study counts both types together, the number can look better than the result feels.
+
+// That is one of the biggest unanswered questions with the PP405 density data. We need to know whether the reported density increase came from thicker terminal hairs or mostly fine, early-stage hairs.
+
+// Hair-growth marketing can get very creative with counting. Measure a nearly bald spot, and a few new hairs create a large percentage gain. Include wispy vellus hairs, and the count can rise without the client looking fuller. Skip absolute counts, and the percentage can sound bigger than the actual change.
+
+// So the real question is not just whether PP405 increased hair density. It is whether it increased the kind of density clients can actually *see*. Right now, the public information does not fully answer that.
+
+// ## Why the PP405 Mechanism Still Makes Us Cautious
+
+// PP405's "follicle wake-up" story sounds exciting, but from the salon side, waking a follicle up is only the first step.
+
+// What we really care about is what happens after that. The follicle also needs strong cellular support, good growth signaling, blood-flow support, and a scalp environment that can keep the growth cycle going. If those pieces are weak, early activity may not turn into lasting density.
+
+// That is the concern with PP405. It may create early movement, but we still do not know if that turns into real long-term density.
+
+// ## Why NOVOGRO™ Feels More Practical From the Salon Side
+
+// That is why more salon professionals are starting to pay attention to approaches like NOVOGRO™, the technology that powers [RE:YOU](https://getreyou.com/), an emerging brand taking a biology-first approach to thinning hair. From conversations with trusted hair professionals, we understand it is built more like a long-term support system for thinning hair, working across multiple pathways that matter to the follicle. Instead of focusing only on waking the follicle up, NOVOGRO™ looks at whether the follicle has the right conditions to keep producing stronger, thicker hair.
+
+// We were also able to review a preclinical data disclosure on NOVOGRO™. To be clear, this is not a direct head-to-head comparison with PP405. But compared with untreated controls and several products already on the market, the early signals are promising.
+
+// **It supports the dermal papilla cells.** These are the control center at the base of the follicle that helps tell hair how to grow. When dermal papilla cells slow down, the follicle gets weaker signals and hair can start coming in finer and softer, like baby hairs. NOVOGRO™ supports dermal papilla cell activity directly, with lab testing showing stronger dermal papilla cell growth compared with other leading serums.
+
+// ![Lab testing showed stronger dermal papilla cell growth with NOVOGRO™ compared with other leading serums.|full](/image/pp405-dermal-papilla.webp)
+
+// **It activates the HIF-1α pathway.** Think of this as the follicle's oxygen sensor. When this pathway is active, it helps support VEGF, tiny blood vessels, and the local environment hair needs to keep growing. It creates better conditions around the follicle, so the hair has more support once growth begins.
+
+// ![The HIF-1α pathway helps support VEGF and the blood-vessel environment the follicle needs to keep growing.|full](/image/pp405-hif1a.webp)
+
+// **It addresses DHT-related stress.** DHT is a hormone linked to gradual follicle shrinking in people prone to pattern hair loss. NOVOGRO™ addresses this through NOVOGRO-1065, a non-steroidal molecule shown in preclinical testing to strongly inhibit the conversion to DHT. This helps reduce one of the pressures that can make follicles produce thinner hair over time.
+
+// ![NOVOGRO-1065, a non-steroidal molecule, strongly inhibited the conversion to DHT in preclinical testing.|full](/image/pp405-dht.webp)
+
+// **It is built to survive real life.** A serum only matters if the actives stay active when the client is actually using it. NOVOGRO™'s molecules and formulation strategy are built for real-life use, through washing, styling, coloring, and daily routines, so the formula can hold up beyond the lab and into the salon chair.
+
+// What ties all of this together is the way NOVOGRO™ was developed. It uses AI screening to look across multiple follicle needs at once, then advances the strongest candidates into lab testing, including the preclinical data shown above. Clinical validation is still ongoing. RE:YOU is currently running a clinical trial and plans to share more results as they come in, so we will be watching closely.
+
+// ## The Salon Verdict
+
+// We are not writing off PP405. The science is interesting, and if larger trials show strong, lasting, visible results, salon pros will pay attention.
+
+// But right now, PP405 is still a wait-and-see story. NOVOGRO™ is the one more salon people are starting to watch, because it fits what we actually see: hair needs more than activation.
+
+// Hair growth is about helping that hair stay, thicken, cycle properly, and become visible enough to change the way the client feels when they look in the mirror.`,
+//     metaTitle: 'PP405 vs. NOVOGRO™: Why Salon Pros Question the Dormant Follicle Hype',
+//     metaDescription: 'PP405 promises to wake up dormant follicles, but the data has gaps. A salon-side breakdown of PP405 vs. NOVOGRO™: what each does for the follicle, and which has more proof.',
+//   },
+  {
+    id: 40,
+    slug: 'hair-extensions-what-to-know',
+    tag: 'Technique',
+    title: 'What I Wish Clients Knew Before They Sat Down for Extensions',
+    excerpt: 'Extensions can be the best thing you ever do for your hair, or the most expensive mistake. After years of installing them, here is the honest version no consultation has time for.',
+    author: 'Bianca Russo',
+    date: 'Jun 30, 2026',
+    readTime: '9 min',
+    image: '/image/extensions-cover.webp',
+    category: 'Technique',
+    section: 'Hair Care',
+    body: `The first thing I tell anyone who sits in my chair asking for extensions is that they are not buying hair. They are buying a second standing appointment, a new routine at home, and a relationship with me for the next year.
+
+If that part scares you a little, good. It should. The clients who end up loving their extensions are almost always the ones who understood the commitment before they ever saw the result. The ones who end up miserable usually wanted the look without the routine that keeps it looking that way. So before you book anything, let me tell you the things I find myself explaining in every single consultation.
+
+## Extensions Are a Commitment, Not a Quick Fix
+
+A lot of people think of extensions the way they think of a manicure. Something pretty you get done before an event and then stop thinking about. That is not what this is. Good extensions need maintenance every six to eight weeks, a specific way of washing and drying, and an honest conversation about your actual lifestyle before a single strand goes in. If you travel constantly, live at the gym, or know in your heart you will not change how you wash your hair, I need to know that on day one, not three weeks in when things start to feel off.
+
+## A Good Stylist Will Sometimes Tell You No
+
+If you ask me for extensions and I start asking about your scalp, your workouts, how often you really blow dry, and what your hair has been through this year, I am not being nosy. I am deciding whether extensions will help you or hurt you. Sometimes the honest answer is not yet. If your hair is still recovering from bleach, or your scalp is irritated, or you genuinely will not keep up with the upkeep, a responsible stylist will tell you to wait. Be a little suspicious of anyone who says yes to absolutely everything. That person is selling, not consulting.
+
+## They Do Not Damage Your Hair. Bad Installs and Bad Aftercare Do.
+
+This is the myth I spend the most time correcting. Extensions on their own do not wreck your hair. What wrecks your hair is too much weight on fine strands, a method that pulls, leaving them in far too long, or skipping the home care entirely. Placed properly by someone who matched the method to your hair and distributed the weight correctly, your own hair sits happily underneath and grows just fine. The horror stories almost always trace back to a cheap install, a heavy hand, or a client who never came back for her maintenance appointment and let the tension build for six months.
+
+## The Methods Are Not Interchangeable
+
+Tape-ins, hand-tied wefts, K-tips, clip-ins. These are not the same product in different packaging, and the right one depends entirely on your hair. Fine hair and heavy beaded wefts are usually a bad marriage. Thick, coarse hair will barely notice a few tape-ins. A real consultation is mostly me working out which method your specific hair can carry without strain, then being straight with you about how each one looks, lasts, and feels when you sleep on it. If a salon only offers one method, understand that you are getting whatever they happen to know how to do, which is not always what is best for you.
+
+![Tape-ins, hand-tied wefts, K-tips, and clip-ins are not the same product in different packaging. The right method depends entirely on your hair.|full](/image/extensions-methods.webp)
+
+## The Match Matters More Than the Length
+
+Length is the easy part. Anyone can add length. What separates an install that looks like your own hair from one that announces itself across a room is the color blend and the placement. I will spend more time customizing the color of the hair and mapping where each piece sits than I do on the install itself. If the dimension falls flat or a line sits too high, it does not matter how expensive the hair was. It will read as fake, and you will feel it every time you catch your reflection.
+
+## Nobody Warns You About the Upkeep
+
+Here is the part that gets left out of the pretty before and afters. You will learn to wash your hair differently, usually less often and far more carefully. You will dry the bonds or the wefts fully every time, because trapped moisture at the root is how things quietly go wrong. You will sleep with your hair in a loose braid. You will buy a particular brush and a few particular products, and you will actually use them. And you will come back every six to eight weeks for a maintenance appointment that is not optional. Skip it and you risk matting, tension, and the exact damage everyone loves to blame on the extensions themselves.
+
+## Be Honest With Yourself About the Budget
+
+Good extensions are expensive, and the hair is only the first cost. There is the install, then the ongoing maintenance appointments, then replacing the hair when it eventually wears out. If that total makes you wince, that is genuinely useful information. I would much rather a client walk away than commit to something she cannot keep up, because neglected extensions look worse than no extensions at all. There is no shame in deciding the math does not work for you right now. It is a far better outcome than resenting your hair in two months.
+
+## How to Be the Client Who Gets the Best Result
+
+If you do go for it, the women who walk out happiest all do the same handful of things. They are honest in the consultation about how much effort they will really put in. They book their maintenance before they leave the salon. They follow the home care even on the nights they are tired. And they tell me the moment something feels off, instead of waiting until the next appointment to mention it. Extensions are a partnership. The hair on your head is only ever as good as the routine around it. Get that part right and they genuinely can be one of the best things you do for yourself. Get it wrong and they are an expensive lesson. I would always rather you hear that from me now than learn it the hard way.`,
+    metaTitle: 'Hair Extensions: What I Wish Clients Knew Before Booking',
+    metaDescription: 'A stylist\'s honest guide to hair extensions: the real commitment, why the methods are not interchangeable, aftercare, budget, and how to get a result that looks like your own hair.',
   },
 ]
 
