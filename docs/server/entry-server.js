@@ -419,6 +419,12 @@ var authors = {
 		title: "Cut & Style Editor",
 		bio: "Yuna is a Seoul-trained stylist and beauty writer based in Los Angeles. With over ten years behind the chair across Korean and American salons, she specializes in Asian hair texture, face-framing cuts, and the cultural crossover between K-beauty aesthetics and Western editorial styling. She writes about haircuts, texture work, and the technique behind looks that travel well from the salon to real life.",
 		image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b8/81/3d/7c/d2/v1_E10/E1069JVC.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=009a37938da8a6f623bf541c1b9fe132452dcf5df30e54b91a7f3c67f5bc0079"
+	},
+	"Bianca Russo": {
+		name: "Bianca Russo",
+		title: "Extensions Specialist",
+		bio: "Bianca Russo is an extensions specialist with more than a decade behind the chair. She has installed, removed, and rescued more extensions than she can count, and still thinks they are worth it for the right client.",
+		image: "/image/Bianca.jpg"
 	}
 };
 var articles = [
@@ -5894,6 +5900,58 @@ Start with the lite build. Book five clients. Track your revenue, your retail co
 Head spas are not a fad. Clients want them, they pay well, and they rebook at rates most other services cannot match. The only question is whether you are going to be the stylist in your area offering them, or the one watching your competitors fill their books with something you could have added months ago.`,
 		metaTitle: "The Head Spa Opportunity: Turning Viral Interest Into Real Salon Revenue",
 		metaDescription: "Head spas are trending everywhere. Here's how to turn client curiosity into profitable revenue with lite builds, full spa setups, pricing strategy, and retail tie-ins that actually work."
+	},
+	{
+		id: 40,
+		slug: "hair-extensions-what-to-know",
+		tag: "Technique",
+		title: "What I Wish Clients Knew Before They Sat Down for Extensions",
+		excerpt: "Extensions can be the best thing you ever do for your hair, or the most expensive mistake. After years of installing them, here is the honest version no consultation has time for.",
+		author: "Bianca Russo",
+		date: "Jun 30, 2026",
+		readTime: "9 min",
+		image: "/image/extensions-cover.webp",
+		category: "Technique",
+		section: "Hair Care",
+		body: `The first thing I tell anyone who sits in my chair asking for extensions is that they are not buying hair. They are buying a second standing appointment, a new routine at home, and a relationship with me for the next year.
+
+If that part scares you a little, good. It should. The clients who end up loving their extensions are almost always the ones who understood the commitment before they ever saw the result. The ones who end up miserable usually wanted the look without the routine that keeps it looking that way. So before you book anything, let me tell you the things I find myself explaining in every single consultation.
+
+## Extensions Are a Commitment, Not a Quick Fix
+
+A lot of people think of extensions the way they think of a manicure. Something pretty you get done before an event and then stop thinking about. That is not what this is. Good extensions need maintenance every six to eight weeks, a specific way of washing and drying, and an honest conversation about your actual lifestyle before a single strand goes in. If you travel constantly, live at the gym, or know in your heart you will not change how you wash your hair, I need to know that on day one, not three weeks in when things start to feel off.
+
+## A Good Stylist Will Sometimes Tell You No
+
+If you ask me for extensions and I start asking about your scalp, your workouts, how often you really blow dry, and what your hair has been through this year, I am not being nosy. I am deciding whether extensions will help you or hurt you. Sometimes the honest answer is not yet. If your hair is still recovering from bleach, or your scalp is irritated, or you genuinely will not keep up with the upkeep, a responsible stylist will tell you to wait. Be a little suspicious of anyone who says yes to absolutely everything. That person is selling, not consulting.
+
+## They Do Not Damage Your Hair. Bad Installs and Bad Aftercare Do.
+
+This is the myth I spend the most time correcting. Extensions on their own do not wreck your hair. What wrecks your hair is too much weight on fine strands, a method that pulls, leaving them in far too long, or skipping the home care entirely. Placed properly by someone who matched the method to your hair and distributed the weight correctly, your own hair sits happily underneath and grows just fine. The horror stories almost always trace back to a cheap install, a heavy hand, or a client who never came back for her maintenance appointment and let the tension build for six months.
+
+## The Methods Are Not Interchangeable
+
+Tape-ins, hand-tied wefts, K-tips, clip-ins. These are not the same product in different packaging, and the right one depends entirely on your hair. Fine hair and heavy beaded wefts are usually a bad marriage. Thick, coarse hair will barely notice a few tape-ins. A real consultation is mostly me working out which method your specific hair can carry without strain, then being straight with you about how each one looks, lasts, and feels when you sleep on it. If a salon only offers one method, understand that you are getting whatever they happen to know how to do, which is not always what is best for you.
+
+![Tape-ins, hand-tied wefts, K-tips, and clip-ins are not the same product in different packaging. The right method depends entirely on your hair.|full](/image/extensions-methods.webp)
+
+## The Match Matters More Than the Length
+
+Length is the easy part. Anyone can add length. What separates an install that looks like your own hair from one that announces itself across a room is the color blend and the placement. I will spend more time customizing the color of the hair and mapping where each piece sits than I do on the install itself. If the dimension falls flat or a line sits too high, it does not matter how expensive the hair was. It will read as fake, and you will feel it every time you catch your reflection.
+
+## Nobody Warns You About the Upkeep
+
+Here is the part that gets left out of the pretty before and afters. You will learn to wash your hair differently, usually less often and far more carefully. You will dry the bonds or the wefts fully every time, because trapped moisture at the root is how things quietly go wrong. You will sleep with your hair in a loose braid. You will buy a particular brush and a few particular products, and you will actually use them. And you will come back every six to eight weeks for a maintenance appointment that is not optional. Skip it and you risk matting, tension, and the exact damage everyone loves to blame on the extensions themselves.
+
+## Be Honest With Yourself About the Budget
+
+Good extensions are expensive, and the hair is only the first cost. There is the install, then the ongoing maintenance appointments, then replacing the hair when it eventually wears out. If that total makes you wince, that is genuinely useful information. I would much rather a client walk away than commit to something she cannot keep up, because neglected extensions look worse than no extensions at all. There is no shame in deciding the math does not work for you right now. It is a far better outcome than resenting your hair in two months.
+
+## How to Be the Client Who Gets the Best Result
+
+If you do go for it, the women who walk out happiest all do the same handful of things. They are honest in the consultation about how much effort they will really put in. They book their maintenance before they leave the salon. They follow the home care even on the nights they are tired. And they tell me the moment something feels off, instead of waiting until the next appointment to mention it. Extensions are a partnership. The hair on your head is only ever as good as the routine around it. Get that part right and they genuinely can be one of the best things you do for yourself. Get it wrong and they are an expensive lesson. I would always rather you hear that from me now than learn it the hard way.`,
+		metaTitle: "Hair Extensions: What I Wish Clients Knew Before Booking",
+		metaDescription: "A stylist's honest guide to hair extensions: the real commitment, why the methods are not interchangeable, aftercare, budget, and how to get a result that looks like your own hair."
 	}
 ];
 function getArticleBySlug(slug) {
@@ -9157,7 +9215,9 @@ var h2Slugs$1 = new Set([
 	"what-your-hair-says-about-you-sex-and-the-city",
 	"wet-look-hair-chic-not-greasy",
 	"finasteride-vs-novogro-women-hair-loss",
-	"french-bob-every-face-shape"
+	"french-bob-every-face-shape",
+	"pp405-vs-novogro",
+	"hair-extensions-what-to-know"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -9475,7 +9535,9 @@ var h2Slugs = new Set([
 	"wet-look-hair-chic-not-greasy",
 	"finasteride-vs-novogro-women-hair-loss",
 	"french-bob-every-face-shape",
-	"head-spa-salon-revenue-opportunity"
+	"head-spa-salon-revenue-opportunity",
+	"pp405-vs-novogro",
+	"hair-extensions-what-to-know"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
