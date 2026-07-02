@@ -374,4 +374,13 @@
       <image:loc>https://hairprovoices.com/image/extensions-cover.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/summer-hair-damage</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/summer-hair-cover.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
