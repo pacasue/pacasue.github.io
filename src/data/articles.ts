@@ -143,6 +143,12 @@ export const authors: Record<string, Author> = {
     bio: 'Bianca Russo is an extensions specialist with more than a decade behind the chair. She has installed, removed, and rescued more extensions than she can count, and still thinks they are worth it for the right client.',
     image: '/image/Bianca.jpg',
   },
+  'Dr. Elena Marsh': {
+    name: 'Dr. Elena Marsh',
+    title: 'Science Editor',
+    bio: 'Dr. Elena Marsh covers the science behind hair growth and hair loss for HairProVoices. With a background in molecular biology and cosmetic science, she reads the studies stylists do not have time to and translates them into what actually matters at the chair.',
+    image: '/image/Elena.jpg',
+  },
 }
 
 export const articles: Article[] = [
@@ -5918,98 +5924,106 @@ Head spas are not a fad. Clients want them, they pay well, and they rebook at ra
     metaTitle: 'The Head Spa Opportunity: Turning Viral Interest Into Real Salon Revenue',
     metaDescription: 'Head spas are trending everywhere. Here\'s how to turn client curiosity into profitable revenue with lite builds, full spa setups, pricing strategy, and retail tie-ins that actually work.',
   },
-//   {
-//     id: 39,
-//     slug: 'pp405-vs-novogro',
-//     tag: 'Hair Thinning',
-//     title: 'PP405 vs. NOVOGRO™: Why Salon Pros Are Questioning the Dormant Follicle Hype',
-//     excerpt: 'PP405 is still waiting on fuller proof, while NOVOGRO™ is already showing a more data-backed path toward stronger, visible hair growth. A salon-side look at what each treatment is actually trying to do for the follicle.',
-//     author: 'Lauren Chavez',
-//     date: 'Jun 28, 2026',
-//     readTime: '8 min',
-//     image: '/image/pp405-cover.webp',
-//     category: 'Hair Thinning',
-//     section: 'Hair Care',
-//     body: `Between color consults, scalp treatments, blowouts, and the usual "is my part getting wider?" conversations, new hair-growth treatments are coming up more than ever.
+  {
+    id: 39,
+    slug: 'pp405-vs-novogro',
+    tag: 'Hair Thinning',
+    title: 'PP405 vs. NOVOGRO™: Why Salon Pros Are Questioning the Dormant Follicle Hype',
+    excerpt: 'PP405 is still waiting on fuller proof, while NOVOGRO™ is already showing a more data-backed path toward stronger, visible hair growth. A salon-side look at what each treatment is actually trying to do for the follicle.',
+    author: 'Dr. Elena Marsh',
+    date: 'Jun 28, 2026',
+    readTime: '8 min',
+    image: '/image/hair science.jpg',
+    category: 'Hair Thinning',
+    section: 'Hair Care',
+    body: `Between color consults, scalp treatments, blowouts, and the usual "is my part getting wider?" conversations, new hair-growth treatments are coming up more than ever.
 
-// PP405 is one of the names clients keep asking about. Some have even mentioned trying supplier-sourced molecules they believe act like PP405. The appeal is easy to understand: PP405 is being talked about as a topical that may wake up dormant follicles without directly touching hormones. For clients who are tired of minoxidil or finasteride, or not ready for PRP or transplant conversations, that sounds like a dream.
+PP405 is one of the names clients keep asking about. Some have even mentioned trying supplier-sourced molecules they believe act like PP405. The appeal is easy to understand: PP405 is being talked about as a topical that may wake up dormant follicles without directly touching hormones. For clients who are tired of minoxidil or finasteride, or not ready for PRP or transplant conversations, that sounds like a dream.
 
-// [NOVOGRO™](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) is also part of this next wave, but it approaches thinning hair differently. Built around a science-led, multi-pathway system, NOVOGRO™ looks at hair support from several cellular angles. New growth is only meaningful if the follicle has the right conditions to produce hair that looks thicker and more lasting.
+[NOVOGRO™](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1) is also part of this next wave, but it approaches thinning hair differently. Built around a science-led, multi-pathway system, NOVOGRO™ looks at hair support from several cellular angles. New growth is only meaningful if the follicle has the right conditions to produce hair that looks thicker and more lasting.
 
-// From the chair, we have learned to be careful with anything that promises a big hair comeback too quickly. So in this article, we are looking at both approaches with a clearer lens. We brought the science team into the conversation to compare PP405 and NOVOGRO™ more systematically, by what each one is actually trying to do for the follicle.
+From the chair, we have learned to be careful with anything that promises a big hair comeback too quickly. So in this article, we are looking at both approaches with a clearer lens. We brought the science team into the conversation to compare PP405 and NOVOGRO™ more systematically, by what each one is actually trying to do for the follicle.
 
-// ## What PP405 Is Trying to Do
+## What PP405 Is Trying to Do
 
-// PP405 is being developed by Pelage Pharmaceuticals as a topical treatment for androgenetic alopecia. The idea is different from the usual hair-loss playbook. It is not positioned as a DHT blocker like finasteride, and it is not just another minoxidil-style growth stimulant.
+PP405 is being developed by [Pelage Pharmaceuticals](https://pelagepharma.com/) as a topical treatment for androgenetic alopecia. The idea is different from the usual hair-loss playbook. It is not positioned as a DHT blocker like finasteride, and it is not just another minoxidil-style growth stimulant.
 
-// Instead, PP405 is being talked about as a way to help "wake up" sleeping hair follicles. The thinking is that it may change how follicle cells use energy, which could help inactive follicles become active again.
+Instead, PP405 is being talked about as a way to help "wake up" sleeping hair follicles. The thinking is that it may change how follicle cells use energy, which could help inactive follicles become active again.
 
-// That is why people are excited. Many people with thinning hair like the idea of potentially restarting hair growth without using hormone-related treatments.
+That is why people are excited. Many people with thinning hair like the idea of potentially restarting hair growth without using hormone-related treatments.
 
-// ## The Data Sounds Exciting Until You Read It Closely
+## The Data Sounds Exciting Until You Read It Closely
 
-// A lot of people online are repeating the idea that ==31% of trial participants saw more than 20% hair growth in eight weeks==. That sounds incredible. But that is not exactly what the reported language says.
+A lot of people online are repeating the idea that ==31% of trial participants saw more than 20% hair growth in eight weeks==. That sounds incredible. But that is not exactly what the reported language says.
 
-// The key result appears to apply to only a subset of participants, men with a higher degree of hair loss, not the entire trial population. The study included men and women, and different levels of hair loss. So when the strongest number is reported only for a subgroup, we have to ask what happened with everyone else.
+The key result appears to apply to only a subset of participants, men with a higher degree of hair loss, not the entire trial population. The study included men and women, and different levels of hair loss. So when the strongest number is reported only for a subgroup, we have to ask what happened with everyone else.
 
-// There is also a second issue: the result is reported as a percentage increase in hair density. Percentages can sound more dramatic than they are, especially when someone starts with very little hair in the measured area.
+There is also a second issue: the result is reported as a percentage increase in hair density. Percentages can sound more dramatic than they are, especially when someone starts with very little hair in the measured area.
 
-// ![If a nearly bald patch goes from 5 hairs to 7 hairs, that is a 40% increase. On paper it looks big. In the mirror, it may mean almost nothing.|full](/image/pp405-density.webp)
+![If a nearly bald patch goes from 5 hairs to 7 hairs, that is a 40% increase. On paper it looks big. In the mirror, it may mean almost nothing.|full](/image/pp405-density.webp)
 
-// There is another issue with hair-density claims: what kind of hairs were counted?
+There is another issue with hair-density claims: what kind of hairs were counted?
 
-// In the salon, we see a lot of baby hairs. Some are promising. Some stay soft, short, and barely visible. These are often called vellus-like hairs. They can show up under close scalp imaging but may not add real coverage. That is why serious hair studies usually separate vellus hairs from non-vellus or terminal hairs.
+In the salon, we see a lot of baby hairs. Some are promising. Some stay soft, short, and barely visible. These are often called vellus-like hairs. They can show up under close scalp imaging but may not add real coverage. That is why serious hair studies usually separate vellus hairs from non-vellus or terminal hairs.
 
-// ![Terminal hairs are the thicker, stronger hairs that actually change how full the scalp looks. Vellus hairs are fine, wispy, and often not cosmetically meaningful.|full](/image/pp405-vellus-terminal.webp)
+![Terminal hairs are the thicker, stronger hairs that actually change how full the scalp looks. Vellus hairs are fine, wispy, and often not cosmetically meaningful.|full](/image/pp405-vellus-terminal.webp)
 
-// If a study counts both types together, the number can look better than the result feels.
+If a study counts both types together, the number can look better than the result feels.
 
-// That is one of the biggest unanswered questions with the PP405 density data. We need to know whether the reported density increase came from thicker terminal hairs or mostly fine, early-stage hairs.
+That is one of the biggest unanswered questions with the PP405 density data. We need to know whether the reported density increase came from thicker terminal hairs or mostly fine, early-stage hairs.
 
-// Hair-growth marketing can get very creative with counting. Measure a nearly bald spot, and a few new hairs create a large percentage gain. Include wispy vellus hairs, and the count can rise without the client looking fuller. Skip absolute counts, and the percentage can sound bigger than the actual change.
+Hair-growth marketing can get very creative with counting. Measure a nearly bald spot, and a few new hairs create a large percentage gain. Include wispy vellus hairs, and the count can rise without the client looking fuller. Skip absolute counts, and the percentage can sound bigger than the actual change.
 
-// So the real question is not just whether PP405 increased hair density. It is whether it increased the kind of density clients can actually *see*. Right now, the public information does not fully answer that.
+So the real question is not just whether PP405 increased hair density. It is whether it increased the kind of density clients can actually *see*. Right now, the public information does not fully answer that.
 
-// ## Why the PP405 Mechanism Still Makes Us Cautious
+## Why the PP405 Mechanism Still Makes Us Cautious
 
-// PP405's "follicle wake-up" story sounds exciting, but from the salon side, waking a follicle up is only the first step.
+PP405's "follicle wake-up" story sounds exciting, but from the salon side, waking a follicle up is only the first step.
 
-// What we really care about is what happens after that. The follicle also needs strong cellular support, good growth signaling, blood-flow support, and a scalp environment that can keep the growth cycle going. If those pieces are weak, early activity may not turn into lasting density.
+What we really care about is what happens after that. The follicle also needs strong cellular support, good growth signaling, blood-flow support, and a scalp environment that can keep the growth cycle going. If those pieces are weak, early activity may not turn into lasting density.
 
-// That is the concern with PP405. It may create early movement, but we still do not know if that turns into real long-term density.
+That is the concern with PP405. It may create early movement, but we still do not know if that turns into real long-term density.
 
-// ## Why NOVOGRO™ Feels More Practical From the Salon Side
+## Why NOVOGRO™ Feels More Practical From the Salon Side
 
-// That is why more salon professionals are starting to pay attention to approaches like NOVOGRO™, the technology that powers [RE:YOU](https://getreyou.com/), an emerging brand taking a biology-first approach to thinning hair. From conversations with trusted hair professionals, we understand it is built more like a long-term support system for thinning hair, working across multiple pathways that matter to the follicle. Instead of focusing only on waking the follicle up, NOVOGRO™ looks at whether the follicle has the right conditions to keep producing stronger, thicker hair.
+That is why more salon professionals are starting to pay attention to approaches like NOVOGRO™, the technology that powers [RE:YOU](https://getreyou.com/), an emerging brand taking a biology-first approach to thinning hair. From conversations with trusted hair professionals, we understand it is built more like a long-term support system for thinning hair, working across multiple pathways that matter to the follicle. Instead of focusing only on waking the follicle up, NOVOGRO™ looks at whether the follicle has the right conditions to keep producing stronger, thicker hair.
 
-// We were also able to review a preclinical data disclosure on NOVOGRO™. To be clear, this is not a direct head-to-head comparison with PP405. But compared with untreated controls and several products already on the market, the early signals are promising.
+We were also able to review a preclinical data disclosure on NOVOGRO™. To be clear, this is not a direct head-to-head comparison with PP405. But compared with untreated controls and several products already on the market, the early signals are promising.
 
-// **It supports the dermal papilla cells.** These are the control center at the base of the follicle that helps tell hair how to grow. When dermal papilla cells slow down, the follicle gets weaker signals and hair can start coming in finer and softer, like baby hairs. NOVOGRO™ supports dermal papilla cell activity directly, with lab testing showing stronger dermal papilla cell growth compared with other leading serums.
+**It supports the dermal papilla cells.** These are the control center at the base of the follicle that helps tell hair how to grow. When dermal papilla cells slow down, the follicle gets weaker signals and hair can start coming in finer and softer, like baby hairs. NOVOGRO™ supports dermal papilla cell activity directly, with lab testing showing stronger dermal papilla cell growth compared with other leading serums.
 
-// ![Lab testing showed stronger dermal papilla cell growth with NOVOGRO™ compared with other leading serums.|full](/image/pp405-dermal-papilla.webp)
+![Lab testing showed stronger dermal papilla cell viability with NOVOGRO™ compared with other leading serums.|full](/image/pp405-dermal-papilla.webp)
 
-// **It activates the HIF-1α pathway.** Think of this as the follicle's oxygen sensor. When this pathway is active, it helps support VEGF, tiny blood vessels, and the local environment hair needs to keep growing. It creates better conditions around the follicle, so the hair has more support once growth begins.
+**It activates the HIF-1α pathway.** Think of this as the follicle's oxygen sensor. When this pathway is active, it helps support VEGF, tiny blood vessels, and the local environment hair needs to keep growing. It creates better conditions around the follicle, so the hair has more support once growth begins.
 
-// ![The HIF-1α pathway helps support VEGF and the blood-vessel environment the follicle needs to keep growing.|full](/image/pp405-hif1a.webp)
+![The HIF-1α pathway helps support VEGF and the blood-vessel environment the follicle needs to keep growing.|full](/image/pp405-hif1a.webp)
 
-// **It addresses DHT-related stress.** DHT is a hormone linked to gradual follicle shrinking in people prone to pattern hair loss. NOVOGRO™ addresses this through NOVOGRO-1065, a non-steroidal molecule shown in preclinical testing to strongly inhibit the conversion to DHT. This helps reduce one of the pressures that can make follicles produce thinner hair over time.
+**It addresses DHT-related stress.** DHT is a hormone linked to gradual follicle shrinking in people prone to pattern hair loss. NOVOGRO™ addresses this through NOVOGRO-1065, a non-steroidal molecule shown in preclinical testing to strongly inhibit the conversion to DHT. This helps reduce one of the pressures that can make follicles produce thinner hair over time.
 
-// ![NOVOGRO-1065, a non-steroidal molecule, strongly inhibited the conversion to DHT in preclinical testing.|full](/image/pp405-dht.webp)
+![NOVOGRO-1065, a non-steroidal molecule, strongly inhibited the conversion to DHT in preclinical testing.|full](/image/pp405-dht.webp)
 
-// **It is built to survive real life.** A serum only matters if the actives stay active when the client is actually using it. NOVOGRO™'s molecules and formulation strategy are built for real-life use, through washing, styling, coloring, and daily routines, so the formula can hold up beyond the lab and into the salon chair.
+**It is built to survive real life.** A serum only matters if the actives stay active when the client is actually using it. NOVOGRO™'s molecules and formulation strategy are built for real-life use, through washing, styling, coloring, and daily routines, so the formula can hold up beyond the lab and into the salon chair.
 
-// What ties all of this together is the way NOVOGRO™ was developed. It uses AI screening to look across multiple follicle needs at once, then advances the strongest candidates into lab testing, including the preclinical data shown above. Clinical validation is still ongoing. RE:YOU is currently running a clinical trial and plans to share more results as they come in, so we will be watching closely.
+What ties all of this together is the way NOVOGRO™ was developed. It uses AI screening to look across multiple follicle needs at once, then advances the strongest candidates into lab testing, including the preclinical data shown above.
 
-// ## The Salon Verdict
+## The First Clinical Data Is In
 
-// We are not writing off PP405. The science is interesting, and if larger trials show strong, lasting, visible results, salon pros will pay attention.
+The lab work above is preclinical. NOVOGRO™ has now moved onto real heads of hair: NOVOGRO™-powered serums in a double-blind study against minoxidil, the current gold standard, and the three-month interim readout is the first look at how it actually performs.
 
-// But right now, PP405 is still a wait-and-see story. NOVOGRO™ is the one more salon people are starting to watch, because it fits what we actually see: hair needs more than activation.
+:::clinical-trial:::
 
-// Hair growth is about helping that hair stay, thicken, cycle properly, and become visible enough to change the way the client feels when they look in the mirror.`,
-//     metaTitle: 'PP405 vs. NOVOGRO™: Why Salon Pros Question the Dormant Follicle Hype',
-//     metaDescription: 'PP405 promises to wake up dormant follicles, but the data has gaps. A salon-side breakdown of PP405 vs. NOVOGRO™: what each does for the follicle, and which has more proof.',
-//   },
+The full study is still ongoing, and we'll share more as later results come in. But even at this interim mark, that is more human data than PP405 has made public.
+
+## The Salon Verdict
+
+We are not writing off PP405. The science is interesting, and if larger trials show strong, lasting, visible results, salon pros will pay attention.
+
+But right now, PP405 is still a wait-and-see story. NOVOGRO™ is the one more salon people are starting to watch, because it fits what we actually see: hair needs more than activation.
+
+Hair growth is about helping that hair stay, thicken, cycle properly, and become visible enough to change the way the client feels when they look in the mirror.`,
+    metaTitle: 'PP405 vs. NOVOGRO™: Why Salon Pros Question the Dormant Follicle Hype',
+    metaDescription: 'PP405 promises to wake up dormant follicles, but the data has gaps. A salon-side breakdown of PP405 vs. NOVOGRO™: what each does for the follicle, and which has more proof.',
+  },
   {
     id: 40,
     slug: 'hair-extensions-what-to-know',
