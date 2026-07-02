@@ -149,6 +149,12 @@ export const authors: Record<string, Author> = {
     bio: 'Dr. Elena Marsh covers the science behind hair growth and hair loss for HairProVoices. With a background in molecular biology and cosmetic science, she reads the studies stylists do not have time to and translates them into what actually matters at the chair.',
     image: '/image/Elena.jpg',
   },
+  'Gemma Vaughn': {
+    name: 'Gemma Vaughn',
+    title: 'Stylist & Salon Owner',
+    bio: 'Gemma Vaughn is a stylist and salon owner who has spent more than a decade rescuing summer hair every autumn. She still swims every chance she gets, and rinses first every single time.',
+    image: '/image/Gamma.jpg',
+  },
 }
 
 export const articles: Article[] = [
@@ -6075,6 +6081,58 @@ Good extensions are expensive, and the hair is only the first cost. There is the
 If you do go for it, the women who walk out happiest all do the same handful of things. They are honest in the consultation about how much effort they will really put in. They book their maintenance before they leave the salon. They follow the home care even on the nights they are tired. And they tell me the moment something feels off, instead of waiting until the next appointment to mention it. Extensions are a partnership. The hair on your head is only ever as good as the routine around it. Get that part right and they genuinely can be one of the best things you do for yourself. Get it wrong and they are an expensive lesson. I would always rather you hear that from me now than learn it the hard way.`,
     metaTitle: 'Hair Extensions: What I Wish Clients Knew Before Booking',
     metaDescription: 'A stylist\'s honest guide to hair extensions: the real commitment, why the methods are not interchangeable, aftercare, budget, and how to get a result that looks like your own hair.',
+  },
+  {
+    id: 41,
+    slug: 'summer-hair-damage',
+    tag: 'Hair Care',
+    title: 'The Real Damage Summer Does to Your Hair (and How Stylists Undo It)',
+    excerpt: 'Sun, chlorine, and salt are quietly rewriting your hair all season. Here is what is actually happening, and how to enjoy summer without paying for it in September.',
+    author: 'Gemma Vaughn',
+    date: 'Jul 1, 2026',
+    readTime: '8 min',
+    image: '/image/summer-hair-cover.webp',
+    category: 'Hair Care',
+    section: 'Hair Care',
+    body: `Every year, right around late August, my chair fills up with the exact same appointment.
+
+A client sits down, lifts a handful of dry, faded, slightly crispy ends, and says some version of the same sentence. I do not understand, I did not do anything to it. And that is exactly the problem. Summer does the damage for you, quietly, a little every day, while you are busy having a good time. So let me tell you what is really going on up there, because once you understand it, it is genuinely easy to prevent.
+
+## The Sun Does More Than You Think
+
+Start with the sun, because it is the one everyone underestimates. The same UV that burns your skin breaks down the protein your hair is built from and fades your color from the inside out. Hair does not have the luxury of healing the way skin does. It is technically dead the moment it leaves your scalp, so every hour in direct sun is cumulative and stays there until you cut it off. That is why hair that felt perfectly healthy in June can feel like straw by the end of the season, even if you never once touched a hot tool.
+
+## Chlorine Is the Real Villain
+
+Then there is chlorine, which in my opinion is the true troublemaker. It does not simply dry your hair out. It binds to it and keeps working long after you have climbed out of the pool. On lighter hair it can pull that faint green tint everyone panics about, which, for the record, is not the chlorine itself but the copper in the water that chlorine helps deposit onto the strand. On any hair it strips moisture and roughs up the cuticle, so your hair tangles more, feels coarse, and drinks up conditioner without ever feeling satisfied.
+
+## Salt Water Is Not as Innocent as It Feels
+
+Salt water tends to get a pass because it feels natural and gives you those loose, pretty waves. It is quietly dehydrating too. Salt draws water out of the strand, which is exactly why beach hair has that gritty, matte, slightly stiff texture. One day of it is fine. A week of it, left in and never properly rinsed, and you are essentially curing your hair like a piece of fish.
+
+## And Then We Make It Worse Without Meaning To
+
+Here is where a lot of the real damage happens. Hot weather means we sweat, so we wash more. More washing with a stripping shampoo removes the little moisture that survived the pool and the sun. Add daily heat styling to fight the humidity, and now your hair is being attacked from four directions at once. By the time it reaches my chair it is rarely one problem. It is a stack of them sitting on top of each other.
+
+## Lightened and Colored Hair Takes the Worst of It
+
+If your hair is lightened or colored, you need to know that you take the hardest hit from all of this. Lightened hair is more porous, which is a gentle way of saying it has more open doors for moisture to escape and for chlorine and minerals to walk straight in. Your gorgeous summer blonde is the most vulnerable hair in the building, and it needs the most protection, not the least. Most people give it the least.
+
+## The Good News: Almost All of It Is Preventable
+
+None of this requires giving up your summer. The single most effective thing you can do costs nothing at all. Wet your hair with clean water before you get into the pool or the ocean. Hair behaves like a sponge. If it is already full of fresh water, it simply cannot absorb as much of the chlorinated or salty water around it. Follow that with a leave-in conditioner as a barrier, and you have stopped most of the damage before it ever starts.
+
+After you swim, rinse right away and do not let salt or chlorine dry on your hair. Wear a hat on the days that are really about the sun. Switch to a gentler, sulfate free shampoo so your washes stop stripping. And once a week, clarify to lift out the buildup of minerals and product, then immediately follow with a proper deep conditioning treatment. Clarifying on its own leaves the hair thirsty, so the order matters. Clarify first, then flood the moisture back in.
+
+## If the Damage Is Already Done
+
+If you are reading this in August and the season has already had its way with your hair, do not panic and please do not reach for the scissors in a rage. Come and see your stylist. A surprising amount of what looks like ruined hair is really surface damage and buildup that a proper clarifying treatment, a gloss to revive tired color, and a light dusting of the very worst ends can largely reset. You do not always need to lose length. You need to strip out what the summer deposited and put the moisture back.
+
+![A clarifying treatment followed by a deep conditioning mask can reset a surprising amount of summer damage without losing length.|full](/image/summer-hair-salon.webp)
+
+The clients who glide into fall with hair that still looks expensive are not lucky, and they are not doing anything dramatic. They rinse before they swim. They never let salt and chlorine sit. They wash a little less. And they book a treatment at the end of the season the way other people book a dentist. So enjoy your summer completely. Just do not hand your hair the entire bill in September.`,
+    metaTitle: 'Summer Hair Damage: What Sun, Chlorine & Salt Really Do',
+    metaDescription: 'A stylist explains what sun, chlorine, and salt water actually do to your hair over summer, why colored hair takes the worst of it, and how to prevent and reverse the damage.',
   },
 ]
 
