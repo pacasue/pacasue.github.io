@@ -437,6 +437,12 @@ var authors = {
 		title: "Stylist & Salon Owner",
 		bio: "Gemma Vaughn is a stylist and salon owner who has spent more than a decade rescuing summer hair every autumn. She still swims every chance she gets, and rinses first every single time.",
 		image: "/image/Gamma.jpg"
+	},
+	"Vivienne Marsh": {
+		name: "Vivienne Marsh",
+		title: "Colorist & Silver Transition Specialist",
+		bio: "Vivienne Marsh is a colorist who specializes in gray blending and silver transitions. She has walked hundreds of clients through the grow-out, and considers it some of the most rewarding work she does.",
+		image: "/image/vivienne-marsh.jpg"
 	}
 };
 var articles = [
@@ -6116,6 +6122,58 @@ If you are reading this in August and the season has already had its way with yo
 The clients who glide into fall with hair that still looks expensive are not lucky, and they are not doing anything dramatic. They rinse before they swim. They never let salt and chlorine sit. They wash a little less. And they book a treatment at the end of the season the way other people book a dentist. So enjoy your summer completely. Just do not hand your hair the entire bill in September.`,
 		metaTitle: "Summer Hair Damage: What Sun, Chlorine & Salt Really Do",
 		metaDescription: "A stylist explains what sun, chlorine, and salt water actually do to your hair over summer, why colored hair takes the worst of it, and how to prevent and reverse the damage."
+	},
+	{
+		id: 42,
+		slug: "smarter-way-to-go-gray",
+		tag: "Color",
+		title: "There Is a Smarter Way to Go Gray, and Most Women Never Hear It",
+		excerpt: "The transition does not have to be two years of a harsh line and regret. A colorist on how to grow out your grays and actually enjoy the process.",
+		author: "Vivienne Marsh",
+		date: "Jul 2, 2026",
+		readTime: "9 min",
+		image: "/image/going-gray-cover.jpg",
+		category: "Color",
+		section: "Trends",
+		body: `The clients who struggle most with going gray are almost never the ones with the most gray. They are the ones nobody gave a plan.
+
+They wake up one morning, decide they are done coloring, stop, and then spend the next year fighting a hard line of silver at the roots and a length of old color that no longer matches anything. That is not going gray. That is quitting color with no strategy, and it is miserable. There is a far better way to do this, and I wish more women heard about it before they started rather than a year into the mess.
+
+## Why the grow-out feels so brutal
+
+When you stop coloring, your natural gray grows in at the root while the previously colored hair stays exactly where it is on the lengths. The place where the two meet is called the line of demarcation, and it is the single reason the transition earned its bad reputation. On someone who colored dark, that line can be stark, a band of bright silver sitting against a wall of brown. Left completely alone, it takes most people well over a year to grow out, sometimes closer to two depending on length. Nobody warns you about that timeline, and that gap is usually exactly where the panicked relapse happens.
+
+## The decision is emotional, and that is completely fine
+
+Before we get technical, here is something I say to everyone in my chair. Choosing to go gray is not only a hair decision, it is a personal one, and there is no wrong answer. Some women feel powerful and free the moment they commit. Others quietly grieve their old color for a while, and that is normal too. You are allowed to change your mind halfway through. My job is not to talk you into it or out of it. My job is to make whichever path you choose look intentional instead of accidental.
+
+## There is more than one way to do it
+
+The bluntest route is cold turkey, simply stopping and growing it all out. That works best if your hair is short or you honestly do not mind the line while it happens. The most comfortable route for most people is blending, where I weave lowlights and highlights through the lengths so the incoming gray and the old color melt together and that harsh line softens into something you can barely find. For darker hair, we sometimes lighten the lengths gradually across several appointments to meet the gray in the middle and shrink the contrast. And then there is the big chop, cutting the colored hair off entirely to start fresh with your natural silver, which is by far the fastest way through if you are feeling brave.
+
+![Blending lowlights and highlights through the lengths softens the line of demarcation so the incoming gray and the old color melt together.|full](/image/going-gray-blending.jpg)
+
+## Please stop chasing your roots with box dye
+
+This is the one habit that will quietly sabotage everything. I understand the urge completely. The regrowth feels glaring and you just want it gone before the weekend. But box color builds up on the hair, coats it unevenly, and can react in genuinely unpredictable ways when a professional later tries to lighten or blend over it. Every colorist alive has a story about a beautiful transition plan that got derailed by one panicked purchase at the drugstore. If you are committing to gray, the entire point is to stop fighting your roots, not to fight them with the worst possible tool.
+
+## Silver is a color you maintain, not the absence of one
+
+The myth I hear most is that going gray finally frees you from the salon. Not quite. Natural silver and white hair is stunning, but it is also porous and it loves to grab onto tones you do not want, especially yellow and brass from your water, your products, and the air around you. Keeping silver looking crisp and bright usually means a purple toning shampoo used correctly, the occasional gloss to neutralize warmth, and yes, still seeing your stylist now and then. Think of it less as quitting color and more as switching to a new color that happens to be your own.
+
+## Your haircut matters as much as your color
+
+People forget that going gray changes how your hair behaves, not only what shade it is. Gray hair often has a different texture. It can be coarser, wirier, or a little more prone to wave than the hair you remember. A cut that flattered your old color may not flatter the new texture at all. This makes it the perfect moment to rethink your shape, because the right cut makes silver look chic and deliberate, while the wrong one lets it read as simply grown out and tired. I treat a gray transition as a fresh start for the whole look, not just the color.
+
+![A fresh cut built for the new texture is what makes a silver transition read as chic and deliberate rather than simply grown out.|full](/image/going-gray-mirror.jpg)
+
+## What actually keeps silver looking expensive
+
+At home, a few small things make an outsized difference. A good purple shampoo, used once or twice a week and no more, keeps the yellow in check. A clarifying wash every so often lifts out the mineral buildup that dulls silver, which matters a lot if you have hard water. And moisture becomes more important than ever, because that coarser gray texture drinks it up fast. Overdo the purple and you drift slightly lilac. Skimp on the moisture and you drift toward straw. It is a balance, and a good stylist will dial in the exact routine for your specific hair.
+
+Going gray is one of the very few beauty decisions that is genuinely yours. It is not a trend and it is not fixing anything. Done with a plan, it is one of the most elegant things a woman can do with her hair. Done by accident, with a hard line and a drawer full of box dye, it simply looks like you gave up, which is a shame, because you did the exact opposite. So if you are even thinking about it, come and talk to a colorist before you stop coloring, not a year after. We would so much rather help you design the transition than rescue it.`,
+		metaTitle: "The Smarter Way to Go Gray: A Colorist's Grow-Out Guide",
+		metaDescription: "A colorist explains how to grow out your grays without the harsh line and regret, from blending and the big chop to why box dye sabotages the whole transition."
 	}
 ];
 function getArticleBySlug(slug) {
@@ -9555,7 +9613,8 @@ var h2Slugs$1 = new Set([
 	"french-bob-every-face-shape",
 	"pp405-vs-novogro",
 	"hair-extensions-what-to-know",
-	"summer-hair-damage"
+	"summer-hair-damage",
+	"smarter-way-to-go-gray"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -9876,7 +9935,8 @@ var h2Slugs = new Set([
 	"head-spa-salon-revenue-opportunity",
 	"pp405-vs-novogro",
 	"hair-extensions-what-to-know",
-	"summer-hair-damage"
+	"summer-hair-damage",
+	"smarter-way-to-go-gray"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
