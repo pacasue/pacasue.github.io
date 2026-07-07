@@ -161,6 +161,12 @@ export const authors: Record<string, Author> = {
     bio: 'Vivienne Marsh is a colorist who specializes in gray blending and silver transitions. She has walked hundreds of clients through the grow-out, and considers it some of the most rewarding work she does.',
     image: '/image/vivienne-marsh.jpg',
   },
+  'Tessa Lindqvist': {
+    name: 'Tessa Lindqvist',
+    title: 'Stylist & Salon Owner',
+    bio: 'Tessa Lindqvist is a stylist and salon owner who has worked in both soft and hard water regions, and now asks every new client about their water before anything else.',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -6191,6 +6197,56 @@ At home, a few small things make an outsized difference. A good purple shampoo, 
 Going gray is one of the very few beauty decisions that is genuinely yours. It is not a trend and it is not fixing anything. Done with a plan, it is one of the most elegant things a woman can do with her hair. Done by accident, with a hard line and a drawer full of box dye, it simply looks like you gave up, which is a shame, because you did the exact opposite. So if you are even thinking about it, come and talk to a colorist before you stop coloring, not a year after. We would so much rather help you design the transition than rescue it.`,
     metaTitle: 'The Smarter Way to Go Gray: A Colorist\'s Grow-Out Guide',
     metaDescription: 'A colorist explains how to grow out your grays without the harsh line and regret, from blending and the big chop to why box dye sabotages the whole transition.',
+  },
+  {
+    id: 43,
+    slug: 'hard-water-hair',
+    tag: 'Hair Care',
+    title: 'Your Shower Water Might Be the Real Reason Your Hair Feels Off',
+    excerpt: 'Dull, rough, oddly heavy hair that no product seems to fix. Before you buy another mask, a stylist wants you to look at what is coming out of your shower head.',
+    author: 'Tessa Lindqvist',
+    date: 'Jul 2, 2026',
+    readTime: '8 min',
+    image: '/image/hard-water-cover.jpg',
+    category: 'At-Home Tips',
+    section: 'Hair Care',
+    body: `Every so often a client sits in my chair with hair that makes no sense on paper.
+
+She uses good products. She does not overwash. Her cut is fine. And yet her hair feels dull, a little rough, and strangely heavy, like it is wearing a coat it cannot take off. Nine times out of ten, before I reach for a single product, I ask her one question that surprises her. How is the water where you live? Because far more often than people suspect, the problem is not on the shelf at all. It is coming straight out of the shower head.
+
+## What hard water actually is
+
+Hard water simply means water carrying a high level of dissolved minerals, mostly calcium and magnesium, picked up as it moves through rock and pipes. Most of the country has some degree of it, and a lot of people have it badly without ever knowing. It is completely harmless to drink. It is not nearly so harmless to your hair, because every single time you wash, those minerals deposit onto the strand and build up like limescale on a kettle. Over weeks and months that film grows heavier, and your hair slowly starts to behave like it belongs to someone else.
+
+## The signs that make me suspect water first
+
+There is a specific cluster of complaints that points me at water before anything else. Hair that feels dull no matter how you treat it. A rough, straw like texture on hair that used to feel soft. Tangling that appeared out of nowhere. Shampoo that will not lather the way it once did. Color that fades or turns brassy far faster than it should. And an itchy, tight, sometimes flaky scalp that no dandruff shampoo seems to touch. Any one of these can have other causes. All of them together, especially if they crept in gradually, and I am already thinking about your pipes.
+
+![The telltale sign: a rough, straw-like texture on hair that used to feel soft, with buildup you can almost feel between your fingers.|full](/image/hard-water-signs.jpg)
+
+## You cannot condition your way out of it
+
+Here is the part that frustrates people the most. Conditioner cannot fix a mineral problem. It adds softness on top, but the buildup is still sitting underneath, coating the hair and blocking moisture from getting in. So you reach for more mask and more oil, the hair gets heavier and flatter, and the real issue never moves. It is a little like moisturizing over a layer of dried glue. The problem is not that your hair is thirsty. The problem is that something is standing between your hair and everything you are trying to feed it.
+
+## It quietly sabotages your color
+
+If you color your hair, hard water is working against you the entire time. The mineral film makes color grab unevenly and fade faster, and it is a major reason blondes go brassy or dull so quickly and why a fresh gloss never seems to last. Minerals like copper and iron in the water can even react with light hair and throw unwanted tones into it. Colorists who work in hard water regions build their whole approach around this. Clients who move from a soft water city to a hard water one often assume their colorist suddenly lost the magic. The colorist did not change. The water did.
+
+## Why your hair changed when you moved
+
+This is the detail that finally convinces people. I cannot count the times a client has said some version of the same thing. I do not understand, my hair was perfect at my old place, and now it is a disaster, and nothing else changed. Nothing else did change. The water did. Hair is an incredibly sensitive record of its environment, and moving from soft water to hard, or the reverse, can transform how it behaves within a few weeks. Once you know to look for it, it is obvious. Before you know, it genuinely feels like your hair turned on you for no reason at all.
+
+## What actually fixes it
+
+The good news is that this is very fixable, and the fix is not more conditioner. The single most useful thing is a chelating shampoo, which is not the same as a regular clarifying one. A normal clarifying shampoo strips oil and product. A chelating shampoo contains ingredients that actually bind to metals and minerals and lift them off the hair, which is exactly what this situation calls for. Used every week or two, never every day, it can bring dull, coated hair back to life quite dramatically. For a longer term solution, a shower head filter cuts how much mineral reaches your hair in the first place, which is the closest thing to fixing the problem at the source. And in a hard water area, a professional mineral removing treatment before a color service is worth every cent.
+
+![A professional mineral-removing treatment at the bowl lifts the buildup a chelating shampoo starts on, and it is worth every cent before a color service.|full](/image/hard-water-treatment.jpg)
+
+One quick word on the internet's favorite remedy. A well diluted apple cider vinegar rinse can help a little by gently dissolving some buildup, and plenty of people enjoy it. But it is mild, it is not a real substitute for a proper chelating treatment, and using it too strong or too often can dry the hair out or disturb your color. Treat it as a pleasant occasional extra, not the main event. And please do not attack your scalp harder to fix that tight, itchy feeling. That is buildup, not a lack of washing, and scrubbing only irritates skin that is already unhappy.
+
+I love a beautiful product as much as anyone, but part of my job is telling people when the answer is not on the shelf at all. If your hair has quietly turned on you and you cannot work out why, look past the bottles for a moment and think about your water. It is one of the most common hidden culprits I see, and one of the most satisfying to fix, because the day a client washes with the right treatment and feels her real hair come back, she always says the exact same thing. I forgot it could feel like this.`,
+    metaTitle: 'Hard Water and Your Hair: Why It Feels Off and How to Fix It',
+    metaDescription: 'A stylist explains how hard water minerals build up on your hair, why conditioner cannot fix it, and how a chelating shampoo and shower filter bring dull, coated hair back to life.',
   },
 ]
 
