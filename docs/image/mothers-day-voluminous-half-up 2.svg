@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Voluminous half-up style placeholder</title>
+  <desc id="desc">Placeholder showing a lifted half-up hairstyle with a full crown shape.</desc>
+  <rect width="1200" height="675" fill="#181615"/>
+  <path d="M378 322c34-138 153-202 285-169 101 25 168 109 178 215" fill="none" stroke="#ecd7ba" stroke-width="18" stroke-linecap="round"/>
+  <path d="M455 306c96 50 208 50 305 0" fill="none" stroke="#c9a84c" stroke-width="17" stroke-linecap="round"/>
+  <path d="M448 366c20 86 87 159 178 194m126-192c-16 88-73 159-158 201" fill="none" stroke="#ecd7ba" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
+  <text x="70" y="575" fill="#f5f0e7" font-family="Georgia, serif" font-size="42">Voluminous Half-Up Style</text>
+  <text x="72" y="615" fill="#c9a84c" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">IMAGE PLACEHOLDER</text>
+</svg>
