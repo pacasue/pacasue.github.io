@@ -167,6 +167,12 @@ export const authors: Record<string, Author> = {
     bio: 'Tessa Lindqvist is a stylist and salon owner who has worked in both soft and hard water regions, and now asks every new client about their water before anything else.',
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Marisol Reyes': {
+    name: 'Marisol Reyes',
+    title: 'Stylist & Salon Owner',
+    bio: 'Marisol Reyes is a stylist and salon owner who has spent two decades answering this exact question, and has never once given the same number twice.',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -6247,6 +6253,60 @@ One quick word on the internet's favorite remedy. A well diluted apple cider vin
 I love a beautiful product as much as anyone, but part of my job is telling people when the answer is not on the shelf at all. If your hair has quietly turned on you and you cannot work out why, look past the bottles for a moment and think about your water. It is one of the most common hidden culprits I see, and one of the most satisfying to fix, because the day a client washes with the right treatment and feels her real hair come back, she always says the exact same thing. I forgot it could feel like this.`,
     metaTitle: 'Hard Water and Your Hair: Why It Feels Off and How to Fix It',
     metaDescription: 'A stylist explains how hard water minerals build up on your hair, why conditioner cannot fix it, and how a chelating shampoo and shower filter bring dull, coated hair back to life.',
+  },
+  {
+    id: 44,
+    slug: 'how-often-wash-hair',
+    tag: 'Hair Care',
+    title: 'How Often Should You Really Wash Your Hair? Let Me Settle This.',
+    excerpt: 'Everyone wants a number. A stylist explains why the number does not exist, why you cannot train your scalp, and what actually decides how often you should wash.',
+    author: 'Marisol Reyes',
+    date: 'Jul 7, 2026',
+    readTime: '8 min',
+    image: '/image/wash-frequency-cover.jpg',
+    category: 'At-Home Tips',
+    section: 'Hair Care',
+    body: `If I had to name the single question I have been asked most in twenty years behind the chair, it would not be about color or cuts. It would be this. How often should I actually be washing my hair?
+
+Everyone wants a number, a clean little rule they can follow forever. And every time, I have to gently disappoint them, because the number everyone is chasing does not exist. But there is a real answer sitting underneath it, and it is far more useful than a rule ever could be. Let me walk you through it.
+
+## There is no universal number, and there never was
+
+The reason there is no single correct frequency is that your scalp is not the same as anyone else's. How much oil you produce, your hair's texture and thickness, how sensitive your scalp is, how much you sweat, the products you use, even the season, all of it changes the math. Someone with fine, straight, oily hair might genuinely need to wash daily to not look greasy by lunch. Someone with thick, curly, or coily hair might wash once a week and be doing exactly the right thing, because that same oil takes days just to travel down the strand. Telling both of those people to wash three times a week, the number the internet loves, would be wrong for both of them.
+
+## No, you cannot train your hair to be less oily
+
+Here is the myth I have to bust almost weekly. You cannot train your scalp to produce less oil by washing it less. I understand why people believe it. They read that if they just push through a few greasy weeks, the scalp will get the message and slow down. It will not. Oil production is controlled by your hormones and your genetics, not by how often you reach for a shampoo bottle. Your oil glands are not watching your schedule. What actually happens during those greasy weeks is that you get used to seeing your hair oilier and quietly lower your standards, and buildup starts to mask that just washed feeling. The gland did not change. Your tolerance did.
+
+## Overwashing is real, but the fix is usually gentler, not less
+
+You can absolutely overwash, and I see the results of it constantly. Washing too often, especially with a harsh stripping shampoo, pulls the natural oils off your scalp and your lengths faster than they can be replaced. The scalp feels tight and irritated, the ends turn dry and brittle, and color fades quicker. Some people even notice their scalp feeling oily faster after a strong strip, not because they trained it, but because they briefly knocked it off balance and it is scrambling to catch up. The answer is rarely to just wash less. Far more often, it is to wash gentler.
+
+## But underwashing is not virtuous either
+
+On the other side, washing too rarely is not automatically clean living, whatever the wellness internet implies. Your scalp is skin, and skin that sits under days of oil, sweat, dead cells, and old product gets flaky, itchy, and inflamed. A congested scalp is not a happy place for hair to grow from. Weighed down, unwashed roots also simply look and feel heavy. Clean scalp, healthy hair. There is nothing pure or beneficial about letting buildup sit and marinate.
+
+## Dry shampoo is a delay, not a wash
+
+This is where dry shampoo needs a serious word. It is a wonderful tool for stretching an extra day or two between washes, and a genuinely terrible substitute for washing. It does not clean anything. It absorbs oil and adds a little product to disguise it, which means every time you reach for it instead of washing, you are laying another layer onto a scalp that is already asking to be cleaned. I see what dry shampoo looks like when it is used as a lifestyle rather than a bridge, and it is usually a clogged, itchy scalp and hair that will not hold a style. Use it to buy time. Do not use it to avoid the shower for a week.
+
+## Different hair, different needs
+
+So, roughly, and only roughly. Fine, straight, or oily hair usually needs washing more often, sometimes daily, and does best with a lighter shampoo. Thick, wavy, curly, or coily hair usually needs washing less often, because the oil travels slowly and the hair is thirstier, and it often thrives with gentler cleansing or a conditioner wash between shampoos. Older and colored hair tends to run drier, so it can usually stretch washes further than it could in its twenties. None of these are laws. They are only starting points, and your own scalp gets the final say.
+
+![If your roots are greasy the day after washing, you probably need to wash more often or more thoroughly, not less. Your scalp gets the final say.|full](/image/wash-frequency-roots.jpg)
+
+## How to actually find your number
+
+The way to find your frequency is to stop chasing a rule and start paying attention. Wash when your scalp genuinely feels dirty, oily, itchy, or heavy, not on a calendar and not because a video handed you a number. If your roots are greasy the day after washing, you probably need to wash more often, or wash your scalp more thoroughly, not less. If your ends feel like straw, you are likely washing too aggressively, and a gentler shampoo will help you far more than skipping days will. Your hair is constantly telling you what it needs. Most people simply are not listening, because they are too busy following someone else's schedule.
+
+And here is the part almost nobody gets told. How you wash matters more than how often. Shampoo is for your scalp, not your lengths. Work it into the roots where the oil actually lives, and let the runoff clean the rest as you rinse. Keep the water warm rather than scalding, because heat strips and irritates. Save conditioner for the mid lengths and ends and keep it off the scalp. Do that consistently, and you will often find you can wash less anyway, simply because your scalp and hair are both in better balance to start with.
+
+![Shampoo is for your scalp, not your lengths. Work it into the roots where the oil actually lives and let the runoff clean the rest.|full](/image/wash-frequency-scalp.jpg)
+
+So the real answer to how often you should wash your hair is not a number I can hand you across the chair. It is this. As often as your particular scalp needs it, washed gently and correctly, and no more or less than that. It is less satisfying than a rule, I know. But your hair is not a rule. It is yours. The moment you stop outsourcing the decision to the internet and start reading your own scalp, the whole question gets a great deal simpler.`,
+    metaTitle: 'How Often Should You Wash Your Hair? A Stylist Settles It',
+    metaDescription: 'A stylist explains why there is no universal wash frequency, why you cannot train your scalp to be less oily, and how to read your own hair to find the right number.',
   },
 ]
 
