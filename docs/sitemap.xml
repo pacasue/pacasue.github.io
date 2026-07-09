@@ -410,4 +410,13 @@
       <image:loc>https://hairprovoices.com/image/wash-frequency-cover.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/split-ends-trims-truth</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/split-ends-cover.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>

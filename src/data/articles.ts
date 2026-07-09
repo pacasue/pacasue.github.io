@@ -173,6 +173,12 @@ export const authors: Record<string, Author> = {
     bio: 'Marisol Reyes is a stylist and salon owner who has spent two decades answering this exact question, and has never once given the same number twice.',
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Delaney Cross': {
+    name: 'Delaney Cross',
+    title: 'Stylist & Salon Owner',
+    bio: 'Delaney Cross is a stylist and salon owner who has talked more clients into and out of trims than she can count, and has never once made anyone\'s hair grow faster by cutting it.',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -6307,6 +6313,58 @@ And here is the part almost nobody gets told. How you wash matters more than how
 So the real answer to how often you should wash your hair is not a number I can hand you across the chair. It is this. As often as your particular scalp needs it, washed gently and correctly, and no more or less than that. It is less satisfying than a rule, I know. But your hair is not a rule. It is yours. The moment you stop outsourcing the decision to the internet and start reading your own scalp, the whole question gets a great deal simpler.`,
     metaTitle: 'How Often Should You Wash Your Hair? A Stylist Settles It',
     metaDescription: 'A stylist explains why there is no universal wash frequency, why you cannot train your scalp to be less oily, and how to read your own hair to find the right number.',
+  },
+  {
+    id: 45,
+    slug: 'split-ends-trims-truth',
+    tag: 'Hair Care',
+    title: 'No, You Cannot Repair a Split End. Here Is What Actually Happens.',
+    excerpt: 'Why no product truly mends a split end, why ignoring one costs you length, and the trim myths a stylist wishes would finally die.',
+    author: 'Delaney Cross',
+    date: 'Jul 8, 2026',
+    readTime: '8 min',
+    image: '/image/split-ends-cover.jpg',
+    category: 'At-Home Tips',
+    section: 'Hair Care',
+    body: `I have had the same gentle argument hundreds of times. A client with splitting, frayed ends tells me she does not want to lose any length, and asks whether there is a product that will just repair the ends instead.
+
+I always wish I could say yes. But I would be lying, and part of my job is telling people the truth about their hair even when it is not the answer they were hoping for. So here it is, plainly. You cannot repair a split end. Not with any product, at any price. What you can do instead is far more useful, and it starts with understanding what a split end actually is.
+
+## What a split end really is
+
+Every strand of your hair is wrapped in a protective outer layer called the cuticle, a little like the shingles on a roof or the coating on a wire. When that outer layer wears away at the tip, from heat, brushing, coloring, friction, and simple time, the soft inner part of the hair is left exposed, and the strand begins to fray and split apart. That is a split end. It is structural damage to something that is, crucially, not alive and cannot heal itself. Your skin repairs. Your hair does not. Once a strand has split, that strand is split for good.
+
+![A split end is structural damage to something that cannot heal itself. Once a strand has split, it is split for good.|full](/image/split-ends-frayed.jpg)
+
+## Why no product can mend it
+
+This is why nothing in a bottle can truly fix it, whatever the packaging promises. Serums and so called repair treatments can temporarily glue the split closed and coat the strand so it looks and feels smoother for a wash or two. That is genuinely pleasant, and there is nothing wrong with using them for a smoother finish. But be clear about what is happening. You are not repairing the hair, you are briefly binding a broken thing back together. The moment you wash it out, the split is still there, and often slightly worse, because the damaged end keeps catching and fraying. A repair product on a split end is makeup, not medicine.
+
+## Ignore it and it climbs
+
+Here is the part that makes leaving them alone genuinely expensive. A split end does not politely stay at the tip. Left to its own devices it travels up the strand, exactly like a run climbing up a stocking. The split works its way higher, the strand keeps fraying, and eventually it snaps somewhere up the length, leaving you with breakage far above where the damage began. So the client who refuses a trim to protect her length is very often the reason she keeps losing it. The damage she would not let me remove at the tip climbs upward and takes even more with it.
+
+## The trim myth, cleared up
+
+Now let me settle the myth that causes half the confusion. Trims do not make your hair grow. They cannot. Hair grows from the follicle in your scalp, and your ends have no idea whether they were cut last week or last year. Anyone who tells you a haircut speeds up growth is simply mistaken. But here is the part people miss. Regular trims absolutely help you keep and even gain length, because they remove the split and weakened ends before those can travel up and break off higher. Growth happens at the root. Length is protected at the ends. You need both to actually end up with longer hair, and skipping trims quietly sabotages the second half of that equation.
+
+## So how often do you actually need one?
+
+Not on the rigid schedule most people assume. Every six to eight weeks is a fine rule for someone with a short, precise cut who wants to keep the shape sharp. For someone growing their hair out, trimming that often can work against them. The honest answer is that it depends on your damage, not the calendar. Fine, colored, heat styled hair splits faster and needs attention sooner. Healthy, gently handled hair can go much longer between visits. A good stylist looks at your actual ends, not a date on a card, and tells you when they truly need it. If your ends are splitting, tangling, and starting to look wispy and see through, they are ready, whatever the calendar says.
+
+## If you are scared to lose length, ask about dusting
+
+If your real fear is losing length, ask your stylist about dusting. It is a technique where we take off only the very tips, sometimes just a couple of millimeters, enough to remove the split ends while keeping essentially all of your length. Done carefully it lets someone who is growing their hair keep their ends healthy without the grow out ever feeling like it has stalled. It does not suit every situation, and it is not a substitute for a real shape when the cut needs one, but for the length obsessed it is often the compromise they never knew existed.
+
+![Dusting removes only the very tips, sometimes just a couple of millimeters, so growing-out hair keeps its ends healthy without the length ever feeling like it stalled.|full](/image/split-ends-healthy.jpg)
+
+## The best trim is the one you prevent
+
+The surest way to need fewer trims is to create fewer split ends in the first place, and the culprits are the usual suspects. Heat styling with no protection, brushing aggressively or brushing soaking wet hair, tight elastics that snap the strand in the same spot every day, rough towels, and skipping conditioner on the ends where you need it most. Your ends are the oldest and most fragile part of your hair, sometimes several years old, and they have quietly survived everything you have ever done to your hair. Treat them like the antiques they are and they will split far more slowly.
+
+So the next time you are tempted to stretch a trim for a few more months to protect your length, picture the stocking. The damage is not staying put. A little taken off now protects the rest, and as counterintuitive as it sounds, the person who trims sensibly almost always ends up with longer, healthier hair than the one who refuses to part with a single inch. I am not trying to take your length. I am trying to help you keep it.`,
+    metaTitle: 'You Cannot Repair a Split End: What a Stylist Wants You to Know',
+    metaDescription: 'A stylist explains why no product truly repairs a split end, how ignoring one costs you length as it climbs the strand, and the truth about how often you really need a trim.',
   },
 ]
 
