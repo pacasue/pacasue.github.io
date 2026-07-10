@@ -461,6 +461,12 @@ var authors = {
 		title: "Stylist & Salon Owner",
 		bio: "Delaney Cross is a stylist and salon owner who has talked more clients into and out of trims than she can count, and has never once made anyone's hair grow faster by cutting it.",
 		image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop&facepad=3"
+	},
+	"Simone Ellery": {
+		name: "Simone Ellery",
+		title: "Colorist & Salon Educator",
+		bio: "Simone Ellery is a colorist and salon educator with sixteen years behind the chair. She can read a client's styling habits from a single section of hair, and writes about hair health and heat styling for HairProVoices from a place of daily, hands-on experience.",
+		image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&facepad=3"
 	}
 };
 var articles = [
@@ -6348,6 +6354,54 @@ The surest way to need fewer trims is to create fewer split ends in the first pl
 So the next time you are tempted to stretch a trim for a few more months to protect your length, picture the stocking. The damage is not staying put. A little taken off now protects the rest, and as counterintuitive as it sounds, the person who trims sensibly almost always ends up with longer, healthier hair than the one who refuses to part with a single inch. I am not trying to take your length. I am trying to help you keep it.`,
 		metaTitle: "You Cannot Repair a Split End: What a Stylist Wants You to Know",
 		metaDescription: "A stylist explains why no product truly repairs a split end, how ignoring one costs you length as it climbs the strand, and the truth about how often you really need a trim."
+	},
+	{
+		id: 46,
+		slug: "flat-iron-heat-damage",
+		tag: "Hair Care",
+		title: "Your Flat Iron Runs Hotter Than Your Oven. Your Hair Notices Before You Do.",
+		excerpt: "A colorist explains what really happens to your hair at 430 degrees, why hotter is never faster, and the small habit changes that save more hair than any bottle you can buy.",
+		author: "Simone Ellery",
+		date: "Jul 10, 2026",
+		readTime: "7 min",
+		image: "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=1600&q=80&auto=format&fit=crop",
+		category: "Hair Health",
+		section: "Hair Care",
+		body: `I can tell how someone styles their hair before they say a word. I take a section between two fingers, run down to the ends, and the story is right there. The mid-lengths feel fine. The last two inches feel like dry straw and the section snaps instead of bends. Nine times out of ten, that person owns a flat iron, uses it most days, and has no idea it is running at a temperature that would cook an egg on contact.
+
+Heat is the damage almost nobody counts. Clients will agonize over whether their shampoo has sulfates, then press a 430-degree plate onto wet-ish hair every morning without a second thought. I am not here to take your styling tools away. I use them on clients daily. But I want you to understand what is actually happening at that temperature, because once you do, a few small changes will save you more hair than any bottle you can buy.
+
+## What the number on the dial actually means
+
+Most flat irons and curling wands go up to somewhere between 400 and 450 degrees Fahrenheit. People assume those top settings exist because hair needs them. They do not. Those settings exist for professional use on very coarse or resistant hair, in trained hands, for a single fast pass. Your oven roasts a chicken at 375. Your flat iron on high is hotter than that, and you are holding it against a protein fiber that is far more delicate than it feels.
+
+Human hair starts to suffer real, permanent change to its internal structure at temperatures well below where most people style. Push past roughly 350 and you begin to break down the keratin and, worse, you can hit the moment where any water still trapped in the strand flashes to steam. That is the tiny crackle or hiss you sometimes hear. That sound is not the sizzle of good styling. It is a small blister forming inside the hair. Stylists call the result a bubble hair, and once a strand has bubbled, it is a weak point that will snap. There is no undo.
+
+## Hotter is not faster, and fine hair is not tougher
+
+The instinct is that a higher temperature gets the job done in fewer passes, so it must be gentler overall. It is the opposite. The right approach is the lowest temperature that gives you the result, with a clean single pass, not the highest temperature you can stand rushed over the same section five times. Five nervous passes at 450 does far more damage than one confident pass at 360.
+
+Fine and light-colored hair is where I see this go wrong most. Fine strands have less mass to absorb the heat, so they reach a damaging temperature faster than thick, coarse hair. Blondes and anyone lifted with color have already had the cuticle chemically opened, which makes the strand thirstier and more heat-sensitive. If your hair is fine, highlighted, or both, the high setting is not for you, full stop. That is the exact combination that lands in my chair frizzing halfway down and breaking at the ends.
+
+## Heat protectant is a seatbelt, not a force field
+
+Here is the thing brands will not put on the front of the bottle. A heat protectant does not make your hair heatproof. It buys you a margin. A good one forms a thin barrier that slows how fast heat transfers into the strand and helps the surface glide, which reduces friction damage. It genuinely helps, and you should use it every single time. But it is a seatbelt, not a force field. It lowers the odds of catastrophe. It does not let you drive into a wall.
+
+And it only works if you use it correctly, which most people do not. It has to be applied evenly and, for most spray formulas, on hair that is dry or nearly dry, because ironing sopping wet hair through a product is how you get that steam-explosion damage regardless of what you sprayed on. A quarter-sized amount clumped on one side of your head is not protecting the sections that actually meet the plate.
+
+## The tells I read in a consultation
+
+You do not need a stylist to run this diagnostic on yourself. Take a small section near your face, where heat tools land most, and compare it to hair from the nape underneath, which usually gets styled least. If the top section feels rougher, looks lighter or more washed-out, frizzes while the underneath stays smooth, that gap is your heat damage. Healthy hair and heat-stressed hair on the same head is the single clearest sign.
+
+The other tell is the tiny white node. Run a strand through your fingers and feel for a minuscule swelling partway down, or look for a little white dot on the end. Those are the bubble points and split beginnings I mentioned. They mean a break is coming whether you cut it or not. The only real fix is to remove the damaged length and change the habit that made it, because a strand cannot be healed, only prevented.
+
+## What I actually tell clients to do
+
+I am not going to pretend anyone is giving up their tools, so here is the realistic version. Drop your temperature to the lowest setting that still holds your style, and for most fine to medium hair that is somewhere in the 300s, not the 400s. Coarse or very resistant hair can go higher, but it is a smaller club than the dial suggests. Always dry hair fully before a flat iron touches it. One slow, deliberate pass beats five fast ones. Use the protectant every time, on properly dried hair, evenly.
+
+And give your hair days off. The clients with the healthiest lengths are not the ones with the fanciest products. They are the ones who let their hair air-dry two or three days a week and save the hot tools for when it matters. Your hair keeps a running total of every degree it has ever met. The kindest thing you can do is simply hand it a smaller bill.`,
+		metaTitle: "Flat Iron Heat Damage: What Really Happens to Your Hair at 430 Degrees",
+		metaDescription: "A colorist with 16 years behind the chair explains what heat really does to your hair, why hotter is never faster, and the small habit changes that prevent breakage."
 	}
 ];
 function getArticleBySlug(slug) {
