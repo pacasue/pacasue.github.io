@@ -5028,7 +5028,7 @@ What's your current hair doing for you? And has there been a cut, or a moment of
 },
   {
     id: 32,
-    slug: 'NOVOGRO™-vs-minoxidil',
+    slug: 'novogro-vs-minoxidil',
     tag: 'Hair Thinning',
     title: 'Minoxidil vs. Proprietary Molecules: Is NOVOGRO™ the Industry\'s Best Kept Secret?',
     excerpt: 'For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.',
@@ -5474,7 +5474,7 @@ NOVOGRO™ does not stop at DHT. Based on what the team presented, it treats the
 | Weak dermal papilla cells | The cells that coordinate growth are losing strength | NV-623 + NV-624 |
 | Poor root environment | The surrounding support system is not strong enough | NV-273 |
 
-We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/NOVOGRO™-vs-minoxidil), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
+We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/novogro-vs-minoxidil/), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
 
 > "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
 > — Mara Ellis, Scalp-Care Educator & Master Stylist

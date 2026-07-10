@@ -72,7 +72,7 @@ function Navbar() {
 								}), activeDropdown === cat.label && /* @__PURE__ */ jsx("div", {
 									className: "absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl",
 									children: cat.items.map((item) => /* @__PURE__ */ jsx(Link, {
-										to: `/articles?category=${encodeURIComponent(item)}`,
+										to: `/articles/?category=${encodeURIComponent(item)}`,
 										className: "block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors",
 										onClick: () => setActiveDropdown(null),
 										children: item
@@ -80,12 +80,12 @@ function Navbar() {
 								})]
 							}, cat.label)),
 							/* @__PURE__ */ jsx(Link, {
-								to: "/gallery",
+								to: "/gallery/",
 								className: "px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors",
 								children: "Gallery"
 							}),
 							/* @__PURE__ */ jsx(Link, {
-								to: "/articles",
+								to: "/articles/",
 								className: "px-3 py-2 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-white transition-colors",
 								children: "All Articles"
 							}),
@@ -102,12 +102,12 @@ function Navbar() {
 								}), activeDropdown === "Community" && /* @__PURE__ */ jsxs("div", {
 									className: "absolute top-full left-0 bg-black border border-white/10 py-2 min-w-[180px] shadow-2xl",
 									children: [/* @__PURE__ */ jsx(Link, {
-										to: "/contributors",
+										to: "/contributors/",
 										className: "block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors",
 										onClick: () => setActiveDropdown(null),
 										children: "Contributors"
 									}), /* @__PURE__ */ jsx(Link, {
-										to: "/about",
+										to: "/about/",
 										className: "block px-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500 hover:bg-white/5 transition-colors",
 										onClick: () => setActiveDropdown(null),
 										children: "About Us"
@@ -133,7 +133,7 @@ function Navbar() {
 					}), activeDropdown === cat.label && /* @__PURE__ */ jsx("div", {
 						className: "px-4 pb-3 flex flex-col gap-2",
 						children: cat.items.map((item) => /* @__PURE__ */ jsx(Link, {
-							to: `/articles?category=${encodeURIComponent(item)}`,
+							to: `/articles/?category=${encodeURIComponent(item)}`,
 							className: "text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500",
 							onClick: () => {
 								setMenuOpen(false);
@@ -146,7 +146,7 @@ function Navbar() {
 				/* @__PURE__ */ jsx("div", {
 					className: "border-b border-white/5",
 					children: /* @__PURE__ */ jsx(Link, {
-						to: "/gallery",
+						to: "/gallery/",
 						className: "block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500",
 						onClick: () => setMenuOpen(false),
 						children: "Gallery"
@@ -155,7 +155,7 @@ function Navbar() {
 				/* @__PURE__ */ jsx("div", {
 					className: "border-b border-white/5",
 					children: /* @__PURE__ */ jsx(Link, {
-						to: "/articles",
+						to: "/articles/",
 						className: "block px-4 py-3 text-[11px] tracking-widest uppercase font-medium text-charcoal-300 hover:text-gold-500",
 						onClick: () => setMenuOpen(false),
 						children: "All Articles"
@@ -173,7 +173,7 @@ function Navbar() {
 					}), activeDropdown === "Community" && /* @__PURE__ */ jsxs("div", {
 						className: "px-4 pb-3 flex flex-col gap-2",
 						children: [/* @__PURE__ */ jsx(Link, {
-							to: "/contributors",
+							to: "/contributors/",
 							className: "text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500",
 							onClick: () => {
 								setMenuOpen(false);
@@ -181,7 +181,7 @@ function Navbar() {
 							},
 							children: "Contributors"
 						}), /* @__PURE__ */ jsx(Link, {
-							to: "/about",
+							to: "/about/",
 							className: "text-[11px] tracking-wider uppercase text-charcoal-400 hover:text-gold-500",
 							onClick: () => {
 								setMenuOpen(false);
@@ -225,8 +225,8 @@ var navCategories = [
 	}
 ];
 var communityLinks = {
-	"Contributors": "/contributors",
-	"About Us": "/about"
+	"Contributors": "/contributors/",
+	"About Us": "/about/"
 };
 function FloatingNav() {
 	const [visible, setVisible] = useState(false);
@@ -275,7 +275,7 @@ function FloatingNav() {
 				}), activeCategory === cat.label && /* @__PURE__ */ jsx("div", {
 					className: "bg-white/[0.03] border-t border-b border-white/5 py-1",
 					children: cat.items.map((item) => /* @__PURE__ */ jsx(Link, {
-						to: communityLinks[item] ?? `/articles?category=${encodeURIComponent(item)}`,
+						to: communityLinks[item] ?? `/articles/?category=${encodeURIComponent(item)}`,
 						onClick: close,
 						className: "block pl-7 pr-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-500 hover:text-gold-500 transition-colors",
 						children: item
@@ -284,10 +284,10 @@ function FloatingNav() {
 				/* @__PURE__ */ jsx("div", { className: "h-px bg-white/5 my-1" }),
 				[{
 					label: "Gallery",
-					to: "/gallery"
+					to: "/gallery/"
 				}, {
 					label: "All Articles",
-					to: "/articles"
+					to: "/articles/"
 				}].map(({ label, to }) => /* @__PURE__ */ jsx(Link, {
 					to,
 					onClick: close,
@@ -5011,7 +5011,7 @@ What's your current hair doing for you? And has there been a cut, or a moment of
 	},
 	{
 		id: 32,
-		slug: "NOVOGRO™-vs-minoxidil",
+		slug: "novogro-vs-minoxidil",
 		tag: "Hair Thinning",
 		title: "Minoxidil vs. Proprietary Molecules: Is NOVOGRO™ the Industry's Best Kept Secret?",
 		excerpt: "For years, minoxidil has been the established benchmark in hair-loss topicals. One name landed in our stylist circle this week: NOVOGRO™ (NV), a fresh class of ingredients designed to tackle multiple drivers of hair thinning at once.",
@@ -5457,7 +5457,7 @@ NOVOGRO™ does not stop at DHT. Based on what the team presented, it treats the
 | Weak dermal papilla cells | The cells that coordinate growth are losing strength | NV-623 + NV-624 |
 | Poor root environment | The surrounding support system is not strong enough | NV-273 |
 
-We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/NOVOGRO™-vs-minoxidil), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
+We have already covered how NV-623, NV-624, and NV-273 may help in different contexts in our [NOVOGRO™ vs. minoxidil breakdown](/article/novogro-vs-minoxidil/), so we will avoid repeating that discussion here. The key point is that this class of molecules appears to create a better overall growth system, which is exciting in itself.
 
 > "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
 > — Mara Ellis, Scalp-Care Educator & Master Stylist
@@ -6429,7 +6429,7 @@ function Ticker() {
 			className: "flex gap-12 whitespace-nowrap ticker-scroll",
 			style: { width: "max-content" },
 			children: doubled.map((article, i) => /* @__PURE__ */ jsxs("a", {
-				href: `/article/${article.slug}`,
+				href: `/article/${article.slug}/`,
 				className: "text-[10px] font-semibold tracking-widest uppercase hover:underline",
 				children: [
 					"✦ ",
@@ -6466,7 +6466,7 @@ function Hero() {
 			children: /* @__PURE__ */ jsxs("div", {
 				className: "grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 mt-6",
 				children: [/* @__PURE__ */ jsx(Link, {
-					to: "/article/NOVOGRO™-vs-minoxidil",
+					to: "/article/novogro-vs-minoxidil/",
 					className: "lg:col-span-8 relative group cursor-pointer img-zoom block",
 					children: /* @__PURE__ */ jsxs("div", {
 						className: "relative overflow-hidden aspect-[16/10] lg:aspect-[4/3]",
@@ -6526,7 +6526,7 @@ function Hero() {
 				}), /* @__PURE__ */ jsxs("div", {
 					className: "lg:col-span-4 flex flex-col gap-0 border-l border-white/5",
 					children: [/* @__PURE__ */ jsx(Link, {
-						to: "/article/what-your-hair-says-about-you-sex-and-the-city",
+						to: "/article/what-your-hair-says-about-you-sex-and-the-city/",
 						className: "group cursor-pointer img-zoom block",
 						children: /* @__PURE__ */ jsxs("div", {
 							className: "relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]",
@@ -6575,7 +6575,7 @@ function Hero() {
 								slug: "fine-frizzy-wavy-hair"
 							}
 						].map((article) => /* @__PURE__ */ jsxs(Link, {
-							to: `/article/${article.slug}`,
+							to: `/article/${article.slug}/`,
 							className: "flex flex-col gap-1.5 p-4 lg:px-4 hover:bg-white/[0.03] transition-colors group",
 							children: [
 								/* @__PURE__ */ jsx("span", {
@@ -6669,7 +6669,7 @@ var articles$1 = [
 ];
 function ArticleCard({ article, size = "normal" }) {
 	return /* @__PURE__ */ jsxs(Link, {
-		to: `/article/${article.slug}`,
+		to: `/article/${article.slug}/`,
 		className: "group flex flex-col cursor-pointer card-hover",
 		children: [/* @__PURE__ */ jsxs("div", {
 			className: `img-zoom overflow-hidden ${size === "large" ? "aspect-[4/3]" : "aspect-[3/2]"} relative`,
@@ -6731,7 +6731,7 @@ function FeaturedGrid() {
 						children: "Latest Stories"
 					})]
 				}), /* @__PURE__ */ jsxs("a", {
-					href: "/articles",
+					href: "/articles/",
 					className: "hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors",
 					children: ["All Articles ", /* @__PURE__ */ jsx(ArrowRight, { size: 12 })]
 				})]
@@ -7607,7 +7607,7 @@ function TrendingLooks() {
 				/* @__PURE__ */ jsx("div", {
 					className: "flex justify-center mt-8",
 					children: /* @__PURE__ */ jsxs(Link, {
-						to: "/gallery",
+						to: "/gallery/",
 						className: "flex items-center gap-2 border border-white/10 text-charcoal-300 hover:border-gold-500 hover:text-gold-500 text-[11px] tracking-widest uppercase px-8 py-3 transition-colors",
 						children: ["View Full Gallery ", /* @__PURE__ */ jsx(ArrowRight, { size: 12 })]
 					})
@@ -7943,7 +7943,7 @@ function ProTips() {
 					style: { fontFamily: "'Playfair Display', serif" },
 					children: "Wisdom From the Chair"
 				})] }), /* @__PURE__ */ jsxs(Link, {
-					to: "/contributors",
+					to: "/contributors/",
 					className: "hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors",
 					children: ["Meet the Experts ", /* @__PURE__ */ jsx(ArrowRight, { size: 12 })]
 				})]
@@ -8131,53 +8131,53 @@ var footerLinks = {
 	Editorial: [
 		{
 			label: "All Articles",
-			to: "/articles"
+			to: "/articles/"
 		},
 		{
 			label: "Trends",
-			to: "/articles?section=Trends"
+			to: "/articles/?section=Trends"
 		},
 		{
 			label: "Inspiration",
-			to: "/articles?section=Inspiration"
+			to: "/articles/?section=Inspiration"
 		},
 		{
 			label: "Hair Care",
-			to: "/articles?section=Hair+Care"
+			to: "/articles/?section=Hair+Care"
 		},
 		{
 			label: "Gallery",
-			to: "/gallery"
+			to: "/gallery/"
 		}
 	],
 	Explore: [
 		{
 			label: "Color",
-			to: "/articles?category=Color"
+			to: "/articles/?category=Color"
 		},
 		{
 			label: "Cut & Style",
-			to: "/articles?category=Cut+%26+Style"
+			to: "/articles/?category=Cut+%26+Style"
 		},
 		{
 			label: "Hair Thinning",
-			to: "/articles?category=Hair+Thinning"
+			to: "/articles/?category=Hair+Thinning"
 		},
 		{
 			label: "At-Home Tips",
-			to: "/articles?category=At-Home+Tips"
+			to: "/articles/?category=At-Home+Tips"
 		},
 		{
 			label: "Products",
-			to: "/articles?category=Products"
+			to: "/articles/?category=Products"
 		}
 	],
 	Community: [{
 		label: "About Us",
-		to: "/about"
+		to: "/about/"
 	}, {
 		label: "Contributors",
-		to: "/contributors"
+		to: "/contributors/"
 	}]
 };
 var socials = [{
@@ -8272,7 +8272,7 @@ function Footer() {
 					children: [/* @__PURE__ */ jsx("span", { children: "© 2026 HairProVoices Media, LLC. All rights reserved." }), /* @__PURE__ */ jsxs("div", {
 						className: "flex items-center gap-5",
 						children: [/* @__PURE__ */ jsx(Link, {
-							to: "/about",
+							to: "/about/",
 							className: "hover:text-charcoal-400 transition-colors",
 							children: "About"
 						}), /* @__PURE__ */ jsx("a", {
@@ -8325,13 +8325,13 @@ function ArticleHero({ article }) {
 						}),
 						/* @__PURE__ */ jsx(ChevronRight, { size: 10 }),
 						/* @__PURE__ */ jsx(Link, {
-							to: `/articles?section=${encodeURIComponent(article.section)}`,
+							to: `/articles/?section=${encodeURIComponent(article.section)}`,
 							className: "hover:text-gold-500 transition-colors",
 							children: article.section
 						}),
 						/* @__PURE__ */ jsx(ChevronRight, { size: 10 }),
 						/* @__PURE__ */ jsx(Link, {
-							to: `/articles?section=${encodeURIComponent(article.section)}&category=${encodeURIComponent(article.category)}`,
+							to: `/articles/?section=${encodeURIComponent(article.section)}&category=${encodeURIComponent(article.category)}`,
 							className: "hover:text-gold-500 transition-colors",
 							children: article.category
 						}),
@@ -9834,7 +9834,7 @@ var h2Slugs$1 = new Set([
 	"bangs-guide-2026",
 	"female-hair-loss-stylist-guide",
 	"french-open-tennis-hairstyles",
-	"NOVOGRO™-vs-minoxidil",
+	"novogro-vs-minoxidil",
 	"what-your-hair-says-about-you-sex-and-the-city",
 	"wet-look-hair-chic-not-greasy",
 	"finasteride-vs-novogro-women-hair-loss",
@@ -10075,14 +10075,14 @@ function RelatedArticles({ currentSlug }) {
 						children: "You May Also Like"
 					})]
 				}), /* @__PURE__ */ jsxs(Link, {
-					to: "/articles",
+					to: "/articles/",
 					className: "hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors",
 					children: ["All Articles ", /* @__PURE__ */ jsx(ArrowRight, { size: 12 })]
 				})]
 			}), /* @__PURE__ */ jsx("div", {
 				className: "grid grid-cols-1 md:grid-cols-3 gap-8",
 				children: related.map((article) => /* @__PURE__ */ jsxs(Link, {
-					to: `/article/${article.slug}`,
+					to: `/article/${article.slug}/`,
 					className: "group flex flex-col cursor-pointer card-hover",
 					children: [/* @__PURE__ */ jsx("div", {
 						className: "overflow-hidden aspect-[3/2]",
@@ -10159,7 +10159,7 @@ var h2Slugs = new Set([
 	"bangs-guide-2026",
 	"female-hair-loss-stylist-guide",
 	"french-open-tennis-hairstyles",
-	"NOVOGRO™-vs-minoxidil",
+	"novogro-vs-minoxidil",
 	"wet-look-hair-chic-not-greasy",
 	"finasteride-vs-novogro-women-hair-loss",
 	"french-bob-every-face-shape",
@@ -10434,7 +10434,7 @@ function ArticlesPage() {
 					children: /* @__PURE__ */ jsx("div", {
 						className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5",
 						children: filtered.map((article) => /* @__PURE__ */ jsxs(Link, {
-							to: `/article/${article.slug}`,
+							to: `/article/${article.slug}/`,
 							className: "group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors",
 							children: [/* @__PURE__ */ jsx("div", {
 								className: "overflow-hidden aspect-[16/9]",
@@ -10520,7 +10520,7 @@ function AuthorPage() {
 					children: /* @__PURE__ */ jsxs("div", {
 						className: "max-w-7xl mx-auto px-4 py-14 lg:py-20",
 						children: [/* @__PURE__ */ jsx(Link, {
-							to: "/contributors",
+							to: "/contributors/",
 							className: "inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors mb-8",
 							children: "← All Contributors"
 						}), /* @__PURE__ */ jsxs("div", {
@@ -10572,7 +10572,7 @@ function AuthorPage() {
 					}) : /* @__PURE__ */ jsx("div", {
 						className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5",
 						children: authorArticles.map((article) => /* @__PURE__ */ jsxs(Link, {
-							to: `/article/${article.slug}`,
+							to: `/article/${article.slug}/`,
 							className: "group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors",
 							children: [/* @__PURE__ */ jsx("div", {
 								className: "overflow-hidden aspect-[16/9]",
@@ -10836,7 +10836,7 @@ function ContributorsPage() {
 									recentArticles.length > 0 && /* @__PURE__ */ jsxs("div", {
 										className: "flex flex-col gap-2 pt-3 border-t border-white/5",
 										children: [recentArticles.map((article) => /* @__PURE__ */ jsxs(Link, {
-											to: `/article/${article.slug}`,
+											to: `/article/${article.slug}/`,
 											className: "group flex items-start gap-2",
 											children: [/* @__PURE__ */ jsx("span", {
 												className: "text-[9px] tracking-widest uppercase text-gold-500 font-medium mt-0.5 flex-shrink-0",

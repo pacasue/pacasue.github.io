@@ -77,7 +77,7 @@ export default function ContributorsPage() {
                       {recentArticles.map((article) => (
                         <Link
                           key={article.slug}
-                          to={`/article/${article.slug}`}
+                          to={`/article/${article.slug}/`}
                           className="group flex items-start gap-2"
                         >
                           <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium mt-0.5 flex-shrink-0">{article.tag}</span>

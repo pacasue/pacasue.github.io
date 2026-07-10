@@ -38,7 +38,7 @@ export default function RelatedArticles({ currentSlug }: { currentSlug: string }
             </h2>
           </div>
           <Link
-            to="/articles"
+            to="/articles/"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors"
           >
             All Articles <ArrowRight size={12} />
@@ -49,7 +49,7 @@ export default function RelatedArticles({ currentSlug }: { currentSlug: string }
           {related.map((article) => (
             <Link
               key={article.title}
-              to={`/article/${article.slug}`}
+              to={`/article/${article.slug}/`}
               className="group flex flex-col cursor-pointer card-hover"
             >
               <div className="overflow-hidden aspect-[3/2]">

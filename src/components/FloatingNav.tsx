@@ -10,8 +10,8 @@ const navCategories = [
 ]
 
 const communityLinks: Record<string, string> = {
-  'Contributors': '/contributors',
-  'About Us': '/about',
+  'Contributors': '/contributors/',
+  'About Us': '/about/',
 }
 
 export default function FloatingNav() {
@@ -65,7 +65,7 @@ export default function FloatingNav() {
                     {cat.items.map((item) => (
                       <Link
                         key={item}
-                        to={communityLinks[item] ?? `/articles?category=${encodeURIComponent(item)}`}
+                        to={communityLinks[item] ?? `/articles/?category=${encodeURIComponent(item)}`}
                         onClick={close}
                         className="block pl-7 pr-4 py-2 text-[11px] tracking-wider uppercase text-charcoal-500 hover:text-gold-500 transition-colors"
                       >
@@ -80,8 +80,8 @@ export default function FloatingNav() {
             <div className="h-px bg-white/5 my-1" />
 
             {[
-              { label: 'Gallery', to: '/gallery' },
-              { label: 'All Articles', to: '/articles' },
+              { label: 'Gallery', to: '/gallery/' },
+              { label: 'All Articles', to: '/articles/' },
             ].map(({ label, to }) => (
               <Link
                 key={to}

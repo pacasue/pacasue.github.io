@@ -127,7 +127,7 @@ export default function TrendingLooks() {
         {/* CTA */}
         <div className="flex justify-center mt-8">
           <Link
-            to="/gallery"
+            to="/gallery/"
             className="flex items-center gap-2 border border-white/10 text-charcoal-300 hover:border-gold-500 hover:text-gold-500 text-[11px] tracking-widest uppercase px-8 py-3 transition-colors"
           >
             View Full Gallery <ArrowRight size={12} />
