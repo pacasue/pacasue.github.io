@@ -419,4 +419,10 @@
       <image:loc>https://hairprovoices.com/image/split-ends-cover.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/flat-iron-heat-damage/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
