@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 mt-6">
 
           {/* Main feature — large */}
-          <Link to="/article/NOVOGRO™-vs-minoxidil" className="lg:col-span-8 relative group cursor-pointer img-zoom block">
+          <Link to="/article/novogro-vs-minoxidil/" className="lg:col-span-8 relative group cursor-pointer img-zoom block">
             <div className="relative overflow-hidden aspect-[16/10] lg:aspect-[4/3]">
               <img
                 src={HERO_IMAGE}
@@ -67,7 +67,7 @@ export default function Hero() {
           <div className="lg:col-span-4 flex flex-col gap-0 border-l border-white/5">
 
             {/* Secondary feature */}
-            <Link to="/article/what-your-hair-says-about-you-sex-and-the-city" className="group cursor-pointer img-zoom block">
+            <Link to="/article/what-your-hair-says-about-you-sex-and-the-city/" className="group cursor-pointer img-zoom block">
               <div className="relative overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[260px]">
                 <img
                   src={SIDE_IMAGE}
@@ -114,7 +114,7 @@ export default function Hero() {
               ].map((article) => (
                 <Link
                   key={article.title}
-                  to={`/article/${article.slug}`}
+                  to={`/article/${article.slug}/`}
                   className="flex flex-col gap-1.5 p-4 lg:px-4 hover:bg-white/[0.03] transition-colors group"
                 >
                   <span className="text-[9px] tracking-widest uppercase text-gold-500 font-medium">{article.tag}</span>

@@ -73,7 +73,7 @@ function ArticleCard({
 }) {
   return (
     <Link
-      to={`/article/${article.slug}`}
+      to={`/article/${article.slug}/`}
       className="group flex flex-col cursor-pointer card-hover"
     >
       <div className={`img-zoom overflow-hidden ${size === 'large' ? 'aspect-[4/3]' : 'aspect-[3/2]'} relative`}>
@@ -131,7 +131,7 @@ export default function FeaturedGrid() {
             </h2>
           </div>
           <a
-            href="/articles"
+            href="/articles/"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors"
           >
             All Articles <ArrowRight size={12} />
