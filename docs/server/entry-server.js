@@ -9949,7 +9949,10 @@ var h2Slugs$1 = new Set([
 	"smarter-way-to-go-gray",
 	"hard-water-hair",
 	"how-often-wash-hair",
-	"split-ends-trims-truth"
+	"split-ends-trims-truth",
+	"flat-iron-heat-damage",
+	"hair-oiling-trend",
+	"modern-perm-trend"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -10274,7 +10277,10 @@ var h2Slugs = new Set([
 	"smarter-way-to-go-gray",
 	"hard-water-hair",
 	"how-often-wash-hair",
-	"split-ends-trims-truth"
+	"split-ends-trims-truth",
+	"flat-iron-heat-damage",
+	"hair-oiling-trend",
+	"modern-perm-trend"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
