@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Soft half-up claw clip placeholder</title>
+  <desc id="desc">Placeholder showing a soft half-up hairstyle secured with a claw clip.</desc>
+  <rect width="1200" height="675" fill="#171717"/>
+  <path d="M388 188c82-112 260-112 342 4 52 74 58 184 12 274-46 92-133 142-254 150" fill="none" stroke="#ecd7ba" stroke-width="18" stroke-linecap="round"/>
+  <path d="M478 248c45 45 111 45 157 0" fill="none" stroke="#c9a84c" stroke-width="16" stroke-linecap="round"/>
+  <path d="M540 232l-42 52m84-52l42 52" stroke="#c9a84c" stroke-width="12" stroke-linecap="round"/>
+  <text x="70" y="575" fill="#f5f0e7" font-family="Georgia, serif" font-size="42">Soft Half-Up Claw Clip</text>
+  <text x="72" y="615" fill="#c9a84c" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">IMAGE PLACEHOLDER</text>
+</svg>
