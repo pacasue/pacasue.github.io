@@ -473,6 +473,12 @@ var authors = {
 		title: "Stylist & Salon Educator",
 		bio: "Renata Voss is a stylist and salon educator with fifteen years behind the chair. She has a soft spot for the old techniques that keep coming back as trends, and writes about technique and the reality behind viral hair videos for HairProVoices.",
 		image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80&auto=format&fit=crop&facepad=3"
+	},
+	"Talia Brenner": {
+		name: "Talia Brenner",
+		title: "Texture Specialist & Salon Educator",
+		bio: "Talia Brenner is a texture specialist and salon educator with thirteen years behind the chair. She spends her days building the soft, lived-in waves clients ask for, and writes about texture and trends for HairProVoices, including the modern services hiding behind old, scary names.",
+		image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80&auto=format&fit=crop&facepad=3"
 	}
 };
 var articles = [
@@ -6454,6 +6460,52 @@ Here is my honest, behind-the-chair verdict. If your hair is dry, coarse, curly,
 The test is the same as it is for every trend that lands in my chair. Try the corrected version for two weeks, watch how your actual hair behaves rather than how the ritual feels, and keep only what earns its place. Oiling is a good technique wearing a silly new name. Do it the boring, correct way and it works. Do it the way the algorithm showed you, and you become one of the clients I spend an afternoon fixing.`,
 		metaTitle: "The Hair Oiling Trend, Explained: 3 Mistakes That Ruin It",
 		metaDescription: "A stylist with 15 years behind the chair explains what hair oiling can and cannot do, the three mistakes that ruin it, and how to tell in two weeks if it is right for your hair."
+	},
+	{
+		id: 48,
+		slug: "modern-perm-trend",
+		tag: "Texture",
+		title: "The Perm Is Back, and It Is Nothing Like the One That Scared Your Mother",
+		excerpt: "The perm returned quietly, under new names, doing a much gentler job. A texture specialist explains what it actually is now, and the honest version of who should and should not get one.",
+		author: "Talia Brenner",
+		date: "Jul 14, 2026",
+		readTime: "7 min",
+		image: "/image/modern-perm-soft-wave.png",
+		category: "Texture",
+		section: "Trends",
+		body: `The word perm still makes people flinch. I watch it happen at the chair. A client will describe exactly what she wants, soft bends, that lived-in undone wave, hair that does something on its own instead of falling flat by noon, and then I say the word for what would actually give her that, and her face drops. She is picturing 1986. Tight poodle curls, a helmet of frizz, that unmistakable smell. I get it. But the thing she is imagining and the thing I would actually do to her hair have almost nothing in common anymore.
+
+Texture is the biggest trend in my chair right now, and a real chunk of the undone, effortless hair people are asking for is not achievable with a curling iron every morning forever. So the perm came back. It just came back quietly, under new names, doing a much gentler job. Here is what it actually is now, and the honest version of who should and should not get one.
+
+## Why it looks nothing like the eighties version
+
+The old perm was built to do one thing as aggressively as possible, which was to take straight hair and force it into tight, uniform curl and hold it there for dear life. The solutions were harsh, the rods were small, and the goal was maximum, permanent, unmistakable curl. That is the image burned into everyone's memory, and it is a fair thing to be afraid of.
+
+What has actually changed is the intention, not just the chemistry. Today the point of most of these services is a loose, natural-looking wave, not a defined curl. Bigger rods and rollers make bigger, softer bends. The trend names you have seen floating around, the beach-wave perm, the digital or so-called hot perm, the K-beauty styles, are mostly different tools aimed at the same modern goal, which is texture that looks like you were simply born with slightly better hair. The results are gentler, less uniform, and far more forgiving than what your mother sat through.
+
+![Bigger rods and rollers create the soft, loose bends of a modern perm, a world away from the tight uniform curl of the eighties.|full](/image/modern-perm-rollers.png)
+
+## What a perm can and cannot give you
+
+Let me be a stylist and not a salesperson for a second. A perm restructures the actual bonds inside your hair, so it genuinely changes your texture rather than just styling it. That is the appeal and the catch in one sentence. The upside is enormous for the right person. If you are tired of heat-styling waves every single morning only to watch them fall out, a soft wave built into the hair itself gives you volume and movement that survives your commute and your workout. For fine, flat hair especially, it can add the body a round brush never keeps.
+
+What it cannot do is be temporary or be undone on a bad day. It grows out, it does not wash out, and you will have a line where new straight hair meets waved hair as it does. It also will not fix damaged hair or make thin hair thick. It changes the shape of the strand, not the health or the amount of it. Anyone promising you that a perm is a hair-growth or repair treatment is selling, not advising.
+
+## The part the trend videos skip: it is still a chemical service
+
+However soft and pretty the modern version is, a perm is a chemical process that breaks and reforms the bonds in your hair, and that is not a small thing to do to a strand. Done well, on suitable hair, by someone who knows what they are doing, it is safe and the hair stays healthy. Done on the wrong hair, or overprocessed, it is exactly the frizzy, straw-like disaster the reputation is built on. The difference is almost entirely the condition of your hair going in and the skill of the person doing it.
+
+This is why the honest answer to can I perm my hair is sometimes no. If your hair is already heavily bleached, badly heat-damaged, or fragile and breaking, layering a bond-breaking chemical service on top is asking for trouble, and a good stylist will tell you to wait and repair first rather than take your money today. When someone declines to perm compromised hair, that is not them being difficult. That is the single clearest sign they actually know what they are doing.
+
+## If you are tempted, do this first
+
+Go in for a consultation before you book the service, and treat how the stylist talks to you as part of the test. You want someone who asks to feel your hair, asks what you have done to it chemically, and talks about rod size and the specific wave you want rather than just saying yes to everything. Bring photos, and be honest that what you are usually showing is a loose wave, not a tight curl, because those are two very different services and the mix-up is where disappointment starts.
+
+![A stylist who asks to feel your hair and talks through the specific wave you want is showing you they know what they are doing.|full](/image/modern-perm-consultation.png)
+
+Then ask about the aftercare before you commit, not after, because a perm changes how you have to treat your hair. Waved hair is thirstier and needs gentler, more moisturizing care and a break from the very heat tools you were hoping to retire. If a salon is eager to book the appointment but vague about how you will care for it afterward, that tells you something. The perm earned its comeback because the modern version is genuinely good. It still only works when the person doing it respects that it is chemistry, not a curling iron with commitment issues.`,
+		metaTitle: "The Modern Perm, Explained: Nothing Like the One That Scared Your Mother",
+		metaDescription: "A texture specialist explains how the modern perm creates soft, natural waves, what it can and cannot do, and the honest signs of a stylist who will do it right."
 	}
 ];
 function getArticleBySlug(slug) {
