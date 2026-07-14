@@ -185,6 +185,12 @@ export const authors: Record<string, Author> = {
     bio: 'Simone Ellery is a colorist and salon educator with sixteen years behind the chair. She can read a client\'s styling habits from a single section of hair, and writes about hair health and heat styling for HairProVoices from a place of daily, hands-on experience.',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Renata Voss': {
+    name: 'Renata Voss',
+    title: 'Stylist & Salon Educator',
+    bio: 'Renata Voss is a stylist and salon educator with fifteen years behind the chair. She has a soft spot for the old techniques that keep coming back as trends, and writes about technique and the reality behind viral hair videos for HairProVoices.',
+    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 export const articles: Article[] = [
@@ -6419,6 +6425,52 @@ I am not going to pretend anyone is giving up their tools, so here is the realis
 And give your hair days off. The clients with the healthiest lengths are not the ones with the fanciest products. They are the ones who let their hair air-dry two or three days a week and save the hot tools for when it matters. Your hair keeps a running total of every degree it has ever met. The kindest thing you can do is simply hand it a smaller bill.`,
     metaTitle: 'Flat Iron Heat Damage: What Really Happens to Your Hair at 430 Degrees',
     metaDescription: 'A colorist with 16 years behind the chair explains what heat really does to your hair, why hotter is never faster, and the small habit changes that prevent breakage.',
+  },
+  {
+    id: 47,
+    slug: 'hair-oiling-trend',
+    tag: 'Technique',
+    title: 'Everyone Is Oiling Their Hair Right Now. Half of Them Are Doing It Backwards.',
+    excerpt: 'Hair oiling is having a viral moment, but the trend videos leave out the technique that decides whether it works. A stylist breaks down the three mistakes that ruin it.',
+    author: 'Renata Voss',
+    date: 'Jul 13, 2026',
+    readTime: '7 min',
+    image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1600&q=80&auto=format&fit=crop',
+    category: 'Technique',
+    section: 'Trends',
+    body: `Every few years an old technique puts on new clothes and comes back as a trend, and my clients start asking me about it like it was invented last Tuesday. Right now it is hair oiling. Slugging your hair, they call it, borrowed from the skincare version. Overnight oil, a shower cap, a video of someone with impossibly glossy strands. My chair has been full of women either swearing by it or convinced it ruined their hair, and the strange part is they are often doing almost the same thing. The difference between the two outcomes is technique, and technique is exactly what the trend videos leave out.
+
+So let me do what the fifteen-second clips will not. Oiling is not new, it is not magic, and it is not for everyone. It is a genuinely useful technique that gets ruined by three predictable mistakes. Here is how it actually works, and how to tell within a week whether it belongs in your routine at all.
+
+## What oil can and cannot do
+
+First, honesty, because that is the whole point of doing this properly. Oil does not feed your hair from the outside and it does not make it grow. Your hair is not alive. It cannot absorb nutrients through the strand the way the ads imply. What the right oil can genuinely do is real and worth having anyway. It coats the strand, smooths the cuticle so light bounces off it as shine, reduces the friction that causes breakage, and slows how quickly water leaves the hair, which is why oiled hair holds its moisture and looks less frizzy.
+
+So this is a technique for managing the hair you already have, not for growing more. The women who come in disappointed almost always expected the second thing. The women who are thrilled wanted the first. Sort out which one you are before you start, and you will not be one of the disappointed ones.
+
+## Mistake one: oiling the scalp when you meant to oil the hair
+
+This is the big one, and it is where the trend does real harm. There are two completely different practices getting blended into one word. Oiling the lengths of your hair, mid-shaft to ends, is about shine and protection and is safe for basically everyone. Oiling the scalp is a different thing with a different purpose and different risks, and the trend videos smear the two together.
+
+For a lot of people, sitting heavy oil on the scalp overnight under a cap is a recipe for clogged follicles, buildup, and in some cases a flare of the very flaking they were trying to fix. If your scalp is oily or acne-prone to begin with, this is not your technique. Keep oil on the lengths, keep it off the roots, and you avoid the most common way this goes wrong. If you specifically want to work on your scalp, that is a targeted, lighter, rinse-in-a-reasonable-time practice, not a heavy overnight slug.
+
+## Mistake two: the wrong oil, drowned on in the wrong amount
+
+Not all oils behave the same and the difference is not marketing. Some oils actually penetrate the strand and genuinely condition, which is the group you want for real benefit rather than just a surface coat. Others mostly sit on top and add shine and slip, which is fine but is a different job. And a few of the trendiest bottles are barely oil at all once you read the back. The point is that the oil you grabbed because it went viral may not be doing what you think.
+
+Then there is amount, and this is where most home attempts fail. Hair oil is a few drops warmed between the palms and pressed through the mid-lengths and ends, not a dressing you pour on a salad. Too much and no shampoo on earth will fully remove it in one wash, so you strip and strip and end up drier than when you started. If it takes three lathers to feel clean, you used at least three times too much.
+
+## Mistake three: no plan to get it back out
+
+An oil treatment is only as good as your ability to remove it cleanly, and nobody in the videos shows the wash-out because it is not aspirational. Fine hair especially will look flat and greasy for a day or two if the removal is wrong. The fix is simple once someone tells you: apply shampoo to the oily hair before you add water, emulsify it, and only then rinse. Adding water first just makes the oil bead up and refuse to leave. Done right, one or two gentle washes clears it. Done wrong, you are back to square one and blaming the oil.
+
+## So should you actually do it
+
+Here is my honest, behind-the-chair verdict. If your hair is dry, coarse, curly, or chronically frizzy, a lengths-only oiling once or twice a week is one of the best low-cost things you can do for shine and breakage, and I recommend it happily. If your hair is fine or your scalp runs oily, do it lightly, on the ends only, and do not expect a miracle. If you are doing it because a video promised regrowth, save your money, because that is the one thing it cannot deliver.
+
+The test is the same as it is for every trend that lands in my chair. Try the corrected version for two weeks, watch how your actual hair behaves rather than how the ritual feels, and keep only what earns its place. Oiling is a good technique wearing a silly new name. Do it the boring, correct way and it works. Do it the way the algorithm showed you, and you become one of the clients I spend an afternoon fixing.`,
+    metaTitle: 'The Hair Oiling Trend, Explained: 3 Mistakes That Ruin It',
+    metaDescription: 'A stylist with 15 years behind the chair explains what hair oiling can and cannot do, the three mistakes that ruin it, and how to tell in two weeks if it is right for your hair.',
   },
 ]
 
