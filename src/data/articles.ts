@@ -6524,6 +6524,145 @@ Then ask about the aftercare before you commit, not after, because a perm change
     metaTitle: 'The Modern Perm, Explained: Nothing Like the One That Scared Your Mother',
     metaDescription: 'A texture specialist explains how the modern perm creates soft, natural waves, what it can and cannot do, and the honest signs of a stylist who will do it right.',
   },
+  {
+    id: 49,
+    slug: 'scalp-service-gap',
+    tag: 'Business',
+    title: 'Your Clients Are Already Buying Scalp Care. Just Not From You.',
+    excerpt: 'Scalp products make up 3.4% of salon retail. Scalp services make up 0.1% of salon time. That gap is the most obvious money on the table in 2026, and the stylists closing it are booking at a frequency colour never could.',
+    author: 'Dana Reeves',
+    date: 'Jul 16, 2026',
+    readTime: '9 min',
+    image: '/image/scalp-service-bowl.png',
+    category: 'Business',
+    section: 'Inspiration',
+    body: `Scalp-care products account for roughly 3.4% of salon retail sales. Scalp treatments account for roughly 0.1% of salon services.
+
+Sit with that for a second.
+
+Your clients are buying scalp care. They're buying it in volume, at your front desk, off your shelf, with your name on the bag. And then they're going home and doing the service themselves, badly, in the shower, in four minutes, with wet hands and no mirror.
+
+You sold them the product. You gave away the service. That's the whole problem in two numbers.
+
+## The eight minutes you've been giving away for free
+
+Think about what actually happens at your shampoo bowl.
+
+You've got a client reclined, warm water running, your hands on her scalp. She's quiet. Half your clients close their eyes. A few of them tell you it's the best part of the appointment, and if you've been behind the chair more than a year, you've heard some version of "honestly, I'd pay just for this" said as a joke.
+
+It wasn't a joke. It was market research.
+
+Here's what most of us were trained to believe: the bowl is prep. It's the thing that happens before the service. It's overhead, a cost center you absorb so you can get to the part you actually bill for. Some salons don't even let the stylist do it.
+
+That framing was always wrong. It's now expensively wrong.
+
+![The eight minutes at the bowl were never overhead. They were the service your clients keep telling you they would pay for.|full](/image/scalp-service-bowl.png)
+
+## Why now, when the bowl has been there forever
+
+The head spa did it.
+
+The global head spa market sits around $1.5 billion and is tracking toward $2.8 billion by 2033, call it 8.5% compounding, which in this industry is a rocket. #headspa videos have been going viral on TikTok for two straight years. Dedicated scalp studios are opening in markets that didn't have a single one in 2023.
+
+The concept is Japanese and it's not new. What's new is that American clients now have a reference point. Three years ago, "scalp treatment" meant nothing to your client, it sounded like something for dandruff, faintly medical, vaguely embarrassing. Today she's seen forty videos of someone getting a warm oil scalp massage under a microscope camera and she has a word for what she wants.
+
+That's the shift. Not demand, demand was always there, sitting in your bowl with her eyes closed. Vocabulary. She can finally ask for it. And most salons still don't have anything to sell her when she does.
+
+## The math nobody runs
+
+Everyone reads the head spa headlines and thinks nice trend, cute add-on. Then they price it as a $15 upgrade and wonder why it didn't move the needle.
+
+You're looking at the wrong number. It's not the ticket. It's the frequency.
+
+Run your own book:
+
+- **Colour:** every 6 to 8 weeks
+- **Cut:** every 8 to 12 weeks
+- **Scalp treatment:** every 2 to 4 weeks
+
+That's the entire argument. Everything on your menu is capped by biology, hair grows at a fixed rate and you cannot make her roots come in faster to fill your Tuesday. Scalp service has no such ceiling. It's a wellness cadence, not a maintenance cadence. It behaves like a facial, not a haircut.
+
+Take one client at $95, every three weeks, versus that same client at $180 every eight. The colour ticket looks bigger. Annually, the scalp client is worth more, and she's worth it on chair time you were previously giving away, with product cost in the single digits per treatment, no formulation risk, no redo, no colour correction at 7pm on a Saturday.
+
+And these aren't either/or clients. It's the same woman. You're not replacing the colour appointment. You're filling the five dead weeks between them.
+
+That's the part that should keep you up: it's incremental revenue from existing clients on existing equipment. You're not buying a book. You already have the book.
+
+## What it actually costs to start
+
+Less than you're assuming, which is why the salons that move early are going to look very smart in about eighteen months.
+
+You already own the expensive part. You have a bowl, a water line, towels, and hands that know what they're doing. What you're adding:
+
+- **A treatment line.** Cleanser, exfoliant, a serum or two, a mask. One good professional line, not six.
+- **A scalp camera.** $80 to $200. This is the single highest-ROI purchase on the list and I'll come back to it.
+- **A steamer or hot towel setup.** Optional at first. Adds real perceived value.
+- **Time on the books.** The genuinely scarce resource. A real treatment is 30 to 45 minutes and cannot be squeezed into a processing window.
+
+![The expensive part you already own. The rest, a treatment line, a camera, a few tools, costs less than a slow week.|full](/image/scalp-service-tools.png)
+
+The camera deserves its own paragraph. A scalp camera turns an invisible service into a visible one, and invisible services are the hardest thing in the world to sell twice. Your client cannot see her own scalp. She has never seen her own scalp. Show her the before, show her the after, and you have converted a feeling into evidence. Every stylist I know who's added one says the same thing: rebooking stopped being a conversation.
+
+![A scalp camera turns an invisible service into a visible one. She has never seen her own scalp, until you show her.|full](/image/scalp-service-camera.png)
+
+## Build the menu properly
+
+Four rules. Break them at your own cost.
+
+**1. It is a booking, not an add-on.** The moment it lives as a $20 upgrade at the bowl, you've told her it's worth $20. It goes on the menu as its own service, with its own duration and its own line. Clients book what's bookable.
+
+**2. Three tiers, not one.** An express (20 min), a signature (45 min), an intensive (60 to 75, with the camera and a full consultation). People don't buy a thing, they buy a choice between things. The express exists to make the signature look reasonable.
+
+**3. Price it against facials, not shampoos.** This is where almost everyone flinches. Your anchor is not your shampoo-and-style price, it's what the med spa two doors down charges for 45 minutes of someone touching a face. Look it up. Then stop apologizing.
+
+**4. Never bundle it free to fill a slow week.** You will teach your entire book that it's a giveaway and you will never charge for it again. If you need to move slow inventory, discount something you've already commoditized. Not this.
+
+## The four ways this goes wrong
+
+**Rebranding a shampoo.** Calling your existing 8-minute wash a "scalp ritual" and charging $40. Clients aren't stupid. This burns the category in your salon permanently and you only get to do it once.
+
+**Undertraining.** Scalp work is technique. Pressure, sequence, the actual anatomy under your fingers. A bad head spa is worse than no head spa, it's forty-five minutes of a client deciding this was a waste of money while she's trapped in your chair being reminded of it.
+
+**Skipping the consult.** The whole service is diagnostic. If you're not looking, assessing, and telling her what you see, you're selling a massage. Which is fine, but it isn't this, and it doesn't rebook the same way.
+
+**Ignoring your state board.** This is the boring one that gets people. Scope of practice around scalp treatments, exfoliation, and anything with a device varies enormously state to state, and "it's just a scalp thing" is not a defense. Ten minutes on your board's website before you build a menu, not after.
+
+## The part nobody mentions
+
+Something changes in the relationship when you start looking at scalps.
+
+Right now, your consultation is about what she wants, length, tone, the photo on her phone. A scalp consult is about what she has. It's the first conversation in the appointment that isn't aspirational. And it opens a door that has been sitting closed in your salon for years: the clients who are quietly worried about their hair.
+
+They're in your chair every eight weeks. They've been counting strands in the shower drain since February. They have not said a word to you about it, because bringing it up means saying it out loud, and saying it out loud makes it real. So instead they ask you for more layers, or a shorter cut, or they mention offhand that they think their part looks "weird lately" and change the subject before you can answer.
+
+A scalp service gives that conversation a legitimate front door. She's not booking because she's scared. She's booking a treatment. And somewhere in minute twenty, with the camera on and your hands where they are, she tells you the real thing.
+
+That's not a revenue line. That's the client who stays with you for eleven years.
+
+## Who this isn't for
+
+I'd be doing you a disservice if I pitched this as universal.
+
+If your book is 80% quick-service and your average ticket is under $60, the frequency math doesn't rescue you, you need pricing work first, not a new menu. If you're in a market where the nearest wellness spend is forty minutes away, the anchor isn't there and you'll be educating a client base at your own expense. If you're already at capacity and turning people away, adding a labour-intensive 45-minute service to a full book is a burnout plan wearing a growth costume.
+
+And it is labour. Your hands are already the first thing to go in this career. Adding thirty minutes of deep manual work per client is a real conversation to have with yourself before it's a real conversation to have with your accountant.
+
+## The bottom line
+
+The gap between 0.1% and 3.4% is not a mystery. It's not a trend piece. It's a demand signal that has been sitting in your own sales reports for three years, and it says the same thing every quarter: your clients want this, they're already paying for it, and they're paying someone else.
+
+The equipment is bought. The clients are booked. The demand is documented.
+
+The only thing missing is a line on your menu.
+
+## Sources
+
+- Kline Group, ["The Scalp Care Boom: Are Brands Unlocking Growth From The Root Up?"](https://klinegroup.com/beauty-and-wellbeing/professional-hair-care/the-scalp-care-boom-are-brands-unlocking-growth-from-the-root-up/)
+- Salon Today, ["Why Head Spa Services Are the Scalp-Care Trend Every Salon Should Explore."](https://www.salontoday.com/articles/why-head-spa-services-are-the-scalp-care-trend-every-salon-should-explore)
+- Forbes, ["The Japanese Head Spa And The $5 Trillion Wellness Opportunity."](https://www.forbes.com/sites/katehardcastle/2026/03/23/the-japanese-head-spa-and-the-5-trillion-wellness-opportunity/)`,
+    metaTitle: 'The Salon Scalp Service Gap: The Most Obvious Money on the Table in 2026',
+    metaDescription: 'Scalp products are 3.4% of salon retail but scalp services just 0.1% of salon time. A salon business coach breaks down the frequency math, the menu, and how to close the gap.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
