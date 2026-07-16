@@ -440,4 +440,13 @@
       <image:loc>https://hairprovoices.com/image/modern-perm-soft-wave.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/scalp-service-gap/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/scalp-service-bowl.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
