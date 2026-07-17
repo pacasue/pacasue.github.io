@@ -6663,6 +6663,114 @@ The only thing missing is a line on your menu.
     metaTitle: 'The Salon Scalp Service Gap: The Most Obvious Money on the Table in 2026',
     metaDescription: 'Scalp products are 3.4% of salon retail but scalp services just 0.1% of salon time. A salon business coach breaks down the frequency math, the menu, and how to close the gap.',
   },
+  {
+    id: 50,
+    slug: 'wet-vs-dry-cutting',
+    tag: 'Technique',
+    title: 'Your Hair Was Cut Wet. That\'s Why It Never Looks Like It Did In The Chair.',
+    excerpt: 'Wet hair stretches up to 50% of its own length. That means the version of your hair your stylist cut existed for about forty minutes and then never again. Here\'s what the good ones do instead.',
+    author: 'Tom Harley',
+    date: 'Jul 17, 2026',
+    readTime: '7 min',
+    image: '/image/wet-dry-cutting-wet.png',
+    category: 'Technique',
+    section: 'Trends',
+    body: `You know the feeling. Saturday afternoon, you walk out of the salon and you'd genuinely consider paying double. It moves. It sits. The layers do the thing.
+
+Wednesday you wash it yourself and a stranger's haircut shows up on your head.
+
+You've probably filed this under stylists have magic hands and I don't, which is partly true and mostly not. Something more specific happened, and it happened before a single hair was cut.
+
+Your hair was wet.
+
+## What water actually does
+
+Water breaks hydrogen bonds, the temporary bonds that hold your hair in its shape. Break them and hair becomes elastic and biddable. Dry it and they reset, and the hair springs back into whatever it actually is.
+
+The numbers are bigger than most people expect. Healthy dry hair stretches roughly 20 to 30% before it returns. Wet hair can stretch 30 to 50% of its own length.
+
+Read that again with a pair of scissors in your hand.
+
+When your stylist combs a section straight down at the shampoo bowl and cuts a clean line across it, they are cutting a version of your hair that exists for about forty minutes and then never again. It's longer than your hair. It's straighter than your hair. It's heavier and flatter and better behaved than your hair.
+
+Then it dries, the bonds reset, and it goes home as itself.
+
+## The prediction problem
+
+Here's what a good stylist is actually doing when they cut you wet: compensating. They know it'll lift. They know roughly how much. They're running a mental model of your hair's dry behaviour and cutting against it.
+
+That's a real skill and the good ones are frighteningly accurate.
+
+It is still a prediction. And the accuracy of the prediction collapses in three situations:
+
+**Curl.** Obviously. But the part that isn't obvious: not all sections shrink at the same rate. Your crown and your nape have different curl patterns, different density, different porosity. Cut them all wet at the same tension and they dry to different lengths. That's the origin of about half the "one side is shorter than the other" conversations in this industry, and the other side wasn't shorter, it shrank more.
+
+**Fine or thinning hair.** Wet hair clumps. It goes stringy and slick and reads as less than it is. A stylist looking at wet fine hair is looking at hair pretending to be thinner than it is, and hair that looks thin invites removal. This is the most expensive version of the mistake and I'll come back to it.
+
+**Layers.** Anything internal, anything face-framing, anything designed to fall a particular way. Fall is a dry-hair property. You cannot see fall on wet hair, because wet hair doesn't fall, it hangs.
+
+## Wet cutting isn't wrong
+
+This is where the internet loses its mind and starts insisting every haircut should be dry, and that's not true either.
+
+Wet cutting is genuinely, technically better for some things:
+
+- **Precision lines.** Blunt bobs, one-length cuts, anything geometric. Wet hair holds tension and lies flat, and you cannot get a clean architectural line without that.
+- **Sectioning and control.** Wet hair stays where you put it. Dry hair has opinions.
+- **Removing bulk.** Fast, even, efficient. On thick straight hair it's simply the right tool.
+
+The dogma isn't "wet bad." The dogma should be narrower and it should be this: a haircut that is only ever wet is a haircut nobody has actually looked at.
+
+## What the good ones do
+
+Ask around behind the chair and you'll find most experienced stylists have quietly landed in the same place: hybrid.
+
+Wet to shape. Wet to remove bulk, establish the line, get the architecture in. Then blow it out. Then, and this is the part that separates a good haircut from a great one, pick the scissors back up and finish it dry.
+
+Dry finishing is where the haircut becomes yours. It's where you see the actual fall, the actual curl pattern, the actual true length. It's where face-framing gets refined against a face instead of against a wet rope. It's where split ends get taken out, because you genuinely cannot see them wet.
+
+Ten to fifteen extra minutes. That's the entire difference.
+
+![Dry, the hair finally shows its true fall, curl pattern, and length, the version you actually wear home.|full](/image/wet-dry-cutting-dry.png)
+
+## So why doesn't everyone?
+
+Time. That's the honest answer and it isn't a moral failing.
+
+Salons book in blocks. A cut is 45 minutes because the column says 45 minutes. Dry finishing adds 10 to 15, which across seven clients is a client and a half of lost revenue, every single day. The stylist isn't being lazy. They're being scheduled.
+
+Which means this is quietly a pricing conversation dressed as a technique conversation, and if you've ever wondered what you're paying for at a higher price point, a meaningful chunk of it is somebody having the time to look at your hair dry before you leave.
+
+## The fine-hair thing, specifically
+
+I said I'd come back to it.
+
+If your hair has been getting finer, and if you're a woman over forty, there's a decent chance it has, wet cutting stops being a preference and starts being a risk.
+
+Wet fine hair looks sparse. It clumps into strands, shows scalp, reads as thin. And the instinct, looking at that, is to reduce: take weight out, thin the ends, blend it away. Then it dries, and it turns out you had more than the wet version suggested, and now you have less.
+
+The other half of it is that thinning hair is often fine at the ends and denser at the root, new growth, shorter regrowth, different textures at different lengths. Wet, that's invisible. It all combs down into one obedient sheet. Dry, it's the whole picture, and it's the picture that determines whether your haircut makes your density look better or worse.
+
+A stylist who looks at your hair dry is a stylist who can see what's actually happening on your head. That matters well beyond the haircut.
+
+## What to ask for
+
+You don't need to know any of this to use it. Three things:
+
+1. **"Can you finish it dry?"** That's it. That's the whole ask. Most stylists will say yes and quite a few will be pleased you asked.
+2. **Come in with your hair how you wear it.** Not freshly washed and scraped into a bun. Not slicked back. Day-two, styled the way it lives. Your stylist can't cut for your real hair if they never meet it.
+3. **Don't leave without seeing it dry.** Not "dried." Dry, and styled the way you'd style it. If something's off, the fix is thirty seconds while you're still in the chair and a whole new appointment once you're not.
+
+## The bottom line
+
+Your haircut didn't change between Saturday and Wednesday. You just finally saw it.
+
+Somewhere in that appointment your hair was longer, straighter, flatter and more cooperative than it has ever been in its life, and that's the version that got cut. Everything after was the correction.
+
+Ask to be cut as you are. Dry, difficult, and actually yours.`,
+    metaTitle: 'Wet vs. Dry Haircut: Why Your Cut Never Looks the Same at Home',
+    metaDescription: 'Wet hair stretches up to 50%, so a wet cut is made on a version of your hair that lasts forty minutes. A technique editor explains dry finishing and what to ask your stylist for.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {

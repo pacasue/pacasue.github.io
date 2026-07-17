@@ -449,4 +449,13 @@
       <image:loc>https://hairprovoices.com/image/scalp-service-bowl.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/wet-vs-dry-cutting/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/wet-dry-cutting-wet.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
