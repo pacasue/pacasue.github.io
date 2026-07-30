@@ -458,4 +458,13 @@
       <image:loc>https://hairprovoices.com/image/wet-dry-cutting-wet.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/are-straight-perms-bad-for-hair/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/straight-perm-before-after.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
