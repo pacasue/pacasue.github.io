@@ -458,4 +458,13 @@
       <image:loc>https://hairprovoices.com/image/wet-dry-cutting-wet.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/fall-2026-hair-color-trends/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/fall-2026-colors-cover.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
