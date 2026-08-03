@@ -6944,6 +6944,113 @@ Across salons, stylists are seeing demand shift toward shades that prioritize sh
 For salon professionals, that means focusing not only on color placement but also on treatments that maintain strength, hydration, and shine. Because in Fall 2026, the most beautiful hair color isn't just about the pigment, it's about how healthy the hair looks wearing it.`,
 		metaTitle: "The Hair Colors Stylists Predict Will Dominate Fall 2026",
 		metaDescription: "Soft copper, teddy bear bronde, cherry auburn, cinnamon brown, and gloss-enhanced natural hair. A senior color editor on the shades set to dominate salon chairs this fall."
+	},
+	{
+		id: 53,
+		slug: "gloss-or-full-color",
+		tag: "Technique",
+		title: "Gloss or Full Color? Here's How to Know Which Appointment You Actually Need",
+		excerpt: "Not every color appointment needs to be a full color service. If your hair still looks good but feels dull, slightly brassy, or just flat, a gloss may be all you need, and it's faster, gentler, and cheaper than starting over.",
+		author: "Michelle Torres",
+		date: "Aug 3, 2026",
+		readTime: "6 min",
+		image: "/image/gloss-vs-full-color-cover.png",
+		category: "Technique",
+		section: "Trends",
+		body: `Not every color appointment needs to be a full color service.
+
+If your hair still looks good but feels a little dull, slightly brassy, or just lacks that fresh-from-the-salon shine, a gloss might be exactly what you need. In fact, many professional colorists recommend gloss appointments between major color services because they're faster, gentler, and often much more affordable than starting over with permanent color. Glosses enhance what you already have, they don't replace it.
+
+## Here's Why
+
+A full color service is designed to create a noticeable change. It deposits new pigment throughout your hair, covers gray, refreshes faded roots, or completely shifts your shade.
+
+A gloss has a different job.
+
+Most salon glosses are demi-permanent formulas that gently deposit sheer pigment while smoothing the hair cuticle. Instead of dramatically changing your color, they refine it, neutralizing unwanted tones, boosting richness, and creating that reflective, healthy-looking shine people often mistake for naturally perfect hair. They typically last around four to six weeks before gradually fading.
+
+Think of it like polishing furniture.
+
+The wood doesn't change, but it suddenly looks richer, smoother, and newer.
+
+## Book a Gloss If...
+
+### Your Color Has Lost Its Shine
+
+Hair naturally becomes less reflective after weeks of washing, heat styling, sun exposure, and hard water.
+
+If your color still looks accurate but feels flat or lifeless, a gloss can restore that glassy finish without altering your overall shade.
+
+![Same shade, restored finish. A gloss brings back the reflectivity lost to washing, heat styling, and hard water.|full](/image/gloss-restored-shine.png)
+
+### Your Blonde Is Looking Brassy
+
+One of the most common reasons stylists recommend a gloss is to cancel unwanted yellow, orange, or gold tones.
+
+Instead of recoloring your hair completely, a toner-style gloss can rebalance the shade while leaving your highlights intact.
+
+![Before and after a toner-style gloss on blonde: yellow and gold tones neutralized, highlights left fully intact.|full](/image/gloss-brassy-blonde-toned.png)
+
+### Your Brunette Looks Faded
+
+Rich brunette shades slowly lose depth over time.
+
+A brown gloss can make chocolate, espresso, or chestnut tones appear deeper and more dimensional again, without the commitment of another permanent color appointment.
+
+![A brown gloss returns depth and dimension to faded chocolate and espresso tones, no permanent color required.|full](/image/gloss-brunette-depth.png)
+
+### Your Red or Copper Has Lost Vibrancy
+
+Red pigments fade faster than almost any other hair color.
+
+Rather than applying permanent color every few weeks, many stylists refresh reds with a tinted gloss to revive brightness while minimizing unnecessary chemical processing.
+
+### You're Between Highlight Appointments
+
+If your highlights still look good but aren't as bright or blended as they were a month ago, a gloss is often the perfect maintenance appointment.
+
+It refreshes the tone, softens harsh contrasts, and makes older highlights look newly done.
+
+### You Want to Try a New Tone Without Committing
+
+Curious about warmer brunette? Interested in trying cooler blonde?
+
+A gloss lets you experiment with subtle tonal changes that gradually fade, making it an excellent option if you're unsure about making a permanent switch.
+
+## Book Full Color If...
+
+A gloss isn't the answer for every appointment.
+
+You'll likely need a full color service if you want to:
+
+- Go significantly lighter
+- Go significantly darker
+- Cover gray hair completely
+- Change your hair color dramatically
+- Color new root growth
+- Correct uneven or patchy color
+
+Unlike permanent color, glosses cannot dramatically lighten hair because they simply deposit tone rather than lifting existing pigment.
+
+## Why Stylists Love Gloss Appointments
+
+Many clients assume glosses are just an "extra" salon service.
+
+In reality, they're one of the healthiest ways to maintain color.
+
+Because most gloss formulas are ammonia-free or low in alkalinity, they help smooth the cuticle instead of aggressively opening it. That means hair often feels softer, shinier, and less frizzy immediately after the appointment.
+
+It's also why many colorists recommend glosses between major color services, they help extend the life of your existing color while reducing how often you need more intensive chemical treatments.
+
+## The Bottom Line
+
+If you love your current color and simply wish it looked fresher, shinier, or more vibrant, book a gloss.
+
+If you're looking for a dramatic transformation, root coverage, or a completely new shade, book a full color service instead.
+
+Sometimes the healthiest hair isn't the result of coloring more, it's the result of coloring smarter.`,
+		metaTitle: "Gloss or Full Color? How to Know Which Appointment You Need",
+		metaDescription: "A gloss refines your color; full color changes it. A color educator breaks down exactly when to book each, and why stylists recommend glosses between major services."
 	}
 ];
 function getArticleBySlug(slug) {
@@ -10394,7 +10501,8 @@ var h2Slugs$1 = new Set([
 	"scalp-service-gap",
 	"wet-vs-dry-cutting",
 	"are-straight-perms-bad-for-hair",
-	"fall-2026-hair-color-trends"
+	"fall-2026-hair-color-trends",
+	"gloss-or-full-color"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -10726,7 +10834,8 @@ var h2Slugs = new Set([
 	"scalp-service-gap",
 	"wet-vs-dry-cutting",
 	"are-straight-perms-bad-for-hair",
-	"fall-2026-hair-color-trends"
+	"fall-2026-hair-color-trends",
+	"gloss-or-full-color"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
