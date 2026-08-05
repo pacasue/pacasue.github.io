@@ -6441,7 +6441,7 @@ And give your hair days off. The clients with the healthiest lengths are not the
     author: 'Renata Voss',
     date: 'Jul 13, 2026',
     readTime: '7 min',
-    image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1600&q=80&auto=format&fit=crop',
+    image: '/image/hair-oiling-trend-cover.png',
     category: 'Technique',
     section: 'Trends',
     body: `Every few years an old technique puts on new clothes and comes back as a trend, and my clients start asking me about it like it was invented last Tuesday. Right now it is hair oiling. Slugging your hair, they call it, borrowed from the skincare version. Overnight oil, a shower cap, a video of someone with impossibly glossy strands. My chair has been full of women either swearing by it or convinced it ruined their hair, and the strange part is they are often doing almost the same thing. The difference between the two outcomes is technique, and technique is exactly what the trend videos leave out.
