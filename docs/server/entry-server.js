@@ -472,7 +472,7 @@ var authors = {
 		name: "Renata Voss",
 		title: "Stylist & Salon Educator",
 		bio: "Renata Voss is a stylist and salon educator with fifteen years behind the chair. She has a soft spot for the old techniques that keep coming back as trends, and writes about technique and the reality behind viral hair videos for HairProVoices.",
-		image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&q=80&auto=format&fit=crop&crop=faces&facepad=3"
+		image: "/image/renata-voss.png"
 	},
 	"Talia Brenner": {
 		name: "Talia Brenner",
