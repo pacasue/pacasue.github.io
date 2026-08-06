@@ -304,6 +304,24 @@ function FloatingNav() {
 	})] });
 }
 //#endregion
+//#region src/generated/docxArticles.ts
+var docxArticles = [{
+	"id": 3979155795,
+	"slug": "docx-article-template",
+	"tag": "Workflow",
+	"title": "Testing the DOCX Article Importer",
+	"excerpt": "A working Word template that demonstrates metadata, headings, lists, tables, quotes, and image extraction.",
+	"author": "Kasia Nowak",
+	"date": "Aug 6, 2026",
+	"readTime": "3 min",
+	"image": "/image/docx/docx-article-template/image-01.jpg",
+	"category": "At-Home Tips",
+	"section": "Hair Care",
+	"body": "This working template is intentionally complete. **The first embedded image above becomes the hero image**, while images placed later remain inside the article body. Replace the sample content, preserve the metadata labels, and keep using Word’s built-in heading styles.\n\n## Why This Template Exists\n\nThe importer turns Word documents into the same article format used throughout HairProVoices. **Bold text** and *italic text* are preserved automatically, along with headings, lists, tables, quotes, and embedded images.\n\n### Content Patterns\n\n-   Use Heading 1 for major article sections; these headings populate the page table of contents.\n-   Use Heading 2 for subsections and Heading 3 for smaller supporting topics.\n-   Use real Word bullets and numbering instead of typing bullet characters or numbers manually.\n-   Add descriptive alt text to every image so the imported page has useful captions and accessible descriptions.\n\n#### Minor Details\n\n1.  Replace the metadata values but keep each field name unchanged.\n2.  Place the intended hero image before every other image in the document.\n3.  Run npm run build and open the generated /article/docx-article-template/ page.\n\n> *A strong template makes the correct publishing path feel obvious to every contributor.*\n\n## Example Editorial Table\n\nUse tables only for genuinely comparable information. This example verifies table conversion without turning prose into a grid.\n\n| **Word element** | **Imported article behavior** |\n| --- | --- |\n| **First image** | Used as the full-width article hero and removed from the body. |\n| **Later images** | Extracted and preserved inline with their alt text. |\n| **Heading 1** | Rendered as a major section and included in the table of contents. |\n| **Lists and tables** | Converted into responsive article components. |\n\n## Inline Image Example\n\nThe following picture is the second embedded image, so the importer keeps it inside the article body.\n\n![A professional salon tool shown as an inline article image.](/image/docx/docx-article-template/image-02.jpg)\n\n## Ready to Publish\n\n-   Confirm that the required metadata fields are present and the date uses YYYY-MM-DD.\n-   Check that the first embedded image is the intended hero image.\n-   Give every image descriptive alt text.\n-   Run the article importer and review the resulting page on desktop and mobile.\n\n**Template note:** duplicate this file before drafting a real article, then replace all sample copy while preserving the metadata field names and Word styles.",
+	"metaTitle": "DOCX Article Import Template | HairProVoices",
+	"metaDescription": "Use this Word template to test the HairProVoices build-time DOCX article importer."
+}];
+//#endregion
 //#region src/data/articles.ts
 var authors = {
 	"Leila Fernandez": {
@@ -481,7 +499,7 @@ var authors = {
 		image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80&auto=format&fit=crop&facepad=3"
 	}
 };
-var articles = [
+var legacyArticles = [
 	{
 		id: 1,
 		slug: "copper-renaissance-2026",
@@ -7053,6 +7071,9 @@ Sometimes the healthiest hair isn't the result of coloring more, it's the result
 		metaDescription: "A gloss refines your color; full color changes it. A color educator breaks down exactly when to book each, and why stylists recommend glosses between major services."
 	}
 ];
+var legacySlugs = new Set(legacyArticles.map((article) => article.slug));
+for (const article of docxArticles) if (legacySlugs.has(article.slug)) throw new Error(`Imported DOCX article slug "${article.slug}" conflicts with an existing article.`);
+var articles = [...docxArticles, ...legacyArticles];
 function getArticleBySlug(slug) {
 	return articles.find((a) => a.slug === slug);
 }
@@ -9101,6 +9122,13 @@ function Subheading({ children, id }) {
 		children: [/* @__PURE__ */ jsx("span", { className: "inline-block w-4 h-0.5 bg-gold-500 flex-shrink-0" }), children]
 	});
 }
+function MinorHeading({ children, id }) {
+	return /* @__PURE__ */ jsx("h4", {
+		id,
+		className: "text-base font-semibold text-charcoal-100 mt-6 mb-3",
+		children
+	});
+}
 function Paragraph({ children }) {
 	return /* @__PURE__ */ jsx("p", {
 		className: "text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5",
@@ -9771,7 +9799,7 @@ function renderInline(text) {
 	if (cursor < text.length) nodes.push(text.slice(cursor));
 	return nodes;
 }
-function slugify$2(text) {
+function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 var clinicalTabs = [
@@ -10175,7 +10203,7 @@ function MarkdownBody({ body }) {
 			if (cta) return /* @__PURE__ */ jsx(CtaCallout, { children: renderInline(cta[2]) }, i);
 			const h2 = trimmed.match(/^## (.+)/);
 			if (h2) return /* @__PURE__ */ jsx(SectionHeading, {
-				id: slugify$2(h2[1]),
+				id: slugify(h2[1]),
 				children: h2[1]
 			}, i);
 			const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]*)\)$/);
@@ -10191,12 +10219,17 @@ function MarkdownBody({ body }) {
 			}
 			const h3 = trimmed.match(/^### (.+)/);
 			if (h3) return /* @__PURE__ */ jsx(Subheading, {
-				id: slugify$2(h3[1]),
+				id: slugify(h3[1]),
 				children: h3[1]
+			}, i);
+			const h4 = trimmed.match(/^#### (.+)/);
+			if (h4) return /* @__PURE__ */ jsx(MinorHeading, {
+				id: slugify(h4[1]),
+				children: h4[1]
 			}, i);
 			const h1 = trimmed.match(/^# (.+)/);
 			if (h1) return /* @__PURE__ */ jsx(SectionHeading, {
-				id: slugify$2(h1[1]),
+				id: slugify(h1[1]),
 				children: h1[1]
 			}, i);
 			if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) return /* @__PURE__ */ jsx("ul", {
@@ -10435,15 +10468,15 @@ function CopperArticleBody() {
 	});
 }
 //#endregion
-//#region src/components/article/ArticleSidebar.tsx
-var copperTocItems$1 = [
+//#region src/components/article/articleHeadings.ts
+var copperTocItems = [
 	{
 		id: "why-copper-works",
 		label: "Why Copper Works"
 	},
 	{
 		id: "the-formula-breakdown",
-		label: "The Formula"
+		label: "The Formula Breakdown"
 	},
 	{
 		id: "application-technique",
@@ -10454,66 +10487,19 @@ var copperTocItems$1 = [
 		label: "Selling Maintenance"
 	}
 ];
-function slugify$1(text) {
+function slugifyHeading(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
-var h2Slugs$1 = new Set([
-	"find-right-stylist",
-	"brunette-glazing",
-	"vivid-color-guide",
-	"haircut-layers",
-	"layers-thin-hair",
-	"what-is-balayage",
-	"stylist-notices-thinning",
-	"gua-sha-scalp",
-	"low-maintenance-color",
-	"at-home-hair-care",
-	"busiest-stylists-system",
-	"smoothing-products-stylists-use",
-	"what-stylist-sees-when-you-sit-down",
-	"gdragon-hairstyles-stylists-reference",
-	"2026-met-gala-best-hair-looks",
-	"mothers-day-effortless-hairstyles",
-	"history-of-hair-color",
-	"slick-back-bun",
-	"fine-frizzy-wavy-hair",
-	"wolf-cut-2026",
-	"solo-stylist-blueprint",
-	"mens-haircuts-hot-guy-energy",
-	"bangs-guide-2026",
-	"female-hair-loss-stylist-guide",
-	"french-open-tennis-hairstyles",
-	"novogro-vs-minoxidil",
-	"what-your-hair-says-about-you-sex-and-the-city",
-	"wet-look-hair-chic-not-greasy",
-	"finasteride-vs-novogro-women-hair-loss",
-	"french-bob-every-face-shape",
-	"pp405-vs-novogro",
-	"hair-extensions-what-to-know",
-	"summer-hair-damage",
-	"smarter-way-to-go-gray",
-	"hard-water-hair",
-	"how-often-wash-hair",
-	"split-ends-trims-truth",
-	"flat-iron-heat-damage",
-	"hair-oiling-trend",
-	"modern-perm-trend",
-	"scalp-service-gap",
-	"wet-vs-dry-cutting",
-	"are-straight-perms-bad-for-hair",
-	"fall-2026-hair-color-trends",
-	"gloss-or-full-color"
-]);
-function getTocItems$1(article) {
-	if (!article.body) return copperTocItems$1;
-	const pattern = h2Slugs$1.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm;
-	const headings = [...article.body.matchAll(pattern)];
-	if (headings.length === 0) return copperTocItems$1;
-	return headings.map((m) => ({
-		id: slugify$1(m[1]),
-		label: m[1]
+function getArticleTocItems(article) {
+	if (!article.body) return article.slug === "copper-renaissance-2026" ? copperTocItems : [];
+	const sectionHeadings = [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)];
+	return (sectionHeadings.length > 0 ? sectionHeadings : [...article.body.matchAll(/^###\s+(?!#)(.+)$/gm)]).map((match) => ({
+		id: slugifyHeading(match[1]),
+		label: match[1]
 	}));
 }
+//#endregion
+//#region src/components/article/ArticleSidebar.tsx
 var shareLinks = [
 	{
 		label: "Copy Link",
@@ -10539,7 +10525,7 @@ var shareLinks = [
 function ArticleSidebar({ article }) {
 	const [copied, setCopied] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
-	const tocItems = getTocItems$1(article);
+	const tocItems = getArticleTocItems(article);
 	useEffect(() => {
 		const observers = [];
 		tocItems.forEach(({ id }) => {
@@ -10790,88 +10776,12 @@ function RelatedArticles({ currentSlug }) {
 }
 //#endregion
 //#region src/components/article/MobileToc.tsx
-var h2Slugs = new Set([
-	"find-right-stylist",
-	"brunette-glazing",
-	"vivid-color-guide",
-	"haircut-layers",
-	"layers-thin-hair",
-	"what-is-balayage",
-	"stylist-notices-thinning",
-	"gua-sha-scalp",
-	"low-maintenance-color",
-	"at-home-hair-care",
-	"busiest-stylists-system",
-	"smoothing-products-stylists-use",
-	"what-stylist-sees-when-you-sit-down",
-	"gdragon-hairstyles-stylists-reference",
-	"2026-met-gala-best-hair-looks",
-	"mothers-day-effortless-hairstyles",
-	"history-of-hair-color",
-	"slick-back-bun",
-	"fine-frizzy-wavy-hair",
-	"wolf-cut-2026",
-	"solo-stylist-blueprint",
-	"mens-haircuts-hot-guy-energy",
-	"bangs-guide-2026",
-	"female-hair-loss-stylist-guide",
-	"french-open-tennis-hairstyles",
-	"novogro-vs-minoxidil",
-	"wet-look-hair-chic-not-greasy",
-	"finasteride-vs-novogro-women-hair-loss",
-	"french-bob-every-face-shape",
-	"head-spa-salon-revenue-opportunity",
-	"pp405-vs-novogro",
-	"hair-extensions-what-to-know",
-	"summer-hair-damage",
-	"smarter-way-to-go-gray",
-	"hard-water-hair",
-	"how-often-wash-hair",
-	"split-ends-trims-truth",
-	"flat-iron-heat-damage",
-	"hair-oiling-trend",
-	"modern-perm-trend",
-	"scalp-service-gap",
-	"wet-vs-dry-cutting",
-	"are-straight-perms-bad-for-hair",
-	"fall-2026-hair-color-trends",
-	"gloss-or-full-color"
-]);
-function slugify(text) {
-	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-var copperTocItems = [
-	{
-		id: "why-copper-works",
-		label: "Why Copper Works"
-	},
-	{
-		id: "the-formula-breakdown",
-		label: "The Formula"
-	},
-	{
-		id: "application-technique",
-		label: "Application"
-	},
-	{
-		id: "selling-the-maintenance-story",
-		label: "Maintenance"
-	}
-];
-function getTocItems(article) {
-	if (!article.body) return article.slug === "copper-renaissance-2026" ? copperTocItems : [];
-	const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm;
-	return [...article.body.matchAll(pattern)].map((m) => ({
-		id: slugify(m[1]),
-		label: m[1]
-	}));
-}
 function MobileToc({ article }) {
 	const [activeSection, setActiveSection] = useState("");
 	const activeRef = useRef(null);
 	const scrollContainerRef = useRef(null);
 	const barRef = useRef(null);
-	const tocItems = getTocItems(article);
+	const tocItems = getArticleTocItems(article);
 	useEffect(() => {
 		const observers = [];
 		tocItems.forEach(({ id }) => {

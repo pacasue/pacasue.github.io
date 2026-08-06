@@ -1,32 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Article } from '../../data/articles'
-
-const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-guide', 'haircut-layers', 'layers-thin-hair', 'what-is-balayage', 'stylist-notices-thinning', 'gua-sha-scalp', 'low-maintenance-color', 'at-home-hair-care', 'busiest-stylists-system', 'smoothing-products-stylists-use', 'what-stylist-sees-when-you-sit-down', 'gdragon-hairstyles-stylists-reference', '2026-met-gala-best-hair-looks', 'mothers-day-effortless-hairstyles', 'history-of-hair-color', 'slick-back-bun', 'fine-frizzy-wavy-hair', 'wolf-cut-2026', 'solo-stylist-blueprint', 'mens-haircuts-hot-guy-energy', 'bangs-guide-2026', 'female-hair-loss-stylist-guide', 'french-open-tennis-hairstyles', 'novogro-vs-minoxidil', 'wet-look-hair-chic-not-greasy', 'finasteride-vs-novogro-women-hair-loss', 'french-bob-every-face-shape', 'head-spa-salon-revenue-opportunity', 'pp405-vs-novogro', 'hair-extensions-what-to-know', 'summer-hair-damage', 'smarter-way-to-go-gray', 'hard-water-hair', 'how-often-wash-hair', 'split-ends-trims-truth', 'flat-iron-heat-damage', 'hair-oiling-trend', 'modern-perm-trend', 'scalp-service-gap', 'wet-vs-dry-cutting', 'are-straight-perms-bad-for-hair', 'fall-2026-hair-color-trends', 'gloss-or-full-color'])
-
-function slugify(text: string) {
-  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-}
-
-const copperTocItems = [
-  { id: 'why-copper-works', label: 'Why Copper Works' },
-  { id: 'the-formula-breakdown', label: 'The Formula' },
-  { id: 'application-technique', label: 'Application' },
-  { id: 'selling-the-maintenance-story', label: 'Maintenance' },
-]
-
-function getTocItems(article: Article) {
-  if (!article.body) return article.slug === 'copper-renaissance-2026' ? copperTocItems : []
-  const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm
-  const headings = [...article.body.matchAll(pattern)]
-  return headings.map((m) => ({ id: slugify(m[1]), label: m[1] }))
-}
+import { getArticleTocItems } from './articleHeadings'
 
 export default function MobileToc({ article }: { article: Article }) {
   const [activeSection, setActiveSection] = useState('')
   const activeRef = useRef<HTMLAnchorElement | null>(null)
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
   const barRef = useRef<HTMLDivElement | null>(null)
-  const tocItems = getTocItems(article)
+  const tocItems = getArticleTocItems(article)
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []

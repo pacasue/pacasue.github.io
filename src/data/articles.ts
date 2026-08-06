@@ -1,3 +1,5 @@
+import { docxArticles } from '../generated/docxArticles'
+
 export interface Article {
   id: number
   slug: string
@@ -199,7 +201,7 @@ export const authors: Record<string, Author> = {
   },
 }
 
-export const articles: Article[] = [
+const legacyArticles: Article[] = [
   {
     id: 1,
     slug: 'copper-renaissance-2026',
@@ -7070,6 +7072,15 @@ Sometimes the healthiest hair isn't the result of coloring more, it's the result
     metaDescription: 'A gloss refines your color; full color changes it. A color educator breaks down exactly when to book each, and why stylists recommend glosses between major services.',
   },
 ]
+
+const legacySlugs = new Set(legacyArticles.map((article) => article.slug))
+for (const article of docxArticles) {
+  if (legacySlugs.has(article.slug)) {
+    throw new Error(`Imported DOCX article slug "${article.slug}" conflicts with an existing article.`)
+  }
+}
+
+export const articles: Article[] = [...docxArticles, ...legacyArticles]
 
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug)

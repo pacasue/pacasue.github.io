@@ -4,8 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prepare:articles": "node scripts/import-docx.mjs",
+    "predev": "npm run prepare:articles",
     "dev": "vite",
+    "prebuild": "npm run prepare:articles",
     "build": "tsc && vite build && vite build --ssr && node scripts/prerender.mjs",
+    "test": "node --test scripts/*.test.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -14,6 +18,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.4.27",
+    "jszip": "^3.10.1",
     "postcss": "^8.5.9",
     "tailwindcss": "^3.4.19",
     "typescript": "~6.0.2",
@@ -22,8 +27,10 @@
   },
   "dependencies": {
     "lucide-react": "^1.7.0",
+    "mammoth": "^1.12.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.14.0"
+    "react-router-dom": "^7.14.0",
+    "turndown": "^7.2.4"
   }
 }
