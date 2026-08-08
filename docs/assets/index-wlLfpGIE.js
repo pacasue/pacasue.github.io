@@ -5792,7 +5792,10 @@ The goal isn't to trap your hair, it's to protect it.
 
 If you don't like wearing a bonnet, a silk or satin pillowcase can still give your hair a smoother surface to move against. You can even use both for an extra layer of protection.
 
-![A smooth satin bonnet keeps hair contained overnight. It should sit secure without pulling at the hairline.|full](/image/bedtime-hair-silk-bonnet.png)
+:::image-row
+![A smooth satin bonnet keeps hair contained overnight](/image/bedtime-hair-silk-bonnet.png)
+![Secure without pressure around the hairline or tension at the roots](/image/bedtime-hair-satin-bonnet-sleeping.webp)
+:::
 
 ## The Biggest Bedtime Mistake? Going to Sleep With Wet Hair
 
@@ -5818,6 +5821,7 @@ A loose braid, low ponytail, or loose bun can help keep hair contained without c
 
 :::image-row
 ![A loose braid keeps length contained without pulling at the roots](/image/bedtime-hair-loose-braid.png)
+![A low, loose ponytail tied well below the crown](/image/bedtime-hair-low-loose-pony.webp)
 ![A soft, low bun sits away from the hairline](/image/bedtime-hair-low-bun.png)
 :::
 
