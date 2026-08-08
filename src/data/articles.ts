@@ -7069,6 +7069,152 @@ Sometimes the healthiest hair isn't the result of coloring more, it's the result
     metaTitle: 'Gloss or Full Color? How to Know Which Appointment You Need',
     metaDescription: 'A gloss refines your color; full color changes it. A color educator breaks down exactly when to book each, and why stylists recommend glosses between major services.',
   },
+  {
+    id: 54,
+    slug: 'bedtime-routine-ruining-hair',
+    tag: 'At-Home Tips',
+    title: 'Is Your Bedtime Routine Ruining Your Hair? The Sleep Habits Stylists Want You to Know',
+    excerpt: 'You spend money on shampoo, masks, oils, and salon treatments. But what happens to your hair during the eight hours you\'re asleep? A few small changes before bed can make your hair much happier by morning.',
+    author: 'Simone Ellery',
+    date: 'Aug 7, 2026',
+    readTime: '7 min',
+    image: '/image/bedtime-hair-routine-cover.png',
+    category: 'At-Home Tips',
+    section: 'Hair Care',
+    body: `You spend money on shampoo, masks, oils, and salon treatments. But what happens to your hair during the eight hours you're asleep?
+
+From sleeping on cotton pillowcases to going to bed with wet hair, some of your nighttime habits could be contributing to the frizz, tangles, and breakage you're trying to fix during the day.
+
+The good news? You don't need to completely overhaul your routine. A few small changes before bed can make your hair much happier by morning.
+
+## Your Pillowcase Might Matter More Than You Think
+
+If you wake up with a tangled mess at the back of your head, your pillowcase could be part of the problem.
+
+Traditional cotton pillowcases create more friction against the hair as you move around during the night. That repeated rubbing can contribute to tangling, frizz, and mechanical wear, especially if your hair is already dry, bleached, curly, or prone to breakage.
+
+This is where silk pillowcases come in.
+
+Silk has a naturally smooth surface, allowing your hair to glide across the pillow instead of catching against it. The result isn't magically healthier hair overnight, but reducing unnecessary friction can be a useful part of a hair-protection routine.
+
+![Think of it as less tugging while you sleep.|full](/image/bedtime-hair-pillowcase-friction.png)
+
+## Silk vs. Satin: Do You Really Need Silk?
+
+Not necessarily.
+
+Silk and satin are often talked about interchangeably, but they're not the same thing. Silk is a natural fiber, while satin describes a type of weave that can be made from different materials.
+
+The important factor for your hair is the smooth surface.
+
+A satin pillowcase can also reduce friction and may give you many of the same practical benefits as silk. If genuine silk is outside your budget, a smooth satin option can still be worth trying.
+
+For anyone with fine, fragile, curly, textured, or chemically treated hair, reducing friction overnight may be especially helpful.
+
+## What About Sleeping in a Bonnet?
+
+If you really want to level up your nighttime hair routine, a silk or satin bonnet can be another option.
+
+Unlike a pillowcase, which only changes the surface your hair rests against, a bonnet keeps your hair contained while you sleep. This can help reduce friction, tangling, and the amount of movement your hair experiences throughout the night.
+
+Bonnets can be particularly useful for curly, coily, textured, or longer hair that tends to tangle or lose its shape overnight. Keeping your curls tucked away can also help preserve your hairstyle so you don't have to completely restyle it in the morning.
+
+The material matters, too. Look for a bonnet with a smooth silk or satin interior rather than rough or absorbent fabrics that can create more friction or pull moisture from the hair.
+
+And don't make it too tight. A bonnet should feel secure without putting pressure around your hairline or creating tension at the roots.
+
+The goal isn't to trap your hair, it's to protect it.
+
+If you don't like wearing a bonnet, a silk or satin pillowcase can still give your hair a smoother surface to move against. You can even use both for an extra layer of protection.
+
+![A smooth satin bonnet keeps hair contained overnight. It should sit secure without pulling at the hairline.|full](/image/bedtime-hair-silk-bonnet.png)
+
+## The Biggest Bedtime Mistake? Going to Sleep With Wet Hair
+
+We've all done it.
+
+You take a late shower, tell yourself your hair will dry while you sleep, and wake up with a strange combination of flat roots, frizz, and hair pointing in approximately twelve different directions.
+
+But the styling struggle isn't the only issue.
+
+Hair is more fragile when it's wet, making it more susceptible to stretching and breaking. Tossing and turning against a pillow while your hair is still damp can add even more friction.
+
+If you regularly shower at night, try giving your hair some time to dry before getting into bed. If you need to speed things up, a blow dryer on a low or cool setting is preferable to blasting your hair with high heat.
+
+And if your hair is still damp? Avoid pulling it into a tight ponytail or bun. Wet hair is already vulnerable, and adding tension can make matters worse.
+
+## Your Hairstyle Matters, Too
+
+Sleeping with your hair completely loose isn't always the best option, particularly if you have long or highly textured hair that tangles easily.
+
+But there's a difference between protecting your hair and putting it under tension.
+
+A loose braid, low ponytail, or loose bun can help keep hair contained without creating excessive pulling at the roots. Choose a soft silk or satin scrunchie rather than a traditional elastic, which can snag or create a tight pressure point.
+
+:::image-row
+![A loose braid keeps length contained without pulling at the roots](/image/bedtime-hair-loose-braid.png)
+![A soft, low bun sits away from the hairline](/image/bedtime-hair-low-bun.png)
+:::
+
+The goal is simple: secure your hair without squeezing it.
+
+![Silk and satin scrunchies hold hair without the snag or pressure point of a traditional elastic.|full](/image/bedtime-hair-silk-scrunchies.png)
+
+## Don't Go to Bed With a Head Full of Product
+
+Your nighttime routine doesn't have to involve ten different products.
+
+If your hair needs extra moisture, applying a small amount of leave-in conditioner or a lightweight hair oil to the lengths and ends can help keep it feeling softer. But more isn't necessarily better.
+
+Heavy layers of styling products can transfer onto your pillowcase and leave your hair feeling weighed down the next morning.
+
+Instead, focus on where your hair actually needs help.
+
+- **Dry ends?** Try a little leave-in conditioner or oil.
+- **Frizz-prone lengths?** Smooth a small amount of serum through the ends.
+- **Fine hair?** Keep heavier products away from the roots.
+
+Your pillowcase should complement your routine, not become part of it.
+
+## How Often Should You Wash Your Pillowcase?
+
+Your pillowcase collects more than just your hair.
+
+Oil, sweat, skincare products, hair products, and everyday buildup can all accumulate on the fabric over time. If you're using a silk pillowcase, that doesn't mean you can forget about washing it.
+
+Follow the care instructions for your particular fabric, and keep it clean enough that you're not simply transferring yesterday's products back onto freshly washed hair.
+
+This is especially important if you use leave-in products or oils before bed.
+
+## The Ideal Nighttime Hair Routine Is Actually Pretty Simple
+
+You don't need a complicated ritual to protect your hair while you sleep.
+
+Try this:
+
+1. **Let your hair dry.** Whenever possible, avoid going to bed with soaking-wet hair.
+2. **Detangle gently.** Use a wide-tooth comb or appropriate brush and work through knots without aggressively pulling.
+3. **Add moisture where needed.** Apply a small amount of leave-in conditioner, serum, or oil to dry lengths and ends.
+4. **Keep your hairstyle loose.** A loose braid or ponytail can prevent tangling without putting unnecessary tension on the hair.
+5. **Switch to silk or satin.** A smoother pillowcase can reduce the friction your hair experiences while you toss and turn.
+6. **Keep your pillowcase clean.** Wash it regularly according to the manufacturer's instructions.
+
+## So, Is a Silk Pillowcase Actually Worth It?
+
+For some hair types, absolutely.
+
+A silk pillowcase isn't going to repair split ends or reverse chemical damage. It also won't replace a good haircut, conditioner, heat protectant, or thoughtful styling routine.
+
+What it can do is remove one small source of nightly friction.
+
+And when you're spending roughly a third of your day asleep, those small things add up.
+
+If your morning routine regularly starts with detangling, smoothing frizz, and trying to revive flattened hair, switching your pillowcase may be one of the easiest changes to test.
+
+Because healthy hair care doesn't stop when you turn off the lights.`,
+    metaTitle: 'Is Your Bedtime Routine Ruining Your Hair? Sleep Habits to Know',
+    metaDescription: 'Cotton pillowcases, wet hair, and tight ponytails can undo your hair care routine overnight. A salon educator breaks down the sleep habits worth changing, and the ones that are hype.',
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {
