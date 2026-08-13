@@ -59,6 +59,26 @@
 
 ---
 
+## 5 Thinning-Hair Treatments Review Article
+
+### Main Header Image
+- **Filename:** `thinning-treatments-cover.jpg`
+- **Location:** `public/image/thinning-treatments-cover.jpg`
+- **Description:** Hero image for "Yes, These 5 Thinning-Hair Treatments Can Work" — suggested: client checking a widening part in the salon mirror
+- **Status:** Not yet added — article ships with this path referenced; add the file to make the hero image appear
+
+### In-Body Product Images (auto-placeholders, no action required until ready)
+These render as a styled "Image placeholder" box automatically (via `![caption]()` empty-src syntax in the article body) — no broken images, just a placeholder box. Replace each `![caption]()` line in `src/data/articles.ts` (slug: `best-thinning-hair-treatments-reviewed-by-pros`) with `![caption](/image/filename.jpg)` once a photo exists.
+
+1. RE:YOU Dual-Path Hair Revival Serum — product bottle
+2. Women's Rogaine (minoxidil) foam
+3. CurrentBody Skin LED hair-regrowth device
+4. In-office PRP treatment
+5. Microneedling / dermaroller device
+6. Ketoconazole (Nizoral) shampoo
+
+---
+
 ## Quick Setup Commands
 
 ```bash
