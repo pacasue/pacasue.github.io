@@ -26,7 +26,7 @@ export default function Ticker() {
         {doubled.map((article, i) => (
           <a
             key={i}
-            href={`/article/${article.slug}`}
+            href={`/article/${article.slug}/`}
             className="text-[10px] font-semibold tracking-widest uppercase hover:underline"
           >
             ✦ {tagLabel[article.tag] ?? article.tag.toUpperCase()}: {article.title}

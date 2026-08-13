@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom'
 
 const footerLinks = {
   Editorial: [
-    { label: 'All Articles', to: '/articles' },
-    { label: 'Trends', to: '/articles?section=Trends' },
-    { label: 'Inspiration', to: '/articles?section=Inspiration' },
-    { label: 'Hair Care', to: '/articles?section=Hair+Care' },
-    { label: 'Gallery', to: '/gallery' },
+    { label: 'All Articles', to: '/articles/' },
+    { label: 'Trends', to: '/articles/?section=Trends' },
+    { label: 'Inspiration', to: '/articles/?section=Inspiration' },
+    { label: 'Hair Care', to: '/articles/?section=Hair+Care' },
+    { label: 'Gallery', to: '/gallery/' },
   ],
   Explore: [
-    { label: 'Color', to: '/articles?category=Color' },
-    { label: 'Cut & Style', to: '/articles?category=Cut+%26+Style' },
-    { label: 'Hair Thinning', to: '/articles?category=Hair+Thinning' },
-    { label: 'At-Home Tips', to: '/articles?category=At-Home+Tips' },
-    { label: 'Products', to: '/articles?category=Products' },
+    { label: 'Color', to: '/articles/?category=Color' },
+    { label: 'Cut & Style', to: '/articles/?category=Cut+%26+Style' },
+    { label: 'Hair Thinning', to: '/articles/?category=Hair+Thinning' },
+    { label: 'At-Home Tips', to: '/articles/?category=At-Home+Tips' },
+    { label: 'Products', to: '/articles/?category=Products' },
   ],
   Community: [
-    { label: 'About Us', to: '/about' },
-    { label: 'Contributors', to: '/contributors' },
+    { label: 'About Us', to: '/about/' },
+    { label: 'Contributors', to: '/contributors/' },
   ],
 }
 
@@ -111,7 +111,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] text-charcoal-600 tracking-wider">
           <span>© 2026 HairProVoices Media, LLC. All rights reserved.</span>
           <div className="flex items-center gap-5">
-            <Link to="/about" className="hover:text-charcoal-400 transition-colors">About</Link>
+            <Link to="/about/" className="hover:text-charcoal-400 transition-colors">About</Link>
             <a href="mailto:editorial@hairprovoices.com" className="hover:text-charcoal-400 transition-colors">Contact</a>
           </div>
         </div>

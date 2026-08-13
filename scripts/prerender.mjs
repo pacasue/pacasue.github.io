@@ -24,8 +24,12 @@ function toW3CDate(dateStr) {
   return isNaN(d) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10)
 }
 
+function withTrailingSlash(path) {
+  return path === '/' || path.endsWith('/') ? path : `${path}/`
+}
+
 function buildHeadTags(route, article) {
-  const canonicalUrl = `${BASE}${route}`
+  const canonicalUrl = `${BASE}${withTrailingSlash(route)}`
   const tags = [`  <link rel="canonical" href="${canonicalUrl}" />`]
 
   tags.push(`  <meta property="og:type" content="${article ? 'article' : 'website'}" />`)
@@ -97,9 +101,9 @@ const { render, articles } = await import(
   pathToFileURL(resolve(outDir, 'server/entry-server.js')).href
 )
 
-const articleRoutes = articles.filter((a) => a.slug).map((a) => `/article/${a.slug}`)
+const articleRoutes = articles.filter((a) => a.slug).map((a) => `/article/${a.slug}/`)
 
-const routes = ['/', '/articles', '/gallery', '/contributors', '/about', ...articleRoutes]
+const routes = ['/', '/articles/', '/gallery/', '/contributors/', '/about/', ...articleRoutes]
 
 const template = readFileSync(resolve(outDir, 'index.html'), 'utf-8')
 
@@ -120,23 +124,23 @@ for (const route of routes) {
   let description = 'HairProVoices — The pulse of the professional hair industry. Trends, techniques, education, and inspiration for stylists.'
   let article = null
 
-  const articleSlug = route.match(/^\/article\/(.+)$/)?.[1]
+  const articleSlug = route.match(/^\/article\/([^/]+)\/?$/)?.[1]
   if (articleSlug) {
     article = articles.find((a) => a.slug === articleSlug)
     if (article) {
       title = article.metaTitle || article.title
       description = article.metaDescription || article.excerpt
     }
-  } else if (route === '/articles') {
+  } else if (route === '/articles/') {
     title = 'All Articles — HairProVoices'
     description = 'Browse all articles on trends, techniques, and education for hair professionals.'
-  } else if (route === '/gallery') {
+  } else if (route === '/gallery/') {
     title = 'Gallery — HairProVoices'
     description = 'Explore our gallery of professional hair looks and inspirations.'
-  } else if (route === '/contributors') {
+  } else if (route === '/contributors/') {
     title = 'Contributors — HairProVoices'
     description = 'Meet the stylists, educators, and experts behind HairProVoices.'
-  } else if (route === '/about') {
+  } else if (route === '/about/') {
     title = 'About — HairProVoices'
     description = 'Learn about HairProVoices and our mission for the professional hair industry.'
   }
@@ -171,6 +175,37 @@ if (existsSync(cnameSrc)) {
 writeFileSync(resolve(outDir, '404.html'), readFileSync(resolve(outDir, 'index.html'), 'utf-8'))
 console.log('Copied index.html → 404.html')
 
+const legacyAliases = [
+  {
+    from: '/article/NOVOGRO™-vs-minoxidil/',
+    to: '/article/novogro-vs-minoxidil/',
+  },
+]
+
+for (const alias of legacyAliases) {
+  const targetUrl = `${BASE}${alias.to}`
+  const aliasHtml = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting — HairProVoices</title>
+    <link rel="canonical" href="${targetUrl}" />
+    <meta http-equiv="refresh" content="0; url=${targetUrl}" />
+    <meta name="robots" content="noindex, follow" />
+    <script>window.location.replace(${JSON.stringify(targetUrl)})</script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="${targetUrl}">${targetUrl}</a>.</p>
+  </body>
+</html>
+`
+  const aliasPath = resolve(outDir, alias.from.slice(1), 'index.html')
+  mkdirSync(dirname(aliasPath), { recursive: true })
+  writeFileSync(aliasPath, aliasHtml)
+  console.log(`Generated legacy alias: ${alias.from} → ${alias.to}`)
+}
+
 // robots.txt
 writeFileSync(
   resolve(outDir, 'robots.txt'),
@@ -181,10 +216,10 @@ console.log('Generated robots.txt')
 // sitemap.xml
 const staticPages = [
   { path: '/',             priority: '1.0', changefreq: 'daily'   },
-  { path: '/articles',     priority: '0.9', changefreq: 'daily'   },
-  { path: '/gallery',      priority: '0.7', changefreq: 'weekly'  },
-  { path: '/contributors', priority: '0.6', changefreq: 'monthly' },
-  { path: '/about',        priority: '0.5', changefreq: 'monthly' },
+  { path: '/articles/',     priority: '0.9', changefreq: 'daily'   },
+  { path: '/gallery/',      priority: '0.7', changefreq: 'weekly'  },
+  { path: '/contributors/', priority: '0.6', changefreq: 'monthly' },
+  { path: '/about/',        priority: '0.5', changefreq: 'monthly' },
 ]
 const articleEntries = articles
   .filter((a) => a.slug)
@@ -194,7 +229,7 @@ const articleEntries = articles
     // (pexels/envato/unsplash) get credited to those domains, not us.
     const isLocal = img.startsWith('/') || img.startsWith(BASE)
     const imageLoc = isLocal ? (img.startsWith('http') ? img : `${BASE}${img}`) : null
-    return { path: `/article/${a.slug}`, lastmod: toW3CDate(a.date), priority: '0.8', changefreq: 'monthly', image: imageLoc }
+    return { path: `/article/${a.slug}/`, lastmod: toW3CDate(a.date), priority: '0.8', changefreq: 'monthly', image: imageLoc }
   })
 
 const sitemapXml =

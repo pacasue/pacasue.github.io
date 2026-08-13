@@ -10,9 +10,9 @@ export default function ArticleHero({ article }: { article: Article }) {
         <nav className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 flex-wrap">
           <Link to="/" className="hover:text-gold-500 transition-colors">Home</Link>
           <ChevronRight size={10} />
-          <Link to={`/articles?section=${encodeURIComponent(article.section)}`} className="hover:text-gold-500 transition-colors">{article.section}</Link>
+          <Link to={`/articles/?section=${encodeURIComponent(article.section)}`} className="hover:text-gold-500 transition-colors">{article.section}</Link>
           <ChevronRight size={10} />
-          <Link to={`/articles?section=${encodeURIComponent(article.section)}&category=${encodeURIComponent(article.category)}`} className="hover:text-gold-500 transition-colors">{article.category}</Link>
+          <Link to={`/articles/?section=${encodeURIComponent(article.section)}&category=${encodeURIComponent(article.category)}`} className="hover:text-gold-500 transition-colors">{article.category}</Link>
           <ChevronRight size={10} />
           <span className="text-charcoal-400 truncate max-w-[200px]">{article.title}</span>
         </nav>

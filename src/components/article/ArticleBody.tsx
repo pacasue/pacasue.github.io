@@ -732,6 +732,114 @@ function slugify(text: string) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
+type ClinicalStat = { label: string; foot?: string; text?: string; value?: number; decimals?: number; prefix?: string; suffix?: string }
+type ClinicalTab = { key: string; label: string; note: string; stats: ClinicalStat[] }
+
+const clinicalTabs: ClinicalTab[] = [
+  {
+    key: 'measured',
+    label: 'Measured Improvements',
+    note: 'Objective lab measurements after 90 days',
+    stats: [
+      { value: 70, prefix: '+', suffix: '%', label: 'Increase in hair thickness' },
+      { value: 58, prefix: '−', suffix: '%', label: 'Decrease in hair loss', foot: '26% better than minoxidil' },
+      { value: 19, prefix: '+', suffix: '%', label: 'Increase in hair density' },
+    ],
+  },
+  {
+    key: 'reported',
+    label: 'What Participants Noticed',
+    note: 'Self-reported by participants after 90 days',
+    stats: [
+      { value: 90, suffix: '%', label: 'Saw thicker hair after just 90 days' },
+      { value: 1.7, decimals: 1, suffix: 'x', label: 'Greater improvement in thinning than minoxidil' },
+      { value: 3, suffix: 'x', label: 'Higher overall satisfaction vs. baseline' },
+      { value: 86, suffix: '%', label: 'Saw new growth where the serum was applied' },
+    ],
+  },
+  {
+    key: 'design',
+    label: 'Study Design',
+    note: 'How the trial was run',
+    stats: [
+      { value: 190, label: 'Participants', foot: 'Women with visible thinning, Ludwig I-3 to II-2' },
+      { value: 3, suffix: ' mo', label: 'Daily use', foot: 'Machine and expert assessments' },
+      { text: 'Double-blind', label: 'Neither participants nor evaluators knew the product' },
+      { text: 'vs. Minoxidil', label: 'Compared to the gold standard, not placebo' },
+    ],
+  },
+]
+
+function CountUpStat({ value, decimals = 0, prefix = '', suffix = '' }: { value: number; decimals?: number; prefix?: string; suffix?: string }) {
+  // Initialise to the final value so SSR and the first client render match (hydration-safe),
+  // then animate up from zero after mount.
+  const [display, setDisplay] = useState(value)
+  useEffect(() => {
+    let raf = 0
+    const start = performance.now()
+    const dur = 900
+    const step = (t: number) => {
+      const p = Math.min((t - start) / dur, 1)
+      const eased = 1 - Math.pow(1 - p, 3)
+      setDisplay(value * eased)
+      if (p < 1) raf = requestAnimationFrame(step)
+      else setDisplay(value)
+    }
+    raf = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(raf)
+  }, [value])
+  return <>{prefix}{display.toFixed(decimals)}{suffix}</>
+}
+
+function ClinicalTrialInterim() {
+  const [active, setActive] = useState(0)
+  const tab = clinicalTabs[active]
+  // 4-stat tabs (Participants, Study Design) render 2 x 2; the 3-stat tab stays 3-up.
+  const gridCols = tab.stats.length === 4 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3'
+  return (
+    <div className="my-12 border border-gold-500/25 bg-white/[0.02]">
+      <div className="px-6 pt-6 md:px-8 md:pt-7">
+        <p className="text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-2">3-Month Interim Clinical Data</p>
+        <p className="text-sm text-charcoal-400 leading-relaxed">{tab.note}.</p>
+      </div>
+      <div className="flex gap-2 overflow-x-auto px-6 md:px-8 mt-5 pb-1 scrollbar-none" style={{ scrollbarWidth: 'none' }}>
+        {clinicalTabs.map((t, i) => (
+          <button
+            key={t.key}
+            onClick={() => setActive(i)}
+            className={`flex-shrink-0 text-[11px] tracking-wide px-3 py-1.5 border transition-colors ${
+              i === active
+                ? 'border-gold-500 text-gold-500 bg-gold-500/10'
+                : 'border-white/10 text-charcoal-400 hover:text-white hover:border-white/30'
+            }`}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <div className={`grid ${gridCols} gap-px bg-white/5 mt-5 border-t border-white/5`}>
+        {tab.stats.map((s, j) => (
+          <div key={j} className="bg-charcoal-950 p-5 md:p-6 flex flex-col gap-1.5">
+            <div className="text-3xl md:text-4xl font-bold text-gold-500 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+              {s.text != null
+                ? s.text
+                : <CountUpStat value={s.value ?? 0} decimals={s.decimals} prefix={s.prefix} suffix={s.suffix} />}
+            </div>
+            <p className="text-xs text-charcoal-300 leading-snug">{s.label}</p>
+            {s.foot ? <p className="text-[10px] text-charcoal-500 tracking-wide">{s.foot}</p> : null}
+          </div>
+        ))}
+      </div>
+      <div className="px-6 py-4 md:px-8 border-t border-white/5 flex items-center justify-between gap-3 flex-wrap">
+        <p className="text-[10px] text-charcoal-500 tracking-wide">Interim readout of an ongoing double-blind study vs. minoxidil.</p>
+        <a href="https://getreyou.com/pages/science" target="_blank" rel="noopener noreferrer" className="text-[11px] tracking-widest uppercase text-gold-500 hover:underline whitespace-nowrap">
+          See the full study →
+        </a>
+      </div>
+    </div>
+  )
+}
+
 function MarkdownBody({ body }: { body: string }) {
   // Pre-process: extract :::quote-carousel blocks before splitting on double newlines
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
@@ -936,6 +1044,7 @@ function MarkdownBody({ body }: { body: string }) {
     }
   )
   processedBody = processedBody.replace(/:::case-study-separator:::/g, 'CASE_STUDY_SEPARATOR')
+  processedBody = processedBody.replace(/:::clinical-trial:::/g, 'CLINICAL_TRIAL')
 
   const blocks = processedBody.split(/\n\n+/)
   return (
@@ -945,6 +1054,7 @@ function MarkdownBody({ body }: { body: string }) {
         if (!trimmed) return null
 
         if (trimmed === 'CASE_STUDY_SEPARATOR') return <CaseStudySeparator key={i} />
+        if (trimmed === 'CLINICAL_TRIAL') return <ClinicalTrialInterim key={i} />
 
         const refMatch = trimmed.match(/^REFERENCES_PLACEHOLDER_(\d+)$/)
         if (refMatch) {

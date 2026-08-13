@@ -33,7 +33,7 @@ export default function AuthorPage() {
         {/* Author hero */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-14 lg:py-20">
-            <Link to="/contributors" className="inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors mb-8">
+            <Link to="/contributors/" className="inline-flex items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors mb-8">
               ← All Contributors
             </Link>
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
@@ -68,7 +68,7 @@ export default function AuthorPage() {
               {authorArticles.map((article) => (
                 <Link
                   key={article.slug}
-                  to={`/article/${article.slug}`}
+                  to={`/article/${article.slug}/`}
                   className="group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors"
                 >
                   <div className="overflow-hidden aspect-[16/9]">

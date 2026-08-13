@@ -71,7 +71,7 @@ export default function ProTips() {
             </h2>
           </div>
           <Link
-            to="/contributors"
+            to="/contributors/"
             className="hidden md:flex items-center gap-2 text-[11px] tracking-widest uppercase text-charcoal-400 hover:text-gold-500 transition-colors"
           >
             Meet the Experts <ArrowRight size={12} />

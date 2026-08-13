@@ -112,7 +112,7 @@ export default function ArticlesPage() {
             {filtered.map((article) => (
               <Link
                 key={article.slug}
-                to={`/article/${article.slug}`}
+                to={`/article/${article.slug}/`}
                 className="group bg-charcoal-950 p-6 flex flex-col gap-4 hover:bg-white/[0.03] transition-colors"
               >
                 <div className="overflow-hidden aspect-[16/9]">
