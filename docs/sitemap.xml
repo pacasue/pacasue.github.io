@@ -497,4 +497,13 @@
       <image:loc>https://hairprovoices.com/image/bedtime-hair-routine-cover.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/best-thinning-hair-treatments-reviewed-by-pros/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/before-and-after.png</image:loc>
+    </image:image>
+  </url>
 </urlset>

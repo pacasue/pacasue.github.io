@@ -2,7 +2,7 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { Link, Route, Routes, useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, ArrowUp, Award, Bookmark, Calendar, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, ExternalLink, Heart, ImageIcon, Link2, Menu, Play, Quote, Send, Share2, Sparkles, Users, X } from "lucide-react";
+import { ArrowRight, ArrowUp, Award, Bookmark, Calendar, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, ExternalLink, Heart, ImageIcon, Link2, Menu, Play, Quote, Send, Share2, Sparkles, Star, Users, X } from "lucide-react";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 //#region src/components/Navbar.tsx
 var navCategories$1 = [
@@ -479,6 +479,12 @@ var authors = {
 		title: "Texture Specialist & Salon Educator",
 		bio: "Talia Brenner is a texture specialist and salon educator with thirteen years behind the chair. She spends her days building the soft, lived-in waves clients ask for, and writes about texture and trends for HairProVoices, including the modern services hiding behind old, scary names.",
 		image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80&auto=format&fit=crop&facepad=3"
+	},
+	"Devika Rao": {
+		name: "Devika Rao",
+		title: "Treatment Review Editor",
+		bio: "Devika leads HairProVoices' product and treatment review process, working with a rotating panel of stylists, colorists, and trichology consultants to test and score hair-loss and thinning treatments on real clients. A former clinical research coordinator turned salon educator, she specializes in translating trial data and brand claims into practical, chairside-ready guidance.",
+		image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80&auto=format&fit=crop&facepad=3"
 	}
 };
 var articles = [
@@ -7201,6 +7207,374 @@ If your morning routine regularly starts with detangling, smoothing frizz, and t
 Because healthy hair care doesn't stop when you turn off the lights.`,
 		metaTitle: "Is Your Bedtime Routine Ruining Your Hair? Sleep Habits to Know",
 		metaDescription: "Cotton pillowcases, wet hair, and tight ponytails can undo your hair care routine overnight. A salon educator breaks down the sleep habits worth changing, and the ones that are hype."
+	},
+	{
+		id: 39,
+		slug: "best-thinning-hair-treatments-reviewed-by-pros",
+		tag: "Hair Thinning",
+		title: `Yes, These 5 Thinning-Hair Treatments Can Work — Reviewed by Hair Professionals`,
+		excerpt: `A panel of 20 working hair professionals scored five thinning-hair treatments — plus one bonus scalp fix — on efficacy, evidence, styling fit, cost, tolerability, and what happens after you stop. Here is where each one actually ranked, and why.`,
+		author: "Devika Rao",
+		date: "Aug 12, 2026",
+		readTime: "14 min",
+		image: "/image/before-and-after.png",
+		category: "Hair Thinning",
+		section: "Hair Care",
+		body: `Hair thinning often comes up in the salon chair before it comes up in a medical appointment. A client points to a wider part, a lighter ponytail, or more hair in the brush and asks a practical question: What can help without making the hair harder to live with?
+
+A cut, color adjustment, root powder, or a new part can create immediate fullness. Those are styling tools, not treatments for the follicle. For this guide, our panel focused on options with human evidence, a plausible mechanism, or a useful role in supporting the scalp.
+
+## The Scorecard
+
+:::scorecard-table
+| Rank | Option | Overall | Efficacy | Evidence | Styling Fit | Commitment | Cost | Tolerability | After Stopping |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | [RE:YOU Dual-Path Hair Revival Serum](https://getreyou.com/) | **4.8** | 4.8 | 4.5 | 5.0 | 4.7 | 2.6 | 4.5 | 3.2 |
+| 2 | [Women's Rogaine Minoxidil Unscented Foam](https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam) | **4.4** | 4.7 | 5.0 | 3.2 | 3.0 | 4.8 | 3.0 | 1.0 |
+| 3 | [CurrentBody Skin LED Hair Regrowth Device](https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device) | **3.82** | 4.0 | 4.1 | 5.0 | 3.5 | 2.4 | 4.6 | 2.0 |
+| 4 | [PRP](#4-best-in-office-option-prp) | **3.52** | 4.2 | 3.9 | 4.5 | 3.5 | 1.2 | 3.1 | 2.4 |
+| 5 | [Microneedling](#5-best-as-an-add-on-microneedling) | **3.19** | 3.4 | 3.1 | 4.0 | 3.0 | 3.5 | 2.7 | 2.0 |
+:::
+
+Curious what these numbers actually measure? See [how we evaluated the treatments](#how-we-evaluated-the-treatments) below for the criteria behind each score.
+
+## 1. Best Overall: RE:YOU Dual-Path Hair Revival Serum
+
+:::review-box
+image: '/image/reyou.jpg'
+best-for: Someone who wants a non-prescription, drug-free topical with human clinical data and does not want treatment residue dictating how their hair looks that day.
+rating: 4.8
+pros:
+- Strong combination of clinical data and styling compatibility
+- Once-daily use with no oily finish
+- Proprietary molecules developed around the follicle and its surrounding environment
+- Direct 90-day comparison with minoxidil
+- No reported initial shedding phase in the 90-day data
+- Works with varied textures and color-treated routines
+- Drug-free and hormone-free
+- Clear application instructions and a realistic 30-second massage step
+cons:
+- The price makes consistency harder for budget-conscious users
+- The technology is new, so independent and longer-term replication is still limited
+- We would like to see the complete six-month results once available
+cta-label: Check Price
+cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
+:::
+
+
+I expected the science to be the main reason RE:YOU ranked first. In practice, the texture mattered almost as much.
+
+That may sound superficial in a hair-thinning review, but it is not. A treatment that makes the roots look oily, stiff, or wet creates a daily conflict. Someone may care deeply about future density and still skip tonight's application because they have a blowout, curls they do not want to disturb, or a meeting the next morning. The routine has to survive real life.
+
+RE:YOU feels closer to a lightweight scalp-care serum than a traditional medicated solution. The directions call for one to two full droppers once daily on a clean, dry scalp, followed by about 30 seconds of massage. The formula is described as lightweight, non-sticky, and compatible with regular styling products.
+
+### What Using It Actually Looks Like
+
+The easiest method is to divide the scalp into several narrow partings instead of emptying a full dropper into one place. Put most of the product where thinning is visible, usually the part line, crown, temples, or hairline.
+
+On fine hair, smaller drops across more sections reduce temporary wetness at the root. With dense curls, coils, braids, or protective styles, the priority is getting the dropper tip close to the exposed scalp rather than coating the hair.
+
+"Clean scalp" does not have to mean freshly shampooed every day. On a non-wash day, the scalp should still be accessible and reasonably free of heavy oil, wax, or several layers of dry shampoo. The serum needs contact with the scalp. It does not need perfectly clean lengths.
+
+Let the serum absorb before adding root spray, heat protectant, mousse, gel, or other styling products. I would not mix it into a styling product in the palm. RE:YOU belongs on the scalp, while most styling products belong on the hair fiber.
+
+The formula has a light fragrance. Alcohol Denat. also appears high in the ingredient list. Neither point automatically makes the formula harsh, but both are worth knowing if the scalp is reactive.
+
+The brand reports non-sensitizing results, testing across more than 24 human cell assays, and successful HRIPT skin compatibility testing. Even with reassuring testing, someone with eczema, psoriasis, active dermatitis, open skin, or a history of fragrance reactions should patch test and stop if persistent irritation develops.
+
+### Why the Science Feels More Substantial Than a Typical Cosmetic Serum
+
+Most cosmetic hair serums are built from familiar botanicals, peptides, or conditioning ingredients, then positioned around a broad scalp-health story.
+
+RE:YOU contains botanicals too, but the differentiating technology is ==NOVOGRO™==, a proprietary group of small molecules developed specifically around hair-follicle biology. The current serum uses three NOVOGRO™ molecules.
+
+- NOVOGRO™ 623 and 624 — designed to support dermal papilla cells, the cells that help direct follicle size, cycling, and growth activity.
+- NOVOGRO™ 273 — designed around the environment surrounding the follicle and the signaling involved in oxygen, nutrients, and regenerative support.
+
+That distinction is important. RE:YOU is not claiming that one general-purpose ingredient solves every cause of thinning. The formula was developed around two connected biological areas: activity inside the follicle and the environment needed to support it.
+
+The technical manuscript describes AI-enabled screening across millions of compounds, followed by laboratory testing in primary human cells and a three-dimensional follicle organoid model. The molecular paper is company-authored and should be read as early mechanistic evidence, not independent long-term proof. Still, publishing the methods, assays, limitations, and competing interests is more reassuring than leaving the technology as a marketing name with no visible work behind it.
+
+### The Clinical Data Is the Main Reason It Made the List
+
+RE:YOU reports 90-day interim results from a randomized, double-blinded clinical study involving 190 women with visible thinning.
+
+Participants used the product daily. The study compared RE:YOU directly with a minoxidil control rather than only with placebo. Evaluation included machine imaging, blinded expert grading, standardized comb testing, and participant-reported outcomes.
+
+At 90 days, the brand reports:
+
+- ==58%== decrease in hair loss
+- ==19%== increase in hair density
+- ==1.7×== greater improvement in the overall appearance of thinning than minoxidil
+- ==90%== of participants saw thicker hair
+
+These numbers do not all measure the same thing. Hair density was assessed objectively. Visible improvement involved blinded professional grading. Hair loss was evaluated through standardized comb testing. The 90% figure reflects participant experience.
+
+Keeping those methods separate makes the data more believable, not less. A percentage based on machine imaging should not be presented as if it came from the same measurement as a participant survey.
+
+### A Necessary Note About Gender
+
+RE:YOU is designed and marketed for people of all genders experiencing thinning or increased shedding. It is also described as suitable across hair types.
+
+The current human clinical trial, however, enrolled women with visible thinning. The brand says the trial included straight, wavy, curly, and coily hair and that results were consistent across those texture groups.
+
+That means the product itself can be discussed in gender-neutral language, but the clinical claim should remain precise. The current trial did not directly establish identical performance in every gender or every form of hair loss.
+
+### Safety, Pregnancy, and Breastfeeding
+
+**Safety note:** RE:YOU is drug-free and hormone-free.
+
+The brand states that it was formulated without ingredients known to be unsafe during pregnancy or breastfeeding. It still recommends that anyone who is pregnant or breastfeeding check with their OB/GYN before beginning a new product.
+
+### What Happens If You Stop?
+
+This is where RE:YOU has a more favorable story than minoxidil, but also less mature evidence.
+
+The brand says that after someone reaches the result they want, usually after 6 to 12 months, they may reduce use to once weekly or every few days. It also states that reducing use is not associated with a withdrawal shedding phase.
+
+That guidance is encouraging, but a formal published discontinuation study is not currently presented on the product page.
+
+For that reason, we scored RE:YOU higher than minoxidil for "After Stopping," but not close to 5. The available information supports a lower-maintenance plan. It does not yet establish exactly what every user will retain after stopping completely.
+
+### The Biggest Drawback Is Price
+
+At the time of review, the 30-day subscription price was listed at $141, with a higher one-time purchase price. Since the clinical checkpoint is 90 days, this is a three-bottle decision, not an inexpensive one-month experiment.
+
+The 90-day money-back guarantee reduces some risk, but users must follow the guarantee requirements and track their progress.
+
+> I would take baseline photos before the first application. Use the same part, lighting, camera distance, and styling every time. Repeat the photos every 30 days.
+
+Looking in the mirror every morning is a poor way to judge slow change. It is much easier to assess a part line or crown when the documentation is consistent.
+
+### Why It Ranked First
+
+RE:YOU is not the cheapest option. It also does not have minoxidil's decades of independent evidence.
+
+It ranked first because it solves the problem that causes many hair routines to fail: the product is credible enough to take seriously and easy enough to keep using.
+
+A strong treatment on paper is not useful when someone repeatedly skips it because it ruins the way their hair looks. RE:YOU delivered the best balance of clinical validation, daily usability, scalp-focused technology, and low styling disruption.
+
+[See the RE:YOU clinical results →](https://getreyou.com/pages/science#clinical-trial)
+
+## 2. Best Established Drug Option: Women's Rogaine Minoxidil Unscented Foam
+
+:::review-box
+image: '/image/rogaine.avif'
+best-for: Someone who prioritizes the longest evidence history and accepts daily, long-term drug use.
+rating: 4.4
+pros:
+- Strongest long-term evidence in this group
+- Widely available and relatively inexpensive
+- FDA-approved formulations
+- Works for many people with pattern hair loss
+cons:
+- Initial shedding may occur
+- Daily use is generally indefinite
+- Irritation and unwanted facial hair are possible
+- Some formulas interfere with styling
+- Serious household risk for pets, especially cats
+- Not appropriate during pregnancy or breastfeeding
+cta-label: Check Price
+cta-url: https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam
+:::
+
+Women's Rogaine Minoxidil Unscented Foam is a topical minoxidil product, and it is not prescription-only — it is sold over the counter as an FDA-approved formulation for pattern hair loss.
+
+For female pattern hair loss specifically, the American Academy of Dermatology describes topical minoxidil as the most recommended treatment and notes that 2% and 5% products are approved.
+
+Its strength is evidence. Its weakness is everything the user has to accept around that evidence.
+
+Temporary increased shedding can occur during the first two to eight weeks. Scalp dryness, itching, scaling, redness, and unwanted hair on the forehead or face are also recognized issues. Results can take 6 to 12 months to judge, and continued daily use is required. When treatment stops, the benefit gradually disappears and shedding increases.
+
+Texture depends on the format. Foam is usually easier around styling. Liquid solutions can leave fine roots looking damp or greasy, especially when too much lands on the hair instead of the scalp.
+
+### The Pet-Safety Warning
+
+**Warning:** The pet warning is not a minor footnote. Topical minoxidil can cause severe and potentially fatal poisoning in pets, especially cats. Transfer can happen through spills, hands, treated skin, pillows, bedding, or other residue.
+
+> I once shared a home with a cat and chose not to use Women's Rogaine Minoxidil Unscented Foam because I did not trust myself to control every possible transfer point. That was a personal risk decision, but it is a reasonable one to discuss.
+
+People who are pregnant, planning pregnancy, or breastfeeding should avoid topical minoxidil and discuss alternatives with a clinician.
+
+## 3. Best Product-Free Routine: CurrentBody Skin LED Hair Regrowth Device
+
+:::review-box
+image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
+best-for: Someone who would rather wear a device than put another product on the scalp.
+rating: 3.82
+pros:
+- No residue and no effect on styling
+- Non-invasive
+- Evidence supports benefit for pattern hair loss
+- Mild short-term side effects for most users
+- Easy to combine with another treatment
+cons:
+- High upfront cost for reputable devices
+- Device protocols vary
+- Requires repeated sessions for months
+- Ongoing use is usually needed
+- Evidence is stronger for pattern hair loss than for other causes
+cta-label: Check Price
+cta-url: https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device
+:::
+
+The CurrentBody Skin LED Hair Regrowth Device uses red light therapy, usually discussed as low-level light or laser therapy, which is appealing because it does not wet the roots, change the curl pattern, or compete with styling products. Put on the cap or helmet, complete the session, and remove it.
+
+Session length varies by device. Some are designed around approximately 10-minute use, while others require 20 to 30 minutes several times a week. That difference matters. A device can have good technology and still be a bad purchase if its schedule does not fit the user's life.
+
+A 2025 systematic review included 38 studies and 3,098 patients across several alopecia types. For androgenetic alopecia, low-level light therapy significantly improved hair density compared with placebo, although study protocols and results varied.
+
+> One contributor noticed short, soft hairs around the front hairline after about a month of consistent use. That is a personal observation, not a promised timeline. Controlled trials generally assess results after several months, and continued use is usually needed to maintain them.
+
+Eye protection and device quality matter. Choose a device with a clear regulatory status and a specific hair protocol rather than a generic red lamp marketed for every possible concern.
+
+## 4. Best In-Office Option: PRP
+
+:::review-box
+image: '/image/prp.jpg'
+best-for: Someone who prefers periodic appointments over daily application and can tolerate injections and cost.
+rating: 3.52
+pros:
+- Human evidence supports improved density
+- No daily topical routine
+- Minimal interference with hair styling between visits
+- Uses the patient's own blood product
+- Can be combined with other approaches
+cons:
+- Expensive and usually not insured
+- Pain, tenderness, swelling, and pinpoint bleeding can occur
+- Protocol quality varies by clinic
+- Multiple initial sessions and maintenance are common
+- Not a one-time treatment
+:::
+
+PRP stands for platelet-rich plasma. A clinician draws blood, separates a platelet-rich portion in a centrifuge, and injects it into thinning areas of the scalp.
+
+It is not a hair transplant and does not place new follicles into the scalp.
+
+The procedure can hurt. Numbing helps, but multiple scalp injections are still multiple scalp injections.
+
+Most protocols use an initial series, often one appointment a month for three months, followed by maintenance every three to six months.
+
+The evidence is genuinely promising. A 2024 systematic review and meta-analysis focused on female hair loss included 21 studies and 628 participants and found improvements in hair density and thickness, with adverse effects generally mild and temporary.
+
+Another 2024 meta-analysis found an increase in density but also highlighted high heterogeneity, low-quality evidence, and publication bias. Both points belong in the same conversation. PRP appears useful, but clinics do not all prepare or inject it the same way.
+
+From a styling perspective, PRP is simple after the short recovery period. There is no daily residue. The tradeoff is price, discomfort, and the need to return for maintenance.
+
+## 5. Best as an Add-On: Microneedling
+
+:::review-box
+image: '/image/microneedle.jpg'
+best-for: Someone already using a proven treatment who wants to discuss an adjunct with a dermatologist.
+rating: 3.19
+pros:
+- Plausible biological mechanism
+- Combination studies show added benefit
+- No permanent residue after recovery
+- Can be relatively affordable
+cons:
+- Standalone evidence remains limited
+- No FDA-cleared microneedling device for hair loss
+- Infection, irritation, pigment change, and scarring are possible
+- At-home technique is inconsistent
+- It can increase topical penetration in ways that have not been fully studied
+:::
+
+Microneedling creates controlled micro-injuries with very small needles. The proposed benefit comes from the wound-healing response and, when paired with a topical, increased delivery through the scalp.
+
+The mechanism is plausible. The evidence is also easy to overstate.
+
+Most clinical studies do not test microneedling alone. They compare minoxidil plus microneedling with minoxidil alone.
+
+Those studies suggest that needling can add benefit, but they do not prove that an at-home roller by itself performs like minoxidil, PRP, or a clinically tested serum. A review of microneedling for hair loss reached the same practical conclusion: monotherapy data is limited, while much of the research combines microneedling with minoxidil or PRP.
+
+Professional treatment and a cheap home roller are not equivalent. Needle depth, sterility, pressure, frequency, and scalp condition all matter.
+
+The FDA has not cleared any microneedling device for hair loss and has not cleared microneedling devices for use with another topical product.
+
+I would not use it over active dandruff, dermatitis, infection, open skin, or an inflamed scalp. More injury is not automatically more stimulation.
+
+## Bonus: Ketoconazole Shampoo for an Itchy, Flaky Scalp
+
+:::review-box
+image: '/image/Ketoconazole Shampoo.avif'
+best-for: Someone managing thinning alongside dandruff, oiliness, itching, or seborrheic dermatitis.
+pros:
+- Treats dandruff and seborrheic dermatitis
+- Easy to rotate into an existing wash routine
+- Low-cost compared with procedures
+- Most useful when scalp inflammation is part of the problem
+cons:
+- Not a primary standalone hair-growth treatment
+- Can dry the scalp or lengths
+- Hair-growth evidence is limited
+- Best used for a specific scalp indication, not as a universal deep-cleaning shampoo
+cta-label: Check Price
+cta-url: https://nizoral.com/
+:::
+
+Ketoconazole shampoo is useful, but it does not belong in the top five as a primary thinning-hair treatment.
+
+Its clearest job is treating dandruff and seborrheic dermatitis. Ketoconazole is antifungal, so it helps control the process behind flaking, scaling, and itching.
+
+The 1% version is available over the counter in the United States, while 2% formulations may require a prescription depending on the product.
+
+There is limited research suggesting a possible adjunct role in androgenetic alopecia, but the evidence is small and much less mature than the evidence for minoxidil.
+
+I would recommend it most confidently when someone has thinning plus dandruff, oiliness, itching, or seborrheic dermatitis. Clearing an inflamed, uncomfortable scalp can make an existing routine easier to tolerate, even when the shampoo is not the main growth treatment.
+
+It should not automatically replace regular shampoo at every wash.
+
+For OTC Nizoral, the current label guidance is about twice weekly for eight weeks, then as needed for dandruff control. Follow the label or a dermatologist's plan, especially with prescription-strength ketoconazole. Dryness, altered texture, itching, or irritation can occur.
+
+## Where We Would Start
+
+1. For the strongest established medication evidence, choose Women's Rogaine Minoxidil Unscented Foam and go in knowing that consistency, side effects, pet safety, and long-term use are part of the decision.
+2. For someone who wants a drug-free daily serum, cares about clinical data, and refuses to compromise the look of their hair while waiting for results, RE:YOU is the most balanced starting point in this review.
+3. The CurrentBody Skin LED Hair Regrowth Device is the cleanest fit for a product-free routine.
+4. PRP makes sense for someone comfortable with cost and injections.
+5. Microneedling is more convincing as an add-on than as a replacement for a better-established option.
+6. Ketoconazole belongs in the plan when dandruff or seborrheic dermatitis is present.
+
+Whatever route you choose, document the starting point and give the routine enough time. Use the same lighting, part, camera distance, and styling in progress photos. Hair changes slowly, and memory is not a reliable measurement tool.
+
+## How We Evaluated the Treatments
+
+Over three months, 20 working hair professionals contributed to this review, including hairstylists, colorists, and texture specialists. Our panel works with straight, wavy, curly, and coily hair, as well as fine, medium, and coarse strands. We also considered highlighted, bleached, chemically processed, protective-styled, and frequently heat-styled hair.
+
+For at-home options, we looked at application, residue, drying time, wash-day compatibility, and whether the routine was realistic to maintain. For PRP and professional microneedling, we did not pretend a salon panel could replace clinical research. Those scores reflect published evidence, treatment schedules, known risks, and the practical experiences clients commonly bring back to the chair.
+
+Each option received a score from 0 to 5:
+
+:::card-grid
+title: Efficacy
+How much meaningful improvement the evidence supports
+---
+title: Evidence
+Study quality, sample size, controls, and maturity of the research
+---
+title: Styling Fit
+Residue, greasiness, wash frequency, and compatibility with normal products
+---
+title: Commitment
+A higher score means the routine is easier to maintain
+---
+title: Cost
+A higher score means the option is more affordable
+---
+title: Tolerability
+A higher score means fewer or milder common side effects
+---
+title: After Stopping
+A higher score means less dependence on continuous treatment
+:::
+
+Every number in [the scorecard](#the-scorecard) above was built from these seven criteria, so a treatment's overall score is only as useful as the metric behind it you actually care about.
+
+*This article reflects HairPro Voices panel experience and is not medical advice. Talk with a licensed clinician before starting, combining, or stopping any hair-loss treatment, and before use during pregnancy or breastfeeding.*`,
+		metaTitle: `Yes, These 5 Thinning-Hair Treatments Can Work — Reviewed by Hair Professionals`,
+		metaDescription: `A 20-stylist HairPro Voices panel scores RE:YOU, minoxidil, red light therapy, PRP, microneedling, and ketoconazole shampoo on efficacy, evidence, styling fit, cost, and more.`
 	}
 ];
 function getArticleBySlug(slug) {
@@ -9764,6 +10138,146 @@ function SplitTable({ left, right }) {
 		}, ci))
 	});
 }
+function DataTable({ headerRow, bodyRows, styled }) {
+	return /* @__PURE__ */ jsxs("div", {
+		className: `my-8 border border-white/10 ${styled ? "bg-charcoal-900" : ""}`,
+		children: [/* @__PURE__ */ jsx("div", {
+			className: "md:hidden divide-y divide-white/5",
+			children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("div", {
+				className: "p-4 flex flex-col gap-3",
+				children: row.map((cell, ci) => cell ? /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+					className: "text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1",
+					children: headerRow[ci]
+				}), /* @__PURE__ */ jsx("p", {
+					className: "text-sm text-charcoal-300 leading-relaxed",
+					children: renderInline(cell)
+				})] }, ci) : null)
+			}, ri))
+		}), /* @__PURE__ */ jsx("div", {
+			className: "hidden md:block overflow-x-auto",
+			children: /* @__PURE__ */ jsxs("table", {
+				className: "w-full text-sm",
+				children: [/* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsx("tr", {
+					className: "bg-white/[0.04] border-b border-white/10",
+					children: headerRow.map((cell, j) => /* @__PURE__ */ jsx("th", {
+						className: "text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium",
+						children: cell
+					}, j))
+				}) }), /* @__PURE__ */ jsx("tbody", {
+					className: "divide-y divide-white/5",
+					children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("tr", {
+						className: "hover:bg-white/[0.02]",
+						children: row.map((cell, ci) => /* @__PURE__ */ jsx("td", {
+							className: "px-4 py-3 text-charcoal-300 align-top",
+							children: renderInline(cell)
+						}, ci))
+					}, ri))
+				})]
+			})
+		})]
+	});
+}
+function ReviewBox({ image, imageAlt, bestFor, pros, cons, rating, ctaLabel, ctaUrl }) {
+	const isImagePath = !!image && /^(\/|https?:\/\/)/.test(image.trim());
+	return /* @__PURE__ */ jsxs("div", {
+		className: "my-10 border border-white/10 overflow-hidden bg-charcoal-900",
+		children: [
+			isImagePath && /* @__PURE__ */ jsx("div", {
+				className: "relative overflow-hidden bg-charcoal-900 border-b border-white/10",
+				style: { aspectRatio: "1/1" },
+				children: /* @__PURE__ */ jsx("img", {
+					src: image,
+					alt: imageAlt || "Product photo",
+					loading: "lazy",
+					className: "w-full h-full object-cover"
+				})
+			}),
+			!isImagePath && image && /* @__PURE__ */ jsxs("div", {
+				className: "relative overflow-hidden bg-charcoal-900 flex flex-col items-center justify-center gap-3 border-b border-white/10",
+				style: { aspectRatio: "1/1" },
+				children: [/* @__PURE__ */ jsx(ImageIcon, {
+					size: 30,
+					className: "text-charcoal-700"
+				}), /* @__PURE__ */ jsxs("p", {
+					className: "text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium px-6 text-center",
+					children: ["Image placeholder — ", image]
+				})]
+			}),
+			bestFor && /* @__PURE__ */ jsxs("div", {
+				className: "p-5 border-b border-white/10 bg-white/[0.02]",
+				children: [/* @__PURE__ */ jsx("p", {
+					className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-2 text-gold-500",
+					children: "Best For"
+				}), /* @__PURE__ */ jsx("p", {
+					className: "text-sm text-charcoal-300 leading-relaxed",
+					children: renderInline(bestFor)
+				})]
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: "grid grid-cols-1 sm:grid-cols-2 gap-0",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "p-5 border-b sm:border-b-0 sm:border-r border-white/10",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-gold-500",
+						children: "Pros"
+					}), /* @__PURE__ */ jsx("ul", {
+						className: "flex flex-col gap-3",
+						children: pros.map((item, i) => /* @__PURE__ */ jsxs("li", {
+							className: "flex gap-2.5 text-sm text-charcoal-300 leading-relaxed",
+							children: [/* @__PURE__ */ jsx(Check, {
+								size: 15,
+								strokeWidth: 2.5,
+								className: "flex-shrink-0 mt-0.5 text-emerald-500"
+							}), renderInline(item)]
+						}, i))
+					})]
+				}), /* @__PURE__ */ jsxs("div", {
+					className: "p-5",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-charcoal-500",
+						children: "Cons"
+					}), /* @__PURE__ */ jsx("ul", {
+						className: "flex flex-col gap-3",
+						children: cons.map((item, i) => /* @__PURE__ */ jsxs("li", {
+							className: "flex gap-2.5 text-sm text-charcoal-300 leading-relaxed",
+							children: [/* @__PURE__ */ jsx(X, {
+								size: 15,
+								strokeWidth: 2.5,
+								className: "flex-shrink-0 mt-0.5 text-red-500"
+							}), renderInline(item)]
+						}, i))
+					})]
+				})]
+			}),
+			(rating !== void 0 || ctaLabel && ctaUrl) && /* @__PURE__ */ jsxs("div", {
+				className: "p-5 border-t border-white/10 flex flex-wrap items-center justify-center sm:justify-end gap-3",
+				children: [rating !== void 0 && /* @__PURE__ */ jsxs("div", {
+					className: "inline-flex items-center gap-2 border border-white/10 px-4 py-3",
+					children: [
+						/* @__PURE__ */ jsx(Star, {
+							size: 14,
+							className: "text-gold-500 fill-gold-500 flex-shrink-0"
+						}),
+						/* @__PURE__ */ jsx("span", {
+							className: "text-sm font-bold text-white",
+							children: rating.toFixed(2)
+						}),
+						/* @__PURE__ */ jsx("span", {
+							className: "text-[11px] text-charcoal-500",
+							children: "/5"
+						})
+					]
+				}), ctaLabel && ctaUrl && /* @__PURE__ */ jsxs("a", {
+					href: ctaUrl,
+					target: "_blank",
+					rel: "noopener noreferrer",
+					className: "inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-black font-bold text-[11px] tracking-widest uppercase px-6 py-3 transition-colors",
+					children: [ctaLabel, /* @__PURE__ */ jsx(ArrowRight, { size: 14 })]
+				})]
+			})
+		]
+	});
+}
 function CaseStudySeparator() {
 	return /* @__PURE__ */ jsxs("div", {
 		className: "my-10 flex items-center gap-4",
@@ -9909,13 +10423,19 @@ function renderInline(text) {
 			className: "text-gold-500",
 			children: match[6]
 		}, key++));
-		else if (match[7]) nodes.push(/* @__PURE__ */ jsx("a", {
-			href: match[8] ?? "#",
-			className: "text-gold-500 hover:underline",
-			target: "_blank",
-			rel: "noopener noreferrer",
-			children: match[7]
-		}, key++));
+		else if (match[7]) {
+			const href = match[8] ?? "#";
+			const isAnchor = href.startsWith("#");
+			nodes.push(/* @__PURE__ */ jsx("a", {
+				href,
+				className: "text-gold-500 hover:underline",
+				...isAnchor ? {} : {
+					target: "_blank",
+					rel: "noopener noreferrer"
+				},
+				children: match[7]
+			}, key++));
+		}
 		cursor = match.index + match[0].length;
 	}
 	if (cursor < text.length) nodes.push(text.slice(cursor));
@@ -10222,6 +10742,86 @@ function MarkdownBody({ body }) {
 		});
 		return `SPLIT_TABLE_PLACEHOLDER_${id}`;
 	});
+	const reviewBoxPlaceholders = [];
+	processedBody = processedBody.replace(/:::review-box\n([\s\S]*?):::/g, (_match, inner) => {
+		const lines = inner.trim().split("\n");
+		let image;
+		let imageAlt;
+		let bestFor;
+		let ctaLabel;
+		let ctaUrl;
+		let rating;
+		const pros = [];
+		const cons = [];
+		let section = null;
+		for (const line of lines) {
+			const imgM = line.match(/^image:\s*(.+)$/);
+			const altM = line.match(/^alt:\s*(.+)$/);
+			const bestForM = line.match(/^best-for:\s*(.+)$/);
+			const ctaLabelM = line.match(/^cta-label:\s*(.+)$/);
+			const ctaUrlM = line.match(/^cta-url:\s*(.+)$/);
+			const ratingM = line.match(/^rating:\s*([\d.]+)$/);
+			if (imgM) {
+				image = imgM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (altM) {
+				imageAlt = altM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (bestForM) {
+				bestFor = bestForM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (ctaLabelM) {
+				ctaLabel = ctaLabelM[1].trim();
+				continue;
+			}
+			if (ctaUrlM) {
+				ctaUrl = ctaUrlM[1].trim();
+				continue;
+			}
+			if (ratingM) {
+				rating = parseFloat(ratingM[1]);
+				continue;
+			}
+			if (line.trim() === "pros:") {
+				section = "pros";
+				continue;
+			}
+			if (line.trim() === "cons:") {
+				section = "cons";
+				continue;
+			}
+			if (line.trim().startsWith("- ") && section === "pros") pros.push(line.replace(/^-\s+/, "").trim());
+			if (line.trim().startsWith("- ") && section === "cons") cons.push(line.replace(/^-\s+/, "").trim());
+		}
+		const id = reviewBoxPlaceholders.length;
+		reviewBoxPlaceholders.push({
+			image,
+			imageAlt,
+			bestFor,
+			pros,
+			cons,
+			rating,
+			ctaLabel,
+			ctaUrl
+		});
+		return `REVIEW_BOX_PLACEHOLDER_${id}`;
+	});
+	const scorecardTablePlaceholders = [];
+	processedBody = processedBody.replace(/:::scorecard-table\n([\s\S]*?):::/g, (_match, inner) => {
+		const parsed = inner.trim().split("\n").filter((l) => l.trim().startsWith("|")).map((r) => r.split("|").slice(1, -1).map((c) => c.trim()));
+		const isSep = (row) => row.every((c) => /^[-: ]+$/.test(c));
+		const headerRow = parsed[0] || [];
+		const bodyRows = parsed.slice(1).filter((r) => !isSep(r));
+		const id = scorecardTablePlaceholders.length;
+		scorecardTablePlaceholders.push({
+			headerRow,
+			bodyRows
+		});
+		return `SCORECARD_TABLE_PLACEHOLDER_${id}`;
+	});
 	const referencePlaceholders = [];
 	processedBody = processedBody.replace(/:::references\n([\s\S]*?):::/g, (_match, inner) => {
 		const items = inner.trim().split("\n").filter((l) => l.trim().startsWith("- ")).map((l) => l.replace(/^-\s+/, "").trim());
@@ -10301,6 +10901,29 @@ function MarkdownBody({ body }) {
 					right: st.right
 				}, i);
 			}
+			const reviewBoxMatch = trimmed.match(/^REVIEW_BOX_PLACEHOLDER_(\d+)$/);
+			if (reviewBoxMatch) {
+				const rb = reviewBoxPlaceholders[parseInt(reviewBoxMatch[1])];
+				return /* @__PURE__ */ jsx(ReviewBox, {
+					image: rb.image,
+					imageAlt: rb.imageAlt,
+					bestFor: rb.bestFor,
+					pros: rb.pros,
+					cons: rb.cons,
+					rating: rb.rating,
+					ctaLabel: rb.ctaLabel,
+					ctaUrl: rb.ctaUrl
+				}, i);
+			}
+			const scorecardTableMatch = trimmed.match(/^SCORECARD_TABLE_PLACEHOLDER_(\d+)$/);
+			if (scorecardTableMatch) {
+				const st = scorecardTablePlaceholders[parseInt(scorecardTableMatch[1])];
+				return /* @__PURE__ */ jsx(DataTable, {
+					headerRow: st.headerRow,
+					bodyRows: st.bodyRows,
+					styled: true
+				}, i);
+			}
 			const carouselMatch = trimmed.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/);
 			if (carouselMatch) {
 				const cp = carouselPlaceholders[parseInt(carouselMatch[1])];
@@ -10370,43 +10993,9 @@ function MarkdownBody({ body }) {
 				const parsed = trimmed.split("\n").filter((l) => l.trim().startsWith("|")).map((r) => r.split("|").slice(1, -1).map((c) => c.trim()));
 				const isSep = (row) => row.every((c) => /^[-: ]+$/.test(c));
 				const headerRow = parsed[0];
-				const bodyRows = parsed.slice(1).filter((r) => !isSep(r));
-				return /* @__PURE__ */ jsxs("div", {
-					className: "my-8 border border-white/10",
-					children: [/* @__PURE__ */ jsx("div", {
-						className: "md:hidden divide-y divide-white/5",
-						children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("div", {
-							className: "p-4 flex flex-col gap-3",
-							children: row.map((cell, ci) => cell ? /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
-								className: "text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1",
-								children: headerRow[ci]
-							}), /* @__PURE__ */ jsx("p", {
-								className: "text-sm text-charcoal-300 leading-relaxed",
-								children: renderInline(cell)
-							})] }, ci) : null)
-						}, ri))
-					}), /* @__PURE__ */ jsx("div", {
-						className: "hidden md:block overflow-x-auto",
-						children: /* @__PURE__ */ jsxs("table", {
-							className: "w-full text-sm",
-							children: [/* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsx("tr", {
-								className: "bg-white/[0.04] border-b border-white/10",
-								children: headerRow.map((cell, j) => /* @__PURE__ */ jsx("th", {
-									className: "text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium",
-									children: cell
-								}, j))
-							}) }), /* @__PURE__ */ jsx("tbody", {
-								className: "divide-y divide-white/5",
-								children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("tr", {
-									className: "hover:bg-white/[0.02]",
-									children: row.map((cell, ci) => /* @__PURE__ */ jsx("td", {
-										className: "px-4 py-3 text-charcoal-300 align-top",
-										children: renderInline(cell)
-									}, ci))
-								}, ri))
-							})]
-						})
-					})]
+				return /* @__PURE__ */ jsx(DataTable, {
+					headerRow,
+					bodyRows: parsed.slice(1).filter((r) => !isSep(r))
 				}, i);
 			}
 			if (trimmed.startsWith("> ")) {
