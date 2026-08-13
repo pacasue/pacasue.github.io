@@ -7201,6 +7201,210 @@ If your morning routine regularly starts with detangling, smoothing frizz, and t
 Because healthy hair care doesn't stop when you turn off the lights.`,
 		metaTitle: "Is Your Bedtime Routine Ruining Your Hair? Sleep Habits to Know",
 		metaDescription: "Cotton pillowcases, wet hair, and tight ponytails can undo your hair care routine overnight. A salon educator breaks down the sleep habits worth changing, and the ones that are hype."
+	},
+	{
+		id: 55,
+		slug: "pop-star-hair-looks-stylists-recreate",
+		tag: "Cut & Style",
+		title: "The Pop Star Hair Looks Everyone Wants — And How Stylists Actually Recreate Them",
+		excerpt: "You know a pop star's hair has become iconic when you can recognize the person from the silhouette alone. Here is what is actually happening underneath five of the most requested looks right now.",
+		author: "Nora Bell",
+		date: "Aug 10, 2026",
+		readTime: "8 min",
+		image: "/image/popstar-hair-looks-cover.png",
+		category: "Cut & Style",
+		section: "Trends",
+		body: `You know a pop star's hair has officially become iconic when you can recognize the person from the silhouette alone.
+
+The curtain bangs. The giant blowout. The slick ponytail. The perfectly imperfect waves.
+
+For today's biggest pop stars, hair isn't just an accessory to the outfit. It's part of the brand. And while the finished looks can seem impossible to recreate at home, most of them come down to a surprisingly specific combination of cut, shape, texture, and finishing technique.
+
+I broke down some of the most recognizable pop-star hairstyles right now, and more importantly, what I'd actually tell a client who walked into my chair asking for them.
+
+## 1. Sabrina Carpenter's Bombshell Blowout
+
+:::image-row
+![Long layers with rounded curtain bangs](/image/popstar-blowout-1.jpg)
+![The softer, airy shape the curls relax into](/image/popstar-waves-1.jpg)
+![Brushed-out curls with root lift](/image/popstar-blowout-2.jpg)
+:::
+
+**The look:** Voluminous · bouncy · soft curtain bangs
+
+Sabrina Carpenter has made big, fluffy hair practically synonymous with her pop-star aesthetic. Her signature look combines long, layered hair with rounded curtain bangs, plenty of root lift, and those soft, brushed-out curls that look glamorous without feeling overly formal. Her stylists have described the look as a bombshell or Hollywood-style blowout, with volume designed to hold up even under stage lights and movement.
+
+The secret isn't simply "curl your hair." It's the shape underneath the curl.
+
+### How to Get It
+
+Ask your stylist for long, face-framing layers and soft curtain bangs that hit around the cheekbones. Avoid anything too blunt. The movement needs to flow gradually into the rest of the hair.
+
+At home, start with heat protectant and a volumizing mousse or blow-dry product. Blow-dry the roots upward with a round brush, then work through the lengths, directing the hair away from the face.
+
+Once dry, set large sections with a large-barrel curling iron or hot rollers. Let the curls cool completely before brushing them out.
+
+And don't be afraid when it initially looks too big.
+
+That's the point.
+
+The curls will relax into the softer, airy shape that makes the style recognizable.
+
+**Stylist's tip:** The curtain bangs are doing a lot of the face-framing work here. If you're nervous about committing to bangs, ask for longer, cheekbone-grazing pieces first.
+
+## 2. Zara Larsson's Tousled Beach Waves
+
+:::image-row
+![Loose waves with airy, irregular bends](/image/popstar-blowout-3.jpg)
+![Ends left straighter than the mid-shaft](/image/popstar-waves-3.jpg)
+![Undone texture through the mid-lengths](/image/popstar-waves-2.jpg)
+:::
+
+**The look:** Soft · undone · Scandinavian cool
+
+Zara Larsson's hair often lands in that sweet spot between polished and effortless: loose waves, airy texture, and enough movement to keep the style from looking overly done.
+
+It's a particularly wearable look, and one that's having another major moment in 2026. Larsson has been among the celebrities bringing soft, tousled beach waves back into the spotlight.
+
+The important distinction: this isn't a head full of perfect curls.
+
+The bends should be irregular.
+
+### How to Get It
+
+Start with mostly dry hair and apply a lightweight texturizing spray.
+
+Divide the hair into sections and use a large curling iron, alternating the direction of each wave. Leave the last inch or two of the ends out of the iron.
+
+Then, and this is where the look changes, don't immediately brush everything smooth.
+
+Let the hair cool first.
+
+Run your fingers through the waves, shake out the roots, and finish with a very light mist of texture spray.
+
+If your hair naturally has some wave, even better. Enhance what you already have instead of trying to completely reshape it.
+
+**Stylist's tip:** Keep the ends straighter than the mid-lengths. That's what separates beach waves from traditional curls.
+
+## 3. Ariana Grande's High Pony Iterations
+
+:::image-row
+![The pony set high on the crown](/image/popstar-retro-3.jpg)
+![Smooth, controlled lengths with a wrapped elastic](/image/popstar-pony-2.jpg)
+![The lifted silhouette from the front](/image/popstar-pony-1.jpg)
+:::
+
+**The look:** Polished · lifted · ultra-sleek
+
+Ariana Grande's high ponytail is one of those hairstyles that became inseparable from the person wearing it. While there are many different styles and iterations of this hairstyle, we'll focus on the most iconic one. The pony sits high on the crown, the lengths are smooth and controlled, and the overall silhouette creates an instant lifted effect.
+
+It's simple in theory.
+
+It's much harder to make look that clean.
+
+### How to Get It
+
+The foundation is smoothness.
+
+Start by blow-drying the hair straight, paying particular attention to the roots. Use a flat iron only where necessary rather than repeatedly running it through every section.
+
+Brush the hair upward toward the crown and secure it tightly.
+
+Then take a small section of hair from underneath the ponytail and wrap it around the elastic.
+
+That tiny detail makes the difference between "I put my hair up" and "this was professionally styled."
+
+For extra length or fullness, a ponytail extension can create the exaggerated silhouette associated with Grande's stage looks.
+
+**Stylist's tip:** Don't pull every strand perfectly flat if you have a rounder face. Leaving a little softness around the temples can make the style feel more balanced.
+
+## 4. Taylor Swift's Soft, Retro Waves
+
+:::image-row
+![Retro-inspired shape with a rounded silhouette](/image/popstar-theatrical-3.jpg)
+![A defined part with vintage-inspired shaping](/image/popstar-retro-2.jpg)
+![Soft waves brushed loosely out for a casual look](/image/popstar-pony-3.jpg)
+:::
+
+**The look:** Romantic · polished · vintage-inspired
+
+Taylor Swift has cycled through plenty of hair eras, but soft waves and retro-inspired styling remain a reliable part of her beauty vocabulary.
+
+The difference between this look and a modern beach wave is structure.
+
+These waves have a direction.
+
+### How to Get It
+
+Create a defined side or center part, depending on the version you're after.
+
+Curl medium-sized sections in the same general direction, rather than alternating every curl.
+
+Let everything cool completely.
+
+Then brush through gently with a soft-bristle brush until the curls merge into one continuous wave.
+
+Finish with hairspray rather than a heavy oil or serum.
+
+You want movement, but you don't want the hair to lose its shape.
+
+**Stylist's tip:** For a more modern version, loosen the wave around the ends and leave the finish slightly softer.
+
+## 5. Chappell Roan's Big, Theatrical Hair
+
+:::image-row
+![Towering curls and teased volume on stage](/image/popstar-theatrical-1.jpg)
+![Curls loosened by hand with structure intact](/image/popstar-theatrical-2.jpg)
+![Crimped curls to stand out on stage](/image/popstar-retro-1.jpg)
+:::
+
+**The look:** Retro · voluminous · unapologetically dramatic
+
+Chappell Roan doesn't really do subtle, and her hair is no exception.
+
+From towering curls and teased volume to retro-inspired shapes, her hairstyles are an important part of the larger character she creates. Her hair often feels theatrical, feminine, and slightly campy, pulling inspiration from different decades while still looking completely her own.
+
+And that's exactly what makes her hair so fun to recreate.
+
+The goal isn't perfectly polished hair. It's big hair with personality.
+
+### How to Get It
+
+Start with volume before you even think about styling the ends.
+
+Apply a volumizing mousse to damp roots and blow-dry the hair using a round brush, lifting the hair away from the scalp as you go. Once dry, set the hair with large rollers or a large-barrel curling iron.
+
+Let everything cool completely before brushing through it.
+
+For extra height, gently tease the roots at the crown using a fine-tooth comb. Don't aggressively backcomb the entire head. Concentrate the teasing where you want the most lift.
+
+Once you've created the shape, use your fingers to loosen the curls while keeping their overall structure intact. Finish with hairspray to hold the volume without making the hair look stiff.
+
+And if you're going for a truly Chappell-inspired look, don't be afraid to make it bigger than feels necessary.
+
+That's part of the aesthetic.
+
+**Stylist's tip:** The best way to recreate Chappell's hair is to focus on the silhouette rather than copying one exact style. Ask your stylist for volume, rounded shape, and retro-inspired movement, then adjust the size and placement to work with your face shape and hair density.
+
+## What All These Pop-Star Looks Have in Common
+
+At first glance, these hairstyles couldn't be more different. But there's one thing they all have in common: the hairstyle has a clear identity. That's the part worth copying, not necessarily the exact haircut.
+
+Your hair doesn't need to look exactly like Sabrina Carpenter's to benefit from her approach to volume. You don't need Zara Larsson's exact cut to get the effortless texture. And you certainly don't need a pop star's budget to make your hair look intentional.
+
+The trick is identifying what you actually like about the look. Bring your stylist that answer, along with the photo. That's a much better starting point than simply saying, "I want her hair."
+
+## The Bottom Line
+
+Celebrity hair looks intimidating because we see the finished version: perfect lighting, professional styling, extensions when needed, and a team making sure every strand behaves.
+
+But the underlying techniques are surprisingly accessible.
+
+The best celebrity-inspired hairstyle isn't necessarily the one that copies a pop star perfectly. It's the one that takes the element you love and adapts it to your own hair.
+
+That's how you get the inspiration without looking like you're wearing a costume.`,
+		metaTitle: "The Pop Star Hair Looks Everyone Wants, And How Stylists Recreate Them",
+		metaDescription: "From Sabrina Carpenter's bombshell blowout to Ariana Grande's high pony and Chappell Roan's theatrical volume, a stylist breaks down five of the most requested pop-star hair looks and how to actually get them."
 	}
 ];
 function getArticleBySlug(slug) {
@@ -10653,7 +10857,8 @@ var h2Slugs$1 = new Set([
 	"are-straight-perms-bad-for-hair",
 	"fall-2026-hair-color-trends",
 	"gloss-or-full-color",
-	"bedtime-routine-ruining-hair"
+	"bedtime-routine-ruining-hair",
+	"pop-star-hair-looks-stylists-recreate"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -10987,7 +11192,8 @@ var h2Slugs = new Set([
 	"are-straight-perms-bad-for-hair",
 	"fall-2026-hair-color-trends",
 	"gloss-or-full-color",
-	"bedtime-routine-ruining-hair"
+	"bedtime-routine-ruining-hair",
+	"pop-star-hair-looks-stylists-recreate"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");

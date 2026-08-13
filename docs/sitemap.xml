@@ -497,4 +497,13 @@
       <image:loc>https://hairprovoices.com/image/bedtime-hair-routine-cover.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/pop-star-hair-looks-stylists-recreate/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/popstar-hair-looks-cover.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
