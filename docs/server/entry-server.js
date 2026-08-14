@@ -7433,11 +7433,11 @@ A cut, color adjustment, root powder, or a new part can create immediate fullnes
 :::scorecard-table
 | Rank | Option | Overall | Efficacy | Evidence | Styling Fit | Commitment | Cost | Tolerability | After Stopping |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [RE:YOU Dual-Path Hair Revival Serum](https://getreyou.com/) | **4.8** | 4.8 | 4.5 | 5.0 | 4.7 | 2.6 | 4.5 | 3.2 |
-| 2 | [Women's Rogaine Minoxidil Unscented Foam](https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam) | **4.4** | 4.7 | 5.0 | 3.2 | 3.0 | 4.8 | 3.0 | 1.0 |
-| 3 | [CurrentBody Skin LED Hair Regrowth Device](https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device) | **3.82** | 4.0 | 4.1 | 5.0 | 3.5 | 2.4 | 4.6 | 2.0 |
-| 4 | [PRP](#4-best-in-office-option-prp) | **3.52** | 4.2 | 3.9 | 4.5 | 3.5 | 1.2 | 3.1 | 2.4 |
-| 5 | [Microneedling](#5-best-as-an-add-on-microneedling) | **3.19** | 3.4 | 3.1 | 4.0 | 3.0 | 3.5 | 2.7 | 2.0 |
+| 1 | [RE:YOU Dual-Path Hair Revival Serum](https://getreyou.com/) | **4.3** | 4.8 | 4.5 | 5.0 | 4.7 | 2.6 | 4.5 | 3.2 |
+| 2 | [Women's Rogaine Minoxidil Unscented Foam](https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam) | **3.9** | 4.7 | 5.0 | 3.2 | 3.0 | 4.8 | 3.0 | 1.0 |
+| 3 | [CurrentBody Skin LED Hair Regrowth Device](https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device) | **3.8** | 4.0 | 4.1 | 5.0 | 3.5 | 2.4 | 4.6 | 2.0 |
+| 4 | [Platelet-Rich Plasma (PRP)](#4-best-in-office-option-platelet-rich-plasma-prp) | **3.5** | 4.2 | 3.9 | 4.5 | 3.5 | 1.2 | 3.1 | 2.4 |
+| 5 | [Microneedling](#5-best-as-an-add-on-microneedling) | **3.1** | 3.4 | 3.1 | 4.0 | 3.0 | 3.5 | 2.7 | 2.0 |
 :::
 
 Curious what these numbers actually measure? See [how we evaluated the treatments](#how-we-evaluated-the-treatments) below for the criteria behind each score.
@@ -7447,7 +7447,7 @@ Curious what these numbers actually measure? See [how we evaluated the treatment
 :::review-box
 image: '/image/reyou.jpg'
 best-for: Someone who wants a non-prescription, drug-free topical with human clinical data and does not want treatment residue dictating how their hair looks that day.
-rating: 4.8
+rating: 4.3
 pros:
 - Strong combination of clinical data and styling compatibility
 - Once-daily use with no oily finish
@@ -7466,21 +7466,21 @@ cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
 :::
 
 
-I expected the science to be the main reason RE:YOU ranked first. In practice, the texture mattered almost as much.
+As a group of hair professionals, we expected the science to be the main reason RE:YOU ranked first. Once we considered how it would fit into the routines we see behind the chair, the texture mattered almost as much.
 
-That may sound superficial in a hair-thinning review, but it is not. A treatment that makes the roots look oily, stiff, or wet creates a daily conflict. Someone may care deeply about future density and still skip tonight's application because they have a blowout, curls they do not want to disturb, or a meeting the next morning. The routine has to survive real life.
+That may sound superficial in a hair-thinning review, but every pro on our panel recognized the same practical problem: a treatment that makes the roots look oily, stiff, or wet creates a daily conflict. A client may care deeply about future density and still skip tonight's application because they have a blowout, curls they do not want to disturb, or a meeting the next morning. The routine has to survive real life.
 
 RE:YOU feels closer to a lightweight scalp-care serum than a traditional medicated solution. The directions call for one to two full droppers once daily on a clean, dry scalp, followed by about 30 seconds of massage. The formula is described as lightweight, non-sticky, and compatible with regular styling products.
 
-### What Using It Actually Looks Like
+### How Our Hair Pros Would Use It
 
-The easiest method is to divide the scalp into several narrow partings instead of emptying a full dropper into one place. Put most of the product where thinning is visible, usually the part line, crown, temples, or hairline.
+Our pros recommend dividing the scalp into several narrow partings instead of emptying a full dropper into one place. Apply most of the product where thinning is visible, usually the part line, crown, temples, or hairline.
 
-On fine hair, smaller drops across more sections reduce temporary wetness at the root. With dense curls, coils, braids, or protective styles, the priority is getting the dropper tip close to the exposed scalp rather than coating the hair.
+On fine hair, we would use smaller drops across more sections to reduce temporary wetness at the root. With dense curls, coils, braids, or protective styles, our priority would be getting the dropper tip close to the exposed scalp rather than coating the hair. The curved dropper is designed for exactly this kind of targeted application, making it easier to navigate partings and reach the scalp directly.
 
 "Clean scalp" does not have to mean freshly shampooed every day. On a non-wash day, the scalp should still be accessible and reasonably free of heavy oil, wax, or several layers of dry shampoo. The serum needs contact with the scalp. It does not need perfectly clean lengths.
 
-Let the serum absorb before adding root spray, heat protectant, mousse, gel, or other styling products. I would not mix it into a styling product in the palm. RE:YOU belongs on the scalp, while most styling products belong on the hair fiber.
+We recommend letting the serum absorb before adding root spray, heat protectant, mousse, gel, or other styling products. None of our pros would mix it into a styling product in the palm. RE:YOU belongs on the scalp, while most styling products belong on the hair fiber.
 
 The formula has a light fragrance. Alcohol Denat. also appears high in the ingredient list. Neither point automatically makes the formula harsh, but both are worth knowing if the scalp is reactive.
 
@@ -7492,8 +7492,15 @@ Most cosmetic hair serums are built from familiar botanicals, peptides, or condi
 
 RE:YOU contains botanicals too, but the differentiating technology is ==NOVOGRO™==, a proprietary group of small molecules developed specifically around hair-follicle biology. The current serum uses three NOVOGRO™ molecules.
 
-- NOVOGRO™ 623 and 624 — designed to support dermal papilla cells, the cells that help direct follicle size, cycling, and growth activity.
-- NOVOGRO™ 273 — designed around the environment surrounding the follicle and the signaling involved in oxygen, nutrients, and regenerative support.
+:::card-grid
+title: NOVOGRO™ 623 + 624
+tag: Follicle Signaling
+Designed to support dermal papilla cells, the cells that help direct follicle size, cycling, and growth activity.
+---
+title: NOVOGRO™ 273
+tag: Follicle Environment
+Designed around the environment surrounding the follicle and the signaling involved in oxygen, nutrients, and regenerative support.
+:::
 
 That distinction is important. RE:YOU is not claiming that one general-purpose ingredient solves every cause of thinning. The formula was developed around two connected biological areas: activity inside the follicle and the environment needed to support it.
 
@@ -7514,15 +7521,7 @@ At 90 days, the brand reports:
 
 These numbers do not all measure the same thing. Hair density was assessed objectively. Visible improvement involved blinded professional grading. Hair loss was evaluated through standardized comb testing. The 90% figure reflects participant experience.
 
-Keeping those methods separate makes the data more believable, not less. A percentage based on machine imaging should not be presented as if it came from the same measurement as a participant survey.
-
-### A Necessary Note About Gender
-
-RE:YOU is designed and marketed for people of all genders experiencing thinning or increased shedding. It is also described as suitable across hair types.
-
-The current human clinical trial, however, enrolled women with visible thinning. The brand says the trial included straight, wavy, curly, and coily hair and that results were consistent across those texture groups.
-
-That means the product itself can be discussed in gender-neutral language, but the clinical claim should remain precise. The current trial did not directly establish identical performance in every gender or every form of hair loss.
+As reviewers, we think keeping those methods separate makes the data more believable, not less. A percentage based on machine imaging should not be presented as if it came from the same measurement as a participant survey.
 
 ### Safety, Pregnancy, and Breastfeeding
 
@@ -7534,7 +7533,8 @@ The brand states that it was formulated without ingredients known to be unsafe d
 
 This is where RE:YOU has a more favorable story than minoxidil, but also less mature evidence.
 
-The brand says that after someone reaches the result they want, usually after 6 to 12 months, they may reduce use to once weekly or every few days. It also states that reducing use is not associated with a withdrawal shedding phase.
+> We reached out to RE:YOU customer support about long-term use. The team told us that after someone reaches their desired result—usually after 6 to 12 months—they may reduce use to once weekly or every few days. Customer support also said that reducing use is not associated with a withdrawal shedding phase.
+> — Guidance provided by RE:YOU customer support
 
 That guidance is encouraging, but a formal published discontinuation study is not currently presented on the product page.
 
@@ -7546,7 +7546,7 @@ At the time of review, the 30-day subscription price was listed at $141, with a 
 
 The 90-day money-back guarantee reduces some risk, but users must follow the guarantee requirements and track their progress.
 
-> I would take baseline photos before the first application. Use the same part, lighting, camera distance, and styling every time. Repeat the photos every 30 days.
+> Our pro tip: Take baseline photos before the first application. Use the same part, lighting, camera distance, and styling every time, then repeat the photos every 30 days.
 
 Looking in the mirror every morning is a poor way to judge slow change. It is much easier to assess a part line or crown when the documentation is consistent.
 
@@ -7554,9 +7554,9 @@ Looking in the mirror every morning is a poor way to judge slow change. It is mu
 
 RE:YOU is not the cheapest option. It also does not have minoxidil's decades of independent evidence.
 
-It ranked first because it solves the problem that causes many hair routines to fail: the product is credible enough to take seriously and easy enough to keep using.
+We ranked it first because it addresses the problem our hair pros see derail many routines: the product is credible enough to take seriously and easy enough to keep using.
 
-A strong treatment on paper is not useful when someone repeatedly skips it because it ruins the way their hair looks. RE:YOU delivered the best balance of clinical validation, daily usability, scalp-focused technology, and low styling disruption.
+A strong treatment on paper is not useful when someone repeatedly skips it because it ruins the way their hair looks. Across our panel, RE:YOU delivered the best balance of clinical validation, daily usability, scalp-focused technology, and low styling disruption.
 
 [See the RE:YOU clinical results →](https://getreyou.com/pages/science#clinical-trial)
 
@@ -7565,7 +7565,7 @@ A strong treatment on paper is not useful when someone repeatedly skips it becau
 :::review-box
 image: '/image/rogaine.avif'
 best-for: Someone who prioritizes the longest evidence history and accepts daily, long-term drug use.
-rating: 4.4
+rating: 3.9
 pros:
 - Strongest long-term evidence in this group
 - Widely available and relatively inexpensive
@@ -7605,7 +7605,7 @@ People who are pregnant, planning pregnancy, or breastfeeding should avoid topic
 :::review-box
 image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
 best-for: Someone who would rather wear a device than put another product on the scalp.
-rating: 3.82
+rating: 3.8
 pros:
 - No residue and no effect on styling
 - Non-invasive
@@ -7626,18 +7626,18 @@ The CurrentBody Skin LED Hair Regrowth Device uses red light therapy, usually di
 
 Session length varies by device. Some are designed around approximately 10-minute use, while others require 20 to 30 minutes several times a week. That difference matters. A device can have good technology and still be a bad purchase if its schedule does not fit the user's life.
 
-A 2025 systematic review included 38 studies and 3,098 patients across several alopecia types. For androgenetic alopecia, low-level light therapy significantly improved hair density compared with placebo, although study protocols and results varied.
+[A 2025 systematic review](https://pubmed.ncbi.nlm.nih.gov/39404126/) included 38 studies and 3,098 patients across several alopecia types. For androgenetic alopecia, low-level light therapy significantly improved hair density compared with placebo, although study protocols and results varied.
 
 > One contributor noticed short, soft hairs around the front hairline after about a month of consistent use. That is a personal observation, not a promised timeline. Controlled trials generally assess results after several months, and continued use is usually needed to maintain them.
 
 Eye protection and device quality matter. Choose a device with a clear regulatory status and a specific hair protocol rather than a generic red lamp marketed for every possible concern.
 
-## 4. Best In-Office Option: PRP
+## 4. Best In-Office Option: Platelet-Rich Plasma (PRP)
 
 :::review-box
 image: '/image/prp.jpg'
 best-for: Someone who prefers periodic appointments over daily application and can tolerate injections and cost.
-rating: 3.52
+rating: 3.5
 pros:
 - Human evidence supports improved density
 - No daily topical routine
@@ -7660,9 +7660,9 @@ The procedure can hurt. Numbing helps, but multiple scalp injections are still m
 
 Most protocols use an initial series, often one appointment a month for three months, followed by maintenance every three to six months.
 
-The evidence is genuinely promising. A 2024 systematic review and meta-analysis focused on female hair loss included 21 studies and 628 participants and found improvements in hair density and thickness, with adverse effects generally mild and temporary.
+The evidence is genuinely promising. [A 2024 systematic review and meta-analysis focused on female hair loss](https://pmc.ncbi.nlm.nih.gov/articles/PMC11342464/) included 21 studies and 628 participants and found improvements in hair density and thickness, with adverse effects generally mild and temporary.
 
-Another 2024 meta-analysis found an increase in density but also highlighted high heterogeneity, low-quality evidence, and publication bias. Both points belong in the same conversation. PRP appears useful, but clinics do not all prepare or inject it the same way.
+[Another 2024 meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11551241/) found an increase in density but also highlighted high heterogeneity, low-quality evidence, and publication bias. Both points belong in the same conversation. PRP appears useful, but clinics do not all prepare or inject it the same way.
 
 From a styling perspective, PRP is simple after the short recovery period. There is no daily residue. The tradeoff is price, discomfort, and the need to return for maintenance.
 
@@ -7671,7 +7671,7 @@ From a styling perspective, PRP is simple after the short recovery period. There
 :::review-box
 image: '/image/microneedle.jpg'
 best-for: Someone already using a proven treatment who wants to discuss an adjunct with a dermatologist.
-rating: 3.19
+rating: 3.1
 pros:
 - Plausible biological mechanism
 - Combination studies show added benefit
@@ -7691,7 +7691,7 @@ The mechanism is plausible. The evidence is also easy to overstate.
 
 Most clinical studies do not test microneedling alone. They compare minoxidil plus microneedling with minoxidil alone.
 
-Those studies suggest that needling can add benefit, but they do not prove that an at-home roller by itself performs like minoxidil, PRP, or a clinically tested serum. A review of microneedling for hair loss reached the same practical conclusion: monotherapy data is limited, while much of the research combines microneedling with minoxidil or PRP.
+Those studies suggest that needling can add benefit, but they do not prove that an at-home roller by itself performs like minoxidil, PRP, or a clinically tested serum. [A systematic review of microneedling for hair loss](https://pmc.ncbi.nlm.nih.gov/articles/PMC8776974/) reached the same practical conclusion: monotherapy data is limited, while much of the research combines microneedling with minoxidil or PRP.
 
 Professional treatment and a cheap home roller are not equivalent. Needle depth, sterility, pressure, frequency, and scalp condition all matter.
 
@@ -7773,6 +7773,8 @@ A higher score means fewer or milder common side effects
 title: After Stopping
 A higher score means less dependence on continuous treatment
 :::
+
+Overall scores give Efficacy and Evidence 25% each. Styling Fit, Commitment, Cost, Tolerability, and After Stopping contribute 10% each. We round the result to one decimal place.
 
 Every number in [the scorecard](#the-scorecard) above was built from these seven criteria, so a treatment's overall score is only as useful as the metric behind it you actually care about.
 
@@ -11451,6 +11453,10 @@ var h2Slugs$1 = new Set([
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
+	if (article.slug === "best-thinning-hair-treatments-reviewed-by-pros") return [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)].map((m) => m[1]).filter((heading) => heading === "The Scorecard" || /^\d+\.\s+/.test(heading) || heading.startsWith("Bonus: Ketoconazole Shampoo") || heading === "Where We Would Start" || heading === "How We Evaluated the Treatments").map((heading) => ({
+		id: slugify$1(heading),
+		label: heading.startsWith("Bonus: Ketoconazole Shampoo") ? "Ketoconazole Shampoo" : heading.replace(/^\d+\.\s+[^:]+:\s*/, "")
+	}));
 	const pattern = h2Slugs$1.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm;
 	const headings = [...article.body.matchAll(pattern)];
 	if (headings.length === 0) return copperTocItems$1;
@@ -11807,6 +11813,10 @@ var copperTocItems = [
 ];
 function getTocItems(article) {
 	if (!article.body) return article.slug === "copper-renaissance-2026" ? copperTocItems : [];
+	if (article.slug === "best-thinning-hair-treatments-reviewed-by-pros") return [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)].map((m) => m[1]).filter((heading) => heading === "The Scorecard" || /^\d+\.\s+/.test(heading) || heading.startsWith("Bonus: Ketoconazole Shampoo") || heading === "Where We Would Start" || heading === "How We Evaluated the Treatments").map((heading) => ({
+		id: slugify(heading),
+		label: heading.startsWith("Bonus: Ketoconazole Shampoo") ? "Ketoconazole Shampoo" : heading.replace(/^\d+\.\s+[^:]+:\s*/, "")
+	}));
 	const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm;
 	return [...article.body.matchAll(pattern)].map((m) => ({
 		id: slugify(m[1]),

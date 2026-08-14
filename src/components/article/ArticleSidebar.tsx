@@ -17,6 +17,23 @@ const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-
 
 function getTocItems(article: Article) {
   if (!article.body) return copperTocItems
+  if (article.slug === 'best-thinning-hair-treatments-reviewed-by-pros') {
+    const tocHeadings = [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)]
+      .map((m) => m[1])
+      .filter((heading) =>
+        heading === 'The Scorecard'
+        || /^\d+\.\s+/.test(heading)
+        || heading.startsWith('Bonus: Ketoconazole Shampoo')
+        || heading === 'Where We Would Start'
+        || heading === 'How We Evaluated the Treatments'
+      )
+    return tocHeadings.map((heading) => ({
+      id: slugify(heading),
+      label: heading.startsWith('Bonus: Ketoconazole Shampoo')
+        ? 'Ketoconazole Shampoo'
+        : heading.replace(/^\d+\.\s+[^:]+:\s*/, ''),
+    }))
+  }
   const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm
   const headings = [...article.body.matchAll(pattern)]
   if (headings.length === 0) return copperTocItems
