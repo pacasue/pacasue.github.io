@@ -515,4 +515,13 @@
       <image:loc>https://hairprovoices.com/image/before-and-after.png</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://hairprovoices.com/article/first-date-hair-what-it-says-about-you/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/first-date-hair-cover.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
