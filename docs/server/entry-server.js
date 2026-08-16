@@ -7430,14 +7430,36 @@ A cut, color adjustment, root powder, or a new part can create immediate fullnes
 
 ## The Scorecard
 
-:::scorecard-table
-| Rank | Option | Overall | Efficacy | Evidence | Styling Fit | Commitment | Cost | Tolerability | After Stopping |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | [RE:YOU Dual-Path Hair Revival Serum](https://getreyou.com/) | **4.3** | 4.8 | 4.5 | 5.0 | 4.7 | 2.6 | 4.5 | 3.2 |
-| 2 | [Women's Rogaine Minoxidil Unscented Foam](https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam) | **3.9** | 4.7 | 5.0 | 3.2 | 3.0 | 4.8 | 3.0 | 1.0 |
-| 3 | [CurrentBody Skin LED Hair Regrowth Device](https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device) | **3.8** | 4.0 | 4.1 | 5.0 | 3.5 | 2.4 | 4.6 | 2.0 |
-| 4 | [Platelet-Rich Plasma (PRP)](#4-best-in-office-option-platelet-rich-plasma-prp) | **3.5** | 4.2 | 3.9 | 4.5 | 3.5 | 1.2 | 3.1 | 2.4 |
-| 5 | [Microneedling](#5-best-as-an-add-on-microneedling) | **3.1** | 3.4 | 3.1 | 4.0 | 3.0 | 3.5 | 2.7 | 2.0 |
+:::scorecard-cards
+rank: 1
+name: RE:YOU Dual-Path Hair Revival Serum
+image: '/image/reyou.jpg'
+score: 4.8
+url: https://getreyou.com/products/dual-path-hair-revival-serum
+---
+rank: 2
+name: Women's Rogaine Minoxidil Unscented Foam
+image: '/image/rogaine.avif'
+score: 4.6
+url: https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam
+---
+rank: 3
+name: CurrentBody Skin LED Hair Regrowth Device
+image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
+score: 4.5
+url: https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device
+---
+rank: 4
+name: Platelet-Rich Plasma (PRP)
+image: '/image/prp.jpg'
+score: 4.3
+url: '#4-best-in-office-option-platelet-rich-plasma-prp'
+---
+rank: 5
+name: Microneedling
+image: '/image/microneedle.jpg'
+score: 4.1
+url: '#5-best-as-an-add-on-microneedling'
 :::
 
 Curious what these numbers actually measure? See [how we evaluated the treatments](#how-we-evaluated-the-treatments) below for the criteria behind each score.
@@ -7447,7 +7469,7 @@ Curious what these numbers actually measure? See [how we evaluated the treatment
 :::review-box
 image: '/image/reyou.jpg'
 best-for: Someone who wants a non-prescription, drug-free topical with human clinical data and does not want treatment residue dictating how their hair looks that day.
-rating: 4.3
+rating: 4.8
 pros:
 - Strong combination of clinical data and styling compatibility
 - Once-daily use with no oily finish
@@ -7565,7 +7587,7 @@ A strong treatment on paper is not useful when someone repeatedly skips it becau
 :::review-box
 image: '/image/rogaine.avif'
 best-for: Someone who prioritizes the longest evidence history and accepts daily, long-term drug use.
-rating: 3.9
+rating: 4.6
 pros:
 - Strongest long-term evidence in this group
 - Widely available and relatively inexpensive
@@ -7605,7 +7627,7 @@ People who are pregnant, planning pregnancy, or breastfeeding should avoid topic
 :::review-box
 image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
 best-for: Someone who would rather wear a device than put another product on the scalp.
-rating: 3.8
+rating: 4.5
 pros:
 - No residue and no effect on styling
 - Non-invasive
@@ -7637,7 +7659,7 @@ Eye protection and device quality matter. Choose a device with a clear regulator
 :::review-box
 image: '/image/prp.jpg'
 best-for: Someone who prefers periodic appointments over daily application and can tolerate injections and cost.
-rating: 3.5
+rating: 4.3
 pros:
 - Human evidence supports improved density
 - No daily topical routine
@@ -7671,7 +7693,7 @@ From a styling perspective, PRP is simple after the short recovery period. There
 :::review-box
 image: '/image/microneedle.jpg'
 best-for: Someone already using a proven treatment who wants to discuss an adjunct with a dermatologist.
-rating: 3.1
+rating: 4.1
 pros:
 - Plausible biological mechanism
 - Combination studies show added benefit
@@ -10594,6 +10616,74 @@ function ReviewBox({ image, imageAlt, bestFor, pros, cons, rating, ctaLabel, cta
 		]
 	});
 }
+function ScorecardCards({ cards }) {
+	return /* @__PURE__ */ jsx("div", {
+		className: "my-8 flex overflow-x-auto snap-x snap-mandatory gap-2.5 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-5",
+		style: {
+			scrollbarWidth: "none",
+			msOverflowStyle: "none"
+		},
+		children: cards.map((c) => {
+			const isExternal = /^https?:\/\//.test(c.url);
+			return /* @__PURE__ */ jsxs("a", {
+				href: c.url,
+				...isExternal ? {
+					target: "_blank",
+					rel: "noopener noreferrer"
+				} : {},
+				className: "group flex flex-col flex-shrink-0 w-24 sm:w-auto snap-start border border-white/10 bg-charcoal-900 overflow-hidden hover:border-gold-500/50 transition-colors",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "relative overflow-hidden bg-charcoal-950",
+					style: { aspectRatio: "1/1" },
+					children: [c.image ? /* @__PURE__ */ jsx("img", {
+						src: c.image,
+						alt: c.name,
+						loading: "lazy",
+						className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+					}) : /* @__PURE__ */ jsxs("div", {
+						className: "w-full h-full flex items-center justify-center",
+						children: [/* @__PURE__ */ jsx(ImageIcon, {
+							size: 20,
+							className: "text-charcoal-700 sm:hidden"
+						}), /* @__PURE__ */ jsx(ImageIcon, {
+							size: 28,
+							className: "text-charcoal-700 hidden sm:block"
+						})]
+					}), /* @__PURE__ */ jsx("span", {
+						className: "absolute top-1 left-1 sm:top-2 sm:left-2 flex items-center justify-center w-4 h-4 sm:w-7 sm:h-7 rounded-full bg-black/80 border border-gold-500/50 text-gold-500 text-[9px] sm:text-xs font-bold",
+						children: c.rank
+					})]
+				}), /* @__PURE__ */ jsxs("div", {
+					className: "p-1.5 sm:p-4 flex flex-col items-center text-center gap-1 sm:gap-2.5 flex-1",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] sm:text-sm font-semibold text-white leading-snug line-clamp-2 min-h-[2.2em] sm:min-h-[2.5em]",
+						children: c.name
+					}), /* @__PURE__ */ jsxs("div", {
+						className: "mt-auto inline-flex items-center gap-1 sm:gap-1.5 bg-gold-500/10 border border-gold-500/30 rounded-full px-1.5 py-0.5 sm:px-3 sm:py-1.5",
+						children: [
+							/* @__PURE__ */ jsx(Star, {
+								size: 10,
+								className: "text-gold-500 fill-gold-500 flex-shrink-0 sm:hidden"
+							}),
+							/* @__PURE__ */ jsx(Star, {
+								size: 13,
+								className: "text-gold-500 fill-gold-500 flex-shrink-0 hidden sm:block"
+							}),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[11px] sm:text-sm font-bold text-white",
+								children: c.score.toFixed(1)
+							}),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[9px] sm:text-[10px] text-charcoal-500",
+								children: "/5"
+							})
+						]
+					})]
+				})]
+			}, c.rank);
+		})
+	});
+}
 function CaseStudySeparator() {
 	return /* @__PURE__ */ jsxs("div", {
 		className: "my-10 flex items-center gap-4",
@@ -11138,6 +11228,54 @@ function MarkdownBody({ body }) {
 		});
 		return `SCORECARD_TABLE_PLACEHOLDER_${id}`;
 	});
+	const scorecardCardsPlaceholders = [];
+	processedBody = processedBody.replace(/:::scorecard-cards\n([\s\S]*?):::/g, (_match, inner) => {
+		const cards = inner.trim().split(/\n---\n/).map((block) => {
+			const lines = block.trim().split("\n");
+			let rank = 0;
+			let name = "";
+			let image;
+			let score = 0;
+			let url = "";
+			for (const line of lines) {
+				const rankM = line.match(/^rank:\s*(\d+)$/);
+				const nameM = line.match(/^name:\s*(.+)$/);
+				const imageM = line.match(/^image:\s*(.+)$/);
+				const scoreM = line.match(/^score:\s*([\d.]+)$/);
+				const urlM = line.match(/^url:\s*(.+)$/);
+				if (rankM) {
+					rank = parseInt(rankM[1]);
+					continue;
+				}
+				if (nameM) {
+					name = nameM[1].trim();
+					continue;
+				}
+				if (imageM) {
+					image = imageM[1].trim().replace(/^['"]|['"]$/g, "");
+					continue;
+				}
+				if (scoreM) {
+					score = parseFloat(scoreM[1]);
+					continue;
+				}
+				if (urlM) {
+					url = urlM[1].trim().replace(/^['"]|['"]$/g, "");
+					continue;
+				}
+			}
+			return {
+				rank,
+				name,
+				image,
+				score,
+				url
+			};
+		});
+		const id = scorecardCardsPlaceholders.length;
+		scorecardCardsPlaceholders.push({ cards });
+		return `SCORECARD_CARDS_PLACEHOLDER_${id}`;
+	});
 	const referencePlaceholders = [];
 	processedBody = processedBody.replace(/:::references\n([\s\S]*?):::/g, (_match, inner) => {
 		const items = inner.trim().split("\n").filter((l) => l.trim().startsWith("- ")).map((l) => l.replace(/^-\s+/, "").trim());
@@ -11239,6 +11377,11 @@ function MarkdownBody({ body }) {
 					bodyRows: st.bodyRows,
 					styled: true
 				}, i);
+			}
+			const scorecardCardsMatch = trimmed.match(/^SCORECARD_CARDS_PLACEHOLDER_(\d+)$/);
+			if (scorecardCardsMatch) {
+				const sc = scorecardCardsPlaceholders[parseInt(scorecardCardsMatch[1])];
+				return /* @__PURE__ */ jsx(ScorecardCards, { cards: sc.cards }, i);
 			}
 			const carouselMatch = trimmed.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/);
 			if (carouselMatch) {
