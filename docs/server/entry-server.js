@@ -11559,7 +11559,8 @@ var h2Slugs$1 = new Set([
 	"fall-2026-hair-color-trends",
 	"gloss-or-full-color",
 	"bedtime-routine-ruining-hair",
-	"pop-star-hair-looks-stylists-recreate"
+	"pop-star-hair-looks-stylists-recreate",
+	"first-date-hair-what-it-says-about-you"
 ]);
 function getTocItems$1(article) {
 	if (!article.body) return copperTocItems$1;
@@ -11898,7 +11899,8 @@ var h2Slugs = new Set([
 	"fall-2026-hair-color-trends",
 	"gloss-or-full-color",
 	"bedtime-routine-ruining-hair",
-	"pop-star-hair-looks-stylists-recreate"
+	"pop-star-hair-looks-stylists-recreate",
+	"first-date-hair-what-it-says-about-you"
 ]);
 function slugify(text) {
 	return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");

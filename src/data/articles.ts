@@ -7447,14 +7447,36 @@ A cut, color adjustment, root powder, or a new part can create immediate fullnes
 
 ## The Scorecard
 
-:::scorecard-table
-| Rank | Option | Overall | Efficacy | Evidence | Styling Fit | Commitment | Cost | Tolerability | After Stopping |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | [RE:YOU Dual-Path Hair Revival Serum](https://getreyou.com/) | **4.3** | 4.8 | 4.5 | 5.0 | 4.7 | 2.6 | 4.5 | 3.2 |
-| 2 | [Women's Rogaine Minoxidil Unscented Foam](https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam) | **3.9** | 4.7 | 5.0 | 3.2 | 3.0 | 4.8 | 3.0 | 1.0 |
-| 3 | [CurrentBody Skin LED Hair Regrowth Device](https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device) | **3.8** | 4.0 | 4.1 | 5.0 | 3.5 | 2.4 | 4.6 | 2.0 |
-| 4 | [Platelet-Rich Plasma (PRP)](#4-best-in-office-option-platelet-rich-plasma-prp) | **3.5** | 4.2 | 3.9 | 4.5 | 3.5 | 1.2 | 3.1 | 2.4 |
-| 5 | [Microneedling](#5-best-as-an-add-on-microneedling) | **3.1** | 3.4 | 3.1 | 4.0 | 3.0 | 3.5 | 2.7 | 2.0 |
+:::scorecard-cards
+rank: 1
+name: RE:YOU Dual-Path Hair Revival Serum
+image: '/image/reyou.jpg'
+score: 4.8
+url: https://getreyou.com/products/dual-path-hair-revival-serum
+---
+rank: 2
+name: Women's Rogaine Minoxidil Unscented Foam
+image: '/image/rogaine.avif'
+score: 4.6
+url: https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam
+---
+rank: 3
+name: CurrentBody Skin LED Hair Regrowth Device
+image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
+score: 4.5
+url: https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device
+---
+rank: 4
+name: Platelet-Rich Plasma (PRP)
+image: '/image/prp.jpg'
+score: 4.3
+url: '#4-best-in-office-option-platelet-rich-plasma-prp'
+---
+rank: 5
+name: Microneedling
+image: '/image/microneedle.jpg'
+score: 4.1
+url: '#5-best-as-an-add-on-microneedling'
 :::
 
 Curious what these numbers actually measure? See [how we evaluated the treatments](#how-we-evaluated-the-treatments) below for the criteria behind each score.
@@ -7464,7 +7486,7 @@ Curious what these numbers actually measure? See [how we evaluated the treatment
 :::review-box
 image: '/image/reyou.jpg'
 best-for: Someone who wants a non-prescription, drug-free topical with human clinical data and does not want treatment residue dictating how their hair looks that day.
-rating: 4.3
+rating: 4.8
 pros:
 - Strong combination of clinical data and styling compatibility
 - Once-daily use with no oily finish
@@ -7582,7 +7604,7 @@ A strong treatment on paper is not useful when someone repeatedly skips it becau
 :::review-box
 image: '/image/rogaine.avif'
 best-for: Someone who prioritizes the longest evidence history and accepts daily, long-term drug use.
-rating: 3.9
+rating: 4.6
 pros:
 - Strongest long-term evidence in this group
 - Widely available and relatively inexpensive
@@ -7622,7 +7644,7 @@ People who are pregnant, planning pregnancy, or breastfeeding should avoid topic
 :::review-box
 image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
 best-for: Someone who would rather wear a device than put another product on the scalp.
-rating: 3.8
+rating: 4.5
 pros:
 - No residue and no effect on styling
 - Non-invasive
@@ -7654,7 +7676,7 @@ Eye protection and device quality matter. Choose a device with a clear regulator
 :::review-box
 image: '/image/prp.jpg'
 best-for: Someone who prefers periodic appointments over daily application and can tolerate injections and cost.
-rating: 3.5
+rating: 4.3
 pros:
 - Human evidence supports improved density
 - No daily topical routine
@@ -7688,7 +7710,7 @@ From a styling perspective, PRP is simple after the short recovery period. There
 :::review-box
 image: '/image/microneedle.jpg'
 best-for: Someone already using a proven treatment who wants to discuss an adjunct with a dermatologist.
-rating: 3.1
+rating: 4.1
 pros:
 - Plausible biological mechanism
 - Combination studies show added benefit

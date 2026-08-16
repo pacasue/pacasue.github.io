@@ -6142,7 +6142,7 @@ tag: Follicle Signaling
 Designed to support dermal papilla cells, the cells that help direct follicle size, cycling, and growth activity.
 ---
 title: NOVOGRO™ 273
-tag: Scalp Environment
+tag: Follicle Environment
 Designed around the environment surrounding the follicle and the signaling involved in oxygen, nutrients, and regenerative support.
 :::
 

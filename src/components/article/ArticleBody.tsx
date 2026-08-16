@@ -605,6 +605,57 @@ function ReviewBox({
   )
 }
 
+function ScorecardCards({ cards }: { cards: { rank: number; name: string; image?: string; score: number; url: string }[] }) {
+  return (
+    // Mobile: a compact horizontally-scrolling row (small cards, swipe/scroll to see all 5).
+    // sm and up: reverts to a regular wrapping grid, no scrolling needed.
+    <div
+      className="my-8 flex overflow-x-auto snap-x snap-mandatory gap-2.5 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-5"
+      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+    >
+      {cards.map((c) => {
+        const isExternal = /^https?:\/\//.test(c.url)
+        return (
+          <a
+            key={c.rank}
+            href={c.url}
+            {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className="group flex flex-col flex-shrink-0 w-24 sm:w-auto snap-start border border-white/10 bg-charcoal-900 overflow-hidden hover:border-gold-500/50 transition-colors"
+          >
+            <div className="relative overflow-hidden bg-charcoal-950" style={{ aspectRatio: '1/1' }}>
+              {c.image ? (
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <ImageIcon size={20} className="text-charcoal-700 sm:hidden" />
+                  <ImageIcon size={28} className="text-charcoal-700 hidden sm:block" />
+                </div>
+              )}
+              <span className="absolute top-1 left-1 sm:top-2 sm:left-2 flex items-center justify-center w-4 h-4 sm:w-7 sm:h-7 rounded-full bg-black/80 border border-gold-500/50 text-gold-500 text-[9px] sm:text-xs font-bold">
+                {c.rank}
+              </span>
+            </div>
+            <div className="p-1.5 sm:p-4 flex flex-col items-center text-center gap-1 sm:gap-2.5 flex-1">
+              <p className="text-[10px] sm:text-sm font-semibold text-white leading-snug line-clamp-2 min-h-[2.2em] sm:min-h-[2.5em]">{c.name}</p>
+              <div className="mt-auto inline-flex items-center gap-1 sm:gap-1.5 bg-gold-500/10 border border-gold-500/30 rounded-full px-1.5 py-0.5 sm:px-3 sm:py-1.5">
+                <Star size={10} className="text-gold-500 fill-gold-500 flex-shrink-0 sm:hidden" />
+                <Star size={13} className="text-gold-500 fill-gold-500 flex-shrink-0 hidden sm:block" />
+                <span className="text-[11px] sm:text-sm font-bold text-white">{c.score.toFixed(1)}</span>
+                <span className="text-[9px] sm:text-[10px] text-charcoal-500">/5</span>
+              </div>
+            </div>
+          </a>
+        )
+      })}
+    </div>
+  )
+}
+
 function CaseStudySeparator() {
   return (
     <div className="my-10 flex items-center gap-4">
@@ -1010,6 +1061,39 @@ function MarkdownBody({ body }: { body: string }) {
       return `SCORECARD_TABLE_PLACEHOLDER_${id}`
     }
   )
+  // A mobile-friendly grid of ranked product cards (image + one overall score each),
+  // used as a lighter-weight alternative to :::scorecard-table for a quick visual compare.
+  const scorecardCardsPlaceholders: { cards: { rank: number; name: string; image?: string; score: number; url: string }[] }[] = []
+  processedBody = processedBody.replace(
+    /:::scorecard-cards\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const blocks = inner.trim().split(/\n---\n/)
+      const cards = blocks.map((block) => {
+        const lines = block.trim().split('\n')
+        let rank = 0
+        let name = ''
+        let image: string | undefined
+        let score = 0
+        let url = ''
+        for (const line of lines) {
+          const rankM = line.match(/^rank:\s*(\d+)$/)
+          const nameM = line.match(/^name:\s*(.+)$/)
+          const imageM = line.match(/^image:\s*(.+)$/)
+          const scoreM = line.match(/^score:\s*([\d.]+)$/)
+          const urlM = line.match(/^url:\s*(.+)$/)
+          if (rankM) { rank = parseInt(rankM[1]); continue }
+          if (nameM) { name = nameM[1].trim(); continue }
+          if (imageM) { image = imageM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+          if (scoreM) { score = parseFloat(scoreM[1]); continue }
+          if (urlM) { url = urlM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        }
+        return { rank, name, image, score, url }
+      })
+      const id = scorecardCardsPlaceholders.length
+      scorecardCardsPlaceholders.push({ cards })
+      return `SCORECARD_CARDS_PLACEHOLDER_${id}`
+    }
+  )
   const referencePlaceholders: { items: string[] }[] = []
   processedBody = processedBody.replace(
     /:::references\n([\s\S]*?):::/g,
@@ -1095,6 +1179,13 @@ function MarkdownBody({ body }: { body: string }) {
         if (scorecardTableMatch) {
           const st = scorecardTablePlaceholders[parseInt(scorecardTableMatch[1])]
           return <DataTable key={i} headerRow={st.headerRow} bodyRows={st.bodyRows} styled />
+        }
+
+        // Scorecard cards placeholder (ranked product cards with image + one score each)
+        const scorecardCardsMatch = trimmed.match(/^SCORECARD_CARDS_PLACEHOLDER_(\d+)$/)
+        if (scorecardCardsMatch) {
+          const sc = scorecardCardsPlaceholders[parseInt(scorecardCardsMatch[1])]
+          return <ScorecardCards key={i} cards={sc.cards} />
         }
 
         // Quote carousel placeholder
