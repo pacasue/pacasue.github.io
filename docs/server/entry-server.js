@@ -2,7 +2,7 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 import { Link, Route, Routes, useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, ArrowUp, Award, Bookmark, Calendar, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, ExternalLink, Heart, ImageIcon, Link2, Menu, Play, Quote, Send, Share2, Sparkles, Users, X } from "lucide-react";
+import { ArrowRight, ArrowUp, Award, Bookmark, Calendar, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, ExternalLink, Heart, ImageIcon, Link2, Menu, Play, Quote, Send, Share2, Sparkles, Star, Users, X } from "lucide-react";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 //#region src/components/Navbar.tsx
 var navCategories$1 = [
@@ -497,6 +497,12 @@ var authors = {
 		title: "Texture Specialist & Salon Educator",
 		bio: "Talia Brenner is a texture specialist and salon educator with thirteen years behind the chair. She spends her days building the soft, lived-in waves clients ask for, and writes about texture and trends for HairProVoices, including the modern services hiding behind old, scary names.",
 		image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80&auto=format&fit=crop&facepad=3"
+	},
+	"Devika Rao": {
+		name: "Devika Rao",
+		title: "Treatment Review Editor",
+		bio: "Devika leads HairProVoices' product and treatment review process, working with a rotating panel of stylists, colorists, and trichology consultants to test and score hair-loss and thinning treatments on real clients. A former clinical research coordinator turned salon educator, she specializes in translating trial data and brand claims into practical, chairside-ready guidance.",
+		image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80&auto=format&fit=crop&facepad=3"
 	}
 };
 var legacyArticles = [
@@ -7069,6 +7075,862 @@ If you're looking for a dramatic transformation, root coverage, or a completely 
 Sometimes the healthiest hair isn't the result of coloring more, it's the result of coloring smarter.`,
 		metaTitle: "Gloss or Full Color? How to Know Which Appointment You Need",
 		metaDescription: "A gloss refines your color; full color changes it. A color educator breaks down exactly when to book each, and why stylists recommend glosses between major services."
+	},
+	{
+		id: 54,
+		slug: "bedtime-routine-ruining-hair",
+		tag: "At-Home Tips",
+		title: "Is Your Bedtime Routine Ruining Your Hair? The Sleep Habits Stylists Want You to Know",
+		excerpt: "You spend money on shampoo, masks, oils, and salon treatments. But what happens to your hair during the eight hours you're asleep? A few small changes before bed can make your hair much happier by morning.",
+		author: "Simone Ellery",
+		date: "Aug 7, 2026",
+		readTime: "7 min",
+		image: "/image/bedtime-hair-routine-cover.png",
+		category: "At-Home Tips",
+		section: "Hair Care",
+		body: `You spend money on shampoo, masks, oils, and salon treatments. But what happens to your hair during the eight hours you're asleep?
+
+From sleeping on cotton pillowcases to going to bed with wet hair, some of your nighttime habits could be contributing to the frizz, tangles, and breakage you're trying to fix during the day.
+
+The good news? You don't need to completely overhaul your routine. A few small changes before bed can make your hair much happier by morning.
+
+## Your Pillowcase Might Matter More Than You Think
+
+If you wake up with a tangled mess at the back of your head, your pillowcase could be part of the problem.
+
+Traditional cotton pillowcases create more friction against the hair as you move around during the night. That repeated rubbing can contribute to tangling, frizz, and mechanical wear, especially if your hair is already dry, bleached, curly, or prone to breakage.
+
+This is where silk pillowcases come in.
+
+Silk has a naturally smooth surface, allowing your hair to glide across the pillow instead of catching against it. The result isn't magically healthier hair overnight, but reducing unnecessary friction can be a useful part of a hair-protection routine.
+
+![Think of it as less tugging while you sleep.|full](/image/bedtime-hair-pillowcase-friction.png)
+
+## Silk vs. Satin: Do You Really Need Silk?
+
+Not necessarily.
+
+Silk and satin are often talked about interchangeably, but they're not the same thing. Silk is a natural fiber, while satin describes a type of weave that can be made from different materials.
+
+The important factor for your hair is the smooth surface.
+
+A satin pillowcase can also reduce friction and may give you many of the same practical benefits as silk. If genuine silk is outside your budget, a smooth satin option can still be worth trying.
+
+For anyone with fine, fragile, curly, textured, or chemically treated hair, reducing friction overnight may be especially helpful.
+
+## What About Sleeping in a Bonnet?
+
+If you really want to level up your nighttime hair routine, a silk or satin bonnet can be another option.
+
+Unlike a pillowcase, which only changes the surface your hair rests against, a bonnet keeps your hair contained while you sleep. This can help reduce friction, tangling, and the amount of movement your hair experiences throughout the night.
+
+Bonnets can be particularly useful for curly, coily, textured, or longer hair that tends to tangle or lose its shape overnight. Keeping your curls tucked away can also help preserve your hairstyle so you don't have to completely restyle it in the morning.
+
+The material matters, too. Look for a bonnet with a smooth silk or satin interior rather than rough or absorbent fabrics that can create more friction or pull moisture from the hair.
+
+And don't make it too tight. A bonnet should feel secure without putting pressure around your hairline or creating tension at the roots.
+
+The goal isn't to trap your hair, it's to protect it.
+
+If you don't like wearing a bonnet, a silk or satin pillowcase can still give your hair a smoother surface to move against. You can even use both for an extra layer of protection.
+
+:::image-row
+![A smooth satin bonnet keeps hair contained overnight](/image/bedtime-hair-silk-bonnet.png)
+![Secure without pressure around the hairline or tension at the roots](/image/bedtime-hair-satin-bonnet-sleeping.webp)
+:::
+
+## The Biggest Bedtime Mistake? Going to Sleep With Wet Hair
+
+We've all done it.
+
+You take a late shower, tell yourself your hair will dry while you sleep, and wake up with a strange combination of flat roots, frizz, and hair pointing in approximately twelve different directions.
+
+But the styling struggle isn't the only issue.
+
+Hair is more fragile when it's wet, making it more susceptible to stretching and breaking. Tossing and turning against a pillow while your hair is still damp can add even more friction.
+
+If you regularly shower at night, try giving your hair some time to dry before getting into bed. If you need to speed things up, a blow dryer on a low or cool setting is preferable to blasting your hair with high heat.
+
+And if your hair is still damp? Avoid pulling it into a tight ponytail or bun. Wet hair is already vulnerable, and adding tension can make matters worse.
+
+## Your Hairstyle Matters, Too
+
+Sleeping with your hair completely loose isn't always the best option, particularly if you have long or highly textured hair that tangles easily.
+
+But there's a difference between protecting your hair and putting it under tension.
+
+A loose braid, low ponytail, or loose bun can help keep hair contained without creating excessive pulling at the roots. Choose a soft silk or satin scrunchie rather than a traditional elastic, which can snag or create a tight pressure point.
+
+:::image-row
+![A loose braid keeps length contained without pulling at the roots](/image/bedtime-hair-loose-braid.png)
+![A low, loose ponytail tied well below the crown](/image/bedtime-hair-low-loose-pony.webp)
+![A soft, low bun sits away from the hairline](/image/bedtime-hair-low-bun.png)
+:::
+
+The goal is simple: secure your hair without squeezing it.
+
+![Silk and satin scrunchies hold hair without the snag or pressure point of a traditional elastic.|full](/image/bedtime-hair-silk-scrunchies.png)
+
+## Don't Go to Bed With a Head Full of Product
+
+Your nighttime routine doesn't have to involve ten different products.
+
+If your hair needs extra moisture, applying a small amount of leave-in conditioner or a lightweight hair oil to the lengths and ends can help keep it feeling softer. But more isn't necessarily better.
+
+Heavy layers of styling products can transfer onto your pillowcase and leave your hair feeling weighed down the next morning.
+
+Instead, focus on where your hair actually needs help.
+
+- **Dry ends?** Try a little leave-in conditioner or oil.
+- **Frizz-prone lengths?** Smooth a small amount of serum through the ends.
+- **Fine hair?** Keep heavier products away from the roots.
+
+Your pillowcase should complement your routine, not become part of it.
+
+## How Often Should You Wash Your Pillowcase?
+
+Your pillowcase collects more than just your hair.
+
+Oil, sweat, skincare products, hair products, and everyday buildup can all accumulate on the fabric over time. If you're using a silk pillowcase, that doesn't mean you can forget about washing it.
+
+Follow the care instructions for your particular fabric, and keep it clean enough that you're not simply transferring yesterday's products back onto freshly washed hair.
+
+This is especially important if you use leave-in products or oils before bed.
+
+## The Ideal Nighttime Hair Routine Is Actually Pretty Simple
+
+You don't need a complicated ritual to protect your hair while you sleep.
+
+Try this:
+
+1. **Let your hair dry.** Whenever possible, avoid going to bed with soaking-wet hair.
+2. **Detangle gently.** Use a wide-tooth comb or appropriate brush and work through knots without aggressively pulling.
+3. **Add moisture where needed.** Apply a small amount of leave-in conditioner, serum, or oil to dry lengths and ends.
+4. **Keep your hairstyle loose.** A loose braid or ponytail can prevent tangling without putting unnecessary tension on the hair.
+5. **Switch to silk or satin.** A smoother pillowcase can reduce the friction your hair experiences while you toss and turn.
+6. **Keep your pillowcase clean.** Wash it regularly according to the manufacturer's instructions.
+
+## So, Is a Silk Pillowcase Actually Worth It?
+
+For some hair types, absolutely.
+
+A silk pillowcase isn't going to repair split ends or reverse chemical damage. It also won't replace a good haircut, conditioner, heat protectant, or thoughtful styling routine.
+
+What it can do is remove one small source of nightly friction.
+
+And when you're spending roughly a third of your day asleep, those small things add up.
+
+If your morning routine regularly starts with detangling, smoothing frizz, and trying to revive flattened hair, switching your pillowcase may be one of the easiest changes to test.
+
+Because healthy hair care doesn't stop when you turn off the lights.`,
+		metaTitle: "Is Your Bedtime Routine Ruining Your Hair? Sleep Habits to Know",
+		metaDescription: "Cotton pillowcases, wet hair, and tight ponytails can undo your hair care routine overnight. A salon educator breaks down the sleep habits worth changing, and the ones that are hype."
+	},
+	{
+		id: 55,
+		slug: "pop-star-hair-looks-stylists-recreate",
+		tag: "Cut & Style",
+		title: "The Pop Star Hair Looks Everyone Wants — And How Stylists Actually Recreate Them",
+		excerpt: "You know a pop star's hair has become iconic when you can recognize the person from the silhouette alone. Here is what is actually happening underneath five of the most requested looks right now.",
+		author: "Nora Bell",
+		date: "Aug 10, 2026",
+		readTime: "8 min",
+		image: "/image/popstar-hair-looks-cover.png",
+		category: "Cut & Style",
+		section: "Trends",
+		body: `You know a pop star's hair has officially become iconic when you can recognize the person from the silhouette alone.
+
+The curtain bangs. The giant blowout. The slick ponytail. The perfectly imperfect waves.
+
+For today's biggest pop stars, hair isn't just an accessory to the outfit. It's part of the brand. And while the finished looks can seem impossible to recreate at home, most of them come down to a surprisingly specific combination of cut, shape, texture, and finishing technique.
+
+I broke down some of the most recognizable pop-star hairstyles right now, and more importantly, what I'd actually tell a client who walked into my chair asking for them.
+
+## 1. Sabrina Carpenter's Bombshell Blowout
+
+:::image-row
+![Long layers with rounded curtain bangs](/image/popstar-blowout-1.jpg)
+![The softer, airy shape the curls relax into](/image/popstar-waves-1.jpg)
+![Brushed-out curls with root lift](/image/popstar-blowout-2.jpg)
+:::
+
+**The look:** Voluminous · bouncy · soft curtain bangs
+
+Sabrina Carpenter has made big, fluffy hair practically synonymous with her pop-star aesthetic. Her signature look combines long, layered hair with rounded curtain bangs, plenty of root lift, and those soft, brushed-out curls that look glamorous without feeling overly formal. Her stylists have described the look as a bombshell or Hollywood-style blowout, with volume designed to hold up even under stage lights and movement.
+
+The secret isn't simply "curl your hair." It's the shape underneath the curl.
+
+### How to Get It
+
+Ask your stylist for long, face-framing layers and soft curtain bangs that hit around the cheekbones. Avoid anything too blunt. The movement needs to flow gradually into the rest of the hair.
+
+At home, start with heat protectant and a volumizing mousse or blow-dry product. Blow-dry the roots upward with a round brush, then work through the lengths, directing the hair away from the face.
+
+Once dry, set large sections with a large-barrel curling iron or hot rollers. Let the curls cool completely before brushing them out.
+
+And don't be afraid when it initially looks too big.
+
+That's the point.
+
+The curls will relax into the softer, airy shape that makes the style recognizable.
+
+**Stylist's tip:** The curtain bangs are doing a lot of the face-framing work here. If you're nervous about committing to bangs, ask for longer, cheekbone-grazing pieces first.
+
+## 2. Zara Larsson's Tousled Beach Waves
+
+:::image-row
+![Loose waves with airy, irregular bends](/image/popstar-blowout-3.jpg)
+![Ends left straighter than the mid-shaft](/image/popstar-waves-3.jpg)
+![Undone texture through the mid-lengths](/image/popstar-waves-2.jpg)
+:::
+
+**The look:** Soft · undone · Scandinavian cool
+
+Zara Larsson's hair often lands in that sweet spot between polished and effortless: loose waves, airy texture, and enough movement to keep the style from looking overly done.
+
+It's a particularly wearable look, and one that's having another major moment in 2026. Larsson has been among the celebrities bringing soft, tousled beach waves back into the spotlight.
+
+The important distinction: this isn't a head full of perfect curls.
+
+The bends should be irregular.
+
+### How to Get It
+
+Start with mostly dry hair and apply a lightweight texturizing spray.
+
+Divide the hair into sections and use a large curling iron, alternating the direction of each wave. Leave the last inch or two of the ends out of the iron.
+
+Then, and this is where the look changes, don't immediately brush everything smooth.
+
+Let the hair cool first.
+
+Run your fingers through the waves, shake out the roots, and finish with a very light mist of texture spray.
+
+If your hair naturally has some wave, even better. Enhance what you already have instead of trying to completely reshape it.
+
+**Stylist's tip:** Keep the ends straighter than the mid-lengths. That's what separates beach waves from traditional curls.
+
+## 3. Ariana Grande's High Pony Iterations
+
+:::image-row
+![The pony set high on the crown](/image/popstar-retro-3.jpg)
+![Smooth, controlled lengths with a wrapped elastic](/image/popstar-pony-2.jpg)
+![The lifted silhouette from the front](/image/popstar-pony-1.jpg)
+:::
+
+**The look:** Polished · lifted · ultra-sleek
+
+Ariana Grande's high ponytail is one of those hairstyles that became inseparable from the person wearing it. While there are many different styles and iterations of this hairstyle, we'll focus on the most iconic one. The pony sits high on the crown, the lengths are smooth and controlled, and the overall silhouette creates an instant lifted effect.
+
+It's simple in theory.
+
+It's much harder to make look that clean.
+
+### How to Get It
+
+The foundation is smoothness.
+
+Start by blow-drying the hair straight, paying particular attention to the roots. Use a flat iron only where necessary rather than repeatedly running it through every section.
+
+Brush the hair upward toward the crown and secure it tightly.
+
+Then take a small section of hair from underneath the ponytail and wrap it around the elastic.
+
+That tiny detail makes the difference between "I put my hair up" and "this was professionally styled."
+
+For extra length or fullness, a ponytail extension can create the exaggerated silhouette associated with Grande's stage looks.
+
+**Stylist's tip:** Don't pull every strand perfectly flat if you have a rounder face. Leaving a little softness around the temples can make the style feel more balanced.
+
+## 4. Taylor Swift's Soft, Retro Waves
+
+:::image-row
+![Retro-inspired shape with a rounded silhouette](/image/popstar-theatrical-3.jpg)
+![A defined part with vintage-inspired shaping](/image/popstar-retro-2.jpg)
+![Soft waves brushed loosely out for a casual look](/image/popstar-pony-3.jpg)
+:::
+
+**The look:** Romantic · polished · vintage-inspired
+
+Taylor Swift has cycled through plenty of hair eras, but soft waves and retro-inspired styling remain a reliable part of her beauty vocabulary.
+
+The difference between this look and a modern beach wave is structure.
+
+These waves have a direction.
+
+### How to Get It
+
+Create a defined side or center part, depending on the version you're after.
+
+Curl medium-sized sections in the same general direction, rather than alternating every curl.
+
+Let everything cool completely.
+
+Then brush through gently with a soft-bristle brush until the curls merge into one continuous wave.
+
+Finish with hairspray rather than a heavy oil or serum.
+
+You want movement, but you don't want the hair to lose its shape.
+
+**Stylist's tip:** For a more modern version, loosen the wave around the ends and leave the finish slightly softer.
+
+## 5. Chappell Roan's Big, Theatrical Hair
+
+:::image-row
+![Towering curls and teased volume on stage](/image/popstar-theatrical-1.jpg)
+![Curls loosened by hand with structure intact](/image/popstar-theatrical-2.jpg)
+![Crimped curls to stand out on stage](/image/popstar-retro-1.jpg)
+:::
+
+**The look:** Retro · voluminous · unapologetically dramatic
+
+Chappell Roan doesn't really do subtle, and her hair is no exception.
+
+From towering curls and teased volume to retro-inspired shapes, her hairstyles are an important part of the larger character she creates. Her hair often feels theatrical, feminine, and slightly campy, pulling inspiration from different decades while still looking completely her own.
+
+And that's exactly what makes her hair so fun to recreate.
+
+The goal isn't perfectly polished hair. It's big hair with personality.
+
+### How to Get It
+
+Start with volume before you even think about styling the ends.
+
+Apply a volumizing mousse to damp roots and blow-dry the hair using a round brush, lifting the hair away from the scalp as you go. Once dry, set the hair with large rollers or a large-barrel curling iron.
+
+Let everything cool completely before brushing through it.
+
+For extra height, gently tease the roots at the crown using a fine-tooth comb. Don't aggressively backcomb the entire head. Concentrate the teasing where you want the most lift.
+
+Once you've created the shape, use your fingers to loosen the curls while keeping their overall structure intact. Finish with hairspray to hold the volume without making the hair look stiff.
+
+And if you're going for a truly Chappell-inspired look, don't be afraid to make it bigger than feels necessary.
+
+That's part of the aesthetic.
+
+**Stylist's tip:** The best way to recreate Chappell's hair is to focus on the silhouette rather than copying one exact style. Ask your stylist for volume, rounded shape, and retro-inspired movement, then adjust the size and placement to work with your face shape and hair density.
+
+## What All These Pop-Star Looks Have in Common
+
+At first glance, these hairstyles couldn't be more different. But there's one thing they all have in common: the hairstyle has a clear identity. That's the part worth copying, not necessarily the exact haircut.
+
+Your hair doesn't need to look exactly like Sabrina Carpenter's to benefit from her approach to volume. You don't need Zara Larsson's exact cut to get the effortless texture. And you certainly don't need a pop star's budget to make your hair look intentional.
+
+The trick is identifying what you actually like about the look. Bring your stylist that answer, along with the photo. That's a much better starting point than simply saying, "I want her hair."
+
+## The Bottom Line
+
+Celebrity hair looks intimidating because we see the finished version: perfect lighting, professional styling, extensions when needed, and a team making sure every strand behaves.
+
+But the underlying techniques are surprisingly accessible.
+
+The best celebrity-inspired hairstyle isn't necessarily the one that copies a pop star perfectly. It's the one that takes the element you love and adapts it to your own hair.
+
+That's how you get the inspiration without looking like you're wearing a costume.`,
+		metaTitle: "The Pop Star Hair Looks Everyone Wants, And How Stylists Recreate Them",
+		metaDescription: "From Sabrina Carpenter's bombshell blowout to Ariana Grande's high pony and Chappell Roan's theatrical volume, a stylist breaks down five of the most requested pop-star hair looks and how to actually get them."
+	},
+	{
+		id: 56,
+		slug: "best-thinning-hair-treatments-reviewed-by-pros",
+		tag: "Hair Thinning",
+		title: `Yes, These 5 Thinning-Hair Treatments Can Work — Reviewed by Hair Professionals`,
+		excerpt: `A panel of 20 working hair professionals scored five thinning-hair treatments — plus one bonus scalp fix — on efficacy, evidence, styling fit, cost, tolerability, and what happens after you stop. Here is where each one actually ranked, and why.`,
+		author: "Devika Rao",
+		date: "Aug 12, 2026",
+		readTime: "14 min",
+		image: "/image/before-and-after.png",
+		category: "Hair Thinning",
+		section: "Hair Care",
+		body: `Hair thinning often comes up in the salon chair before it comes up in a medical appointment. A client points to a wider part, a lighter ponytail, or more hair in the brush and asks a practical question: What can help without making the hair harder to live with?
+
+A cut, color adjustment, root powder, or a new part can create immediate fullness. Those are styling tools, not treatments for the follicle. For this guide, our panel focused on options with human evidence, a plausible mechanism, or a useful role in supporting the scalp.
+
+## The Scorecard
+
+:::scorecard-cards
+rank: 1
+name: RE:YOU Dual-Path Hair Revival Serum
+image: '/image/reyou.jpg'
+score: 4.8
+url: https://getreyou.com/products/dual-path-hair-revival-serum
+---
+rank: 2
+name: Women's Rogaine Minoxidil Unscented Foam
+image: '/image/rogaine.avif'
+score: 4.6
+url: https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam
+---
+rank: 3
+name: CurrentBody Skin LED Hair Regrowth Device
+image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
+score: 4.5
+url: https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device
+---
+rank: 4
+name: Platelet-Rich Plasma (PRP)
+image: '/image/prp.jpg'
+score: 4.3
+url: '#4-best-in-office-option-platelet-rich-plasma-prp'
+---
+rank: 5
+name: Microneedling
+image: '/image/microneedle.jpg'
+score: 4.1
+url: '#5-best-as-an-add-on-microneedling'
+:::
+
+Curious what these numbers actually measure? See [how we evaluated the treatments](#how-we-evaluated-the-treatments) below for the criteria behind each score.
+
+## 1. Best Overall: RE:YOU Dual-Path Hair Revival Serum
+
+:::review-box
+image: '/image/reyou.jpg'
+best-for: Someone who wants a non-prescription, drug-free topical with human clinical data and does not want treatment residue dictating how their hair looks that day.
+rating: 4.8
+pros:
+- Strong combination of clinical data and styling compatibility
+- Once-daily use with no oily finish
+- Proprietary molecules developed around the follicle and its surrounding environment
+- Direct 90-day comparison with minoxidil
+- No reported initial shedding phase in the 90-day data
+- Works with varied textures and color-treated routines
+- Drug-free and hormone-free
+- Clear application instructions and a realistic 30-second massage step
+cons:
+- The price makes consistency harder for budget-conscious users
+- The technology is new, so independent and longer-term replication is still limited
+- We would like to see the complete six-month results once available
+cta-label: Check Price
+cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
+:::
+
+
+As a group of hair professionals, we expected the science to be the main reason RE:YOU ranked first. Once we considered how it would fit into the routines we see behind the chair, the texture mattered almost as much.
+
+That may sound superficial in a hair-thinning review, but every pro on our panel recognized the same practical problem: a treatment that makes the roots look oily, stiff, or wet creates a daily conflict. A client may care deeply about future density and still skip tonight's application because they have a blowout, curls they do not want to disturb, or a meeting the next morning. The routine has to survive real life.
+
+RE:YOU feels closer to a lightweight scalp-care serum than a traditional medicated solution. The directions call for one to two full droppers once daily on a clean, dry scalp, followed by about 30 seconds of massage. The formula is described as lightweight, non-sticky, and compatible with regular styling products.
+
+### How Our Hair Pros Would Use It
+
+Our pros recommend dividing the scalp into several narrow partings instead of emptying a full dropper into one place. Apply most of the product where thinning is visible, usually the part line, crown, temples, or hairline.
+
+On fine hair, we would use smaller drops across more sections to reduce temporary wetness at the root. With dense curls, coils, braids, or protective styles, our priority would be getting the dropper tip close to the exposed scalp rather than coating the hair. The curved dropper is designed for exactly this kind of targeted application, making it easier to navigate partings and reach the scalp directly.
+
+"Clean scalp" does not have to mean freshly shampooed every day. On a non-wash day, the scalp should still be accessible and reasonably free of heavy oil, wax, or several layers of dry shampoo. The serum needs contact with the scalp. It does not need perfectly clean lengths.
+
+We recommend letting the serum absorb before adding root spray, heat protectant, mousse, gel, or other styling products. None of our pros would mix it into a styling product in the palm. RE:YOU belongs on the scalp, while most styling products belong on the hair fiber.
+
+The formula has a light fragrance. Alcohol Denat. also appears high in the ingredient list. Neither point automatically makes the formula harsh, but both are worth knowing if the scalp is reactive.
+
+The brand reports non-sensitizing results, testing across more than 24 human cell assays, and successful HRIPT skin compatibility testing. Even with reassuring testing, someone with eczema, psoriasis, active dermatitis, open skin, or a history of fragrance reactions should patch test and stop if persistent irritation develops.
+
+### Why the Science Feels More Substantial Than a Typical Cosmetic Serum
+
+Most cosmetic hair serums are built from familiar botanicals, peptides, or conditioning ingredients, then positioned around a broad scalp-health story.
+
+RE:YOU contains botanicals too, but the differentiating technology is ==NOVOGRO™==, a proprietary group of small molecules developed specifically around hair-follicle biology. The current serum uses three NOVOGRO™ molecules.
+
+:::card-grid
+title: NOVOGRO™ 623 + 624
+tag: Follicle Signaling
+Designed to support dermal papilla cells, the cells that help direct follicle size, cycling, and growth activity.
+---
+title: NOVOGRO™ 273
+tag: Scalp Environment
+Designed around the environment surrounding the follicle and the signaling involved in oxygen, nutrients, and regenerative support.
+:::
+
+That distinction is important. RE:YOU is not claiming that one general-purpose ingredient solves every cause of thinning. The formula was developed around two connected biological areas: activity inside the follicle and the environment needed to support it.
+
+The technical manuscript describes AI-enabled screening across millions of compounds, followed by laboratory testing in primary human cells and a three-dimensional follicle organoid model. The molecular paper is company-authored and should be read as early mechanistic evidence, not independent long-term proof. Still, publishing the methods, assays, limitations, and competing interests is more reassuring than leaving the technology as a marketing name with no visible work behind it.
+
+### The Clinical Data Is the Main Reason It Made the List
+
+RE:YOU reports 90-day interim results from a randomized, double-blinded clinical study involving 190 women with visible thinning.
+
+Participants used the product daily. The study compared RE:YOU directly with a minoxidil control rather than only with placebo. Evaluation included machine imaging, blinded expert grading, standardized comb testing, and participant-reported outcomes.
+
+At 90 days, the brand reports:
+
+- ==58%== decrease in hair loss
+- ==19%== increase in hair density
+- ==1.7×== greater improvement in the overall appearance of thinning than minoxidil
+- ==90%== of participants saw thicker hair
+
+These numbers do not all measure the same thing. Hair density was assessed objectively. Visible improvement involved blinded professional grading. Hair loss was evaluated through standardized comb testing. The 90% figure reflects participant experience.
+
+As reviewers, we think keeping those methods separate makes the data more believable, not less. A percentage based on machine imaging should not be presented as if it came from the same measurement as a participant survey.
+
+### Safety, Pregnancy, and Breastfeeding
+
+**Safety note:** RE:YOU is drug-free and hormone-free.
+
+The brand states that it was formulated without ingredients known to be unsafe during pregnancy or breastfeeding. It still recommends that anyone who is pregnant or breastfeeding check with their OB/GYN before beginning a new product.
+
+### What Happens If You Stop?
+
+This is where RE:YOU has a more favorable story than minoxidil, but also less mature evidence.
+
+> We reached out to RE:YOU customer support about long-term use. The team told us that after someone reaches their desired result—usually after 6 to 12 months—they may reduce use to once weekly or every few days. Customer support also said that reducing use is not associated with a withdrawal shedding phase.
+> — Guidance provided by RE:YOU customer support
+
+That guidance is encouraging, but a formal published discontinuation study is not currently presented on the product page.
+
+For that reason, we scored RE:YOU higher than minoxidil for "After Stopping," but not close to 5. The available information supports a lower-maintenance plan. It does not yet establish exactly what every user will retain after stopping completely.
+
+### The Biggest Drawback Is Price
+
+At the time of review, the 30-day subscription price was listed at $141, with a higher one-time purchase price. Since the clinical checkpoint is 90 days, this is a three-bottle decision, not an inexpensive one-month experiment.
+
+The 90-day money-back guarantee reduces some risk, but users must follow the guarantee requirements and track their progress.
+
+> Our pro tip: Take baseline photos before the first application. Use the same part, lighting, camera distance, and styling every time, then repeat the photos every 30 days.
+
+Looking in the mirror every morning is a poor way to judge slow change. It is much easier to assess a part line or crown when the documentation is consistent.
+
+### Why It Ranked First
+
+RE:YOU is not the cheapest option. It also does not have minoxidil's decades of independent evidence.
+
+We ranked it first because it addresses the problem our hair pros see derail many routines: the product is credible enough to take seriously and easy enough to keep using.
+
+A strong treatment on paper is not useful when someone repeatedly skips it because it ruins the way their hair looks. Across our panel, RE:YOU delivered the best balance of clinical validation, daily usability, scalp-focused technology, and low styling disruption.
+
+[See the RE:YOU clinical results →](https://getreyou.com/pages/science#clinical-trial)
+
+## 2. Best Established Drug Option: Women's Rogaine Minoxidil Unscented Foam
+
+:::review-box
+image: '/image/rogaine.avif'
+best-for: Someone who prioritizes the longest evidence history and accepts daily, long-term drug use.
+rating: 4.6
+pros:
+- Strongest long-term evidence in this group
+- Widely available and relatively inexpensive
+- FDA-approved formulations
+- Works for many people with pattern hair loss
+cons:
+- Initial shedding may occur
+- Daily use is generally indefinite
+- Irritation and unwanted facial hair are possible
+- Some formulas interfere with styling
+- Serious household risk for pets, especially cats
+- Not appropriate during pregnancy or breastfeeding
+cta-label: Check Price
+cta-url: https://www.rogaine.com/products/womens-rogaine-minoxidil-unscented-foam
+:::
+
+Women's Rogaine Minoxidil Unscented Foam is a topical minoxidil product, and it is not prescription-only — it is sold over the counter as an FDA-approved formulation for pattern hair loss.
+
+For female pattern hair loss specifically, the American Academy of Dermatology describes topical minoxidil as the most recommended treatment and notes that 2% and 5% products are approved.
+
+Its strength is evidence. Its weakness is everything the user has to accept around that evidence.
+
+Temporary increased shedding can occur during the first two to eight weeks. Scalp dryness, itching, scaling, redness, and unwanted hair on the forehead or face are also recognized issues. Results can take 6 to 12 months to judge, and continued daily use is required. When treatment stops, the benefit gradually disappears and shedding increases.
+
+Texture depends on the format. Foam is usually easier around styling. Liquid solutions can leave fine roots looking damp or greasy, especially when too much lands on the hair instead of the scalp.
+
+### The Pet-Safety Warning
+
+**Warning:** The pet warning is not a minor footnote. Topical minoxidil can cause severe and potentially fatal poisoning in pets, especially cats. Transfer can happen through spills, hands, treated skin, pillows, bedding, or other residue.
+
+> I once shared a home with a cat and chose not to use Women's Rogaine Minoxidil Unscented Foam because I did not trust myself to control every possible transfer point. That was a personal risk decision, but it is a reasonable one to discuss.
+
+People who are pregnant, planning pregnancy, or breastfeeding should avoid topical minoxidil and discuss alternatives with a clinician.
+
+## 3. Best Product-Free Routine: CurrentBody Skin LED Hair Regrowth Device
+
+:::review-box
+image: '/image/currentbody-led-red-light-hair-growth-helmet.webp'
+best-for: Someone who would rather wear a device than put another product on the scalp.
+rating: 4.5
+pros:
+- No residue and no effect on styling
+- Non-invasive
+- Evidence supports benefit for pattern hair loss
+- Mild short-term side effects for most users
+- Easy to combine with another treatment
+cons:
+- High upfront cost for reputable devices
+- Device protocols vary
+- Requires repeated sessions for months
+- Ongoing use is usually needed
+- Evidence is stronger for pattern hair loss than for other causes
+cta-label: Check Price
+cta-url: https://www.currentbody.us/products/currentbody-skin-led-hair-regrowth-device
+:::
+
+The CurrentBody Skin LED Hair Regrowth Device uses red light therapy, usually discussed as low-level light or laser therapy, which is appealing because it does not wet the roots, change the curl pattern, or compete with styling products. Put on the cap or helmet, complete the session, and remove it.
+
+Session length varies by device. Some are designed around approximately 10-minute use, while others require 20 to 30 minutes several times a week. That difference matters. A device can have good technology and still be a bad purchase if its schedule does not fit the user's life.
+
+[A 2025 systematic review](https://pubmed.ncbi.nlm.nih.gov/39404126/) included 38 studies and 3,098 patients across several alopecia types. For androgenetic alopecia, low-level light therapy significantly improved hair density compared with placebo, although study protocols and results varied.
+
+> One contributor noticed short, soft hairs around the front hairline after about a month of consistent use. That is a personal observation, not a promised timeline. Controlled trials generally assess results after several months, and continued use is usually needed to maintain them.
+
+Eye protection and device quality matter. Choose a device with a clear regulatory status and a specific hair protocol rather than a generic red lamp marketed for every possible concern.
+
+## 4. Best In-Office Option: Platelet-Rich Plasma (PRP)
+
+:::review-box
+image: '/image/prp.jpg'
+best-for: Someone who prefers periodic appointments over daily application and can tolerate injections and cost.
+rating: 4.3
+pros:
+- Human evidence supports improved density
+- No daily topical routine
+- Minimal interference with hair styling between visits
+- Uses the patient's own blood product
+- Can be combined with other approaches
+cons:
+- Expensive and usually not insured
+- Pain, tenderness, swelling, and pinpoint bleeding can occur
+- Protocol quality varies by clinic
+- Multiple initial sessions and maintenance are common
+- Not a one-time treatment
+:::
+
+PRP stands for platelet-rich plasma. A clinician draws blood, separates a platelet-rich portion in a centrifuge, and injects it into thinning areas of the scalp.
+
+It is not a hair transplant and does not place new follicles into the scalp.
+
+The procedure can hurt. Numbing helps, but multiple scalp injections are still multiple scalp injections.
+
+Most protocols use an initial series, often one appointment a month for three months, followed by maintenance every three to six months.
+
+The evidence is genuinely promising. [A 2024 systematic review and meta-analysis focused on female hair loss](https://pmc.ncbi.nlm.nih.gov/articles/PMC11342464/) included 21 studies and 628 participants and found improvements in hair density and thickness, with adverse effects generally mild and temporary.
+
+[Another 2024 meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11551241/) found an increase in density but also highlighted high heterogeneity, low-quality evidence, and publication bias. Both points belong in the same conversation. PRP appears useful, but clinics do not all prepare or inject it the same way.
+
+From a styling perspective, PRP is simple after the short recovery period. There is no daily residue. The tradeoff is price, discomfort, and the need to return for maintenance.
+
+## 5. Best as an Add-On: Microneedling
+
+:::review-box
+image: '/image/microneedle.jpg'
+best-for: Someone already using a proven treatment who wants to discuss an adjunct with a dermatologist.
+rating: 4.1
+pros:
+- Plausible biological mechanism
+- Combination studies show added benefit
+- No permanent residue after recovery
+- Can be relatively affordable
+cons:
+- Standalone evidence remains limited
+- No FDA-cleared microneedling device for hair loss
+- Infection, irritation, pigment change, and scarring are possible
+- At-home technique is inconsistent
+- It can increase topical penetration in ways that have not been fully studied
+:::
+
+Microneedling creates controlled micro-injuries with very small needles. The proposed benefit comes from the wound-healing response and, when paired with a topical, increased delivery through the scalp.
+
+The mechanism is plausible. The evidence is also easy to overstate.
+
+Most clinical studies do not test microneedling alone. They compare minoxidil plus microneedling with minoxidil alone.
+
+Those studies suggest that needling can add benefit, but they do not prove that an at-home roller by itself performs like minoxidil, PRP, or a clinically tested serum. [A systematic review of microneedling for hair loss](https://pmc.ncbi.nlm.nih.gov/articles/PMC8776974/) reached the same practical conclusion: monotherapy data is limited, while much of the research combines microneedling with minoxidil or PRP.
+
+Professional treatment and a cheap home roller are not equivalent. Needle depth, sterility, pressure, frequency, and scalp condition all matter.
+
+The FDA has not cleared any microneedling device for hair loss and has not cleared microneedling devices for use with another topical product.
+
+I would not use it over active dandruff, dermatitis, infection, open skin, or an inflamed scalp. More injury is not automatically more stimulation.
+
+## Bonus: Ketoconazole Shampoo for an Itchy, Flaky Scalp
+
+:::review-box
+image: '/image/Ketoconazole Shampoo.avif'
+best-for: Someone managing thinning alongside dandruff, oiliness, itching, or seborrheic dermatitis.
+pros:
+- Treats dandruff and seborrheic dermatitis
+- Easy to rotate into an existing wash routine
+- Low-cost compared with procedures
+- Most useful when scalp inflammation is part of the problem
+cons:
+- Not a primary standalone hair-growth treatment
+- Can dry the scalp or lengths
+- Hair-growth evidence is limited
+- Best used for a specific scalp indication, not as a universal deep-cleaning shampoo
+cta-label: Check Price
+cta-url: https://nizoral.com/
+:::
+
+Ketoconazole shampoo is useful, but it does not belong in the top five as a primary thinning-hair treatment.
+
+Its clearest job is treating dandruff and seborrheic dermatitis. Ketoconazole is antifungal, so it helps control the process behind flaking, scaling, and itching.
+
+The 1% version is available over the counter in the United States, while 2% formulations may require a prescription depending on the product.
+
+There is limited research suggesting a possible adjunct role in androgenetic alopecia, but the evidence is small and much less mature than the evidence for minoxidil.
+
+I would recommend it most confidently when someone has thinning plus dandruff, oiliness, itching, or seborrheic dermatitis. Clearing an inflamed, uncomfortable scalp can make an existing routine easier to tolerate, even when the shampoo is not the main growth treatment.
+
+It should not automatically replace regular shampoo at every wash.
+
+For OTC Nizoral, the current label guidance is about twice weekly for eight weeks, then as needed for dandruff control. Follow the label or a dermatologist's plan, especially with prescription-strength ketoconazole. Dryness, altered texture, itching, or irritation can occur.
+
+## Where We Would Start
+
+1. For the strongest established medication evidence, choose Women's Rogaine Minoxidil Unscented Foam and go in knowing that consistency, side effects, pet safety, and long-term use are part of the decision.
+2. For someone who wants a drug-free daily serum, cares about clinical data, and refuses to compromise the look of their hair while waiting for results, RE:YOU is the most balanced starting point in this review.
+3. The CurrentBody Skin LED Hair Regrowth Device is the cleanest fit for a product-free routine.
+4. PRP makes sense for someone comfortable with cost and injections.
+5. Microneedling is more convincing as an add-on than as a replacement for a better-established option.
+6. Ketoconazole belongs in the plan when dandruff or seborrheic dermatitis is present.
+
+Whatever route you choose, document the starting point and give the routine enough time. Use the same lighting, part, camera distance, and styling in progress photos. Hair changes slowly, and memory is not a reliable measurement tool.
+
+## How We Evaluated the Treatments
+
+Over three months, 20 working hair professionals contributed to this review, including hairstylists, colorists, and texture specialists. Our panel works with straight, wavy, curly, and coily hair, as well as fine, medium, and coarse strands. We also considered highlighted, bleached, chemically processed, protective-styled, and frequently heat-styled hair.
+
+For at-home options, we looked at application, residue, drying time, wash-day compatibility, and whether the routine was realistic to maintain. For PRP and professional microneedling, we did not pretend a salon panel could replace clinical research. Those scores reflect published evidence, treatment schedules, known risks, and the practical experiences clients commonly bring back to the chair.
+
+Each option received a score from 0 to 5:
+
+:::card-grid
+title: Efficacy
+How much meaningful improvement the evidence supports
+---
+title: Evidence
+Study quality, sample size, controls, and maturity of the research
+---
+title: Styling Fit
+Residue, greasiness, wash frequency, and compatibility with normal products
+---
+title: Commitment
+A higher score means the routine is easier to maintain
+---
+title: Cost
+A higher score means the option is more affordable
+---
+title: Tolerability
+A higher score means fewer or milder common side effects
+---
+title: After Stopping
+A higher score means less dependence on continuous treatment
+:::
+
+Overall scores give Efficacy and Evidence 25% each. Styling Fit, Commitment, Cost, Tolerability, and After Stopping contribute 10% each. We round the result to one decimal place.
+
+Every number in [the scorecard](#the-scorecard) above was built from these seven criteria, so a treatment's overall score is only as useful as the metric behind it you actually care about.
+
+*This article reflects HairPro Voices panel experience and is not medical advice. Talk with a licensed clinician before starting, combining, or stopping any hair-loss treatment, and before use during pregnancy or breastfeeding.*`,
+		metaTitle: `Yes, These 5 Thinning-Hair Treatments Can Work — Reviewed by Hair Professionals`,
+		metaDescription: `A 20-stylist HairPro Voices panel scores RE:YOU, minoxidil, red light therapy, PRP, microneedling, and ketoconazole shampoo on efficacy, evidence, styling fit, cost, and more.`
+	},
+	{
+		id: 57,
+		slug: "first-date-hair-what-it-says-about-you",
+		tag: "Cut & Style",
+		title: "What Your Hair Says About You: How You Wear Your Hair on a First Date",
+		excerpt: "Hair up, blowout, straight, or natural texture. Before you have said a word, your first-date hairstyle is already making an introduction. Here is what each one might be saying.",
+		author: "Nora Bell",
+		date: "Aug 14, 2026",
+		readTime: "5 min",
+		image: "/image/first-date-hair-cover.png",
+		category: "Cut & Style",
+		section: "Trends",
+		body: `A first date comes with a very specific kind of getting ready.
+
+You try on three outfits. You change your mind about your shoes. You stare at yourself in the mirror and wonder if you look like you tried too hard—or somehow not hard enough.
+
+And then there's your hair.
+
+Do you wear it down? Pull it back? Keep your natural texture? Reach for the curling iron? Maybe you decide that tonight is the night for the hairstyle you always get compliments on.
+
+Hair might seem like a small part of the first-date equation, but it can say surprisingly much about how we want to be perceived. Before you've had the chance to explain your sense of humor, your favorite movies, or why you absolutely refuse to share dessert, your hair is already making an introduction.
+
+Of course, a hairstyle isn't a personality test. But the way you choose to wear your hair—especially when you know someone is looking at you—can reveal something about how you see yourself, what makes you feel confident, and the version of yourself you want to bring to the date.
+
+So, what might your first-date hairstyle be saying?
+
+## Hair Up: "I Know What I'm Doing"
+
+:::image-row
+![A sleek, polished low bun](/image/first-date-hair-up-1.png)
+![A soft twisted updo with loose face-framing pieces](/image/first-date-hair-up-2.png)
+![A high ponytail, smooth and pulled back](/image/first-date-hair-up-3.png)
+:::
+
+There's something about putting your hair up that instantly feels intentional.
+
+Whether it's a sleek bun, a high ponytail, or a french twist holding everything together, wearing your hair up puts your face front and center. There's less to hide behind, which can make the look feel confident, polished, and a little more direct.
+
+It can also say that you want to feel put together without constantly thinking about your hair.
+
+Maybe you don't want strands falling in your face while you're trying to talk. Maybe you want to show off your earrings or makeup. Or maybe you simply feel like your best self when your hair is pulled back.
+
+And there's something quietly powerful about a hairstyle that says: here I am.
+
+## Blowout: "I Know I Look Good"
+
+:::image-row
+![Full, voluminous curls with plenty of bounce](/image/first-date-blowout-1.png)
+![A blowout with soft, brushed-out waves](/image/first-date-blowout-2.png)
+![Big, glossy volume through the mid-lengths and ends](/image/first-date-blowout-3.png)
+:::
+
+A fresh blowout is not exactly accidental. It says you put in the effort—but hopefully not so much effort that anyone needs to know exactly how long you spent in front of the mirror.
+
+The appeal of a blowout is that it sits somewhere between polished and approachable. Your hair looks intentionally done without necessarily looking like you're headed to an awards show.
+
+It can also be about control. When your hair is smooth, voluminous, and behaving exactly the way you want it to, you may feel a little more put together walking into an unfamiliar situation. Because sometimes confidence starts before you even leave the house.
+
+And maybe that's what the blowout is really about. Not impressing the person across the table, but giving yourself that extra little boost before you walk through the door.
+
+## Straight Hair: "Keep It Simple"
+
+:::image-row
+![Long, smooth straight hair with a clean finish](/image/first-date-straight-1.png)
+![Sleek straight hair worn simply, no heavy styling](/image/first-date-straight-2.png)
+![Straight hair with soft layers framing the face](/image/first-date-straight-3.png)
+:::
+
+There's a reason straight hair has remained a go-to look for first dates. It frames the face without competing for attention, making the overall look feel clean and intentional.
+
+For some, it's a confidence thing. You know exactly how your hair behaves when it's straight, and there's comfort in that familiarity. For others, it's a way to feel a little more polished than they might on an ordinary day.
+
+Straight hair can also have a certain understated quality. It doesn't necessarily announce itself when you walk into a room. Instead, it quietly completes the look. And sometimes, that's exactly what you want.
+
+You're not trying to make your hair the most memorable part of the date. You just want to feel good, look like yourself, and forget about your hair once you sit down.
+
+## Natural Texture: "This Is Me, I'm Not Hiding"
+
+:::image-row
+![Long natural waves worn loose and undone](/image/first-date-natural-texture-1.png)
+![Defined natural curls with plenty of volume](/image/first-date-natural-texture-2.png)
+![Natural coily texture worn out and shaped](/image/first-date-natural-texture-3.png)
+:::
+
+For people with naturally curly, wavy, or coily hair, choosing to wear their natural texture can feel especially meaningful.
+
+Maybe it's your everyday look. Maybe you've spent years learning how to work with your texture rather than against it. Or maybe you've reached a point where you simply don't feel like transforming your hair for someone you haven't even met yet. There's a certain confidence in that.
+
+It can say: this is how my hair looks, this is how I like it, and I'm comfortable showing up as myself.
+
+Of course, wearing your natural texture doesn't automatically mean you're more authentic, just as straightening or styling your hair doesn't mean you're hiding who you are. Hair is meant to be played with.
+
+But when your natural texture is the version of yourself that makes you feel most comfortable, wearing it on a first date can feel like a small act of self-assurance.
+
+## What Your Hair Is Really Saying
+
+The interesting thing about first-date hair is that there isn't one "right" hairstyle.
+
+The same messy bun that makes one person feel confident might make someone else feel underdressed. A sleek ponytail can feel powerful to one person and completely unlike themselves to another. That's because hair is personal.
+
+We don't just style it for other people. We style it because of how it makes us feel when we look in the mirror.
+
+A first date is already an exercise in perception. You're meeting someone new, and they're meeting a version of you that they've never seen before. Your hair becomes part of that first impression, whether you intend it to or not.
+
+But perhaps the most revealing hairstyle is the one that makes you forget about your hair altogether. Because once the date starts, the goal isn't to have perfect hair. It's to feel enough like yourself that you can actually enjoy the person sitting across from you.
+
+And if they like your hair too? Well, that's just a very nice bonus.`,
+		metaTitle: "What Your Hair Says About You: How You Wear Your Hair on a First Date",
+		metaDescription: "Hair up, a fresh blowout, sleek straight, or natural texture — what your first-date hairstyle says about how you see yourself, and why there is no one right answer."
 	}
 ];
 var legacySlugs = new Set(legacyArticles.map((article) => article.slug));
@@ -9642,6 +10504,214 @@ function SplitTable({ left, right }) {
 		}, ci))
 	});
 }
+function DataTable({ headerRow, bodyRows, styled }) {
+	return /* @__PURE__ */ jsxs("div", {
+		className: `my-8 border border-white/10 ${styled ? "bg-charcoal-900" : ""}`,
+		children: [/* @__PURE__ */ jsx("div", {
+			className: "md:hidden divide-y divide-white/5",
+			children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("div", {
+				className: "p-4 flex flex-col gap-3",
+				children: row.map((cell, ci) => cell ? /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
+					className: "text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1",
+					children: headerRow[ci]
+				}), /* @__PURE__ */ jsx("p", {
+					className: "text-sm text-charcoal-300 leading-relaxed",
+					children: renderInline(cell)
+				})] }, ci) : null)
+			}, ri))
+		}), /* @__PURE__ */ jsx("div", {
+			className: "hidden md:block overflow-x-auto",
+			children: /* @__PURE__ */ jsxs("table", {
+				className: "w-full text-sm",
+				children: [/* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsx("tr", {
+					className: "bg-white/[0.04] border-b border-white/10",
+					children: headerRow.map((cell, j) => /* @__PURE__ */ jsx("th", {
+						className: "text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium",
+						children: cell
+					}, j))
+				}) }), /* @__PURE__ */ jsx("tbody", {
+					className: "divide-y divide-white/5",
+					children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("tr", {
+						className: "hover:bg-white/[0.02]",
+						children: row.map((cell, ci) => /* @__PURE__ */ jsx("td", {
+							className: "px-4 py-3 text-charcoal-300 align-top",
+							children: renderInline(cell)
+						}, ci))
+					}, ri))
+				})]
+			})
+		})]
+	});
+}
+function ReviewBox({ image, imageAlt, bestFor, pros, cons, rating, ctaLabel, ctaUrl }) {
+	const isImagePath = !!image && /^(\/|https?:\/\/)/.test(image.trim());
+	return /* @__PURE__ */ jsxs("div", {
+		className: "my-10 border border-white/10 overflow-hidden bg-charcoal-900",
+		children: [
+			isImagePath && /* @__PURE__ */ jsx("div", {
+				className: "relative overflow-hidden bg-charcoal-900 border-b border-white/10",
+				style: { aspectRatio: "1/1" },
+				children: /* @__PURE__ */ jsx("img", {
+					src: image,
+					alt: imageAlt || "Product photo",
+					loading: "lazy",
+					className: "w-full h-full object-cover"
+				})
+			}),
+			!isImagePath && image && /* @__PURE__ */ jsxs("div", {
+				className: "relative overflow-hidden bg-charcoal-900 flex flex-col items-center justify-center gap-3 border-b border-white/10",
+				style: { aspectRatio: "1/1" },
+				children: [/* @__PURE__ */ jsx(ImageIcon, {
+					size: 30,
+					className: "text-charcoal-700"
+				}), /* @__PURE__ */ jsxs("p", {
+					className: "text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium px-6 text-center",
+					children: ["Image placeholder — ", image]
+				})]
+			}),
+			bestFor && /* @__PURE__ */ jsxs("div", {
+				className: "p-5 border-b border-white/10 bg-white/[0.02]",
+				children: [/* @__PURE__ */ jsx("p", {
+					className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-2 text-gold-500",
+					children: "Best For"
+				}), /* @__PURE__ */ jsx("p", {
+					className: "text-sm text-charcoal-300 leading-relaxed",
+					children: renderInline(bestFor)
+				})]
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: "grid grid-cols-1 sm:grid-cols-2 gap-0",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "p-5 border-b sm:border-b-0 sm:border-r border-white/10",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-gold-500",
+						children: "Pros"
+					}), /* @__PURE__ */ jsx("ul", {
+						className: "flex flex-col gap-3",
+						children: pros.map((item, i) => /* @__PURE__ */ jsxs("li", {
+							className: "flex gap-2.5 text-sm text-charcoal-300 leading-relaxed",
+							children: [/* @__PURE__ */ jsx(Check, {
+								size: 15,
+								strokeWidth: 2.5,
+								className: "flex-shrink-0 mt-0.5 text-emerald-500"
+							}), renderInline(item)]
+						}, i))
+					})]
+				}), /* @__PURE__ */ jsxs("div", {
+					className: "p-5",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-charcoal-500",
+						children: "Cons"
+					}), /* @__PURE__ */ jsx("ul", {
+						className: "flex flex-col gap-3",
+						children: cons.map((item, i) => /* @__PURE__ */ jsxs("li", {
+							className: "flex gap-2.5 text-sm text-charcoal-300 leading-relaxed",
+							children: [/* @__PURE__ */ jsx(X, {
+								size: 15,
+								strokeWidth: 2.5,
+								className: "flex-shrink-0 mt-0.5 text-red-500"
+							}), renderInline(item)]
+						}, i))
+					})]
+				})]
+			}),
+			(rating !== void 0 || ctaLabel && ctaUrl) && /* @__PURE__ */ jsxs("div", {
+				className: "p-5 border-t border-white/10 flex flex-wrap items-center justify-center sm:justify-end gap-3",
+				children: [rating !== void 0 && /* @__PURE__ */ jsxs("div", {
+					className: "inline-flex items-center gap-2 border border-white/10 px-4 py-3",
+					children: [
+						/* @__PURE__ */ jsx(Star, {
+							size: 14,
+							className: "text-gold-500 fill-gold-500 flex-shrink-0"
+						}),
+						/* @__PURE__ */ jsx("span", {
+							className: "text-sm font-bold text-white",
+							children: rating.toFixed(2)
+						}),
+						/* @__PURE__ */ jsx("span", {
+							className: "text-[11px] text-charcoal-500",
+							children: "/5"
+						})
+					]
+				}), ctaLabel && ctaUrl && /* @__PURE__ */ jsxs("a", {
+					href: ctaUrl,
+					target: "_blank",
+					rel: "noopener noreferrer",
+					className: "inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-black font-bold text-[11px] tracking-widest uppercase px-6 py-3 transition-colors",
+					children: [ctaLabel, /* @__PURE__ */ jsx(ArrowRight, { size: 14 })]
+				})]
+			})
+		]
+	});
+}
+function ScorecardCards({ cards }) {
+	return /* @__PURE__ */ jsx("div", {
+		className: "my-8 flex overflow-x-auto snap-x snap-mandatory gap-2.5 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-5",
+		style: {
+			scrollbarWidth: "none",
+			msOverflowStyle: "none"
+		},
+		children: cards.map((c) => {
+			const isExternal = /^https?:\/\//.test(c.url);
+			return /* @__PURE__ */ jsxs("a", {
+				href: c.url,
+				...isExternal ? {
+					target: "_blank",
+					rel: "noopener noreferrer"
+				} : {},
+				className: "group flex flex-col flex-shrink-0 w-24 sm:w-auto snap-start border border-white/10 bg-charcoal-900 overflow-hidden hover:border-gold-500/50 transition-colors",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "relative overflow-hidden bg-charcoal-950",
+					style: { aspectRatio: "1/1" },
+					children: [c.image ? /* @__PURE__ */ jsx("img", {
+						src: c.image,
+						alt: c.name,
+						loading: "lazy",
+						className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+					}) : /* @__PURE__ */ jsxs("div", {
+						className: "w-full h-full flex items-center justify-center",
+						children: [/* @__PURE__ */ jsx(ImageIcon, {
+							size: 20,
+							className: "text-charcoal-700 sm:hidden"
+						}), /* @__PURE__ */ jsx(ImageIcon, {
+							size: 28,
+							className: "text-charcoal-700 hidden sm:block"
+						})]
+					}), /* @__PURE__ */ jsx("span", {
+						className: "absolute top-1 left-1 sm:top-2 sm:left-2 flex items-center justify-center w-4 h-4 sm:w-7 sm:h-7 rounded-full bg-black/80 border border-gold-500/50 text-gold-500 text-[9px] sm:text-xs font-bold",
+						children: c.rank
+					})]
+				}), /* @__PURE__ */ jsxs("div", {
+					className: "p-1.5 sm:p-4 flex flex-col items-center text-center gap-1 sm:gap-2.5 flex-1",
+					children: [/* @__PURE__ */ jsx("p", {
+						className: "text-[10px] sm:text-sm font-semibold text-white leading-snug line-clamp-2 min-h-[2.2em] sm:min-h-[2.5em]",
+						children: c.name
+					}), /* @__PURE__ */ jsxs("div", {
+						className: "mt-auto inline-flex items-center gap-1 sm:gap-1.5 bg-gold-500/10 border border-gold-500/30 rounded-full px-1.5 py-0.5 sm:px-3 sm:py-1.5",
+						children: [
+							/* @__PURE__ */ jsx(Star, {
+								size: 10,
+								className: "text-gold-500 fill-gold-500 flex-shrink-0 sm:hidden"
+							}),
+							/* @__PURE__ */ jsx(Star, {
+								size: 13,
+								className: "text-gold-500 fill-gold-500 flex-shrink-0 hidden sm:block"
+							}),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[11px] sm:text-sm font-bold text-white",
+								children: c.score.toFixed(1)
+							}),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[9px] sm:text-[10px] text-charcoal-500",
+								children: "/5"
+							})
+						]
+					})]
+				})]
+			}, c.rank);
+		})
+	});
+}
 function CaseStudySeparator() {
 	return /* @__PURE__ */ jsxs("div", {
 		className: "my-10 flex items-center gap-4",
@@ -9787,13 +10857,19 @@ function renderInline(text) {
 			className: "text-gold-500",
 			children: match[6]
 		}, key++));
-		else if (match[7]) nodes.push(/* @__PURE__ */ jsx("a", {
-			href: match[8] ?? "#",
-			className: "text-gold-500 hover:underline",
-			target: "_blank",
-			rel: "noopener noreferrer",
-			children: match[7]
-		}, key++));
+		else if (match[7]) {
+			const href = match[8] ?? "#";
+			const isAnchor = href.startsWith("#");
+			nodes.push(/* @__PURE__ */ jsx("a", {
+				href,
+				className: "text-gold-500 hover:underline",
+				...isAnchor ? {} : {
+					target: "_blank",
+					rel: "noopener noreferrer"
+				},
+				children: match[7]
+			}, key++));
+		}
 		cursor = match.index + match[0].length;
 	}
 	if (cursor < text.length) nodes.push(text.slice(cursor));
@@ -10100,6 +11176,134 @@ function MarkdownBody({ body }) {
 		});
 		return `SPLIT_TABLE_PLACEHOLDER_${id}`;
 	});
+	const reviewBoxPlaceholders = [];
+	processedBody = processedBody.replace(/:::review-box\n([\s\S]*?):::/g, (_match, inner) => {
+		const lines = inner.trim().split("\n");
+		let image;
+		let imageAlt;
+		let bestFor;
+		let ctaLabel;
+		let ctaUrl;
+		let rating;
+		const pros = [];
+		const cons = [];
+		let section = null;
+		for (const line of lines) {
+			const imgM = line.match(/^image:\s*(.+)$/);
+			const altM = line.match(/^alt:\s*(.+)$/);
+			const bestForM = line.match(/^best-for:\s*(.+)$/);
+			const ctaLabelM = line.match(/^cta-label:\s*(.+)$/);
+			const ctaUrlM = line.match(/^cta-url:\s*(.+)$/);
+			const ratingM = line.match(/^rating:\s*([\d.]+)$/);
+			if (imgM) {
+				image = imgM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (altM) {
+				imageAlt = altM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (bestForM) {
+				bestFor = bestForM[1].trim().replace(/^['"]|['"]$/g, "");
+				continue;
+			}
+			if (ctaLabelM) {
+				ctaLabel = ctaLabelM[1].trim();
+				continue;
+			}
+			if (ctaUrlM) {
+				ctaUrl = ctaUrlM[1].trim();
+				continue;
+			}
+			if (ratingM) {
+				rating = parseFloat(ratingM[1]);
+				continue;
+			}
+			if (line.trim() === "pros:") {
+				section = "pros";
+				continue;
+			}
+			if (line.trim() === "cons:") {
+				section = "cons";
+				continue;
+			}
+			if (line.trim().startsWith("- ") && section === "pros") pros.push(line.replace(/^-\s+/, "").trim());
+			if (line.trim().startsWith("- ") && section === "cons") cons.push(line.replace(/^-\s+/, "").trim());
+		}
+		const id = reviewBoxPlaceholders.length;
+		reviewBoxPlaceholders.push({
+			image,
+			imageAlt,
+			bestFor,
+			pros,
+			cons,
+			rating,
+			ctaLabel,
+			ctaUrl
+		});
+		return `REVIEW_BOX_PLACEHOLDER_${id}`;
+	});
+	const scorecardTablePlaceholders = [];
+	processedBody = processedBody.replace(/:::scorecard-table\n([\s\S]*?):::/g, (_match, inner) => {
+		const parsed = inner.trim().split("\n").filter((l) => l.trim().startsWith("|")).map((r) => r.split("|").slice(1, -1).map((c) => c.trim()));
+		const isSep = (row) => row.every((c) => /^[-: ]+$/.test(c));
+		const headerRow = parsed[0] || [];
+		const bodyRows = parsed.slice(1).filter((r) => !isSep(r));
+		const id = scorecardTablePlaceholders.length;
+		scorecardTablePlaceholders.push({
+			headerRow,
+			bodyRows
+		});
+		return `SCORECARD_TABLE_PLACEHOLDER_${id}`;
+	});
+	const scorecardCardsPlaceholders = [];
+	processedBody = processedBody.replace(/:::scorecard-cards\n([\s\S]*?):::/g, (_match, inner) => {
+		const cards = inner.trim().split(/\n---\n/).map((block) => {
+			const lines = block.trim().split("\n");
+			let rank = 0;
+			let name = "";
+			let image;
+			let score = 0;
+			let url = "";
+			for (const line of lines) {
+				const rankM = line.match(/^rank:\s*(\d+)$/);
+				const nameM = line.match(/^name:\s*(.+)$/);
+				const imageM = line.match(/^image:\s*(.+)$/);
+				const scoreM = line.match(/^score:\s*([\d.]+)$/);
+				const urlM = line.match(/^url:\s*(.+)$/);
+				if (rankM) {
+					rank = parseInt(rankM[1]);
+					continue;
+				}
+				if (nameM) {
+					name = nameM[1].trim();
+					continue;
+				}
+				if (imageM) {
+					image = imageM[1].trim().replace(/^['"]|['"]$/g, "");
+					continue;
+				}
+				if (scoreM) {
+					score = parseFloat(scoreM[1]);
+					continue;
+				}
+				if (urlM) {
+					url = urlM[1].trim().replace(/^['"]|['"]$/g, "");
+					continue;
+				}
+			}
+			return {
+				rank,
+				name,
+				image,
+				score,
+				url
+			};
+		});
+		const id = scorecardCardsPlaceholders.length;
+		scorecardCardsPlaceholders.push({ cards });
+		return `SCORECARD_CARDS_PLACEHOLDER_${id}`;
+	});
 	const referencePlaceholders = [];
 	processedBody = processedBody.replace(/:::references\n([\s\S]*?):::/g, (_match, inner) => {
 		const items = inner.trim().split("\n").filter((l) => l.trim().startsWith("- ")).map((l) => l.replace(/^-\s+/, "").trim());
@@ -10179,6 +11383,34 @@ function MarkdownBody({ body }) {
 					right: st.right
 				}, i);
 			}
+			const reviewBoxMatch = trimmed.match(/^REVIEW_BOX_PLACEHOLDER_(\d+)$/);
+			if (reviewBoxMatch) {
+				const rb = reviewBoxPlaceholders[parseInt(reviewBoxMatch[1])];
+				return /* @__PURE__ */ jsx(ReviewBox, {
+					image: rb.image,
+					imageAlt: rb.imageAlt,
+					bestFor: rb.bestFor,
+					pros: rb.pros,
+					cons: rb.cons,
+					rating: rb.rating,
+					ctaLabel: rb.ctaLabel,
+					ctaUrl: rb.ctaUrl
+				}, i);
+			}
+			const scorecardTableMatch = trimmed.match(/^SCORECARD_TABLE_PLACEHOLDER_(\d+)$/);
+			if (scorecardTableMatch) {
+				const st = scorecardTablePlaceholders[parseInt(scorecardTableMatch[1])];
+				return /* @__PURE__ */ jsx(DataTable, {
+					headerRow: st.headerRow,
+					bodyRows: st.bodyRows,
+					styled: true
+				}, i);
+			}
+			const scorecardCardsMatch = trimmed.match(/^SCORECARD_CARDS_PLACEHOLDER_(\d+)$/);
+			if (scorecardCardsMatch) {
+				const sc = scorecardCardsPlaceholders[parseInt(scorecardCardsMatch[1])];
+				return /* @__PURE__ */ jsx(ScorecardCards, { cards: sc.cards }, i);
+			}
 			const carouselMatch = trimmed.match(/^CAROUSEL_PLACEHOLDER_(\d+)$/);
 			if (carouselMatch) {
 				const cp = carouselPlaceholders[parseInt(carouselMatch[1])];
@@ -10253,43 +11485,9 @@ function MarkdownBody({ body }) {
 				const parsed = trimmed.split("\n").filter((l) => l.trim().startsWith("|")).map((r) => r.split("|").slice(1, -1).map((c) => c.trim()));
 				const isSep = (row) => row.every((c) => /^[-: ]+$/.test(c));
 				const headerRow = parsed[0];
-				const bodyRows = parsed.slice(1).filter((r) => !isSep(r));
-				return /* @__PURE__ */ jsxs("div", {
-					className: "my-8 border border-white/10",
-					children: [/* @__PURE__ */ jsx("div", {
-						className: "md:hidden divide-y divide-white/5",
-						children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("div", {
-							className: "p-4 flex flex-col gap-3",
-							children: row.map((cell, ci) => cell ? /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("p", {
-								className: "text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1",
-								children: headerRow[ci]
-							}), /* @__PURE__ */ jsx("p", {
-								className: "text-sm text-charcoal-300 leading-relaxed",
-								children: renderInline(cell)
-							})] }, ci) : null)
-						}, ri))
-					}), /* @__PURE__ */ jsx("div", {
-						className: "hidden md:block overflow-x-auto",
-						children: /* @__PURE__ */ jsxs("table", {
-							className: "w-full text-sm",
-							children: [/* @__PURE__ */ jsx("thead", { children: /* @__PURE__ */ jsx("tr", {
-								className: "bg-white/[0.04] border-b border-white/10",
-								children: headerRow.map((cell, j) => /* @__PURE__ */ jsx("th", {
-									className: "text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium",
-									children: cell
-								}, j))
-							}) }), /* @__PURE__ */ jsx("tbody", {
-								className: "divide-y divide-white/5",
-								children: bodyRows.map((row, ri) => /* @__PURE__ */ jsx("tr", {
-									className: "hover:bg-white/[0.02]",
-									children: row.map((cell, ci) => /* @__PURE__ */ jsx("td", {
-										className: "px-4 py-3 text-charcoal-300 align-top",
-										children: renderInline(cell)
-									}, ci))
-								}, ri))
-							})]
-						})
-					})]
+				return /* @__PURE__ */ jsx(DataTable, {
+					headerRow,
+					bodyRows: parsed.slice(1).filter((r) => !isSep(r))
 				}, i);
 			}
 			if (trimmed.startsWith("> ")) {
@@ -10492,6 +11690,10 @@ function slugifyHeading(text) {
 }
 function getArticleTocItems(article) {
 	if (!article.body) return article.slug === "copper-renaissance-2026" ? copperTocItems : [];
+	if (article.slug === "best-thinning-hair-treatments-reviewed-by-pros") return [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)].map((m) => m[1]).filter((heading) => heading === "The Scorecard" || /^\d+\.\s+/.test(heading) || heading.startsWith("Bonus: Ketoconazole Shampoo") || heading === "Where We Would Start" || heading === "How We Evaluated the Treatments").map((heading) => ({
+		id: slugifyHeading(heading),
+		label: heading.startsWith("Bonus: Ketoconazole Shampoo") ? "Ketoconazole Shampoo" : heading.replace(/^\d+\.\s+[^:]+:\s*/, "")
+	}));
 	const sectionHeadings = [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)];
 	return (sectionHeadings.length > 0 ? sectionHeadings : [...article.body.matchAll(/^###\s+(?!#)(.+)$/gm)]).map((match) => ({
 		id: slugifyHeading(match[1]),

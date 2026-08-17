@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Article } from '../../data/articles'
-import { Quote, Sparkles, ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react'
+import { Quote, Sparkles, ChevronLeft, ChevronRight, ImageIcon, ArrowRight, Check, X, Star } from 'lucide-react'
 
 const INLINE_IMAGE_1 = '/image/copper-1.png'
 const INLINE_IMAGE_2 = '/image/copper-re.png'
@@ -470,6 +470,200 @@ function SplitTable({ left, right }: { left: { heading: string; items: string[] 
   )
 }
 
+function DataTable({ headerRow, bodyRows, styled }: { headerRow: string[]; bodyRows: string[][]; styled?: boolean }) {
+  return (
+    <div className={`my-8 border border-white/10 ${styled ? 'bg-charcoal-900' : ''}`}>
+      {/* Mobile: stacked cards */}
+      <div className="md:hidden divide-y divide-white/5">
+        {bodyRows.map((row, ri) => (
+          <div key={ri} className="p-4 flex flex-col gap-3">
+            {row.map((cell, ci) => cell ? (
+              <div key={ci}>
+                <p className="text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1">{headerRow[ci]}</p>
+                <p className="text-sm text-charcoal-300 leading-relaxed">{renderInline(cell)}</p>
+              </div>
+            ) : null)}
+          </div>
+        ))}
+      </div>
+      {/* Desktop: regular table */}
+      <div className="hidden md:block overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-white/[0.04] border-b border-white/10">
+              {headerRow.map((cell, j) => (
+                <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
+                  {cell}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-white/5">
+            {bodyRows.map((row, ri) => (
+              <tr key={ri} className="hover:bg-white/[0.02]">
+                {row.map((cell, ci) => (
+                  <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
+                    {renderInline(cell)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
+
+function ReviewBox({
+  image,
+  imageAlt,
+  bestFor,
+  pros,
+  cons,
+  rating,
+  ctaLabel,
+  ctaUrl,
+}: {
+  image?: string
+  imageAlt?: string
+  bestFor?: string
+  pros: string[]
+  cons: string[]
+  rating?: number
+  ctaLabel?: string
+  ctaUrl?: string
+}) {
+  // `image` is either a real path/URL (renders an actual photo) or plain caption
+  // text (renders the "image placeholder" box) — same convention as the site's
+  // ![caption](url) syntax, just detected automatically here.
+  const isImagePath = !!image && /^(\/|https?:\/\/)/.test(image.trim())
+
+  return (
+    <div className="my-10 border border-white/10 overflow-hidden bg-charcoal-900">
+      {isImagePath && (
+        <div className="relative overflow-hidden bg-charcoal-900 border-b border-white/10" style={{ aspectRatio: '1/1' }}>
+          <img src={image} alt={imageAlt || 'Product photo'} loading="lazy" className="w-full h-full object-cover" />
+        </div>
+      )}
+      {!isImagePath && image && (
+        <div
+          className="relative overflow-hidden bg-charcoal-900 flex flex-col items-center justify-center gap-3 border-b border-white/10"
+          style={{ aspectRatio: '1/1' }}
+        >
+          <ImageIcon size={30} className="text-charcoal-700" />
+          <p className="text-[10px] tracking-[0.25em] uppercase text-charcoal-600 font-medium px-6 text-center">
+            Image placeholder — {image}
+          </p>
+        </div>
+      )}
+      {bestFor && (
+        <div className="p-5 border-b border-white/10 bg-white/[0.02]">
+          <p className="text-[10px] tracking-[0.25em] uppercase font-semibold mb-2 text-gold-500">Best For</p>
+          <p className="text-sm text-charcoal-300 leading-relaxed">{renderInline(bestFor)}</p>
+        </div>
+      )}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+        <div className="p-5 border-b sm:border-b-0 sm:border-r border-white/10">
+          <p className="text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-gold-500">Pros</p>
+          <ul className="flex flex-col gap-3">
+            {pros.map((item, i) => (
+              <li key={i} className="flex gap-2.5 text-sm text-charcoal-300 leading-relaxed">
+                <Check size={15} strokeWidth={2.5} className="flex-shrink-0 mt-0.5 text-emerald-500" />
+                {renderInline(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="p-5">
+          <p className="text-[10px] tracking-[0.25em] uppercase font-semibold mb-4 text-charcoal-500">Cons</p>
+          <ul className="flex flex-col gap-3">
+            {cons.map((item, i) => (
+              <li key={i} className="flex gap-2.5 text-sm text-charcoal-300 leading-relaxed">
+                <X size={15} strokeWidth={2.5} className="flex-shrink-0 mt-0.5 text-red-500" />
+                {renderInline(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {(rating !== undefined || (ctaLabel && ctaUrl)) && (
+        <div className="p-5 border-t border-white/10 flex flex-wrap items-center justify-center sm:justify-end gap-3">
+          {rating !== undefined && (
+            <div className="inline-flex items-center gap-2 border border-white/10 px-4 py-3">
+              <Star size={14} className="text-gold-500 fill-gold-500 flex-shrink-0" />
+              <span className="text-sm font-bold text-white">{rating.toFixed(2)}</span>
+              <span className="text-[11px] text-charcoal-500">/5</span>
+            </div>
+          )}
+          {ctaLabel && ctaUrl && (
+            <a
+              href={ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-black font-bold text-[11px] tracking-widest uppercase px-6 py-3 transition-colors"
+            >
+              {ctaLabel}
+              <ArrowRight size={14} />
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ScorecardCards({ cards }: { cards: { rank: number; name: string; image?: string; score: number; url: string }[] }) {
+  return (
+    // Mobile: a compact horizontally-scrolling row (small cards, swipe/scroll to see all 5).
+    // sm and up: reverts to a regular wrapping grid, no scrolling needed.
+    <div
+      className="my-8 flex overflow-x-auto snap-x snap-mandatory gap-2.5 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-5"
+      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+    >
+      {cards.map((c) => {
+        const isExternal = /^https?:\/\//.test(c.url)
+        return (
+          <a
+            key={c.rank}
+            href={c.url}
+            {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className="group flex flex-col flex-shrink-0 w-24 sm:w-auto snap-start border border-white/10 bg-charcoal-900 overflow-hidden hover:border-gold-500/50 transition-colors"
+          >
+            <div className="relative overflow-hidden bg-charcoal-950" style={{ aspectRatio: '1/1' }}>
+              {c.image ? (
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <ImageIcon size={20} className="text-charcoal-700 sm:hidden" />
+                  <ImageIcon size={28} className="text-charcoal-700 hidden sm:block" />
+                </div>
+              )}
+              <span className="absolute top-1 left-1 sm:top-2 sm:left-2 flex items-center justify-center w-4 h-4 sm:w-7 sm:h-7 rounded-full bg-black/80 border border-gold-500/50 text-gold-500 text-[9px] sm:text-xs font-bold">
+                {c.rank}
+              </span>
+            </div>
+            <div className="p-1.5 sm:p-4 flex flex-col items-center text-center gap-1 sm:gap-2.5 flex-1">
+              <p className="text-[10px] sm:text-sm font-semibold text-white leading-snug line-clamp-2 min-h-[2.2em] sm:min-h-[2.5em]">{c.name}</p>
+              <div className="mt-auto inline-flex items-center gap-1 sm:gap-1.5 bg-gold-500/10 border border-gold-500/30 rounded-full px-1.5 py-0.5 sm:px-3 sm:py-1.5">
+                <Star size={10} className="text-gold-500 fill-gold-500 flex-shrink-0 sm:hidden" />
+                <Star size={13} className="text-gold-500 fill-gold-500 flex-shrink-0 hidden sm:block" />
+                <span className="text-[11px] sm:text-sm font-bold text-white">{c.score.toFixed(1)}</span>
+                <span className="text-[9px] sm:text-[10px] text-charcoal-500">/5</span>
+              </div>
+            </div>
+          </a>
+        )
+      })}
+    </div>
+  )
+}
+
 function CaseStudySeparator() {
   return (
     <div className="my-10 flex items-center gap-4">
@@ -571,7 +765,22 @@ function renderInline(text: string): React.ReactNode[] {
     else if (match[4]) nodes.push(<code key={key++} className="text-[0.9em] bg-white/10 px-1 rounded font-mono">{match[4]}</code>)
     else if (match[5]) nodes.push(<mark key={key++} className="bg-gold-500 text-black font-semibold px-0.5 rounded-sm not-italic">{match[5]}</mark>)
     else if (match[6]) nodes.push(<span key={key++} className="text-gold-500">{match[6]}</span>)
-    else if (match[7]) nodes.push(<a key={key++} href={match[8] ?? '#'} className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">{match[7]}</a>)
+    else if (match[7]) {
+      const href = match[8] ?? '#'
+      // In-page anchors (e.g. "#the-scorecard") should scroll on the same page,
+      // not open a new tab — only external links open in a new tab.
+      const isAnchor = href.startsWith('#')
+      nodes.push(
+        <a
+          key={key++}
+          href={href}
+          className="text-gold-500 hover:underline"
+          {...(isAnchor ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+        >
+          {match[7]}
+        </a>
+      )
+    }
     cursor = match.index + match[0].length
   }
   if (cursor < text.length) nodes.push(text.slice(cursor))
@@ -805,6 +1014,94 @@ function MarkdownBody({ body }: { body: string }) {
       return `SPLIT_TABLE_PLACEHOLDER_${id}`
     }
   )
+  const reviewBoxPlaceholders: { image?: string; imageAlt?: string; bestFor?: string; pros: string[]; cons: string[]; rating?: number; ctaLabel?: string; ctaUrl?: string }[] = []
+  processedBody = processedBody.replace(
+    /:::review-box\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n')
+      let image: string | undefined
+      let imageAlt: string | undefined
+      let bestFor: string | undefined
+      let ctaLabel: string | undefined
+      let ctaUrl: string | undefined
+      let rating: number | undefined
+      const pros: string[] = []
+      const cons: string[] = []
+      let section: 'pros' | 'cons' | null = null
+      for (const line of lines) {
+        const imgM = line.match(/^image:\s*(.+)$/)
+        const altM = line.match(/^alt:\s*(.+)$/)
+        const bestForM = line.match(/^best-for:\s*(.+)$/)
+        const ctaLabelM = line.match(/^cta-label:\s*(.+)$/)
+        const ctaUrlM = line.match(/^cta-url:\s*(.+)$/)
+        const ratingM = line.match(/^rating:\s*([\d.]+)$/)
+        // Strip optional surrounding quotes, e.g. image: '/image/rogaine.avif'
+        if (imgM) { image = imgM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (altM) { imageAlt = altM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (bestForM) { bestFor = bestForM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (ctaLabelM) { ctaLabel = ctaLabelM[1].trim(); continue }
+        if (ctaUrlM) { ctaUrl = ctaUrlM[1].trim(); continue }
+        if (ratingM) { rating = parseFloat(ratingM[1]); continue }
+        if (line.trim() === 'pros:') { section = 'pros'; continue }
+        if (line.trim() === 'cons:') { section = 'cons'; continue }
+        if (line.trim().startsWith('- ') && section === 'pros') pros.push(line.replace(/^-\s+/, '').trim())
+        if (line.trim().startsWith('- ') && section === 'cons') cons.push(line.replace(/^-\s+/, '').trim())
+      }
+      const id = reviewBoxPlaceholders.length
+      reviewBoxPlaceholders.push({ image, imageAlt, bestFor, pros, cons, rating, ctaLabel, ctaUrl })
+      return `REVIEW_BOX_PLACEHOLDER_${id}`
+    }
+  )
+  // A markdown table wrapped in :::scorecard-table ... ::: renders with a
+  // subtle background (via DataTable's `styled` flag) instead of the plain
+  // transparent background regular inline markdown tables use site-wide.
+  const scorecardTablePlaceholders: { headerRow: string[]; bodyRows: string[][] }[] = []
+  processedBody = processedBody.replace(
+    /:::scorecard-table\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const rows = inner.trim().split('\n').filter((l) => l.trim().startsWith('|'))
+      const parsed = rows.map((r) => r.split('|').slice(1, -1).map((c) => c.trim()))
+      const isSep = (row: string[]) => row.every((c) => /^[-: ]+$/.test(c))
+      const headerRow = parsed[0] || []
+      const bodyRows = parsed.slice(1).filter((r) => !isSep(r))
+      const id = scorecardTablePlaceholders.length
+      scorecardTablePlaceholders.push({ headerRow, bodyRows })
+      return `SCORECARD_TABLE_PLACEHOLDER_${id}`
+    }
+  )
+  // A mobile-friendly grid of ranked product cards (image + one overall score each),
+  // used as a lighter-weight alternative to :::scorecard-table for a quick visual compare.
+  const scorecardCardsPlaceholders: { cards: { rank: number; name: string; image?: string; score: number; url: string }[] }[] = []
+  processedBody = processedBody.replace(
+    /:::scorecard-cards\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const blocks = inner.trim().split(/\n---\n/)
+      const cards = blocks.map((block) => {
+        const lines = block.trim().split('\n')
+        let rank = 0
+        let name = ''
+        let image: string | undefined
+        let score = 0
+        let url = ''
+        for (const line of lines) {
+          const rankM = line.match(/^rank:\s*(\d+)$/)
+          const nameM = line.match(/^name:\s*(.+)$/)
+          const imageM = line.match(/^image:\s*(.+)$/)
+          const scoreM = line.match(/^score:\s*([\d.]+)$/)
+          const urlM = line.match(/^url:\s*(.+)$/)
+          if (rankM) { rank = parseInt(rankM[1]); continue }
+          if (nameM) { name = nameM[1].trim(); continue }
+          if (imageM) { image = imageM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+          if (scoreM) { score = parseFloat(scoreM[1]); continue }
+          if (urlM) { url = urlM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        }
+        return { rank, name, image, score, url }
+      })
+      const id = scorecardCardsPlaceholders.length
+      scorecardCardsPlaceholders.push({ cards })
+      return `SCORECARD_CARDS_PLACEHOLDER_${id}`
+    }
+  )
   const referencePlaceholders: { items: string[] }[] = []
   processedBody = processedBody.replace(
     /:::references\n([\s\S]*?):::/g,
@@ -876,6 +1173,27 @@ function MarkdownBody({ body }: { body: string }) {
         if (splitTableMatch) {
           const st = splitTablePlaceholders[parseInt(splitTableMatch[1])]
           return <SplitTable key={i} left={st.left} right={st.right} />
+        }
+
+        // Review box placeholder (image + pros/cons + CTA button, combined)
+        const reviewBoxMatch = trimmed.match(/^REVIEW_BOX_PLACEHOLDER_(\d+)$/)
+        if (reviewBoxMatch) {
+          const rb = reviewBoxPlaceholders[parseInt(reviewBoxMatch[1])]
+          return <ReviewBox key={i} image={rb.image} imageAlt={rb.imageAlt} bestFor={rb.bestFor} pros={rb.pros} cons={rb.cons} rating={rb.rating} ctaLabel={rb.ctaLabel} ctaUrl={rb.ctaUrl} />
+        }
+
+        // Scorecard table placeholder (styled markdown table)
+        const scorecardTableMatch = trimmed.match(/^SCORECARD_TABLE_PLACEHOLDER_(\d+)$/)
+        if (scorecardTableMatch) {
+          const st = scorecardTablePlaceholders[parseInt(scorecardTableMatch[1])]
+          return <DataTable key={i} headerRow={st.headerRow} bodyRows={st.bodyRows} styled />
+        }
+
+        // Scorecard cards placeholder (ranked product cards with image + one score each)
+        const scorecardCardsMatch = trimmed.match(/^SCORECARD_CARDS_PLACEHOLDER_(\d+)$/)
+        if (scorecardCardsMatch) {
+          const sc = scorecardCardsPlaceholders[parseInt(scorecardCardsMatch[1])]
+          return <ScorecardCards key={i} cards={sc.cards} />
         }
 
         // Quote carousel placeholder
@@ -960,48 +1278,7 @@ function MarkdownBody({ body }: { body: string }) {
           const isSep = (row: string[]) => row.every((c) => /^[-: ]+$/.test(c))
           const headerRow = parsed[0]
           const bodyRows = parsed.slice(1).filter((r) => !isSep(r))
-          return (
-            <div key={i} className="my-8 border border-white/10">
-              {/* Mobile: stacked cards */}
-              <div className="md:hidden divide-y divide-white/5">
-                {bodyRows.map((row, ri) => (
-                  <div key={ri} className="p-4 flex flex-col gap-3">
-                    {row.map((cell, ci) => cell ? (
-                      <div key={ci}>
-                        <p className="text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1">{headerRow[ci]}</p>
-                        <p className="text-sm text-charcoal-300 leading-relaxed">{renderInline(cell)}</p>
-                      </div>
-                    ) : null)}
-                  </div>
-                ))}
-              </div>
-              {/* Desktop: regular table */}
-              <div className="hidden md:block overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-white/[0.04] border-b border-white/10">
-                      {headerRow.map((cell, j) => (
-                        <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
-                          {cell}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/5">
-                    {bodyRows.map((row, ri) => (
-                      <tr key={ri} className="hover:bg-white/[0.02]">
-                        {row.map((cell, ci) => (
-                          <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
-                            {renderInline(cell)}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )
+          return <DataTable key={i} headerRow={headerRow} bodyRows={bodyRows} />
         }
         // blockquote
         if (trimmed.startsWith('> ')) {
