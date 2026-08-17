@@ -1,44 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ExternalLink, Link2 } from 'lucide-react'
 import type { Article } from '../../data/articles'
-
-const copperTocItems = [
-  { id: 'why-copper-works', label: 'Why Copper Works' },
-  { id: 'the-formula-breakdown', label: 'The Formula' },
-  { id: 'application-technique', label: 'Application Technique' },
-  { id: 'selling-the-maintenance-story', label: 'Selling Maintenance' },
-]
-
-function slugify(text: string) {
-  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-}
-
-const h2Slugs = new Set(['find-right-stylist', 'brunette-glazing', 'vivid-color-guide', 'haircut-layers', 'layers-thin-hair', 'what-is-balayage', 'stylist-notices-thinning', 'gua-sha-scalp', 'low-maintenance-color', 'at-home-hair-care', 'busiest-stylists-system', 'smoothing-products-stylists-use', 'what-stylist-sees-when-you-sit-down', 'gdragon-hairstyles-stylists-reference', '2026-met-gala-best-hair-looks', 'mothers-day-effortless-hairstyles', 'history-of-hair-color', 'slick-back-bun', 'fine-frizzy-wavy-hair', 'wolf-cut-2026', 'solo-stylist-blueprint', 'mens-haircuts-hot-guy-energy', 'bangs-guide-2026', 'female-hair-loss-stylist-guide', 'french-open-tennis-hairstyles', 'novogro-vs-minoxidil', 'what-your-hair-says-about-you-sex-and-the-city', 'wet-look-hair-chic-not-greasy', 'finasteride-vs-novogro-women-hair-loss', 'french-bob-every-face-shape', 'pp405-vs-novogro', 'hair-extensions-what-to-know', 'summer-hair-damage', 'smarter-way-to-go-gray', 'hard-water-hair', 'how-often-wash-hair', 'split-ends-trims-truth', 'flat-iron-heat-damage', 'hair-oiling-trend', 'modern-perm-trend', 'scalp-service-gap', 'wet-vs-dry-cutting', 'are-straight-perms-bad-for-hair', 'fall-2026-hair-color-trends', 'gloss-or-full-color', 'bedtime-routine-ruining-hair', 'pop-star-hair-looks-stylists-recreate', 'first-date-hair-what-it-says-about-you'])
-
-function getTocItems(article: Article) {
-  if (!article.body) return copperTocItems
-  if (article.slug === 'best-thinning-hair-treatments-reviewed-by-pros') {
-    const tocHeadings = [...article.body.matchAll(/^##\s+(?!#)(.+)$/gm)]
-      .map((m) => m[1])
-      .filter((heading) =>
-        heading === 'The Scorecard'
-        || /^\d+\.\s+/.test(heading)
-        || heading.startsWith('Bonus: Ketoconazole Shampoo')
-        || heading === 'Where We Would Start'
-        || heading === 'How We Evaluated the Treatments'
-      )
-    return tocHeadings.map((heading) => ({
-      id: slugify(heading),
-      label: heading.startsWith('Bonus: Ketoconazole Shampoo')
-        ? 'Ketoconazole Shampoo'
-        : heading.replace(/^\d+\.\s+[^:]+:\s*/, ''),
-    }))
-  }
-  const pattern = h2Slugs.has(article.slug) ? /^##\s+(?!#)(.+)$/gm : /^###\s+(.+)$/gm
-  const headings = [...article.body.matchAll(pattern)]
-  if (headings.length === 0) return copperTocItems
-  return headings.map((m) => ({ id: slugify(m[1]), label: m[1] }))
-}
+import { getArticleTocItems } from './articleHeadings'
 
 const shareLinks = [
   { label: 'Copy Link', icon: Link2, action: 'copy' },
@@ -50,7 +13,7 @@ const shareLinks = [
 export default function ArticleSidebar({ article }: { article: Article }) {
   const [copied, setCopied] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-  const tocItems = getTocItems(article)
+  const tocItems = getArticleTocItems(article)
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []

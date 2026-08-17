@@ -30,6 +30,14 @@ function Subheading({ children, id }: { children: React.ReactNode; id?: string }
   )
 }
 
+function MinorHeading({ children, id }: { children: React.ReactNode; id?: string }) {
+  return (
+    <h4 id={id} className="text-base font-semibold text-charcoal-100 mt-6 mb-3">
+      {children}
+    </h4>
+  )
+}
+
 function Paragraph({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-charcoal-300 text-base md:text-[17px] leading-[1.85] mb-5">
@@ -1230,6 +1238,8 @@ function MarkdownBody({ body }: { body: string }) {
         }
         const h3 = trimmed.match(/^### (.+)/)
         if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>
+        const h4 = trimmed.match(/^#### (.+)/)
+        if (h4) return <MinorHeading key={i} id={slugify(h4[1])}>{h4[1]}</MinorHeading>
         const h1 = trimmed.match(/^# (.+)/)
         if (h1) return <SectionHeading key={i} id={slugify(h1[1])}>{h1[1]}</SectionHeading>
         // bullet list
