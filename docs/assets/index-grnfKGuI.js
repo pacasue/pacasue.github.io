@@ -16,7 +16,7 @@ The difference this time? We are not necessarily recreating the exact hair we wo
 
 Here are five Y2K hair trends that are officially having another moment.
 
-## 1\\. Chunky Highlights Are Getting Bold Again
+## Chunky Highlights Are Getting Bold Again
 
 Remember when highlights were anything but subtle? Chunky blonde streaks were one of the defining color trends of the early 2000s, often creating a dramatic contrast against brunette or black hair.
 
@@ -34,7 +34,7 @@ This is for the people who want their color to be noticeable. It works especiall
 
 **Ask your stylist for:** Chunky, high-contrast face-framing highlights rather than traditional fine highlights. If you want the full Y2K effect, ask about adding a few thicker pieces throughout the rest of your hair.
 
-### 2\\. Crimped Hair Is Coming Back
+### Crimped Hair Is Coming Back
 
 Crimped hair has officially escaped the early-2000s photo album.
 
@@ -52,7 +52,7 @@ This is perfect for anyone with straight or wavy hair who wants to experiment wi
 
 **Ask your stylist for:** A soft crimped texture rather than tight, uniform zigzags. The goal is movement—not looking like you stepped out of a 2004 school picture.
 
-### 3\\. Hair Clips Are Here and Abundant
+### Hair Clips Are Here and Abundant
 
 If there is one accessory that immediately says Y2K, it is hair clips.
 
@@ -70,7 +70,7 @@ This one is for the accessory lovers. It is also the easiest Y2K trend to try be
 
 **Try it with:** A sleek half-up hairstyle, face-framing tendrils, or two small sections pulled back at the temples. For a more dramatic look, add several clips throughout loose waves.
 
-### 4\\. The Sleek High Updo Is Having Another Moment
+### The Sleek High Updo Is Having Another Moment
 
 The Y2K high updo was not casual. It was snatched, shiny, and usually straightened within an inch of its life.
 
@@ -88,7 +88,7 @@ Anyone who loves a clean, polished hairstyle would adore this. It is especially 
 
 **Try it with:** A deep side part and long side-swept pieces for a more dramatic Y2K look, or keep the part centered and the finish ultra-glossy for a modern version.
 
-### 5\\. Raccoon Tails and Leopard Print Are Taking Hair Color to the Wild Side
+### Raccoon Tails and Leopard Print Are Taking Hair Color to the Wild Side
 
 Y2K hair was never afraid of a little chaos—and animal-print hair might be the ultimate example.
 
