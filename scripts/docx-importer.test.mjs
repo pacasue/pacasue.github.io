@@ -91,6 +91,8 @@ test('imports a folder and writes a generated article module', async () => {
     const outputImageDir = join(root, 'public/image/docx')
     await import('node:fs/promises').then(({ mkdir }) => mkdir(inputDir, { recursive: true }))
     await makeDocx(join(inputDir, 'article.docx'), { metadata: { Slug: 'explicit-slug', 'Read Time': '7 min' } })
+    // Word lock files use the same extension but are not DOCX archives.
+    await writeFile(join(inputDir, '~$article.docx'), 'temporary lock file')
 
     const articles = await importDocxArticles({ inputDir, outputModule, outputImageDir })
 
