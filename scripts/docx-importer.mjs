@@ -232,7 +232,15 @@ export async function convertDocxFile({ sourcePath, outputImageDir }) {
 export async function importDocxArticles({ inputDir, outputModule, outputImageDir }) {
   await mkdir(inputDir, { recursive: true })
   const names = (await readdir(inputDir, { withFileTypes: true }))
-    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.docx'))
+    // Microsoft Word creates lock files next to open documents with a `~$`
+    // prefix. They are not DOCX archives, so treating them as articles makes
+    // the whole import fail as soon as somebody uploads an open document (or
+    // commits one of these temporary files by accident).
+    .filter((entry) => (
+      entry.isFile()
+      && entry.name.toLowerCase().endsWith('.docx')
+      && !entry.name.startsWith('~$')
+    ))
     .map((entry) => entry.name)
     .sort((a, b) => a.localeCompare(b))
 
