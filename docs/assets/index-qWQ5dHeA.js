@@ -26,7 +26,7 @@ Now they are back—but you do not have to go full 2003.
 
 ![“Neapolitan hair” with pink, blonde and brown. Multiple colors for highlights add even more. ](/image/docx/y2k-hair-is-back/image-03.jpg)
 
-![Face framing pieces create a peekaboo effect.](/image/docx/y2k-hair-is-back/image-04.jpg)
+![Mint green highlights and brown hair creating a “mint-chocolate” aesthetic.](/image/docx/y2k-hair-is-back/image-04.jpg)
 
 The modern version is all about strategic placement. A stylist might concentrate brighter pieces around the face, creating a high-contrast money-piece effect, while keeping the rest of the hair slightly more blended. Blonde and platinum are the obvious choices, but caramel, copper, pink, and even icy pastel streaks can give the look a more playful update.
 
@@ -40,11 +40,11 @@ Crimped hair has officially escaped the early-2000s photo album.
 
 The tiny zigzag texture that once required a dedicated crimping iron is showing up again, although today's version is often softer and less uniform. Some people are crimping their entire head for maximum texture, while others are using it on select sections to create volume or a more undone finish. Crimped texture is also being reimagined as "mermaid waves," giving the style a less rigid look.
 
-![Tousled mermaid waves, perfect for a beach day.](/image/docx/y2k-hair-is-back/image-05.jpg)
+![Mermaid waves don’t need to be perfectly uniform.](/image/docx/y2k-hair-is-back/image-05.jpg)
 
 ![The waves curl around the face to frame it.](/image/docx/y2k-hair-is-back/image-06.jpg)
 
-![Crimped hair creates more volume. ](/image/docx/y2k-hair-is-back/image-07.jpg)
+![Crimped hair is perfect for people who want more volume. ](/image/docx/y2k-hair-is-back/image-07.jpg)
 
 For a true Y2K moment, pair crimped hair with a deep side part, tiny sunglasses, or a few colorful clips. For something more wearable, crimp only the underneath layers or a few pieces around the face.
 
@@ -60,17 +60,17 @@ Hair clips in fun and different shapes, colors, textures; this trend brings out 
 
 Pastel, iridescent, metallic, and rhinestone versions can make the trend feel more current, while classic colorful butterflies are perfect for anyone who wants to lean fully into nostalgia.
 
-![Butterfly clips to add a pop of color in your hair.](/image/docx/y2k-hair-is-back/image-08.jpg)
+![Silver clips can create an edgy, but still maximalist look.](/image/docx/y2k-hair-is-back/image-08.jpg)
 
-![Hair clips to add details to spikey space buns. ](/image/docx/y2k-hair-is-back/image-09.jpg)
+![Maximalist and colorful hair clips to add details to space buns. ](/image/docx/y2k-hair-is-back/image-09.jpg)
 
-![Silver star clips for a sleek look.](/image/docx/y2k-hair-is-back/image-10.jpg)
+![Star-shaped clips can come in all different colors. These are not just functional, but also decoration.](/image/docx/y2k-hair-is-back/image-10.jpg)
 
 This one is for the accessory lovers. It is also the easiest Y2K trend to try because you do not need to change your cut or color.
 
 **Try it with:** A sleek half-up hairstyle, face-framing tendrils, or two small sections pulled back at the temples. For a more dramatic look, add several clips throughout loose waves.
 
-## The Sleek High Updo Is Having Another Moment
+## The High Updo Is Having Another Moment
 
 The Y2K high updo was not casual. It was snatched, shiny, and usually straightened within an inch of its life.
 
@@ -78,11 +78,9 @@ That silhouette is returning, but modern styling is making it much softer. Inste
 
 The height is important. A updo sitting high at the crown gives the look that unmistakable early-2000s energy, especially when paired with straight lengths or flipped ends.
 
-![A side bangs with a half up, half down gives volume and is still soft.](/image/docx/y2k-hair-is-back/image-11.jpg)
+![A side bangs with a half up, half down gives volume and is still soft.](/image/docx/y2k-hair-is-back/image-11.jpg)![A sleek, slick-back bun with gel and hairclips as decoration.](/image/docx/y2k-hair-is-back/image-12.jpg)
 
-![Adding hair clips on your side bangs can help a pop of color. ](/image/docx/y2k-hair-is-back/image-12.jpg)
-
-![A sleek side bang adds dimension to a polished hairstyle. ](/image/docx/y2k-hair-is-back/image-13.jpg)
+![You can experiment with different hair parts, some even shaped as stars.](/image/docx/y2k-hair-is-back/image-13.jpg)![A half up-half down hairstyle can also create the same sleek style.](/image/docx/y2k-hair-is-back/image-14.jpg)
 
 Anyone who loves a clean, polished hairstyle would adore this. It is especially flattering for people with medium-to-long hair who want their features to take center stage.
 
@@ -96,11 +94,13 @@ Raccoon-tail hair, which uses alternating bands of contrasting color through sec
 
 Leopard-print hair takes the idea even further. Instead of simply adding streaks of color, stylists can create spotted patterns throughout sections of bleached hair. The print can be concentrated on the ends, hidden underneath the top layer, or placed around the face for a peekaboo effect.
 
-![An alternating between blonde and brown hair creates a raccoon tail pattern.](/image/docx/y2k-hair-is-back/image-14.jpg)
+![An alternating between blonde and brown hair creates a raccoon tail pattern.](/image/docx/y2k-hair-is-back/image-15.jpg)
 
-![Using a different color for the raccoon tail helps it pop.](/image/docx/y2k-hair-is-back/image-15.jpg)
+![Using a different color for the raccoon tail helps it pop.](/image/docx/y2k-hair-is-back/image-16.jpg)
 
-![A leopard print detail on your hair can help you incorporate animal patterns into your daily wear.](/image/docx/y2k-hair-is-back/image-16.jpg)
+![A leopard print detail on your hair can help you incorporate animal patterns into your daily wear.](/image/docx/y2k-hair-is-back/image-17.jpg)
+
+  
 
 This is for the person who sees their hair as an accessory rather than something that needs to blend in. It is especially suited to people who love alternative fashion, colorful makeup, or experimenting with statement-making looks.
 
