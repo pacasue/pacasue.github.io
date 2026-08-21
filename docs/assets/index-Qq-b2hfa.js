@@ -80,7 +80,9 @@ The height is important. A updo sitting high at the crown gives the look that un
 
 ![A sleek, slick-back bun with gel and hairclips as decoration.](/image/docx/y2k-hair-is-back/image-11.jpg)
 
-![You can experiment with different hair parts, some even shaped as stars.](/image/docx/y2k-hair-is-back/image-12.jpg)![A half up-half down hairstyle can also create the same sleek style.](/image/docx/y2k-hair-is-back/image-13.jpg)
+![You can experiment with different hair parts, some even shaped as stars.](/image/docx/y2k-hair-is-back/image-12.jpg)
+
+![A half up-half down hairstyle can also create the same sleek style.](/image/docx/y2k-hair-is-back/image-13.jpg)
 
 Anyone who loves a clean, polished hairstyle would adore this. It is especially flattering for people with medium-to-long hair who want their features to take center stage.
 
