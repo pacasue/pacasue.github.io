@@ -78,9 +78,9 @@ That silhouette is returning, but modern styling is making it much softer. Inste
 
 The height is important. A updo sitting high at the crown gives the look that unmistakable early-2000s energy, especially when paired with straight lengths or flipped ends.
 
-![A side bangs with a half up, half down gives volume and is still soft.](/image/docx/y2k-hair-is-back/image-11.jpg)![A sleek, slick-back bun with gel and hairclips as decoration.](/image/docx/y2k-hair-is-back/image-12.jpg)
+![A sleek, slick-back bun with gel and hairclips as decoration.](/image/docx/y2k-hair-is-back/image-11.jpg)
 
-![You can experiment with different hair parts, some even shaped as stars.](/image/docx/y2k-hair-is-back/image-13.jpg)![A half up-half down hairstyle can also create the same sleek style.](/image/docx/y2k-hair-is-back/image-14.jpg)
+![You can experiment with different hair parts, some even shaped as stars.](/image/docx/y2k-hair-is-back/image-12.jpg)![A half up-half down hairstyle can also create the same sleek style.](/image/docx/y2k-hair-is-back/image-13.jpg)
 
 Anyone who loves a clean, polished hairstyle would adore this. It is especially flattering for people with medium-to-long hair who want their features to take center stage.
 
@@ -94,11 +94,11 @@ Raccoon-tail hair, which uses alternating bands of contrasting color through sec
 
 Leopard-print hair takes the idea even further. Instead of simply adding streaks of color, stylists can create spotted patterns throughout sections of bleached hair. The print can be concentrated on the ends, hidden underneath the top layer, or placed around the face for a peekaboo effect.
 
-![An alternating between blonde and brown hair creates a raccoon tail pattern.](/image/docx/y2k-hair-is-back/image-15.jpg)
+![An alternating between blonde and brown hair creates a raccoon tail pattern.](/image/docx/y2k-hair-is-back/image-14.jpg)
 
-![Using a different color for the raccoon tail helps it pop.](/image/docx/y2k-hair-is-back/image-16.jpg)
+![Using a different color for the raccoon tail helps it pop.](/image/docx/y2k-hair-is-back/image-15.jpg)
 
-![A leopard print detail on your hair can help you incorporate animal patterns into your daily wear.](/image/docx/y2k-hair-is-back/image-17.jpg)
+![A leopard print detail on your hair can help you incorporate animal patterns into your daily wear.](/image/docx/y2k-hair-is-back/image-16.jpg)
 
   
 
