@@ -5382,7 +5382,7 @@ Wet enough to look styled. Clean enough to look fresh.`,
 		slug: "finasteride-vs-novogro-women-hair-loss",
 		tag: "Hair Thinning",
 		title: `Finasteride vs. NOVOGRO™: Why I'm Tired of Watching Women Borrow Men's Hair-Loss Drugs`,
-		excerpt: `Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution like NOVOGRO™, not another "just try this."`,
+		excerpt: `Finasteride is still a serious medical option, but its side-effect profile and off-label use in women deserve a more careful conversation. A stylist's case for why female thinning needs its own solution — NOVOGRO™, an innovative option that's catching our attention.`,
 		author: "Lauren Chavez",
 		date: "Jun 22, 2026",
 		readTime: "12 min",
@@ -5496,8 +5496,6 @@ The team also tested NV-1065 in a tiny lab-grown follicle model made from human 
 
 ![Preclinical hair follicloid imaging at Day 4, Day 6, and Day 10 across vehicle, testosterone, DHT, and NV-1065, with a length-ratio plot showing NV-1065 outperforming the comparators.|full](/image/nv1065-follicloid.png)
 
-Human data is still needed, but this is a cleaner and more targeted direction than the older hormonal drug approach.
-
 ## More Than DHT: Treating the Whole Follicle
 
 NOVOGRO™ does not stop at DHT. Based on what the team presented, it treats the follicle more like a full growing system. For healthy hair to appear on the scalp, three things need to work together: the follicle has to resist shrinkage signals, the cells that coordinate growth need to stay active, and the surrounding root environment needs to support that growth.
@@ -5513,6 +5511,8 @@ We have already covered how NV-623, NV-624, and NV-273 may help in different con
 > "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
 > — Mara Ellis, Scalp-Care Educator & Master Stylist
 
+That whole-system thinking is not just theory. [Interim clinical trial results](https://getreyou.com/pages/science#clinical-trial) are already in, and they cover the full NOVOGRO™ formula, not just NV-1065 on its own — a 190-person, double-blind study going head-to-head against minoxidil, the category's gold standard. And the early numbers are the kind that make a stylist sit up: 90% of participants saw visibly thicker hair in just 90 days, with 1.7x greater improvement in thinning than minoxidil and triple the satisfaction scores. That is not a promise. That is a serious first look at real heads of hair.
+
 ## The Texture Matters Too
 
 Here is something scientists sometimes overlook but stylists never do: if a product feels terrible, people stop using it.
@@ -5527,7 +5527,7 @@ In the research, the lead molecules were formulated into a ==water-based formula
 
 ## My Stylist's Take
 
-Finasteride can be a serious medical option, but for women, it comes with a lot of baggage. NOVOGRO™ represents a different kind of DHT strategy, led by its NV-1065 molecule: non-steroidal, enzyme-targeted, and tested in hair-relevant lab models. And because NOVOGRO™ is built as a multi-molecule system rather than a single drug, it works on the broader follicle environment at the same time. It still needs human clinical proof, but as hair professionals, this is the kind of science we want to see more of.
+Finasteride can be a serious medical option, but for women, it comes with a lot of baggage. NOVOGRO™ represents a different kind of DHT strategy, led by its NV-1065 molecule: non-steroidal, enzyme-targeted, and tested in hair-relevant lab models. NV-1065 is just one molecule within the larger NOVOGRO™ complex — the technology behind [RE:YOU](https://getreyou.com/) — and because NOVOGRO™ is built as a multi-molecule system rather than a single drug, it works on the broader follicle environment at the same time. Human proof is already starting to roll in, and as hair professionals, this is the kind of science we want to see more of.
 
 :::references
 - Review on finasteride and androgen-pathway therapy in female hair loss. PubMed Central (PMC5803857), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC5803857/
@@ -9856,6 +9856,18 @@ function HomePage() {
 }
 //#endregion
 //#region src/components/article/ArticleHero.tsx
+var SCIENCE_PAGE_URL = "https://getreyou.com/pages/science";
+function linkifyNovogro(text) {
+	const parts = text.split("NOVOGRO™");
+	if (parts.length === 1) return text;
+	return parts.flatMap((part, i) => i === 0 ? [part] : [/* @__PURE__ */ jsx("a", {
+		href: SCIENCE_PAGE_URL,
+		target: "_blank",
+		rel: "noopener noreferrer",
+		className: "text-gold-500 hover:underline",
+		children: "NOVOGRO™"
+	}, i), part]);
+}
 function ArticleHero({ article }) {
 	return /* @__PURE__ */ jsxs("section", {
 		className: "bg-black",
@@ -9918,7 +9930,7 @@ function ArticleHero({ article }) {
 					}),
 					/* @__PURE__ */ jsx("p", {
 						className: "text-charcoal-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl",
-						children: article.excerpt
+						children: linkifyNovogro(article.excerpt)
 					}),
 					/* @__PURE__ */ jsxs("div", {
 						className: "flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-white/10",
@@ -11001,7 +11013,8 @@ function ClinicalTrialInterim() {
 	const tab = clinicalTabs[active];
 	const gridCols = tab.stats.length === 4 ? "grid-cols-2" : "grid-cols-2 md:grid-cols-3";
 	return /* @__PURE__ */ jsxs("div", {
-		className: "my-12 border border-gold-500/25 bg-white/[0.02]",
+		id: "interim-clinical-data",
+		className: "my-12 border border-gold-500/25 bg-white/[0.02] scroll-mt-24",
 		children: [
 			/* @__PURE__ */ jsxs("div", {
 				className: "px-6 pt-6 md:px-8 md:pt-7",
@@ -11062,6 +11075,21 @@ function ClinicalTrialInterim() {
 				})]
 			})
 		]
+	});
+}
+function EditorNote({ paragraphs }) {
+	return /* @__PURE__ */ jsxs("aside", {
+		className: "my-10 border border-white/10 bg-white/[0.03] px-6 py-5 md:px-7 md:py-6",
+		children: [/* @__PURE__ */ jsx("p", {
+			className: "text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-3",
+			children: "Editor's Note"
+		}), /* @__PURE__ */ jsx("div", {
+			className: "flex flex-col gap-3",
+			children: paragraphs.map((p, i) => /* @__PURE__ */ jsx("p", {
+				className: `text-sm leading-relaxed text-charcoal-400 ${i > 0 ? "pt-3 border-t border-white/10" : ""}`,
+				children: renderInline(p)
+			}, i))
+		})]
 	});
 }
 function MarkdownBody({ body }) {
@@ -11190,6 +11218,13 @@ function MarkdownBody({ body }) {
 			}
 		});
 		return `SPLIT_TABLE_PLACEHOLDER_${id}`;
+	});
+	const editorNotePlaceholders = [];
+	processedBody = processedBody.replace(/:::editor-note\n([\s\S]*?):::/g, (_match, inner) => {
+		const paragraphs = inner.trim().split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+		const id = editorNotePlaceholders.length;
+		editorNotePlaceholders.push({ paragraphs });
+		return `EDITOR_NOTE_PLACEHOLDER_${id}`;
 	});
 	const reviewBoxPlaceholders = [];
 	processedBody = processedBody.replace(/:::review-box\n([\s\S]*?):::/g, (_match, inner) => {
@@ -11445,6 +11480,11 @@ function MarkdownBody({ body }) {
 			if (cardGridMatch) {
 				const cg = cardGridPlaceholders[parseInt(cardGridMatch[1])];
 				return /* @__PURE__ */ jsx(CardGrid, { cards: cg.cards }, i);
+			}
+			const editorNoteMatch = trimmed.match(/^EDITOR_NOTE_PLACEHOLDER_(\d+)$/);
+			if (editorNoteMatch) {
+				const en = editorNotePlaceholders[parseInt(editorNoteMatch[1])];
+				return /* @__PURE__ */ jsx(EditorNote, { paragraphs: en.paragraphs }, i);
 			}
 			const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s);
 			if (cta) return /* @__PURE__ */ jsx(CtaCallout, { children: renderInline(cta[2]) }, i);
