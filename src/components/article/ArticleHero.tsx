@@ -2,6 +2,33 @@ import { Link } from 'react-router-dom'
 import { Clock, Calendar, Bookmark, Share2, ChevronRight } from 'lucide-react'
 import type { Article } from '../../data/articles'
 
+const SCIENCE_PAGE_URL = 'https://getreyou.com/pages/science'
+
+// Linkifies every "NOVOGRO™" mention in the hero excerpt to RE:YOU's science page.
+// Scoped to this one hero paragraph — the same `excerpt` field renders as plain
+// text elsewhere (FeaturedGrid, ArticlesPage, RelatedArticles cards), so we don't
+// store markdown in the data itself.
+function linkifyNovogro(text: string) {
+  const parts = text.split('NOVOGRO™')
+  if (parts.length === 1) return text
+  return parts.flatMap((part, i) =>
+    i === 0
+      ? [part]
+      : [
+          <a
+            key={i}
+            href={SCIENCE_PAGE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold-500 hover:underline"
+          >
+            NOVOGRO™
+          </a>,
+          part,
+        ],
+  )
+}
+
 export default function ArticleHero({ article }: { article: Article }) {
   return (
     <section className="bg-black">
@@ -45,7 +72,7 @@ export default function ArticleHero({ article }: { article: Article }) {
         </h1>
 
         <p className="text-charcoal-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-          {article.excerpt}
+          {linkifyNovogro(article.excerpt)}
         </p>
 
         {/* Byline + meta row */}
