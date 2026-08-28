@@ -22,7 +22,7 @@ But "textured hair" is a huge category. A loose wave and a tightly coiled strand
 
 **![Curl pattern is a starting point to determining your hair wash routine.](/image/docx/wash-texture/image-02.png)**
 
-## Wavy Hair: Don't Let "Texture" Make You Overwash
+### Wavy Hair: Don't Let "Texture" Make You Overwash
 
 Wavy hair is often somewhere in the middle. Your scalp may get oily relatively quickly, while your mid-lengths and ends still feel dry or frizzy. This is especially common with fine waves, where heavy products can build up quickly and make the hair look flat. For many people with wavy hair, washing around two to four times a week can be a reasonable starting point.
 
@@ -30,7 +30,7 @@ But don't treat that range like a rule. If your roots look greasy after two days
 
 Your scalp still needs to be cleansed. The trick is finding a routine that cleans the scalp without leaving the lengths feeling stripped.
 
-## Curly Hair: Give Your Curls More Time, But Don't Ignore Your Scalp
+### Curly Hair: Give Your Curls More Time, But Don't Ignore Your Scalp
 
 Curly hair generally benefits from a little more space between washes. Why? Because the shape of the strand makes it harder for natural oils to move evenly down the hair. Add frequent heat styling, coloring, or aggressive detangling, and the lengths can become even more prone to dryness.
 
@@ -40,7 +40,7 @@ And this is where I want to make an important distinction: A dry-looking curl do
 
 The answer isn't necessarily less shampoo. It may be changing where and how you shampoo. Focus the cleanser primarily on the scalp, then let the lather move through the lengths as you rinse rather than aggressively scrubbing the ends.
 
-## Coily and Tightly Coiled Hair: Less Frequent Washing Can Make Sense
+### Coily and Tightly Coiled Hair: Less Frequent Washing Can Make Sense
 
 With coily and tightly coiled textures, moisture management becomes even more important. The tighter the curl pattern, the more difficult it can be for scalp oils to travel down the strand. Hair can therefore feel dry even when the scalp itself does not need additional moisture. For some people with coily hair, washing once a week or every 7–10 days can be a comfortable starting point.
 
