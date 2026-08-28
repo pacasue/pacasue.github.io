@@ -856,7 +856,7 @@ function ClinicalTrialInterim() {
   // 4-stat tabs (Participants, Study Design) render 2 x 2; the 3-stat tab stays 3-up.
   const gridCols = tab.stats.length === 4 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3'
   return (
-    <div className="my-12 border border-gold-500/25 bg-white/[0.02]">
+    <div id="interim-clinical-data" className="my-12 border border-gold-500/25 bg-white/[0.02] scroll-mt-24">
       <div className="px-6 pt-6 md:px-8 md:pt-7">
         <p className="text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-2">3-Month Interim Clinical Data</p>
         <p className="text-sm text-charcoal-400 leading-relaxed">{tab.note}.</p>
@@ -896,6 +896,26 @@ function ClinicalTrialInterim() {
         </a>
       </div>
     </div>
+  )
+}
+
+function EditorNote({ paragraphs }: { paragraphs: string[] }) {
+  return (
+    <aside className="my-10 border border-white/10 bg-white/[0.03] px-6 py-5 md:px-7 md:py-6">
+      <p className="text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-3">Editor's Note</p>
+      <div className="flex flex-col gap-3">
+        {paragraphs.map((p, i) => (
+          <p
+            key={i}
+            className={`text-sm leading-relaxed text-charcoal-400 ${
+              i > 0 ? 'pt-3 border-t border-white/10' : ''
+            }`}
+          >
+            {renderInline(p)}
+          </p>
+        ))}
+      </div>
+    </aside>
   )
 }
 
@@ -1012,6 +1032,16 @@ function MarkdownBody({ body }: { body: string }) {
       const id = splitTablePlaceholders.length
       splitTablePlaceholders.push({ left: { heading: leftHeading, items: leftItems }, right: { heading: rightHeading, items: rightItems } })
       return `SPLIT_TABLE_PLACEHOLDER_${id}`
+    }
+  )
+  const editorNotePlaceholders: { paragraphs: string[] }[] = []
+  processedBody = processedBody.replace(
+    /:::editor-note\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const paragraphs = inner.trim().split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+      const id = editorNotePlaceholders.length
+      editorNotePlaceholders.push({ paragraphs })
+      return `EDITOR_NOTE_PLACEHOLDER_${id}`
     }
   )
   const reviewBoxPlaceholders: { image?: string; imageAlt?: string; bestFor?: string; pros: string[]; cons: string[]; rating?: number; ctaLabel?: string; ctaUrl?: string }[] = []
@@ -1224,7 +1254,14 @@ function MarkdownBody({ body }: { body: string }) {
           return <CardGrid key={i} cards={cg.cards} />
         }
 
-        const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
+        // Editor's note placeholder
+        const editorNoteMatch = trimmed.match(/^EDITOR_NOTE_PLACEHOLDER_(\d+)$/)
+        if (editorNoteMatch) {
+          const en = editorNotePlaceholders[parseInt(editorNoteMatch[1])]
+          return <EditorNote key={i} paragraphs={en.paragraphs} />
+        }
+
+                const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
         if (cta) return <CtaCallout key={i}>{renderInline(cta[2])}</CtaCallout>
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>

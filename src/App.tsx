@@ -9,6 +9,7 @@ import GalleryPage from './pages/GalleryPage'
 import ContributorsPage from './pages/ContributorsPage'
 import AboutPage from './pages/AboutPage'
 import PageTracker from './components/PageTracker'
+import PreferredSourceButton from './components/PreferredSourceButton'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -55,6 +56,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <PageTracker />
+      <PreferredSourceButton />
       <AppRoutes />
     </BrowserRouter>
   )
