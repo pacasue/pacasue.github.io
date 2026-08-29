@@ -20,7 +20,7 @@ Texture is not the only factor that determines wash frequency, but it is a good 
 
 But "textured hair" is a huge category. A loose wave and a tightly coiled strand should not automatically have the same wash schedule. Here's how I would think about it behind the chair.
 
-**![Curl pattern is a starting point to determining your hair wash routine.](/image/docx/wash-texture/image-02.png)**
+![Curl pattern is a starting point to determining your hair wash routine.](/image/docx/wash-texture/image-02.png)
 
 ### Wavy Hair: Don't Let "Texture" Make You Overwash
 
