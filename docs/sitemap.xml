@@ -27,15 +27,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hairprovoices.com/article/y2k-hair-is-back/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://hairprovoices.com/image/docx/y2k-hair-is-back/image-01.png</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>https://hairprovoices.com/article/copper-renaissance-2026/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -531,6 +522,15 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://hairprovoices.com/image/first-date-hair-cover.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hairprovoices.com/article/y2k-hair-is-back/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://hairprovoices.com/image/docx/y2k-hair-is-back/image-01.png</image:loc>
     </image:image>
   </url>
 </urlset>

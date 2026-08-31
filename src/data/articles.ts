@@ -7944,7 +7944,9 @@ for (const article of docxArticles) {
   }
 }
 
-export const articles: Article[] = [...docxArticles, ...legacyArticles]
+// Keep the hand-curated archive in its established order and append newly
+// imported DOCX articles to the end of the all-articles listing.
+export const articles: Article[] = [...legacyArticles, ...docxArticles]
 
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug)
