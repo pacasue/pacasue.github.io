@@ -7985,7 +7985,7 @@ And if they like your hair too? Well, that's just a very nice bonus.`,
 ];
 var legacySlugs = new Set(legacyArticles.map((article) => article.slug));
 for (const article of docxArticles) if (legacySlugs.has(article.slug)) throw new Error(`Imported DOCX article slug "${article.slug}" conflicts with an existing article.`);
-var articles = [...docxArticles, ...legacyArticles];
+var articles = [...legacyArticles, ...docxArticles];
 function getArticleBySlug(slug) {
 	return articles.find((a) => a.slug === slug);
 }
