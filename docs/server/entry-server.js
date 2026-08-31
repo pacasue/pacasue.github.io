@@ -12180,7 +12180,7 @@ function ArticlePage() {
 }
 //#endregion
 //#region src/pages/ArticlesPage.tsx
-var visibleArticles = articles.filter((a) => a.slug !== "what-is-balayage-old");
+var visibleArticles = articles.filter((a) => a.slug !== "what-is-balayage-old").sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
 var sections = [
 	"All",
 	"Trends",
