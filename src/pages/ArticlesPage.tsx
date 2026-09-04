@@ -7,7 +7,9 @@ import Footer from '../components/Footer'
 import FloatingNav from '../components/FloatingNav'
 import { articles } from '../data/articles'
 
-const visibleArticles = articles.filter((a) => a.slug !== 'what-is-balayage-old')
+const visibleArticles = articles
+  .filter((a) => a.slug !== 'what-is-balayage-old')
+  .sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf())
 
 const sections = ['All', 'Trends', 'Inspiration', 'Hair Care'] as const
 

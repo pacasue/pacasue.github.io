@@ -25,6 +25,9 @@ node_modules
 src/generated/
 public/image/docx/
 
+# Build output — deployed via GitHub Actions Pages artifact, not committed
+/docs/
+
 # Microsoft Word temporary lock files are not articles
 content/articles/~$*.docx
 
