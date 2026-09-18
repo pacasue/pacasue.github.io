@@ -8103,9 +8103,9 @@ Both RE:YOU and Rogaine are backed by clinical trials; based on the science here
 :::stat-grid
 eyebrow: Measured results after 3 months
 - 84% | increase in hair thickness | measured via trichoscopy
-- 66% | decrease in shedding | measured via comb test
+- 97% | users experienced less shedding | measured via comb test
 - 18% | increase in hair density | evaluated by clinician
-- 97% | reported less visible shedding | self-reported
+- 89% | users saw improved hair appearance | self-reported
 image: /image/replace-minoxidil-img3.png
 caption: Before (left) and after (right) photos taken from [RE:YOU website](https://getreyou.com/products/dual-path-hair-revival-serum).
 :::

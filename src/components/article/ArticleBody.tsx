@@ -161,9 +161,9 @@ function QuoteCarousel({ quotes }: { quotes: { text: string; attribution?: strin
   const prev = () => navigate((index - 1 + quotes.length) % quotes.length, 'left')
   const next = () => navigate((index + 1) % quotes.length, 'right')
 
-  // Auto-advance every 6 s
+  // Auto-advance every 12 s
   useEffect(() => {
-    const id = setInterval(() => navigate((index + 1) % quotes.length, 'right'), 6000)
+    const id = setInterval(() => navigate((index + 1) % quotes.length, 'right'), 12000)
     return () => clearInterval(id)
   })
 
@@ -484,8 +484,8 @@ function DataTable({ headerRow, bodyRows, styled }: { headerRow: string[]; bodyR
           <div key={ri} className="p-4 flex flex-col gap-3">
             {row.map((cell, ci) => cell ? (
               <div key={ci}>
-                <p className="text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-medium mb-1">{headerRow[ci]}</p>
-                <p className="text-sm text-charcoal-300 leading-relaxed">{renderInline(cell)}</p>
+                <p className="text-[9px] tracking-[0.25em] uppercase text-gold-500/70 font-bold mb-1">{headerRow[ci]}</p>
+                <p className={`text-sm leading-relaxed ${ci === 0 ? 'font-bold text-white' : 'text-charcoal-300'}`}>{renderInline(cell)}</p>
               </div>
             ) : null)}
           </div>
@@ -497,7 +497,7 @@ function DataTable({ headerRow, bodyRows, styled }: { headerRow: string[]; bodyR
           <thead>
             <tr className="bg-white/[0.04] border-b border-white/10">
               {headerRow.map((cell, j) => (
-                <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-medium">
+                <th key={j} className="text-left px-4 py-3 text-[10px] tracking-widest uppercase text-gold-500 font-bold">
                   {cell}
                 </th>
               ))}
@@ -507,7 +507,7 @@ function DataTable({ headerRow, bodyRows, styled }: { headerRow: string[]; bodyR
             {bodyRows.map((row, ri) => (
               <tr key={ri} className="hover:bg-white/[0.02]">
                 {row.map((cell, ci) => (
-                  <td key={ci} className="px-4 py-3 text-charcoal-300 align-top">
+                  <td key={ci} className={`px-4 py-3 align-top ${ci === 0 ? 'font-bold text-white' : 'text-charcoal-300'}`}>
                     {renderInline(cell)}
                   </td>
                 ))}
