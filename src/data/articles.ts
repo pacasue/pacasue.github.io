@@ -205,6 +205,12 @@ export const authors: Record<string, Author> = {
     bio: 'Devika leads HairProVoices\' product and treatment review process, working with a rotating panel of stylists, colorists, and trichology consultants to test and score hair-loss and thinning treatments on real clients. A former clinical research coordinator turned salon educator, she specializes in translating trial data and brand claims into practical, chairside-ready guidance.',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80&auto=format&fit=crop&facepad=3',
   },
+  'Jenna Lindquist': {
+    name: 'Jenna Lindquist',
+    title: 'Hair Thinning & Product Editor',
+    bio: 'Jenna is a working stylist and product editor who spends as much time in group chats with other professionals as she does behind the chair. She specializes in thinning-hair routines, comparing what actually fits a client\'s day-to-day with what the clinical data can support, and writes the recommendations she would give her own clients.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&facepad=3',
+  },
 }
 
 const legacyArticles: Article[] = [
@@ -7934,6 +7940,207 @@ And if they like your hair too? Well, that's just a very nice bonus.`,
     metaTitle: 'What Your Hair Says About You: How You Wear Your Hair on a First Date',
     metaDescription:
       'Hair up, a fresh blowout, sleek straight, or natural texture — what your first-date hairstyle says about how you see yourself, and why there is no one right answer.',
+  },
+  {
+    id: 58,
+    slug: 'will-this-serum-replace-rogaine',
+    tag: 'Hair Thinning',
+    title: 'Will this Hair Serum Replace Rogaine as the New Gold Standard?',
+    excerpt: "Rogaine has been the go-to for thinning hair for decades. A new biotech serum just went up against minoxidil, Rogaine's active ingredient, in the most rigorous clinical trial in the category. Here's how the two compare on routine, science, and results.",
+    author: 'Jenna Lindquist',
+    date: 'Sep 16, 2026',
+    readTime: '15 min',
+    image: '/image/replace-minoxidil-hero.png',
+    category: 'Hair Thinning',
+    section: 'Hair Care',
+    body: `For the woman reading every roundup of "the best hair serums for hair thinning" — you'll most certainly recognize the purple packaging of Rogaine before even reading the name. It's kind of a celebrity in the hair industry, and feels like an obvious first step for anyone navigating hair thinning.
+
+But something new is causing a commotion — slowly infiltrating group chats with other stylists and coming up in conversations with clients who have tried it. ~~RE:YOU is a new brand bringing biotech to beauty and their first product, the [Dual-Path Hair Revival Serum](https://getreyou.com/products/dual-path-hair-revival-serum) is gunning for Rogaine's throne as the industry standard.~~
+
+## Will RE:YOU Be the New Rogaine?
+
+What's causing a buzz about RE:YOU is how ~~in their [clinical study](https://getreyou.com/pages/science#clinical-trial) their serum went head to head with minoxidil, and outperformed it.~~
+
+Minoxidil, the hero ingredient in Rogaine, has been the backbone of over-the-counter hair regrowth for decades. If a client tells us she has "tried something for thinning", it was very likely minoxidil.
+
+That being said, it's our job to be skeptical and critical of any new product entering the market, so we put Rogaine head to head with RE:YOU ourselves. ~~TLDR for anyone in the industry: you're going to want to get this for your clients ASAP.~~
+
+:::product-cta
+title: RE:YOU Dual-Path Hair Revival Serum
+image: /image/replace-minoxidil-img1.png
+cta-label: Check Availability
+cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
+:::
+
+## User Experience: Which Fits Best into Your Daily Routine?
+
+:::scorecard-table
+| Category | Rogaine | RE:YOU |
+|---|---|---|
+| How often | Twice a day | Once a day |
+| Finish | Alcohol and propylene glycol solution; must fully dry before styling | Lightweight, non-greasy, works with styling products |
+| If you stop | Hair loss begins again | Use can reduce over time |
+| Color treatment | Can affect hair dyes and bleach treatments | Compatible |
+| Use with other products | Compatible | Compatible |
+| Side effects | Yes | No |
+:::
+
+:::product-cta
+title: RE:YOU
+cta-label: Check Availability
+cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
+:::
+
+You should always wonder how a new product will fit into your current routine, because not everything is mix and match.
+
+RE:YOU is so easy to recommend to clients because there's usually no need for questions like "is this for me?" or "will this work for my hair?" since it's ~~intentionally designed to work across all types of hair and hair routines.~~
+
+It's compatible with virtually all products in your hair routine; I tell my clients to add it first and let it absorb before layering other products and treatments. It's an easy fit into any hair routine, and the water-based formula absorbs into the scalp in just seconds.
+
+:::quote-carousel
+I love how light it feels. No greasy feeling and even on no-wash days, I never feel any icky or greasy buildup you get from other products.
+— Salon client, 42, using RE:YOU for 1 month
+---
+There is a certain advantage of being a newcomer in a category. RE:YOU's formula is very intentionally built on the mistakes of the products that came before it. Women looking for a product like this are likely using other things; products that can't seamlessly be incorporated into existing routines almost always fail!
+— Kimberleigh Fallon, Fine Hair Specialist
+---
+I think something many products overlook is how their product behaves with color treatment. Color treatment is more common than people think, and the point where many brands fail is that their formulas will pull out color or change it completely! RE:YOU clearly did their homework.
+— Kristi Shan, Salon Manager & Colorist
+:::
+
+![First time testing the lightweight texture of the RE:YOU hair serum.|full](/image/replace-minoxidil-img2.png)
+
+:::product-cta
+title: Rogaine
+cta-label: Check Availability
+cta-url: https://www.rogaine.com/products/womens-rogaine-minoxidil-solution
+:::
+
+RE:YOU is once a day, Rogaine is twice. A small difference day-to-day but the truth of the matter is: ~~even once a day can be hard for some people, especially when you have to strategically build your routine around it.~~
+
+A few things I flag for my clients starting Rogaine:
+
+- **Incompatible with some color treatments:** The alcohol can remove or change the color of some dyes depending on what brands you are using; you and your stylist should do research beforehand. This is not surprising, as the box even states this and texture change as potential effects.
+- **Timing matters:** Rogaine does not fully absorb until hours after applying, so habits like applying right before bed are generally advised against unless you want dirty pillows. Same reasoning applies to styling appointments — if I have a client on Rogaine I usually ask them to pause use for 24 hours in case it interferes with whatever styling or treatment we are doing for that session.
+- ~~Adverse side effects:~~ The common ones include the "dread shed" (initial period of hair loss), scalp irritation, unwanted facial hair growth, toxicity to pets, and elevated heart rate.
+
+:::quote-carousel
+For anyone starting any form of minoxidil — the dread shed is real. It's the reason I nearly almost quit just a few weeks into using Rogaine. Luckily I kept going and I eventually saw the results but those first few weeks are tougher than you might imagine. I genuinely thought I was going to lose it all.
+— Hair thinning client, 56, using minoxidil for FPHL
+---
+Crazy but real: I had a friend lose a cat to minoxidil due to acute liver damage. Cautionary tale for any pet owners: be very careful with application to make sure your furry friends don't get anywhere near it! Have had a few friends switch over to oral because of the risk.
+— Salon client, 48, ex-Rogaine user now on HRT
+---
+Was on Rogaine for a few years with great results, 2015-2019. Unfortunately got to a point where the juice was not worth the squeeze. After countless appointments with my PCP we tied a few things to Rogaine — headaches, scalp itchiness and redness, and elevated heartrate. The hair thinning has come back, some days are harder than others but I've learned to live with it.
+— Hair thinning client, 56, no longer treats hair thinning
+:::
+
+## How it Works: Active Ingredients and Science Explained
+
+:::scorecard-table
+| Category | Rogaine | RE:YOU |
+|---|---|---|
+| Discovery | Originated as blood pressure medication | Developed by PhD scientists, based on hair biology to treat thinning |
+| How it works | Widens blood vessels to improve nutrient delivery in the scalp | Energizes dermal papilla cells located at the base of hair follicles to stimulate growth, also nourishes the scalp environment for increased nutrient delivery |
+| Hero ingredient | minoxidil | NOVOGRO™ |
+:::
+
+:::product-cta
+title: RE:YOU
+cta-label: Check Availability
+cta-url: https://getreyou.com/products/dual-path-hair-revival-serum
+:::
+
+RE:YOU is built around ~~[NOVOGRO™](https://getreyou.com/pages/science#novogro)~~, a proprietary group of small molecules developed specifically for hair-follicle biology by their in-house team of PhD scientists. The serum uses three key molecules:
+
+- **~~NOVOGRO™ 623 + 624 for follicle support:~~** These target the dermal papilla cells, which are located at the base of the hair follicle and regulate growth.
+- **~~NOVOGRO™ 273 for the scalp environment:~~** This works on the follicle's surrounding environment, restoring the flow of oxygen, nutrients, and regenerative signals to the hair follicle.
+
+The current trend in the hair space is that brands are pulling the same botanicals and "novel" ingredients (peptides, exosomes, etc.) into their formulas with loose testing and evidence around those ingredients. It gets really overwhelming for shoppers when you see so much overlap in ingredient lists. My advice is to just push these to the side — it's mostly just noise and very good marketing.
+
+RE:YOU is different.
+
+Their research team screened roughly 20 million compounds before narrowing down to three and testing them in human follicle cells and 3D mini-follicle models. The research has been published as a ~~[preprint](https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1)~~, and on top of that ~~they are running a 190-person clinical trial, double-blinded, against minoxidil~~ ([90 day results summarized below](https://getreyou.com/pages/science#clinical-trial "muted")).
+
+It's a very refreshing approach to product development, and an exciting look into what happens when you combine science with wellness and beauty.
+
+:::quote-carousel
+What excites me about RE:YOU is its novel dual-pathway approach, using molecules developed specifically for hair thinning to support both activity within the follicle and the surrounding environment needed for healthy hair growth.
+— Dr. Katie Beleznay, Board Certified Dermatologist
+---
+RE:YOU impresses me because it takes a science-first approach to fuller-looking hair by targeting both follicle activity and the scalp environment. It's non-hormonal, thoughtfully developed, and backed by clinical studies.
+— Dr. Joe, M.D., ER Doctor, 5M+ Followers
+---
+I'm always looking for products backed by innovative science—not just marketing claims. What makes RE:YOU stand out is its proprietary NOVOGRO™ technology, which takes a unique approach on targeting mechanisms that help support both a healthier scalp environment and follicular health.
+— Ariel Dai, Dermatology Physician Assistant
+:::
+
+:::product-cta
+title: Rogaine
+cta-label: Check Availability
+cta-url: https://www.rogaine.com/products/womens-rogaine-minoxidil-solution
+:::
+
+~~Fun fact: minoxidil was not originally created for hair.~~ It was first developed as an oral blood pressure medication, and hair growth showed up as a side effect. That observation was eventually turned into the topical we know today and it's the main active in Rogaine's formula.
+
+Minoxidil works by widening blood vessels and boosting the flow of nutrients and signals towards hair follicles. It also nudges resting follicles into the growth phase and helps them stay there longer.
+
+Rogaine can turn growth up, but it does not change the root cause of follicle shrinkage. That's why it requires perpetual use — once you stop using it, the hair thinning comes right back.
+
+:::editor-note
+title: Hair Science
+Minoxidil does not work straight out of the bottle. It needs a scalp enzyme called "sulfotransferase" to convert it into its active form. Enzyme levels vary a lot from person to person and that's why it is not as effective for some users!
+:::
+
+## Clinical Results & Evidence: What Results Should You Expect?
+
+Clients, friends, coworkers — all great places for information and the reason you read publications like ours. But when it comes down to the wire, useful to look at the numbers!
+
+Both RE:YOU and Rogaine are backed by clinical trials; based on the science here's what people can expect from each (results are taken from each brand's respective sites).
+
+### RE:YOU
+
+:::stat-grid
+eyebrow: Measured results after 3 months
+- 84% | increase in hair thickness | measured via trichoscopy
+- 66% | decrease in shedding | measured via comb test
+- 18% | increase in hair density | evaluated by clinician
+- 97% | reported less visible shedding | self-reported
+image: /image/replace-minoxidil-img3.png
+caption: Before (left) and after (right) photos taken from [RE:YOU website](https://getreyou.com/products/dual-path-hair-revival-serum).
+:::
+
+:::product-cta
+cta-label: See More
+cta-url: https://getreyou.com/pages/science
+:::
+
+### Rogaine
+
+:::stat-grid
+eyebrow: Self-reported user results after 8 months
+- 19% | reported moderate regrowth | against 7% placebo
+- 40% | reported minimal regrowth | against 33% placebo
+image: /image/replace-minoxidil-img4.png
+caption: Before (left) and after (right) photos taken from [Rogaine website](https://www.rogaine.com/).
+:::
+
+:::product-cta
+cta-label: See More
+cta-url: https://www.rogaine.com/products/womens-rogaine-minoxidil-solution
+:::
+
+## Editor's Pick: What am I Telling My Clients?
+
+Rogaine has been the go-to for decades, but hair science has moved on. After putting the two side by side, it's hard to make the case for starting there today.
+
+RE:YOU is once a day instead of twice. It works with color and styling instead of against them. It was built from the ground up for hair, not borrowed from a blood pressure pill. And it went head-to-head with minoxidil in a double-blind clinical trial, with measured results in just 90 days.
+
+Rogaine asks you to plan your routine around it, keep an eye out for side effects, and keep using it indefinitely. RE:YOU asks for about 30 seconds a day.
+
+~~So, if your clients are asking what to try for thinning, this is the one we're recommending first. With a 90-day money-back guarantee, the only thing they have to lose is the hair in the shower drain.~~`,
+    metaTitle: 'Will this Hair Serum Replace Rogaine as the New Gold Standard?',
+    metaDescription: "Rogaine has been the go-to for thinning hair for decades. A new biotech serum just went head-to-head with minoxidil in the category's most rigorous clinical trial. Here's how RE:YOU and Rogaine compare on routine, science, and results.",
   },
 ]
 

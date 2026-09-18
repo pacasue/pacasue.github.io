@@ -18,13 +18,18 @@ function SectionHeading({ children, id }: { children: React.ReactNode; id?: stri
 }
 
 function Subheading({ children, id }: { children: React.ReactNode; id?: string }) {
+  const isProductTitle = children === 'RE:YOU' || children === 'Rogaine'
   return (
     <h3
       id={id}
-      className="text-lg font-semibold text-charcoal-100 mt-8 mb-3 flex items-center gap-3"
+      className={
+        isProductTitle
+          ? 'text-2xl md:text-3xl font-bold text-white mt-8 mb-5 leading-snug'
+          : 'text-lg font-semibold text-charcoal-100 mt-8 mb-3 flex items-center gap-3'
+      }
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
-      <span className="inline-block w-4 h-0.5 bg-gold-500 flex-shrink-0" />
+      {!isProductTitle && <span className="inline-block w-4 h-0.5 bg-gold-500 flex-shrink-0" />}
       {children}
     </h3>
   )
@@ -752,29 +757,31 @@ const formulaRows = [
   { col1: 'Processing Time', col2: '35 minutes, no heat', col3: '' },
 ]
 
-function renderInline(text: string): React.ReactNode[] {
-  const pattern = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|==(.+?)==|~~(.+?)~~|\[([^\]]+)\]\(([^)]+)\))/g
+function renderInline(text: string, mutedLinks = false): React.ReactNode[] {
+  const pattern = /(\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|==(.+?)==|~~(.+?)~~|\[([^\]]+)\]\(([^)\s]+)(?:\s+"([^"]*)")?\))/g
   const nodes: React.ReactNode[] = []
   let cursor = 0
   let match: RegExpExecArray | null
   let key = 0
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > cursor) nodes.push(text.slice(cursor, match.index))
-    if (match[2]) nodes.push(<strong key={key++} className="text-charcoal-100 font-semibold">{match[2]}</strong>)
+    if (match[2]) nodes.push(<strong key={key++} className="text-charcoal-100 font-semibold">{renderInline(match[2], mutedLinks)}</strong>)
     else if (match[3]) nodes.push(<em key={key++}>{match[3]}</em>)
     else if (match[4]) nodes.push(<code key={key++} className="text-[0.9em] bg-white/10 px-1 rounded font-mono">{match[4]}</code>)
-    else if (match[5]) nodes.push(<mark key={key++} className="bg-gold-500 text-black font-semibold px-0.5 rounded-sm not-italic">{match[5]}</mark>)
-    else if (match[6]) nodes.push(<span key={key++} className="text-gold-500">{match[6]}</span>)
+    else if (match[5]) nodes.push(<mark key={key++} className="bg-gold-500 text-black font-semibold px-0.5 rounded-sm not-italic">{renderInline(match[5], mutedLinks)}</mark>)
+    else if (match[6]) nodes.push(<span key={key++} className="text-gold-500">{renderInline(match[6], mutedLinks)}</span>)
     else if (match[7]) {
       const href = match[8] ?? '#'
+      const muted = mutedLinks || match[9] === 'muted'
       // In-page anchors (e.g. "#the-scorecard") should scroll on the same page,
       // not open a new tab — only external links open in a new tab.
       const isAnchor = href.startsWith('#')
+      const isUnderlined = muted || /getreyou\.com\/(products\/|pages\/science)|biorxiv\.org/.test(href)
       nodes.push(
         <a
           key={key++}
           href={href}
-          className="text-gold-500 hover:underline"
+          className={muted ? 'underline hover:text-charcoal-200' : `text-gold-500 ${isUnderlined ? 'underline' : 'hover:underline'}`}
           {...(isAnchor ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
         >
           {match[7]}
@@ -899,10 +906,12 @@ function ClinicalTrialInterim() {
   )
 }
 
-function EditorNote({ paragraphs }: { paragraphs: string[] }) {
+function EditorNote({ title, paragraphs }: { title?: string; paragraphs: string[] }) {
   return (
     <aside className="my-10 border border-white/10 bg-white/[0.03] px-6 py-5 md:px-7 md:py-6">
-      <p className="text-[9px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-3">Editor's Note</p>
+      <p className="text-sm md:text-base tracking-[0.2em] uppercase text-gold-500 font-semibold mb-3">
+        {title || "Editor's Note"}
+      </p>
       <div className="flex flex-col gap-3">
         {paragraphs.map((p, i) => (
           <p
@@ -916,6 +925,160 @@ function EditorNote({ paragraphs }: { paragraphs: string[] }) {
         ))}
       </div>
     </aside>
+  )
+}
+
+function ProductCta({
+  title,
+  image,
+  imageAlt,
+  ctaLabel,
+  ctaUrl,
+}: {
+  title?: string
+  image?: string
+  imageAlt?: string
+  ctaLabel: string
+  ctaUrl: string
+}) {
+  const button = (
+    <a
+      href={ctaUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center bg-gold-500 hover:bg-gold-400 text-black font-bold text-[11px] tracking-widest uppercase px-8 py-3.5 transition-colors"
+    >
+      {ctaLabel}
+    </a>
+  )
+
+  if (title && !image) {
+    return (
+      <div className="my-10">
+        <h3
+          className="text-2xl md:text-3xl font-bold text-white mb-5 leading-snug"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          {title}
+        </h3>
+        {button}
+      </div>
+    )
+  }
+
+  if (!title && !image) {
+    return <div className="my-8">{button}</div>
+  }
+
+  return (
+    <div className="my-10 border border-white/10 overflow-hidden bg-charcoal-900">
+      <div className="p-6 md:p-8">
+        {title && (
+          <h3
+            className="text-2xl md:text-3xl font-bold text-white mb-5 leading-snug"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {title}
+          </h3>
+        )}
+        {button}
+      </div>
+      {image && (
+        <div className="relative overflow-hidden bg-[#f4f1ea] border-t border-white/10">
+          <img
+            src={image}
+            alt={imageAlt || title || 'Product photo'}
+            loading="lazy"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      )}
+    </div>
+  )
+}
+
+function parseStatDisplay(display: string) {
+  const m = display.trim().match(/^([^\d]*)(\d+(?:\.\d+)?)(.*)$/)
+  if (!m) return { display }
+  const decimals = m[2].includes('.') ? m[2].split('.')[1].length : 0
+  return {
+    display,
+    value: parseFloat(m[2]),
+    prefix: m[1],
+    suffix: m[3],
+    decimals,
+  }
+}
+
+function StatGrid({
+  eyebrow,
+  stats,
+  image,
+  caption,
+}: {
+  eyebrow?: string
+  stats: { display: string; label: string; foot?: string }[]
+  image?: string
+  caption?: string
+}) {
+  return (
+    <div className="my-8">
+      {eyebrow && (
+        <p className="text-[10px] tracking-[0.3em] uppercase text-gold-500 font-semibold mb-4">
+          {eyebrow}
+        </p>
+      )}
+      <div className="grid grid-cols-2 border border-white/15">
+        {stats.map((s, i) => {
+          const parsed = parseStatDisplay(s.display)
+          const isLeft = i % 2 === 0
+          const hasBottom = image ? true : stats.length > 2 && i < 2
+          return (
+            <div
+              key={i}
+              className={`p-6 md:p-8 flex flex-col gap-1.5 text-center ${isLeft ? 'border-r border-white/15' : ''} ${hasBottom ? 'border-b border-white/15' : ''}`}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-gold-500 leading-none font-sans">
+                {parsed.value != null ? (
+                  <CountUpStat
+                    value={parsed.value}
+                    decimals={parsed.decimals}
+                    prefix={parsed.prefix}
+                    suffix={parsed.suffix}
+                  />
+                ) : (
+                  s.display
+                )}
+              </div>
+              <p
+                className="text-xs text-gold-500/75 leading-snug mt-1"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {s.label}
+              </p>
+              {s.foot ? (
+                <p
+                  className="text-[11px] text-charcoal-400 italic"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  {s.foot}
+                </p>
+              ) : null}
+            </div>
+          )
+        })}
+        {image && (
+          <div className="col-span-2">
+            <img src={image} alt={caption || ''} loading="lazy" className="w-full h-auto object-cover block" />
+          </div>
+        )}
+      </div>
+      {caption && (
+        <p className="text-[11px] text-charcoal-500 tracking-wider mt-3">
+          {renderInline(caption, true)}
+        </p>
+      )}
+    </div>
   )
 }
 
@@ -1034,14 +1197,72 @@ function MarkdownBody({ body }: { body: string }) {
       return `SPLIT_TABLE_PLACEHOLDER_${id}`
     }
   )
-  const editorNotePlaceholders: { paragraphs: string[] }[] = []
+  const editorNotePlaceholders: { title?: string; paragraphs: string[] }[] = []
   processedBody = processedBody.replace(
     /:::editor-note\n([\s\S]*?):::/g,
     (_match, inner: string) => {
-      const paragraphs = inner.trim().split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+      const lines = inner.trim().split('\n')
+      let title: string | undefined
+      if (lines[0]?.startsWith('title:')) {
+        title = lines[0].replace(/^title:\s*/, '').trim()
+        lines.shift()
+      }
+      const paragraphs = lines.join('\n').trim().split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
       const id = editorNotePlaceholders.length
-      editorNotePlaceholders.push({ paragraphs })
+      editorNotePlaceholders.push({ title, paragraphs })
       return `EDITOR_NOTE_PLACEHOLDER_${id}`
+    }
+  )
+  const productCtaPlaceholders: { title?: string; image?: string; imageAlt?: string; ctaLabel: string; ctaUrl: string }[] = []
+  processedBody = processedBody.replace(
+    /:::product-cta\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n')
+      let title: string | undefined
+      let image: string | undefined
+      let imageAlt: string | undefined
+      let ctaLabel = 'Check Availability'
+      let ctaUrl = '#'
+      for (const line of lines) {
+        const titleM = line.match(/^title:\s*(.+)$/)
+        const imageM = line.match(/^image:\s*(.+)$/)
+        const altM = line.match(/^alt:\s*(.+)$/)
+        const labelM = line.match(/^cta-label:\s*(.+)$/)
+        const urlM = line.match(/^cta-url:\s*(.+)$/)
+        if (titleM) { title = titleM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (imageM) { image = imageM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (altM) { imageAlt = altM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (labelM) { ctaLabel = labelM[1].trim(); continue }
+        if (urlM) { ctaUrl = urlM[1].trim(); continue }
+      }
+      const id = productCtaPlaceholders.length
+      productCtaPlaceholders.push({ title, image, imageAlt, ctaLabel, ctaUrl })
+      return `PRODUCT_CTA_PLACEHOLDER_${id}`
+    }
+  )
+  const statGridPlaceholders: { eyebrow?: string; stats: { display: string; label: string; foot?: string }[]; image?: string; caption?: string }[] = []
+  processedBody = processedBody.replace(
+    /:::stat-grid\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const lines = inner.trim().split('\n').filter(Boolean)
+      let eyebrow: string | undefined
+      let image: string | undefined
+      let caption: string | undefined
+      const stats: { display: string; label: string; foot?: string }[] = []
+      for (const line of lines) {
+        const eyebrowM = line.match(/^eyebrow:\s*(.+)$/)
+        const imageM = line.match(/^image:\s*(.+)$/)
+        const captionM = line.match(/^caption:\s*(.+)$/)
+        if (eyebrowM) { eyebrow = eyebrowM[1].trim(); continue }
+        if (imageM) { image = imageM[1].trim().replace(/^['"]|['"]$/g, ''); continue }
+        if (captionM) { caption = captionM[1].trim(); continue }
+        if (!line.trim().startsWith('- ')) continue
+        const parts = line.replace(/^-\s+/, '').split('|').map((p) => p.trim())
+        stats.push({ display: parts[0] ?? '', label: parts[1] ?? '', foot: parts[2] || undefined })
+      }
+      const id = statGridPlaceholders.length
+      statGridPlaceholders.push({ eyebrow, stats, image, caption })
+      return `STAT_GRID_PLACEHOLDER_${id}`
     }
   )
   const reviewBoxPlaceholders: { image?: string; imageAlt?: string; bestFor?: string; pros: string[]; cons: string[]; rating?: number; ctaLabel?: string; ctaUrl?: string }[] = []
@@ -1258,7 +1479,19 @@ function MarkdownBody({ body }: { body: string }) {
         const editorNoteMatch = trimmed.match(/^EDITOR_NOTE_PLACEHOLDER_(\d+)$/)
         if (editorNoteMatch) {
           const en = editorNotePlaceholders[parseInt(editorNoteMatch[1])]
-          return <EditorNote key={i} paragraphs={en.paragraphs} />
+          return <EditorNote key={i} title={en.title} paragraphs={en.paragraphs} />
+        }
+
+        const productCtaMatch = trimmed.match(/^PRODUCT_CTA_PLACEHOLDER_(\d+)$/)
+        if (productCtaMatch) {
+          const pc = productCtaPlaceholders[parseInt(productCtaMatch[1])]
+          return <ProductCta key={i} title={pc.title} image={pc.image} imageAlt={pc.imageAlt} ctaLabel={pc.ctaLabel} ctaUrl={pc.ctaUrl} />
+        }
+
+        const statGridMatch = trimmed.match(/^STAT_GRID_PLACEHOLDER_(\d+)$/)
+        if (statGridMatch) {
+          const sg = statGridPlaceholders[parseInt(statGridMatch[1])]
+          return <StatGrid key={i} eyebrow={sg.eyebrow} stats={sg.stats} image={sg.image} caption={sg.caption} />
         }
 
                 const cta = trimmed.match(/^(\*\*CTA:\*\*|CTA:)\s*(.+)$/s)
