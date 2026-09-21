@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const SESSION_PV_COUNT_KEY = 'hpv_session_pv_count'
@@ -7,10 +7,23 @@ const FIRED_PV3_KEY        = 'hpv_fired_pv3'
 
 export default function PageTracker () {
   const { pathname } = useLocation()
+  const isFirstWhopPage = useRef(true)
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const cvg = (window as any).cvg
+      const whop = (window as any).whop
+
+      // Initial landing is fired by the official snippet in index.html.
+      // Subsequent SPA navigations still need a page event.
+      if (whop?.track) {
+        if (isFirstWhopPage.current) {
+          isFirstWhopPage.current = false
+        } else {
+          whop.track('page')
+        }
+      }
+
       if (!cvg) return
 
       ;(window as any).resetScrollDepth?.()

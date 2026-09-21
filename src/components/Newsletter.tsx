@@ -13,6 +13,8 @@ export default function Newsletter() {
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
+      const trimmed = email.trim()
+      ;(window as any).whop?.track?.('lead', { email: trimmed })
     }, 1000)
   }
 
