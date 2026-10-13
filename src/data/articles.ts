@@ -5524,7 +5524,7 @@ We have already covered how NV-623, NV-624, and NV-273 may help in different con
 > "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
 > — Mara Ellis, Scalp-Care Educator & Master Stylist
 
-That whole-system thinking is not just theory. [Interim clinical trial results](https://getreyou.com/pages/science#clinical-trial) are already in, and they cover the full NOVOGRO™ formula, not just NV-1065 on its own — a 190-person, double-blind study going head-to-head against minoxidil, the category's gold standard. And the early numbers are the kind that make a stylist sit up: 90% of participants saw visibly thicker hair in just 90 days, with 1.7x greater improvement in thinning than minoxidil and triple the satisfaction scores. That is not a promise. That is a serious first look at real heads of hair.
+We now have an early look at results on real scalps. [RE:YOU’s interim 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) come from a randomized, double-blind study of 190 women comparing its Dual-Path Hair Revival Serum, containing NV-623, NV-624, and NV-273, with topical minoxidil. The brand reports 50% greater hair counts and 50% greater hair density than the minoxidil group, plus a 56% drop in shedding—a reduction reported as 44% better than minoxidil. Overall, 97% of RE:YOU participants showed reduced shedding, and 89% reported improved hair appearance. Those are changes a stylist pays attention to. These findings apply to the tested RE:YOU serum; they do not establish clinical results for NV-1065 or a comparison with finasteride. The full six-month results are still pending.
 
 ## The Texture Matters Too
 
