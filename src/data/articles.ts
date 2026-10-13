@@ -5195,13 +5195,12 @@ maximum: 100
 footnote: **56% less shedding.** Average hairs shed in a standardized comb test, shown as a percentage of the starting amount (baseline = 100%). Source: [RE:YOU’s 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results).
 :::
 
-:::bar-chart
-title: Reported differences vs. minoxidil at 90 days
-maximum: 100
-- Hair count: 50
-- Hair density: 50
-- Shedding reduction: 44
-footnote: RE:YOU reported **50% greater hair counts**, **50% greater hair density**, and a **44% better reduction in shedding** compared with minoxidil. These are relative comparisons, not percentage-point differences. Source: [RE:YOU’s 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results).
+:::stat-grid
+eyebrow: RE:YOU vs. minoxidil — 90-day results
+- 50% | More hairs | Compared with minoxidil
+- 50% | Greater hair density | Compared with minoxidil
+- 44% | Greater reduction in shedding | Compared with minoxidil
+caption: Results reported by RE:YOU after 90 days. Source: [RE:YOU’s clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results).
 :::
 
 Those are changes clients care about: less hair coming out and fuller-looking coverage. It also helps that the serum was compared directly with minoxidil, an option many clients already know.

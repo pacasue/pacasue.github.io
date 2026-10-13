@@ -1021,6 +1021,7 @@ function StatGrid({
   image?: string
   caption?: string
 }) {
+  const threeStats = stats.length === 3
   return (
     <div className="my-8">
       {eyebrow && (
@@ -1028,15 +1029,18 @@ function StatGrid({
           {eyebrow}
         </p>
       )}
-      <div className="grid grid-cols-2 border border-white/15">
+      <div className={`grid border border-white/15 ${threeStats ? 'grid-cols-1 sm:grid-cols-3 bg-white/[0.02]' : 'grid-cols-2'}`}>
         {stats.map((s, i) => {
           const parsed = parseStatDisplay(s.display)
           const isLeft = i % 2 === 0
           const hasBottom = image ? true : stats.length > 2 && i < 2
+          const borders = threeStats
+            ? `${i < 2 ? 'border-b sm:border-b-0 sm:border-r border-white/15' : ''} ${image ? 'sm:border-b border-white/15' : ''}`
+            : `${isLeft ? 'border-r border-white/15' : ''} ${hasBottom ? 'border-b border-white/15' : ''}`
           return (
             <div
               key={i}
-              className={`p-6 md:p-8 flex flex-col gap-1.5 text-center ${isLeft ? 'border-r border-white/15' : ''} ${hasBottom ? 'border-b border-white/15' : ''}`}
+              className={`p-6 md:p-8 flex flex-col gap-1.5 text-center ${borders}`}
             >
               <div className="text-4xl md:text-5xl font-bold text-gold-500 leading-none font-sans">
                 {parsed.value != null ? (
@@ -1051,7 +1055,7 @@ function StatGrid({
                 )}
               </div>
               <p
-                className="text-xs text-gold-500/75 leading-snug mt-1"
+                className={threeStats ? 'text-sm font-semibold text-charcoal-100 leading-snug mt-1' : 'text-xs text-gold-500/75 leading-snug mt-1'}
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {s.label}
@@ -1068,7 +1072,7 @@ function StatGrid({
           )
         })}
         {image && (
-          <div className="col-span-2">
+          <div className={threeStats ? 'col-span-1 sm:col-span-3' : 'col-span-2'}>
             <img src={image} alt={caption || ''} loading="lazy" className="w-full h-auto object-cover block" />
           </div>
         )}
