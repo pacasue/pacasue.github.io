@@ -269,8 +269,8 @@ function ImagePlaceholder({ caption }: { caption: string }) {
   )
 }
 
-function BarChart({ title, bars, footnote }: { title: string; bars: { label: string; value: number }[]; footnote?: string }) {
-  const max = Math.max(...bars.map((b) => b.value), 1)
+function BarChart({ title, bars, footnote, maximum }: { title: string; bars: { label: string; value: number }[]; footnote?: string; maximum?: number }) {
+  const max = Math.max(maximum ?? 0, ...bars.map((b) => b.value), 1)
   return (
     <div className="my-10 border border-white/10 bg-white/[0.02] p-6 md:p-8">
       <p className="text-[11px] tracking-[0.25em] text-gold-500 font-medium mb-6">{title.replace(/[a-z]/g, (c) => c.toUpperCase())}</p>
@@ -1086,7 +1086,7 @@ function MarkdownBody({ body }: { body: string }) {
   // Pre-process: extract :::quote-carousel blocks before splitting on double newlines
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
   const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
-  const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string }[] = []
+  const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string; maximum?: number }[] = []
   const lineChartPlaceholders: { title: string; xLabel?: string; yLabel?: string; series: string[]; points: { x: string; values: number[] }[]; footnote?: string }[] = []
   const cascadePlaceholders: { items: string[] }[] = []
   let processedBody = body.replace(
@@ -1106,6 +1106,8 @@ function MarkdownBody({ body }: { body: string }) {
       const title = titleLine ? titleLine.replace(/^title:\s*/, '') : ''
       const footnoteLine = lines.find((l) => l.startsWith('footnote:'))
       const footnote = footnoteLine ? footnoteLine.replace(/^footnote:\s*/, '') : undefined
+      const maximumLine = lines.find((l) => /^maximum:\s*\d+$/.test(l))
+      const maximum = maximumLine ? Number(maximumLine.replace(/^maximum:\s*/, '')) : undefined
       const bars = lines
         .filter((l) => l.startsWith('- '))
         .map((l) => {
@@ -1114,7 +1116,7 @@ function MarkdownBody({ body }: { body: string }) {
         })
         .filter(Boolean) as { label: string; value: number }[]
       const id = barChartPlaceholders.length
-      barChartPlaceholders.push({ title, bars, footnote })
+      barChartPlaceholders.push({ title, bars, footnote, maximum })
       return `BARCHART_PLACEHOLDER_${id}`
     }
   )
@@ -1409,7 +1411,7 @@ function MarkdownBody({ body }: { body: string }) {
         const barChartMatch = trimmed.match(/^BARCHART_PLACEHOLDER_(\d+)$/)
         if (barChartMatch) {
           const bp = barChartPlaceholders[parseInt(barChartMatch[1])]
-          return <BarChart key={i} title={bp.title} bars={bp.bars} footnote={bp.footnote} />
+          return <BarChart key={i} title={bp.title} bars={bp.bars} footnote={bp.footnote} maximum={bp.maximum} />
         }
 
         // Line chart placeholder

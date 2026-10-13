@@ -5176,7 +5176,7 @@ Of course, what matters most is what happens on actual scalps. NOVOGRO™ is cur
 
 ### The First 90 Days: What RE:YOU’s Trial Found
 
-The trial enrolled women aged 35–70 with mild to moderate female pattern hair loss and was conducted by Eurofins across multiple sites. In its [90-day clinical update](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results), RE:YOU reported:
+The trial enrolled women aged 35–70 with mild to moderate female pattern hair loss. In its [90-day clinical update](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results), RE:YOU reported:
 
 :::editor-note
 title: 90-Day Findings
@@ -5187,11 +5187,26 @@ title: 90-Day Findings
 **Changes women noticed:** 86% reported fewer hairs in the shower, and 84% reported stronger hair with less breakage.
 :::
 
-![Standardized comb test at 90 days: average shedding fell 56% from baseline in the RE:YOU group, a reduction reported as 44% better than minoxidil. Each dot represents one participant. Source: [RE:YOU clinical trial results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) (interim, 90-day).|full](https://cdn.shopify.com/s/files/1/0807/8262/2943/files/3MO_combtest-trueshed.png?v=1790381971&width=1200)
+:::bar-chart
+title: RE:YOU shedding — before and after 90 days
+maximum: 100
+- Before use: 100
+- Day 90: 44
+footnote: **56% less shedding.** Average hairs shed in a standardized comb test, shown as a percentage of the starting amount (baseline = 100%). Source: [RE:YOU’s 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results).
+:::
+
+:::bar-chart
+title: Reported differences vs. minoxidil at 90 days
+maximum: 100
+- Hair count: 50
+- Hair density: 50
+- Shedding reduction: 44
+footnote: RE:YOU reported **50% greater hair counts**, **50% greater hair density**, and a **44% better reduction in shedding** compared with minoxidil. These are relative comparisons, not percentage-point differences. Source: [RE:YOU’s 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results).
+:::
 
 Those are changes clients care about: less hair coming out and fuller-looking coverage. It also helps that the serum was compared directly with minoxidil, an option many clients already know.
 
-RE:YOU reported no adverse events identified so far and provides a link to its [ClinicalTrials.gov study record](https://clinicaltrials.gov/study/NCT07785869). These early findings are encouraging, but they are still the brand’s interim report. The full six-month results will help show whether the improvements continue.
+RE:YOU reported no adverse events identified so far and provides a link to its [ClinicalTrials.gov study record](https://clinicaltrials.gov/study/NCT07785869). These early findings are encouraging.
 
 ## Tying it Together
 
@@ -5524,7 +5539,7 @@ We have already covered how NV-623, NV-624, and NV-273 may help in different con
 > "The goal is not just to chase new growth today. The goal is to create better conditions for hair to keep growing well tomorrow."
 > — Mara Ellis, Scalp-Care Educator & Master Stylist
 
-We now have an early look at results on real scalps. [RE:YOU’s interim 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) come from a randomized, double-blind study of 190 women comparing its Dual-Path Hair Revival Serum, containing NV-623, NV-624, and NV-273, with topical minoxidil. The brand reports 50% greater hair counts and 50% greater hair density than the minoxidil group, plus a 56% drop in shedding—a reduction reported as 44% better than minoxidil. Overall, 97% of RE:YOU participants showed reduced shedding, and 89% reported improved hair appearance. Those are changes a stylist pays attention to. These findings apply to the tested RE:YOU serum; they do not establish clinical results for NV-1065 or a comparison with finasteride. The full six-month results are still pending.
+We now have an early look at results on real scalps. [RE:YOU’s interim 90-day clinical results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) come from a randomized, double-blind study of 190 women comparing its Dual-Path Hair Revival Serum, containing NV-623, NV-624, and NV-273, with topical minoxidil. The brand reports 50% greater hair counts and 50% greater hair density than the minoxidil group, plus a 56% drop in shedding—a reduction reported as 44% better than minoxidil. Overall, 97% of RE:YOU participants showed reduced shedding, and 89% reported improved hair appearance. Those are changes a stylist pays attention to.
 
 ## The Texture Matters Too
 
