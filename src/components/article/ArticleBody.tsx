@@ -108,7 +108,7 @@ function InlineImage({ src, caption, full }: { src: string; caption: string; ful
         )}
         <img
           src={src}
-          alt={caption}
+          alt={caption.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')}
           loading="lazy"
           onLoad={() => setLoaded(true)}
           className="w-full object-cover transition-opacity duration-500"
@@ -116,7 +116,7 @@ function InlineImage({ src, caption, full }: { src: string; caption: string; ful
         />
       </div>
       <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
-        {caption}
+        {renderInline(caption)}
       </figcaption>
     </figure>
   )
@@ -1499,7 +1499,7 @@ function MarkdownBody({ body }: { body: string }) {
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
         // inline image: ![caption](url) or ![caption|full](url) — empty url becomes a placeholder
-        const img = trimmed.match(/^!\[([^\]]*)\]\(([^)]*)\)$/)
+        const img = trimmed.match(/^!\[([^\n]*)\]\(([^)]*)\)$/)
         if (img) {
           const full = img[1].endsWith('|full')
           const caption = full ? img[1].slice(0, -5) : img[1]

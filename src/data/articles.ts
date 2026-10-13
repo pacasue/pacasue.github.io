@@ -5150,7 +5150,7 @@ The distinction between Minoxidil and NOVOGRO™ reflects a broader shift in the
 | Main approach | A focused hair-growth active with a long history of use | A multi-pathway system designed to support several causes of thinning at once |
 | What it supports | Hair regrowth for some users with consistent long-term use | Follicle-cell vitality, DHT-related miniaturization support, and oxygen/nutrient-related follicle signaling |
 | Client experience | Can be effective, but some clients struggle with irritation, shedding, greasiness, unwanted hair growth, or styling disruption | Designed as a lightweight, water-based serum system that may fit more easily into a daily routine |
-| Testing behind it | Decades of use and strong category recognition | Early research using primary follicle cells, 3D mini-follicle models, and side-by-side serum comparisons; [a double-blind study with 150+ participants comparing NOVOGRO™ against minoxidil is also ongoing](https://getreyou.com/). |
+| Testing behind it | Decades of use and strong category recognition | Early laboratory research, plus [reported 90-day findings from a randomized, double-blind trial](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) of RE:YOU’s serum against topical minoxidil, involving 190 women. Full six-month results are pending. |
 | Stylist read | Still the category benchmark | One of the more interesting new approaches because it treats thinning like a multi-cause problem |
 
 But a product story only matters if the results show up. In early lab testing, NOVOGRO™ (NV) showed stronger HIF-1α activation than the minoxidil-based formula. HIF-1α helps regulate important pathways in the follicle environment tied to oxygen demand, nutrient support, and repair. Some of these follicle-support pathways are associated with minoxidil, while NOVOGRO™’s signal here points to a broader follicle-support pathway.
@@ -5172,13 +5172,32 @@ In the comparison, they tested three groups: vehicle, meaning the base formula w
 
 For clients, the data takeaway is simple: this early data suggests NOVOGRO™ may help support stronger follicle-like growth activity than a traditional minoxidil-based formula. It does not prove real-world results yet, but it gives us a reason to pay attention.
 
-Of course, what matters most is what happens on actual scalps. NOVOGRO™ is currently being evaluated in == a double-blind, head-to-head study against minoxidil with 150+ participants==, and that is the data I am waiting for. As soon as we know more, I will share it.
+Of course, what matters most is what happens on actual scalps. NOVOGRO™ is currently being evaluated in **a double-blind, head-to-head study against minoxidil with 190+ participants**. RE:YOU, the brand behind the Dual-Path Hair Revival Serum powered by NOVOGRO™, has now shared the first 90-day results. Here is what stood out.
+
+### The First 90 Days: What RE:YOU’s Trial Found
+
+The trial enrolled women aged 35–70 with mild to moderate female pattern hair loss and was conducted by Eurofins across multiple sites. In its [90-day clinical update](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results), RE:YOU reported:
+
+:::editor-note
+title: 90-Day Findings
+**Hair count and density:** Both were 50% greater compared with the minoxidil group, measured using scalp imaging.
+
+**Less shedding:** Average shedding fell 56% on a standardized comb test—a reduction RE:YOU reported as 44% better than minoxidil. Overall, 97% of RE:YOU participants showed reduced shedding.
+
+**Changes women noticed:** 86% reported fewer hairs in the shower, and 84% reported stronger hair with less breakage.
+:::
+
+![Standardized comb test at 90 days: average shedding fell 56% from baseline in the RE:YOU group, a reduction reported as 44% better than minoxidil. Each dot represents one participant. Source: [RE:YOU clinical trial results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) (interim, 90-day).|full](https://cdn.shopify.com/s/files/1/0807/8262/2943/files/3MO_combtest-trueshed.png?v=1790381971&width=1200)
+
+Those are changes clients care about: less hair coming out and fuller-looking coverage. It also helps that the serum was compared directly with minoxidil, an option many clients already know.
+
+RE:YOU reported no adverse events identified so far and provides a link to its [ClinicalTrials.gov study record](https://clinicaltrials.gov/study/NCT07785869). These early findings are encouraging, but they are still the brand’s interim report. The full six-month results will help show whether the improvements continue.
 
 ## Tying it Together
 
 Minoxidil helped define the modern hair serum category and will remain the gold standard. But hair science has moved forward, and the industry is overdue for ingredients developed specifically around the complexity of thinning hair.
 
-NOVOGRO™ is early, but it has already started moving through the hair professionals we pay attention to based on its strong scientific data. Is it the industry’s best kept secret? Too soon to call, but it is one of the few new names we are actually watching. We are waiting to see how RE:YOU brings the technology into a real serum, and we will share updates as more product details and clinical data become available.
+NOVOGRO™ is still early, but the conversation now goes beyond laboratory findings. RE:YOU’s first clinical readout gives us more reason to pay attention, with reported improvements in hair count, density, and shedding compared with minoxidil at 90 days. Is it the industry’s best kept secret? Too soon to call, but it is a name we will keep watching as the six-month results arrive.
 
 The new generation of hair serums will feature ingredients developed specifically for hair thinning. They won't be designed around a single pathway, but multiple pathways to tackle hair thinning in a comprehensive, systematic way.
 
@@ -5187,6 +5206,8 @@ The new generation of hair serums will feature ingredients developed specificall
 - DailyMed. Minoxidil Topical Aerosol 5% Foam, for women: Drug facts and consumer information. U.S. National Library of Medicine. 
 - DailyMed. Minoxidil Topical Solution 2%: Drug facts and consumer information. U.S. National Library of Medicine. 
 - Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
+- RE:YOU. [Interim 90-day clinical trial results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results). Brand-reported findings; full six-month results pending.
+- ClinicalTrials.gov. [Study record NCT07785869](https://clinicaltrials.gov/study/NCT07785869).
 :::`,
     metaTitle: 'Minoxidil vs. NOVOGRO™: Is This the Industry\'s Best Kept Secret?',
     metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO™ is making the rounds in salon networks — here\'s what the science says.',
