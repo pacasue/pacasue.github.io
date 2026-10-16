@@ -31,7 +31,6 @@ export const authors: Record<string, Author> = {
     title: 'Trichologist & Hair Science Contributor',
     bio: 'Tony writes about hair thinning, scalp health, and the science behind hair-growth products. He translates research on follicle biology, ingredients, and clinical results into practical guidance, helping stylists and clients understand what a formula can offer and how to assess its claims.',
     image: '/image/tony-beckett-portrait.png',
-    profileNote: 'Illustrative author profile · AI-generated portrait',
   },
   'Leila Fernandez': {
     name: 'Leila Fernandez',
