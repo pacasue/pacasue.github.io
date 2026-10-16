@@ -22,9 +22,17 @@ export interface Author {
   title: string
   bio: string
   image: string
+  profileNote?: string
 }
 
 export const authors: Record<string, Author> = {
+  'Tony Beckett': {
+    name: 'Tony Beckett',
+    title: 'Trichologist & Hair Science Contributor',
+    bio: 'Tony writes about hair thinning, scalp health, and the science behind hair-growth products. He translates research on follicle biology, ingredients, and clinical results into practical guidance, helping stylists and clients understand what a formula can offer and how to assess its claims.',
+    image: '/image/tony-beckett-portrait.png',
+    profileNote: 'Illustrative author profile · AI-generated portrait',
+  },
   'Leila Fernandez': {
     name: 'Leila Fernandez',
     title: 'Senior Color Editor',
@@ -8176,6 +8184,173 @@ Rogaine asks you to plan your routine around it, keep an eye out for side effect
 ~~So, if your clients are asking what to try for thinning, this is the one we're recommending first. With a 90-day money-back guarantee, the only thing they have to lose is the hair in the shower drain.~~`,
     metaTitle: 'Will this Hair Serum Replace Rogaine as the New Gold Standard?',
     metaDescription: "Rogaine has been the go-to for thinning hair for decades. A new biotech serum just went head-to-head with minoxidil in the category's most rigorous clinical trial. Here's how RE:YOU and Rogaine compare on routine, science, and results.",
+  },
+  {
+    id: 59,
+    slug: "kilgourmd-vs-novogro",
+    tag: "Hair Thinning",
+    title: "Why “New” Hair Growth Formulas Like KilgourMD Aren’t Actually New",
+    excerpt: "A stylist’s look at why older formulas like KilgourMD can plateau, what NOVOGRO™ appears to be doing differently, and why that is changing what I’m willing to recommend.",
+    author: "Tony Beckett",
+    date: "Oct 13, 2026",
+    readTime: "9 min",
+    image: "/image/kilgourmd-serums-hero.png",
+    category: "Hair Thinning",
+    section: "Hair Care",
+    body: `Hair thinning does not announce itself. As stylists, we often notice it first from above. A slightly wider part, less density through the crown, or the way light hits the scalp differently. Clients know what they use between appointments matters just as much as what we do in the salon, but when they ask what to use, the answer is not always clear. There is a lot of noise in this category, and most “new” formulas are not actually new. They are the same ingredients, repackaged, which is why, in practice, we often end up hedging and mentioning a few familiar names.
+
+I have recommended brands like KilgourMD before. It has a strong dermatologist backed story, and on paper it checks the right boxes. But over time, what I have seen in my chair every few weeks has not consistently matched the promise. Recently, a dermatologist I trust introduced me to a different, unreleased formulation she had been testing and shared samples with me to try with a few clients who were already looking for a stronger option. What I saw was enough to make me rethink what I recommend.
+
+## The Industry Is Still Stuck on 2014 Actives
+
+KilgourMD represents where much of this category still sits. Its core actives, Redensyl, Capixyl, and Procapil, were developed over a decade ago, and while they are not inherently bad, they are older-generation ingredients being asked to carry a very modern hair-growth story.
+
+These are sensitive molecules that depend heavily on formulation to stay effective. When combined with botanicals, preservatives, and fragrance systems, stability can become an issue. In real products, that often shows up as cloudiness, uneven texture, or a thicker, slightly sticky feel. This is usually a sign of a formula crash, where actives fall out of solution and are no longer evenly distributed.
+
+:::image-row
+![KilgourMD Treatment Serum](/image/kilgourmd-treatment-microscopy.png)
+![KilgourMD Prevention Serum](/image/kilgourmd-prevention-microscopy.png)
+![Water control](/image/kilgourmd-water-control.png)
+:::
+
+The “little dots” are visible particle clusters or droplets. More dots indicate more aggregation, meaning the formula is less evenly dispersed.
+
+When viewed side by side, the treatment and prevention samples show significantly more visible aggregation compared to the water control, which remains relatively uniform. In a well formulated system, components should remain evenly dispersed. This level of clustering suggests instability within the formula, meaning key components are no longer uniformly distributed or effectively delivered.
+
+You do not need to be a chemist to understand why that is a problem. If a formula does not stay even in the bottle, it becomes harder to trust that it is reaching the scalp in a consistent way. Some clients may see slight improvement early on, but progress often plateaus. This is something I have seen repeatedly, and it is also reflected in user discussions on Reddit, where many describe limited or inconsistent results over time.
+
+Texture is another consistent signal. Several clients have mentioned that these types of formulas can feel thick or greasy on the scalp, sometimes leaving the hair looking weighed down or oily throughout the day. I have seen the same pattern, which often points back to how the formula is structured rather than optimized for delivery.
+
+![Reddit comment describing orange-toned hair and staining.|full](/image/kilgourmd-reddit-staining.png)
+
+![Reddit comment describing residue, greasy hair, and application difficulties.|full](/image/kilgourmd-reddit-residue.png)
+
+Public Reddit comments echo the same issues I hear from clients behind the chair: staining, orange-toned hair, greasy or hard residue and difficult application.
+
+While individual experiences vary, this kind of feedback highlights a consistent theme: results can be unpredictable. This is not surprising given that many of these systems were developed over a decade ago.
+
+KilgourMD now has data on its finished two-serum system. Its [four-month study](https://pubmed.ncbi.nlm.nih.gov/42235052/) followed **43 women**, predominantly of menopausal age. It was **open-label, not double-blind**, meaning participants and investigators knew which products were being used. According to KilgourMD’s clinical results, average shedding fell **51% at day 90** and **60.3% at day 120**, while dermatologist-rated thinning improved **11.1% at four months**. Both serums were tested together. That deserves credit, though the open-label design leaves more room for expectations to influence how improvements are assessed.
+
+At a sensory level, their products also feel more fragranced than expected. While not a direct measure of performance, this can sometimes reflect how the formula is structured rather than optimized purely for stability and delivery.
+
+![Reddit comment describing a strong fragrance.|full](/image/kilgourmd-reddit-fragrance.png)
+
+![Reddit comment describing difficulty continuing the routine because of the scent.|full](/image/kilgourmd-reddit-scent.png)
+
+Reddit comments show a recurring sensory complaint to the point where they question whether they can keep using the product consistently.
+
+:::editor-note
+title: Pro Tip
+Hold the serum up to natural light and tilt it slowly. A well formulated, stable product should appear clear and uniform throughout.
+:::
+
+## Science Has Moved On, the Best Formulas Have Too
+
+That same dermatologist I mentioned earlier came back in after about six months, and the difference was hard to miss. The unreleased formula noticeably delivers stronger density, better texture, and overall healthier-looking hair. It was the kind of result you don’t need to look closely to see.
+
+What stood out was not just the results, but how different the formula itself looked and behaved. Compared to what I typically see with older systems like KilgourMD, it was noticeably clearer, more lightweight, and more consistent, without the cloudiness or instability that often signals a compromised formulation. Some of the earlier generation ingredients were still present, but the rest of the system felt entirely different.
+
+This is where the shift really becomes clear.
+
+A key part of this newer approach is an ingredient system referred to as [NOVOGRO™](https://getreyou.com/pages/science), the technology behind [RE:YOU’s Dual-Path Hair Revival Serum](https://getreyou.com/products/dual-path-hair-revival-serum). Unlike traditional formulas that push only one pathway, NOVOGRO™ is designed to target two core areas of hair growth: the cells that drive it, and the environment that supports it.
+
+At a basic level, healthy hair depends on dermal papilla cells, which sit at the base of each follicle and control how hair grows and how thick it becomes. As hair thinning progresses, these cells become less active, weakening the entire growth cycle.
+
+What stands out with NOVOGRO™-based formulations is that they support this cell activity while also improving the surrounding follicle environment. Instead of pushing a single pathway, they reinforce the system as a whole.
+
+In the preclinical screen shown below, NOVOGRO™ showed stronger activity than KilgourMD across three follicle-relevant signals: dermal papilla cell support, 5α-reductase inhibition, and HIF-1α activation.
+
+:::grouped-bar-chart
+{
+  "title": "Hair-Follicle Signals Tested",
+  "series": [
+    "NOVOGRO™",
+    "KilgourMD"
+  ],
+  "maximum": 60,
+  "groups": [
+    {
+      "label": "Dermal papilla cell viability",
+      "description": "Measures the viability of cells that help regulate hair growth.",
+      "values": [
+        17,
+        2
+      ]
+    },
+    {
+      "label": "5α-reductase inhibition",
+      "description": "Measures inhibition of an enzyme involved in DHT production.",
+      "values": [
+        47.3,
+        1.3
+      ]
+    },
+    {
+      "label": "HIF-1α activation",
+      "description": "Measures activity in a cellular pathway that responds to oxygen levels.",
+      "values": [
+        52,
+        0
+      ]
+    }
+  ],
+  "footnote": "Values reproduced from the supplied preclinical comparison graphic, relative to untreated control. These laboratory measurements are separate from the finished serum’s clinical hair-growth results."
+}
+:::
+
+NOVOGRO™ rises clearly above the untreated control across the tested follicle signals, while KilgourMD stays much closer to baseline.
+
+Equally important is how the formula holds together. NOVOGRO™ is designed to stay stable within the formula, so the active components remain evenly dispersed and available. This is a meaningful shift from older systems where instability can limit how well ingredients are actually delivered.
+
+### What the Latest Clinical Results Show
+
+[RE:YOU’s 90-day interim results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) now give us an early look at real scalps. Its randomized, double-blind trial enrolled **190 women aged 35–70** with mild to moderate female pattern hair loss and compared the Dual-Path Hair Revival Serum, containing NOVOGRO™-623, -624, and -273, directly with topical minoxidil. The study is registered on [ClinicalTrials.gov (NCT07785869)](https://clinicaltrials.gov/study/NCT07785869).
+
+:::editor-note
+title: RE:YOU’s 90-day findings
+**Hair count and density:** The brand reports 50% greater hair counts and 50% greater hair density than the minoxidil group.
+
+**Shedding:** Average shedding fell 56% on a standardized comb test, a reduction reported as 44% better than minoxidil. Overall, 97% of RE:YOU participants showed reduced shedding.
+
+**How hair looked:** 89% reported an improvement in hair appearance.
+:::
+
+Those are changes a stylist pays attention to. KilgourMD’s study measured changes from participants’ starting points, while RE:YOU’s trial included a direct minoxidil comparison. Neither study tested KilgourMD against RE:YOU, so the percentages should not be read as a direct ranking between the two.
+
+| Comparison | KilgourMD (Traditional System) | NOVOGRO™-Based System (Next Generation) |
+| --- | --- | --- |
+| Core Actives | Redensyl®, Capixyl®, Procapil® (developed >10 years ago) | NOVOGRO™-based multi-component system targeting follicle biology |
+| Evidence | Four-month, open-label study of 43 women: 51% less shedding at day 90 and 60.3% at day 120; 11.1% improvement in dermatologist-rated thinning at four months | 90-day interim results from a randomized, double-blind trial of 190 women against topical minoxidil: 50% greater hair counts and density; 56% less shedding, reported as 44% better than minoxidil |
+| Formula Stability | Prone to instability (actives can separate or degrade) | Highly soluble and stable, with consistent dispersion of actives |
+| Visual Appearance | Often cloudy, thicker, with visible aggregates | Clear, lightweight, and uniform |
+| Client Results | Limited or inconsistent results, often plateau | More consistent improvement observed in-chair |
+| Recommendation | Something I’ve moved away from after seeing its limitations over time | What I’m starting to recommend for its more effective, science-based formulation and innovative dual-path approach targeting both cell activity and the follicle environment |
+
+What stands out so far is that both the formulation and the early in-chair results are more consistent than what I have typically seen with older ingredient systems.
+
+From a stylist perspective, the difference is not subtle. Instead of plateauing after a few months, this is one of the first systems where I have started to see more consistent, continued progress over time.
+
+## What This Means for You, as a Stylist
+
+Timing matters more than most people realize. Every month on an ineffective formula is a month where a follicle may continue to miniaturize, making recovery harder over time.
+
+> “Our role is not to diagnose, but we do see the scalp regularly, and that visibility comes with responsibility. What we recommend, or choose not to question, can have a real impact over time.”
+> — Jacob Nelson, Senior Stylist based in New York
+
+From what I have seen so far, this newer approach stands out. The [first 90-day clinical findings](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results) give us more to work with, and I am still looking forward to reviewing the full six-month data. Being results-driven also means staying critical.
+
+:::editor-note
+title: Pro Tip
+Make scalp health part of your intake. Ask what clients are currently using, and take 30 seconds to assess the scalp. It’s often the easiest way to open up a more productive conversation.
+:::
+
+## Conclusion
+
+We don’t have all the answers, and this category is still evolving. KilgourMD isn’t the wrong recommendation, it was the right one at a certain point in time. But science has progressed, and what was once considered advanced is now starting to show its limits. A decade later, we are seeing a new class of formulations that are more stable, more biologically grounded, and more aligned with how follicles actually function.
+
+Our clients deserve whatever is best, and what “best” means should continue to evolve. As professionals, our responsibility is to keep questioning, testing, and refining what we recommend. From what I’ve seen so far, this is one of the first approaches that feels meaningfully different. Not perfect, but a clear step forward, and for now, it’s what I’m choosing to recommend. You can explore [RE:YOU’s formula and routine here](https://getreyou.com/products/dual-path-hair-revival-serum).`,
+    metaTitle: "Why “New” Hair Growth Formulas Like KilgourMD Aren’t Actually New",
+    metaDescription: "A stylist’s look at KilgourMD, NOVOGRO™, formula texture, and the latest clinical data: KilgourMD’s 43-woman study and RE:YOU’s 190-woman trial.",
   },
 ]
 

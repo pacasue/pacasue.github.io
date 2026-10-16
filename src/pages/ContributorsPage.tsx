@@ -70,6 +70,7 @@ export default function ContributorsPage() {
 
                   {/* Bio */}
                   <p className="text-sm text-charcoal-400 leading-relaxed line-clamp-3">{author.bio}</p>
+                  {author.profileNote && <p className="text-xs text-gold-500/90">{author.profileNote}</p>}
 
                   {/* Recent articles */}
                   {recentArticles.length > 0 && (

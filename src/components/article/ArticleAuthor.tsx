@@ -40,6 +40,7 @@ export default function ArticleAuthor({ article }: { article: Article }) {
             </p>
           </div>
           <p className="text-sm text-charcoal-400 leading-relaxed">{bio}</p>
+          {author?.profileNote && <p className="text-xs text-gold-500/90 leading-relaxed">{author.profileNote}</p>}
           <div className="flex items-center gap-4 mt-2">
             <Link to={`/author/${slug}`} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors flex items-center gap-1">
               All Articles <ArrowRight size={9} />

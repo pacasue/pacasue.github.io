@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Article } from '../../data/articles'
+import GroupedBarChart, { type GroupedBarChartData } from './GroupedBarChart'
 import { Quote, Sparkles, ChevronLeft, ChevronRight, ImageIcon, ArrowRight, Check, X, Star } from 'lucide-react'
 
 const INLINE_IMAGE_1 = '/image/copper-1.png'
@@ -1091,6 +1092,7 @@ function MarkdownBody({ body }: { body: string }) {
   const carouselPlaceholders: { quotes: { text: string; attribution?: string }[] }[] = []
   const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
   const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string; maximum?: number }[] = []
+  const groupedChartPlaceholders: GroupedBarChartData[] = []
   const lineChartPlaceholders: { title: string; xLabel?: string; yLabel?: string; series: string[]; points: { x: string; values: number[] }[]; footnote?: string }[] = []
   const cascadePlaceholders: { items: string[] }[] = []
   let processedBody = body.replace(
@@ -1100,6 +1102,15 @@ function MarkdownBody({ body }: { body: string }) {
       const id = cascadePlaceholders.length
       cascadePlaceholders.push({ items })
       return `CASCADE_LIST_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
+    /:::grouped-bar-chart\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const chart: GroupedBarChartData = JSON.parse(inner)
+      const id = groupedChartPlaceholders.length
+      groupedChartPlaceholders.push(chart)
+      return `GROUPED_BAR_CHART_PLACEHOLDER_${id}`
     }
   )
   processedBody = processedBody.replace(
@@ -1409,6 +1420,12 @@ function MarkdownBody({ body }: { body: string }) {
         if (refMatch) {
           const rp = referencePlaceholders[parseInt(refMatch[1])]
           return <ReferenceBox key={i} items={rp.items} />
+        }
+
+        const groupedChartMatch = trimmed.match(/^GROUPED_BAR_CHART_PLACEHOLDER_(\d+)$/)
+        if (groupedChartMatch) {
+          const chart = groupedChartPlaceholders[Number(groupedChartMatch[1])]
+          return <GroupedBarChart key={i} {...chart} footnote={chart.footnote ? renderInline(chart.footnote) : undefined} />
         }
 
         // Bar chart placeholder

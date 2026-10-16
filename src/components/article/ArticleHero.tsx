@@ -104,6 +104,7 @@ export default function ArticleHero({ article }: { article: Article }) {
                   {article.author}
                 </Link>
               </p>
+              {author?.profileNote && <p className="text-[11px] text-gold-500/90 mt-1">{author.profileNote}</p>}
             </div>
           </div>
 

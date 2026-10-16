@@ -50,6 +50,7 @@ export default function AuthorPage() {
                 </h1>
                 <p className="text-[11px] tracking-widest uppercase text-charcoal-400 mb-4">{author.title} · HairProVoices</p>
                 <p className="text-sm text-charcoal-400 leading-relaxed max-w-2xl">{author.bio}</p>
+                {author.profileNote && <p className="text-xs text-gold-500/90 mt-3">{author.profileNote}</p>}
               </div>
             </div>
           </div>
