@@ -12,6 +12,7 @@
         { domain: 'drinkwildtype.com', eventName: 'HPV Wildtype Click' },      // maps to WildtypeVisit
     ];
 
+    // Keep in sync with MAIN_DOMAINS in src/attribution.js.
     var PARTNER_DOMAINS = ['getreyou.com', 'pacagen.com', 'drinkwildtype.com'];
 
     // Safe wrapper — polls every 200ms until cvg pixel has loaded and set cvg.process,
@@ -63,6 +64,19 @@
         return url + (url.indexOf('?') !== -1 ? '&' : '?') + params.join('&') + hash;
     }
 
+    // Partner navigation uses the shared attribution helper when it is loaded.
+    // Tracking below still records the original CTA, not the forwarded ad ids.
+    function applyAttribution(link) {
+        var api = window.hpvAttribution;
+        if (!api || typeof api.buildOutboundUrl !== 'function') return link.href;
+        var original = link.getAttribute('data-hpv-original') || link.getAttribute('href') || link.href;
+        try {
+            return api.buildOutboundUrl(original) || link.href;
+        } catch (err) {
+            return link.href;
+        }
+    }
+
     function isPartnerHost(host) {
         for (var i = 0; i < PARTNER_DOMAINS.length; i++) {
             var d = PARTNER_DOMAINS[i];
@@ -91,14 +105,15 @@
         for (var i = 0; i < OUTBOUND_EVENTS.length; i++) {
             var d = OUTBOUND_EVENTS[i].domain;
             if (host === d || host.endsWith('.' + d)) {
+                var trackedUrl = link.getAttribute('data-hpv-original') || link.href;
                 safeTrack({ method: 'track', eventName: OUTBOUND_EVENTS[i].eventName, properties: {
-                    outbound_url: link.href
+                    outbound_url: trackedUrl
                 }});
 
                 // Partner clicks wait 200ms and carry __cvg_uid / __cvg_sid.
                 // Social and mailto clicks are tracked only.
                 if (isPartnerHost(host)) {
-                    var finalUrl = appendCvgParams(link.href);
+                    var finalUrl = appendCvgParams(applyAttribution(link));
                     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
                         link.href = finalUrl;
                     } else {

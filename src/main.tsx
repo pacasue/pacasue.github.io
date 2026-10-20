@@ -2,6 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
+import { installAttribution } from './attribution.js'
+
+// Capture landing parameters before React navigation. Tag partner hrefs only
+// after hydration so prerendered markup still matches the first client render.
+const attribution = installAttribution()
 
 const root = document.getElementById('root')!
 
@@ -13,3 +18,5 @@ if (root.firstElementChild) {
 } else {
   createRoot(root).render(<StrictMode><App /></StrictMode>)
 }
+
+attribution?.startTagging()
