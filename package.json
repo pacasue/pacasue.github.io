@@ -10,6 +10,7 @@
     "prebuild": "npm run prepare:articles",
     "build": "tsc && vite build && vite build --ssr && node scripts/prerender.mjs",
     "test": "node --test scripts/*.test.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

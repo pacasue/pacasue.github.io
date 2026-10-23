@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Article } from '../../data/articles'
 import GroupedBarChart, { type GroupedBarChartData } from './GroupedBarChart'
+import ComparisonChart, { type ComparisonChartData } from './ComparisonChart'
+import FollicleModelFigure from './FollicleModelFigure'
 import { Quote, Sparkles, ChevronLeft, ChevronRight, ImageIcon, ArrowRight, Check, X, Star } from 'lucide-react'
 
 const INLINE_IMAGE_1 = '/image/copper-1.png'
@@ -99,8 +101,16 @@ function StepList({ steps }: { steps: { step: number; title: string; body: strin
   )
 }
 
-function InlineImage({ src, caption, full }: { src: string; caption: string; full?: boolean }) {
+function InlineImage({ src, caption, full, hideCaption }: { src: string; caption: string; full?: boolean; hideCaption?: boolean }) {
   const [loaded, setLoaded] = useState(false)
+  const imageRef = useRef<HTMLImageElement>(null)
+
+  // Cached images may finish loading before hydration attaches onLoad.
+  useEffect(() => {
+    const img = imageRef.current
+    setLoaded(Boolean(img?.complete && img.naturalWidth > 0))
+  }, [src])
+
   return (
     <figure className="my-10 -mx-4 md:mx-0">
       <div className="relative overflow-hidden">
@@ -108,6 +118,7 @@ function InlineImage({ src, caption, full }: { src: string; caption: string; ful
           <div className="absolute inset-0 bg-charcoal-800 animate-pulse" style={{ minHeight: '200px' }} />
         )}
         <img
+          ref={imageRef}
           src={src}
           alt={caption.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')}
           loading="lazy"
@@ -116,9 +127,9 @@ function InlineImage({ src, caption, full }: { src: string; caption: string; ful
           style={{ opacity: loaded ? 1 : 0, ...(full ? {} : { maxHeight: '360px' }) }}
         />
       </div>
-      <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
+      {!hideCaption && caption && <figcaption className="text-[11px] text-charcoal-500 tracking-wider mt-3 px-4 md:px-0">
         {renderInline(caption)}
-      </figcaption>
+      </figcaption>}
     </figure>
   )
 }
@@ -1093,6 +1104,8 @@ function MarkdownBody({ body }: { body: string }) {
   const imageRowPlaceholders: { images: { src: string; caption: string }[] }[] = []
   const barChartPlaceholders: { title: string; bars: { label: string; value: number }[]; footnote?: string; maximum?: number }[] = []
   const groupedChartPlaceholders: GroupedBarChartData[] = []
+  const comparisonChartPlaceholders: ComparisonChartData[] = []
+  const follicleModelPlaceholders: string[] = []
   const lineChartPlaceholders: { title: string; xLabel?: string; yLabel?: string; series: string[]; points: { x: string; values: number[] }[]; footnote?: string }[] = []
   const cascadePlaceholders: { items: string[] }[] = []
   let processedBody = body.replace(
@@ -1102,6 +1115,22 @@ function MarkdownBody({ body }: { body: string }) {
       const id = cascadePlaceholders.length
       cascadePlaceholders.push({ items })
       return `CASCADE_LIST_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
+    /:::comparison-chart\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const id = comparisonChartPlaceholders.length
+      comparisonChartPlaceholders.push(JSON.parse(inner))
+      return `COMPARISON_CHART_PLACEHOLDER_${id}`
+    }
+  )
+  processedBody = processedBody.replace(
+    /:::follicle-model\n([\s\S]*?):::/g,
+    (_match, inner: string) => {
+      const id = follicleModelPlaceholders.length
+      follicleModelPlaceholders.push(inner.trim())
+      return `FOLLICLE_MODEL_PLACEHOLDER_${id}`
     }
   )
   processedBody = processedBody.replace(
@@ -1422,6 +1451,15 @@ function MarkdownBody({ body }: { body: string }) {
           return <ReferenceBox key={i} items={rp.items} />
         }
 
+        const comparisonChartMatch = trimmed.match(/^COMPARISON_CHART_PLACEHOLDER_(\d+)$/)
+        if (comparisonChartMatch) {
+          const chart = comparisonChartPlaceholders[Number(comparisonChartMatch[1])]
+          return <ComparisonChart key={i} {...chart} callout={chart.callout ? renderInline(chart.callout) : undefined} footnote={chart.footnote ? renderInline(chart.footnote) : undefined} />
+        }
+
+        const follicleModelMatch = trimmed.match(/^FOLLICLE_MODEL_PLACEHOLDER_(\d+)$/)
+        if (follicleModelMatch) return <FollicleModelFigure key={i} source={follicleModelPlaceholders[Number(follicleModelMatch[1])]} />
+
         const groupedChartMatch = trimmed.match(/^GROUPED_BAR_CHART_PLACEHOLDER_(\d+)$/)
         if (groupedChartMatch) {
           const chart = groupedChartPlaceholders[Number(groupedChartMatch[1])]
@@ -1521,13 +1559,15 @@ function MarkdownBody({ body }: { body: string }) {
         if (cta) return <CtaCallout key={i}>{renderInline(cta[2])}</CtaCallout>
         const h2 = trimmed.match(/^## (.+)/)
         if (h2) return <SectionHeading key={i} id={slugify(h2[1])}>{h2[1]}</SectionHeading>
-        // inline image: ![caption](url) or ![caption|full](url) — empty url becomes a placeholder
+        // Optional |full and |no-caption flags preserve alt text while controlling display.
         const img = trimmed.match(/^!\[([^\n]*)\]\(([^)]*)\)$/)
         if (img) {
-          const full = img[1].endsWith('|full')
-          const caption = full ? img[1].slice(0, -5) : img[1]
+          const hideCaption = img[1].endsWith('|no-caption')
+          const label = hideCaption ? img[1].slice(0, -11) : img[1]
+          const full = label.endsWith('|full')
+          const caption = full ? label.slice(0, -5) : label
           if (!img[2]) return <ImagePlaceholder key={i} caption={caption} />
-          return <InlineImage key={i} src={img[2]} caption={caption} full={full} />
+          return <InlineImage key={i} src={img[2]} caption={caption} full={full} hideCaption={hideCaption} />
         }
         const h3 = trimmed.match(/^### (.+)/)
         if (h3) return <Subheading key={i} id={slugify(h3[1])}>{h3[1]}</Subheading>

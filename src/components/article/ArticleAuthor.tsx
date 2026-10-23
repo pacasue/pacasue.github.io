@@ -2,12 +2,9 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Article } from '../../data/articles'
 import { authors } from '../../data/articles'
+import { authorPath } from '../../seo'
 
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=80&auto=format&fit=crop&facepad=3'
-
-function authorSlug(name: string) {
-  return name.toLowerCase().replace(/\s+/g, '-')
-}
 
 export default function ArticleAuthor({ article }: { article: Article }) {
   const author = authors[article.author]
@@ -15,7 +12,7 @@ export default function ArticleAuthor({ article }: { article: Article }) {
   const title = author?.title ?? 'Contributor'
   const bio = author?.bio ?? `${name} is a contributor to HairProVoices, covering ${article.category.toLowerCase()} and professional hair industry topics.`
   const image = author?.image ?? FALLBACK_IMAGE
-  const slug = authorSlug(name)
+  const url = authorPath(name)
 
   return (
     <div className="mt-14 pt-8 border-t border-white/10">
@@ -23,7 +20,7 @@ export default function ArticleAuthor({ article }: { article: Article }) {
 
       <div className="flex flex-col sm:flex-row gap-6 bg-white/[0.03] border border-white/8 p-6">
         <div className="flex-shrink-0">
-          <Link to={`/author/${slug}`}>
+          <Link to={url}>
             <div className="w-20 h-20 rounded-full overflow-hidden ring-2 ring-gold-500/20 hover:ring-gold-500/60 transition-all">
               <img src={image} alt={name} className="w-full h-full object-cover object-top" />
             </div>
@@ -32,7 +29,7 @@ export default function ArticleAuthor({ article }: { article: Article }) {
 
         <div className="flex flex-col gap-2">
           <div>
-            <Link to={`/author/${slug}`} className="text-lg font-bold text-white hover:text-gold-500 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <Link to={url} className="text-lg font-bold text-white hover:text-gold-500 transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
               {name}
             </Link>
             <p className="text-[10px] tracking-widest uppercase text-gold-500 mt-0.5 font-medium">
@@ -42,7 +39,7 @@ export default function ArticleAuthor({ article }: { article: Article }) {
           <p className="text-sm text-charcoal-400 leading-relaxed">{bio}</p>
           {author?.profileNote && <p className="text-xs text-gold-500/90 leading-relaxed">{author.profileNote}</p>}
           <div className="flex items-center gap-4 mt-2">
-            <Link to={`/author/${slug}`} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors flex items-center gap-1">
+            <Link to={url} className="text-[10px] tracking-widest uppercase text-charcoal-500 hover:text-gold-500 transition-colors flex items-center gap-1">
               All Articles <ArrowRight size={9} />
             </Link>
           </div>

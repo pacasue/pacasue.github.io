@@ -13,7 +13,7 @@ export default function AuthorPage() {
       )
     : undefined
   const authorArticles = articles.filter(
-    (a) => a.author.toLowerCase().replace(/\s+/g, '-') === (slug ?? '').toLowerCase()
+    (a) => (authors[a.author]?.name ?? a.author) === author?.name
   )
 
   if (!author) {

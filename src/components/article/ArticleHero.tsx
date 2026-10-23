@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Clock, Calendar, Bookmark, Share2, ChevronRight } from 'lucide-react'
 import type { Article } from '../../data/articles'
 import { authors } from '../../data/articles'
+import { authorPath } from '../../seo'
 
 const SCIENCE_PAGE_URL = 'https://getreyou.com/pages/science'
 
@@ -34,7 +35,7 @@ export default function ArticleHero({ article }: { article: Article }) {
   const author = authors[article.author]
   const authorImage = author?.image
   const initials = article.author.split(' ').map((n) => n[0]).join('')
-  const authorSlug = article.author.toLowerCase().replace(/\s+/g, '-')
+  const authorUrl = authorPath(author?.name || article.author)
 
   return (
     <section className="bg-black">
@@ -85,7 +86,7 @@ export default function ArticleHero({ article }: { article: Article }) {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-white/10">
           {/* Author */}
           <div className="flex items-center gap-3">
-            <Link to={`/author/${authorSlug}`} className="flex-shrink-0">
+            <Link to={authorUrl} className="flex-shrink-0">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-charcoal-800 flex items-center justify-center text-charcoal-400 text-sm font-bold">
                 {authorImage ? (
                   <img src={authorImage} alt={article.author} className="w-full h-full object-cover object-top" />
@@ -98,7 +99,7 @@ export default function ArticleHero({ article }: { article: Article }) {
               <p className="text-sm font-semibold text-charcoal-200">
                 By{' '}
                 <Link
-                  to={`/author/${authorSlug}`}
+                  to={authorUrl}
                   className="text-white hover:text-gold-500 transition-colors"
                 >
                   {article.author}

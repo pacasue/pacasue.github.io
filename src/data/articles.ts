@@ -1,4 +1,5 @@
 import { docxArticles } from '../generated/docxArticles'
+import { nutrafolNovogroArticle } from './nutrafolNovogro'
 
 export interface Article {
   id: number
@@ -5230,8 +5231,8 @@ The new generation of hair serums will feature ingredients developed specificall
 - RE:YOU. [Interim 90-day clinical trial results](https://getreyou.com/blogs/hair-growth/reyou-clinical-trial-results). Brand-reported findings; full six-month results pending.
 - ClinicalTrials.gov. [Study record NCT07785869](https://clinicaltrials.gov/study/NCT07785869).
 :::`,
-    metaTitle: 'Minoxidil vs. NOVOGRO™: Is This the Industry\'s Best Kept Secret?',
-    metaDescription: 'For years, minoxidil has defined the hair-loss topical category. A new ingredient system called NOVOGRO™ is making the rounds in salon networks — here\'s what the science says.',
+    metaTitle: 'Minoxidil vs. NOVOGRO™: Hair Serum Science & Results',
+    metaDescription: 'Compare minoxidil and NOVOGRO™ in RE:YOU’s serum: how they work, daily use, and reported 90-day clinical results.',
   },
   {
     id: 34,
@@ -5568,8 +5569,8 @@ Finasteride can be a serious medical option, but for women, it comes with a lot 
 - Review on finasteride use and reported adverse effects in women. PubMed Central (PMC10172713), U.S. National Library of Medicine. https://pmc.ncbi.nlm.nih.gov/articles/PMC10172713/
 - Qu Z, Li Y, Cho SE, Doğan L, Yao Q, Tang L, Zhao G, Li A, Omori S, Wong F, Zhao EM, Zhang DKY. AI-enabled discovery of small molecules targeting complementary pathways for hair follicle rejuvenation. bioRxiv preprint. 2026. doi: https://doi.org/10.64898/2026.06.09.728282.
 :::`,
-    metaTitle: `Finasteride vs. NOVOGRO™: Why Women Shouldn't Borrow Men's Hair-Loss Drugs`,
-    metaDescription: `A stylist on why finasteride was built for men, the side effects women face off-label, and how NOVOGRO™'s non-steroidal NV-1065 offers a cleaner DHT strategy.`,
+    metaTitle: "Finasteride vs. NOVOGRO™ for Women: Evidence & Safety",
+    metaDescription: "A stylist compares finasteride and NOVOGRO™ for women with thinning hair, including DHT pathways, safety considerations, and clinical evidence.",
   },
   {
     id: 36,
@@ -6037,7 +6038,7 @@ Head spas are not a fad. Clients want them, they pay well, and they rebook at ra
     author: 'Dr. Elena Marsh',
     date: 'Jun 28, 2026',
     readTime: '8 min',
-    image: '/image/hair science.jpg',
+    image: '/image/pp405-novogro-cover.webp',
     category: 'Hair Thinning',
     section: 'Hair Care',
     body: `Between color consults, scalp treatments, blowouts, and the usual "is my part getting wider?" conversations, new hair-growth treatments are coming up more than ever.
@@ -6125,8 +6126,8 @@ We are not writing off PP405. The science is interesting, and if larger trials s
 But right now, PP405 is still a wait-and-see story. NOVOGRO™ is the one more salon people are starting to watch, because it fits what we actually see: hair needs more than activation.
 
 Hair growth is about helping that hair stay, thicken, cycle properly, and become visible enough to change the way the client feels when they look in the mirror.`,
-    metaTitle: 'PP405 vs. NOVOGRO™: Why Salon Pros Question the Dormant Follicle Hype',
-    metaDescription: 'PP405 promises to wake up dormant follicles, but the data has gaps. A salon-side breakdown of PP405 vs. NOVOGRO™: what each does for the follicle, and which has more proof.',
+    metaTitle: "PP405 vs. NOVOGRO™: Hair Growth Science & Evidence",
+    metaDescription: "Explore PP405 and NOVOGRO™: their approaches to hair-follicle biology, available research, and what the evidence means for thinning hair.",
   },
   {
     id: 40,
@@ -7488,7 +7489,7 @@ That's how you get the inspiration without looking like you're wearing a costume
     author: 'Devika Rao',
     date: 'Aug 12, 2026',
     readTime: '14 min',
-    image: '/image/before-and-after.png',
+    image: '/image/thinning-treatments-cover.webp',
     category: 'Hair Thinning',
     section: 'Hair Care',
     body: `Hair thinning often comes up in the salon chair before it comes up in a medical appointment. A client points to a wider part, a lighter ponytail, or more hair in the brush and asks a practical question: What can help without making the hair harder to live with?
@@ -7868,8 +7869,8 @@ Overall scores give Efficacy and Evidence 25% each. Styling Fit, Commitment, Cos
 Every number in [the scorecard](#the-scorecard) above was built from these seven criteria, so a treatment's overall score is only as useful as the metric behind it you actually care about.
 
 *This article reflects HairPro Voices panel experience and is not medical advice. Talk with a licensed clinician before starting, combining, or stopping any hair-loss treatment, and before use during pregnancy or breastfeeding.*`,
-    metaTitle: `Yes, These 5 Thinning-Hair Treatments Can Work — Reviewed by Hair Professionals`,
-    metaDescription: `A 20-stylist HairPro Voices panel scores RE:YOU, minoxidil, red light therapy, PRP, microneedling, and ketoconazole shampoo on efficacy, evidence, styling fit, cost, and more.`,
+    metaTitle: "Best Thinning-Hair Treatments: A Stylist Comparison",
+    metaDescription: "Compare RE:YOU’s NOVOGRO™ serum, minoxidil, red light therapy, PRP, and microneedling on evidence, daily routines, cost, and styling fit.",
   },
   {
     id: 57,
@@ -7992,7 +7993,7 @@ And if they like your hair too? Well, that's just a very nice bonus.`,
     author: 'Jenna Lindquist',
     date: 'Sep 16, 2026',
     readTime: '15 min',
-    image: '/image/replace-minoxidil-hero.png',
+    image: '/image/replace-minoxidil-hero.webp',
     category: 'Hair Thinning',
     section: 'Hair Care',
     body: `For the woman reading every roundup of "the best hair serums for hair thinning" — you'll most certainly recognize the purple packaging of Rogaine before even reading the name. It's kind of a celebrity in the hair industry, and feels like an obvious first step for anyone navigating hair thinning.
@@ -8181,8 +8182,8 @@ RE:YOU is once a day instead of twice. It works with color and styling instead o
 Rogaine asks you to plan your routine around it, keep an eye out for side effects, and keep using it indefinitely. RE:YOU asks for about 30 seconds a day.
 
 ~~So, if your clients are asking what to try for thinning, this is the one we're recommending first. With a 90-day money-back guarantee, the only thing they have to lose is the hair in the shower drain.~~`,
-    metaTitle: 'Will this Hair Serum Replace Rogaine as the New Gold Standard?',
-    metaDescription: "Rogaine has been the go-to for thinning hair for decades. A new biotech serum just went head-to-head with minoxidil in the category's most rigorous clinical trial. Here's how RE:YOU and Rogaine compare on routine, science, and results.",
+    metaTitle: "Rogaine vs. RE:YOU: NOVOGRO™ Serum & Clinical Results",
+    metaDescription: "A stylist compares Rogaine and RE:YOU’s NOVOGRO™ serum on application, ingredients, styling compatibility, and reported 90-day clinical results.",
   },
   {
     id: 59,
@@ -8193,7 +8194,7 @@ Rogaine asks you to plan your routine around it, keep an eye out for side effect
     author: "Tony Beckett",
     date: "Oct 13, 2026",
     readTime: "9 min",
-    image: "/image/kilgourmd-serums-hero.png",
+    image: "/image/kilgourmd-serums-hero.webp",
     category: "Hair Thinning",
     section: "Hair Care",
     body: `Hair thinning does not announce itself. As stylists, we often notice it first from above. A slightly wider part, less density through the crown, or the way light hits the scalp differently. Clients know what they use between appointments matters just as much as what we do in the salon, but when they ask what to use, the answer is not always clear. There is a lot of noise in this category, and most “new” formulas are not actually new. They are the same ingredients, repackaged, which is why, in practice, we often end up hedging and mentioning a few familiar names.
@@ -8348,9 +8349,10 @@ Make scalp health part of your intake. Ask what clients are currently using, and
 We don’t have all the answers, and this category is still evolving. KilgourMD isn’t the wrong recommendation, it was the right one at a certain point in time. But science has progressed, and what was once considered advanced is now starting to show its limits. A decade later, we are seeing a new class of formulations that are more stable, more biologically grounded, and more aligned with how follicles actually function.
 
 Our clients deserve whatever is best, and what “best” means should continue to evolve. As professionals, our responsibility is to keep questioning, testing, and refining what we recommend. From what I’ve seen so far, this is one of the first approaches that feels meaningfully different. Not perfect, but a clear step forward, and for now, it’s what I’m choosing to recommend. You can explore [RE:YOU’s formula and routine here](https://getreyou.com/products/dual-path-hair-revival-serum).`,
-    metaTitle: "Why “New” Hair Growth Formulas Like KilgourMD Aren’t Actually New",
-    metaDescription: "A stylist’s look at KilgourMD, NOVOGRO™, formula texture, and the latest clinical data: KilgourMD’s 43-woman study and RE:YOU’s 190-woman trial.",
+    metaTitle: "KilgourMD vs. NOVOGRO™: Ingredients & Clinical Evidence",
+    metaDescription: "Compare KilgourMD and RE:YOU’s NOVOGRO™ serum: ingredients, formula texture, laboratory findings, and the design of their clinical studies.",
   },
+  nutrafolNovogroArticle,
 ]
 
 const legacySlugs = new Set(legacyArticles.map((article) => article.slug))

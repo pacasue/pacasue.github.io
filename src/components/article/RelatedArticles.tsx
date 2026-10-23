@@ -19,8 +19,12 @@ function seededShuffle<T>(arr: T[], seed: string): T[] {
 }
 
 export default function RelatedArticles({ currentSlug }: { currentSlug: string }) {
+  const current = articles.find(a => a.slug === currentSlug)
+  const isNovogroArticle = (article: (typeof articles)[number]) => /novogro/i.test(`${article.title} ${article.excerpt} ${article.body}`)
+  const candidates = articles.filter(a => a.slug !== currentSlug)
+  const relevant = current && isNovogroArticle(current) ? candidates.filter(isNovogroArticle) : candidates
   const related = seededShuffle(
-    articles.filter((a) => a.slug !== currentSlug),
+    relevant,
     currentSlug
   ).slice(0, 3)
   return (

@@ -24,72 +24,16 @@ function toW3CDate(dateStr) {
   return isNaN(d) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10)
 }
 
-function withTrailingSlash(path) {
-  return path === '/' || path.endsWith('/') ? path : `${path}/`
-}
-
-function buildHeadTags(route, article) {
-  const canonicalUrl = `${BASE}${withTrailingSlash(route)}`
-  const tags = [`  <link rel="canonical" href="${canonicalUrl}" />`]
-
-  tags.push(`  <meta property="og:type" content="${article ? 'article' : 'website'}" />`)
-  tags.push(`  <meta property="og:site_name" content="HairProVoices" />`)
-  tags.push(`  <meta property="og:url" content="${canonicalUrl}" />`)
-  tags.push(`  <meta name="twitter:card" content="summary_large_image" />`)
-  tags.push(`  <meta name="twitter:site" content="@hairprovoices" />`)
-
-  if (article) {
-    const ogTitle = escapeHtml(article.metaTitle || article.title)
-    const ogDesc  = escapeHtml(article.metaDescription || article.excerpt)
-    const ogImage = escapeHtml(
-      article.image.startsWith('http') ? article.image : `${BASE}${article.image}`
-    )
-    const pubDate = toW3CDate(article.date)
-
-    tags.push(`  <meta property="og:title" content="${ogTitle}" />`)
-    tags.push(`  <meta property="og:description" content="${ogDesc}" />`)
-    tags.push(`  <meta property="og:image" content="${ogImage}" />`)
-    tags.push(`  <meta property="article:published_time" content="${pubDate}" />`)
-    tags.push(`  <meta property="article:author" content="${escapeHtml(article.author)}" />`)
-    tags.push(`  <meta name="twitter:title" content="${ogTitle}" />`)
-    tags.push(`  <meta name="twitter:description" content="${ogDesc}" />`)
-    tags.push(`  <meta name="twitter:image" content="${ogImage}" />`)
-
-    const imageUrl = article.image.startsWith('http') ? article.image : `${BASE}${article.image}`
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: article.metaTitle || article.title,
-      description: article.metaDescription || article.excerpt,
-      image: {
-        '@type': 'ImageObject',
-        url: imageUrl,
-        caption: article.metaTitle || article.title,
-        representativeOfPage: true,
-      },
-      datePublished: pubDate,
-      author: { '@type': 'Person', name: article.author },
-      publisher: {
-        '@type': 'Organization',
-        name: 'HairProVoices',
-        url: BASE,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${BASE}/image/site-logo.svg`,
-        },
-      },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-    }
-    tags.push(`  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
-  } else {
-    tags.push(`  <meta name="twitter:title" content="HairProVoices" />`)
-    tags.push(`  <meta name="twitter:description" content="The pulse of the professional hair industry." />`)
-    if (route === '/') {
-      const jsonLd = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'HairProVoices', url: BASE }
-      tags.push(`  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`)
-    }
+function buildHeadTags(seo) {
+  const tags = [`  <link rel="canonical" href="${escapeHtml(seo.canonical)}" />`]
+  for (const [key, value] of Object.entries(seo.meta)) {
+    const attr = key.startsWith('twitter:') ? 'name' : 'property'
+    tags.push(`  <meta data-page-seo ${attr}="${key}" content="${escapeHtml(value)}" />`)
   }
-
+  if (seo.structuredData.length) {
+    const json = JSON.stringify(seo.structuredData).replace(/</g, '\\u003c')
+    tags.push(`  <script data-page-seo type="application/ld+json">${json}</script>`)
+  }
   return tags.join('\n')
 }
 
@@ -97,13 +41,14 @@ function buildHeadTags(route, article) {
 // Load SSR bundle
 // ---------------------------------------------------------------------------
 
-const { render, articles } = await import(
+const { render, articles, authors, buildPageSeo, authorPath } = await import(
   pathToFileURL(resolve(outDir, 'server/entry-server.js')).href
 )
 
 const articleRoutes = articles.filter((a) => a.slug).map((a) => `/article/${a.slug}/`)
 
-const routes = ['/', '/articles/', '/gallery/', '/contributors/', '/about/', ...articleRoutes]
+const authorRoutes = [...new Set(Object.values(authors).map(author => authorPath(author.name)))]
+const routes = ['/', '/articles/', '/gallery/', '/contributors/', '/about/', ...articleRoutes, ...authorRoutes]
 
 const template = readFileSync(resolve(outDir, 'index.html'), 'utf-8')
 
@@ -120,32 +65,9 @@ for (const route of routes) {
     continue
   }
 
-  let title = 'HairProVoices — The Pulse of the Pro Hair Industry'
-  let description = 'HairProVoices — The pulse of the professional hair industry. Trends, techniques, education, and inspiration for stylists.'
-  let article = null
-
-  const articleSlug = route.match(/^\/article\/([^/]+)\/?$/)?.[1]
-  if (articleSlug) {
-    article = articles.find((a) => a.slug === articleSlug)
-    if (article) {
-      title = article.metaTitle || article.title
-      description = article.metaDescription || article.excerpt
-    }
-  } else if (route === '/articles/') {
-    title = 'All Articles — HairProVoices'
-    description = 'Browse all articles on trends, techniques, and education for hair professionals.'
-  } else if (route === '/gallery/') {
-    title = 'Gallery — HairProVoices'
-    description = 'Explore our gallery of professional hair looks and inspirations.'
-  } else if (route === '/contributors/') {
-    title = 'Contributors — HairProVoices'
-    description = 'Meet the stylists, educators, and experts behind HairProVoices.'
-  } else if (route === '/about/') {
-    title = 'About — HairProVoices'
-    description = 'Learn about HairProVoices and our mission for the professional hair industry.'
-  }
-
-  const headTags = buildHeadTags(route, article)
+  const seo = buildPageSeo(route, articles, authors)
+  const { title, description } = seo
+  const headTags = buildHeadTags(seo)
 
   const pageHtml = template
     .replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`)
@@ -236,7 +158,7 @@ const sitemapXml =
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n` +
   `        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
-  [...staticPages, ...articleEntries]
+  [...staticPages, ...articleEntries, ...authorRoutes.map(path => ({ path, priority: '0.5', changefreq: 'monthly' }))]
     .map((e) =>
       [
         `  <url>`,
@@ -255,4 +177,4 @@ const sitemapXml =
 
 const imageCount = articleEntries.filter((e) => e.image).length
 writeFileSync(resolve(outDir, 'sitemap.xml'), sitemapXml)
-console.log(`Generated sitemap.xml (${staticPages.length + articleEntries.length} URLs, ${imageCount} images)`)
+console.log(`Generated sitemap.xml (${staticPages.length + articleEntries.length + authorRoutes.length} URLs, ${imageCount} images)`)
