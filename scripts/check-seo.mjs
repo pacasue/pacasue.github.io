@@ -25,8 +25,13 @@ for (const article of articles) {
   const articleSchema = schema.find(x => x['@type'] === 'Article')
   assert.equal(articleSchema.headline, doc.querySelector('h1').textContent.trim(), path)
   assert.equal(schema.find(x => x['@type'] === 'BreadcrumbList').itemListElement.length, 3, path)
-  const authorUrl = articleSchema.author.url
-  assert.ok(existsSync(`${root}docs${decodeURIComponent(new URL(authorUrl).pathname)}index.html`), authorUrl)
+  if (article.author) {
+    const authorUrl = articleSchema.author.url
+    assert.ok(existsSync(`${root}docs${decodeURIComponent(new URL(authorUrl).pathname)}index.html`), authorUrl)
+  } else {
+    assert.equal(articleSchema.author, undefined, path)
+    assert.equal(doc.querySelector('meta[property="article:author"]'), null, path)
+  }
   assert.ok(sitemap.includes(site + path), path)
 
   if (cluster.includes(article)) {

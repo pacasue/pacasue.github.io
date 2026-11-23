@@ -60,7 +60,7 @@ export function buildPageSeo(path: string, articles: Article[], authors: Record<
       'twitter:image': image,
       'twitter:image:alt': article.title,
       'article:published_time': datePublished,
-      'article:author': `${SITE_URL}${authorPath(authorName)}`,
+      ...(authorName && { 'article:author': `${SITE_URL}${authorPath(authorName)}` }),
     })
     structuredData.push({
       '@context': 'https://schema.org',
@@ -70,7 +70,7 @@ export function buildPageSeo(path: string, articles: Article[], authors: Record<
       description,
       image: { '@type': 'ImageObject', url: image, caption: article.title, representativeOfPage: true },
       datePublished,
-      author: { '@type': 'Person', name: authorName, url: `${SITE_URL}${authorPath(authorName)}` },
+      ...(authorName && { author: { '@type': 'Person', name: authorName, url: `${SITE_URL}${authorPath(authorName)}` } }),
       publisher: {
         '@type': 'Organization', name: 'HairProVoices', url: SITE_URL,
         logo: { '@type': 'ImageObject', url: `${SITE_URL}/image/site-logo.svg` },

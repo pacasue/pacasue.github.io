@@ -41,7 +41,7 @@ export default function ArticlePage() {
               {/* Main content */}
               <div className="lg:col-span-8">
                 <ArticleBody article={article} />
-                <ArticleAuthor article={article} />
+                {article.author && <ArticleAuthor article={article} />}
               </div>
               {/* Sidebar */}
               <aside className="lg:col-span-4">

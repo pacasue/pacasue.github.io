@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { articles } from '../../data/articles'
+import { articles, getArticleBySlug } from '../../data/articles'
 
 function seededShuffle<T>(arr: T[], seed: string): T[] {
   // Simple hash of the seed string into a numeric value
@@ -19,7 +19,7 @@ function seededShuffle<T>(arr: T[], seed: string): T[] {
 }
 
 export default function RelatedArticles({ currentSlug }: { currentSlug: string }) {
-  const current = articles.find(a => a.slug === currentSlug)
+  const current = getArticleBySlug(currentSlug)
   const isNovogroArticle = (article: (typeof articles)[number]) => /novogro/i.test(`${article.title} ${article.excerpt} ${article.body}`)
   const candidates = articles.filter(a => a.slug !== currentSlug)
   const relevant = current && isNovogroArticle(current) ? candidates.filter(isNovogroArticle) : candidates

@@ -1,5 +1,6 @@
 import { docxArticles } from '../generated/docxArticles'
 import { nutrafolNovogroArticle } from './nutrafolNovogro'
+import { vegamourNovogroArticle } from './vegamour-vs-novogro/article'
 
 export interface Article {
   id: number
@@ -5143,7 +5144,7 @@ At a functional level, NOVOGRO™ works across three follicle-relevant pathways:
 - Works with the other pathways to support the health and vitality of hair follicle cells responsible for growing new hair, especially the cellular environment that helps determine whether hair grows stronger, weaker, or not at all.
 :::
 
-No client needs to remind us how complex hair thinning can be, and how it can vary so significantly between one client and another. Across dozens of experts we spoke to, they agreed that this is the most comprehensive approach they've ever seen across dozens of other brands (e.g., Vegamour, KilgourMD, Nutrafol, etc.). This approach is one that actually aligns the most closely with the complex biology of hair growth, according to our medical experts.
+No client needs to remind us how complex hair thinning can be, and how it can vary so significantly between one client and another. Across dozens of experts we spoke to, they agreed that this is the most comprehensive approach they've ever seen across dozens of other brands (e.g., [Vegamour GRO Hair Serum](/article/vegamour-vs-novogro/), KilgourMD, Nutrafol, etc.). This approach is one that actually aligns the most closely with the complex biology of hair growth, according to our medical experts.
 
 > I am never looking at just one thing when a client sits in my chair with thinning hair. I am looking at density, scalp condition, breakage, miniaturization, styling habits, stress, and how the hair is behaving week to week. A multi-pathway approach makes sense because thinning rarely shows up as a single-pathway problem.
 > — Amy Wisney, Senior salon educator and trichology-trained stylist
@@ -8353,6 +8354,7 @@ Our clients deserve whatever is best, and what “best” means should continue 
     metaDescription: "Compare KilgourMD and RE:YOU’s NOVOGRO™ serum: ingredients, formula texture, laboratory findings, and the design of their clinical studies.",
   },
   nutrafolNovogroArticle,
+  vegamourNovogroArticle,
 ]
 
 const legacySlugs = new Set(legacyArticles.map((article) => article.slug))

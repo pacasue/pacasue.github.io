@@ -85,35 +85,39 @@ export default function ArticleHero({ article }: { article: Article }) {
         {/* Byline + meta row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-6 border-t border-white/10">
           {/* Author */}
-          <div className="flex items-center gap-3">
-            <Link to={authorUrl} className="flex-shrink-0">
-              <div className="w-10 h-10 rounded-full overflow-hidden bg-charcoal-800 flex items-center justify-center text-charcoal-400 text-sm font-bold">
-                {authorImage ? (
-                  <img src={authorImage} alt={article.author} className="w-full h-full object-cover object-top" />
-                ) : (
-                  initials
-                )}
+          {article.author && (
+            <div className="flex items-center gap-3">
+              <Link to={authorUrl} className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-full overflow-hidden bg-charcoal-800 flex items-center justify-center text-charcoal-400 text-sm font-bold">
+                  {authorImage ? (
+                    <img src={authorImage} alt={article.author} className="w-full h-full object-cover object-top" />
+                  ) : (
+                    initials
+                  )}
+                </div>
+              </Link>
+              <div>
+                <p className="text-sm font-semibold text-charcoal-200">
+                  By{' '}
+                  <Link
+                    to={authorUrl}
+                    className="text-white hover:text-gold-500 transition-colors"
+                  >
+                    {article.author}
+                  </Link>
+                </p>
+                {author?.profileNote && <p className="text-[11px] text-gold-500/90 mt-1">{author.profileNote}</p>}
               </div>
-            </Link>
-            <div>
-              <p className="text-sm font-semibold text-charcoal-200">
-                By{' '}
-                <Link
-                  to={authorUrl}
-                  className="text-white hover:text-gold-500 transition-colors"
-                >
-                  {article.author}
-                </Link>
-              </p>
-              {author?.profileNote && <p className="text-[11px] text-gold-500/90 mt-1">{author.profileNote}</p>}
             </div>
-          </div>
+          )}
 
           {/* Meta */}
           <div className="flex items-center gap-5 text-[11px] text-charcoal-500 tracking-wider">
-            <span className="flex items-center gap-1.5">
-              <Calendar size={11} /> {article.date}
-            </span>
+            {article.date && (
+              <span className="flex items-center gap-1.5">
+                <Calendar size={11} /> {article.date}
+              </span>
+            )}
             <span className="flex items-center gap-1.5">
               <Clock size={11} /> {article.readTime} read
             </span>
